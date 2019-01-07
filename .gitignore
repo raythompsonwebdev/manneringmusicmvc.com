@@ -1,8 +1,12 @@
-public/assets/images/
+
 public/media/
-
-
+public/assets/images/
+public/assets/fancyapps/
+public/assets/databasepics/
 public/assets/fonts/
 public/assets/icons/
 public/assets/css/.sass-cache/
 public/results.php
+error.log
+access.log
+database-connect.txt
