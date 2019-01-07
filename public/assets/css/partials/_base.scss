@@ -1,0 +1,152 @@
+*, *:before, *:after{@include box-sizing($type:border-box);}
+
+*, html{  padding:0; outline:none}
+
+.box-set:before, .box-set:after {  content: "";  display: table;}
+.box-set:after {  clear: both;}
+.box-set {  *zoom: 1;}
+.box-set { overflow: auto;}
+
+.group:before, .group:after {  
+	content: "";  
+	display: table;
+}
+.group:after {  
+	clear: both;
+}
+.group {  *zoom: 1;}
+
+.browsehappy{
+    font-size:1em;
+    color:$color7;
+    background-color:$color6;
+    a{display:inline-block;}
+}
+
+.clearfix { 
+	clear: both;
+}
+
+.fancybox-custom .fancybox-skin { 
+	box-shadow: 0 0 50px #222;
+}
+
+body{
+
+    background-image:url(../images/526.gif);
+    line-height: 1;
+    font-family: ($FontList);
+    font-size:100%;
+    letter-spacing:0.1em;
+    font-weight:100;
+
+    .dark-box { background: #5e0400; height: 40px; width: 50px;}
+    .form-action .dark-box.bottom { position: absolute; right: 0; bottom: -24px;}
+    .tabs + .dark-box.top { position: absolute; right: 0; top: 0px;}
+    .show {  display: block;}
+    .hide {  display: none;}
+
+}
+
+a{  
+	text-decoration: none !important; 
+	@include transitioner(all 0.2s linear); 
+}
+
+ul{
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+
+li{ 
+	@include transitioner(all 0.3s linear 0s, color 0.3s linear 0s); 
+}
+
+img{
+    width:100%; 
+    max-width:100%; 
+    height:auto; 
+    border:none;
+}
+
+p{
+    width:100%; 
+    color:$color2; 
+    font-weight:normal;
+}
+
+label{ display:none;}
+
+hr{
+    width:60%; 
+    clear: both; 
+    display:block; 
+    margin:1% auto; 
+    color:$color3; 
+    outline:none; 
+    height:1px; 
+    border:none; 
+}
+
+select{ 
+    width:100%;
+    border: 2px solid $color8; 
+    @include boredrady(5px);
+    background: $color2; 
+    display: block; 
+    margin: 0;  
+    padding:0.2em;  
+    width: 50%; 
+    font-size: 0.9em; 
+    height:25px;
+}
+
+/* Place a border around focused fields */
+#search_form *:focus {border: 2px solid #7c412b; outline: none;}
+/* Display correctly filled-in fields with a green background */
+
+/* Submit buttons */
+input[type="text"]:focus{  background-color:yellow;}
+input[type="submit"],
+select[type="text"] { 
+    display: inline;  
+    margin: 0px; 
+    border: 2px solid #7c412b; 
+    @include boredrady(5px);  
+    color: $color2; 
+    background: $color1; 
+    font-weight: bold; 
+    -webkit-appearance: none; 
+    height:35px; 
+    line-height:1.5em;
+}
+input[type="submit"]{  
+    margin: 0px;  
+    padding: 0px;  
+    border: 2px solid #7c412b; 
+    @include boredrady(5px);  
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
+    color: $color2; 
+    background: $color1; 
+    font-weight: bold;  
+    -webkit-appearance: none; 
+    height:35px; 
+}
+input[type="submit"]:hover, 
+select[type="text"]:hover,  
+input[type="submit"]:active,  
+select[type="text"]:active {
+    cursor: pointer;  
+    background-color:$color2; 
+    color: #C90  ;
+}
+
+input[type="submit"]:active { 
+    background-color: #eee; 
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset; 
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;   
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}

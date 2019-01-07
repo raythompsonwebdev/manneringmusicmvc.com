@@ -1,0 +1,17 @@
+<?php
+$host_name = 'db768164200.hosting-data.io';
+$database = 'db768164200';
+$user_name = 'dbo768164200';
+$password = '<Enter your password here.>';
+
+$connect = mysql_connect($host_name, $user_name, $password, $database);
+if (mysql_errno()) {
+    die('<p>Failed to connect to MySQL: '.mysql_error().'</p>');
+} else {
+    echo '<p>Connection to MySQL server successfully established.</p >';
+}
+?>
+
+$pdo = new PDO('mysql:host=localhost;dbname=manneringmvc; charset=utf8', 'root', 'suntzuronin200');
+
+$pdo = new PDO('mysql:host=db768164200.hosting-data.io;dbname=db768164200; charset=utf8', 'db768164200', '6CY10m1Fhe5R1D');
