@@ -12,7 +12,7 @@
 			<h2>UP TO 10&#37; OFF</h2>
 				<div class="features_list">
 				<h3>Check out our end of season sale on the latest Hip Hop music from our vast collection.</h3></div>
-				<a href="search_page.php" class="button">Shop Now</a>
+				<a href="#" class="button">Shop Now</a>
 			<br/>
 			</article>
 		<img src="assets/images/sliderimages/manneringhiphop.png" alt="hip-hop-albums"/>
@@ -25,7 +25,7 @@
 				<div class="features_list">
 				<h3>Check out our end of season sale on the latest Jazz music from our vast collection.</h3> 
 				</div>
-			<a href="search_page.php" class="button">Shop Now</a>
+			<a href="#" class="button">Shop Now</a>
 			</article>
 		<img src="assets/images/sliderimages/manneringjazz.png" alt="jazz-albums"/>
 		</li>
@@ -36,7 +36,7 @@
 			<h2>UP TO 10&#37; OFF</h2>
 				<div class="features_list">
 				<h3>Check out our end of season sale on the latest Country music from our vast collection.</h3> </div>
-			<a href="search_page.php" class="button">Shop Now</a>
+			<a href="#" class="button">Shop Now</a>
 			</article>
 		<img src="assets/images/sliderimages/manneringcountry.png" alt="country-albums"/>
 		</li>
@@ -48,7 +48,7 @@
 				<div class="features_list">
 				<h3>Check out our end of season sale on the latest Jazz music albums from our vast collection.</h3>
 				</div>
-			<a href="search_page.php" class="button">Shop Now</a>
+			<a href="#" class="button">Shop Now</a>
 			</article>
 		<img src="assets/images/sliderimages/manneringjazz.png" alt="hip-hop-albums"/>
 		</li>
@@ -78,10 +78,11 @@
 					<figcaption class="cap_1_of_5">
 					<h3><?=$rapalbum['album']?></h3>
 						<p><?=$rapalbum['artist']?></p>
-					<h4>&#163;</h4>
-					<form method="post" action="addtocart.php" id="front-btn">
-				<input type="hidden" name="sel_item_id" value="" />
-				<button type="submit" class="button" name="submit" value="submit">See More..</button>
+					<h4>&#163;<?=$rapalbum['price']?></h4>
+					<!-- commented out for now.-->
+				<form method="get" action="/addtocart" id="frontform">
+					<input type="hidden" name="albumid" value="<?=$rapalbum['albumid'] ?? ''?>">
+					<input type="submit" name="submit" class="frontform" value="See more.."/>
 				</form>
 				</figcaption>
 				
@@ -106,10 +107,10 @@
 				<figcaption class="cap_1_of_5">
 				<h3><?=$countryalbum['album']?></h3>
 				<p><?=$countryalbum['artist']?></p>
-				<h4> &#163;</h4>
-				<form method="post" action="addtocart.php" id="front-btn">
-				<input type="hidden" name="sel_item_id" value="" />
-				<button type="submit" class="button" name="submit" value="submit">See More..</button>
+				<h4> &#163;<?=$countryalbum['price']?></h4>
+				<form method="get" action="/addtocart" id="frontform">
+					<input type="hidden" name="albumid" value="<?=$countryalbum['albumid'] ?? ''?>">
+					<input type="submit" name="submit" class="frontform" value="See more.."/>
 				</form>
 				</figcaption>
 				</figure>
@@ -129,13 +130,14 @@
 
 				<img class="images_1_of_5" src="/assets/databasepics/<?=$jazzalbum['image']?>" alt="JazzMusicAlbum">
 				<figcaption class="cap_1_of_5">
-				<h3><?=$jazzalbum['album']?></h3>
-				<p><?=$jazzalbum['artist']?></p>
-				<h4>&#163;</h4>
-				<form method="post" action="addtocart.php" id="front-btn">
-				<input type="hidden" name="sel_item_id" value="" />
-				<button type="submit" class="button" name="submit" value="submit">See More..</button>
-				</form>
+					<h3><?=$jazzalbum['album']?></h3>
+					<p><?=$jazzalbum['artist']?></p>
+					<h4>&#163;<?=$jazzalbum['price']?></h4>
+					<!-- commented out for now.-->
+					<form method="get" action="/addtocart" id="frontform">
+						<input type="hidden" name="albumid" value="<?=$jazzalbum['albumid'] ?? ''?>">
+						<input type="submit" name="submit" class="frontform" value="See more.."/>
+					</form>
 				</figcaption>
 
 			</figure>
@@ -155,9 +157,22 @@
 <script src="assets/js/bxslider-4-master/jquery.bxslider.js" ></script>
 
 <script>
+	
     $(document).ready(function(){
 
 		$('.bxslider').bxSlider();
+
+		$(".grid_1_of_5").on('mouseenter', function () {
+						
+			$(this).find('figcaption.cap_1_of_5 form#frontform').css('opacity' , '1').slideDown('100', 'swing');
+	
+		});
+		
+		$(".grid_1_of_5").on('mouseleave', function () {
+			
+			$(this).find('figcaption.cap_1_of_5 form#frontform').css('opacity' , '1').slideUp('100', 'swing');
+			
+		});
 
 	});
 </script>
