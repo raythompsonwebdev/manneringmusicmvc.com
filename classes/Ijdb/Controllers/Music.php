@@ -26,6 +26,7 @@ class Music {
 				'albumid' => $rapalbum['albumid'],
 				'album' => $rapalbum['album'],
 				'image' => $rapalbum['image'],
+				'price' => $rapalbum['price'],
 				'text' => $rapalbum['text'],
 				'artist' => $artist['artist']
 			];
@@ -43,6 +44,7 @@ class Music {
 				'albumid' => $countryalbum['albumid'],
 				'album' => $countryalbum['album'],
 				'image' => $countryalbum['image'],
+				'price' => $countryalbum['price'],
 				'text' => $countryalbum['text'],
 				'artist' => $artist['artist']
 			];
@@ -60,6 +62,7 @@ class Music {
 				'albumid' => $jazzalbum['albumid'],
 				'album' => $jazzalbum['album'],
 				'image' => $jazzalbum['image'],
+				'price' => $jazzalbum['price'],
 				'text' => $jazzalbum['text'],
 				'artist' => $artist['artist']
 			];
@@ -148,7 +151,6 @@ class Music {
 	}
 
 	public function video() {
-
 		
 		$title = 'Mannering Video';
 		
@@ -163,11 +165,24 @@ class Music {
 	}
 
 	public function search() {
-		
-
+	
 		$title = 'Mannering Search';
 		
 		return ['template' => 'search.html.php', 'title' => $title];
+	}
+
+	public function addtocart() {
+
+		if (isset($_GET['albumid']) ) {
+			$singlealbums = $this->albumsTable->findById($_GET['albumid']);
+			
+		}
+						
+		$title = 'Cart';
+				
+		return ['template' => 'addtocart.html.php', 'title' => $title,'variables' =>[ 
+			'singlealbums' => $singlealbums]
+		];
 	}
 	
 }

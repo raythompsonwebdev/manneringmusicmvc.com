@@ -19,8 +19,8 @@
       <span class="social">
         <ul id="social">
           
-          <li class="social-item"><a href="/register">Login</a></li>
-          <li class="social-item"><a href="/register">Register</a></li>
+          <li class="social-item"><a href="#">Login</a></li>
+          <li class="social-item"><a href="#">Register</a></li>
         </ul>
       </span>
 
@@ -70,17 +70,17 @@
   </ul>
 </div>
   <ul id="inner_footer">
-    <li><a href="/terms">Terms</a></li>
-      <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/delivery">Delivery</a></li>
-      <li><a href="/about">About</a></li>
+    <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+        <li><a href="#">Delivery</a></li>
+      <li><a href="#">About</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
 
 </footer><!--Footer end-->
 
 <!--google analytics here-->
-<?php require __DIR__ . '/../includes/googleanalytics.inc.php'; ?>
+
     </div><!-- /.wrapper end -->
     
   </body>

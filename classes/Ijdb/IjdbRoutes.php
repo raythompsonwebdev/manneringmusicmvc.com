@@ -8,31 +8,31 @@ class IjdbRoutes implements \Ninja\Routes  {
 		include __DIR__ . '/../../includes/DatabaseConnection.php';
 		
 		$albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
-		$artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'artistid');
-		$usersTable = new \Ninja\DatabaseTable($pdo, 'users', 'id');
+		$artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
+		$usersTable = new \Ninja\DatabaseTable($pdo, 'users', 'userid');
 
 		$Musiccontroller = new \Ijdb\Controllers\Music($albumsTable, $artistsTable);
-
 		$usersController = new \Ijdb\Controllers\Register($usersTable);
 		
 		
                 $routes = [
-					'users/register' => [
-						'GET' => [
-							'controller' => $usersController,
-							'action' => 'registrationForm'
-						],
-						'POST' => [
-							'controller' => $usersController,
-							'action' => 'registerUser'
-						]
-					],
-					'users/success' => [
-						'GET' => [
-							'controller' => $usersController,
-							'action' => 'success'
-						]
-					],
+
+                        'users/register' => [
+                                'GET' => [
+                                        'controller' => $usersController,
+                                        'action' => 'registrationForm'
+                                ],
+                                'POST' => [
+                                        'controller' => $usersController,
+                                        'action' => 'registerUser'
+                                ]
+                        ],
+                        'users/success' => [
+                                'GET' => [
+                                        'controller' => $usersController,
+                                        'action' => 'success'
+                                ]
+                        ],
 					
                     '' => [
                             'GET' => [
@@ -68,6 +68,12 @@ class IjdbRoutes implements \Ninja\Routes  {
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'contact'
+                            ]
+                    ],
+                    'addtocart' => [
+                            'GET' => [
+                                    'controller' => $Musiccontroller,
+                                    'action' => 'addtocart'
                             ]
                     ]
                 ];

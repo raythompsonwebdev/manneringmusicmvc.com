@@ -3,7 +3,6 @@
 
 <h1>Music Audio </h1>
 
-<p >Listen to samples from our vast collection of classic and latest Country, Hip Hop and Jazz music.</p>
 
 <br/>
 <!--container-->
@@ -48,9 +47,9 @@
       </span>
 
       <audio id="result_player" >
-        <source src="audio/" type='audio/mpeg' />
-        <source src="audio/" type='audio/ogg' />
-        <source src="audio/" type='audio/mp4' />
+        <source src="#" type='audio/mpeg' />
+        <source src="#" type='audio/ogg' />
+        <source src="#" type='audio/mp4' />
         <p>Your browser does not support HTML5 audio.</p>
       </audio>
       
@@ -150,9 +149,9 @@
         <a href="#" alt="favourite-icon"><i class="fa fa-heart soc" title="favourite"></i></a>
       </span>
       <audio id="result_player" >
-        <source src="audio/" type='audio/mpeg' />
-        <source src="audio/" type='audio/ogg' />
-        <source src="audio/" type='audio/mp4' />
+        <source src="#" type='audio/mpeg' />
+        <source src="#" type='audio/ogg' />
+        <source src="#" type='audio/mp4' />
         <p>Your browser does not support HTML5 audio.</p>
       </audio>
 
