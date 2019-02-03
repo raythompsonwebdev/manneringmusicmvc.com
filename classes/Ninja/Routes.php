@@ -1,6 +1,7 @@
 <?php
 namespace Ninja;
 
-interface Routes {
-	public function getRoutes();	
+interface Routes
+{
+    public function getRoutes();
 }

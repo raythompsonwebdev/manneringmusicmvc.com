@@ -1,20 +1,22 @@
 <?php
 namespace Ijdb;
 
-class IjdbRoutes implements \Ninja\Routes  {
+class IjdbRoutes implements \Ninja\Routes
+{
 
-    public function getRoutes(){
-		
-		include __DIR__ . '/../../includes/DatabaseConnection.php';
-		
-		$albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
-		$artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
-		$usersTable = new \Ninja\DatabaseTable($pdo, 'users', 'userid');
+    public function getRoutes()
+    {
+        
+        include __DIR__ . '/../../includes/DatabaseConnection.php';
+        
+        $albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
+        $artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
+        $usersTable = new \Ninja\DatabaseTable($pdo, 'users', 'userid');
 
-		$Musiccontroller = new \Ijdb\Controllers\Music($albumsTable, $artistsTable);
-		$usersController = new \Ijdb\Controllers\Register($usersTable);
-		
-		
+        $Musiccontroller = new \Ijdb\Controllers\Music($albumsTable, $artistsTable);
+        $usersController = new \Ijdb\Controllers\Register($usersTable);
+        
+        
                 $routes = [
 
                         'users/register' => [
@@ -33,54 +35,51 @@ class IjdbRoutes implements \Ninja\Routes  {
                                         'action' => 'success'
                                 ]
                         ],
-					
-                    '' => [
+                    
+                        '' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'home'
                             ]
-                    ],
-                    'about' => [
+                        ],
+                        'about' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'about'
                             ]
-                    ],
-                    'search' => [
+                        ],
+                        'search' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'search'
                             ]
-                    ],
-                    'audio' => [
+                        ],
+                        'audio' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'audio'
                             ]
-                    ],
-                    'video' => [
+                        ],
+                        'video' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'video'
                             ]
-                    ],
-                    'contact' => [
+                        ],
+                        'contact' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'contact'
                             ]
-                    ],
-                    'addtocart' => [
+                        ],
+                        'addtocart' => [
                             'GET' => [
                                     'controller' => $Musiccontroller,
                                     'action' => 'addtocart'
                             ]
-                    ]
+                        ]
                 ];
 
                 return $routes;
-		
-		
-		
-	}
+    }
 }

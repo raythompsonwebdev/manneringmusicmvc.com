@@ -1,53 +1,57 @@
 <?php
 namespace Ninja;
 
-class EntryPoint {
-	private $route;
-	private $method;
-	private $routes;
+class EntryPoint
+{
+    private $route;
+    private $method;
+    private $routes;
 
-	public function __construct($route, $method, $routes) {
-		$this->route = $route;
-		$this->routes = $routes;
-		$this->method = $method;
-		$this->checkUrl();
-	}
+    public function __construct($route, $method, $routes)
+    {
+        $this->route = $route;
+        $this->routes = $routes;
+        $this->method = $method;
+        $this->checkUrl();
+    }
 
-        private function checkUrl() {
-            if ($this->route !== strtolower($this->route)) {
-                http_response_code(301);
-                header('location: ' . strtolower($this->route));
+    private function checkUrl()
+    {
+        if ($this->route !== strtolower($this->route)) {
+            http_response_code(301);
+            header('location: ' . strtolower($this->route));
         }
-	}
+    }
 
-	private function loadTemplate($templateFileName, $variables = []) {
-		extract($variables);
+    private function loadTemplate($templateFileName, $variables = [])
+    {
+        extract($variables);
 
-		ob_start();
+        ob_start();
 
-		include  __DIR__ . '/../../templates/' . $templateFileName;
+        include  __DIR__ . '/../../templates/' . $templateFileName;
 
-		return ob_get_clean();
-	}
+        return ob_get_clean();
+    }
 
-	public function run() {
+    public function run()
+    {
 
-		$routes = $this->routes->getRoutes();
+        $routes = $this->routes->getRoutes();
 
-		$controller = $routes[$this->route][$this->method]['controller'];
-		$action = $routes[$this->route][$this->method]['action'];
+        $controller = $routes[$this->route][$this->method]['controller'];
+        $action = $routes[$this->route][$this->method]['action'];
 
-		$page = $controller->$action();
+        $page = $controller->$action();
 
-		$title = $page['title'];
+        $title = $page['title'];
 
-		if (isset($page['variables'])) {
-			$output = $this->loadTemplate($page['template'], $page['variables']);
-		}
-		else {
-			$output = $this->loadTemplate($page['template']);
-		}
-
-		include  __DIR__ . '/../../templates/layout.html.php';
+        if (isset($page['variables'])) {
+            $output = $this->loadTemplate($page['template'], $page['variables']);
+        } else {
+            $output = $this->loadTemplate($page['template']);
         }
+
+        include  __DIR__ . '/../../templates/layout.html.php';
+    }
 }

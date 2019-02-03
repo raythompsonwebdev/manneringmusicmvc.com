@@ -1,7 +1,10 @@
 <html lang="en" class="no-js" >
 
 <head>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mannering Music</title>
     <link rel="stylesheet" href="assets/css/normalise.css">
     <link rel="stylesheet" href="assets/css/style.css">

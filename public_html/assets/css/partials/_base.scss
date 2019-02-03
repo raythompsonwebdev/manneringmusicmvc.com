@@ -1,4 +1,9 @@
-*, *:before, *:after{@include box-sizing($type:border-box);}
+@import "_variables.scss";
+@import "_mixins.scss";
+
+*, *:before, *:after{
+    @include box-sizing($type:border-box);
+}
 
 *, html{  padding:0; outline:none}
 
@@ -50,7 +55,7 @@ body{
 
 a{  
 	text-decoration: none !important; 
-	@include transitioner(all 0.2s linear); 
+	@include transitioner(all 0.2s ease-in); 
 }
 
 ul{

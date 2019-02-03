@@ -21,7 +21,7 @@
   <div class="tab">
 
 
-<?php foreach($rapalbums as $rapalbum): ?>
+<?php foreach ($rapalbums as $rapalbum) : ?>
     <article class="hiphop_panel">    
 
       <span class="hiphop_panel_text">
@@ -73,7 +73,7 @@
       </div>
 
     </article>
-    <?php endforeach; ?>
+<?php endforeach; ?>
    
   </div>
 
@@ -81,7 +81,7 @@
 
   
 
-  <?php foreach($countryalbums as $countryalbum): ?>  
+    <?php foreach ($countryalbums as $countryalbum) : ?>  
     <article class="hiphop_panel">
       <span class="hiphop_panel_text">
         <figure class="hiphop_panel_img">
@@ -122,12 +122,12 @@
             </div>
       </div>
     </article>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
   </div>
 
   <div class="tab">
  
-  <?php foreach($jazzalbums as $jazzalbum): ?>
+    <?php foreach ($jazzalbums as $jazzalbum) : ?>
     <article class="hiphop_panel">
 
       <span class="hiphop_panel_text">
@@ -170,7 +170,7 @@
             </div>
       </div>
     </article>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
     <div class="clearfix"></div>
 
   </div>
@@ -189,113 +189,113 @@
 
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 <script>
-	
-	jQuery(document).ready(function($) {
+    
+    jQuery(document).ready(function($) {
 
-	//Stop if HTML5 video isn't supported
-	if (!document.createElement('audio').canPlayType) {
-		$("#audio_controls").hide();
-		return;
-	}
-		
-	var audio = document.getElementById("result_player");
+    //Stop if HTML5 video isn't supported
+    if (!document.createElement('audio').canPlayType) {
+        $("#audio_controls").hide();
+        return;
+    }
+        
+    var audio = document.getElementById("result_player");
 
-	// Play/Pause ============================//
-	$("#play_button").bind("click", function(){
-		$(this).audio.play();
-	});
+    // Play/Pause ============================//
+    $("#play_button").bind("click", function(){
+        $(this).audio.play();
+    });
 
-	$("#pause_button").bind("click", function(){
-		$(this).audio.pause();
-	});
+    $("#pause_button").bind("click", function(){
+        $(this).audio.pause();
+    });
 
-	$("#play_toggle").on("click", function(){
-		if (audio.paused) {
-		audio.play();
-		$(this).html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
-		} else {
-		audio.pause();
-		$(this).html('<i class="fa fa-play-circle" aria-hidden="true" title="Play"></i>');
-		}
-	});
+    $("#play_toggle").on("click", function(){
+        if (audio.paused) {
+        audio.play();
+        $(this).html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
+        } else {
+        audio.pause();
+        $(this).html('<i class="fa fa-play-circle" aria-hidden="true" title="Play"></i>');
+        }
+    });
 
-	// Play Progress ============================//
-	$(audio).bind("timeupdate", function(){
-		var timePercent = (this.currentTime / this.duration) * 100;
-		$("#play_progress").css({ width: timePercent + "%" });
-	});
+    // Play Progress ============================//
+    $(audio).bind("timeupdate", function(){
+        var timePercent = (this.currentTime / this.duration) * 100;
+        $("#play_progress").css({ width: timePercent + "%" });
+    });
 
-	// Load Progress ============================//
-	$(audio).bind("progress", function(){
-		updateLoadProgress();
-	});
-	$(audio).bind("loadeddata", function(){
-		updateLoadProgress();
-	});
-	$(audio).bind("canplaythrough", function(){
-		updateLoadProgress();
-	});
-	$(audio).bind("playing", function(){
-		updateLoadProgress();
-	});
-	
-	function updateLoadProgress() {
-		if (audio.buffered.length > 0) {
-		var percent = (audio.buffered.end(0) / audio.duration) * 100;
-		$("#load_progress").css({ width: percent + "%" })
-		}
-	}
-	
-	// Time Display =============================//
-	$(audio).bind("timeupdate", function(){
-		$("#current_time").html(formatTime(this.currentTime));
-	});
-	$(audio).bind("durationchange", function(){
-		$("#duration").html(formatTime(this.duration));
-	});
-	
-	function formatTime(seconds) {
-		var seconds = Math.round(seconds);
-		var minutes = Math.floor(seconds / 60);
-		// Remaining seconds
-		seconds = Math.floor(seconds % 60);
-		// Add leading Zeros
-		minutes = (minutes >= 10) ? minutes : "0" + minutes;
-		seconds = (seconds >= 10) ? seconds : "0" + seconds;
-		return minutes + ":" + seconds;
-	}
+    // Load Progress ============================//
+    $(audio).bind("progress", function(){
+        updateLoadProgress();
+    });
+    $(audio).bind("loadeddata", function(){
+        updateLoadProgress();
+    });
+    $(audio).bind("canplaythrough", function(){
+        updateLoadProgress();
+    });
+    $(audio).bind("playing", function(){
+        updateLoadProgress();
+    });
+    
+    function updateLoadProgress() {
+        if (audio.buffered.length > 0) {
+        var percent = (audio.buffered.end(0) / audio.duration) * 100;
+        $("#load_progress").css({ width: percent + "%" })
+        }
+    }
+    
+    // Time Display =============================//
+    $(audio).bind("timeupdate", function(){
+        $("#current_time").html(formatTime(this.currentTime));
+    });
+    $(audio).bind("durationchange", function(){
+        $("#duration").html(formatTime(this.duration));
+    });
+    
+    function formatTime(seconds) {
+        var seconds = Math.round(seconds);
+        var minutes = Math.floor(seconds / 60);
+        // Remaining seconds
+        seconds = Math.floor(seconds % 60);
+        // Add leading Zeros
+        minutes = (minutes >= 10) ? minutes : "0" + minutes;
+        seconds = (seconds >= 10) ? seconds : "0" + seconds;
+        return minutes + ":" + seconds;
+    }
 
-	});//end of jquery
+    });//end of jquery
 
 </script>
 
 <script >
 
-	$(document).ready(function(){
+    $(document).ready(function(){
 
-			$('.tab:first').show()
-			$('#tabs li a:first').addClass('tab-active');
+            $('.tab:first').show()
+            $('#tabs li a:first').addClass('tab-active');
 
 
-			$("#tabs li a").hover(
-			function () {
-			$(this).animate({left:20}, 300, function (){
-				$(this).animate({left:0}, 50);
-			});
-		},
-		function () {
-		}
-		);
+            $("#tabs li a").hover(
+            function () {
+            $(this).animate({left:20}, 300, function (){
+                $(this).animate({left:0}, 50);
+            });
+        },
+        function () {
+        }
+        );
 
-		$('ul#tabs li a').bind('click',function () {
-			var linkIndex = $('ul#tabs li a').index(this);
-			$('ul#tabs li a').removeClass('tab-active');
-			$(".tab:visible").hide();
-			$(".tab:eq("+linkIndex+")").show();
-			$(this).addClass('tab-active');
-			return false;
-		});
+        $('ul#tabs li a').bind('click',function () {
+            var linkIndex = $('ul#tabs li a').index(this);
+            $('ul#tabs li a').removeClass('tab-active');
+            $(".tab:visible").hide();
+            $(".tab:eq("+linkIndex+")").show();
+            $(this).addClass('tab-active');
+            return false;
+        });
 
-	});
+    });
 
 </script>
