@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 @import "_variables.scss";
 @import "_mixins.scss";
 
 *, *:before, *:after{
     @include box-sizing($type:border-box);
 }
+=======
+*, *:before, *:after{@include box-sizing($type:border-box);}
+>>>>>>> 4be52ddff3249ca2b62f6b0d44511c9a612fb608
 
 *, html{  padding:0; outline:none}
 
