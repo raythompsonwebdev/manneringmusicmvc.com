@@ -6,11 +6,7 @@
 
     <div id="results">
 
-<<<<<<< HEAD
         <?php
-=======
-        <?php 
->>>>>>> 4be52ddff3249ca2b62f6b0d44511c9a612fb608
 
             include __DIR__ . '/../includes/DatabaseConnection.php';
              
@@ -77,11 +73,7 @@
 
                 <form method="get" action="/addtocart" id="cartbtn">
                     <input type="hidden" name="albumid" value="<?=$singlealbums['albumid'] ?? ''?>">
-<<<<<<< HEAD
                     <input type="submit" name="submit" class="cartbtn" value="Go to Cart"/>
-=======
-					<input type="submit" name="submit" class="cartbtn" value="Go to Cart"/>
->>>>>>> 4be52ddff3249ca2b62f6b0d44511c9a612fb608
                 </form>
 
             </div>
