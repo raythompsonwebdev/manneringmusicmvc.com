@@ -27,8 +27,13 @@
 
       <span class="social">
         <ul id="social">
-          
-          <li class="social-item"><a href="/login/login">Log Out</a></li>
+   
+          <?php if ($loggedIn): ?>
+          <li class="social-item"><a href="/logout">Log out</a>
+          </li>
+          <?php else: ?>
+          <li class="social-item"><a href="/login">Log in</a></li>
+          <?php endif; ?>
           <li class="social-item"><a href="/register">Register</a></li>
         </ul>
       </span>

@@ -7,13 +7,14 @@
 <?php endif; ?>
 
 <form method="post" action="" id="registerform">
+
 	<label for="email">Your email address</label>
 	<input type="text" id="email" name="email">
-
+<br>
 	<label for="password">Your password</label>
 	<input type="password" id="password" name="password">
-
-	<input type="submit" name="login" value="Log in">
+	<br>
+	<input type="submit" name="login" value="Log in" id="register_btn">
 </form>
-
+<p>Don't have an account? <a href="/register">Click here to register an account</a></p>
 </section>

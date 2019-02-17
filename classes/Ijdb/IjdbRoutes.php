@@ -17,7 +17,7 @@ class IjdbRoutes implements \Ninja\Routes{
 	}
 	public function getRoutes(): array{
 			
-		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->artistsTable, $this->authorsTable);
+		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->artistsTable, $this->authorsTable, $this->authentication);
 		$authorController = new \Ijdb\Controllers\Register($this->authorsTable);
 		$loginController = new \Ijdb\Controllers\Login($this->authentication);
 						
@@ -33,7 +33,7 @@ class IjdbRoutes implements \Ninja\Routes{
 						'action' => 'registerUser'
 				]
 			],
-			'success' => [
+			'register/success' => [
 				'GET' => [
 					'controller' => $authorController,
 					'action' => 'success'
@@ -65,27 +65,36 @@ class IjdbRoutes implements \Ninja\Routes{
 							'action' => 'list'
 					]
 			],
-			'error' => [
-					'GET' => [
-							'controller' => $loginController,
-							'action' => 'error'
-					]
+			'login/error' => [
+				'GET' => [
+					'controller' => $loginController,
+					'action' => 'error'
+				]
 			],
 			'login/success' => [
-					'GET' => [
-							'controller' => $loginController,
-							'action' => 'success'
-					]
+				'GET' => [
+					'controller' => $loginController,
+					'action' => 'loginsuccess'
+				],
+				 'login' => true
+				
 			],
 			'login' => [
-					'GET' => [
-							'controller' => $loginController,
-							'action' => 'loginForm'
-					],
-					'POST' => [
-							'controller' => $loginController,
-							'action' => 'processLogin'
-					]
+				'GET' => [
+					'controller' => $loginController,
+					'action' => 'loginForm'
+				],
+				'POST' => [
+					'controller' => $loginController,
+					'action' => 'processLogin'
+				]
+			],
+
+			'logout' => [
+				'GET' => [
+				'controller' => $loginController,
+				'action' => 'logout'
+				]
 			],
 	
 			'' => [

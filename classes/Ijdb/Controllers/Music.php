@@ -3,6 +3,7 @@
 namespace Ijdb\Controllers;
 
 use \Ninja\DatabaseTable;
+use \Ninja\Authentication;
 
 class Music
 {
@@ -10,11 +11,12 @@ class Music
     private $artistsTable;
     private $albumsTable;
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable )
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable, Authentication $authentication )
     {
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
         $this->authorsTable = $authorsTable;
+        $this->authentication = $authentication;
     }
 
     public function list() {
@@ -70,9 +72,10 @@ class Music
 	}
 
 	public function saveEdit() {
+
 		$music = $_POST['music'];
 		//$joke['jokedate'] = new \DateTime();
-		$music['id'] = 1;
+		$music['id'] = $author['id'];
 
 		$this->albumsTable->save($music);
 		
