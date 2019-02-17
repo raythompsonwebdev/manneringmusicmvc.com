@@ -6,14 +6,99 @@ use \Ninja\DatabaseTable;
 
 class Music
 {
+    private $authorsTable;
     private $artistsTable;
     private $albumsTable;
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable)
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable )
     {
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
+        $this->authorsTable = $authorsTable;
     }
+
+    public function list() {
+
+		$result = $this->albumsTable->findAll();
+
+        $musics = [];
+        
+		foreach ($result as $music) {
+
+            $artist = $this->artistsTable->findById($music['artistid']);
+
+			$author = $this->authorsTable->findById($music['id']);
+			            
+            $musics[] = [
+                'albumid' => $music['albumid'],
+                'album' => $music['album'],
+                'image' => $music['image'],
+                'price' => $music['price'],
+                'text' => $music['text'],
+                'artist' => $artist['artist'],
+                'name' => $author['name'],
+				'email' => $author['email']
+            ];
+
+		}
+
+
+		$title = 'Music list';
+
+		$totalMusic = $this->artistsTable->total();
+
+		ob_start();
+
+		include  __DIR__ . '/../../templates/';
+
+		$output = ob_get_clean();
+
+		return ['template' => 'musics.html.php', 
+				'title' => $title, 
+				'variables' => [
+						'totalMusic' => $totalMusic,
+						'musics' => $musics
+					]
+				];
+    }
+
+    public function delete() {
+
+		$this->albumsTable->delete($_POST['albumid']);
+
+		header('location: /list'); 
+	}
+
+	public function saveEdit() {
+		$music = $_POST['music'];
+		//$joke['jokedate'] = new \DateTime();
+		$music['id'] = 1;
+
+		$this->albumsTable->save($music);
+		
+		header('location: /list'); 
+	}
+
+	public function edit() {
+        
+		if (isset($_GET['id'])) {
+
+			$music = $this->albumsTable->findById($_GET['id']);
+		}
+
+		$title = 'Edit Music';
+
+		return ['template' => 'editmusic.html.php',
+				'title' => $title,
+				'variables' => [
+						'music' => $music ?? null
+					]
+				];
+    }
+    
+    
+    
+    ////////////////////////////
 
     public function home()
     {
@@ -40,6 +125,7 @@ class Music
         $countryalbums = [];
         
         foreach ($country as $countryalbum) {
+
             $artist = $this->artistsTable->findById($countryalbum['artistid']);
 
             $countryalbums[] = [

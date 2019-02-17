@@ -104,6 +104,16 @@ class DatabaseTable
         return $result->fetchAll();
     }
 
+    public function find($column, $value) {
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE ' .
+        $column . ' = :value';
+        $parameters = [
+        'value' => $value
+        ];
+        $query = $this->query($query, $parameters);
+        return $query->fetchAll();
+    }
+
     private function processDates($fields)
     {
         foreach ($fields as $key => $value) {
@@ -128,6 +138,12 @@ class DatabaseTable
     }
 
 
+
+
+    /**
+     * find by genre-function
+     *
+     *  */
     public function findByGenre($genre)
     {
 
@@ -138,7 +154,6 @@ class DatabaseTable
         return $rows;
     }
     
-
     /**
      * music-page-function
      *

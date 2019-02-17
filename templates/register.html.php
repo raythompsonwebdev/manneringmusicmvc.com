@@ -1,12 +1,45 @@
-<form action="" method="post">
-    <label for="email">Your email address</label>
-    <input name="author[email]" id="email" type="text">
-    
-    <label for="name">Your name</label>
-    <input name="author[name]" id="name" type="text">
+<section id="main_text" class="group" role="main">
 
-    <label for="password">Password</label>
-    <input name="author[password]" id="password" type="password">
- 
-    <input type="submit" name="submit" value="Register account">
-</form>
+<?php
+  if (!empty($errors)) :
+?>
+	<div class="errors">
+
+		<p>Your account could not be created, please check the following:</p>
+		<ul>
+			<?php
+				foreach ($errors as $error) :
+			?>
+			<li>
+				<?= $error ?>
+			</li>
+
+			<?php endforeach; ?>
+
+		</ul>
+
+	</div>
+
+<?php endif; ?>
+
+	<h1>Registration</h1>
+
+	<form action="" method="post" id="registerform" class="group">
+		<br />
+		<label for="name">Your name</label>
+		<input name="author[name]" id="name" type="text" value="<?=$author['name'] ?? ''?>">
+		<br />
+		<label for="email">Your email address</label>
+		<input name="author[email]" id="email" type="email" value="<?=$author['email'] ?? ''?>">
+		<br />
+
+		<label for="password">Password</label>
+		<input name="author[password]" id="password" type="password" value="<?=$author['password'] ?? ''?>">
+
+		<br /><br />
+
+		<input class="submit" name="submit" type="submit" value="Register account" id="register_btn">
+
+	</form>
+
+</section>

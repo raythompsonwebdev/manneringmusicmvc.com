@@ -28,8 +28,8 @@
       <span class="social">
         <ul id="social">
           
-          <li class="social-item"><a href="#">Login</a></li>
-          <li class="social-item"><a href="#">Register</a></li>
+          <li class="social-item"><a href="/login/login">Log Out</a></li>
+          <li class="social-item"><a href="/register">Register</a></li>
         </ul>
       </span>
 
