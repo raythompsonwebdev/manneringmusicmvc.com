@@ -70,11 +70,13 @@
                 <div class="clearfix"></div>
 
                 </figure>
-
-                <form method="get" action="/addtocart" id="cartbtn">
-                    <input type="hidden" name="albumid" value="<?=$singlealbums['albumid'] ?? ''?>">
-                    <input type="submit" name="submit" class="cartbtn" value="Go to Cart"/>
+                                
+               <form method="get" action="" id="cartbtn">
+                    
+                    <input type="submit" name="submit" class="cartbtn" value="Add Review"/>
                 </form>
+                  
+           
 
             </div>
 

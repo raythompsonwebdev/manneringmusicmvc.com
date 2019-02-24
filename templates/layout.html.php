@@ -31,10 +31,13 @@
           <?php if ($loggedIn): ?>
           <li class="social-item"><a href="/logout">Log out</a>
           </li>
+          
           <?php else: ?>
           <li class="social-item"><a href="/login">Log in</a></li>
-          <?php endif; ?>
           <li class="social-item"><a href="/register">Register</a></li>
+
+          <?php endif; ?>
+          
         </ul>
       </span>
 
@@ -50,14 +53,18 @@
       <nav role="navigation" >
                   
         <ul id="inner_nav">
+        <?php if (!$loggedIn): ?>
           <li><a rel='tab' href="/">Home</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
-              <li><a rel='tab' href="/audio">Audio</a></li>
             <li><a rel='tab' href="/video">Video</a></li>
-          <li><a rel='tab' href="/contact">Contact</a></li>
-          <li><a href="/review/list">Jokes List</a></li>
-			<li><a href="/review/edit">Add a new Joke</a></li>
-       
+            <li><a rel='tab' href="/audio">Audio</a></li>
+            <li><a rel='tab' href="/contact">Contact</a></li>
+            <?php else: ?> 
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+         <li><a href="/reviews">Reviews</a></li>
+			<li><a href="/editreviews">Add Review</a></li>
+      <?php endif; ?>
         </ul>
 
       </nav>
@@ -89,9 +96,8 @@
   <ul id="inner_footer">
     <li><a href="#">Terms</a></li>
       <li><a href="#">Privacy</a></li>
-        <li><a href="#">Delivery</a></li>
       <li><a href="#">About</a></li>
-    <li><a href="/contact">Contact</a></li>
+      
   </ul>
 
 </footer><!--Footer end-->

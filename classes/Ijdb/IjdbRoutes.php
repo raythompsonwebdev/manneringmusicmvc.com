@@ -12,7 +12,7 @@ class IjdbRoutes implements \Ninja\Routes{
 
 		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
 		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id');
-		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'idreviews');
+		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid');
 		$this->authentication = new \Ninja\Authentication($this->authorsTable, 'email', 'password');
 	}
 	public function getRoutes(): array{
@@ -34,7 +34,7 @@ class IjdbRoutes implements \Ninja\Routes{
 						'action' => 'registerUser'
 				]
 			],
-			'register/success' => [
+			'registersuccess' => [
 				'GET' => [
 					'controller' => $authorController,
 					'action' => 'success'
@@ -42,7 +42,7 @@ class IjdbRoutes implements \Ninja\Routes{
 			],
 
 			//reviews 
-			'reviews/edit' => [
+			'editreviews' => [
 					'POST' => [
 							'controller' => $Musiccontroller,
 							'action' => 'saveEdit'
@@ -54,7 +54,7 @@ class IjdbRoutes implements \Ninja\Routes{
 					'login' => true
 					
 			],
-			'reviews/delete' => [
+			'deletereviews' => [
 					'POST' => [
 							'controller' => $Musiccontroller,
 							'action' => 'delete'
@@ -69,13 +69,13 @@ class IjdbRoutes implements \Ninja\Routes{
 			],
 
 			//login 
-			'login/error' => [
+			'loginerror' => [
 				'GET' => [
 					'controller' => $loginController,
 					'action' => 'error'
 				]
 			],
-			'login/success' => [
+			'loginsuccess' => [
 				'GET' => [
 					'controller' => $loginController,
 					'action' => 'loginsuccess'
@@ -107,6 +107,7 @@ class IjdbRoutes implements \Ninja\Routes{
 							'action' => 'home',
 							
 					]
+					
 			],
 			'about' => [
 					'GET' => [

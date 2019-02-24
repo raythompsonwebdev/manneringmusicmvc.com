@@ -8,11 +8,11 @@ use \Ninja\Authentication;
 class Music
 {
     private $authorsTable;
-    private $reviewstable;
+    private $reviewsTable;
     private $albumsTable;
   
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $reviewsTable, DatabaseTable $authorsTable, Authentication $authentication )
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, Authentication $authentication )
     {
         $this->albumsTable = $albumsTable;
         $this->reviewsTable = $reviewsTable;
@@ -20,20 +20,20 @@ class Music
         $this->authentication = $authentication;
     }
 
-    public function list() {
+    public function reviews() {
 
 		$result = $this->reviewsTable->findAll();
 
 		$reviews = [];
 		foreach ($result as $review) {
 
-			$author = $this->authorsTable->findById($review['Id']);
+			$author = $this->authorsTable->findById($review['reviewsid']);
 
 			$reviews[] = [
-				'reviewid' => $review['id'],
+				'reviewsid' => $review['reviewsid'],
 				'reviewtext' => $review['reviewtext'],
 				'reviewdate' => $review['reviewdate'],
-				'name' => $author['name'],
+				'name' => $author['username'],
 				'email' => $author['email']
 			];
 
@@ -74,7 +74,7 @@ class Music
 
 		$this->reviewsTable->delete($_POST['authorid']);
 
-		header('location: /reviews/list'); 
+		header('location: /reviews'); 
     }
     
 	public function saveEdit() {
@@ -92,11 +92,11 @@ class Music
 
 		$reviews = $_POST['review'];
 		$reviews['reviewdate'] = new \DateTime();
-		$reviews['id'] = $author['id'];
+		$reviews['reviewsid'] = $author['id'];
 
 		$this->reviewsTable->save($reviews);
 		
-		header('location: /reviews/list'); 
+		header('location: /reviews'); 
 	}
 
 	public function edit() {
@@ -104,7 +104,7 @@ class Music
 		$author = $this->authentication->getUser();
 
 		if (isset($_GET['id'])) {
-			$reviews = $this->reviewsTable->findById($_GET['id']);
+			$reviews = $this->reviewsTable->findById($_GET['reviewsid']);
 		}
 
 		$title = 'Edit Music';
@@ -112,7 +112,7 @@ class Music
 		return ['template' => 'editreviews.html.php',
 				'title' => $title,
 				'variables' => [
-                        'musics' => $reviews ?? null,
+                        'reviews' => $reviews ?? null,
                         'userId' => $author['id'] ?? null
 					]
 				];
@@ -272,14 +272,19 @@ class Music
     public function addtocart()
     {
 
+       
+
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
+            
         }
+
+        
                         
         $title = 'Cart';
                 
         return ['template' => 'addtocart.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums]
+            'singlealbums' => $singlealbums ]
         ];
     }
 }

@@ -68,7 +68,7 @@ class Register {
 			// lowercase value for email
 			$this->authorsTable->save($author);
 
-			header('Location: /register/success');
+			header('Location: /registersuccess');
 		} else {
 			// If the data is not valid, show the form again
 			return ['template' => 'register.html.php',

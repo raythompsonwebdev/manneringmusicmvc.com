@@ -14,4 +14,4 @@ if (mysql_errno()) {
 
 $pdo = new PDO('mysql:host=localhost;dbname=manneringmvc; charset=utf8', 'root', 'suntzuronin200');
 
-$pdo = new PDO('mysql:host=db768164200.hosting-data.io;dbname=db768164200; charset=utf8', 'dbo768164200', '6CY10m1Fhe5R1D');
+$pdo = new PDO('mysql:host=db768164200.hosting-data.io;dbname=db768164200; charset=utf8', 'dbo768164200', 'oLcT8iFgYj2rJfQg9!');

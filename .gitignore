@@ -12,12 +12,13 @@ public_html/assets/js/.sass-cache/
 public_html/assets/css/PIE.htc
 public_html/assets/css/poll
 public_html/assets/js/misc/
-public_html/assets/js/bxslider-4-master/
+C/assets/js/bxslider-4-master/
+logs/
 nbproject/
 error.log
 access.log
-database-connect.txt
 sql-dump/
 style.css
 composer.json
 Procfile
+includes/DatabaseConnection.php

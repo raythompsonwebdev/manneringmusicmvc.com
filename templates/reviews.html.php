@@ -1,28 +1,28 @@
 
 <section id="main_text" class="group" role="main">
 
-<p><?=$totalReviews?> jokes have been submitted to the Internet Joke Database.</p>
+<p><?=$totalReviews?> Reviews have been submitted.</p>
 
 <?php foreach($reviews as $review): ?>
 <blockquote>
   <p>
-  <?=htmlspecialchars($review['text'], ENT_QUOTES, 'UTF-8')?>
+  <?=htmlspecialchars($review['reviewtext'], ENT_QUOTES, 'UTF-8')?>
 
-    (by <a href="mailto:<?=htmlspecialchars($review['format'], ENT_QUOTES,
+    (by <a href="mailto:<?=htmlspecialchars($review['name'], ENT_QUOTES,
                     'UTF-8'); ?>">
-                <?=htmlspecialchars($review['albumname'], ENT_QUOTES,
+                <?=htmlspecialchars($review['email'], ENT_QUOTES,
                     'UTF-8'); ?></a> on 
 <?php
 $date = new DateTime($review['reviewdate']);
 
 echo $date->format('jS F Y');
 ?>)
-  <?php if ($userId == $review['authorId']): ?>
-<a href="/review/edit?id=<?=$review['id']?>">
+  <?php if ($userId == $reviews['authorid']): ?>
+<a href="/edit?id=<?=$review['id']?>">
 Edit</a>
-<form action="/review/delete" method="post">
+<form action="/delete" method="post">
 <input type="hidden" name="id"
-value="<?=$review['id']?>">
+value="<?=$review['reviewsid']?>">
 <input type="submit" value="Delete">
 </form>
 <?php endif; ?>
