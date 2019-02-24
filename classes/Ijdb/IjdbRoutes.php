@@ -139,10 +139,10 @@ class IjdbRoutes implements \Ninja\Routes{
 							'action' => 'contact'
 					]
 			],
-			'addtocart' => [
+			'singleresult' => [
 					'GET' => [
 							'controller' => $Musiccontroller,
-							'action' => 'addtocart'
+							'action' => 'singleresult'
 					]
 			],
 

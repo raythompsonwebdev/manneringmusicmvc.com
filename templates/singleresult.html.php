@@ -1,6 +1,6 @@
 <section id="main_text" class="group">
 
-    <h1>Cart </h1>
+    <h1>Albums</h1>
 
     <!--main text-->
 
@@ -42,7 +42,7 @@
                                 <span><?php echo $singlealbums['price']; ?></span>
                             </li>
                             <li>
-                                <!-- <audio id="result_player" >
+                                <audio id="result_player" >
                                     <source src="audio/" type='audio/mpeg' />
                                     <source src="audio/" type='audio/ogg' />
                                     <source src="audio/" type='audio/mp4' />
@@ -61,7 +61,7 @@
                                     <div id="current_time">00:00</div>  
                                     <div id="duration">00:00</div>
                                     </div>
-                                </div>-->
+                                </div>
                             </li>
                         </ul>
 
@@ -70,11 +70,8 @@
                 <div class="clearfix"></div>
 
                 </figure>
-                                
-               <form method="get" action="" id="cartbtn">
                     
-                    <input type="submit" name="submit" class="cartbtn" value="Add Review"/>
-                </form>
+               
                   
            
 

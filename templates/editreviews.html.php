@@ -1,6 +1,6 @@
-<?php if (empty($review['id']) || $userId == $review['authorId']): ?>
+<?php if (empty($review['reviewsid']) || $userId == $review['authorId']): ?>
 <form action="" method="post">
-	<input type="hidden" name="review[id]" value="<?=$review['id'] ?? ''?>">
+	<input type="hidden" name="review[reviewsid]" value="<?=$review['reviewsid'] ?? ''?>">
     <label for="reviewtext">Type your review here:</label>
     <textarea id="reviewtext" name="review[reviewtext]" rows="3" cols="40"><?=$review['reviewtext'] ?? ''?></textarea>
     <input type="submit" name="submit" value="Save">

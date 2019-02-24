@@ -10,6 +10,7 @@ class Music
     private $authorsTable;
     private $reviewsTable;
     private $albumsTable;
+    
   
 
     public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, Authentication $authentication )
@@ -34,7 +35,8 @@ class Music
 				'reviewtext' => $review['reviewtext'],
 				'reviewdate' => $review['reviewdate'],
 				'name' => $author['username'],
-				'email' => $author['email']
+                'email' => $author['email'],
+                'authorId' => $author['id']
 			];
 
 		}
@@ -68,7 +70,7 @@ class Music
 
 		$reviews = $this->reviewsTable->findById($_POST['id']);
 
-		if ($reviews['authorId'] != $author['id']) {
+		if ($reviews['authorid'] != $author['id']) {
 			return;
 		}
 
@@ -82,8 +84,8 @@ class Music
         $author = $this->authentication->getUser();
 
 
-		if (isset($_GET['id'])) {
-			$reviews = $this->reviewsTable->findById($_GET['id']);
+		if (isset($_GET['reviewsid'])) {
+			$reviews = $this->reviewsTable->findById($_GET['reviewsid']);
 
 			if ($reviews['authorId'] != $author['id']) {
 				return;
@@ -103,7 +105,7 @@ class Music
         
 		$author = $this->authentication->getUser();
 
-		if (isset($_GET['id'])) {
+		if (isset($_GET['reviewsid'])) {
 			$reviews = $this->reviewsTable->findById($_GET['reviewsid']);
 		}
 
@@ -269,22 +271,21 @@ class Music
         return ['template' => 'search.html.php', 'title' => $title];
     }
 
-    public function addtocart()
+    public function singleresult()
     {
-
-       
-
+                               
         if (isset($_GET['albumid'])) {
+
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
+            
             
         }
 
-        
-                        
+                               
         $title = 'Cart';
                 
-        return ['template' => 'addtocart.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums ]
+        return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
+            'singlealbums' => $singlealbums  ]
         ];
     }
 }

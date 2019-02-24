@@ -63,7 +63,7 @@
             <li><a rel='tab' href="/">Home</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
          <li><a href="/reviews">Reviews</a></li>
-			<li><a href="/editreviews">Add Review</a></li>
+		<!--	<li><a href="/editreviews">Add Review</a></li>-->
       <?php endif; ?>
         </ul>
 
