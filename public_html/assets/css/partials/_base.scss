@@ -78,7 +78,11 @@ p{
     font-weight:normal;
 }
 
-label{ display:none;}
+label{ 
+    color:#fff;
+    display:block;
+    width:100%;
+}
 
 hr{
     width:60%; 

@@ -1040,10 +1040,38 @@
                                     width: 100%;
                                     margin-bottom: 0.2em;
 
+                                    
+                                    span {
+                                        width: 85%;
+                                        text-indent: 5%;
+                                        float: left;
+                                        display: block;
+                                        line-height: 35px;
+                                        height: 35px;
+                                        
+                                    }
+
+                                    span:first-of-type {
+                                        text-indent: 5%;
+                                        width: 14%;
+                                        display: inline-block;
+                                        float:left;
+                                        line-height: 35px;
+                                        height: 35px;
+                                        background-color:#fff;
+                                        color:#2b2b2b;
+                                        border-right:solid 1px #333;
+                                        
+                                    }
+                                }
+
+                                li:last-of-type{
+                                    height:auto;
+                                    padding:0.5em 0;
                                     audio#result_player {
                                         margin: 1% 0;
                                         width: 88%;
-                                        height: 35px;
+                                        height: 50px;
                                     }
 
                                     div#audio_controls {
@@ -1114,29 +1142,6 @@
                                                 line-height: 24px;
                                             }
                                         }
-                                    }
-
-                                    span {
-                                        width: 85%;
-                                        text-indent: 5%;
-                                        float: left;
-                                        display: block;
-                                        line-height: 35px;
-                                        height: 35px;
-                                        
-                                    }
-
-                                    span:first-of-type {
-                                        text-indent: 5%;
-                                        width: 14%;
-                                        display: inline-block;
-                                        float:left;
-                                        line-height: 35px;
-                                        height: 35px;
-                                        background-color:#fff;
-                                        color:#2b2b2b;
-                                        border-right:solid 1px #333;
-                                        
                                     }
                                 }
                             }
@@ -1478,7 +1483,6 @@
 
             }
 
-
             #registerform {
 
                 width: 40%;
@@ -1500,6 +1504,11 @@
                     display: block;
 
                 }
+
+                label{
+                    
+                    height:30px;
+                }
                 #register_btn {
                     font-family: ($FontList);
                     background-color: $color1;
@@ -1507,21 +1516,34 @@
                     letter-spacing: 0.1em;
                     width: 50%;
                     height: 35px;
-                    line-height: 35px;
                     color: $color2;
                     font-size: 1.1em;
                     box-shadow: none;
                     display:block;
                     &:hover {
                         margin: 0 auto;
-                        width: 50%;
-                        height: 35px;
-                        line-height: 35px;
                         color: $color3;
                         font-weight: bold;
                     }
                 }
                  
+            }
+
+            .regformlink{
+
+                display:block;
+                height:40px;
+                line-height:40px;
+                margin-top:1em;
+                text-align:center;
+                a{
+                    display:inline-block;
+                    color:#fff;
+                    &:hover{
+                        color:$color1;
+                        font-weight:bold;
+                    }
+                }
             }
 
             #contact-form-a {
@@ -1567,33 +1589,20 @@
                     border-color: #C6D880;
                     width: 100%;
                 }
-
-                a {
-                    text-decoration: none;
-                    line-height: 35px;
-
-                    &:hover {
-                        text-decoration: none;
-                        line-height: 35px;
-                    }
+                
+                label{
+                    height:35px;
+                    line-height:35px;
                 }
 
-                input[type="text"] {
+                input[type="text"],
+                input[type="email"]  {
                     @include boredrady (5px);
                     padding: 0.2em;
                     height: 35px;
                     font-size: 0.95em;
+                    width:100%;
                 }
-
-                input[type="email"] {
-                    @include boredrady (5px);
-                    background: $color2;
-                    display: block;
-                    padding: 0.2em;
-                    height: 35px;
-                    font-size: 0.95em;
-                }
-
                 textarea {
                     width: 100%;
                     border: 2px solid $color8;
@@ -1618,16 +1627,12 @@
                     letter-spacing: 0.1em;
                     width: 50%;
                     height: 35px;
-                    line-height: 35px;
                     color: $color2;
                     font-size: 1.1em;
                     box-shadow: none;
                     display:block;
                     &:hover {
                         margin: 0 auto;
-                        width: 50%;
-                        height: 35px;
-                        line-height: 35px;
                         color: $color3;
                         font-weight: bold;
                     }
@@ -1854,6 +1859,7 @@
                     form#searchForm {
                         label {
                             font-size: 0.9em;
+                            display:none;
                         }
 
                         input[type="text"] {
