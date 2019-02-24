@@ -2,7 +2,7 @@
 namespace Ijdb;
 class IjdbRoutes implements \Ninja\Routes{
 	private $albumsTable;
-	private $artistsTable;
+	private $reviewsTable;
 	private $authorsTable;
 	private $authentication;
 
@@ -11,18 +11,19 @@ class IjdbRoutes implements \Ninja\Routes{
 		include __DIR__ . '/../../includes/DatabaseConnection.php';
 
 		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
-		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
 		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id');
+		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'idreviews');
 		$this->authentication = new \Ninja\Authentication($this->authorsTable, 'email', 'password');
 	}
 	public function getRoutes(): array{
 			
-		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->artistsTable, $this->authorsTable, $this->authentication);
+		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->authorsTable, $this->reviewsTable, $this->authentication);
 		$authorController = new \Ijdb\Controllers\Register($this->authorsTable);
 		$loginController = new \Ijdb\Controllers\Login($this->authentication);
 						
 		$routes = [
 
+			//register
 			'register' => [
 				'GET' => [
 						'controller' => $authorController,
@@ -40,7 +41,8 @@ class IjdbRoutes implements \Ninja\Routes{
 				]
 			],
 
-			'edit' => [
+			//reviews 
+			'reviews/edit' => [
 					'POST' => [
 							'controller' => $Musiccontroller,
 							'action' => 'saveEdit'
@@ -52,19 +54,21 @@ class IjdbRoutes implements \Ninja\Routes{
 					'login' => true
 					
 			],
-			'delete' => [
+			'reviews/delete' => [
 					'POST' => [
 							'controller' => $Musiccontroller,
 							'action' => 'delete'
 					],
 					'login' => true
 			],
-			'list' => [
+			'reviews' => [
 					'GET' => [
 							'controller' => $Musiccontroller,
-							'action' => 'list'
+							'action' => 'reviews'
 					]
 			],
+
+			//login 
 			'login/error' => [
 				'GET' => [
 					'controller' => $loginController,
@@ -76,7 +80,7 @@ class IjdbRoutes implements \Ninja\Routes{
 					'controller' => $loginController,
 					'action' => 'loginsuccess'
 				],
-				 'login' => true
+				'login' => true
 				
 			],
 			'login' => [
@@ -89,18 +93,19 @@ class IjdbRoutes implements \Ninja\Routes{
 					'action' => 'processLogin'
 				]
 			],
-
 			'logout' => [
 				'GET' => [
 				'controller' => $loginController,
 				'action' => 'logout'
 				]
 			],
-	
+
+			//pages
 			'' => [
 					'GET' => [
 							'controller' => $Musiccontroller,
-							'action' => 'home'
+							'action' => 'home',
+							
 					]
 			],
 			'about' => [

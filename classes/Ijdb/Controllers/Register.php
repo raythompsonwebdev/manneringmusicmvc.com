@@ -23,9 +23,11 @@ class Register {
 
 	public function registerUser() {
 		$author = $_POST['author'];
+
 		// Assume the data is valid to begin with
 		$valid = true;
 		$errors = [];
+
 		// But if any of the fields have been left blank
 		// set $valid to false
 		if (empty($author['name'])) {
@@ -42,13 +44,13 @@ class Register {
 		}
 		else { // If the email is not blank and valid:
 		
-		// convert the email to lowercase
-		$author['email'] = strtolower($author['email']);
-		// Search for the lowercase version of $author['email']
-		if (count($this->authorsTable->find('email', $author['email'])) > 0) {
-			$valid = false;
-			$errors[] = 'That email address is already registered';
-		}
+			// convert the email to lowercase
+			$author['email'] = strtolower($author['email']);
+			// Search for the lowercase version of $author['email']
+			if (count($this->authorsTable->find('email', $author['email'])) > 0) {
+				$valid = false;
+				$errors[] = 'That email address is already registered';
+			}
 		}
 		if (empty($author['password'])) {
 			$valid = false;
@@ -66,7 +68,7 @@ class Register {
 			// lowercase value for email
 			$this->authorsTable->save($author);
 
-			header('Location: /success');
+			header('Location: /register/success');
 		} else {
 			// If the data is not valid, show the form again
 			return ['template' => 'register.html.php',

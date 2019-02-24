@@ -55,6 +55,9 @@
               <li><a rel='tab' href="/audio">Audio</a></li>
             <li><a rel='tab' href="/video">Video</a></li>
           <li><a rel='tab' href="/contact">Contact</a></li>
+          <li><a href="/review/list">Jokes List</a></li>
+			<li><a href="/review/edit">Add a new Joke</a></li>
+       
         </ul>
 
       </nav>

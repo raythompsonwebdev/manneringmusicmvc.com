@@ -8,46 +8,43 @@ use \Ninja\Authentication;
 class Music
 {
     private $authorsTable;
-    private $artistsTable;
+    private $reviewstable;
     private $albumsTable;
+  
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable, Authentication $authentication )
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $reviewsTable, DatabaseTable $authorsTable, Authentication $authentication )
     {
         $this->albumsTable = $albumsTable;
-        $this->artistsTable = $artistsTable;
+        $this->reviewsTable = $reviewsTable;
         $this->authorsTable = $authorsTable;
         $this->authentication = $authentication;
     }
 
     public function list() {
 
-		$result = $this->albumsTable->findAll();
+		$result = $this->reviewsTable->findAll();
 
-        $musics = [];
-        
-		foreach ($result as $music) {
+		$reviews = [];
+		foreach ($result as $review) {
 
-            $artist = $this->artistsTable->findById($music['artistid']);
+			$author = $this->authorsTable->findById($review['Id']);
 
-			$author = $this->authorsTable->findById($music['id']);
-			            
-            $musics[] = [
-                'albumid' => $music['albumid'],
-                'album' => $music['album'],
-                'image' => $music['image'],
-                'price' => $music['price'],
-                'text' => $music['text'],
-                'artist' => $artist['artist'],
-                'name' => $author['name'],
+			$reviews[] = [
+				'reviewid' => $review['id'],
+				'reviewtext' => $review['reviewtext'],
+				'reviewdate' => $review['reviewdate'],
+				'name' => $author['name'],
 				'email' => $author['email']
-            ];
+			];
 
 		}
 
 
-		$title = 'Music list';
+		$title = 'Review list';
 
-		$totalMusic = $this->artistsTable->total();
+        $totalReviews = $this->reviewsTable->total();
+        
+        $author = $this->authentication->getUser();
 
 		ob_start();
 
@@ -55,46 +52,68 @@ class Music
 
 		$output = ob_get_clean();
 
-		return ['template' => 'musics.html.php', 
+		return ['template' => 'reviews.html.php', 
 				'title' => $title, 
 				'variables' => [
-						'totalMusic' => $totalMusic,
-						'musics' => $musics
+						'totalReviews' => $totalReviews,
+                        'reviews' => $reviews,
+                        'userId' => $author['id'] ?? null
 					]
 				];
-    }
+	}
 
     public function delete() {
 
-		$this->albumsTable->delete($_POST['albumid']);
+        $author = $this->authentication->getUser();
 
-		header('location: /list'); 
-	}
+		$reviews = $this->reviewsTable->findById($_POST['id']);
 
+		if ($reviews['authorId'] != $author['id']) {
+			return;
+		}
+
+		$this->reviewsTable->delete($_POST['authorid']);
+
+		header('location: /reviews/list'); 
+    }
+    
 	public function saveEdit() {
 
-		$music = $_POST['music'];
-		//$joke['jokedate'] = new \DateTime();
-		$music['id'] = $author['id'];
+        $author = $this->authentication->getUser();
 
-		$this->albumsTable->save($music);
+
+		if (isset($_GET['id'])) {
+			$reviews = $this->reviewsTable->findById($_GET['id']);
+
+			if ($reviews['authorId'] != $author['id']) {
+				return;
+			}
+		}
+
+		$reviews = $_POST['review'];
+		$reviews['reviewdate'] = new \DateTime();
+		$reviews['id'] = $author['id'];
+
+		$this->reviewsTable->save($reviews);
 		
-		header('location: /list'); 
+		header('location: /reviews/list'); 
 	}
 
 	public function edit() {
         
-		if (isset($_GET['id'])) {
+		$author = $this->authentication->getUser();
 
-			$music = $this->albumsTable->findById($_GET['id']);
+		if (isset($_GET['id'])) {
+			$reviews = $this->reviewsTable->findById($_GET['id']);
 		}
 
 		$title = 'Edit Music';
 
-		return ['template' => 'editmusic.html.php',
+		return ['template' => 'editreviews.html.php',
 				'title' => $title,
 				'variables' => [
-						'music' => $music ?? null
+                        'musics' => $reviews ?? null,
+                        'userId' => $author['id'] ?? null
 					]
 				];
     }
@@ -109,17 +128,16 @@ class Music
         $rap = $this->albumsTable->findByGenre('Hip Hop');
 
         $rapalbums = [];
-        
+                
         foreach ($rap as $rapalbum) {
-            $artist = $this->artistsTable->findById($rapalbum['artistid']);
-
+                        
             $rapalbums[] = [
                 'albumid' => $rapalbum['albumid'],
                 'album' => $rapalbum['album'],
                 'image' => $rapalbum['image'],
                 'price' => $rapalbum['price'],
                 'text' => $rapalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $rapalbum['artist']
             ];
         }
 
@@ -128,16 +146,14 @@ class Music
         $countryalbums = [];
         
         foreach ($country as $countryalbum) {
-
-            $artist = $this->artistsTable->findById($countryalbum['artistid']);
-
+            
             $countryalbums[] = [
                 'albumid' => $countryalbum['albumid'],
                 'album' => $countryalbum['album'],
                 'image' => $countryalbum['image'],
                 'price' => $countryalbum['price'],
                 'text' => $countryalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $countryalbum['artist']
             ];
         }
 
@@ -146,15 +162,14 @@ class Music
         $jazzalbums = [];
         
         foreach ($jazz as $jazzalbum) {
-            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
-
+           
             $jazzalbums[] = [
                 'albumid' => $jazzalbum['albumid'],
                 'album' => $jazzalbum['album'],
                 'image' => $jazzalbum['image'],
                 'price' => $jazzalbum['price'],
                 'text' => $jazzalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $jazzalbum['artist']
             ];
         }
         
@@ -178,14 +193,13 @@ class Music
         $rapalbums = [];
         
         foreach ($rap as $rapalbum) {
-            $artist = $this->artistsTable->findById($rapalbum['artistid']);
-
+            
             $rapalbums[] = [
                 'albumid' => $rapalbum['albumid'],
                 'album' => $rapalbum['album'],
                 'image' => $rapalbum['image'],
                 'text' => $rapalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $rapalbum['artist']
             ];
         }
 
@@ -194,14 +208,13 @@ class Music
         $countryalbums = [];
         
         foreach ($country as $countryalbum) {
-            $artist = $this->artistsTable->findById($countryalbum['artistid']);
-
+            
             $countryalbums[] = [
                 'albumid' => $countryalbum['albumid'],
                 'album' => $countryalbum['album'],
                 'image' => $countryalbum['image'],
                 'text' => $countryalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $countryalbum['artist']
             ];
         }
 
@@ -210,14 +223,13 @@ class Music
         $jazzalbums = [];
         
         foreach ($jazz as $jazzalbum) {
-            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
-
+            
             $jazzalbums[] = [
                 'albumid' => $jazzalbum['albumid'],
                 'album' => $jazzalbum['album'],
                 'image' => $jazzalbum['image'],
                 'text' => $jazzalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $jazzalbum['artist']
             ];
         }
         
