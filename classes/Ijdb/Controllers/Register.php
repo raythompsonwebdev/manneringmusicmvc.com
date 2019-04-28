@@ -30,7 +30,7 @@ class Register {
 
 		// But if any of the fields have been left blank
 		// set $valid to false
-		if (empty($author['name'])) {
+		if (empty($author['username'])) {
 			$valid = false;
 			$errors[] = 'Name cannot be blank';
 		}

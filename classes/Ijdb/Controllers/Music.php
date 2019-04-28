@@ -10,14 +10,15 @@ class Music
     private $authorsTable;
     private $reviewsTable;
     private $albumsTable;
-    
+    private $artistsTable;
   
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, Authentication $authentication )
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, DatabaseTable $artistsTable, Authentication $authentication )
     {
         $this->albumsTable = $albumsTable;
         $this->reviewsTable = $reviewsTable;
         $this->authorsTable = $authorsTable;
+        $this->artistsTable = $artistsTable;
         $this->authentication = $authentication;
     }
 
@@ -129,25 +130,33 @@ class Music
 
         $rap = $this->albumsTable->findByGenre('Hip Hop');
 
+       // $rap = $this->albumsTable->findAll();
+
         $rapalbums = [];
                 
         foreach ($rap as $rapalbum) {
-                        
+
+            $artist = $this->artistsTable->findById($rapalbum['artistid']);
+                
             $rapalbums[] = [
                 'albumid' => $rapalbum['albumid'],
                 'album' => $rapalbum['album'],
                 'image' => $rapalbum['image'],
                 'price' => $rapalbum['price'],
                 'text' => $rapalbum['text'],
-                'artist' => $rapalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
+
+
 
         $country = $this->albumsTable->findByGenre('Country');
 
         $countryalbums = [];
         
         foreach ($country as $countryalbum) {
+
+            $artist = $this->artistsTable->findById($countryalbum['artistid']);
             
             $countryalbums[] = [
                 'albumid' => $countryalbum['albumid'],
@@ -155,7 +164,7 @@ class Music
                 'image' => $countryalbum['image'],
                 'price' => $countryalbum['price'],
                 'text' => $countryalbum['text'],
-                'artist' => $countryalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
 
@@ -164,6 +173,8 @@ class Music
         $jazzalbums = [];
         
         foreach ($jazz as $jazzalbum) {
+
+            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
            
             $jazzalbums[] = [
                 'albumid' => $jazzalbum['albumid'],
@@ -171,7 +182,7 @@ class Music
                 'image' => $jazzalbum['image'],
                 'price' => $jazzalbum['price'],
                 'text' => $jazzalbum['text'],
-                'artist' => $jazzalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
         
@@ -195,13 +206,15 @@ class Music
         $rapalbums = [];
         
         foreach ($rap as $rapalbum) {
+
+            $artist = $this->artistsTable->findById($rapalbum['artistid']);
             
             $rapalbums[] = [
                 'albumid' => $rapalbum['albumid'],
                 'album' => $rapalbum['album'],
                 'image' => $rapalbum['image'],
                 'text' => $rapalbum['text'],
-                'artist' => $rapalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
 
@@ -210,13 +223,15 @@ class Music
         $countryalbums = [];
         
         foreach ($country as $countryalbum) {
+
+            $artist = $this->artistsTable->findById($countryalbum['artistid']);
             
             $countryalbums[] = [
                 'albumid' => $countryalbum['albumid'],
                 'album' => $countryalbum['album'],
                 'image' => $countryalbum['image'],
                 'text' => $countryalbum['text'],
-                'artist' => $countryalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
 
@@ -225,13 +240,15 @@ class Music
         $jazzalbums = [];
         
         foreach ($jazz as $jazzalbum) {
+
+            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
             
             $jazzalbums[] = [
                 'albumid' => $jazzalbum['albumid'],
                 'album' => $jazzalbum['album'],
                 'image' => $jazzalbum['image'],
                 'text' => $jazzalbum['text'],
-                'artist' => $jazzalbum['artist']
+                'artist' => $artist['artist']
             ];
         }
         
@@ -273,11 +290,13 @@ class Music
 
     public function singleresult()
     {
-                               
+
+                                       
         if (isset($_GET['albumid'])) {
 
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            
+           
+          
             
         }
 
@@ -285,7 +304,7 @@ class Music
         $title = 'Cart';
                 
         return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums  ]
+            'singlealbums' => $singlealbums]
         ];
     }
-}
+} 

@@ -27,7 +27,7 @@
 	<form action="" method="post" id="registerform" class="group">
 		<br />
 		<label for="name">Your name</label>
-		<input name="author[name]" id="name" type="text" value="<?=$author['name'] ?? ''?>">
+		<input name="author[username]" id="name" type="text" value="<?=$author['username'] ?? ''?>">
 		<br />
 		<label for="email">Your email address</label>
 		<input name="author[email]" id="email" type="email" value="<?=$author['email'] ?? ''?>">

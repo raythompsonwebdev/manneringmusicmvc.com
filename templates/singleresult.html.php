@@ -23,7 +23,7 @@
                         <ul class="product-box-info">
                             <li>
                                 <span>Artist: </span>
-                                <span><?php echo $singlealbums['artist']; ?></span>
+                                <span><?php echo $singlealbums['artistid']; ?></span>
                             </li>
                             <li>
                                 <span>Album:</span>
