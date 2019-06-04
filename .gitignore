@@ -23,3 +23,7 @@ style.css
 composer.json
 Procfile
 includes/DatabaseConnection.php
+test/
+phpunit.xml
+handlers/
+audio/

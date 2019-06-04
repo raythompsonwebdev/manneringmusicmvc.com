@@ -5,6 +5,7 @@ class IjdbRoutes implements \Ninja\Routes{
 	private $reviewsTable;
 	private $authorsTable;
 	private $artistsTable;
+	private $audioTable;
 	private $authentication;
 
 	public function __construct(){
@@ -15,11 +16,12 @@ class IjdbRoutes implements \Ninja\Routes{
 		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id');
 		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid');
 		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
+		$this->audioTable = new \Ninja\DatabaseTable($pdo, 'audio', 'id');
 		$this->authentication = new \Ninja\Authentication($this->authorsTable, 'email', 'password');
 	}
 	public function getRoutes(): array{
 			
-		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->authorsTable, $this->reviewsTable, $this->artistsTable, $this->authentication);
+		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->authorsTable, $this->reviewsTable, $this->artistsTable, $this->audioTable, $this->authentication);
 		$authorController = new \Ijdb\Controllers\Register($this->authorsTable);
 		$loginController = new \Ijdb\Controllers\Login($this->authentication);
 						

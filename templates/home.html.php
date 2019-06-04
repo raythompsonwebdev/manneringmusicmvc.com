@@ -81,6 +81,7 @@
                             <h4>&#163;<?=$rapalbum['price']?></h4>
                             <!-- commented out for now.-->
                             <form method="get" action="/singleresult" id="frontform">
+                                
                                 <input type="hidden" name="albumid" value="<?=$rapalbum['albumid'] ?? ''?>">
                                 <input type="submit" name="submit" class="frontform" value="See more.."/>
                             </form>

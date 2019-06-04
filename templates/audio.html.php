@@ -1,3 +1,10 @@
+<?php
+
+    include __DIR__ . '/../includes/DatabaseConnection.php';
+       
+?>
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/audio.js"></script>
 <!--main text-->
 <section id="main_text" class="group">
 
@@ -34,7 +41,7 @@
               <ul>
                   <li><?=$rapalbum['album']?></li>
                       <li><?=$rapalbum['artist']?></li>
-                  <li>£</li>
+                  <li><?=$rapalbum['songtitle']?></li>
               </ul>
           
       </span>
@@ -47,7 +54,7 @@
       </span>
 
       <audio id="result_player" >
-        <source src="#" type='audio/mpeg' />
+        <source src="https://site.test/www/mannering.musicmvc.com/audio/<?=$rapalbum['songMp3']?>" type='audio/mpeg' />
         <source src="#" type='audio/ogg' />
         <source src="#" type='audio/mp4' />
         <p>Your browser does not support HTML5 audio.</p>

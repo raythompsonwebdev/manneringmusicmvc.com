@@ -11,14 +11,16 @@ class Music
     private $reviewsTable;
     private $albumsTable;
     private $artistsTable;
+    private $audioTable;
   
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, DatabaseTable $artistsTable, Authentication $authentication )
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, DatabaseTable $artistsTable, DatabaseTable $audioTable,  Authentication $authentication )
     {
         $this->albumsTable = $albumsTable;
         $this->reviewsTable = $reviewsTable;
         $this->authorsTable = $authorsTable;
         $this->artistsTable = $artistsTable;
+        $this->audioTable = $audioTable;
         $this->authentication = $authentication;
     }
 
@@ -130,8 +132,7 @@ class Music
 
         $rap = $this->albumsTable->findByGenre('Hip Hop');
 
-       // $rap = $this->albumsTable->findAll();
-
+       
         $rapalbums = [];
                 
         foreach ($rap as $rapalbum) {
@@ -208,13 +209,19 @@ class Music
         foreach ($rap as $rapalbum) {
 
             $artist = $this->artistsTable->findById($rapalbum['artistid']);
-            
+            $song = $this->audioTable->findById($rapalbum['artistid']);
+                            
             $rapalbums[] = [
                 'albumid' => $rapalbum['albumid'],
                 'album' => $rapalbum['album'],
                 'image' => $rapalbum['image'],
                 'text' => $rapalbum['text'],
-                'artist' => $artist['artist']
+                'artist' => $artist['artist'],
+                'songtitle' => $song['songtitle'],
+                'songMp3' => $song['mp3-files'],
+                'songOgg' => $song['ogg-files'],
+                'songMp4' => $song['mp4-files']
+
             ];
         }
 
@@ -260,6 +267,7 @@ class Music
                         'rapalbums' => $rapalbums,
                         'countryalbums' => $countryalbums,
                         'jazzalbums' => $jazzalbums
+                        
                     ]
                 ];
     }
@@ -290,21 +298,32 @@ class Music
 
     public function singleresult()
     {
-
-                                       
+        
+                                               
         if (isset($_GET['albumid'])) {
-
-            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
            
-          
-            
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
+            $singleartist = $this->artistsTable->findById($_GET['albumid']);
+            $singleaudio = $this->audioTable->findById($_GET['albumid']);
+                           
         }
-
-                               
+           
+                                     
         $title = 'Cart';
                 
         return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums]
+            'singlealbums' => $singlealbums, 'singleartist' => $singleartist,'singleaudio' => $singleaudio
+             ]
         ];
     }
+
+    //public function getNumberOfSongs() {
+
+     //   $numsongs = $albumsTable->findAll();
+
+    //    $query = query("SELECT id FROM songs WHERE album='$numsongs'");
+    //    return mysqli_num_rows($query);
+    //}
+
+    
 } 
