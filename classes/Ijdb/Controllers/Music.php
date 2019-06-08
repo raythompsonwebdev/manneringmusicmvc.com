@@ -31,15 +31,15 @@ class Music
 		$reviews = [];
 		foreach ($result as $review) {
 
-			$author = $this->authorsTable->findById($review['reviewsid']);
+			$author = $this->authorsTable->findById($review->reviewsid);
 
 			$reviews[] = [
-				'reviewsid' => $review['reviewsid'],
-				'reviewtext' => $review['reviewtext'],
-				'reviewdate' => $review['reviewdate'],
-				'name' => $author['username'],
-                'email' => $author['email'],
-                'authorId' => $author['id']
+				'reviewsid' => $review->reviewsid,
+				'reviewtext' => $review->reviewtext,
+				'reviewdate' => $review->reviewdate,
+				'name' => $author->username,
+                'email' => $author->email,
+                'authorId' => $author->id
 			];
 
 		}
@@ -62,7 +62,7 @@ class Music
 				'variables' => [
 						'totalReviews' => $totalReviews,
                         'reviews' => $reviews,
-                        'userId' => $author['id'] ?? null
+                        'userId' => $author->id ?? null
 					]
 				];
 	}
@@ -73,7 +73,7 @@ class Music
 
 		$reviews = $this->reviewsTable->findById($_POST['id']);
 
-		if ($reviews['authorid'] != $author['id']) {
+		if ($reviews->authorid != $author->id) {
 			return;
 		}
 
@@ -86,20 +86,11 @@ class Music
 
         $author = $this->authentication->getUser();
 
-
-		if (isset($_GET['reviewsid'])) {
-			$reviews = $this->reviewsTable->findById($_GET['reviewsid']);
-
-			if ($reviews['authorId'] != $author['id']) {
-				return;
-			}
-		}
-
 		$reviews = $_POST['review'];
 		$reviews['reviewdate'] = new \DateTime();
-		$reviews['reviewsid'] = $author['id'];
+		
 
-		$this->reviewsTable->save($reviews);
+		$author->addReview($reviews);
 		
 		header('location: /reviews'); 
 	}
@@ -118,13 +109,12 @@ class Music
 				'title' => $title,
 				'variables' => [
                         'reviews' => $reviews ?? null,
-                        'userId' => $author['id'] ?? null
+                        'userId' => $author->id ?? null
 					]
 				];
     }
     
-    
-    
+        
     ////////////////////////////
 
     public function home()
@@ -137,15 +127,15 @@ class Music
                 
         foreach ($rap as $rapalbum) {
 
-            $artist = $this->artistsTable->findById($rapalbum['artistid']);
+            $artist = $this->artistsTable->findById($rapalbum->albumid);
                 
             $rapalbums[] = [
-                'albumid' => $rapalbum['albumid'],
-                'album' => $rapalbum['album'],
-                'image' => $rapalbum['image'],
-                'price' => $rapalbum['price'],
-                'text' => $rapalbum['text'],
-                'artist' => $artist['artist']
+                'albumid' => $rapalbum ->albumid,
+                'album' => $rapalbum ->album,
+                'image' => $rapalbum ->image,
+                'price' => $rapalbum ->price,
+                'text' => $rapalbum ->text,
+                'artist' => $artist ->artist
             ];
         }
 
@@ -157,15 +147,15 @@ class Music
         
         foreach ($country as $countryalbum) {
 
-            $artist = $this->artistsTable->findById($countryalbum['artistid']);
+            $artist = $this->artistsTable->findById($countryalbum->artistid);
             
             $countryalbums[] = [
-                'albumid' => $countryalbum['albumid'],
-                'album' => $countryalbum['album'],
-                'image' => $countryalbum['image'],
-                'price' => $countryalbum['price'],
-                'text' => $countryalbum['text'],
-                'artist' => $artist['artist']
+                'albumid' => $countryalbum->albumid,
+                'album' => $countryalbum->album,
+                'image' => $countryalbum->image,
+                'price' => $countryalbum->price,
+                'text' => $countryalbum->text,
+                'artist' => $artist->artist
             ];
         }
 
@@ -175,15 +165,15 @@ class Music
         
         foreach ($jazz as $jazzalbum) {
 
-            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
+            $artist = $this->artistsTable->findById($jazzalbum->artistid);
            
             $jazzalbums[] = [
-                'albumid' => $jazzalbum['albumid'],
-                'album' => $jazzalbum['album'],
-                'image' => $jazzalbum['image'],
-                'price' => $jazzalbum['price'],
-                'text' => $jazzalbum['text'],
-                'artist' => $artist['artist']
+                'albumid' => $jazzalbum->albumid,
+                'album' => $jazzalbum->album,
+                'image' => $jazzalbum->image,
+                'price' => $jazzalbum->price,
+                'text' => $jazzalbum->text,
+                'artist' => $artist->artist
             ];
         }
         
@@ -305,25 +295,24 @@ class Music
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
             $singleartist = $this->artistsTable->findById($_GET['albumid']);
             $singleaudio = $this->audioTable->findById($_GET['albumid']);
-                           
+                                       
         }
-           
-                                     
+
+        
+
+        
         $title = 'Cart';
                 
         return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums, 'singleartist' => $singleartist,'singleaudio' => $singleaudio
-             ]
+            'singlealbums' => $singlealbums, 
+            'singleartist' => $singleartist,
+            'singleaudio' => $singleaudio
+            
+            
+         ]
         ];
     }
 
-    //public function getNumberOfSongs() {
-
-     //   $numsongs = $albumsTable->findAll();
-
-    //    $query = query("SELECT id FROM songs WHERE album='$numsongs'");
-    //    return mysqli_num_rows($query);
-    //}
-
-    
+       
+        
 } 

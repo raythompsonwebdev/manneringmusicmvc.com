@@ -108,7 +108,7 @@
                         <p><?=$countryalbum['artist']?></p>
                         <h4> &#163;<?=$countryalbum['price']?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="albumid" value="<?=$countryalbum['albumid'] ?? ''?>">
+                            <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
                     </figcaption>

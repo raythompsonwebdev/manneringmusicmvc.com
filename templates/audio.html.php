@@ -1,8 +1,4 @@
-<?php
 
-    include __DIR__ . '/../includes/DatabaseConnection.php';
-       
-?>
 <script src="assets/js/jquery-1.11.0.min.js"></script>
 <script src="assets/js/audio.js"></script>
 <!--main text-->
@@ -54,9 +50,9 @@
       </span>
 
       <audio id="result_player" >
-        <source src="https://site.test/www/mannering.musicmvc.com/audio/<?=$rapalbum['songMp3']?>" type='audio/mpeg' />
-        <source src="#" type='audio/ogg' />
-        <source src="#" type='audio/mp4' />
+        <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $rapalbum['songMp3'];?>" type='audio/mpeg' />
+        <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $rapalbum['songOgg'];?>" type='audio/ogg' />
+        <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $rapalbum['songMp4'];?>" type='audio/mp4' />
         <p>Your browser does not support HTML5 audio.</p>
       </audio>
       

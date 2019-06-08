@@ -12,17 +12,24 @@ class IjdbRoutes implements \Ninja\Routes{
 			
 		include __DIR__ . '/../../includes/DatabaseConnection.php';
 
-		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid');
-		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id');
-		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid');
-		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id');
-		$this->audioTable = new \Ninja\DatabaseTable($pdo, 'audio', 'id');
+		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid', '\Ijdb\Entity\Album', [&$this->artistsTable]);
+
+		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid', '\Ijdb\Entity\Review',	[&$this->authorsTable]);
+
+		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id', '\Ijdb\Entity\Author', [&$this->reviewsTable]);
+
+		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'artistid', '\Ijdb\Entity\Artist', [&$this->albumsTable]);
+
+		$this->audioTable = new \Ninja\DatabaseTable($pdo, 'audio', 'audioid', '\Ijdb\Entity\Audio', [&$this->albumsTable, &$this->artistsTable]);
+
 		$this->authentication = new \Ninja\Authentication($this->authorsTable, 'email', 'password');
 	}
 	public function getRoutes(): array{
 			
 		$Musiccontroller = new \Ijdb\Controllers\Music($this->albumsTable, $this->authorsTable, $this->reviewsTable, $this->artistsTable, $this->audioTable, $this->authentication);
+
 		$authorController = new \Ijdb\Controllers\Register($this->authorsTable);
+		
 		$loginController = new \Ijdb\Controllers\Login($this->authentication);
 						
 		$routes = [

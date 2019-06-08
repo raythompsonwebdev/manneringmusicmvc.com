@@ -65,6 +65,7 @@
 
 </script>
 -->
+
 <script src="assets/js/jquery-1.11.0.min.js"></script>
 <script src="assets/js/audio.js"></script>
 <section id="main_text" class="group">
@@ -79,46 +80,66 @@
 
                 <figure class="product-box-img">
 
-                    <img src="assets/databasepics/<?php echo $singlealbums['image']; ?>" alt="Album-Cover-Image" />
+                    <img src="assets/databasepics/<?php echo $singlealbums->image; ?>" alt="Album-Cover-Image" />
 
                     <figcaption>
 
                         <ul class="product-box-info">
                             <li>
                                 <span>Artist: </span>
-                                <span><?php echo $singleartist['artist']; ?></span>
+                                <span><?php echo $singleartist->artist; ?></span>
                             </li>
                             <li>
                                 <span>Album:</span>
-                                <span><?php echo $singlealbums['album']; ?></span>
+                                <span><?php echo $singlealbums->album; ?></span>
                             </li>
                             <li>
                                 <span>Formats:</span>
-                                <span><?php echo $singlealbums['text']; ?></span>
+                                <span><?php echo $singlealbums->text; ?></span>
                             </li>
                             <li>
                                 <span>Genre:</span>
-                                <span><?php echo $singlealbums['genre']; ?></span>
+                                <span><?php echo $singlealbums->genre; ?></span>
                             </li>
                             <li>
                                 <span>Price:</span>
-                                <span><?php echo $singlealbums['price']; ?></span>
+                                <span><?php echo $singlealbums->price; ?></span>
                             </li>
                             <li id="trackName">
                                 <span>
-                               
+                               Song Title
                                 </span>
- 
+                                <?php //echo $singleaudio['songtitle']; ?>
                             </li>
+                    
+                            <?php
+                                 
+                                $songIds = $singleaudio->getSongId();
+                                
+                                var_dump($songIds);
+                                $i = 1;
+                                
+                                foreach($songIds as $songId) :
 
-                            <li>
-                           
+                                    //var_dump($songId);
+                                   // echo ',br/>';
+                                   // $albumArtist = $singleaudio->getArtist();
+                                   // $album = $singleaudio->getAlbum();
                                                                         
 
-                                    <audio id="result_player" >
-                                    <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio['mp3-files']; ?>" type='audio/mpeg' />
-                                    <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio['ogg-files']; ?>" type='audio/ogg' />
-                                    <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio['mp4-files']; ?>" type='audio/mp4' />
+                                   // $i = $i + 1;
+
+
+
+                              ?>
+
+		                   
+                            <li>
+                                
+                                <audio id="result_player" >
+                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<? ?>" type='audio/mpeg' />
+                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php  ?>" type='audio/ogg' />
+                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php  ?>" type='audio/mp4' />
                                     <p>Your browser does not support HTML5 audio.</p>
                                 </audio>
                 
@@ -135,13 +156,15 @@
                                     <div id="duration">00:00</div>
                                     </div>
                                 </div>
-
-                            
-                                
+                                                          
 
                             </li>
 
-
+                            <?php 
+                             $i = $i + 1;
+                        
+                        endforeach;?>
+                            
                         </ul>
 
                     </figcaption>
@@ -150,8 +173,7 @@
 
                 </figure>
                     
-               
-                  
+                         
            
 
             </div>
