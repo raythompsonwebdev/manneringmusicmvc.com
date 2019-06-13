@@ -4,9 +4,9 @@ namespace Ijdb\Entity;
 class Audio {
 	public $audioid;
 	public $songtitle;
-	public $mp3File;
-  public $oggFile;
-  public $mp4File;
+	public $mp3_File;
+  public $ogg_File;
+  public $mp4_File;
   public $artistid;
   public $albumid;
   private $albumsTable;
@@ -16,25 +16,35 @@ class Audio {
         
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
-        
-        
+                
   }
 
-  public function getSongId(){
-		
-		return $this->albumsTable->findById($this->albumid);
-		
-	  }
+    public function getAudioId(){
 
-    
-    
-	  public function getAlbum() {
-		return $this->albumsTable->findById($this->albumid);
+      return $this->audioid;
+		
     }
 
-    public function getArtist() {
-		return $this->artistsTable->findById($this->artistid);
+        
+    public function getArtistId() {
+
+      return $this->artistsTable->findById($this->artistid);
+
     }
+
+    public function getSongTitle(){
+
+      return $this->songtitle;
+      
+        
+    }
+ 
+    
+	  public function getAlbumId() {
+	  	return $this->albumsTable->findById($this->albumid);
+    }
+
+    
     
     
 }

@@ -295,6 +295,7 @@ class Music
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
             $singleartist = $this->artistsTable->findById($_GET['albumid']);
             $singleaudio = $this->audioTable->findById($_GET['albumid']);
+            
                                        
         }
 

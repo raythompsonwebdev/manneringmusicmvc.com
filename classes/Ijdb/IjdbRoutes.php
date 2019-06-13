@@ -12,13 +12,13 @@ class IjdbRoutes implements \Ninja\Routes{
 			
 		include __DIR__ . '/../../includes/DatabaseConnection.php';
 
-		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid', '\Ijdb\Entity\Album', [&$this->artistsTable]);
+		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid', '\Ijdb\Entity\Album', [&$this->audioTable, &$this->artistsTable]);
 
 		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid', '\Ijdb\Entity\Review',	[&$this->authorsTable]);
 
 		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id', '\Ijdb\Entity\Author', [&$this->reviewsTable]);
 
-		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'artistid', '\Ijdb\Entity\Artist', [&$this->albumsTable]);
+		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id', '\Ijdb\Entity\Artist', [&$this->albumsTable, &$this->audioTable]);
 
 		$this->audioTable = new \Ninja\DatabaseTable($pdo, 'audio', 'audioid', '\Ijdb\Entity\Audio', [&$this->albumsTable, &$this->artistsTable]);
 

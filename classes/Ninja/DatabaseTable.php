@@ -184,5 +184,46 @@ class DatabaseTable
     }
 
     
+    public function findSongId($value)
+    {
+        $query = "SELECT audioid FROM `audio` WHERE `albumid` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['audioid']);
+        }
+         
+
+        return $array;
+    }
+
+    public function findSongTitle($value)
+    {
+        $query = "SELECT songtitle FROM `audio` WHERE `audioid` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['songtitle']);
+        }
+         
+
+        return $array;
+    }
+
+    
     
 }
