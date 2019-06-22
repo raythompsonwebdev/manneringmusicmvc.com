@@ -15,7 +15,7 @@
         var artistname = $("#artist").val();
         var albumname = $("#album").val();
         var genre = $("#genre").val();
-        var dataString = 'artist='+ artistname + '&album=' + albumname + '&genre=' + genre;
+        var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
 
         $.ajax({
             url:  'results.php',
@@ -56,7 +56,7 @@
             <form id="searchForm">
 
                 <label for="artist">Artist name</label>
-                <input id="artist" name="artist" type="text"  title=" Artist Name"  autofocus placeholder="Artist Name">
+                <input id="artist" name="artist_name" type="text"  title="Artist Name"  autofocus placeholder="Artist Name">
 
 
                 <label for="album">Album name</label>

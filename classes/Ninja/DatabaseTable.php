@@ -169,6 +169,7 @@ class DatabaseTable
         $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
         return $rows;
     }
+
     /**
      * video-page-function
      *
@@ -182,11 +183,10 @@ class DatabaseTable
         $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
         return $rows;
     }
-
     
     public function findSongId($value)
     {
-        $query = "SELECT audioid FROM `audio` WHERE `albumid` = $value ";
+        $query = "SELECT `audioid` FROM `audio` WHERE `albumid` = $value ";
 
         $parameters = [
             'value' => $value
@@ -224,6 +224,90 @@ class DatabaseTable
         return $array;
     }
 
+    public function findArtist($value)
+    {
+
+        $query = "SELECT `artist_name` FROM `artist` WHERE `id` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['artist_name']);
+        }
+         
+
+        return $array;
+    }
+       
+
+    public function findSongMp3($value)
+    {
+        $query = "SELECT `mp3_File` FROM `audio` WHERE `audioid` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['mp3_File']);
+        }
+         
+
+        return $array;
+    }
+
+    public function findSongOgg($value)
+    {
+        $query = "SELECT `ogg_File` FROM `audio` WHERE `audioid` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['ogg_File']);
+        }
+         
+
+        return $array;
+    }
+
+    public function findSongM4a($value)
+    {
+        $query = "SELECT `m4a_File` FROM `audio` WHERE `audioid` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, $row['m4a_File']);
+        }
+         
+
+        return $array;
+    }
+
     
+
+           
     
 }

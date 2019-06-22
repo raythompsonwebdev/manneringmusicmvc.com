@@ -6,7 +6,7 @@ class Audio {
 	public $songtitle;
 	public $mp3_File;
   public $ogg_File;
-  public $mp4_File;
+  public $m4a_File;
   public $artistid;
   public $albumid;
   private $albumsTable;
@@ -38,11 +38,14 @@ class Audio {
       
         
     }
- 
+
+    
     
 	  public function getAlbumId() {
 	  	return $this->albumsTable->findById($this->albumid);
     }
+
+
 
     
     

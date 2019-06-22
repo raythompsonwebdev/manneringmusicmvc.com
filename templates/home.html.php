@@ -77,7 +77,7 @@
 
                         <figcaption class="cap_1_of_5">
                             <h3><?=$rapalbum['album']?></h3>
-                                <p><?=$rapalbum['artist']?></p>
+                                <p><?=$rapalbum['artist_name']?></p>
                             <h4>&#163;<?=$rapalbum['price']?></h4>
                             <!-- commented out for now.-->
                             <form method="get" action="/singleresult" id="frontform">
@@ -105,10 +105,10 @@
 
                     <figcaption class="cap_1_of_5">
                         <h3><?=$countryalbum['album']?></h3>
-                        <p><?=$countryalbum['artist']?></p>
+                        <p><?=$countryalbum['artist_name']?></p>
                         <h4> &#163;<?=$countryalbum['price']?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
+                            <input type="hidden" name="albumid" value="<?=$countryalbum['albumid'] ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
                     </figcaption>
@@ -129,7 +129,7 @@
                     <img class="images_1_of_5" src="/assets/databasepics/<?=$jazzalbum['image']?>" alt="JazzMusicAlbum">
                     <figcaption class="cap_1_of_5">
                         <h3><?=$jazzalbum['album']?></h3>
-                        <p><?=$jazzalbum['artist']?></p>
+                        <p><?=$jazzalbum['artist_name']?></p>
                         <h4>&#163;<?=$jazzalbum['price']?></h4>
                         <form method="get" action="/singleresult" id="frontform">
                             <input type="hidden" name="albumid" value="<?=$jazzalbum['albumid'] ?? ''?>">

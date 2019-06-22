@@ -130,12 +130,12 @@ class Music
             $artist = $this->artistsTable->findById($rapalbum->albumid);
                 
             $rapalbums[] = [
-                'albumid' => $rapalbum ->albumid,
-                'album' => $rapalbum ->album,
-                'image' => $rapalbum ->image,
-                'price' => $rapalbum ->price,
-                'text' => $rapalbum ->text,
-                'artist' => $artist ->artist
+                'albumid' => $rapalbum->albumid,
+                'album' => $rapalbum->album,
+                'image' => $rapalbum->image,
+                'price' => $rapalbum->price,
+                'text' => $rapalbum->text,
+                'artist_name' => $artist->artist_name
             ];
         }
 
@@ -155,7 +155,7 @@ class Music
                 'image' => $countryalbum->image,
                 'price' => $countryalbum->price,
                 'text' => $countryalbum->text,
-                'artist' => $artist->artist
+                'artist_name' => $artist->artist_name
             ];
         }
 
@@ -173,7 +173,7 @@ class Music
                 'image' => $jazzalbum->image,
                 'price' => $jazzalbum->price,
                 'text' => $jazzalbum->text,
-                'artist' => $artist->artist
+                'artist_name' => $artist->artist_name
             ];
         }
         
@@ -293,11 +293,20 @@ class Music
         if (isset($_GET['albumid'])) {
            
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            $singleartist = $this->artistsTable->findById($_GET['albumid']);
+            $singleartist = $this->artistsTable->findArtist($_GET['albumid']);
             $singleaudio = $this->audioTable->findById($_GET['albumid']);
-            
-                                       
+                                                   
         }
+
+        if (isset($_GET['artistid'])) {
+           
+           
+            $singleartist = $this->artistsTable->findArtist($_GET['artistid']);
+           
+                                                   
+        }
+
+        
 
         
 
@@ -308,7 +317,6 @@ class Music
             'singlealbums' => $singlealbums, 
             'singleartist' => $singleartist,
             'singleaudio' => $singleaudio
-            
             
          ]
         ];

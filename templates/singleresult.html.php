@@ -12,7 +12,7 @@
 <section id="main_text" class="group">
 
     <h1>Albums</h1>
-
+    
     <!--main text-->
 
     <div id="results">
@@ -28,7 +28,7 @@
                         <ul class="product-box-info">
                             <li>
                                 <span>Artist: </span>
-                                <span><?php echo $singleartist->artist; ?></span>
+                                <span><?php echo implode($singleartist); ?></span>
                             </li>
                             <li>
                                 <span>Album:</span>
@@ -46,61 +46,59 @@
                                 <span>Price:</span>
                                 <span><?php echo $singlealbums->price; ?></span>
                             </li>
-                            <li id="trackName">
-                                <span>
-                               Song Title
-                                </span>
-                                <?php //echo $singleaudio['songtitle']; ?>
+                            <li >
+                                
                             </li>
                     
                             <?php
-                                 
-                                                                
-                                $songIdArray = $singlealbums->getAudioId();                                
-                                                                                               
-                                
+                                                                                                 
+                                $songIdArray = $singlealbums->getAudioId(); 
 
+                                //echo var_dump($songIdArray);
+                               
                                 $i = 1;
                                 
                                 foreach($songIdArray as $songIds ) :
-                                                                                                                             
-                                                                                                                               
-                                    echo $singleartist->artist .'<br/>';
-                                    echo $singlealbums->album .'<br/>';
-
+                                    
                                     $songTitle = implode('', $singlealbums->getSongTitle($songIds)); 
-                                                                       
-                                    echo $songTitle;
-                                     
+                                    
+                                    $songMp3 = implode('', $singlealbums->getMp3($songIds));
+                                    $songOgg = implode('', $singlealbums->getOgg($songIds));
+                                    //$songM4a = implode('', $singlealbums->getM4a($songIds));
+                                    
+                                                                                                           
+                                    echo $songTitle .'-';
+                                    echo $songMp3.'-';
+                                    echo $songOgg.'-';
+                                    
+                                                                         
                             ?>
-
-		                                           
-                                
+                                          
                                 <audio id="result_player" >
-                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio->mp3_File; ?>" type='audio/mpeg' />
-                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio->ogg_File; ?>" type='audio/ogg' />
-                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $singleaudio->mp4_File; ?>" type='audio/mp4' />
+                                    <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $songMp3; ?>" type='audio/mpeg' />
+                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php echo $songOgg; ?>" type='audio/ogg' />
+                                    <source src="http://site.test/www/mannering.musicmvc.com/audio/<?php //echo $songM4a; ?>" type='audio/mp4' />
                                     <p>Your browser does not support HTML5 audio.</p>
                                 </audio>
 
                                 <ul>
-                                <li>
-                                    <div id="audio_controls">
-                                        <div id="play_toggle" class="player-button">
-                                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                    <li>
+                                        <div id="audio_controls">
+                                            <div id="play_toggle" class="player-button">
+                                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="progress">
+                                            <div id="load_progress"></div>
+                                            <div id="play_progress"></div>
+                                            </div>
+                                            <div id="time">
+                                            <div id="current_time">00:00</div>  
+                                            <div id="duration">00:00</div>
+                                            </div>
                                         </div>
-                                        <div id="progress">
-                                        <div id="load_progress"></div>
-                                        <div id="play_progress"></div>
-                                        </div>
-                                        <div id="time">
-                                        <div id="current_time">00:00</div>  
-                                        <div id="duration">00:00</div>
-                                        </div>
-                                    </div>
-                                                                
+                                                                    
 
-                                </li>
+                                    </li>
                                 </ul>
                             <?php 
                              

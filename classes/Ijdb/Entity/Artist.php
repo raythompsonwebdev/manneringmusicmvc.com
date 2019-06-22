@@ -3,7 +3,7 @@ namespace Ijdb\Entity;
 
 class Artist {
 	public $id;
-	public $artist;
+	public $artist_name;
 	private $albumsTable;
 	private $audioTable;
 	
@@ -16,16 +16,11 @@ class Artist {
 
 	public function getArtistId(){
 					
-		return $this->artistid ;
+		return $this->id ;
 	  
 	}
 	  
-	public function getArtist(){
-					
-		return $this->artist ;
-	  
-  	}
-
+	
 	public function getAudioId(){
 					
 		return $this->audioTable->findById($this->id) ;
