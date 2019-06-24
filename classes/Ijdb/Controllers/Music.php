@@ -135,6 +135,7 @@ class Music
                 'image' => $rapalbum->image,
                 'price' => $rapalbum->price,
                 'text' => $rapalbum->text,
+                'artistid' => $rapalbum->artistid,
                 'artist_name' => $artist->artist_name
             ];
         }
@@ -155,6 +156,7 @@ class Music
                 'image' => $countryalbum->image,
                 'price' => $countryalbum->price,
                 'text' => $countryalbum->text,
+                'artistid' => $rapalbum->artistid,
                 'artist_name' => $artist->artist_name
             ];
         }
@@ -173,6 +175,7 @@ class Music
                 'image' => $jazzalbum->image,
                 'price' => $jazzalbum->price,
                 'text' => $jazzalbum->text,
+                'artistid' => $rapalbum->artistid,
                 'artist_name' => $artist->artist_name
             ];
         }
@@ -188,80 +191,7 @@ class Music
                     ]
                 ];
     }
-
-    public function audio()
-    {
-
-        $rap = $this->albumsTable->findByGenre('Hip Hop');
-
-        $rapalbums = [];
-        
-        foreach ($rap as $rapalbum) {
-
-            $artist = $this->artistsTable->findById($rapalbum['artistid']);
-            $song = $this->audioTable->findById($rapalbum['artistid']);
-                            
-            $rapalbums[] = [
-                'albumid' => $rapalbum['albumid'],
-                'album' => $rapalbum['album'],
-                'image' => $rapalbum['image'],
-                'text' => $rapalbum['text'],
-                'artist' => $artist['artist'],
-                'songtitle' => $song['songtitle'],
-                'songMp3' => $song['mp3-files'],
-                'songOgg' => $song['ogg-files'],
-                'songMp4' => $song['mp4-files']
-
-            ];
-        }
-
-        $country = $this->albumsTable->findByGenre('Country');
-
-        $countryalbums = [];
-        
-        foreach ($country as $countryalbum) {
-
-            $artist = $this->artistsTable->findById($countryalbum['artistid']);
-            
-            $countryalbums[] = [
-                'albumid' => $countryalbum['albumid'],
-                'album' => $countryalbum['album'],
-                'image' => $countryalbum['image'],
-                'text' => $countryalbum['text'],
-                'artist' => $artist['artist']
-            ];
-        }
-
-        $jazz = $this->albumsTable->findByGenre('Jazz');
-
-        $jazzalbums = [];
-        
-        foreach ($jazz as $jazzalbum) {
-
-            $artist = $this->artistsTable->findById($jazzalbum['artistid']);
-            
-            $jazzalbums[] = [
-                'albumid' => $jazzalbum['albumid'],
-                'album' => $jazzalbum['album'],
-                'image' => $jazzalbum['image'],
-                'text' => $jazzalbum['text'],
-                'artist' => $artist['artist']
-            ];
-        }
-        
-        $title = 'Mannering Audio';
-
-        return ['template' => 'audio.html.php',
-                'title' => $title,
-                'variables' => [
-                        'rapalbums' => $rapalbums,
-                        'countryalbums' => $countryalbums,
-                        'jazzalbums' => $jazzalbums
-                        
-                    ]
-                ];
-    }
-
+    
     public function video()
     {
         
@@ -293,24 +223,18 @@ class Music
         if (isset($_GET['albumid'])) {
            
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            $singleartist = $this->artistsTable->findArtist($_GET['albumid']);
             $singleaudio = $this->audioTable->findById($_GET['albumid']);
-                                                   
+                                                               
         }
 
         if (isset($_GET['artistid'])) {
-           
-           
-            $singleartist = $this->artistsTable->findArtist($_GET['artistid']);
-           
+                       
+            $singleartist = $this->artistsTable->findById($_GET['artistid']);
                                                    
         }
 
-        
-
-        
-
-        
+              
+              
         $title = 'Cart';
                 
         return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[

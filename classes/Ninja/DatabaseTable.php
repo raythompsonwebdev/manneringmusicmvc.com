@@ -155,21 +155,7 @@ class DatabaseTable
         $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
         return $rows;
     }
-    
-    /**
-     * music-page-function
-     *
-     * */
-    public function musicPage($pdo, $genre)
-    {
-
-        $query = $pdo->prepare('SELECT * FROM mannering WHERE genre =:genre LIMIT 6');
-        $query->bindValue(':genre', $genre);
-        $query->execute();
-        $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-        return $rows;
-    }
-
+        
     /**
      * video-page-function
      *
@@ -223,28 +209,6 @@ class DatabaseTable
 
         return $array;
     }
-
-    public function findArtist($value)
-    {
-
-        $query = "SELECT `artist_name` FROM `artist` WHERE `id` = $value ";
-
-        $parameters = [
-            'value' => $value
-        ];
-
-        $query = $this->query($query, $parameters);
-
-        $array = array();
-
-        foreach($query as $row) {
-            array_push($array, $row['artist_name']);
-        }
-         
-
-        return $array;
-    }
-       
 
     public function findSongMp3($value)
     {

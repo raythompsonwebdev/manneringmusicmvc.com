@@ -6,11 +6,11 @@
 
         $("#searchBtn ").on('click', function(){
 
-       // $('#loadingIndicator').bind('ajaxStart', function() {
-       //     $(this).show();
-       //       }).bind('ajaxComplete', function() {
-       //     $(this).hide();
-      // });
+        $('#loadingIndicator').bind('ajaxStart', function() {
+            $(this).show();
+              }).bind('ajaxComplete', function() {
+            $(this).hide();
+        });
 
         var artistname = $("#artist").val();
         var albumname = $("#album").val();
@@ -56,19 +56,19 @@
             <form id="searchForm">
 
                 <label for="artist">Artist name</label>
-                <input id="artist" name="artist_name" type="text"  title="Artist Name"  autofocus placeholder="Artist Name">
-
+                <input id="artist" name="artist_name" type="text" title="Artist Name"  autofocus placeholder="Artist Name">
 
                 <label for="album">Album name</label>
                 <input id="album" name="album" type="text" title="Album Name"  placeholder="Album Name" >
 
 
                 <label for="genre">Genre</label>
+
                 <select name="genre" id="genre" >
-                <option value=""></option>
-                <option value="Hip Hop">Hip Hop</option>
-                <option value="Jazz">Jazz</option>
-                <option value="Country">Country</option>
+                    <option value=""></option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Country">Country</option>
                 </select>
 
                 <input id="searchBtn" class="submit" name="submit" type="submit" value="FIND MUSIC" >

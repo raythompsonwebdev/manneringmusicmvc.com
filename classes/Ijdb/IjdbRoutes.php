@@ -132,12 +132,6 @@ class IjdbRoutes implements \Ninja\Routes{
 							'action' => 'search'
 					]
 			],
-			'audio' => [
-					'GET' => [
-							'controller' => $Musiccontroller,
-							'action' => 'audio'
-					]
-			],
 			'video' => [
 					'GET' => [
 							'controller' => $Musiccontroller,

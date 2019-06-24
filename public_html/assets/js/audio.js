@@ -1,12 +1,14 @@
-jQuery(document).ready(function ($) {
+$(document).ready(function () {
 
     //Stop if HTML5 video isn't supported
     if (!document.createElement('audio').canPlayType) {
+
         $("#audio_controls").hide();
         return;
-    }
 
-    var audio = document.getElementById("result_player");
+    }
+            
+    var audio = document.querySelector("#result_player");
 
     // Play/Pause ============================//
 

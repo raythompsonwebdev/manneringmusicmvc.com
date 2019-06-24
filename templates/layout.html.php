@@ -57,7 +57,7 @@
           <li><a rel='tab' href="/">Home</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>
-            <li><a rel='tab' href="/audio">Audio</a></li>
+            
             <li><a rel='tab' href="/contact">Contact</a></li>
             <?php else: ?> 
             <li><a rel='tab' href="/">Home</a></li>

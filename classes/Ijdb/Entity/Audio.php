@@ -24,25 +24,34 @@ class Audio {
       return $this->audioid;
 		
     }
-
         
-    public function getArtistId() {
+    public function getArtist() {
 
       return $this->artistsTable->findById($this->artistid);
 
     }
 
+    public function getAlbum() {
+
+	  	return $this->albumsTable->findById($this->albumid);
+    }
+
     public function getSongTitle(){
 
       return $this->songtitle;
-      
-        
+              
+    }
+            
+    public function getMp3(){
+
+      return $this->mp3_File;
+              
     }
 
-    
-    
-	  public function getAlbumId() {
-	  	return $this->albumsTable->findById($this->albumid);
+    public function getOgg(){
+
+      return $this->ogg_File;
+              
     }
 
 

@@ -4,7 +4,7 @@ var audioElement;
 
 function Audio() {
 
-	this.currentlyPlaying;
+	//this.currentlyPlaying;
 	this.audio = document.createElement('audio');
 
 	this.setTrack = function(src) {
@@ -20,3 +20,5 @@ function Audio() {
 	}
 
 }
+
+
