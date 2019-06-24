@@ -127,7 +127,7 @@ class Music
                 
         foreach ($rap as $rapalbum) {
 
-            $artist = $this->artistsTable->findById($rapalbum->albumid);
+            $artist = $this->artistsTable->findById($rapalbum->artistid);
                 
             $rapalbums[] = [
                 'albumid' => $rapalbum->albumid,
@@ -156,7 +156,7 @@ class Music
                 'image' => $countryalbum->image,
                 'price' => $countryalbum->price,
                 'text' => $countryalbum->text,
-                'artistid' => $rapalbum->artistid,
+                'artistid' => $countryalbum->artistid,
                 'artist_name' => $artist->artist_name
             ];
         }
@@ -175,7 +175,7 @@ class Music
                 'image' => $jazzalbum->image,
                 'price' => $jazzalbum->price,
                 'text' => $jazzalbum->text,
-                'artistid' => $rapalbum->artistid,
+                'artistid' => $jazzalbum->artistid,
                 'artist_name' => $artist->artist_name
             ];
         }
