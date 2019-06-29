@@ -42,21 +42,11 @@ class Audio {
               
     }
             
-    public function getMp3(){
+   
 
-      return $this->mp3_File;
-              
-    }
+   
 
-    public function getOgg(){
-
-      return $this->ogg_File;
-              
-    }
-
-
-
-    
+        
     
     
 }

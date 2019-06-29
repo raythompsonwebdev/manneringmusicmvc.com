@@ -11,12 +11,14 @@ class Album {
     public $genre;
 	private $artistsTable;
 	private $audioTable;
+
 		
 	
 	public function __construct(\Ninja\DatabaseTable $artistsTable, \Ninja\DatabaseTable $audioTable) {
 		
 		$this->artistsTable = $artistsTable;
 		$this->audioTable = $audioTable;
+		
 						
 	}
 
@@ -31,54 +33,29 @@ class Album {
 		return $this->artistsTable->findById($this->artistid);
 	
 	}
-	
-	//audio
-	public function getSongTitle($value)
+
+	public function getArtistName()
 	{
 
-		return $this->audioTable->findSongTitle($value);
+		return $this->artistsTable->findById($this->artistid);
 		
 	}
 
-	public function getArtist($value)
-	{
-
-		return $this->artistsTable->findArtist($value);
-		
-	}
-		
-	public function getAudioId()
+	public function getSongId()
 	{
 
 		return $this->audioTable->findSongId($this->albumid);
-
 		
 	}
 
-	public function getMp3($value)
-	{
-		
-		return $this->audioTable->findSongMp3($value);
-				
-		  
-	}
+	
 
-	public function getOgg($value)
-	{
+	
 
-		return $this->audioTable->findSongOgg($value);
-		
-		  
-	}
+	
 
-	public function getM4a($value)
-	{
 
-		return $this->audioTable->findSongM4a($value);
-		
-		  
-	}
-  
+	
 	
 
 	

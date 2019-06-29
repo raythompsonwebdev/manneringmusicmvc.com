@@ -19,6 +19,12 @@ class Artist {
 		return $this->id ;
 	  
 	}
+
+	public function getArtistName(){
+					
+		return $this->artist_name ;
+	  
+	}
 	  
 	
 	public function getAudioId(){

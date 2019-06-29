@@ -41,36 +41,36 @@
                             <span>Price:</span>
                             <span><?php echo $singlealbums->price; ?></span>
                         </li>
-                        
-                
+                                        
                         <?php
-                                                                                                
-                            $songIdArray = $singlealbums->getAudioId(); 
+                                               
+                        
+                        $songIdArrays = $singlealbums->getSongId();
 
-                            
-
+                        
+                                                
                             $i = 1;
                             
-                            foreach($songIdArray as $songIds ) :
-                                                                 
-                                $songTitle = implode('', $singlealbums->getSongTitle($songIds)); 
-                                $songMp3 = implode('', $singlealbums->getMp3($songIds));
-                                $songOgg = implode('', $singlealbums->getOgg($songIds));
-
-                                //var_dump($songIds );           
+                            foreach($songIdArrays as $value) :
+                               
+                                
+                                
+                               
+                                                    
+                                
                         ?>
                                         
                             
                             <audio id="result_player" >
-                                <source src="https://mannering.s3.eu-west-2.amazonaws.com/<?php echo $songMp3; ?>" type='audio/mpeg' />
-                                <source src="https://mannering.s3.eu-west-2.amazonaws.com/<?php echo $songOgg; ?>" type='audio/ogg' />
-                                <source src="https://mannering.s3.eu-west-2.amazonaws.com/<?php //echo $songM4a; ?>" type='audio/mp4' />
+                                <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $value[2]; ?>" type='audio/mpeg' />
+                                <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php echo $value[3]; ?>" type='audio/ogg' />
+                                <source src="https://site.test/www/mannering.musicmvc.com/audio/<?php //echo $songIds->m4a_File; ?>" type='audio/mp4' />
                                 <p>Your browser does not support HTML5 audio.</p>
                             </audio>
                             
                             <ul>
                                 <li>
-                                    <?php echo '<span class="result_label">'.$i.' - ' .$songTitle .'</span>';?>
+                                    <?php echo '<span class="result_label">'.$i.' - ' . $value[1] .'</span>';?>
                                     <div id="audio_controls">
                                         <div id="play_toggle" class="player-button">
                                             <i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -89,10 +89,11 @@
                                 </li>
                             </ul>
                         <?php 
-                            
+                           
                             $i = $i + 1;
                     
                             endforeach;
+                          
                         ?>
                         
                     </ul>
