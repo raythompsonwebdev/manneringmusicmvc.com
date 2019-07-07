@@ -1,0 +1,22 @@
+{
+  "name": "manneringmusic-mvc2.com",
+  "version": "1.0.0",
+  "description": "music player website",
+  "main": "index.php",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raythompsonwebdev/mannering-musicmvc2.git"
+  },
+  "author": "Raymond Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raythompsonwebdev/mannering-musicmvc2/issues"
+  },
+  "homepage": "https://github.com/raythompsonwebdev/mannering-musicmvc2#readme"
+}
