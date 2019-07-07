@@ -1530,10 +1530,6 @@
                     clear: both;
                     text-align: center;
                      background-color: $color4;
-                    font-weight: normal;
-                    line-height: 40px;
-                    -webkit-align-self: center;
-                    -ms-flex-item-align: center;
                     align-self: center;
                 }
 
@@ -5685,12 +5681,7 @@
 
                 figure.project-item {
                     width: 23.3%;                    
-
                     img {
-
-                        display: block;
-                    }
-
                    
                 }
                 figcaption.overlay {
@@ -5730,6 +5721,34 @@
                 figure.project-item:hover figcaption.overlay {
                     
                     cursor: pointer;
+=======
+                    figcaption.overlay {
+                        opacity: 0;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        p.artist_name {
+                            font-size: 0.65em;
+                        }
+
+                        h4 {
+                            margin: 0;
+
+                            a {
+                                width: 70%;
+                                font-size: 0.8em;
+
+                                &:hover {
+                                    background-color: $color9;
+                                    font-size: 0.9em;
+
+                                }
+                            }
+                        }
+                    }
+>>>>>>> ee313d030322e78f7578219ed205df8c63304878
                 }
 
             }
