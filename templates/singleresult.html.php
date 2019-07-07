@@ -1,90 +1,6 @@
 <script src="assets/js/jquery-3.4.1.js"></script>
-<script src="assets/js/script.js"></script>
-<!-- <script src="assets/js/audio.js"></script>-->
 
-<?php
-
-$resultArray = array();
-
-foreach($singleaudio as $key => $value) {
-
-	array_push($resultArray,  $value );
-}
-
-//print_r($resultArray);
-
-$jsonArray = json_encode($resultArray, JSON_UNESCAPED_SLASHES);
-
-//print_r($jsonArray);
-
-?>
-
-
-<script>
-
-
-    $(document).ready(function() {
-
-        currentPlaylist = <?=$jsonArray?>;
-
-        audioElement = new Audio();
-
-        audioElement.audio.muted = true;
-        audioElement.audio.autoplay = true;
-
-
-        console.log(audioElement);
-                
-        setTrack(currentPlaylist[0], currentPlaylist, false);
-    });
-
-
-    function setTrack(trackId, newPlaylist, play) {
-
-        //audioElement.setTrack("assets/audio/ben-tankard-full-tank/bensound-cute.mp3");
-
-        
-
-        
-        $.post("getSongJson.php", { songId: trackId }, function(data) {
-
-            console.log(data);
-                                                
-            var track = JSON.parse(data);
-          
-            console.log(track[0]);
-
-                                   
-            audioElement.setTrack(track[0].mp3_File);
-
-                   
-            //playSong();
-            
-        });
-
-        if(play == true) {
-		audioElement.play();
-	}
-
-        
-        
-    }
-
-    function playSong() {
-
-        audioElement.play();
-
-          
-        
-    }
-
-    function pauseSong() {
-
-        audioElement.pause();
-    }
-    
-
-</script>
+<script src="assets/js/audio.js"></script>
 
 
 <section id="main_text" class="group">
@@ -126,21 +42,21 @@ $jsonArray = json_encode($resultArray, JSON_UNESCAPED_SLASHES);
                                         
                         <?php
                                                 
-                            //$i = 1;
-                            //foreach($singleaudio as $songId => $value) :
+                            $i = 1;
+                            foreach($singleaudio as $songId => $value) :
 
-                                //print_r($value); 
+                            print_r($value); 
 
                         ?>
 
 
                                                                     
-                            <!--<audio>
+                            <audio>
                                 <source src="" type='audio/mpeg' />
                                 <source src="" type='audio/ogg' />
                                 <source src="" type='audio/mp4' />
                                 <p>Your browser does not support HTML5 audio.</p>
-                            </audio>-->
+                            </audio>
 
 
                             
@@ -148,7 +64,7 @@ $jsonArray = json_encode($resultArray, JSON_UNESCAPED_SLASHES);
                                 <li>
                                    
                                     <div id="audio_controls">
-                                        <div id="play_toggle" class="player-button" onclick="playSong()">
+                                        <div id="play_toggle" class="player-button" >
                                             <i class="fa fa-play-circle" aria-hidden="true"></i>
                                         </div>
                                                                                 
@@ -175,9 +91,9 @@ $jsonArray = json_encode($resultArray, JSON_UNESCAPED_SLASHES);
                             </ul>
                         <?php 
                            
-                            //$i = $i + 1;
+                           $i = $i + 1;
                     
-                            //endforeach;
+                            endforeach;
                           
                         ?>
                         
