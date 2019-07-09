@@ -49,7 +49,72 @@
 
                         ?>
 
+                            <script>
 
+
+                                $(document).ready(function() {
+
+                                    currentPlaylist = <?=$jsonArray?>;
+
+                                    //console.log('Current Playlist: ' + currentPlaylist);
+                                    
+                                    audioElement = new Audio();
+                                    
+                                    //console.log(audioElement);
+                                                                                
+                                    setTrack(currentPlaylist[0], currentPlaylist, false);
+                            
+                                });
+
+
+                                function setTrack(trackId, newPlaylist, play) {
+
+                                // audioElement.setTrack("assets/audio/ben-tankard-full-tank/bensound-cute.mp3");
+                                                
+                                    $.post("getSongJson.php", { songId: trackId }, function(data) {
+
+                                        console.log('**getSongJson Data: ' + data);
+                                                                            
+                                        var track = JSON.parse(data);
+                                                
+                                        console.log(track[0].mp3_File);
+                                                            
+                                        audioElement.setTrack(track[0].mp3_File);
+
+                                        audioElement.play();
+                                        
+                                    });
+                                
+                                    if(play) {
+
+                                        audioElement.play();
+
+                                    }
+                                
+                                    
+                                }
+
+                                function playSong() {
+
+                                    
+                                    if (audioElement.paused) {
+
+                                        audioElement.play();
+
+                                        audioElement.preload = 'metadata';
+                                        
+                                        $('#play_toggle').html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
+                                    } else {
+                                        audioElement.pause();
+                                        $('#play_toggle').html('<i class="fa fa-play" aria-hidden="true" title="Play"></i>');
+                                    }
+                                    
+                                    
+                                }
+
+                                    
+
+                            </script>
                                                                     
                             <audio>
                                 <source src="" type='audio/mpeg' />

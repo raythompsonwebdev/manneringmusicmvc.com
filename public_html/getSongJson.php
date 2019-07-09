@@ -17,7 +17,7 @@ if(isset($_POST['songId'])) {
 	
 	$stmt = $pdo->prepare($sql);
 
-	$stmt->bindValue(':songId', $songId[0]);
+	$stmt->bindValue(':songId', $songId);
 	$stmt->execute();
 	
 	$resultArray = $stmt->fetchAll(PDO::FETCH_ASSOC);

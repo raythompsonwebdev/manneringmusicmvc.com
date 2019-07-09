@@ -24,8 +24,7 @@ function Audio() {
 
 
 	this.play = function() {
-		 
-				
+		 		
 		this.audio.play();
 								
 				
