@@ -10,11 +10,11 @@ $(document).ready(function () {
 
     }
             
-    var audio = document.querySelector("audio");
+    var audio = document.createElement('audio');
 
     // Play/Pause ============================//
 
-    $("#play_toggle").on("click", function () {
+    $(".play_toggle").on("click", function () {
         if (audio.paused) {
             audio.play();
             audio.preload = 'metadata';

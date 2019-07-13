@@ -1,7 +1,95 @@
-<script src="assets/js/jquery-3.4.1.js"></script>
+<!--<script src="assets/js/jquery-3.4.1.js"></script>-->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
 
-<script src="assets/js/audio.js"></script>
+<?php
+    
+    $array = array();
 
+	foreach($singleaudio as $key => $value) {
+
+        var_dump($value[0]);
+
+		array_push($array, $value[0]);
+	}
+    
+    $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
+
+    print_r($array);
+
+?>
+
+<script>
+
+   
+    $(document).ready(function() {
+        
+        currentPlaylist = <?=$jsonArray?>;
+
+        console.log('Current Playlist: ' + currentPlaylist[0]);
+        
+        audioElement = new Audio();
+                                        
+        console.log(audioElement);
+                
+        setTrack(currentPlaylist[0], currentPlaylist, false);
+                        
+    });
+
+    function setTrack(trackId, newPlaylist, play) {
+       
+        //console.log(trackId);         
+      
+                   
+         $.post("getSongJson.php", { songId: trackId }, function(data) {
+
+            console.log('**getSongJson Data: ' + data);
+                                                
+            var track = JSON.parse(data);
+                    
+            //console.log(track[0].mp3_File);
+                            
+            audioElement.setTrack(track);
+            
+            //audioElement.play();
+                       
+            
+         });
+        
+       
+        if(play) {
+
+            audioElement.play();
+
+        }
+
+
+    }
+
+        
+   
+    function playSong(){
+                
+        $(".player-button.play").hide();
+        $(".player-button.pause").show();
+        audioElement.play();  
+
+    }
+
+
+    function pauseSong(){
+        
+        $(".player-button.play").show();
+        $(".player-button.pause").hide();
+        audioElement.pause();
+        
+    }
+    
+
+</script> 
 
 <section id="main_text" class="group">
 
@@ -44,97 +132,28 @@
                                                 
                             $i = 1;
                             foreach($singleaudio as $songId => $value) :
+                                
+                            //$jsonArray = json_encode($value, JSON_UNESCAPED_SLASHES);
 
-                            print_r($value); 
+                            print_r($value[1]); 
 
                         ?>
-
-                            <script>
-
-
-                                $(document).ready(function() {
-
-                                    currentPlaylist = <?=$jsonArray?>;
-
-                                    //console.log('Current Playlist: ' + currentPlaylist);
-                                    
-                                    audioElement = new Audio();
-                                    
-                                    //console.log(audioElement);
-                                                                                
-                                    setTrack(currentPlaylist[0], currentPlaylist, false);
-                            
-                                });
-
-
-                                function setTrack(trackId, newPlaylist, play) {
-
-                                // audioElement.setTrack("assets/audio/ben-tankard-full-tank/bensound-cute.mp3");
-                                                
-                                    $.post("getSongJson.php", { songId: trackId }, function(data) {
-
-                                        console.log('**getSongJson Data: ' + data);
-                                                                            
-                                        var track = JSON.parse(data);
-                                                
-                                        console.log(track[0].mp3_File);
-                                                            
-                                        audioElement.setTrack(track[0].mp3_File);
-
-                                        audioElement.play();
-                                        
-                                    });
-                                
-                                    if(play) {
-
-                                        audioElement.play();
-
-                                    }
-                                
-                                    
-                                }
-
-                                function playSong() {
-
-                                    
-                                    if (audioElement.paused) {
-
-                                        audioElement.play();
-
-                                        audioElement.preload = 'metadata';
-                                        
-                                        $('#play_toggle').html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
-                                    } else {
-                                        audioElement.pause();
-                                        $('#play_toggle').html('<i class="fa fa-play" aria-hidden="true" title="Play"></i>');
-                                    }
-                                    
-                                    
-                                }
-
-                                    
-
-                            </script>
-                                                                    
-                            <audio>
-                                <source src="" type='audio/mpeg' />
-                                <source src="" type='audio/ogg' />
-                                <source src="" type='audio/mp4' />
-                                <p>Your browser does not support HTML5 audio.</p>
-                            </audio>
-
-
                             
                             <ul>
                                 <li>
                                    
                                     <div id="audio_controls">
-                                        <div id="play_toggle" class="player-button" >
-                                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+
+                                        <div class="player-button play" onclick="playSong()" >
+                                            <i class="fa fa-play" aria-hidden="true"></i>
                                         </div>
                                                                                 
-                                        <div class="player-button" >Previous</div>
-                                        <div class="player-button" >Next</i></div>
+                                        <div class="player-button pause" style="display: none;" onclick="pauseSong()">
+                                            <i class="fa fa-pause" aria-hidden="true"></i>
+                                        </div>
+
+                                        <div class="player-button previous" >Previous</div>
+                                        <div class="player-button next" >Next</div>
                                        
                                         <div id="progress">
                                             <div id="load_progress"></div>
@@ -150,10 +169,10 @@
                                             <input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
                                         </div>
                                     </div>
-                                                                
 
                                 </li>
                             </ul>
+                       
                         <?php 
                            
                            $i = $i + 1;

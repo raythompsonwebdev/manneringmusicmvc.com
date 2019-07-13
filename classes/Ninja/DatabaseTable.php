@@ -193,7 +193,7 @@ class DatabaseTable
             array_push($array, [$row['audioid'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
         }
          
-        return (object) $array;
+        return $array;
     }
 
     

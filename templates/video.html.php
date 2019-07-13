@@ -67,7 +67,7 @@
 
 <!-- Add fancyBox main JS and CSS files -->
 
-<script src="/assets/js/fancyapps/source/jquery.fancybox.js"></script>
+<script src="/assets/js/fancyapps/source/jquery.fancybox.js" async></script>
 <script src="/assets/js/fancyapps/source/jquery.fancybox.pack.js"></script>
 
 <script>

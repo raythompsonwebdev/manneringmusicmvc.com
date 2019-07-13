@@ -2,7 +2,6 @@
 
 include __DIR__ . '/../includes/DatabaseConnection.php';
 
-//$pdo = new PDO('mysql:host=localhost;dbname=mannering; charset=utf8', 'root', 'Mu!a8een100');	
 
 if(isset($_POST['songId'])) {
 	
