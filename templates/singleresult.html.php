@@ -36,9 +36,82 @@
         console.log(audioElement);
                 
         setTrack(currentPlaylist[0], currentPlaylist, false);
+
+
+        //drag progress bar to forward audio
+
+        $("#progress #play_progress").mousedown(function() {
+		mouseDown = true;
+        });
+
+        $("#progress #play_progress").mousemove(function(e) {
+            if(mouseDown == true) {
+                //Set time of song, depending on position of mouse
+                timeFromOffset(e, this);
+            }
+        });
+
+        $("#progress #play_progress").mouseup(function(e) {
+            timeFromOffset(e, this);
+        });
+
+
+        //Volume
+        $("#volume").mousedown(function() {
+		    mouseDown = true;
+        });
+
+        $("#volume").mousemove(function(e) {
+            if(mouseDown == true) {
+
+                var percentage = e.offsetX / $(this).width();
+
+                if(percentage >= 0 && percentage <= 1) {
+                    audioElement.audio.volume = percentage;
+                }
+            }
+        });
+
+        $("#volume").mouseup(function(e) {
+            var percentage = e.offsetX / $(this).width();
+
+            if(percentage >= 0 && percentage <= 1) {
+                audioElement.audio.volume = percentage;
+            }
+        });
+
+
+
+        $(document).mouseup(function() {
+            mouseDown = false;
+        });
                         
     });
 
+
+    //drag progress bar to forward audio
+    function timeFromOffset(mouse, progressBar) {
+        var percentage = mouse.offsetX / $(progressBar).width() * 100;
+        var seconds = audioElement.audio.duration * (percentage / 100);
+        audioElement.setTime(seconds);
+    }
+
+    function nextSong() {
+        
+        if(currentIndex == currentPlaylist.length - 1) {
+            currentIndex = 0;
+        }
+        else {
+            currentIndex++;
+        }
+
+        var trackToPlay = currentPlaylist[currentIndex];
+
+        setTrack(trackToPlay, currentPlaylist, true);
+
+    }
+
+    
     function setTrack(trackId, newPlaylist, play) {
        
         //console.log(trackId);         
@@ -46,9 +119,13 @@
                    
          $.post("getSongJson.php", { songId: trackId }, function(data) {
 
-            console.log('**getSongJson Data: ' + data);
+            //console.log('**getSongJson Data: ' + data);
+
+            currentIndex = currentPlaylist.indexOf(trackId);
                                                 
             var track = JSON.parse(data);
+
+            $("ul li#trackname").text(track[0].songtitle)
                     
             //console.log(track[0].mp3_File);
                             
@@ -68,7 +145,6 @@
 
 
     }
-
         
    
     function playSong(){
@@ -135,11 +211,14 @@
                                 
                             //$jsonArray = json_encode($value, JSON_UNESCAPED_SLASHES);
 
-                            print_r($value[1]); 
+                            //print_r($value[1]); 
 
                         ?>
                             
                             <ul>
+                                <li id="trackname">
+
+                                </li>
                                 <li>
                                    
                                     <div id="audio_controls">

@@ -72,6 +72,7 @@ $(document).ready(function () {
     $(audio).bind("timeupdate", function () {
         $("#current_time").html(formatTime(this.currentTime));
     });
+    
     $(audio).bind("durationchange", function () {
         $("#duration").html(formatTime(this.duration));
     });
