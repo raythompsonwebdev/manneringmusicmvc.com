@@ -149,7 +149,7 @@
                                                            
             var track = JSON.parse(data);
 
-            $("div.audio_controls div.trackname").text(track[0].songtitle)
+            $("div.audio_controls h1.trackName").text(track[0].songtitle)
                                         
             audioElement.setTrack(track);
 
@@ -233,8 +233,11 @@
 
                     <div class="audio_controls">
 
-                        <div class="trackname"></div>
+                    <h1 class="trackName"></h1>
 
+                    <div class="audiocntrl_containers">
+
+                        
                         <div class="player-button play" onclick="playSong()" >
                             <i class="fa fa-play" aria-hidden="true"></i>
                         </div>
@@ -259,6 +262,9 @@
                             <i class="fa fa-volume-up" aria-hidden="true" ></i>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="audiocntrl_containers">
 
                         <div class="progress">
                             <div class="load_progress"></div>
@@ -270,6 +276,7 @@
                             <div class="duration">00:00</div>
                         </div>
 
+                    </div>
 
                     </div>
     <br/>

@@ -874,123 +874,140 @@
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                
                                 height: auto;
-
                                 display: -webkit-flex;
                                 display: -ms-flexbox;
                                 display: flex;
-                                -webkit-flex-flow: row wrap;
-                                -ms-flex-flow: row wrap;
-                                flex-flow: row wrap;
+                                -webkit-flex-flow: column;
+                                -ms-flex-flow: column;
+                                flex-flow: column;
                                 -webkit-justify-content: space-between;
                                 -ms-flex-pack: justify;
                                 justify-content: space-between;
-
-                                div.trackname{
-                                    line-height:40px;
-                                    text-indent:0.25em;
-                                    width:100%;
-
-                                }
-
-                                .player-button {
-                                    width: 20%;
-                                    flex: 0 1 auto;
-                                    text-align: center;
-                                    height: 100%;
-                                    line-height: 50px;
-                                    background-color: $color7;
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 3.5em;
-                                        display: block;
-                                        height: 100%;
-                                        text-align: center;
-                                        line-height: 50px;
-
-                                        &:hover {
-                                            font-size: 3.6em;
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 85%;
-                                    height: 21.4px;
-                                    margin-top: 0.5em;
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        background-color: $color1;
-                                        height: 100%;
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        cursor: pointer;
-                                        background-color: $progress;
-                                        height: 100%;
-                                    }
-                                }
-
-                                div.time {
-                                    width: 15%;
-                                    text-align: center;
-                                    margin-top: 0.6em;
-                                    font-size:0.8em;
-                                    text-shadow:none;
-                                    background-color:rgb(34, 33, 33);
-                                    div.current_time {
-                                        width: 100%;
-                                        line-height: 21px;
-                                        letter-spacing:0.15em;
-                                    }
-
-                                    div.duration {
-                                        width: 100%;
-                                        line-height: 21px;
-                                        letter-spacing:0.15em;
-                                    }
-                                }
-
-                                div.audio_volume {
-                                    width: 38%;
+                                h1.trackName{
+                                    line-height: 40px;
+                                    text-indent: 0;
+                                    width: 100%;
+                                    margin: 0;
+                                    display: block;
                                     height: 40px;
-                                    display: flex;
+                                    padding: 0;
+                                    color:#fff;
+                                    
 
-                                    div.VolumeBg {
-                                        width: 88%;
-                                        height: 100%;
-                                        background-color: rgb(29, 28, 28);
-                                    }
 
-                                    div.volume {
-                                        width: 100%;
-                                        display: block;
-                                        background-color: #fff;
+
+                                }
+                                div.audiocntrl_containers{
+                                    height:auto;
+                                    display:flex;
+                                    margin-bottom:0.5em;
+                              
+                                    .player-button {
+                                        width: 20%;
+                                        flex: 0 1 auto;
+                                        text-align: center;
                                         height: 100%;
+                                        line-height: 50px;
+                                        
+                                        
                                         cursor: pointer;
-                                    }
 
-                                    div.VolumeImg {
-                                        width: 10%;
-                                        height: 100%;
-
-                                        i.fa-volume-up {
+                                        i {
+                                            font-size: 2em;
                                             display: block;
                                             height: 100%;
-                                            width: 100%;
                                             text-align: center;
-                                            line-height:40px;
+                                            width:98%;
+                                            line-height: 50px;
+                                            background-color: $color7;
+                                            color: $color2;
 
-                                            &:before {
-                                                display: block;
+                                            &:hover {
+                                                font-size: 2.1em;
+                                                background-color: $color2;
+                                                color: $color7;
                                             }
                                         }
                                     }
+
+                                    div.progress {
+                                        width: 85%;
+                                        height: 21.4px;
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            background-color: $color1;
+                                            height: 100%;
+                                            
+                                        }
+
+                                        .play_progress {
+                                            width: 100%;
+                                            cursor: pointer;
+                                            background-color: $progress;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    div.time {
+                                        width: 15%;
+                                        text-align: center;
+                                        font-size:0.8em;
+                                        text-shadow:none;
+                                        background-color:rgb(34, 33, 33);
+                                        div.current_time {
+                                            width: 100%;
+                                            line-height: 21px;
+                                            letter-spacing:0.15em;
+                                        }
+
+                                        div.duration {
+                                            width: 100%;
+                                            line-height: 21px;
+                                            letter-spacing:0.15em;
+                                        }
+                                    }
+
+                                    div.audio_volume {
+                                        width: 40%;
+                                        height: 45px;
+                                        display: flex;
+
+                                        div.VolumeBg {
+                                            width: 88%;
+                                            height: 100%;
+                                            background-color: rgb(29, 28, 28);
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            display: block;
+                                            background-color: #fff;
+                                            height: 100%;
+                                            cursor: pointer;
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 10%;
+                                            height: 100%;
+
+                                            i.fa-volume-up {
+                                                display: block;
+                                                height: 100%;
+                                                width: 100%;
+                                                text-align: center;
+                                                line-height:45px;
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
@@ -2047,81 +2064,183 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 15%;
+                            
                         }
 
                         figcaption {
-                            width: 83%;
+                            width: 80%;
+                            
 
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
                                     font-size: 0.8em;
+                                   
 
                                     span {
                                         width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
+                                        
                                         width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.6em;
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 18%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 2em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 2.1em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    .load_progress {
-                                        width: 100%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
+
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.75em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 45%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 88%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 10%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                background-color: $color9;
-                                color: $color2;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:10%;
+
+                                    }
+                                    span{
+
+                                        width:75%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -2733,82 +2852,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 15%;
+                            
                         }
 
                         figcaption {
-                            width: 83%;
+                            width: 80%;
+                            
 
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
                                     font-size: 0.8em;
+                                   
 
                                     span {
                                         width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
+                                        
                                         width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.5em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 18%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 2em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 2.1em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 50%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.75em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 46%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 86%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 12%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:10%;
+
+                                    }
+                                    span{
+
+                                        width:75%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -3433,82 +3655,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 15%;
+                            
                         }
 
                         figcaption {
-                            width: 83%;
+                            width: 80%;
+                            
 
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
                                     font-size: 0.8em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 19%;
+                                        
+                                        width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.4em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 16%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 2em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 2.1em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.75em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 52%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 85%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 13%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.85em;
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:13%;
+
+                                    }
+                                    span{
+
+                                        width:72%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -4103,96 +4428,187 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
+
                         img {
-                            width: 20%;
-                            display: block;
+                            width: 17%;
+                            
                             margin: 1em auto;
-                        }
-
-                        .product-box-cartinfo {
-                            width: 85%;
-
-                            h4 {
-                                margin: 1em 0;
-                            }
-
-                            span {
-                                font-size: 0.9em;
-                            }
+                            display: block;
+                            
                         }
 
                         figcaption {
                             width: 100%;
+                            
 
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
                                     font-size: 0.8em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 19%;
+                                        
+                                        width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                margin:0;                               
+                                h1.trackName{
+                                    font-size: 1.3em;
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.8em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.9em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.7em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 87%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 13%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.85em;
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:13%;
+
+                                    }
+                                    span{
+
+                                        width:72%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
                             }
                         }
                     }
+                    
                 }
             }
 
@@ -5387,82 +5803,188 @@
 
                 /*results.show page*/
                 .product-box-large {
-                    figure.product-box-img {
-                        margin: 0;
 
+                    figure.product-box-img {
                         img {
-                            width: 25%;
+                            width: 20%;
+                            
+                            margin: 1em auto;
+                            display: block;
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
-                                    font-size: 0.8em;
+                                    
+                                    font-size: 0.7em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 19%;
+                                        
+                                        width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.2em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.7em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.8em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.7em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 87%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 13%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.80em;
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:13%;
+
+                                    }
+                                    span{
+
+                                        width:72%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -6049,80 +6571,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
-                            width: 15%;
+                            width: 22%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
-                                    font-size: 0.8em;
+                                    
+                                    font-size: 0.7em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 20%;
+                                        
+                                        width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.2em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.7em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.8em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.7em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 87%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 13%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.5em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.70em;
+                                    
+                                    span:first-of-type{
+
+                                        width:15%;
+
+                                    }
+                                    span{
+
+                                        width:70%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -6700,80 +7327,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
-                            width: 30%;
+                            width: 25%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
-                                    font-size: 0.75em;
+                                    
+                                    font-size: 0.7em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 85%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 20%;
+                                        
+                                        width: 14%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.7em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.8em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.7em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 85%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 15%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.70em;
+                                    
+                                    span:first-of-type{
+
+                                        width:17%;
+
+                                    }
+                                    span{
+
+                                        width:69%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -7371,78 +8103,186 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
-                            width: 30%;
+                            width: 25%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.7em;
+                                   
+
                                     span {
-                                        width: 75%;
+                                        width: 83%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 24%;
+                                        
+                                        width: 17%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.65em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 85%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 15%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.70em;
+                                    
+                                    span:first-of-type{
+
+                                        width:17%;
+
+                                    }
+                                    span{
+
+                                        width:69%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
+
                 }
             }
 
@@ -8061,78 +8901,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 30%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.65em;
+                                   
+
                                     span {
-                                        width: 79%;
+                                        width: 83%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 20%;
+                                        
+                                        width: 17%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                                                        
+                              
+                                    .player-button {
+                                        width: 15%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 85%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 15%;
+                                        
+                                        font-size:0.65em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
-                                        width: 100%;
-                                    }
+                                    div.audio_volume {
+                                        width: 55%;
+                                        
+
+                                        div.VolumeBg {
+                                            width: 85%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 15%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.70em;
+                                    
+                                    span:first-of-type{
+
+                                        width:17%;
+
+                                    }
+                                    span{
+
+                                        width:69%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -8729,80 +9676,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 35%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
-                                    font-size: 0.7em;
+                                    
+                                    font-size: 0.65em;
+                                   
 
                                     span {
-                                        width: 79%;
+                                        width: 83%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 20%;
+                                        
+                                        width: 17%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1.1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                    flex-flow: row wrap;                                     
+                              
+                                    .player-button {
+                                        width: 33.3%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 80%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 20%;
+                                        
+                                        font-size:0.65em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
+                                    div.audio_volume {
                                         width: 100%;
-                                    }
+                                        margin-top:0.5em;
+
+                                        div.VolumeBg {
+                                            width: 80%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 20%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.70em;
+                                    
+                                    span:first-of-type{
+
+                                        width:17%;
+
+                                    }
+                                    span{
+
+                                        width:69%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -9364,78 +10416,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 35%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.6em;
+                                   
+
                                     span {
-                                        width: 75%;
+                                        width: 80%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 24%;
+                                        
+                                        width: 20%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                    flex-flow: row wrap;                                     
+                              
+                                    .player-button {
+                                        width: 33.3%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 80%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 20%;
+                                        
+                                        font-size:0.6em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
+                                    div.audio_volume {
                                         width: 100%;
-                                    }
+                                        margin-top:0.5em;
+
+                                        div.VolumeBg {
+                                            width: 80%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 20%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.6em;
+                                    
+                                    span:first-of-type{
+
+                                        width:20%;
+
+                                    }
+                                    span{
+
+                                        width:60%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:20%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -10027,78 +11186,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 35%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.6em;
+                                   
+
                                     span {
-                                        width: 75%;
+                                        width: 80%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 24%;
+                                        
+                                        width: 20%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                    flex-flow: row wrap;                                     
+                              
+                                    .player-button {
+                                        width: 33.3%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 80%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 20%;
+                                        
+                                        font-size:0.6em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
+                                    div.audio_volume {
                                         width: 100%;
-                                    }
+                                        margin-top:0.5em;
+
+                                        div.VolumeBg {
+                                            width: 80%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 20%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.4em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.6em;
+                                    
+                                    span:first-of-type{
+
+                                        width:20%;
+
+                                    }
+                                    span{
+
+                                        width:60%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:20%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -10683,78 +11949,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 35%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.6em;
+                                   
+
                                     span {
-                                        width: 75%;
+                                        width: 78%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 24%;
+                                        
+                                        width: 22%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                    flex-flow: row wrap;                                     
+                              
+                                    .player-button {
+                                        width: 33.3%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 80%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 20%;
+                                        
+                                        font-size:0.55em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
+                                    div.audio_volume {
                                         width: 100%;
-                                    }
+                                        margin-top:0.5em;
+
+                                        div.VolumeBg {
+                                            width: 80%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 20%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.3em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.55em;
+                                    
+                                    span:first-of-type{
+
+                                        width:20%;
+
+                                    }
+                                    span{
+
+                                        width:60%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:20%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
@@ -11298,78 +12671,185 @@
 
                 /*results.show page*/
                 .product-box-large {
+
                     figure.product-box-img {
                         img {
                             width: 35%;
+    
+                            
                         }
 
                         figcaption {
+                            width: 100%;
+                            
+
                             ul.product-box-info {
-                                width: 100%;
+                                
 
                                 li {
+                                    
+                                    font-size: 0.6em;
+                                   
+
                                     span {
-                                        width: 75%;
+                                        width: 78%;
+                                        
                                     }
 
                                     span:first-of-type {
-                                        width: 24%;
+                                        
+                                        width: 22%;
+                                        
                                     }
                                 }
 
                                 ul {
                                     margin: 0.5em 0;
+                                    
 
-                                    li {}
+                                    li {
+                                        display: inline-block;
+                                        
+                                    }
                                 }
                             }
 
                             div.audio_controls {
-                                font-size: 0.9em;
+                                                                
+                                h1.trackName{
+                                    font-size: 1em;
+                                    
+                                                                       
 
-                                div.player-button {
-                                    width: 20%;
+                                }
+                                div.audiocntrl_containers{
+                                    flex-flow: row wrap;                                     
+                              
+                                    .player-button {
+                                        width: 33.3%;
+                                                                                
+                                        
+                                        cursor: pointer;
 
-                                    i {
-                                        font-size: 3.5em;
+                                        i {
+                                            font-size: 1.6em;
+                                            
 
-                                        &:hover {
-                                            cursor: pointer;
-                                            font-size: 3.6em;
+                                            &:hover {
+                                                font-size: 1.7em;
+                                                
+                                            }
                                         }
                                     }
-                                }
 
-                                div.progress {
-                                    width: 63%;
+                                    div.progress {
+                                        width: 80%;
+                                        
+                                        
+                                        
+                                        .load_progress {
+                                            width: 100%;
+                                            
+                                            
+                                        }
 
-                                    .load_progress {
-                                        width: 100%;
+                                        .play_progress {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    .play_progress {
-                                        width: 100%;
-                                    }
-                                }
+                                    div.time {
+                                        width: 20%;
+                                        
+                                        font-size:0.55em;
+                                        
+                                        div.current_time {
+                                            width: 100%;
+                                            
+                                        }
 
-                                div.time {
-                                    width: 16%;
-
-                                    div.current_time {
-                                        width: 100%;
+                                        div.duration {
+                                            width: 100%;
+                                            
+                                        }
                                     }
 
-                                    div.duration {
+                                    div.audio_volume {
                                         width: 100%;
-                                    }
+                                        margin-top:0.5em;
+
+                                        div.VolumeBg {
+                                            width: 80%;
+                                            
+                                        }
+
+                                        div.volume {
+                                            width: 100%;
+                                            
+                                        }
+
+                                        div.VolumeImg {
+                                            width: 20%;
+                                            
+
+                                            i.fa-volume-up {
+                                               
+                                                font-size:1.3em;
+
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
 
                             span.result_label {
-                                font-size: 0.9em;
+                                
+                                text-indent: 1em;
+                            }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                
+
+                                li{
+                                    font-size: 0.55em;
+                                    
+                                    span:first-of-type{
+
+                                        width:20%;
+
+                                    }
+                                    span{
+
+                                        width:60%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        
+                                        width:20%;
+                                        cursor:pointer;
+                                        i{
+                                            
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
                             }
                         }
                     }
+
                 }
             }
 
