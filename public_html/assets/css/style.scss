@@ -1003,6 +1003,46 @@
                                 line-height: 35px;
                                 text-indent: 1em;
                             }
+
+                            ul.audio-tracklist{
+                                margin:0;
+                                padding:0;
+
+                                li{
+                                    display:flex;
+                                    line-height:40px;
+                                    margin-bottom:0.5em;
+                                    span:first-of-type{
+
+                                        width:10%;
+
+                                    }
+                                    span{
+
+                                        width:75%;
+
+                                    }
+
+                                    span:last-of-type{
+                                        background-color: $color9;
+                                        width:15%;
+                                        cursor:pointer;
+                                        i{
+                                            text-align: center;
+                                            display: block;
+                                            line-height: 40px;
+                                            &:hover{
+                                                background-color:#fff;
+                                                color:#000;
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+
+                            }
                         }
                     }
                 }

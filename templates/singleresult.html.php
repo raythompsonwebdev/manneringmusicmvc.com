@@ -233,7 +233,7 @@
 
                     <div class="audio_controls">
 
-                    <div class="trackname"></div>
+                        <div class="trackname"></div>
 
                         <div class="player-button play" onclick="playSong()" >
                             <i class="fa fa-play" aria-hidden="true"></i>
@@ -273,7 +273,7 @@
 
                     </div>
     <br/>
-                    <ul class="product-box-info">                
+                    <ul class="audio-tracklist">                
                         <?php
                                                 
                             $i = 1;
@@ -285,9 +285,9 @@
 
                             echo "<li>
 
-                                <span>Trackname:$i </span>
-                                <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'>" . $value[1] . "</span>
-                            
+                                <span>Trackname: </span>
+                                <span >" . $value[1] . "</span>
+                                <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
                             </li>";
                         
                             $i = $i + 1;
