@@ -6,6 +6,18 @@
 
 /*1920*/
 @media only screen and (max-width: 1920px) {
+
+    .fancybox-overlay .fancybox-skin {
+        box-shadow: 0 0 50px $color3;
+    }
+
+    iframe{
+        width:460px;
+        height:340px;
+        display:block;
+        margin:auto;
+    }
+
     #wrapper {
         margin: auto;
         padding: 0px;
@@ -22,9 +34,7 @@
             letter-spacing: 0.1em;
         }
 
-        .fancybox-custom .fancybox-skin {
-            box-shadow: 0 0 50px $color3;
-        }
+       
 
         header {
             height: 75px;
@@ -181,7 +191,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     padding: 0;
                     margin: 0 auto;
                     width: 100%;
@@ -1359,7 +1369,7 @@
                     @include transitioner(all 200ms ease-in-out);
                     @include transforming-things(scale(0));
 
-                    &:hover button {
+                    a.fancybox {
                         background-color: $color1;
                         width: 70%;
                         height: 40px;
@@ -1371,7 +1381,7 @@
                         margin: 0 auto;
                         text-decoration: none;
                         display: block;
-                        line-height: 25px;
+                        line-height: 40px;
                         font-weight: normal;
 
                         &:hover {
@@ -1403,29 +1413,7 @@
                     cursor: pointer;
                 }
 
-                .project-item.one {
-                    -moz-animation-delay: 0.5s;
-                    -webkit-animation-delay: 0.5s;
-                    animation-delay: 0.5s;
-                }
-
-                .project-item.two {
-                    -moz-animation-delay: 1s;
-                    -webkit-animation-delay: 1s;
-                    animation-delay: 1s;
-                }
-
-                .project-item.three {
-                    -moz-animation-delay: 1.5s;
-                    -webkit-animation-delay: 1.5s;
-                    animation-delay: 1.5s;
-                }
-
-                .project-item.four {
-                    -moz-animation-delay: 2s;
-                    -webkit-animation-delay: 2s;
-                    animation-delay: 2s;
-                }
+                
             }
 
             .sidebar_content_box {
@@ -1526,9 +1514,8 @@
                         input#searchBtn {
                             font-family: ($FontList);
                             letter-spacing: 0.1em;
-                            width: 17%;
+                            width: 16%;
                             height: 35px;
-                            line-height: 35px;
                             color: $color2;
                             font-size: 0.9em;
                             display: inline-block;
@@ -1537,15 +1524,14 @@
                             background-color: $color1;
                             -webkit-appearance: none;
                             font-weight: normal;
+                            
 
                             &:hover {
-                                letter-spacing: 0.08em;
+                                letter-spacing: 0.12em;
                                 background-color: $color2;
-
-                                height: 35px;
-                                line-height: 35px;
                                 color: $color1;
                                 font-weight: bold;
+                                height: 35px;
                             }
                         }
 
@@ -1667,7 +1653,7 @@
                 height: 100%;
                 margin: 0;
 
-                /* width 1075.250px */
+                
                 li {
                     background-color: $color6;
                     width: 100%;
@@ -1704,7 +1690,7 @@
 @media only screen and (max-width: 1440px) {
     #wrapper {
         width: 90%;
-        /* width 1075.250px */
+        
 
         header {
             hgroup {
@@ -1772,7 +1758,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -2352,7 +2338,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -2496,7 +2482,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -2521,7 +2507,7 @@
 @media only screen and (max-width: 1280px) {
     #wrapper {
         width: 94%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.6em;
@@ -2597,7 +2583,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -3155,7 +3141,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -3299,7 +3285,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -3401,7 +3387,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -3936,7 +3922,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -4080,7 +4066,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -4105,7 +4091,7 @@
 @media only screen and (max-width: 980px) {
     #wrapper {
         width: 96%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.55em;
@@ -4184,7 +4170,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -4704,13 +4690,11 @@
 
                 figure.project-item {
                     width: 23.3%;
-
-                    img {}
-
+                   
                     figcaption.overlay {
                         width: 100%;
 
-                        button {
+                        a.fancybox {
                             font-size: 0.85em;
 
                             &:hover {
@@ -4732,31 +4716,7 @@
                     figure.project-item:hover figcaption.overlay {
                         cursor: pointer;
 
-                        figcaption.overlay {
-                            opacity: 0;
-
-                            &:hover {
-                                opacity: 1;
-                            }
-
-                            p.artist_name {
-                                font-size: 0.65em;
-                            }
-
-                            h4 {
-                                margin: 0;
-
-                                a {
-                                    width: 70%;
-                                    font-size: 0.8em;
-
-                                    &:hover {
-                                        background-color: $color9;
-                                        font-size: 0.9em;
-                                    }
-                                }
-                            }
-                        }
+                        
                     }
                 }
 
@@ -4873,7 +4833,7 @@
 
                 #inner_footer {
                     width: 9%;
-                    /* width 1075.250px */
+                    
 
                     li {
                         height: 25px;
@@ -4899,7 +4859,7 @@
 @media only screen and (max-width: 800px) {
     #wrapper {
         width: 96%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.55em;
@@ -4977,7 +4937,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -5325,7 +5285,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -5462,7 +5422,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -5487,7 +5447,7 @@
 @media only screen and (max-width: 736px) {
     #wrapper {
         width: 96%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.55em;
@@ -5562,7 +5522,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -6094,7 +6054,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -6229,7 +6189,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -6254,7 +6214,7 @@
 @media only screen and (max-width: 667px) {
     #wrapper {
         width: 96%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -6331,7 +6291,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -6851,7 +6811,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -6987,7 +6947,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -7084,7 +7044,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -7627,7 +7587,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -7764,7 +7724,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -7789,7 +7749,7 @@
 @media only screen and (max-width: 600px) {
     #wrapper {
         width: 96%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -7863,7 +7823,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -8416,7 +8376,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -8560,7 +8520,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -8585,7 +8545,7 @@
 @media only screen and (max-width: 536px) {
     #wrapper {
         width: 98%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -8659,7 +8619,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -8767,9 +8727,7 @@
 
                 #pageContainer {
                     margin: 0 auto;
-
-                    .bxslider img {}
-
+                    
                     .bx-wrapper {
                         left: 0;
 
@@ -9191,7 +9149,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -9323,7 +9281,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -9348,7 +9306,7 @@
 @media only screen and (max-width: 480px) {
     #wrapper {
         width: 98%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -9426,7 +9384,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
                     -webkit-flex-flow: column;
                     -ms-flex-flow: column;
@@ -9912,8 +9870,7 @@
 
                 #contact_btn {
                     font-size: 1em;
-
-                    &:hover {}
+                    
                 }
             }
 
@@ -9946,7 +9903,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -10080,7 +10037,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -10103,7 +10060,7 @@
 @media only screen and (max-width: 414px) {
     #wrapper {
         width: 98%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -10179,7 +10136,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -10283,9 +10240,7 @@
 
                 #pageContainer {
                     margin: 0 auto;
-
-                    .bxslider img {}
-
+                    
                     .bx-wrapper {
                         left: 0;
 
@@ -10720,7 +10675,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -10853,7 +10808,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -10878,7 +10833,7 @@
 @media only screen and (max-width: 375px) {
     #wrapper {
         width: 98%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -10953,7 +10908,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -11474,7 +11429,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -11612,7 +11567,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -11637,7 +11592,7 @@
 @media only screen and (max-width: 360px) {
     #wrapper {
         width: 98%;
-        /* width 1075.250px */
+        
 
         #copyr {
             font-size: 0.5em;
@@ -11714,7 +11669,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
                     height: auto; //1414px;
 
@@ -11819,9 +11774,7 @@
 
                 #pageContainer {
                     margin: 0 auto;
-
-                    .bxslider img {}
-
+                    
                     .bx-wrapper {
                         left: 0;
 
@@ -12207,7 +12160,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -12345,7 +12298,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
@@ -12443,7 +12396,7 @@
                 }
 
                 .section {
-                    /*clear: both;*/
+                    
                     margin: 0 auto;
 
                     h1 {
@@ -12878,75 +12831,7 @@
             .container {
                 margin: 5px auto;
 
-                /* Navigation - Tabs */
-                ul#tabs {
-                    height: 46px;
-
-                    li {
-                        width: 96px;
-                        margin: 0 1% 0 0;
-
-                        a {
-                            font-size: 0.8em;
-                        }
-
-                        a.tab-active {
-                            top: 1px;
-                        }
-                    }
-                }
-
-                .tab-content {
-                    width: 100%;
-
-                    .hiphop_panel {
-                        width: 98%;
-                        margin: 1%;
-
-                        .hiphop_panel_text {
-                            width: 92%;
-                            margin: 0 0 1.8% 0;
-
-                            ul {
-                                width: 67%;
-
-                                li {
-                                    font-size: 0.5em;
-                                }
-                            }
-                        }
-
-                        .hiphop_panel_img {
-                            width: 29%;
-                            margin-right: 0.3em;
-                        }
-
-                        .social_aud {
-                            width: 8%;
-
-                            a {
-                                height: 50px;
-                            }
-
-                            a .fa-twitter,
-                            .fa-heart,
-                            .fa-facebook {
-                                font-size: 0.95em;
-                            }
-
-                            a:hover .fa-twitter,
-                            a:hover .fa-heart,
-                            a:hover .fa-facebook {
-                                font-size: 1em;
-                            }
-                        }
-                    }
-                }
-
-                .tab {
-                    display: none;
-                    padding: 0%;
-                }
+                
             }
 
             #contact-form-a {
@@ -13025,7 +12910,7 @@
                 figcaption.overlay {
                     width: 100%;
 
-                    button {
+                    a.fancybox {
                         font-size: 0.85em;
 
                         &:hover {
@@ -13162,7 +13047,7 @@
 
             #inner_footer {
                 width: 9%;
-                /* width 1075.250px */
+                
 
                 li {
                     height: 25px;
