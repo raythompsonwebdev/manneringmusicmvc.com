@@ -1,9 +1,10 @@
 var currentPlaylist = [];
+var tempPlaylist = [];
 var audioElement;
 var mouseDown = false;
 var currentIndex = 0;
 
-//Format time on player
+//Format current time and duration
 function formatTime(seconds) {
 	var seconds = Math.round(seconds);
 	var minutes = Math.floor(seconds / 60);
@@ -15,39 +16,45 @@ function formatTime(seconds) {
 	return minutes + ":" + seconds;
 }
 
-// Time Display and Duration =============================//
+// Display current time and duration =============================//
 function updateTimeProgressBar(audio) {
 
-	$('div#time #current_time').text(formatTime(audio.currentTime));
+	$('div.time .current_time').text(formatTime(audio.currentTime));
 
-	$("div#time #duration").text(formatTime(audio.duration - audio.currentTime));
+	$("div.time .duration").text(formatTime(audio.duration - audio.currentTime));
 
 	var progress = audio.currentTime / audio.duration * 100;
 
-	$("#progress #play_progress").css("width", progress + "%");
+	$(".progress .play_progress").css("width", progress + "%");
 }
 
 // Volume ============================//
 function updateVolumeProgressBar(audio) {
 	var volume = audio.volume * 100;
-	$("#volume").css("width", volume + "%");
+	$("div.audio_volume div.volume").css("width", volume + "%");
 }
 
 
-
+// Audio Class
 function Audio() {
 
 	this.currentlyPlaying;
 	
 	this.audio = document.createElement('audio');
 
+
+	this.audio.addEventListener("ended", function() {
+		nextSong();
+	});
 	
 	// Time Duration =============================//
 	this.audio.addEventListener("canplay", function(){
 
 		var duration = formatTime(this.duration);
 
-		$('div#time #current_time').text(duration);
+		$('div.time .current_time').text(duration);
+
+		
 		
 	});
 	
@@ -81,13 +88,14 @@ function Audio() {
 
 	// Play ============================//
 	this.play = function() {
+
 		 		
 		this.audio.play();
 								
 				
 	}
 
-	// Progress Bar Drag ============================//
+	// Progress Bar and Volume Bar Drag ============================//
 	this.setTime = function(seconds) {
 		this.audio.currentTime = seconds;
 	}

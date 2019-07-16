@@ -1,8 +1,4 @@
-<!--<script src="assets/js/jquery-3.4.1.js"></script>-->
-<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 <script src="assets/js/script.js"></script>
 
 <?php
@@ -18,7 +14,7 @@
     
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
-    print_r($array);
+    //print_r($array);
 
 ?>
 
@@ -34,34 +30,44 @@
         audioElement = new Audio();
                                         
         console.log(audioElement);
+
                 
         setTrack(currentPlaylist[0], currentPlaylist, false);
 
+        
+        //update volume
+        updateVolumeProgressBar(audioElement.audio);
+
+
+        //prevents highlighting
+        $(".product-box-img div.audio_controls").on("mousedown touchstart mouseover touchmove", function(e){
+            e.preventDefault();
+        })
+
 
         //drag progress bar to forward audio
-
-        $("#progress #play_progress").mousedown(function() {
-		mouseDown = true;
+        $("div.progress .play_progress").mousedown(function() {
+		    mouseDown = true;
         });
 
-        $("#progress #play_progress").mousemove(function(e) {
+        $("div.progress .play_progress").mousemove(function(e) {
             if(mouseDown == true) {
                 //Set time of song, depending on position of mouse
                 timeFromOffset(e, this);
             }
         });
 
-        $("#progress #play_progress").mouseup(function(e) {
+        $("div.progress .play_progress").mouseup(function(e) {
             timeFromOffset(e, this);
         });
 
 
-        //Volume
-        $("#volume").mousedown(function() {
+        //drag volume bar to reduce level on volume
+        $("div.audio_volume .volume").mousedown(function() {
 		    mouseDown = true;
         });
 
-        $("#volume").mousemove(function(e) {
+        $("div.audio_volume .volume").mousemove(function(e) {
             if(mouseDown == true) {
 
                 var percentage = e.offsetX / $(this).width();
@@ -72,7 +78,8 @@
             }
         });
 
-        $("#volume").mouseup(function(e) {
+        $("div.audio_volume .volume").mouseup(function(e) {
+
             var percentage = e.offsetX / $(this).width();
 
             if(percentage >= 0 && percentage <= 1) {
@@ -80,8 +87,7 @@
             }
         });
 
-
-
+        //allows mouse up
         $(document).mouseup(function() {
             mouseDown = false;
         });
@@ -96,6 +102,21 @@
         audioElement.setTime(seconds);
     }
 
+
+    //scroll to previous song
+    function prevSong() {
+        if(audioElement.audio.currentTime >= 3 || currentIndex == 0) {
+            audioElement.setTime(0);
+        }
+        else {
+            currentIndex = currentIndex - 1;
+            setTrack(currentPlaylist[currentIndex], currentPlaylist, true);
+            
+        }
+    }
+
+
+    //scroll to next song
     function nextSong() {
         
         if(currentIndex == currentPlaylist.length - 1) {
@@ -111,32 +132,32 @@
 
     }
 
-    
+    //Set Audio tracks to to be played
     function setTrack(trackId, newPlaylist, play) {
-       
-        //console.log(trackId);         
-      
+
+        if(newPlaylist != currentPlaylist) {
+            currentPlaylist = newPlaylist;
+            
+        }
+
+        //create playlist index
+        currentIndex = currentPlaylist.indexOf(trackId);  
+        pauseSong();           
                    
-         $.post("getSongJson.php", { songId: trackId }, function(data) {
-
-            //console.log('**getSongJson Data: ' + data);
-
-            currentIndex = currentPlaylist.indexOf(trackId);
-                                                
+        $.post("getSongJson.php", { songId: trackId }, function(data) {
+            
+                                                           
             var track = JSON.parse(data);
 
-            $("ul li#trackname").text(track[0].songtitle)
-                    
-            //console.log(track[0].mp3_File);
-                            
+            $("div.audio_controls div.trackname").text(track[0].songtitle)
+                                        
             audioElement.setTrack(track);
-            
-            //audioElement.play();
-                       
+
+            audioElement.play();  
             
          });
         
-       
+        //set audio to be played
         if(play) {
 
             audioElement.play();
@@ -147,15 +168,18 @@
     }
         
    
+    //Play song
     function playSong(){
                 
+
         $(".player-button.play").hide();
         $(".player-button.pause").show();
+        
         audioElement.play();  
 
     }
 
-
+    //Pause Song
     function pauseSong(){
         
         $(".player-button.play").show();
@@ -203,7 +227,53 @@
                             <span>Price:</span>
                             <span><?php echo $singlealbums->price; ?></span>
                         </li>
-                                        
+                         
+                        
+                    </ul>
+
+                    <div class="audio_controls">
+
+                    <div class="trackname"></div>
+
+                        <div class="player-button play" onclick="playSong()" >
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </div>
+                                                                
+                        <div class="player-button pause" style="display: none;" onclick="pauseSong()">
+                            <i class="fa fa-pause" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="player-button previous" onclick="prevSong()">
+                        <i class="fa fa-step-backward" aria-hidden="true"></i>
+                        </div>
+                        <div class="player-button next" onclick="nextSong()" >
+                        <i class="fa fa-step-forward" aria-hidden="true" ></i>
+                        </div>
+
+                        <div class="audio_volume">
+                            <div class="VolumeBg">
+                                <div class="volume"></div>
+
+                            </div>
+                            <div class="VolumeImg">
+                            <i class="fa fa-volume-up" aria-hidden="true" ></i>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="load_progress"></div>
+                            <div class="play_progress"></div>
+                        </div>
+
+                        <div class="time">
+                            <div class="current_time">00:00</div>  
+                            <div class="duration">00:00</div>
+                        </div>
+
+
+                    </div>
+    <br/>
+                    <ul class="product-box-info">                
                         <?php
                                                 
                             $i = 1;
@@ -213,55 +283,27 @@
 
                             //print_r($value[1]); 
 
-                        ?>
+                            echo "<li>
+
+                                <span>Trackname:$i </span>
+                                <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'>" . $value[1] . "</span>
                             
-                            <ul>
-                                <li id="trackname">
-
-                                </li>
-                                <li>
-                                   
-                                    <div id="audio_controls">
-
-                                        <div class="player-button play" onclick="playSong()" >
-                                            <i class="fa fa-play" aria-hidden="true"></i>
-                                        </div>
-                                                                                
-                                        <div class="player-button pause" style="display: none;" onclick="pauseSong()">
-                                            <i class="fa fa-pause" aria-hidden="true"></i>
-                                        </div>
-
-                                        <div class="player-button previous" >Previous</div>
-                                        <div class="player-button next" >Next</div>
-                                       
-                                        <div id="progress">
-                                            <div id="load_progress"></div>
-                                            <div id="play_progress"></div>
-                                        </div>
-
-                                        <div id="time">
-                                            <div id="current_time">00:00</div>  
-                                            <div id="duration">00:00</div>
-                                        </div>
-                                        <div id="audio_volume">
-                                            
-                                            <input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
-                                        </div>
-                                    </div>
-
-                                </li>
-                            </ul>
-                       
-                        <?php 
-                           
-                           $i = $i + 1;
+                            </li>";
+                        
+                            $i = $i + 1;
                     
                             endforeach;
-                          
-                        ?>
                         
+                        ?>
                     </ul>
 
+
+                    <script>
+                        var tempSongIds = '<?php echo json_encode($value[0]); ?>';
+                        tempPlaylist = JSON.parse(tempSongIds);
+                        
+                        console.log('Templaylist: ' + tempPlaylist);
+                    </script>
                 </figcaption>
 
                 <div class="clearfix"></div>
