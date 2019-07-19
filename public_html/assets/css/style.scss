@@ -903,7 +903,8 @@
                                     display: block;
                                     height: 40px;
                                     padding: 0;
-                                    color:#fff;
+                                    color:$color2;
+                                    font-size:1.3m;
                                     
 
 
@@ -947,14 +948,14 @@
                                         height: 21.4px;
                                         
                                         
-                                        .load_progress {
+                                        div.load_progress {
                                             width: 100%;
                                             background-color: $color1;
                                             height: 100%;
                                             
                                         }
 
-                                        .play_progress {
+                                        div.play_progress {
                                             width: 100%;
                                             cursor: pointer;
                                             background-color: $progress;
@@ -967,7 +968,7 @@
                                         text-align: center;
                                         font-size:0.8em;
                                         text-shadow:none;
-                                        background-color:rgb(34, 33, 33);
+                                        background-color:$color9;
                                         div.current_time {
                                             width: 100%;
                                             line-height: 21px;
@@ -983,33 +984,33 @@
 
                                     div.audio_volume {
                                         width: 40%;
-                                        height: 45px;
+                                        height: 50px;
                                         display: flex;
 
                                         div.VolumeBg {
                                             width: 88%;
                                             height: 100%;
-                                            background-color: rgb(29, 28, 28);
+                                            background-color:$color9;
                                         }
 
                                         div.volume {
                                             width: 100%;
                                             display: block;
-                                            background-color: #fff;
+                                            background-color:$color2;
                                             height: 100%;
                                             cursor: pointer;
                                         }
 
                                         div.VolumeImg {
-                                            width: 10%;
+                                            width: 12%;
                                             height: 100%;
-
+                                            background-color:$color7;
                                             i.fa-volume-up {
                                                 display: block;
-                                                height: 100%;
+                                                
                                                 width: 100%;
                                                 text-align: center;
-                                                line-height:45px;
+                                                line-height:50px;
                                                 font-size:1.5em;
 
                                                 &:before {
@@ -1051,16 +1052,17 @@
                                     }
 
                                     span:last-of-type{
-                                        background-color: $color9;
+                                        background-color: $color7;
                                         width:15%;
                                         cursor:pointer;
                                         i{
                                             text-align: center;
                                             display: block;
                                             line-height: 40px;
+                                            font-size:1.2em;
                                             &:hover{
-                                                background-color:#fff;
-                                                color:#000;
+                                                background: color $color2;;
+                                                color:$color7;
                                             }
                                         }
 
@@ -2095,7 +2097,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.6em;
+                                    font-size: 1.3em;
 
                                 }
                                 div.audiocntrl_containers{
@@ -2883,7 +2885,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.5em;
+                                    font-size: 1.2em;
                                     
                                                                        
 
@@ -3686,7 +3688,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.4em;
+                                    font-size: 1.15em;
                                     
                                                                        
 
@@ -4463,7 +4465,7 @@
                             div.audio_controls {
                                 margin:0;                               
                                 h1.trackName{
-                                    font-size: 1.3em;
+                                    font-size: 1.15em;
 
                                 }
                                 div.audiocntrl_containers{
@@ -5811,7 +5813,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.2em;
+                                    font-size: 1.1em;
                                     
                                                                        
 
@@ -6577,7 +6579,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.2em;
+                                    font-size: 1.05em;
                                     
                                                                        
 
@@ -7333,7 +7335,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.1em;
+                                    font-size: 1.05em;
                                     
                                                                        
 
@@ -9680,7 +9682,7 @@
                             div.audio_controls {
                                                                 
                                 h1.trackName{
-                                    font-size: 1.1em;
+                                    font-size: 1em;
                                     
                                                                        
 

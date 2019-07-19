@@ -7,14 +7,13 @@
 
 	foreach($singleaudio as $key => $value) {
 
-        var_dump($value[0]);
-
+        
 		array_push($array, $value[0]);
 	}
     
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
-    //print_r($array);
+    
 
 ?>
 
@@ -24,40 +23,35 @@
     $(document).ready(function() {
         
         currentPlaylist = <?=$jsonArray?>;
-
-        console.log('Current Playlist: ' + currentPlaylist[0]);
-        
+                
         audioElement = new Audio();
                                         
-        console.log(audioElement);
-
+      
+        //update volume
+        updateVolumeProgressBar(audioElement.audio);
                 
         setTrack(currentPlaylist[0], currentPlaylist, false);
 
-        
-        //update volume
-        updateVolumeProgressBar(audioElement.audio);
-
 
         //prevents highlighting
-        $(".product-box-img div.audio_controls").on("mousedown touchstart mouseover touchmove", function(e){
+        $("div.audio_controls").on("mousedown touchstart mouseover touchmove", function(e){
             e.preventDefault();
         })
 
 
         //drag progress bar to forward audio
-        $("div.progress .play_progress").mousedown(function() {
+        $("div.progress div.play_progress").mousedown(function() {
 		    mouseDown = true;
         });
 
-        $("div.progress .play_progress").mousemove(function(e) {
+        $("div.progress div.play_progress").mousemove(function(e) {
             if(mouseDown == true) {
                 //Set time of song, depending on position of mouse
                 timeFromOffset(e, this);
             }
         });
 
-        $("div.progress .play_progress").mouseup(function(e) {
+        $("div.progress div.play_progress").mouseup(function(e) {
             timeFromOffset(e, this);
         });
 
@@ -153,16 +147,13 @@
                                         
             audioElement.setTrack(track);
 
-            audioElement.play();  
+            if(play == true) {
+                playSong();
+            }  
             
          });
         
-        //set audio to be played
-        if(play) {
-
-            audioElement.play();
-
-        }
+        
 
 
     }
@@ -286,9 +277,7 @@
                             $i = 1;
                             foreach($singleaudio as $songId => $value) :
                                 
-                            //$jsonArray = json_encode($value, JSON_UNESCAPED_SLASHES);
-
-                            //print_r($value[1]); 
+                           
 
                             echo "<li>
 
@@ -309,7 +298,7 @@
                         var tempSongIds = '<?php echo json_encode($value[0]); ?>';
                         tempPlaylist = JSON.parse(tempSongIds);
                         
-                        console.log('Templaylist: ' + tempPlaylist);
+                        
                     </script>
                 </figcaption>
 

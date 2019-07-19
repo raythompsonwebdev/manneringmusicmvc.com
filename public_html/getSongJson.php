@@ -7,11 +7,8 @@ if(isset($_POST['songId'])) {
 	
 
 	$songId = $_POST['songId'];
-
-		
-	//var_dump($songId);
-		
-
+	
+			
 	$sql = 'SELECT * FROM audio WHERE audioid = :songId ';
 	
 	$stmt = $pdo->prepare($sql);
@@ -33,7 +30,7 @@ if(isset($_POST['songId'])) {
 
 	
 }else{
-	echo 'weekly bust';
+	echo 'Sorry No Audio Available';
 }
 
 
