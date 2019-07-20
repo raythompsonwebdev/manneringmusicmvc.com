@@ -639,22 +639,7 @@
                 -webkit-align-items: flex-start;
                 -ms-flex-align: start;
                 align-items: flex-start;
-
-                h1 {
-                    -webkit-align-self: center;
-                    -ms-flex-item-align: center;
-                    align-self: center;
-                    display: block;
-                    letter-spacing: 0.1em;
-                    font-size: 1.8em;
-                    margin: 1% 0;
-                    width: 100%;
-                    color: $color2;
-                    line-height: 40px;
-                    text-align: center;
-                    padding: 5px 0px 5px 0px;
-                    font-weight: normal;
-                }
+               
 
                 .product-box {
                     height: auto;
@@ -727,7 +712,7 @@
                         img {
                             float: left;
                             width: 21%;
-                            margin: 0 1% 0 0;
+                            margin: 0 0.5em 0 0;
                             display: block;
                         }
 
@@ -821,13 +806,13 @@
 
                     figure.product-box-img {
                         img {
-                            width: 15%;
+                            width: 10%;
                             vertical-align: top;
                             margin: 0 0.5em 0 0;
                         }
 
                         figcaption {
-                            width: 80%;
+                            width: 88%;
                             display: inline-block;
 
                             ul.product-box-info {
@@ -919,7 +904,7 @@
                                         width: 20%;
                                         flex: 0 1 auto;
                                         text-align: center;
-                                        height: 100%;
+                                        height: 50px;
                                         line-height: 50px;
                                         
                                         
@@ -944,8 +929,8 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
-                                        height: 21.4px;
+                                        width: 70%;
+                                        height: 50px;
                                         
                                         
                                         div.load_progress {
@@ -958,29 +943,23 @@
                                         div.play_progress {
                                             width: 100%;
                                             cursor: pointer;
-                                            background-color: $progress;
+                                            background-color: $color1;
                                             height: 100%;
                                         }
                                     }
 
-                                    div.time {
-                                        width: 15%;
-                                        text-align: center;
-                                        font-size:0.8em;
-                                        text-shadow:none;
-                                        background-color:$color9;
-                                        div.current_time {
-                                            width: 100%;
-                                            line-height: 21px;
-                                            letter-spacing:0.15em;
-                                        }
 
-                                        div.duration {
-                                            width: 100%;
-                                            line-height: 21px;
-                                            letter-spacing:0.15em;
-                                        }
+                                    div.current_time,
+                                    div.duration {
+                                        font-family:monospace;
+                                        width: 15%;
+                                        line-height: 50px;
+                                        letter-spacing:0.15em;
+                                        text-align:center;
+                                        background-color:$color7;
+                                        text-shadow:none;
                                     }
+                                                                        
 
                                     div.audio_volume {
                                         width: 40%;
@@ -1984,11 +1963,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.7em;
-                    line-height: 40px;
-                }
-
+                
                 .product-box {
                     min-height: 220px;
                     margin: 0.5em;
@@ -2055,12 +2030,12 @@
 
                     figure.product-box-img {
                         img {
-                            width: 15%;
+                            width: 11%;
                             
                         }
 
                         figcaption {
-                            width: 80%;
+                            width: 87%;
                             
 
                             ul.product-box-info {
@@ -2121,8 +2096,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
-                                        
+                                        width: 70%;                                       
                                         
                                         
                                         .load_progress {
@@ -2137,28 +2111,20 @@
                                         }
                                     }
 
-                                    div.time {
+                                   
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.75em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
+                                  
 
                                     div.audio_volume {
                                         width: 45%;
                                         
 
                                         div.VolumeBg {
-                                            width: 88%;
+                                            width: 90%;
                                             
                                         }
 
@@ -2774,10 +2740,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.6em;
-                    line-height: 40px;
-                }
+                
 
                 .product-box {
                     min-height: 190px;
@@ -2843,12 +2806,12 @@
 
                     figure.product-box-img {
                         img {
-                            width: 15%;
+                            width: 11%;
                             
                         }
 
                         figcaption {
-                            width: 80%;
+                            width: 87%;
                             
 
                             ul.product-box-info {
@@ -2911,7 +2874,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -2927,21 +2890,15 @@
                                         }
                                     }
 
-                                    div.time {
+                                    
+                                        
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
+                                        font-size:0.9em;
                                         
-                                        font-size:0.75em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
+                                   
 
                                     div.audio_volume {
                                         width: 46%;
@@ -3577,9 +3534,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.5em;
-                }
+                
 
                 .product-box {
                     min-height: 180px;
@@ -3646,12 +3601,12 @@
 
                     figure.product-box-img {
                         img {
-                            width: 15%;
+                            width: 12%;
                             
                         }
 
                         figcaption {
-                            width: 80%;
+                            width: 86%;
                             
 
                             ul.product-box-info {
@@ -3714,7 +3669,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -3730,28 +3685,21 @@
                                         }
                                     }
 
-                                    div.time {
+                                    
+                                        
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.75em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
+                                    
 
                                     div.audio_volume {
                                         width: 52%;
                                         
 
                                         div.VolumeBg {
-                                            width: 85%;
+                                            width: 87%;
                                             
                                         }
 
@@ -4351,9 +4299,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.4em;
-                }
+               
 
                 .product-box {
                     min-height: 180px;
@@ -4420,10 +4366,10 @@
                     figure.product-box-img {
 
                         img {
-                            width: 17%;
-                            
+                            width: 20%;
                             margin: 1em auto;
                             display: block;
+                            
                             
                         }
 
@@ -4489,7 +4435,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -4505,21 +4451,14 @@
                                         }
                                     }
 
-                                    div.time {
+                                    
+                                        
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.7em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
+                                    
 
                                     div.audio_volume {
                                         width: 55%;
@@ -5122,9 +5061,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
+                
 
                 .product-box {
                     min-height: 180px;
@@ -5699,9 +5636,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.2em;
-                }
+                
 
                 .product-box {
                     min-height: 205px;
@@ -5839,7 +5774,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -5855,20 +5790,11 @@
                                         }
                                     }
 
-                                    div.time {
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
+                                        font-size:0.8em;
                                         
-                                        font-size:0.7em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -6470,9 +6396,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
+                
 
                 .product-box {
                     min-height: 205px;
@@ -6605,7 +6529,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -6621,20 +6545,10 @@
                                         }
                                     }
 
-                                    div.time {
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.7em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -7225,10 +7139,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     width: 48%;
 
@@ -7361,7 +7272,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -7377,20 +7288,10 @@
                                         }
                                     }
 
-                                    div.time {
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.7em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -7398,7 +7299,7 @@
                                         
 
                                         div.VolumeBg {
-                                            width: 85%;
+                                            width: 87%;
                                             
                                         }
 
@@ -7408,7 +7309,7 @@
                                         }
 
                                         div.VolumeImg {
-                                            width: 15%;
+                                            width: 13%;
                                             
 
                                             i.fa-volume-up {
@@ -8000,9 +7901,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
+                
 
                 .product-box {
                     min-height: 190px;
@@ -8137,7 +8036,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -8153,20 +8052,10 @@
                                         }
                                     }
 
-                                    div.time {
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
                                         
-                                        font-size:0.65em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -8796,10 +8685,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     min-height: 190px;
                     margin: 0.5em;
@@ -8933,7 +8819,7 @@
                                     }
 
                                     div.progress {
-                                        width: 85%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -8949,20 +8835,11 @@
                                         }
                                     }
 
-                                    div.time {
+                                    div.current_time,
+                                    div.duration {
                                         width: 15%;
+                                        font-size:0.7em;
                                         
-                                        font-size:0.65em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -9571,10 +9448,7 @@
                 -ms-flex-align: center;
                 align-items: center;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     min-height: 190px;
                     margin: 0.5em;
@@ -9708,7 +9582,7 @@
                                     }
 
                                     div.progress {
-                                        width: 80%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -9724,20 +9598,10 @@
                                         }
                                     }
 
-                                    div.time {
-                                        width: 20%;
+                                    div.current_time,
+                                    div.duration {
+                                        width: 15%;
                                         
-                                        font-size:0.65em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -10306,10 +10170,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     min-height: 190px;
                     margin: 0.5em;
@@ -10425,7 +10286,7 @@
 
                                 }
                                 div.audiocntrl_containers{
-                                    flex-flow: row wrap;                                     
+                                                                        
                               
                                     .player-button {
                                         width: 33.3%;
@@ -10445,7 +10306,7 @@
                                     }
 
                                     div.progress {
-                                        width: 80%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -10461,20 +10322,10 @@
                                         }
                                     }
 
-                                    div.time {
-                                        width: 20%;
+                                    div.current_time,
+                                    div.duration {
+                                        width: 15%;
                                         
-                                        font-size:0.6em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -11078,10 +10929,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     min-height: 190px;
                     margin: 0.5em;
@@ -11195,7 +11043,7 @@
 
                                 }
                                 div.audiocntrl_containers{
-                                    flex-flow: row wrap;                                     
+                                                                       
                               
                                     .player-button {
                                         width: 33.3%;
@@ -11215,7 +11063,7 @@
                                     }
 
                                     div.progress {
-                                        width: 80%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -11231,20 +11079,10 @@
                                         }
                                     }
 
-                                    div.time {
-                                        width: 20%;
+                                    div.current_time,
+                                    div.duration {
+                                        width: 15%;
                                         
-                                        font-size:0.6em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -11837,10 +11675,7 @@
                 margin: 0;
                 padding: 0;
 
-                h1 {
-                    font-size: 1.3em;
-                }
-
+                
                 .product-box {
                     min-height: 180px;
                     margin: 0.5em;
@@ -11956,7 +11791,7 @@
 
                                 }
                                 div.audiocntrl_containers{
-                                    flex-flow: row wrap;                                     
+                                                                         
                               
                                     .player-button {
                                         width: 33.3%;
@@ -11976,7 +11811,7 @@
                                     }
 
                                     div.progress {
-                                        width: 80%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -11992,20 +11827,10 @@
                                         }
                                     }
 
-                                    div.time {
-                                        width: 20%;
+                                    div.current_time,
+                                    div.duration {
+                                        width: 15%;
                                         
-                                        font-size:0.55em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {
@@ -12678,7 +12503,7 @@
 
                                 }
                                 div.audiocntrl_containers{
-                                    flex-flow: row wrap;                                     
+                                                                         
                               
                                     .player-button {
                                         width: 33.3%;
@@ -12698,7 +12523,7 @@
                                     }
 
                                     div.progress {
-                                        width: 80%;
+                                        width: 70%;
                                         
                                         
                                         
@@ -12714,20 +12539,10 @@
                                         }
                                     }
 
-                                    div.time {
-                                        width: 20%;
+                                    div.current_time,
+                                    div.duration {
+                                        width: 15%;
                                         
-                                        font-size:0.55em;
-                                        
-                                        div.current_time {
-                                            width: 100%;
-                                            
-                                        }
-
-                                        div.duration {
-                                            width: 100%;
-                                            
-                                        }
                                     }
 
                                     div.audio_volume {

@@ -34,7 +34,7 @@
 
 
         //prevents highlighting
-        $("div.audio_controls").on("mousedown touchstart mouseover touchmove", function(e){
+        $("div.audio_controls").on("mousedown mouseover", function(e){
             e.preventDefault();
         })
 
@@ -57,11 +57,12 @@
 
 
         //drag volume bar to reduce level on volume
-        $("div.audio_volume .volume").mousedown(function() {
+
+        $("div.audio_volume div.volume").mousedown(function() {
 		    mouseDown = true;
         });
 
-        $("div.audio_volume .volume").mousemove(function(e) {
+        $("div.audio_volume div.volume").mousemove(function(e) {
             if(mouseDown == true) {
 
                 var percentage = e.offsetX / $(this).width();
@@ -72,13 +73,14 @@
             }
         });
 
-        $("div.audio_volume .volume").mouseup(function(e) {
+        $("div.audio_volume div.volume").mouseup(function(e) {
 
             var percentage = e.offsetX / $(this).width();
 
             if(percentage >= 0 && percentage <= 1) {
                 audioElement.audio.volume = percentage;
             }
+
         });
 
         //allows mouse up
@@ -244,10 +246,12 @@
                         <i class="fa fa-step-forward" aria-hidden="true" ></i>
                         </div>
 
+                      
+
                         <div class="audio_volume">
                             <div class="VolumeBg">
                                 <div class="volume"></div>
-
+                                <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
                             </div>
                             <div class="VolumeImg">
                             <i class="fa fa-volume-up" aria-hidden="true" ></i>
@@ -256,16 +260,15 @@
                     </div>
 
                     <div class="audiocntrl_containers">
-
+                        <div class="current_time">00:00</div> 
                         <div class="progress">
-                            <div class="load_progress"></div>
+                            <!--<div class="load_progress"></div>-->
                             <div class="play_progress"></div>
                         </div>
+                        <div class="duration">00:00</div>
 
-                        <div class="time">
-                            <div class="current_time">00:00</div>  
-                            <div class="duration">00:00</div>
-                        </div>
+
+                        <!--<div class="time"></div>-->
 
                     </div>
 
@@ -276,12 +279,11 @@
                                                 
                             $i = 1;
                             foreach($singleaudio as $songId => $value) :
-                                
-                           
+                             
 
                             echo "<li>
 
-                                <span>Trackname: </span>
+                                <span>Track " . $i . " : </span>
                                 <span >" . $value[1] . "</span>
                                 <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
                             </li>";

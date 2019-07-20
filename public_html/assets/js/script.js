@@ -19,9 +19,9 @@ function formatTime(seconds) {
 // Display current time and duration =============================//
 function updateTimeProgressBar(audio) {
 
-	$('div.time .current_time').text(formatTime(audio.currentTime));
+	$('div.current_time').text(formatTime(audio.currentTime));
 
-	$("div.time .duration").text(formatTime(audio.duration - audio.currentTime));
+	$("div.duration").text(formatTime(audio.duration - audio.currentTime));
 
 	var progress = audio.currentTime / audio.duration * 100;
 
@@ -52,7 +52,7 @@ function Audio() {
 
 		var duration = formatTime(this.duration);
 
-		$('div.time .current_time').text(duration);
+		$('div.current_time').text(duration);
 
 		
 		

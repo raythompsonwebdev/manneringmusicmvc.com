@@ -95,16 +95,15 @@ $(document).ready(function () {
         audio.volume = event.target.value;
     });
 
+    //update
     var seek = document.getElementById('seek'),
         playback = document.getElementById('playback');
-
-    //update
+    
     function updateseekmax(event) {
         if (event.target.duration) {
             $(seek).max = event.target.duration;
         }
     }
-
 
     function updateplaybackmax(event) {
         if (event.target.duration) {
