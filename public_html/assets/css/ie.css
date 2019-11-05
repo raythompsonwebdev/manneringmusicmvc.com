@@ -4,6 +4,9 @@
   /* IE9 Compat Modes */
   src: url("../fonts/Harabara_Bold/Harabara.eot?#iefix") format("embedded-opentype"), url("../fonts/Harabara_Bold/Harabara.woff") format("woff"), url("../fonts/Harabara_Bold/Harabara.ttf") format("truetype"), url("../fonts/Harabara_Bold/Harabara.svg#svgFontName") format("svg");
   /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
 }
 
 article,

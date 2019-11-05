@@ -16,7 +16,7 @@
                 <a href="#" class="button">Shop Now</a>
             <br/>
             </article>
-        <img src="assets/images/sliderimages/manneringhiphop.png" alt="hip-hop-albums"/>
+        <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
         </li>
 
         <li>
@@ -28,7 +28,7 @@
                 </div>
             <a href="#" class="button">Shop Now</a>
             </article>
-        <img src="assets/images/sliderimages/manneringjazz.png" alt="jazz-albums"/>
+        <img src="assets/images/sliderimages/manneringjazz.webp" alt="jazz-albums"/>
         </li>
 
         <li>
@@ -40,7 +40,7 @@
                 </div>
             <a href="#" class="button">Shop Now</a>
             </article>
-        <img src="assets/images/sliderimages/manneringcountry.png" alt="country-albums"/>
+        <img src="assets/images/sliderimages/manneringcountry.webp" alt="country-albums"/>
         </li>
 
         <li>
@@ -52,7 +52,7 @@
                 </div>
             <a href="#" class="button">Shop Now</a>
             </article>
-        <img src="assets/images/sliderimages/manneringjazz.png" alt="hip-hop-albums"/>
+        <img src="assets/images/sliderimages/manneringjazz.webp" alt="hip-hop-albums"/>
         </li>
     </ul>
 

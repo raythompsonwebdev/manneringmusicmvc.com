@@ -1,15 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en" class="no-js" >
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="user-scalable=yes">
+    <meta name="description" content="Mannering Music web project.">
+   
+    <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
+    <meta name="author" content="Raymond Thompson">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mannering Music</title>
      <link rel="stylesheet" href="assets/css/style.css" >
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
+    <link rel="icon" href="assets/icons/apple-icon.png">
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
       <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>

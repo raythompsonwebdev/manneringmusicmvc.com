@@ -17,6 +17,7 @@ public_html/assets/css/partials/
 public_html/assets/css/poll
 public_html/assets/js/misc/
 public_html/assets/js/bxslider-4-master/
+public_html/assets/js/jquery-3.4.1.min.js
 logs/
 audio/
 nbproject/
@@ -27,3 +28,5 @@ style.css
 composer.json
 Procfile
 includes/DatabaseConnection.php
+libwebp-0.6.1-linux-x86-32/
+libwebp-0.6.1-linux-x86-32.tar.gz
