@@ -1,5 +1,6 @@
 
 <!--main text-->
+
 <section id="main_text" class="group" role="main">
 
 <h1>Contact Us</h1>
@@ -45,36 +46,3 @@
 
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 
-<script src="assets/scripts/jquery.validate.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        // Registration Form Validation - using jquery.validate.min.js
-
-        $("#contact-form-a").validate({
-            rules: {
-                name: "required",
-                email: {
-                    required: true,
-                    email: true
-                },
-                subject: {
-                    required: true
-                }
-            },
-            messages: {
-                name: "Name is required.",
-                email: "Email is required."
-            },
-            showErrors: function (errorMap, errorList) {
-                $("#summary").html("Your form contains " +
-                        this.numberOfInvalids() +
-                        " errors, see details below.").addClass('error');
-                this.defaultShowErrors();
-            }
-
-        });
-
-
-    });
-</script>

@@ -30,6 +30,12 @@
 
     <header role="banner">
 
+    <!---logo-->
+    <hgroup>
+        <h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
+        <h2 class="site-description">Jazz, Hip Hop & Country</h2>
+      </hgroup>
+
       <span class="social">
         <ul id="social">
    
@@ -45,13 +51,7 @@
           
         </ul>
       </span>
-
-      <!---logo-->
-      <hgroup>
-        <h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
-        <h2 class="site-description">Jazz, Hip Hop & Country</h2>
-      </hgroup>
-
+      
     </header>
 
       <!--navigation here-->

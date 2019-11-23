@@ -195,30 +195,30 @@
 
             <figure class="product-box-img">
 
-                <img src="assets/databasepics/<?php echo $singlealbums->image; ?>" alt="Album-Cover-Image" />
+                <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
 
                 <figcaption>
 
                     <ul class="product-box-info">
                         <li>
                             <span>Artist: </span>
-                            <span><?php echo $singleartist->artist_name; ?></span>
+                            <span><?=$singleartist->artist_name; ?></span>
                         </li>
                         <li>
                             <span>Album:</span>
-                            <span><?php echo $singlealbums->album; ?></span>
+                            <span><?=$singlealbums->album; ?></span>
                         </li>
                         <li>
                             <span>Formats:</span>
-                            <span><?php echo $singlealbums->text; ?></span>
+                            <span><?=$singlealbums->text; ?></span>
                         </li>
                         <li>
                             <span>Genre:</span>
-                            <span><?php echo $singlealbums->genre; ?></span>
+                            <span><?=$singlealbums->genre; ?></span>
                         </li>
                         <li>
                             <span>Price:</span>
-                            <span><?php echo $singlealbums->price; ?></span>
+                            <span><?=$singlealbums->price; ?></span>
                         </li>
                          
                         

@@ -5,36 +5,32 @@
     jQuery(document).ready(function() {
 
         $("#searchBtn ").on('click', function(){
-
-        $('#loadingIndicator').bind('ajaxStart', function() {
-            $(this).show();
-              }).bind('ajaxComplete', function() {
-            $(this).hide();
-        });
-
-        var artistname = $("#artist").val();
-        var albumname = $("#album").val();
-        var genre = $("#genre").val();
-        var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
-
-        $.ajax({
-            url:  'results.php',
-            method: "GET",
-            data: dataString,
-            dataType: 'html',
-            success: function(data, textStatus) {
-
-                    $("#results").html(data);
-                    
-            },
+       
+            var artistname = $("#artist").val();
+            var albumname = $("#album").val();
+            var genre = $("#genre").val();
             
-            error: function(functionxhr, textStatus, errorThrown){
-                alert('An error occurred! ' + ( errorThrown ? errorThrown : xhr.status ));
-            }
-        });
-        //end of ajax function
+            var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
+
+            $.ajax({
+                url:  'results.php',
+                method: "GET",
+                data: dataString,
+                dataType: 'html',
+                success: function(data, textStatus, xhr) {
+                    
+                        $("#results").html(data);
+                        
+                },
+                
+                error: function(xhr, textStatus, errorThrown){
+                    alert('An error occurred! ' + ( errorThrown ? errorThrown : xhr.status ));
+                }
+            });
+            //end of ajax function
             return false;
-        });// search click end
+        });
+        // search click end
 
     });//end of jquery
 

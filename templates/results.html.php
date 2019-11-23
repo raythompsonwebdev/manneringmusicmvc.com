@@ -21,15 +21,17 @@ if (!isset($_GET['submit'])) {
 
     if ($rows) {
         foreach ($rows as $row) : ?>
+
+
         <div class="product-box">
 
             <figure class="product-box-img">
                 
-                <img src="assets/databasepics/<?php echo $row['image']; ?>" alt="Album-Cover-Image"  />
+                <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
                 
                 <div class="product-box-cartinfo">
-                    <h4>&pound;<?php echo $row['price']; ?></h4>
-                    <span><?php echo $row['album']; ?></span>
+                    <h4>&pound;<?= $row['price']; ?></h4>
+                    <span><?= $row['album']; ?></span>
                 </div>
                 
                 <figcaption >
@@ -37,7 +39,7 @@ if (!isset($_GET['submit'])) {
                     <ul class="product-box-info">
                     <li>
                         
-                        <span><?php echo $row['artist_name']; ?></span>
+                        <span><?= $row['artist_name']; ?></span>
                     </li>
                                        
                     </ul>

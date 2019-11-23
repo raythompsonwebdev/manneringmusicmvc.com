@@ -2,69 +2,14 @@
 
 <!--Slider-->
 <section id="slider">
-  
-    <article id="pageContainer">
-    <ul class="bxslider">
-
-        <li>
-        <article class="slider-text">
-            <h1>CLEARANCE <span>SALE</span></h1>
-            <h2>UP TO 10&#37; OFF</h2>
-                <div class="features_list">
-                    <h3>Check out our end of season sale on the latest Hip Hop music from our vast collection.</h3>
-                </div>
-                <a href="#" class="button">Shop Now</a>
-            <br/>
-            </article>
-        <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
-        </li>
-
-        <li>
-        <article class="slider-text">
-            <h1>CLEARANCE<span>SALE</span></h1>
-            <h2>UP TO 10&#37; OFF</h2>
-                <div class="features_list">
-                    <h3>Check out our end of season sale on the latest Jazz music from our vast collection.</h3> 
-                </div>
-            <a href="#" class="button">Shop Now</a>
-            </article>
-        <img src="assets/images/sliderimages/manneringjazz.webp" alt="jazz-albums"/>
-        </li>
-
-        <li>
-        <article class="slider-text">
-            <h1>CLEARANCE<span>SALE</span></h1>
-            <h2>UP TO 10&#37; OFF</h2>
-                <div class="features_list">
-                    <h3>Check out our end of season sale on the latest Country music from our vast collection.</h3> 
-                </div>
-            <a href="#" class="button">Shop Now</a>
-            </article>
-        <img src="assets/images/sliderimages/manneringcountry.webp" alt="country-albums"/>
-        </li>
-
-        <li>
-        <article class="slider-text">
-            <h1>CLEARANCE<span>SALE</span></h1>
-            <h2>UP TO 10&#37; OFF</h2>
-                <div class="features_list">
-                    <h3>Check out our end of season sale on the latest Jazz music albums from our vast collection.</h3>
-                </div>
-            <a href="#" class="button">Shop Now</a>
-            </article>
-        <img src="assets/images/sliderimages/manneringjazz.webp" alt="hip-hop-albums"/>
-        </li>
-    </ul>
-
-    </article>
- 
+  <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
+     
 </section>
 
 <!--main text-->
 <section id="main_text" role="main" >
 
-    <h1>Welcome to Mannering Music</h1>
-
+    
     <!--Hip Hop Section-->
     <article class="section">
         <h1>Featured Hip Hop Albums</h1>
@@ -153,13 +98,9 @@
 
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 
-<script src="assets/js/bxslider-4-master/jquery.bxslider.js" ></script>
-
 <script>
     
     $(document).ready(function(){
-
-        $('.bxslider').bxSlider();
 
         $(".grid_1_of_5").on('mouseenter', function () {
                         
