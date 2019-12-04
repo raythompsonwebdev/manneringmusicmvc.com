@@ -1,0 +1,88 @@
+IDENTIFY BRANCHES that have been merged fully in to MASTER***************
+
+git branch --merged //local branches
+
+git branch --no-merged //local branches
+
+git branch -r --merged // - r list remote branches
+
+
+MERGE BRANCHES****************************************************
+
+checkout branch <name of branch to merge>
+
+git merge <name of branch to merge to>
+
+
+DELETE LOCAL BRANCH **************************************************
+
+Must be on different branch
+git branch -d <name of branch to delete>
+
+#Delete not yet merged branch
+git branch -D <name of branch to delete>
+
+DELETE REMOTE BRANCH *************************************************
+
+git push origin :<name of branch to delete>
+
+# derived from origin <local>:<remote>
+
+DELETE REMOTE BRANCH v1.7.0+*****************************************
+
+git push --delete origin <name of branch to delete>
+
+DELETE REMOTE BRANCH v2.8.0+*******************************************
+
+git push --d origin <name of branch to delete>
+
+
+PUSH repo to remote *****************************************
+
+git push -u origin <name of local repository to push to remote>
+
+PRUNE remote tracking Branches **************************
+
+git remote prune origin
+
+//test before committing
+git remote prune origin --dry-run 
+
+//fetch and prune together
+git fetch --prune
+git fetch --p
+
+CREATE NEW BRANCH***********************
+
+git checkout -b <name of new branch>
+
+
+**************AUTO COMPLETION*************************
+
+see bashrc file
+
+
+*************remove remote******************
+$ git remote -v
+# View current remotes
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
+> destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+> destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+$ git remote rm destination
+# Remove remote
+$ git remote -v
+# Verify it's gone
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+
+
+
+
+
+
+
+
+
