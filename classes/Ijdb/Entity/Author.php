@@ -2,7 +2,10 @@
 namespace Ijdb\Entity;
 
 class Author {
-	public $id;
+
+
+
+	public $authorId;
 	public $username;
 	public $email;
 	public $password;
@@ -14,13 +17,13 @@ class Author {
 
 	public function getReviews() {
 		
-		return $this->reviewsTable->find('authorId', $this->id);
+		return $this->reviewsTable->find('authorId', $this->authorId);
 	}
 
 	public function addReviews($review) {
 
-		$review['authorId'] = $this->id;
+		$review['authorId'] = $this->authorId;
 
-		$this->reviewsTable->save($review);
+		return $this->reviewsTable->save($review);
 	}
 }

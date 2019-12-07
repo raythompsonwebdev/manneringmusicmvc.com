@@ -8,21 +8,16 @@ class Artist {
 	private $audioTable;
 	
 
-	public function __construct(\Ninja\DatabaseTable $albumsTable, \Ninja\DatabaseTable $audioTable) {
+	public function __construct( \Ninja\DatabaseTable $audioTable, \Ninja\DatabaseTable $albumsTable) {
 		$this->albumsTable = $albumsTable;
 		$this->audioTable = $audioTable;
+		
 		
 	}
 
 	public function getArtistId(){
 					
 		return $this->id ;
-	  
-	}
-
-	public function getArtistName(){
-					
-		return $this->artist_name ;
 	  
 	}
 	  
@@ -36,6 +31,8 @@ class Artist {
 	public function getAlbumId() {
 		return $this->albumsTable->findById($this->id);
 	}
+
+	
 
 	
 }

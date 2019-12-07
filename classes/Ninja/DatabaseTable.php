@@ -178,7 +178,6 @@ class DatabaseTable
     public function findSongId($value)
     {
 
-
         $query = "SELECT `audioid`, `songtitle`, `mp3_File`, `ogg_File`  FROM `audio` WHERE `albumid` = $value ";
 
         $parameters = [
@@ -194,6 +193,30 @@ class DatabaseTable
         }
          
         return $array;
+    }
+
+    /**
+     * single-result-page-function
+     *
+     * */
+    public function findArtistName($value)
+    {
+
+        $query = "SELECT `id`,`artist_name` FROM `artist` WHERE `id` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach($query as $row) {
+            array_push($array, [$row['artist_name']]);
+        }
+         
+        return $array ;
     }
 
     

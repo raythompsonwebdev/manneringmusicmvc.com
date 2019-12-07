@@ -8,11 +8,11 @@
 
 <!--main text-->
 <section id="main_text" role="main" >
-
+<h1>Mannering Music Featured Albums</h1>
     
     <!--Hip Hop Section-->
-    <article class="section">
-        <h1>Featured Hip Hop Albums</h1>
+    <section class="album_section">
+        <h1>Hip Hop</h1>
         <?php foreach ($rapalbums as $rapalbum) : ?>
                 <div class="flex-wrapper">
 
@@ -36,12 +36,12 @@
 
                 </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
     <!--Country Section-->
-    <article class="section ">
-        <h1>Featured Country Albums</h1>
+    <section class="album_section ">
+        <h1>Country</h1>
         <?php foreach ($countryalbums as $countryalbum) : ?>
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
@@ -62,12 +62,12 @@
 
             </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
     <!--Jazz Section-->
-    <article class="section">
-        <h1>Featured Jazz Albums</h1>
+    <section class="album_section">
+        <h1>Jazz</h1>
         <?php foreach ($jazzalbums as $jazzalbum) : ?>
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
@@ -87,7 +87,7 @@
                 </figure>
             </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
 

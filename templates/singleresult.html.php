@@ -198,11 +198,11 @@
                 <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
 
                 <figcaption>
-
+                <pre></pre>
                     <ul class="product-box-info">
                         <li>
                             <span>Artist: </span>
-                            <span><?=$singleartist->artist_name; ?></span>
+                            <span><?= $singleartist[0][0]; ?></span>
                         </li>
                         <li>
                             <span>Album:</span>

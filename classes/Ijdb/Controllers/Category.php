@@ -2,6 +2,7 @@
 namespace Ijdb\Controllers;
 
 class Category {
+	
 	private $categoriesTable;
 
 	public function __construct(\Ninja\DatabaseTable $categoriesTable) {
@@ -13,9 +14,9 @@ class Category {
 		//$author = $this->authentication->getUser();
 		//$categories = $this->categoriesTable->findAll();
 
-		if (isset($_GET['id'])) {
+		if (isset($_GET['categoriesId'])) {
 
-			$category = $this->categoriesTable->findById($_GET['id']);
+			$category = $this->categoriesTable->findById($_GET['categoriesId']);
 		}
 
 		$title = 'Edit Category';
@@ -30,7 +31,7 @@ class Category {
 
 	public function saveEdit() {
 
-		$category = $_POST['category'];
+		$category = $_POST['categories'];
 
 		$this->categoriesTable->save($category);
 
@@ -53,8 +54,8 @@ class Category {
 
 	public function delete() {
 
-		$this->categoriesTable->delete($_POST['id']);
+		$this->categoriesTable->delete($_POST['categoriesId']);
 
-		header('location: /listcategory'); 
+		header('location: /category/list'); 
 	}
 }

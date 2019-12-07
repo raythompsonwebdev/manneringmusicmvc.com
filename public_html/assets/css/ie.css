@@ -377,6 +377,8 @@ hr {
 h1, h2, h3 {
   margin: 0;
   padding: 0;
+  font-family: "Harabara_Bold", sans-serif;
+  width: 100%;
 }
 
 /* Place a border around focused fields */
@@ -401,7 +403,6 @@ select[type="text"] {
   background: #ECAC00;
   font-weight: bold;
   -webkit-appearance: none;
-  height: 35px;
   line-height: 1.5em;
   behavior: url(PIE.htc);
 }

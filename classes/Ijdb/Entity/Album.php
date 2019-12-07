@@ -34,12 +34,13 @@ class Album {
 	
 	}
 
-	public function getArtistName()
-	{
+	public function getArtistName(){
 
 		return $this->artistsTable->findById($this->artistid);
 		
 	}
+
+	
 
 	public function getSongId()
 	{

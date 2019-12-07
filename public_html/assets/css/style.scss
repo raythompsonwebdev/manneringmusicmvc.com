@@ -214,12 +214,22 @@
             width: 100%;
             padding-top: 0.5em;
             margin: 0;
+            h1 {
+                font-size: 1.6em;
+                line-height:60px;
+                
+            }
 
-            .section:last-of-type {
+            blockquote{
+                width:100%;
+                margin: 0;
+            }
+
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 padding: 0;
                 margin: 0 0 1em 0;
@@ -371,6 +381,17 @@
                     }
                 }
             }
+
+            ul.categories{
+                display:block;
+                list-style:none;
+                li{
+                    line-height:30px;
+                    height:auto;
+                    display:block;
+
+                }
+            }
         }
 
         #summary {
@@ -474,9 +495,12 @@
         //front-page slider
         #slider {
             width: 100%;
-            margin: 0;
+            margin: 1em 0 0 0;
             display: block;
             background-color: #fff;
+            img{
+                height:100%;
+            }
 
         }
 
@@ -1586,11 +1610,11 @@
         #main_text {
             height: auto;
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -2294,11 +2318,11 @@
         #main_text {
             margin: 0;
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -3017,11 +3041,11 @@
 
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -3720,11 +3744,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -4414,11 +4438,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -4926,11 +4950,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -5623,11 +5647,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -6298,11 +6322,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -6996,11 +7020,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -7714,11 +7738,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -8399,11 +8423,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
                 -webkit-flex-flow: column;
@@ -9075,11 +9099,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -9772,11 +9796,11 @@
 
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 
@@ -10454,11 +10478,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 height: auto; 
 
@@ -11109,11 +11133,11 @@
             margin: 0;
             
 
-            .section:last-of-type {
+            section.album_section:last-of-type {
                 margin-bottom: 0%;
             }
 
-            .section {
+            section.album_section {
                 
                 margin: 0 auto;
 

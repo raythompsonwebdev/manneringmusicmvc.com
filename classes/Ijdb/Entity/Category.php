@@ -4,7 +4,7 @@ namespace Ijdb\Entity;
 use Ninja\DatabaseTable;
 
 class Category {
-	public $id;
+	public $categoriesId;
 	public $name;
 	private $reviewsTable;
 	private $reviewsCategoriesTable;
@@ -15,12 +15,12 @@ class Category {
 	}
 
 	public function getReviews() {
-		$reviewsCategories = $this->reviewsCategoriesTable->find('categoryId', $this->id);
+		$reviewsCategories = $this->reviewsCategoriesTable->find('categoriesId', $this->categoriesId);
 
 		$reviews = [];
 
 		foreach ($reviewsCategories as $reviewsCategory) {
-			$review =  $this->reviewsTable->findById($reviewsCategory->reviewsid);
+			$review =  $this->reviewsTable->findById($reviewsCategory->reviewsId);
 			if ($review) {
 				$reviews[] = $review;
 			}			
@@ -28,4 +28,5 @@ class Category {
 
 		return $reviews;
 	}
+	
 }
