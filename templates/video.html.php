@@ -2,67 +2,68 @@
 
 <section id="main_text" class="group">
 
-<h1>Music Videos</h1>
-<p>Watch classic and the latest Hip Hop, Jazz and Country music videos from a wide selection of music videos.</p>
-<br/>
+  <h1>Music Videos</h1>
+  <p>Watch classic and the latest Hip Hop, Jazz and Country music videos from a wide selection of music videos.</p>
 
-<article class="sidebar_gallery"  >
+  <br/>
+</section>
+<section id="sidebar_gallery"  >
 
-<!--hip hop videos-->
-<h1>Hip Hop Music Videos</h1>
-<?php //var_dump($rapvideos); ?>
+  <!--hip hop videos-->
+  <h1>Hip Hop Music Videos</h1>
+  <?php //var_dump($rapvideos); ?>
 
-<?php foreach($rapvideos as $rapvideo) : ?>
-<figure class="project-item">
-  <img src="/assets/images/videoimages/Newfolder/<?php echo $rapvideo->video_image; ?>" alt="">
-    <figcaption class="overlay">
-      <h1 class="artist_name"><?php echo $rapvideo->video_artist; ?> </h1>
-      <p class="video_text"></p>
-      <a class="fancybox fancybox.iframe" href="<?php echo $rapvideo->video_link; ?>" ?>See Video </a>
-  </figcaption>
-</figure>
-<?php endforeach; ?>
-<br/>
-
-<!--Country Music videos-->
-
-<h1>Country Music Videos</h1>
-<?php foreach($countryvideos as $countryvideo) : ?>
-<figure class="project-item">
-  <img src="/assets/images/videoimages/Newfolder/<?php echo $countryvideo->video_image; ?>" alt="">
-    <figcaption class="overlay">
-      <h1 class="artist_name"><?php echo $countryvideo->video_image; ?></h1>
-      <p class ="video_text"></p>
-      <a class="fancybox fancybox.iframe" href="<?php echo $countryvideo->video_link; ?>">See Video </a>
-      
-  </figcaption>
-</figure>
-<?php endforeach; ?>
-<br/>
-
-<!--Jazz Music videos-->
-
-<h1>Jazz Music Videos</h1>
-<?php foreach($jazzvideos as $jazzvideo) : ?>
-<figure class="project-item">
-  <img src="/assets/images/videoimages/Newfolder/<?php echo $jazzvideo->video_image; ?>" alt="">
-    <figcaption class="overlay">
-      <h1 class="artist_name"><?php echo $jazzvideo->video_image; ?></h1>
-      <p class ="video_text"></p>
-      <a class="fancybox fancybox.iframe" href="<?php echo $jazzvideo->video_link; ?>">See Video </a>
-    
+  <?php foreach($rapvideos as $rapvideo) : ?>
+  <figure class="video-item">
+    <img src="/assets/images/videoimages/Newfolder/<?php echo $rapvideo->video_image; ?>" alt="">
+      <figcaption class="overlay">
+        <h1 class="artist_name"><?php echo $rapvideo->video_artist; ?> </h1>
+        
+        <a class="fancybox fancybox.iframe" href="<?php echo $rapvideo->video_link; ?>" ?>See Video </a>
     </figcaption>
-</figure>
-<?php endforeach; ?>
-<br/>
+  </figure>
+  <?php endforeach; ?>
+  <br/>
 
-<div class="clearfix"> </div>
+  <!--Country Music videos-->
 
-</article>
+  <h1>Country Music Videos</h1>
+  <?php foreach($countryvideos as $countryvideo) : ?>
+  <figure class="video-item">
+    <img src="/assets/images/videoimages/Newfolder/<?php echo $countryvideo->video_image; ?>" alt="">
+      <figcaption class="overlay">
+        <h1 class="artist_name"><?php echo $countryvideo->video_image; ?></h1>
+        
+        <a class="fancybox fancybox.iframe" href="<?php echo $countryvideo->video_link; ?>">See Video </a>
+        
+    </figcaption>
+  </figure>
+  <?php endforeach; ?>
+  <br/>
+
+  <!--Jazz Music videos-->
+
+  <h1>Jazz Music Videos</h1>
+  <?php foreach($jazzvideos as $jazzvideo) : ?>
+  <figure class="video-item">
+    <img src="/assets/images/videoimages/Newfolder/<?php echo $jazzvideo->video_image; ?>" alt="">
+      <figcaption class="overlay">
+        <h1 class="artist_name"><?php echo $jazzvideo->video_image; ?></h1>
+        
+        <a class="fancybox fancybox.iframe" href="<?php echo $jazzvideo->video_link; ?>">See Video </a>
+      
+      </figcaption>
+  </figure>
+  <?php endforeach; ?>
+  <br/>
+
+  <div class="clearfix"> </div>
+
+</section>
 
 <br/><br/>
 
-</section>
+
 
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 

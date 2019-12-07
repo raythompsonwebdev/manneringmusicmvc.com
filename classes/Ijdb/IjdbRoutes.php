@@ -121,7 +121,7 @@ class IjdbRoutes implements \Ninja\Routes{
 			],
 
 			
-			'category/editcategory' => [
+			'editcategories' => [
 				'POST' => [
 					'controller' => $categoryController,
 					'action' => 'saveEdit'
@@ -132,14 +132,14 @@ class IjdbRoutes implements \Ninja\Routes{
 				],
 				'login' => true
 			],
-			'category/deletecategory' => [
+			'deletecategories' => [
 				'POST' => [
 					'controller' => $categoryController,
 					'action' => 'delete'
 				],
 				'login' => true
 			],
-			'category/list' => [
+			'list' => [
 				'GET' => [
 					'controller' => $categoryController,
 					'action' => 'list'

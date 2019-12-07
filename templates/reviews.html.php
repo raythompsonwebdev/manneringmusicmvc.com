@@ -4,7 +4,7 @@
 <ul class="categories">
   <?php foreach($categories as $category): ;?>
 
-    <li><a href="/reviewslist?category=<?=$category->categoriesId?>"><?=$category->name?></a><li>
+    <li><a href="/list?category=<?=$category->categoriesId?>"><?=$category->name?></a><li>
       
   <?php endforeach; ?>
 </ul>
