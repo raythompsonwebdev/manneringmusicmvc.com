@@ -27,9 +27,10 @@ $date = new DateTime($review->reviewdate);
 echo $date->format('jS F Y');
 ?>)
 
-<?php if ($userId == $review->authorId): ?>
-  <a href="/reviews/editreviews?id=<?=$review->reviewsId?>">Edit</a>
-  <form action="/reviews/delete" method="post">
+<?php if ($userId === $review->authorId): ?>
+
+  <a href="/editreviews?id=<?=$review->reviewsId?>">Edit</a>
+  <form action="/deletereviews" method="post">
     <input type="hidden" name="id" value="<?=$review->reviewsId?>">
     <input type="submit" value="Delete">
   </form>

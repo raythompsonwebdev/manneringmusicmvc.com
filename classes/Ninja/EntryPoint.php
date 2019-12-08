@@ -60,7 +60,7 @@ class EntryPoint
             
             echo $this->loadTemplate('layout.html.php', ['loggedIn' => $authentication->isLoggedIn(), 'output' => $output, 'title' => $title ]);
             
-			//include  __DIR__ . '/../../templates/layout.html.php';
+			
 
 		}
     }

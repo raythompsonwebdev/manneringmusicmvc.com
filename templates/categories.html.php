@@ -13,7 +13,7 @@
   <?=htmlspecialchars($category->name, ENT_QUOTES, 'UTF-8')?>
 
   <a href="/editcategories?id=<?=$category->categoriesId?>">Edit</a>
-  <form id="cat-form" action="/delete" method="post">
+  <form id="cat-form" action="/deletecategories" method="post">
     <input type="hidden" name="id" value="<?=$category->categoriesId?>">
     <input type="submit" value="Delete">
   </form>

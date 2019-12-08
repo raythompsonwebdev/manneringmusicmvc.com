@@ -101,6 +101,16 @@ class DatabaseTable
         $this->query('DELETE FROM `' . $this->table . '` WHERE `' . $this->primaryKey . '` = :id', $parameters);
     }
 
+    public function deleteWhere($column, $value) {
+		$query = 'DELETE FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
+
+		$parameters = [
+			'value' => $value
+		];
+
+		$query = $this->query($query, $parameters);
+	}
+
     public function findAll()
     {
 
@@ -122,7 +132,7 @@ class DatabaseTable
     private function processDates($fields)
     {
         foreach ($fields as $key => $value) {
-            if ($value instanceof DateTime) {
+            if ($value instanceof \DateTime) {
                 $fields[$key] = $value->format('Y-m-d');
             }
         }
@@ -132,14 +142,27 @@ class DatabaseTable
 
     public function save($record)
     {
-        try {
-            if ($record[$this->primaryKey] == '') {
-                $record[$this->primaryKey] = null;
-            }
-            $this->insert($record);
-        } catch (\PDOException $e) {
-            $this->update($record);
-        }
+        $entity = new $this->className(...$this->constructorArgs);
+
+		try {
+			if ($record[$this->primaryKey] == '') {
+				$record[$this->primaryKey] = null;
+			}
+			$insertId = $this->insert($record);
+
+			$entity->{$this->primaryKey} = $insertId;
+		}
+		catch (\PDOException $e) {
+			$this->update($record);
+		}
+
+		foreach ($record as $key => $value) {
+			if (!empty($value)) {
+				$entity->$key = $value;	
+			}			
+		}
+
+		return $entity;
     }
 
     /**

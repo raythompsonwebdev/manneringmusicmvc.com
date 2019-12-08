@@ -35,7 +35,7 @@ class Category {
 
 		$this->categoriesTable->save($category);
 
-		header('location: /category/list');
+		header('location: /list');
 	}
 
 	public function list() {
@@ -54,8 +54,8 @@ class Category {
 
 	public function delete() {
 
-		$this->categoriesTable->delete($_POST['categoriesId']);
+		$this->categoriesTable->delete($_POST['id']);
 
-		header('location: /category/list'); 
+		header('location: /list'); 
 	}
 }

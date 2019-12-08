@@ -37,13 +37,11 @@ class Music
         $category = $this->categoriesTable->findById($_GET['categories']);
   
         $reviews = $category->getReviews();
-            
-        echo 'it works!!!';
+         
   
       }else
       {
-        echo 'does not works';
-  
+        
         $reviews = $this->reviewsTable->findAll() ;
        
       }	
@@ -54,18 +52,13 @@ class Music
           
           $author = $this->authentication->getUser();
   
-      // ob_start();
-  
-      // include  __DIR__ . '/../../templates/';
-  
-      // $output = ob_get_clean();
-  
+       
       return ['template' => 'reviews.html.php', 
           'title' => $title, 
           'variables' => [
               'totalReviews' => $totalReviews,
                           'reviews' => $reviews,
-                          'userId' => $author->id ?? null,
+                          'userId' => $author->authorId ?? null,
               'categories' => $this->categoriesTable->findAll()
             ]
           ];
@@ -75,13 +68,13 @@ class Music
   
       $author = $this->authentication->getUser();
   
-      $reviews = $this->reviewsTable->findById($_POST['id']);
+      $reviews = $this->reviewsTable->findById($_POST['authorId']);
   
-      if ($reviews->authorid != $author->id) {
+      if ($reviews->authorId != $author->authorId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_JOKES) ) {
         return;
       }
   
-      $this->reviewsTable->delete($_POST['authorid']);
+      $this->reviewsTable->delete($_POST['authorId']);
   
       header('location: /reviews'); 
   }
@@ -94,7 +87,15 @@ class Music
       $reviews['reviewdate'] = new \DateTime();
       
 
-      $author->addReview($reviews);
+      $reviewEntity = $author->addReview($reviews);
+
+      $reviewEntity->clearCategories();
+
+      foreach ($_POST['categories'] as $categoryId) {
+        $reviewEntity->addCategory($categoryId);
+      }
+
+
       
       header('location: /reviews'); 
   }
