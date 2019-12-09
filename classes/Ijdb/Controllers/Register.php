@@ -92,10 +92,9 @@ class Register {
 	}
 
 	public function permissions() {
-		$author = $this->authorsTable->findById($_GET['authorId']);
 
-		var_dump($author);
-
+		$author = $this->authorsTable->findById($_GET['id']);
+		
 		$reflected = new \ReflectionClass('\Ijdb\Entity\Author');
 		$constants = $reflected->getConstants();
 		return ['template' => 'permissions.html.php',
@@ -109,7 +108,7 @@ class Register {
 
 	public function savePermissions() {
 		$author = [
-			'authorId' => $_GET['authorId'],
+			'authorId' => $_GET['id'],
 			'permissions' => array_sum($_POST['permissions'] ?? [])
 		];
 

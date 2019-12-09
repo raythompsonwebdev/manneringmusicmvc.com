@@ -30,23 +30,24 @@ class Music
 
   public function reviewslist() {
 
-   
+      $page = $_GET['page'] ?? 1;
+
+      $offset = ($page-1)*10;
 
       if (isset($_GET['categories']))
       {
         $category = $this->categoriesTable->findById($_GET['categories']);
   
-        $reviews = $category->getReviews();
+        $reviews = $category->getReviews(10, $offset);        
+			  $totalReviews = $category->getNumReviews();
          
   
-      }else
-      {
-        
-        $reviews = $this->reviewsTable->findAll() ;
-       
-      }	
+      }else {
+        $reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
+        $totalReviews = $this->reviewsTable->total();
+      }
   
-      $title = 'Review list';
+      $title = 'Mannering Review List';
   
           $totalReviews = $this->reviewsTable->total();
           
@@ -57,9 +58,11 @@ class Music
           'title' => $title, 
           'variables' => [
               'totalReviews' => $totalReviews,
-                          'reviews' => $reviews,
-                          'userId' => $author->authorId ?? null,
-              'categories' => $this->categoriesTable->findAll()
+              'reviews' => $reviews,
+              'user' => $author,
+              'currentPage' => $page,                          
+              'categories' => $this->categoriesTable->findAll(),
+              'categoryId' => $_GET['categories'] ?? null
             ]
           ];
   }
@@ -93,28 +96,29 @@ class Music
 
       foreach ($_POST['categories'] as $categoryId) {
         $reviewEntity->addCategory($categoryId);
-      }
-
-
-      
+      }      
       header('location: /reviews'); 
   }
     
   public function edit() {
       
     $author = $this->authentication->getUser();
+    $categories = $this->categoriesTable->findAll();
 
     if (isset($_GET['reviewsid'])) {
       $reviews = $this->reviewsTable->findById($_GET['reviewsid']);
+      
     }
 
-    $title = 'Edit Music';
+    $title = 'Edit Review';
 
     return ['template' => 'editreviews.html.php',
         'title' => $title,
         'variables' => [
                         'reviews' => $reviews ?? null,
-                        'userId' => $author->id ?? null
+               
+                        'user' => $author,
+                        'categories' => $categories
           ]
         ];
   }
@@ -131,7 +135,7 @@ class Music
       $jazzalbums = $this->albumsTable->findByGenre('Jazz');
 
         
-      $title = 'Mannering Music';
+      $title = 'Mannering Home Page';
 
       return ['template' => 'home.html.php',
               'title' => $title,
@@ -153,7 +157,7 @@ class Music
       $jazzvideos = $this->albumsTable->findVideoByGenre('Jazz');
 
         
-      $title = 'Mannering Music';
+      $title = 'Mannering Video Page';
 
       return ['template' => 'video.html.php',
               'title' => $title,
@@ -168,7 +172,7 @@ class Music
   public function contact()
   {
 
-      $title = 'Mannering Contact';
+      $title = 'Mannering Contact Page';
       
       return ['template' => 'contact.html.php', 'title' => $title];
   }
@@ -176,7 +180,7 @@ class Music
   public function search()
   {
   
-      $title = 'Mannering Search';
+      $title = 'Mannering Search Page';
       
       return ['template' => 'search.html.php', 'title' => $title];
   }
@@ -201,7 +205,7 @@ class Music
   
 
                     
-      $title = 'Single Albums';
+      $title = 'Mannering Album Page';
               
       return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
           'singlealbums' => $singlealbums, 

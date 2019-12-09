@@ -24,7 +24,7 @@ class Review {
 	}
 
 	public function addCategory($categoryId) {
-		$reviewsCat = ['reviewsId' => $this->reviewsId, 'categoryId' => $categoryId];
+		$reviewsCat = ['reviewsId' => $this->reviewsId, 'categoriesId' => $categoryId];
 
 		$this->reviewsCategoriesTable->save($reviewsCat);
 	}

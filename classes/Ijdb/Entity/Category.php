@@ -14,8 +14,8 @@ class Category {
 		$this->reviewsCategoriesTable = $reviewsCategoriesTable;
 	}
 
-	public function getReviews() {
-		$reviewsCategories = $this->reviewsCategoriesTable->find('categoriesId', $this->categoriesId);
+	public function getReviews($limit = null, $offset = null) {
+		$reviewsCategories = $this->reviewsCategoriesTable->find('categoriesId', $this->categoriesId,null, $limit, $offset);
 
 		$reviews = [];
 
@@ -27,6 +27,21 @@ class Category {
 		}
 
 		return $reviews;
+	}
+
+	public function getNumReviews() {
+		return $this->reviewsCategoriesTable->total('categoryId', $this->categoriesId);
+	}
+
+	private function sortReviews($a, $b) {
+		$aDate = new \DateTime($a->reviewdate);
+		$bDate = new \DateTime($b->reviewdate);
+
+		if ($aDate->getTimestamp() == $bDate->getTimestamp()) {
+			return 0;
+		}
+
+		return $aDate->getTimestamp() < $bDate->getTimestamp() ? -1 : 1;
 	}
 	
 }

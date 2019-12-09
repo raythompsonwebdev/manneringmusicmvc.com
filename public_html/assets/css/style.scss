@@ -470,6 +470,100 @@
 
                 }
             }
+
+            #review-edit {
+                width: 40%;
+                height: auto;
+                color: $color2;
+                padding: 2%;
+                display: block;
+                background-color: $color5;
+                margin: auto;
+                font-family: ($FontList);
+                textarea {
+                    width: 100%;
+                    border: 2px solid $color8;
+                    @include boredrady(5px);
+                    display: block;
+                    padding: 0;
+                    font-size: 1em;
+                    margin: 0.5em 0;
+                }
+                input[type="checkbox"]{
+                    width: 20px;
+                    display: block;
+                    height: 28px;
+                    float: right;
+                    margin-right: 0.5em;
+    
+                }
+                
+    
+                label {
+                    line-height: 30px;
+                    height: 30px;
+                    width:80%;
+                    font-size: 90%;
+                }
+    
+                input[type="submit"]{
+                    font-family: ($FontList);
+                    background-color: $color1;
+                    margin: 0 auto;
+                    letter-spacing: 0.1em;
+                    width: 50%;
+                    height: 40px;
+                    color: $color2;
+                    font-size: 1.1em;
+                    box-shadow: none;
+                    display: block;
+    
+                    &:hover {
+                        margin: 0 auto;
+                        color: $color3;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            table{
+                width:80%;
+                margin:1em auto;
+
+                thead{
+                    height:auto;
+                    width: 1%;
+                    background-color:$color3;
+                    
+                    th{
+                        text-indent:0.5em;
+                        text-align:left;
+                        line-height:50px;
+                    }
+                }
+
+                tbody{
+                    tr{
+                        height:auto;
+                        background-color:$color2;
+                        td{
+                            text-indent:0.5em;
+                            color:$color3;
+
+                            a{
+                                
+                                display:block;
+                                line-height:40px;
+                                
+                            }
+
+                        }
+                    }
+                }
+
+
+
+            }
         }
 
         #summary {
@@ -1071,6 +1165,8 @@
             height: auto;
         }
 
+        
+
         #registerform {
             width: 40%;
             height: auto;
@@ -1135,7 +1231,7 @@
             }
         }
 
-        #contact-form-a {
+        #contact-form-a{
             width: 40%;
             height: auto;
             color: $color2;
@@ -1215,7 +1311,6 @@
                 padding: 0;
                 font-size: 0.95em;
             }
-
 
             #contact_btn {
                 font-family: ($FontList);
