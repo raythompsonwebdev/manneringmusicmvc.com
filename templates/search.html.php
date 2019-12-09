@@ -38,7 +38,7 @@
 
 <section id="main_text">
 
-    <h1 style="text-align:left">Album Search Page</h1>
+    <h1 >Album Search Page</h1>
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 

@@ -93,6 +93,9 @@ class Register {
 
 	public function permissions() {
 		$author = $this->authorsTable->findById($_GET['authorId']);
+
+		var_dump($author);
+
 		$reflected = new \ReflectionClass('\Ijdb\Entity\Author');
 		$constants = $reflected->getConstants();
 		return ['template' => 'permissions.html.php',

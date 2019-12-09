@@ -1,4 +1,4 @@
-<h2>Edit <?=$author->name?>'s Permissions</h2>
+<h2>Edit <?=$author->username?>'s Permissions</h2>
 
 <form action="" method="post">
 	

@@ -10,7 +10,7 @@
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mannering Music</title>
+   
      <link rel="stylesheet" href="assets/css/style.css" >
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
@@ -58,17 +58,16 @@
       <nav role="navigation" >
                   
         <ul id="inner_nav">
-        <?php if (!$loggedIn): ?>
+        <?php if ($loggedIn): ?>
           <li><a rel='tab' href="/">Home</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
-            <li><a rel='tab' href="/video">Video</a></li>
-            
-            <li><a rel='tab' href="/contact">Contact</a></li>
-            <?php else: ?> 
-            <li><a rel='tab' href="/">Home</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
          <li><a href="/reviews">Reviews</a></li>
-		<!--	<li><a href="/editreviews">Add Review</a></li>-->
+			<li><a href="/authorlist">Authors</a></li>
+            <?php else: ?> 
+              <li><a rel='tab' href="/">Home</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            <li><a rel='tab' href="/contact">Contact</a></li>
       <?php endif; ?>
         </ul>
 

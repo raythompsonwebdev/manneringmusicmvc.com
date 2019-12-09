@@ -12,7 +12,7 @@
 		<tr>
 			<td><?=$author->username;?></td>		
 			<td><?=$author->email;?></td>
-			<td><a href="/author/permissions?id=<?=$author->authorId;?>">Edit Permissions</a></td>
+			<td><a href="/permissions?id=<?=$author->authorId;?>">Edit Permissions</a></td>
 		</tr>
 		<?php endforeach; ?>
 	</tbody>

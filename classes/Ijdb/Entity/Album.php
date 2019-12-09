@@ -5,10 +5,10 @@ class Album {
 	public $albumid;
 	public $album;
 	public $image;
-    public $price;
-    public $text;
-    public $artistid;
-    public $genre;
+	public $price;
+	public $text;
+	public $artistid;
+	public $genre;
 	private $artistsTable;
 	private $audioTable;
 

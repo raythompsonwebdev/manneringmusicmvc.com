@@ -60,6 +60,30 @@ class IjdbRoutes implements \Ninja\Routes{
 				]
 			],
 
+			//Permissions
+
+			'permissions' => [
+				'GET' => [
+				'controller' => $authorController,
+				'action' => 'permissions'
+				],
+					'POST' => [
+					'controller' => $authorController,
+					'action' => 'savePermissions'
+				],
+				'login' => true,
+				'permissions' => \Ijdb\Entity\Author::EDIT_USER_ACCESS
+			],
+			'authorlist' => [
+				'GET' => [
+					'controller' => $authorController,
+					'action' => 'list'
+				],
+				'login' => true,
+				'permissions' => \Ijdb\Entity\Author::EDIT_USER_ACCESS
+			],
+
+
 			//reviews 
 			'editreviews' => [
 					'POST' => [
@@ -125,29 +149,7 @@ class IjdbRoutes implements \Ninja\Routes{
 				'action' => 'logout'
 				]
 			],
-
-				//Permissions
-
-				'permissions' => [
-						'GET' => [
-						'controller' => $authorController,
-						'action' => 'permissions'
-					],
-						'POST' => [
-						'controller' => $authorController,
-						'action' => 'savePermissions'
-					],
-					'login' => true
-				],
-
-				'list' => [
-					'GET' => [
-						'controller' => $authorController,
-						'action' => 'list'
-					],
-					'login' => true,
-					'permissions' => \Ijdb\Entity\Author::EDIT_USER_ACCESS
-				],
+				
 
 			//categories
 			'editcategories' => [
