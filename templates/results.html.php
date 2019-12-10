@@ -3,7 +3,6 @@
 
 include __DIR__ . '/../includes/DatabaseConnection.php';
 if (!isset($_GET['submit'])) {
-
     //Store search form data submitted into variables
     $artistname = $_GET['artist_name'];
     $albumname = $_GET['album'];
@@ -21,8 +20,6 @@ if (!isset($_GET['submit'])) {
 
     if ($rows) {
         foreach ($rows as $row) : ?>
-
-
         <div class="product-box">
 
             <figure class="product-box-img">

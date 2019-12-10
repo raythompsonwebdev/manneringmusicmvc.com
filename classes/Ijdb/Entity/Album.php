@@ -1,70 +1,50 @@
 <?php
 namespace Ijdb\Entity;
 
-class Album {
-	public $albumid;
-	public $album;
-	public $image;
-	public $price;
-	public $text;
-	public $artistid;
-	public $genre;
-	private $artistsTable;
-	private $audioTable;
+class Album
+{
+    public $albumid;
+    public $album;
+    public $image;
+    public $price;
+    public $text;
+    public $artistid;
+    public $genre;
+    private $artistsTable;
+    private $audioTable;
 
-		
-	
-	public function __construct(\Ninja\DatabaseTable $artistsTable, \Ninja\DatabaseTable $audioTable) {
-		
-		$this->artistsTable = $artistsTable;
-		$this->audioTable = $audioTable;
-		
-						
-	}
+        
+    
+    public function __construct(\Ninja\DatabaseTable $artistsTable, \Ninja\DatabaseTable $audioTable)
+    {
+        
+        $this->artistsTable = $artistsTable;
+        $this->audioTable = $audioTable;
+    }
 
-	public function getAlbumId(){
+    public function getAlbumId()
+    {
 
-		return $this->albumid;
-		
-	}
+        return $this->albumid;
+    }
 
-	public function getArtistId(){
-		
-		return $this->artistsTable->findById($this->artistid);
-	
-	}
+    public function getArtistId()
+    {
+        
+        return $this->artistsTable->findById($this->artistid);
+    }
 
-	public function getArtistName(){
+    public function getArtistName()
+    {
 
-		return $this->artistsTable->findById($this->artistid);
-		
-	}
+        return $this->artistsTable->findById($this->artistid);
+    }
 
-	
+    
 
-	public function getSongId()
-	{
+    public function getSongId()
+    {
 
-		return $this->audioTable->findSongId($this->albumid);
-		
-	}
-
-	
-
-	
-
-	
-
-
-	
-	
-
-	
-
-	
-
-	
-	
-
-	
+        return $this->audioTable->findSongId($this->albumid);
+    }
 }

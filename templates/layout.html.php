@@ -5,15 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mannering Music web project.">
-   
+    <meta name="description" content="Mannering Music web project.">   
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
      <link rel="stylesheet" href="assets/css/style.css" >
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
     <link rel="icon" href="assets/icons/apple-icon.png">
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
@@ -59,16 +57,19 @@
                   
         <ul id="inner_nav">
         <?php if ($loggedIn): ?>
-          <li><a rel='tab' href="/">Home</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-         <li><a href="/reviews">Reviews</a></li>
-			<li><a href="/authorlist">Authors</a></li>
-            <?php else: ?> 
-              <li><a rel='tab' href="/">Home</a></li>
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            <li><a href="/editreviews">EditReviews</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>            
             <li><a rel='tab' href="/contact">Contact</a></li>
-      <?php endif; ?>
+            <?php else: ?>
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            <li><a rel='tab' href="/contact">Contact</a></li>
+            <?php endif; ?>
         </ul>
 
       </nav>

@@ -1,6 +1,7 @@
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 <script src="assets/js/script.js"></script>
 
+
 <?php
     
     $array = array();
@@ -153,8 +154,7 @@
                 playSong();
             }  
             
-         });
-        
+         });     
         
 
 

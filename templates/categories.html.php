@@ -7,10 +7,10 @@
 <a id="add-cat-link" href="/editcategories">Add a new category</a>
 
 
-<?php foreach($categories as $category): ?>
+<?php foreach ($categories as $category) : ?>
 <blockquote>
   <p>
-  <?=htmlspecialchars($category->name, ENT_QUOTES, 'UTF-8')?>
+    <?=htmlspecialchars($category->name, ENT_QUOTES, 'UTF-8')?>
 
   <a href="/editcategories?id=<?=$category->categoriesId?>">Edit</a>
   <form id="cat-form" action="/deletecategories" method="post">

@@ -1,61 +1,66 @@
 <?php
 namespace Ijdb\Controllers;
 
-class Category {
-	
-	private $categoriesTable;
+class Category
+{
+    
+    private $categoriesTable;
 
-	public function __construct(\Ninja\DatabaseTable $categoriesTable) {
-		$this->categoriesTable = $categoriesTable;
-	}
+    public function __construct(\Ninja\DatabaseTable $categoriesTable)
+    {
+        $this->categoriesTable = $categoriesTable;
+    }
 
-	public function edit() {
+    public function edit()
+    {
 
-		//$author = $this->authentication->getUser();
-		//$categories = $this->categoriesTable->findAll();
+        //$author = $this->authentication->getUser();
+        //$categories = $this->categoriesTable->findAll();
 
-		if (isset($_GET['categoriesId'])) {
+        if (isset($_GET['categoriesId'])) {
+            $category = $this->categoriesTable->findById($_GET['categoriesId']);
+        }
 
-			$category = $this->categoriesTable->findById($_GET['categoriesId']);
-		}
+        $title = 'Edit Category';
 
-		$title = 'Edit Category';
+        return ['template' => 'editcategory.html.php',
+                'title' => $title,
+                'variables' => [
+                    'category' => $category ?? null
+                ]
+        ];
+    }
 
-		return ['template' => 'editcategory.html.php',
-				'title' => $title,
-				'variables' => [
-					'category' => $category ?? null
-				]
-		];
-	}
+    public function saveEdit()
+    {
 
-	public function saveEdit() {
+        $category = $_POST['categories'];
 
-		$category = $_POST['categories'];
+        $this->categoriesTable->save($category);
 
-		$this->categoriesTable->save($category);
+        header('location: /list');
+    }
 
-		header('location: /list');
-	}
+    public function list()
+    {
 
-	public function list() {
+        $categories = $this->categoriesTable->findAll();
 
-		$categories = $this->categoriesTable->findAll();
+        $title = 'Reviews Categories';
 
-		$title = 'Reviews Categories';
+        return ['template' => 'categories.html.php',
+            'title' => $title,
+            'variables' => [
+                'categories' => $categories
+              ]
+        ];
+    }
 
-		return ['template' => 'categories.html.php', 
-			'title' => $title, 
-			'variables' => [
-			    'categories' => $categories
-			  ]
-		];
-	}
+    public function delete()
+    {
 
-	public function delete() {
+        $this->categoriesTable->delete($_POST['id']);
 
-		$this->categoriesTable->delete($_POST['id']);
-
-		header('location: /list'); 
-	}
+        header('location: /list');
+    }
 }

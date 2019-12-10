@@ -11,9 +11,13 @@ class DatabaseTable
     private $constructorArgs;
     
 
-    public function __construct(\PDO $pdo, string $table, string $primaryKey, string $className = '\stdClass',
-    array $constructorArgs = [])
-    {
+    public function __construct(
+        \PDO $pdo,
+        string $table,
+        string $primaryKey,
+        string $className = '\stdClass',
+        array $constructorArgs = []
+    ) {
         $this->pdo = $pdo;
         $this->table = $table;
         $this->primaryKey = $primaryKey;
@@ -28,20 +32,20 @@ class DatabaseTable
         return $query;
     }
 
-    public function total($field = null, $value = null) 
+    public function total($field = null, $value = null)
     {
-		$sql = 'SELECT COUNT(*) FROM `' . $this->table . '`';
-		$parameters = [];
+        $sql = 'SELECT COUNT(*) FROM `' . $this->table . '`';
+        $parameters = [];
 
-		if (!empty($field)) {
-			$sql .= ' WHERE `' . $field . '` = :value';
-			$parameters = ['value' => $value];
-		}
-		
-		$query = $this->query($sql, $parameters);
-		$row = $query->fetch();
-		return $row[0];
-	}
+        if (!empty($field)) {
+            $sql .= ' WHERE `' . $field . '` = :value';
+            $parameters = ['value' => $value];
+        }
+        
+        $query = $this->query($sql, $parameters);
+        $row = $query->fetch();
+        return $row[0];
+    }
 
     public function findById($value)
     {
@@ -109,59 +113,62 @@ class DatabaseTable
         $this->query('DELETE FROM `' . $this->table . '` WHERE `' . $this->primaryKey . '` = :id', $parameters);
     }
 
-    public function deleteWhere($column, $value) {
-		$query = 'DELETE FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
+    public function deleteWhere($column, $value)
+    {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
 
-		$parameters = [
-			'value' => $value
-		];
+        $parameters = [
+            'value' => $value
+        ];
 
-		$query = $this->query($query, $parameters);
-	}
+        $query = $this->query($query, $parameters);
+    }
 
-    public function findAll($orderBy = null, $limit = null, $offset = null) {
-		$query = 'SELECT * FROM ' . $this->table;
+    public function findAll($orderBy = null, $limit = null, $offset = null)
+    {
+        $query = 'SELECT * FROM ' . $this->table;
 
-		if ($orderBy != null) {
-			$query .= ' ORDER BY ' . $orderBy;
-		}
+        if ($orderBy != null) {
+            $query .= ' ORDER BY ' . $orderBy;
+        }
 
-		if ($limit != null) {
-			$query .= ' LIMIT ' . $limit;
-		}
+        if ($limit != null) {
+            $query .= ' LIMIT ' . $limit;
+        }
 
-		if ($offset != null) {
-			$query .= ' OFFSET ' . $offset;
-		}
+        if ($offset != null) {
+            $query .= ' OFFSET ' . $offset;
+        }
 
-		$result = $this->query($query);
+        $result = $this->query($query);
 
-		return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-	}
+        return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
+    }
 
-    public function find($column, $value, $orderBy = null, $limit = null, $offset = null) {
-		$query = 'SELECT * FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
+    public function find($column, $value, $orderBy = null, $limit = null, $offset = null)
+    {
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
 
-		$parameters = [
-			'value' => $value
-		];
+        $parameters = [
+            'value' => $value
+        ];
 
-		if ($orderBy != null) {
-			$query .= ' ORDER BY ' . $orderBy;
-		}
+        if ($orderBy != null) {
+            $query .= ' ORDER BY ' . $orderBy;
+        }
 
-		if ($limit != null) {
-			$query .= ' LIMIT ' . $limit;
-		}
+        if ($limit != null) {
+            $query .= ' LIMIT ' . $limit;
+        }
 
-		if ($offset != null) {
-			$query .= ' OFFSET ' . $offset;
-		}
+        if ($offset != null) {
+            $query .= ' OFFSET ' . $offset;
+        }
 
-		$query = $this->query($query, $parameters);
+        $query = $this->query($query, $parameters);
 
-		return $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-	}
+        return $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
+    }
 
     private function processDates($fields)
     {
@@ -178,25 +185,24 @@ class DatabaseTable
     {
         $entity = new $this->className(...$this->constructorArgs);
 
-		try {
-			if ($record[$this->primaryKey] == '') {
-				$record[$this->primaryKey] = null;
-			}
-			$insertId = $this->insert($record);
+        try {
+            if ($record[$this->primaryKey] == '') {
+                $record[$this->primaryKey] = null;
+            }
+            $insertId = $this->insert($record);
 
-			$entity->{$this->primaryKey} = $insertId;
-		}
-		catch (\PDOException $e) {
-			$this->update($record);
-		}
+            $entity->{$this->primaryKey} = $insertId;
+        } catch (\PDOException $e) {
+            $this->update($record);
+        }
 
-		foreach ($record as $key => $value) {
-			if (!empty($value)) {
-				$entity->$key = $value;	
-			}			
-		}
+        foreach ($record as $key => $value) {
+            if (!empty($value)) {
+                $entity->$key = $value;
+            }
+        }
 
-		return $entity;
+        return $entity;
     }
 
     /**
@@ -206,7 +212,7 @@ class DatabaseTable
     public function findByGenre($genre)
     {
 
-        $query = $this->pdo->prepare('SELECT * FROM `' . $this->table . '` WHERE `genre` = :genre LIMIT 5');
+        $query = $this->pdo->prepare('SELECT * FROM `' . $this->table . '` WHERE `genre` = :genre ORDER BY RAND() LIMIT 5');
         $query->bindValue(':genre', $genre);
         $query->execute();
         $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
@@ -245,7 +251,7 @@ class DatabaseTable
 
         $array = array();
 
-        foreach($query as $row) {
+        foreach ($query as $row) {
             array_push($array, [$row['audioid'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
         }
          
@@ -269,17 +275,10 @@ class DatabaseTable
 
         $array = array();
 
-        foreach($query as $row) {
+        foreach ($query as $row) {
             array_push($array, [$row['artist_name']]);
         }
          
         return $array ;
     }
-
-    
-
-    
-
-           
-    
 }

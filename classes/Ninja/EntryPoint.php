@@ -37,34 +37,26 @@ class EntryPoint
     public function run()
     {
 
-        $routes = $this->routes->getRoutes();	
+        $routes = $this->routes->getRoutes();
 
-		$authentication = $this->routes->getAuthentication();
+        $authentication = $this->routes->getAuthentication();
 
-		if (isset($routes[$this->route]['login']) && isset($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
-			header('location: /login/error');
-		}
-		else {
-			$controller = $routes[$this->route][$this->method]['controller'];
-			$action = $routes[$this->route][$this->method]['action'];
-			$page = $controller->$action();
+        if (isset($routes[$this->route]['login']) && isset($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
+            header('location: /loginerror');
+        } else {
+            $controller = $routes[$this->route][$this->method]['controller'];
+            $action = $routes[$this->route][$this->method]['action'];
+            $page = $controller->$action();
 
-			$title = $page['title'];
+            $title = $page['title'];
 
-			if (isset($page['variables'])) {
-				$output = $this->loadTemplate($page['template'], $page['variables']);
-			}
-			else {
-				$output = $this->loadTemplate($page['template']);
+            if (isset($page['variables'])) {
+                $output = $this->loadTemplate($page['template'], $page['variables']);
+            } else {
+                $output = $this->loadTemplate($page['template']);
             }
             
             echo $this->loadTemplate('layout.html.php', ['loggedIn' => $authentication->isLoggedIn(), 'output' => $output, 'title' => $title ]);
-            
-			
-
-		}
+        }
     }
-
-    
-
 }

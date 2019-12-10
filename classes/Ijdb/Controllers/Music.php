@@ -8,111 +8,111 @@ use \Ninja\Authentication;
 class Music
 {
     
-  private $albumsTable;
-  private $artistsTable;
-  private $audioTable;
-  private $authorsTable;
-  private $reviewsTable;
-  private $categoriesTable;
-  private $authentication;
+    private $albumsTable;
+    private $artistsTable;
+    private $audioTable;
+    private $authorsTable;
+    private $reviewsTable;
+    private $categoriesTable;
+    private $authentication;
 
 
-  public function __construct(DatabaseTable $albumsTable,DatabaseTable $audioTable,DatabaseTable $artistsTable , DatabaseTable $authorsTable, DatabaseTable $reviewsTable , DatabaseTable $categoriesTable , Authentication $authentication )
-  {
-      $this->albumsTable = $albumsTable;
-      $this->artistsTable = $artistsTable; 
-      $this->audioTable = $audioTable;
-      $this->authorsTable = $authorsTable;
-      $this->reviewsTable = $reviewsTable;               
-      $this->categoriesTable = $categoriesTable;
-      $this->authentication = $authentication;
-  }
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $audioTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, DatabaseTable $categoriesTable, Authentication $authentication)
+    {
+        $this->albumsTable = $albumsTable;
+        $this->artistsTable = $artistsTable;
+        $this->audioTable = $audioTable;
+        $this->authorsTable = $authorsTable;
+        $this->reviewsTable = $reviewsTable;
+        $this->categoriesTable = $categoriesTable;
+        $this->authentication = $authentication;
+    }
 
-  public function reviewslist() {
+    public function reviewslist()
+    {
 
-      $page = $_GET['page'] ?? 1;
+        $page = $_GET['page'] ?? 1;
 
-      $offset = ($page-1)*10;
+        $offset = ($page-1)*10;
 
-      if (isset($_GET['categories']))
-      {
-        $category = $this->categoriesTable->findById($_GET['categories']);
+        if (isset($_GET['categories'])) {
+            $category = $this->categoriesTable->findById($_GET['categories']);
   
-        $reviews = $category->getReviews(10, $offset);        
-			  $totalReviews = $category->getNumReviews();
-         
+            $reviews = $category->getReviews(10, $offset);
+              $totalReviews = $category->getNumReviews();
+        } else {
+            $reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
+            $totalReviews = $this->reviewsTable->total();
+        }
   
-      }else {
-        $reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
-        $totalReviews = $this->reviewsTable->total();
-      }
-  
-      $title = 'Mannering Review List';
+        $title = 'Mannering Review List';
   
           $totalReviews = $this->reviewsTable->total();
           
           $author = $this->authentication->getUser();
   
        
-      return ['template' => 'reviews.html.php', 
-          'title' => $title, 
+        return ['template' => 'reviews.html.php',
+          'title' => $title,
           'variables' => [
               'totalReviews' => $totalReviews,
               'reviews' => $reviews,
               'user' => $author,
-              'currentPage' => $page,                          
+              'currentPage' => $page,
               'categories' => $this->categoriesTable->findAll(),
               'categoryId' => $_GET['categories'] ?? null
             ]
           ];
-  }
-  
-  public function delete() {
-  
-      $author = $this->authentication->getUser();
-  
-      $reviews = $this->reviewsTable->findById($_POST['authorId']);
-  
-      if ($reviews->authorId != $author->authorId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_JOKES) ) {
-        return;
-      }
-  
-      $this->reviewsTable->delete($_POST['authorId']);
-  
-      header('location: /reviews'); 
-  }
-      
-  public function saveEdit() {
-
-      $author = $this->authentication->getUser();
-
-      $reviews = $_POST['review'];
-      $reviews['reviewdate'] = new \DateTime();
-      
-
-      $reviewEntity = $author->addReview($reviews);
-
-      $reviewEntity->clearCategories();
-
-      foreach ($_POST['categories'] as $categoryId) {
-        $reviewEntity->addCategory($categoryId);
-      }      
-      header('location: /reviews'); 
-  }
-    
-  public function edit() {
-      
-    $author = $this->authentication->getUser();
-    $categories = $this->categoriesTable->findAll();
-
-    if (isset($_GET['reviewsid'])) {
-      $reviews = $this->reviewsTable->findById($_GET['reviewsid']);
-      
     }
+  
+    public function delete()
+    {
+  
+        $author = $this->authentication->getUser();
+  
+        $reviews = $this->reviewsTable->findById($_POST['authorId']);
+  
+        if ($reviews->authorId != $author->authorId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_JOKES)) {
+            return;
+        }
+  
+        $this->reviewsTable->delete($_POST['authorId']);
+  
+        header('location: /reviews');
+    }
+      
+    public function saveEdit()
+    {
 
-    $title = 'Edit Review';
+        $author = $this->authentication->getUser();
 
-    return ['template' => 'editreviews.html.php',
+        $reviews = $_POST['review'];
+        $reviews['reviewdate'] = new \DateTime();
+      
+
+        $reviewEntity = $author->addReview($reviews);
+
+        $reviewEntity->clearCategories();
+
+        foreach ($_POST['categories'] as $categoryId) {
+            $reviewEntity->addCategory($categoryId);
+        }
+        header('location: /reviews');
+    }
+    
+    public function edit()
+    {
+      
+        $author = $this->authentication->getUser();
+        $categories = $this->categoriesTable->findAll();
+
+        if (isset($_GET['reviewsid'])) {
+            $reviews = $this->reviewsTable->findById($_GET['reviewsid']);
+        }
+
+        $title = 'Edit Review';
+
+        return ['template' => 'editreviews.html.php',
         'title' => $title,
         'variables' => [
                         'reviews' => $reviews ?? null,
@@ -121,23 +121,23 @@ class Music
                         'categories' => $categories
           ]
         ];
-  }
+    }
       
   ////////////////////////////
 
-  public function home()
-  {
+    public function home()
+    {
 
-      $rapalbums = $this->albumsTable->findByGenre('Hip Hop');
+        $rapalbums = $this->albumsTable->findByGenre('Hip Hop');
           
-      $countryalbums = $this->albumsTable->findByGenre('Country');
+        $countryalbums = $this->albumsTable->findByGenre('Country');
       
-      $jazzalbums = $this->albumsTable->findByGenre('Jazz');
+        $jazzalbums = $this->albumsTable->findByGenre('Jazz');
 
         
-      $title = 'Mannering Home Page';
+        $title = 'Mannering Home Page';
 
-      return ['template' => 'home.html.php',
+        return ['template' => 'home.html.php',
               'title' => $title,
               'variables' => [
                       'rapalbums' => $rapalbums,
@@ -145,21 +145,21 @@ class Music
                       'jazzalbums' => $jazzalbums
                   ]
               ];
-  }
+    }
   
-  public function video()
-  {
+    public function video()
+    {
       
-      $rapvideos = $this->albumsTable->findVideoByGenre('Hip Hop');
+        $rapvideos = $this->albumsTable->findVideoByGenre('Hip Hop');
           
-      $countryvideos = $this->albumsTable->findVideoByGenre('Country');
+        $countryvideos = $this->albumsTable->findVideoByGenre('Country');
       
-      $jazzvideos = $this->albumsTable->findVideoByGenre('Jazz');
+        $jazzvideos = $this->albumsTable->findVideoByGenre('Jazz');
 
         
-      $title = 'Mannering Video Page';
+        $title = 'Mannering Video Page';
 
-      return ['template' => 'video.html.php',
+        return ['template' => 'video.html.php',
               'title' => $title,
               'variables' => [
                       'rapvideos' => $rapvideos,
@@ -167,55 +167,47 @@ class Music
                       'jazzvideos' => $jazzvideos
                   ]
               ];
-  }
+    }
 
-  public function contact()
-  {
+    public function contact()
+    {
 
-      $title = 'Mannering Contact Page';
+        $title = 'Mannering Contact Page';
       
-      return ['template' => 'contact.html.php', 'title' => $title];
-  }
+        return ['template' => 'contact.html.php', 'title' => $title];
+    }
 
-  public function search()
-  {
+    public function search()
+    {
   
-      $title = 'Mannering Search Page';
+        $title = 'Mannering Search Page';
       
-      return ['template' => 'search.html.php', 'title' => $title];
-  }
+        return ['template' => 'search.html.php', 'title' => $title];
+    }
 
-  public function singleresult()
-  {
+    public function singleresult()
+    {
                                                       
-      if (isset($_GET['albumid'])) {
-          
-          $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-          $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
-                                                      
-      }
+        if (isset($_GET['albumid'])) {
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
+            $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
+        }
 
-      if (isset($_GET['artistid'])) {
-                      
-          $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
-          
-                                                  
-      }
+        if (isset($_GET['artistid'])) {
+            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
+        }
 
   
 
                     
-      $title = 'Mannering Album Page';
+        $title = 'Mannering Album Page';
               
-      return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
-          'singlealbums' => $singlealbums, 
+        return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
+          'singlealbums' => $singlealbums,
           'singleartist' => $singleartist,
           'singleaudio' => $singleaudio
           
         ]
-      ];
-  }
-
-       
-        
-} 
+        ];
+    }
+}

@@ -21,6 +21,7 @@ if (!isset($_GET['submit'])) {
 
     if ($rows) {
         foreach ($rows as $row) : ?>
+        
         <div class="product-box">
 
             <figure class="product-box-img">

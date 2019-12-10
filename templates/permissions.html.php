@@ -1,3 +1,5 @@
+
+<section id="main_text" class="group" role="main">
 <h2>Edit <?=$author->username?>'s Permissions</h2>
 
 <form action="" method="post">
@@ -11,3 +13,4 @@
 
 	<input type="submit" value="Submit" />
 </form>
+</section>
