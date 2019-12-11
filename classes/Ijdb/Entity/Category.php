@@ -29,6 +29,8 @@ class Category
             }
         }
 
+        usort($reviews, [$this, 'sortReviews']);
+
         return $reviews;
     }
 

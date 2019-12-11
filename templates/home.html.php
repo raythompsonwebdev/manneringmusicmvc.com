@@ -2,7 +2,7 @@
 
 <!--Slider-->
 <section id="slider">
-  <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
+  <img src="assets/images/sliderimages/silder.gif" alt="hip-hop-albums"/>
      
 </section>
 

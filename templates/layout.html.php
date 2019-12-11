@@ -59,7 +59,7 @@
         <?php if ($loggedIn): ?>
             <li><a rel='tab' href="/">Home</a></li>
             <li><a href="/reviews">Reviews</a></li>
-            <li><a href="/editreviews">EditReviews</a></li>
+            <li><a href="/authorlist">AuthorList</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>            
             <li><a rel='tab' href="/contact">Contact</a></li>

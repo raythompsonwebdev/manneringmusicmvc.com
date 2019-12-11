@@ -70,13 +70,13 @@ class Music
   
         $author = $this->authentication->getUser();
   
-        $reviews = $this->reviewsTable->findById($_POST['authorId']);
+        $reviews = $this->reviewsTable->findById($_POST['reviewsId']);
   
-        if ($reviews->authorId != $author->authorId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_JOKES)) {
+        if ($reviews->authorId != $author->reviewsId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) {
             return;
         }
   
-        $this->reviewsTable->delete($_POST['authorId']);
+        $this->reviewsTable->delete($_POST['reviewsId']);
   
         header('location: /reviews');
     }
@@ -90,7 +90,7 @@ class Music
         $reviews['reviewdate'] = new \DateTime();
       
 
-        $reviewEntity = $author->addReview($reviews);
+        $reviewEntity = $author->addReviews($reviews);
 
         $reviewEntity->clearCategories();
 
@@ -106,8 +106,8 @@ class Music
         $author = $this->authentication->getUser();
         $categories = $this->categoriesTable->findAll();
 
-        if (isset($_GET['reviewsid'])) {
-            $reviews = $this->reviewsTable->findById($_GET['reviewsid']);
+        if (isset($_GET['reviewsId'])) {
+            $reviews = $this->reviewsTable->findById($_GET['reviewsId']);
         }
 
         $title = 'Edit Review';
@@ -196,8 +196,6 @@ class Music
         if (isset($_GET['artistid'])) {
             $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
         }
-
-  
 
                     
         $title = 'Mannering Album Page';

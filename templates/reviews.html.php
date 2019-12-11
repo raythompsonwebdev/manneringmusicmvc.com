@@ -16,8 +16,9 @@
 
 
 <?php foreach ($reviews as $review) : ?>
+
 <blockquote>
-  <p>
+
     <?=(new \Ninja\Markdown($review->reviewtext))->toHtml()?>
 
     (by <a href="mailto:<?=htmlspecialchars(
@@ -37,12 +38,12 @@ echo $date->format('jS F Y');
 ?>)
 
 <?php if ($user) : ?>
-    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_JOKES)) : ?>
+    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_REVIEWS)) : ?>
     <a href="/editreviews?id=<?=$review->authorId?>">Edit</a>
-    <?php endif; ?>
+    <?php endif; ?> 
+    
 
-  
-    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::DELETE_JOKES)) : ?>
+    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) : ?>
   <form action="/deletereviews" method="post">
     <input type="hidden" name="id" value="<?=$review->authorId?>">
     <input type="submit" value="Delete">

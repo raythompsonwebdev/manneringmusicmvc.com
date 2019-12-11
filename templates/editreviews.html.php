@@ -1,7 +1,7 @@
 
 <section id="main_text" class="group" role="main">
 
-<?php if (empty($reviews->reviewsId) || $user->id == $reviews->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_JOKES)) : ?>
+<?php if (empty($reviews->reviewsId) || $user->id == $reviews->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_REVIEWS)) : ?>
 <form id="review-edit" action="" method="post">
     <input type="hidden" name="review[reviewsId]" value="<?=$reviews->reviewsId ?? ''?>">
     <label for="reviewtext">Type your review here:</label>
