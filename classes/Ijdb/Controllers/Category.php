@@ -14,11 +14,9 @@ class Category
     public function edit()
     {
 
-        //$author = $this->authentication->getUser();
-        //$categories = $this->categoriesTable->findAll();
-
-        if (isset($_GET['categoriesId'])) {
-            $category = $this->categoriesTable->findById($_GET['categoriesId']);
+        
+        if (isset($_GET['id'])) {
+            $category = $this->categoriesTable->findById($_GET['id']);
         }
 
         $title = 'Edit Category';
@@ -34,7 +32,7 @@ class Category
     public function saveEdit()
     {
 
-        $category = $_POST['categories'];
+        $category = $_POST['category'];
 
         $this->categoriesTable->save($category);
 
@@ -46,9 +44,9 @@ class Category
 
         $categories = $this->categoriesTable->findAll();
 
-        $title = 'Reviews Categories';
+        $title = 'Reviews Category';
 
-        return ['template' => 'categories.html.php',
+        return ['template' => 'category.html.php',
             'title' => $title,
             'variables' => [
                 'categories' => $categories

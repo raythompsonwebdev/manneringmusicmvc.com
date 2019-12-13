@@ -5,25 +5,25 @@ use Ninja\DatabaseTable;
 
 class Category
 {
-    public $categoriesId;
+    public $id;
     public $name;
-    private $reviewsTable;
-    private $reviewsCategoriesTable;
+    private $reviewTable;
+    private $reviewCategoriesTable;
 
-    public function __construct(DatabaseTable $reviewsTable, DatabaseTable $reviewsCategoriesTable)
+    public function __construct(DatabaseTable $reviewTable, DatabaseTable $reviewCategoriesTable)
     {
-        $this->reviewsTable = $reviewsTable;
-        $this->reviewsCategoriesTable = $reviewsCategoriesTable;
+        $this->reviewTable = $reviewTable;
+        $this->reviewCategoriesTable = $reviewCategoriesTable;
     }
 
     public function getReviews($limit = null, $offset = null)
     {
-        $reviewsCategories = $this->reviewsCategoriesTable->find('categoriesId', $this->categoriesId, null, $limit, $offset);
+        $reviewCategories = $this->reviewCategoriesTable->find('categoryId', $this->id, null, $limit, $offset);
 
         $reviews = [];
 
-        foreach ($reviewsCategories as $reviewsCategory) {
-            $review =  $this->reviewsTable->findById($reviewsCategory->reviewsId);
+        foreach ($reviewCategories as $reviewCategory) {
+            $review =  $this->reviewTable->findById($reviewCategory->reviewId);
             if ($review) {
                 $reviews[] = $review;
             }
@@ -36,7 +36,7 @@ class Category
 
     public function getNumReviews()
     {
-        return $this->reviewsCategoriesTable->total('categoryId', $this->categoriesId);
+        return $this->reviewCategoriesTable->total('categoryId', $this->id);
     }
 
     private function sortReviews($a, $b)

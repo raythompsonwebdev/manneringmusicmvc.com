@@ -11,29 +11,29 @@ class Author
     const REMOVE_CATEGORIES = 16;
     const EDIT_USER_ACCESS = 32;
 
-    public $authorId;
+    public $id;
     public $username;
     public $email;
     public $password;
-    private $reviewsTable;
+    private $reviewTable;
 
-    public function __construct(\Ninja\DatabaseTable $reviewsTable)
+    public function __construct(\Ninja\DatabaseTable $reviewTable)
     {
-        $this->reviewsTable = $reviewsTable;
+        $this->reviewTable = $reviewTable;
     }
 
     public function getReviews()
     {
         
-        return $this->reviewsTable->find('authorId', $this->authorId);
+        return $this->reviewTable->find('authorId', $this->id);
     }
 
     public function addReviews($review)
     {
 
-        $review['authorId'] = $this->authorId;
+        $review['authorId'] = $this->id;
 
-        return $this->reviewsTable->save($review);
+        return $this->reviewTable->save($review);
     }
 
     public function hasPermission($permission)

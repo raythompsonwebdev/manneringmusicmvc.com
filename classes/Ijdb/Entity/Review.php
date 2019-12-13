@@ -3,18 +3,18 @@ namespace Ijdb\Entity;
 
 class Review
 {
-    public $reviewsId;
+    public $id;
     public $authorId;
     public $reviewdate;
     public $reviewtext;
-    private $authorsTable;
+    private $authorsTable;    
     private $author;
-    private $reviewsCategoriesTable;
+    private $reviewCategoriesTable;
 
-    public function __construct(\Ninja\DatabaseTable $authorsTable, \Ninja\DatabaseTable $reviewsCategoriesTable)
+    public function __construct(\Ninja\DatabaseTable $authorsTable, \Ninja\DatabaseTable $reviewCategoriesTable)
     {
         $this->authorsTable = $authorsTable;
-        $this->reviewsCategoriesTable = $reviewsCategoriesTable;
+        $this->reviewCategoriesTable = $reviewCategoriesTable;
     }
 
     public function getAuthor()
@@ -28,17 +28,17 @@ class Review
 
     public function addCategory($categoryId)
     {
-        $reviewsCat = ['reviewsId' => $this->reviewsId, 'categoriesId' => $categoryId];
+        $reviewsCat = ['reviewId' => $this->id, 'categoryId' => $categoryId];
 
-        $this->reviewsCategoriesTable->save($reviewsCat);
+        $this->reviewCategoriesTable->save($reviewsCat);
     }
 
     public function hasCategory($categoryId)
     {
-        $reviewsCategories = $this->reviewsCategoriesTable->find('reviewsId', $this->reviewsId);
+        $reviewCategories = $this->reviewCategoriesTable->find('reviewId', $this->id);
 
-        foreach ($reviewsCategories as $reviewsCategory) {
-            if ($reviewsCategory->categoryId == $categoryId) {
+        foreach ($reviewCategories as $reviewCategory) {
+            if ($reviewCategory->categoryId == $categoryId) {
                 return true;
             }
         }
@@ -46,6 +46,6 @@ class Review
 
     public function clearCategories()
     {
-        $this->reviewsCategoriesTable->deleteWhere('reviewsId', $this->reviewsId);
+        $this->reviewCategoriesTable->deleteWhere('reviewId', $this->id);
     }
 }

@@ -4,12 +4,12 @@ namespace Ijdb;
 class IjdbRoutes implements \Ninja\Routes
 {
     private $albumsTable;
-    private $reviewsTable;
+    private $reviewTable;
     private $authorsTable;
     private $artistsTable;
     private $audioTable;
     private $categoriesTable;
-    private $reviewsCategoriesTable;
+    private $reviewCategoriesTable;
     private $authentication;
 
     public function __construct()
@@ -19,24 +19,24 @@ class IjdbRoutes implements \Ninja\Routes
 
         $this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid', '\Ijdb\Entity\Album', [&$this->artistsTable, &$this->audioTable]);
 
-        $this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsId', '\Ijdb\Entity\Review', [&$this->authorsTable, &$this->reviewsCategoriesTable]);
+        $this->reviewTable = new \Ninja\DatabaseTable($pdo, 'review', 'id', '\Ijdb\Entity\Review', [&$this->authorsTable, &$this->reviewCategoriesTable]);
 
-        $this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'authorId', '\Ijdb\Entity\Author', [&$this->reviewsTable]);
+        $this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id', '\Ijdb\Entity\Author', [&$this->reviewTable]);
 
         $this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id', '\Ijdb\Entity\Artist', [&$this->albumsTable, &$this->audioTable]);
 
         $this->audioTable = new \Ninja\DatabaseTable($pdo, 'audio', 'audioid', '\Ijdb\Entity\Audio', [&$this->albumsTable, &$this->artistsTable]);
 
-        $this->categoriesTable = new \Ninja\DatabaseTable($pdo, 'categories', 'categoriesId', '\Ijdb\Entity\Category', [&$this->reviewsTable, &$this->reviewsCategoriesTable]);
+        $this->categoriesTable = new \Ninja\DatabaseTable($pdo, 'category', 'id', '\Ijdb\Entity\Category', [&$this->reviewTable, &$this->reviewCategoriesTable]);
 
-        $this->reviewsCategoriesTable = new \Ninja\DatabaseTable($pdo, 'reviews_categories', 'categoriesId');
+        $this->reviewCategoriesTable = new \Ninja\DatabaseTable($pdo, 'review_category', 'categoryId');
 
         $this->authentication = new \Ninja\Authentication($this->authorsTable, 'email', 'password');
     }
     public function getRoutes(): array
     {
             
-        $musicController = new \Ijdb\Controllers\Music($this->albumsTable, $this->artistsTable, $this->audioTable, $this->authorsTable, $this->reviewsTable, $this->categoriesTable, $this->authentication);
+        $musicController = new \Ijdb\Controllers\Music($this->albumsTable, $this->artistsTable, $this->audioTable, $this->authorsTable, $this->reviewTable, $this->categoriesTable, $this->authentication);
 
         $authorController = new \Ijdb\Controllers\Register($this->authorsTable);
         
@@ -101,12 +101,13 @@ class IjdbRoutes implements \Ninja\Routes
                     'login' => true
                     
             ],
-            'deletereviews' => [
+            'delete' => [
                     'POST' => [
                             'controller' => $musicController,
                             'action' => 'delete'
                     ],
                     'login' => true
+                    
             ],
             'reviews' => [
                     'GET' => [

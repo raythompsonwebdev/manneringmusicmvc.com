@@ -12,19 +12,19 @@ class Music
     private $artistsTable;
     private $audioTable;
     private $authorsTable;
-    private $reviewsTable;
-    private $categoriesTable;
+    private $reviewTable;
+    private $categoryTable;
     private $authentication;
 
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $audioTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable, DatabaseTable $reviewsTable, DatabaseTable $categoriesTable, Authentication $authentication)
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $audioTable, DatabaseTable $artistsTable, DatabaseTable $authorsTable, DatabaseTable $reviewTable, DatabaseTable $categoryTable, Authentication $authentication)
     {
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
         $this->audioTable = $audioTable;
         $this->authorsTable = $authorsTable;
-        $this->reviewsTable = $reviewsTable;
-        $this->categoriesTable = $categoriesTable;
+        $this->reviewTable = $reviewTable;
+        $this->categoryTable = $categoryTable;
         $this->authentication = $authentication;
     }
 
@@ -35,21 +35,21 @@ class Music
 
         $offset = ($page-1)*10;
 
-        if (isset($_GET['categories'])) {
-            $category = $this->categoriesTable->findById($_GET['categories']);
+        if (isset($_GET['category'])) {
+            $category = $this->categoryTable->findById($_GET['category']);
   
             $reviews = $category->getReviews(10, $offset);
               $totalReviews = $category->getNumReviews();
         } else {
-            $reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
-            $totalReviews = $this->reviewsTable->total();
+            $reviews = $this->reviewTable->findAll('reviewdate DESC', 10, $offset);
+            $totalReviews = $this->reviewTable->total();
         }
   
-        $title = 'Mannering Review List';
+            $title = 'Mannering Review List';
   
-          $totalReviews = $this->reviewsTable->total();
-          
-          $author = $this->authentication->getUser();
+            $totalReviews = $this->reviewTable->total();
+            
+            $author = $this->authentication->getUser();
   
        
         return ['template' => 'reviews.html.php',
@@ -59,8 +59,8 @@ class Music
               'reviews' => $reviews,
               'user' => $author,
               'currentPage' => $page,
-              'categories' => $this->categoriesTable->findAll(),
-              'categoryId' => $_GET['categories'] ?? null
+              'categories' => $this->categoryTable->findAll(),
+              'categoryId' => $_GET['category'] ?? null
             ]
           ];
     }
@@ -70,13 +70,13 @@ class Music
   
         $author = $this->authentication->getUser();
   
-        $reviews = $this->reviewsTable->findById($_POST['reviewsId']);
+        $review = $this->reviewTable->findById($_POST['id']);
   
-        if ($reviews->authorId != $author->reviewsId && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) {
+        if ($review->authorId != $author->id && !$author->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) {
             return;
         }
   
-        $this->reviewsTable->delete($_POST['reviewsId']);
+        $this->reviewTable->delete($_POST['id']);
   
         header('location: /reviews');
     }
@@ -94,7 +94,7 @@ class Music
 
         $reviewEntity->clearCategories();
 
-        foreach ($_POST['categories'] as $categoryId) {
+        foreach ($_POST['category'] as $categoryId) {
             $reviewEntity->addCategory($categoryId);
         }
         header('location: /reviews');
@@ -104,10 +104,10 @@ class Music
     {
       
         $author = $this->authentication->getUser();
-        $categories = $this->categoriesTable->findAll();
+        $categories = $this->categoryTable->findAll();
 
-        if (isset($_GET['reviewsId'])) {
-            $reviews = $this->reviewsTable->findById($_GET['reviewsId']);
+        if (isset($_GET['id'])) {
+            $reviews = $this->reviewTable->findById($_GET['id']);
         }
 
         $title = 'Edit Review';
@@ -115,8 +115,7 @@ class Music
         return ['template' => 'editreviews.html.php',
         'title' => $title,
         'variables' => [
-                        'reviews' => $reviews ?? null,
-               
+                        'reviews' => $reviews ?? null,               
                         'user' => $author,
                         'categories' => $categories
           ]

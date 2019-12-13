@@ -7,7 +7,7 @@
   <?php foreach ($categories as $category) :
       ;?>
 
-    <li><a href="/list?category=<?=$category->categoriesId?>"><?=$category->name?></a><li>
+    <li><a href="/list?category=<?=$category->id?>"><?=$category->name?></a><li>
       
   <?php endforeach; ?>
 </ul>
@@ -31,25 +31,26 @@
                     ENT_QUOTES,
                     'UTF-8'
                 ); ?></a> on 
-<?php
-$date = new DateTime($review->reviewdate);
+  <?php
+  $date = new DateTime($review->reviewdate);
 
-echo $date->format('jS F Y');
-?>)
+  echo $date->format('jS F Y');
+  ?>)
 
-<?php if ($user) : ?>
-    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_REVIEWS)) : ?>
-    <a href="/editreviews?id=<?=$review->authorId?>">Edit</a>
-    <?php endif; ?> 
-    
+  <?php if ($user) : ?>
+      <?php if ($user->id == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::EDIT_REVIEWS)) : ?>
+      <a href="/editreviews?id=<?=$review->authorId?>">Edit</a>
+      <?php endif; ?> 
+      
 
-    <?php if ($user->authorId == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) : ?>
-  <form action="/deletereviews" method="post">
-    <input type="hidden" name="id" value="<?=$review->authorId?>">
-    <input type="submit" value="Delete">
-  </form>
-    <?php endif; ?>
-<?php endif; ?>
+      <?php if ($user->id == $review->authorId || $user->hasPermission(\Ijdb\Entity\Author::DELETE_REVIEWS)) : ?>
+      <form action="/delete" method="post">
+        <input type="hidden" name="id" value="<?=$review->id?>">
+        <input type="submit" value="Delete">
+      </form>
+      <?php endif; ?>
+      
+  <?php endif; ?>
 </blockquote>
 <?php endforeach; ?>
 
