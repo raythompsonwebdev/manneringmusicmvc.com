@@ -14,9 +14,9 @@ class IjdbRoutes implements \Ninja\Routes{
 
 		$this->albumsTable = new \Ninja\DatabaseTable($pdo, 'album', 'albumid', '\Ijdb\Entity\Album', [&$this->artistsTable, &$this->audioTable] );
 
-		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'reviewsid', '\Ijdb\Entity\Review',	[&$this->authorsTable]);
+		$this->reviewsTable = new \Ninja\DatabaseTable($pdo, 'reviews', 'id', '\Ijdb\Entity\Review',	[&$this->authorsTable]);
 
-		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'authorid', '\Ijdb\Entity\Author', [&$this->reviewsTable]);
+		$this->authorsTable = new \Ninja\DatabaseTable($pdo, 'author', 'id', '\Ijdb\Entity\Author', [&$this->reviewsTable]);
 
 		$this->artistsTable = new \Ninja\DatabaseTable($pdo, 'artist', 'id', '\Ijdb\Entity\Artist', [&$this->albumsTable, &$this->audioTable]);
 

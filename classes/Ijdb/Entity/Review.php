@@ -2,7 +2,7 @@
 namespace Ijdb\Entity;
 
 class Review {
-	public $reviewsid;
+	public $id;
 	public $authorId;
 	public $reviewdate;
 	public $reviewtext;
@@ -13,6 +13,6 @@ class Review {
 	}
 
 	public function getAuthor() {
-		return $this->authorsTable->findById($this->authorid);
+		return $this->authorsTable->findById($this->id);
 	}
 }

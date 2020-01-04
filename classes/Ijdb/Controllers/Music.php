@@ -31,10 +31,10 @@ class Music
 		$reviews = [];
 		foreach ($result as $review) {
 
-			$author = $this->authorsTable->findById($review->reviewsid);
+			$author = $this->authorsTable->findById($review->id);
 
 			$reviews[] = [
-				'reviewsid' => $review->reviewsid,
+				'reviewsid' => $review->id,
 				'reviewtext' => $review->reviewtext,
 				'reviewdate' => $review->reviewdate,
 				'name' => $author->username,
