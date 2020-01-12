@@ -26,7 +26,7 @@
                             <h4>&#163;<?=$rapalbum->price?></h4>
                             <!-- commented out for now.-->
                             <form method="get" action="/singleresult" id="frontform">
-                                <input type="hidden" name="artistid" value="<?=$rapalbum->artistid ?? ''?>">
+                                <input type="hidden" name="artistid" value="<?=$rapalbum->artistId ?? ''?>">
                                 <input type="hidden" name="albumid" value="<?=$rapalbum->albumid ?? ''?>">
                                 <input type="submit" name="submit" class="frontform" value="See more.."/>
                             </form>
@@ -53,7 +53,7 @@
                         <p><?=$countryalbum->album?></p>
                         <h4> &#163;<?=$countryalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$countryalbum->artistid ?? ''?>">
+                            <input type="hidden" name="artistid" value="<?=$countryalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
@@ -78,7 +78,7 @@
                         <p><?=$jazzalbum->album?></p>
                         <h4>&#163;<?=$jazzalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$jazzalbum->artistid ?? ''?>">
+                            <input type="hidden" name="artistid" value="<?=$jazzalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$jazzalbum->albumid ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
@@ -116,4 +116,3 @@
 
     });
 </script>
-

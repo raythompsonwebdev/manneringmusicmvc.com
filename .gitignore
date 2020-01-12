@@ -20,9 +20,14 @@ error.log
 access.log
 sql-dump/
 style.css
-composer.json
 Procfile
 includes/DatabaseConnection.php
 vendor/
 .env-dev
 composer.lock
+samples/
+database.sql
+fonts/
+
+spare/
+Dump20200112/

@@ -1,5 +1,5 @@
 <?php
-namespace Ijdb\Entity;
+namespace Madb\Entity;
 
 class Album
 {
@@ -8,7 +8,7 @@ class Album
     public $image;
     public $price;
     public $text;
-    public $artistid;
+    public $artistId;
     public $genre;
     private $artistsTable;
     private $audioTable;
@@ -31,13 +31,13 @@ class Album
     public function getArtistId()
     {
         
-        return $this->artistsTable->findById($this->artistid);
+        return $this->artistsTable->findById($this->artistId);
     }
 
     public function getArtistName()
     {
 
-        return $this->artistsTable->findById($this->artistid);
+        return $this->artistsTable->findById($this->artistId);
     }
 
     
@@ -45,6 +45,6 @@ class Album
     public function getSongId()
     {
 
-        return $this->audioTable->findSongId($this->albumid);
+        return $this->audioTable->findSongId($this->albumId);
     }
 }

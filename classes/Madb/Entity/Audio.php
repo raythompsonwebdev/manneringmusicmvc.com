@@ -1,5 +1,5 @@
 <?php
-namespace Ijdb\Entity;
+namespace Madb\Entity;
 
 class Audio
 {
@@ -8,8 +8,8 @@ class Audio
     public $mp3_File;
     public $ogg_File;
     public $m4a_File;
-    public $artistid;
-    public $albumid;
+    public $artistId;
+    public $albumId;
     private $albumsTable;
     private $artistsTable;
 
@@ -29,13 +29,13 @@ class Audio
     public function getArtist()
     {
 
-        return $this->artistsTable->findById($this->artistid);
+        return $this->artistsTable->findById($this->artistId);
     }
 
     public function getAlbum()
     {
 
-        return $this->albumsTable->findById($this->albumid);
+        return $this->albumsTable->findById($this->albumId);
     }
 
     public function getSongTitle()

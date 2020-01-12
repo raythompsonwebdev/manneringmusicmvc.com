@@ -9,8 +9,8 @@
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
     <meta name="viewport" content="width=device-width, initial-scale=1">   
-     <link rel="stylesheet" href="assets/css/style.css" >
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
+     <link rel="stylesheet" href="/style.css" >
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" >
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
     <link rel="icon" href="assets/icons/apple-icon.png">
     <!--[if lte IE 9]>
@@ -35,17 +35,11 @@
       </hgroup>
 
       <span class="social">
-        <ul id="social">
-   
-          <?php if ($loggedIn): ?>
-          <li class="social-item"><a href="/logout">Log out</a>
-          </li>
+        <ul id="social">  
+         
+          <li class="social-item"><a href="">Link</a></li>
+          <li class="social-item"><a href="">Link</a></li>
           
-          <?php else: ?>
-          <li class="social-item"><a href="/login">Log in</a></li>
-          <li class="social-item"><a href="/register">Register</a></li>
-
-          <?php endif; ?>
           
         </ul>
       </span>
@@ -56,19 +50,16 @@
       <nav role="navigation" >
                   
         <ul id="inner_nav">
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/review/list">Reviews</a></li>
+            <li><a href="/review/edit">Add a new Review</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            
         <?php if ($loggedIn): ?>
-            <li><a rel='tab' href="/">Home</a></li>
-            <li><a href="/reviews">Reviews</a></li>
-            <li><a href="/authorlist">AuthorList</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-            <li><a rel='tab' href="/video">Video</a></li>            
-            <li><a rel='tab' href="/contact">Contact</a></li>
+            <li class="social-item"><a href="/logout">Log out</a>
             <?php else: ?>
-            <li><a rel='tab' href="/">Home</a></li>
-            <li><a href="/reviews">Reviews</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-            <li><a rel='tab' href="/video">Video</a></li>            
-            <li><a rel='tab' href="/contact">Contact</a></li>
+            <li class="social-item"><a href="/login">Log in</a></li>
             <?php endif; ?>
         </ul>
 
@@ -102,6 +93,7 @@
     <li><a href="#">Terms</a></li>
       <li><a href="#">Privacy</a></li>
       <li><a href="#">About</a></li>
+      <li><a rel='tab' href="/contact">Contact</a></li> 
       
   </ul>
 

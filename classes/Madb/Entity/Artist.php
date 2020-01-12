@@ -1,5 +1,5 @@
 <?php
-namespace Ijdb\Entity;
+namespace Madb\Entity;
 
 class Artist
 {
