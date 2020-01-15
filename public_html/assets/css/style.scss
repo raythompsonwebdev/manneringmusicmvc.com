@@ -1,6 +1,6 @@
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
-@import "partials/_fonts.scss";
+//@import "partials/_fonts.scss";
 @import "partials/_normalize.scss";
 @import "partials/_base.scss";
 
@@ -18,10 +18,9 @@
     #wrapper {
         margin: auto;
         padding: 0px;
-        width: 80%;
-        
+        width: 80%;        
         height: auto;
-        font-family: ($FontList);
+        
     }
     #copyr {
         margin: auto;
@@ -47,7 +46,7 @@
         hgroup {
             width: 65%;
             height: 40px;
-            font-family: ($FontList);
+            
             padding-left: 1%;
             -webkit-flex: 1 0 auto;
             -ms-flex: 1 0 auto;
@@ -62,7 +61,6 @@
                 text-shadow: 1px 1px $color7;
                 line-height: 40px;
                 display: block;
-                letter-spacing: 0.1em;
                 float: left;
                 color: $color1;
 
@@ -83,7 +81,7 @@
             }
 
             h2 {
-                font-family: ($FontList);
+                
                 float: none;
                 display: block;
                 width: 100%;
@@ -158,7 +156,7 @@
 
         #inner_nav {
             
-            width: 60%;
+            width: 100%;
             height: 100%;
             margin: 0;
             display: -webkit-flex;
@@ -173,7 +171,7 @@
 
             li {
                 background-color: $color6;
-                width: 19.5%;
+                width: 14.5%;
                 margin-left: 0.2em;
                 height: 40px;
                 text-align: center;
@@ -183,6 +181,7 @@
 
                 a {
                     text-decoration: none;
+                    font-family: ($FontListText);
                     width: 100%;
                     line-height: 40px;
                     background-color: $color3;
@@ -197,6 +196,11 @@
                         color: $color3;
                         font-weight: bold;
                     }
+                }
+
+                a[href~="\/review\/edit"]{
+                    font-size: 65%;
+                
                 }
             }
         }
@@ -402,7 +406,6 @@
                                 text-transform: uppercase;
                                 font-weight: normal;
                                 letter-spacing: 0.1em;
-                                font-family: ($FontList);
                             }
 
                             p {
@@ -411,7 +414,7 @@
                                 margin: 0;
                                 font-size: 0.7em;
                                 color: $color2;
-                                font-family: ($FontList);
+                                
                                 z-index: 1;
                                 position: relative;
                                 top: 0;
@@ -425,7 +428,7 @@
                                 font-size: 1em;
                                 color: $color2;
                                 background-color: $color5;
-                                font-family: ($FontList);
+                                
                                 padding: 0px;
                                 font-weight: normal;
                                 z-index: 1;
@@ -479,7 +482,7 @@
                 display: block;
                 background-color: $color5;
                 margin: auto;
-                font-family: ($FontList);
+                
                 textarea {
                     width: 100%;
                     border: 2px solid $color8;
@@ -507,7 +510,7 @@
                 }
     
                 input[type="submit"]{
-                    font-family: ($FontList);
+                    
                     background-color: $color1;
                     margin: 0 auto;
                     letter-spacing: 0.1em;
@@ -578,7 +581,7 @@
             width: 100%;
             color: $color2;
             height: auto;
-            font-family: ($FontList);
+            
             line-height: 45px;
             text-align: center;
             margin: 0;
@@ -592,7 +595,7 @@
             width: 100%;
             color: $color2;
             height: auto;
-            font-family: ($FontList);
+            
             line-height: 45px;
             text-align: left;
             padding: 0;
@@ -713,7 +716,7 @@
                 h3 {
                     display: block;
                     padding: 3px 0px;
-                    font-family: ($FontList);
+                    
                     color: $color2;
                     text-transform: uppercase;
                     font-size: 0.8em;
@@ -728,7 +731,7 @@
 
                 h4 {
                     display: block;
-                    font-family: ($FontList);
+                    
                     color: $advertRed;
                     font-weight: normal;
                     font-size: 1.1em;
@@ -739,7 +742,7 @@
                 span {
                     font-size: 1em;
                     color: $color2;
-                    font-family: ($FontList);
+                    
                     text-align: left;
                     display: block;
                     line-height: 15px;
@@ -751,7 +754,7 @@
                     font-size: 0.8em;
                     color: $color2;
                     line-height: 30px;
-                    font-family: ($FontList);
+                    
                     width: 100%;
                     margin: 0;
                     background-color: $color9;
@@ -788,7 +791,7 @@
                             li {
                                 display: block;
                                 padding: 0;
-                                font-family: ($FontList);
+                                
                                 color: $color2;
                                 line-height: 30px;
                                 height: 30px;
@@ -877,7 +880,7 @@
                             li {
                                 display: inline-block;
                                 padding: 0;
-                                font-family: ($FontList);
+                                
                                 color: $color2;
                                 line-height: 35px;
                                 height: 35px;
@@ -912,11 +915,11 @@
 
                             ul {
                                 margin: 0.5em 0;
-                                font-family: ($FontList);
+                                
 
                                 li {
                                     display: inline-block;
-                                    font-family: ($FontList);
+                                    
                                     height: auto;
                                 }
                             }
@@ -940,7 +943,7 @@
                                 width: 100%;
                                 margin: 0;
                                 display: block;
-                                height: 40px;
+                                height: auto;
                                 padding: 0;
                                 color:$color2;
                                 font-size:1.3m;
@@ -1012,6 +1015,7 @@
                                     text-align:center;
                                     background-color:$color7;
                                     text-shadow:none;
+                                    font-size: 1.1em;
                                 }
                                                                     
 
@@ -1175,7 +1179,7 @@
             display: block;
             background-color: $color5;
             margin: auto;
-            font-family: ($FontList);
+            
 
             input[type="text"],
             input[type="email"],
@@ -1194,7 +1198,7 @@
             }
 
             #register_btn {
-                font-family: ($FontList);
+                
                 background-color: $color1;
                 margin: 0 auto;
                 letter-spacing: 0.1em;
@@ -1240,7 +1244,7 @@
             background-color: $color5;
             margin-bottom: 5%;
             margin-right: 5%;
-            font-family: ($FontList);
+            
 
             label.error,
             label.notice,
@@ -1313,7 +1317,7 @@
             }
 
             #contact_btn {
-                font-family: ($FontList);
+                
                 background-color: $color1;
                 margin: 0 auto;
                 letter-spacing: 0.1em;
@@ -1500,7 +1504,7 @@
                 &:hover {
                     background-color: $color1;
                     color: $color2;
-                    font-family: ($FontList);
+                    
 
                 }
             }
@@ -1545,12 +1549,12 @@
                         font-size: 1em;
                         margin: 0;
                         width: 20%;
-                        font-family: ($FontList);
+                        
                         line-height: 35px;
                     }
 
                     input#searchBtn {
-                        font-family: ($FontList);
+                        
                         letter-spacing: 0.1em;
                         width: 16%;
                         height: 35px;
@@ -1765,8 +1769,7 @@
     nav {
         #inner_nav {
             height: 40px;
-            width: 65%;
-
+            
             li {
                 height: 40px;
 
@@ -1793,7 +1796,7 @@
 
                 h1 {
 
-                    font-size: 1.4em;
+                    font-size: 1.6em;
 
                 }
 
@@ -2473,11 +2476,10 @@
     nav {
         #inner_nav {
             height: 40px;
-            width: 70%;
-
+            
             li {
                 height: 40px;
-
+ 
                 a {
                     font-size: 0.75em;
                 }
@@ -2501,7 +2503,7 @@
 
                 h1 {
 
-                    font-size: 1.3em;
+                    font-size: 1.4em;
 
                 }
 
@@ -2771,7 +2773,7 @@
                                 div.current_time,
                                 div.duration {
                                     width: 15%;
-                                    font-size:0.9em;
+                                    
                                     
                                 }
                                 
@@ -3192,8 +3194,7 @@
     nav {
         #inner_nav {
             height: 40px;
-            width: 80%;
-
+            
             li {
                 height: 40px;
 
@@ -3795,9 +3796,7 @@
         
 
         .social-btns {
-            
-            width: 15%;
-
+                        
             ul {
                 li {
                     width: 100%;
@@ -3894,8 +3893,7 @@
     nav {
         #inner_nav {
             height: 40px;
-            width: 90%;
-
+            
             li {
                 height: 40px;
 
@@ -4153,6 +4151,7 @@
                             margin:0;                               
                             h1.trackName{
                                 font-size: 1.15em;
+                                line-height: 50px;
 
                             }
                             div.audiocntrl_containers{
@@ -4599,6 +4598,10 @@
                     &:hover {
                         font-weight: bold;
                     }
+                }
+                a[href~="\/review\/edit"]{
+                    font-size: 55%;
+                
                 }
             }
         }
@@ -5357,6 +5360,7 @@
                             h1.trackName{
                                 font-size: 1.1em;
                                 
+                                
                                                                     
 
                             }
@@ -5701,7 +5705,7 @@
 
         .social-btns {
             
-            width: 20%;
+            width: 15%;
 
             ul {
                 li {
@@ -5858,7 +5862,7 @@
                                 text-decoration: none !important;
                             }
 
-                            /*End of Leftbar specials boxes*/
+                            
                         }
 
                         figcaption.cap_1_of_5 {
@@ -6090,6 +6094,7 @@
                                 div.current_time,
                                 div.duration {
                                     width: 15%;
+                                    font-size:1em;
                                     
                                 }
 
@@ -7078,7 +7083,7 @@
 
         .social-btns {
            
-            width: 25%;
+            width: 20%;
 
             ul {
                 li {

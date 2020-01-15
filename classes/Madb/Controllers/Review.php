@@ -51,11 +51,11 @@ class Review {
 				];
 	}
 
-	public function home() {
-		$title = 'Internet Review Database';
+	// public function home() {
+	// 	$title = 'Internet Review Database';
 
-		return ['template' => 'home.html.php', 'title' => $title];
-	}
+	// 	return ['template' => 'home.html.php', 'title' => $title];
+	// }
 
 	
 	public function delete() {
