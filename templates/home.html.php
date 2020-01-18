@@ -8,7 +8,7 @@
 
 <!--main text-->
 <section id="main_text" role="main" >
-<h1>Mannering Music Featured Albums</h1>
+<h1>MANNERING MUSIC FEATURED ALBUMS</h1>
     
     <!--Hip Hop Section-->
     <section class="album_section">

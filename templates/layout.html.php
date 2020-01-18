@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" >
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
     <link rel="icon" href="assets/icons/apple-icon.png">
+
+    <script src="/main.js" defer></script>
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
       <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
@@ -46,14 +48,30 @@
       </span>
       
     </header>
-
+    <button id="mobile-toggle" title="menu">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
       <!--navigation here-->
       <nav role="navigation" >
                   
         <ul id="inner_nav">
             <li><a rel='tab' href="/">Home</a></li>
             <li><a href="/review/list">Reviews</a></li>
-            <li><a href="/review/edit">Add a new Review</a></li>
+            <li><a href="/review/edit">Add Review</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            
+        <?php if ($loggedIn): ?>
+            <li class="social-item"><a href="/logout">Log out</a>
+            <?php else: ?>
+            <li class="social-item"><a href="/login">Log in</a></li>
+            <?php endif; ?>
+        </ul>
+
+        <ul id="mobile_inner_nav">
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/review/list">Reviews</a></li>
+            <li><a href="/review/edit">Add Review</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>            
             

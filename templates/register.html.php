@@ -10,7 +10,7 @@
 		</ul>
 	</div>
 <?php endif; ?>
-<form action="" method="post">
+<form id="registerform" action="" method="post">
     <label for="email">Your email address</label>
     <input name="author[email]" id="email" type="text" value="<?=$author['email'] ?? ''?>">
     
@@ -20,7 +20,7 @@
     <label for="password">Password</label>
     <input name="author[password]" id="password" type="password" value="<?=$author['password'] ?? ''?>">
  
-    <input type="submit" name="submit" value="Register account">
+    <input type="submit" id="register_btn" name="submit" value="Register account">
 </form>
 
 </section>

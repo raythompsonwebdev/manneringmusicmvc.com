@@ -28,7 +28,7 @@ composer.lock
 samples/
 database.sql
 fonts/
-
+.sass-cache/*
 spare/
 Dump20200112/
 node_modules

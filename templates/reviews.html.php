@@ -8,7 +8,7 @@
 
 <div class="reviews">
 
-<p><?=$totalReviews?> jokes have been submitted to the Internet Review Database.</p>
+<p><?=$totalReviews?> reviews have been submitted to the Internet Review Database.</p>
 
 
 <?php foreach($reviews as $review): ?>
@@ -40,6 +40,8 @@ echo $date->format('jS F Y');
 <?php endforeach; ?>
 
 
+<span id="review_pagination">
+
 
 Select page: 
 
@@ -48,13 +50,20 @@ Select page:
 $numPages = ceil($totalReviews/10);
 
 for ($i = 1; $i <= $numPages; $i++):
+
   if ($i == $currentPage):
-?>
-  <a class="currentpage" href="/review/list?page=<?=$i?><?=!empty($categoryId) ? '&category=' . $categoryId : '' ?>"><?=$i?></a>
-<?php else: ?>
-  <a href="/review/list?page=<?=$i?><?=!empty($categoryId) ? '&category=' . $categoryId : '' ?>"><?=$i?></a>
-<?php endif; ?>
+  ?>
+    <a class="currentpage" href="/review/list?page=<?=$i?><?=!empty($categoryId) ? '&category=' . $categoryId : '' ?>"><?=$i?>
+    </a>
+
+  <?php else: ?>
+
+    <a href="/review/list?page=<?=$i?><?=!empty($categoryId) ? '&category=' . $categoryId : '' ?>"><?=$i?>
+    </a>
+
+  <?php endif; ?>
+
 <?php endfor; ?>
 
-
+</span>
 </section>
