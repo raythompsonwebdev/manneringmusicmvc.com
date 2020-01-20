@@ -2,7 +2,7 @@
 <section id="main_text" class="group" role="main">
 <h2>Edit <?=$author->name?>'s Permissions</h2>
 
-<form action="" method="post">
+<form id="review-edit" action="" method="post">
 	
 	<?php foreach ($permissions as $name => $value): ?>
 	<div>
