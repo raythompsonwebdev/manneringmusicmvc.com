@@ -102,8 +102,9 @@ including sizes of headings and body text, colour scheme and background).
 8. Give an explanation for your six chosen web features.
 
 ## Task B:
-You are required to implement the website you have previously designed.1. Use a suitable background image on all web pages editing, where appropriate,
-using graphics editing software. Save it in an appropriate file format.
+You are required to implement the website you have previously designed.
+
+1. Use a suitable background image on all web pages editing, where appropriate, using graphics editing software. Save it in an appropriate file format.
 2. Locate and edit as required suitable graphic images to be used on all the pages.
 3. Produce the components of the dynamic navigation bar as in the minimum specification.
 4. Create a root folder for your site using an appropriate name. Within this folder, create an image folder and any other folders that might be required to help organise the file structure of your site.
@@ -113,12 +114,12 @@ using graphics editing software. Save it in an appropriate file format.
 8. Create the search page which will allow customers to search for music by artist. The search results should be presented in a dynamically generated results page.
 9. Create a feedback page containing a form to collect data from the user.
 10. Ensure that every page displays:
-- the company name
-- the company logo (using a Java applet)
-- a dynamic navigation bar
-- text links (including an email link)
-- your name and the date the page was last updated
-- the background image
+- the company name.
+- the company logo (using a Java applet).
+- a dynamic navigation bar.
+- text links (including an email link).
+- your name and the date the page was last updated.
+- the background image.
 11. Ensure that all content is converted to a file format that will be quicker to load, and give an explanation of any changes to file format.
 12. Edit and format the content (in line with your plan) to ensure the design is consistent. lnclude any audio/video files eniuring copyright constraints are met.
 13. Check the functionality of your links and embedded content, editing any code as required and check with the Assessor to verify they meet the customer needs.
@@ -127,7 +128,7 @@ using graphics editing software. Save it in an appropriate file format.
 ln this task you are required to test and evatuate the website you have created.
 
 1. Create a brief testing p-lan (including the use of two different browsers) to fully check the functionality of your site and check that all components are displayed and function as expected. Note: Ensure that your test plan has at least five tests.
-2. Using your test plan, test your pages, recording the results. (lmplement the five tests from your test plan and record the results)
+2. Using your test plan, test your pages, recording the results. (lmplement the five tests from your test plan and record the results).
 3. Check your website to ensure that it meets the design specification, make any adjustments that are necessary and resave your website. ldentify and record any problems relating to the functionality and quality of your site and record any action you need to take. Make'any corrections required.
 4. You should identify two common quality issues that appear in published websites and h-ow they should be responded to.
 5. Upload your website to a web server.
@@ -161,8 +162,8 @@ Suggest a domain narne for the website.
 Having read the scenario and task1 to task5, give a brief description of why using computer and information technology is essential for completing the assignment.
 b. Give a brief description of what skills and resources you will need to complete the task
 successfully.
-c. Briefly describe the steps that you would take to achieve/complete the task'
-d. Briefly describe what hardware and software you are intending to use for the task'
+c. Briefly describe the steps that you would take to achieve/complete the task.
+d. Briefly describe what hardware and software you are intending to use for the task.
 e. Give one reason why you have chosen that software application.
 f. what legal or local guidelineswould you need to think-about before completing the task?
 
