@@ -77,7 +77,7 @@ provided. Produce a:
 2. structure diagram to show the links between each page of the website
 3. description of your external stylesheet listing the attributes and values of headings,
 paragraphs and links used throughout the site - for example, font family, font size,
-colour, text atignment, font style, indents, line spacing etc. The site's background
+colour, text alignment, font style, indents, line spacing etc. The site's background
 image may also be specified using the stylesheet
 4. sketch/storyboard of the home or index page to show the position, format and
 source.of the main elements. Link information should also be included
@@ -106,11 +106,11 @@ You are required to implement the website you have previously designed.1. Use a 
 using graphics editing software. Save it in an appropriate file format.
 2. Locate and edit as required suitable graphic images to be used on all the pages.
 3. Produce the components of the dynamic navigation bar as in the minimum specification.
-4. Create a root fol_der for your site using an appropriate name. Within this folder, 9re{e an Imagesfolder and any other folders ifrai might be required to netp organise the file structure of your site.
-5. Create/edit the external.cascading stylesheet(CSS) file containing the styles as defined in Task A. You will need to link all pages'of your website to this stylesheet. Print out a copy of the stylesheet.
-6. create the home/index page containing the company name, company logo (using a Java applet or animated gif), information about the company and iis slrv1ies, dynamic navigation bar, text links (including an email linkj, your name and the date the page was last updated. Ensure that the background imige is inserted. The background image may be inserted separately oi each page or by using the stylesheet.
-7. create the three music type pages - Jazz, hip-hop and country - according to the website specifications. Ensure that a suitabli image is inserted in each page and that each page contains relevant music details.
-8. Create the search. paqg which will allow customers to search for music by artist. The search results should be presented in a dynamically generated results page.
+4. Create a root folder for your site using an appropriate name. Within this folder, create an image folder and any other folders that might be required to help organise the file structure of your site.
+5. Create/edit the external cascading stylesheet(CSS) file containing the styles as defined in Task A. You will need to link all pages of your website to this stylesheet. Print out a copy of the stylesheet.
+6. Create the home/index page containing the company name, company logo (using a Java applet or animated gif), information about the company and it's services, dynamic navigation bar, text links (including an email linkj, your name and the date the page was last updated. Ensure that the background image is inserted. The background image may be inserted separately on each page or by using the stylesheet.
+7. Create the three music type pages - Jazz, hip-hop and country - according to the website specifications. Ensure that a suitable image is inserted in each page and that each page contains relevant music details.
+8. Create the search page which will allow customers to search for music by artist. The search results should be presented in a dynamically generated results page.
 9. Create a feedback page containing a form to collect data from the user.
 10. Ensure that every page displays:
 - the company name
