@@ -18,6 +18,9 @@ public_html/assets/css/poll
 public_html/assets/js/misc/
 public_html/assets/js/bxslider-4-master/
 public_html/assets/js/jquery-3.4.1.min.js
+public_html/fonts/
+public_html/samples/
+spare/
 logs/
 audio/
 nbproject/
@@ -32,3 +35,4 @@ libwebp-0.6.1-linux-x86-32/
 libwebp-0.6.1-linux-x86-32.tar.gz
 .env-dev
 vendor/
+node_modules/
