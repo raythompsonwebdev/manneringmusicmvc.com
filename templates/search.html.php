@@ -17,14 +17,14 @@
                 method: "GET",
                 data: dataString,
                 dataType: 'html',
-                success: function(data, textStatus, xhr) {
+                success: function(data) {
                     
                         $("#results").html(data);
                         
                 },
                 
-                error: function(xhr, textStatus, errorThrown){
-                    alert('An error occurred! ' + ( errorThrown ? errorThrown : xhr.status ));
+                error: function(jqxhr, textStatus, error){
+                    alert('An error occurred! ' + ( error ? error : jqxhr.status ));
                 }
             });
             //end of ajax function
@@ -38,7 +38,7 @@
 
 <section id="main_text">
 
-    <h1 style="text-align:left">Album Search Page</h1>
+    <h1 >Album Search Page</h1>
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 

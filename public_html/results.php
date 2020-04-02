@@ -5,12 +5,12 @@ include __DIR__ . '/../includes/DatabaseConnection.php';
 if (!isset($_GET['submit'])) {
 
     //Store search form data submitted into variables
-    $artistname = $_GET['artist_name'];
-    $albumname = $_GET['album'];
-    $genre = $_GET['genre'];
+    $artistname = strip_tags($_GET['artist_name']);
+    $albumname = strip_tags($_GET['album']);
+    $genre = strip_tags($_GET['genre']);
 
     //Inner Join
-    $sql = 'SELECT * FROM `album` INNER JOIN `artist` ON `artistid` = `artist`.`id` WHERE `album` LIKE :album AND `genre` LIKE :genre AND `artist_name` LIKE :artist_name';
+    $sql = 'SELECT * FROM `album` INNER JOIN `artist` ON `artistId` = `artist`.`id` WHERE `album` LIKE :album AND `genre` LIKE :genre AND `artist_name` LIKE :artist_name';
     
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue(':artist_name', '%'.$artistname.'%');
@@ -21,8 +21,7 @@ if (!isset($_GET['submit'])) {
 
     if ($rows) {
         foreach ($rows as $row) : ?>
-
-
+        
         <div class="product-box">
 
             <figure class="product-box-img">
@@ -53,7 +52,7 @@ if (!isset($_GET['submit'])) {
             <form method="get" action="/singleresult" id="addcartbtn">
             <input type="submit" class="addcartbtn" value="See more.." />
             <input type="hidden" name="albumid" value="<?=$row['albumid'] ?? ''?>">
-            <input type="hidden" name="artistid" value="<?=$row['artistid'] ?? ''?>">
+            <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>">
                      
             </form>
             

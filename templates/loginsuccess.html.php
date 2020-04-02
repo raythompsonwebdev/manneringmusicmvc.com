@@ -1,4 +1,3 @@
-
 <section id="main_text" class="group" role="main">
 <h2>Login Successful</h2>
 

@@ -5,16 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mannering Music web project.">
-   
+    <meta name="description" content="Mannering Music web project.">   
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mannering Music</title>
-     <link rel="stylesheet" href="assets/css/style.css" >
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+     <link rel="stylesheet" href="/style.css" >
+     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald:400,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" >
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
     <link rel="icon" href="assets/icons/apple-icon.png">
+
+    <script src="/main.js" defer></script>
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
       <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
@@ -37,39 +38,48 @@
       </hgroup>
 
       <span class="social">
-        <ul id="social">
-   
-          <?php if ($loggedIn): ?>
-          <li class="social-item"><a href="/logout">Log out</a>
-          </li>
+        <ul id="social">  
+         
+          <li class="social-item"><a href="">Link</a></li>
+          <li class="social-item"><a href="">Link</a></li>
           
-          <?php else: ?>
-          <li class="social-item"><a href="/login">Log in</a></li>
-          <li class="social-item"><a href="/register">Register</a></li>
-
-          <?php endif; ?>
           
         </ul>
       </span>
       
     </header>
-
+    <button id="mobile-toggle" title="menu">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
       <!--navigation here-->
       <nav role="navigation" >
                   
         <ul id="inner_nav">
-        <?php if (!$loggedIn): ?>
-          <li><a rel='tab' href="/">Home</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-            <li><a rel='tab' href="/video">Video</a></li>
-            
-            <li><a rel='tab' href="/contact">Contact</a></li>
-            <?php else: ?> 
             <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/review/list">Reviews</a></li>
+            <li><a href="/review/edit">Add Review</a></li>
             <li><a rel='tab' href="/search">Search</a></li>
-         <li><a href="/reviews">Reviews</a></li>
-		<!--	<li><a href="/editreviews">Add Review</a></li>-->
-      <?php endif; ?>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            
+        <?php if ($loggedIn): ?>
+            <li class="social-item"><a href="/logout">Log out</a>
+            <?php else: ?>
+            <li class="social-item"><a href="/login">Log in</a></li>
+            <?php endif; ?>
+        </ul>
+
+        <ul id="mobile_inner_nav">
+            <li><a rel='tab' href="/">Home</a></li>
+            <li><a href="/review/list">Reviews</a></li>
+            <li><a href="/review/edit">Add Review</a></li>
+            <li><a rel='tab' href="/search">Search</a></li>
+            <li><a rel='tab' href="/video">Video</a></li>            
+            
+        <?php if ($loggedIn): ?>
+            <li class="social-item"><a href="/logout">Log out</a>
+            <?php else: ?>
+            <li class="social-item"><a href="/login">Log in</a></li>
+            <?php endif; ?>
         </ul>
 
       </nav>
@@ -102,6 +112,7 @@
     <li><a href="#">Terms</a></li>
       <li><a href="#">Privacy</a></li>
       <li><a href="#">About</a></li>
+      <li><a rel='tab' href="/contact">Contact</a></li> 
       
   </ul>
 

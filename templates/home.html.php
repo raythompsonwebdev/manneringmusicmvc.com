@@ -2,17 +2,17 @@
 
 <!--Slider-->
 <section id="slider">
-  <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
+  <img src="assets/images/sliderimages/silder.gif" alt="hip-hop-albums"/>
      
 </section>
 
 <!--main text-->
 <section id="main_text" role="main" >
-
+<h1>MANNERING MUSIC FEATURED ALBUMS</h1>
     
     <!--Hip Hop Section-->
-    <article class="section">
-        <h1>Featured Hip Hop Albums</h1>
+    <section class="album_section">
+        <h1>Hip Hop</h1>
         <?php foreach ($rapalbums as $rapalbum) : ?>
                 <div class="flex-wrapper">
 
@@ -26,7 +26,7 @@
                             <h4>&#163;<?=$rapalbum->price?></h4>
                             <!-- commented out for now.-->
                             <form method="get" action="/singleresult" id="frontform">
-                                <input type="hidden" name="artistid" value="<?=$rapalbum->artistid ?? ''?>">
+                                <input type="hidden" name="artistid" value="<?=$rapalbum->artistId ?? ''?>">
                                 <input type="hidden" name="albumid" value="<?=$rapalbum->albumid ?? ''?>">
                                 <input type="submit" name="submit" class="frontform" value="See more.."/>
                             </form>
@@ -36,12 +36,12 @@
 
                 </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
     <!--Country Section-->
-    <article class="section ">
-        <h1>Featured Country Albums</h1>
+    <section class="album_section ">
+        <h1>Country</h1>
         <?php foreach ($countryalbums as $countryalbum) : ?>
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
@@ -53,7 +53,7 @@
                         <p><?=$countryalbum->album?></p>
                         <h4> &#163;<?=$countryalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$countryalbum->artistid ?? ''?>">
+                            <input type="hidden" name="artistid" value="<?=$countryalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
@@ -62,12 +62,12 @@
 
             </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
     <!--Jazz Section-->
-    <article class="section">
-        <h1>Featured Jazz Albums</h1>
+    <section class="album_section">
+        <h1>Jazz</h1>
         <?php foreach ($jazzalbums as $jazzalbum) : ?>
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
@@ -78,7 +78,7 @@
                         <p><?=$jazzalbum->album?></p>
                         <h4>&#163;<?=$jazzalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$jazzalbum->artistid ?? ''?>">
+                            <input type="hidden" name="artistid" value="<?=$jazzalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$jazzalbum->albumid ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
@@ -87,7 +87,7 @@
                 </figure>
             </div>
         <?php endforeach; ?>
-    </article>
+    </section>
     <div class="clearfix"></div>
 
 
@@ -116,4 +116,3 @@
 
     });
 </script>
-

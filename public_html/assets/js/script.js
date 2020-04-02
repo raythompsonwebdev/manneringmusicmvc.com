@@ -16,15 +16,12 @@ function formatTime(seconds) {
 	return minutes + ":" + seconds;
 }
 
-// Display current time and duration =============================//
+// Updates progress bar as song is playing //
 function updateTimeProgressBar(audio) {
 
 	$('div.current_time').text(formatTime(audio.currentTime));
-
 	$("div.duration").text(formatTime(audio.duration - audio.currentTime));
-
 	var progress = audio.currentTime / audio.duration * 100;
-
 	$(".progress .play_progress").css("width", progress + "%");
 }
 
@@ -38,11 +35,10 @@ function updateVolumeProgressBar(audio) {
 // Audio Class
 function Audio() {
 
-	this.currentlyPlaying;
-	
+	this.currentlyPlaying;	
 	this.audio = document.createElement('audio');
 
-
+	//goes to next song when current song finished function
 	this.audio.addEventListener("ended", function() {
 		nextSong();
 	});
@@ -51,10 +47,8 @@ function Audio() {
 	this.audio.addEventListener("canplay", function(){
 
 		var duration = formatTime(this.duration);
-
 		$('div.current_time').text(duration);
-
-		
+		updateVolumeProgressBar(this);
 		
 	});
 	
@@ -95,7 +89,7 @@ function Audio() {
 				
 	}
 
-	// Progress Bar and Volume Bar Drag ============================//
+	// Progress Bar and Volume Bar Drag 
 	this.setTime = function(seconds) {
 		this.audio.currentTime = seconds;
 	}

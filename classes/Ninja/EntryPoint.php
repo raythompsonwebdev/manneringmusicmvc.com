@@ -1,48 +1,45 @@
 <?php
 namespace Ninja;
 
-class EntryPoint
-{
-    private $route;
-    private $method;
-    private $routes;
+class EntryPoint {
+	private $route;
+	private $method;
+	private $routes;
 
-    public function __construct($route, $method, $routes)
-    {
-        $this->route = $route;
-        $this->routes = $routes;
-        $this->method = $method;
-        $this->checkUrl();
-    }
+	public function __construct(string $route, string $method, \Ninja\Routes $routes) {
+		$this->route = $route;
+		$this->routes = $routes;
+		$this->method = $method;
+		$this->checkUrl();
+	}
 
-    private function checkUrl()
-    {
-        if ($this->route !== strtolower($this->route)) {
-            http_response_code(301);
-            header('location: ' . strtolower($this->route));
-        }
-    }
+	private function checkUrl() {
+		if ($this->route !== strtolower($this->route)) {
+			http_response_code(301);
+			header('location: ' . strtolower($this->route));
+		}
+	}
 
-    private function loadTemplate($templateFileName, $variables = [])
-    {
-        extract($variables);
+	private function loadTemplate($templateFileName, $variables = []) {
+		extract($variables);
 
-        ob_start();
+		ob_start();
+		include  __DIR__ . '/../../templates/' . $templateFileName;
 
-        include  __DIR__ . '/../../templates/' . $templateFileName;
+		return ob_get_clean();
+	}
 
-        return ob_get_clean();
-    }
+	public function run() {
 
-    public function run()
-    {
-
-        $routes = $this->routes->getRoutes();	
+		$routes = $this->routes->getRoutes();	
 
 		$authentication = $this->routes->getAuthentication();
 
-		if (isset($routes[$this->route]['login']) && isset($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
+		if (isset($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
 			header('location: /login/error');
+		}
+		else if (isset($routes[$this->route]['permissions']) && !$this->routes->checkPermission($routes[$this->route]['permissions'])) {
+			header('location: /login/permissionserror');	
 		}
 		else {
 			$controller = $routes[$this->route][$this->method]['controller'];
@@ -56,15 +53,14 @@ class EntryPoint
 			}
 			else {
 				$output = $this->loadTemplate($page['template']);
-            }
-            
-            echo $this->loadTemplate('layout.html.php', ['loggedIn' => $authentication->isLoggedIn(), 'output' => $output, 'title' => $title ]);
-            
-			//include  __DIR__ . '/../../templates/layout.html.php';
+			}
+
+			echo $this->loadTemplate('layout.html.php', ['loggedIn' => $authentication->isLoggedIn(),
+			                                             'output' => $output,
+			                                             'title' => $title
+			                                            ]);
 
 		}
-    }
 
-    
-
+	}
 }
