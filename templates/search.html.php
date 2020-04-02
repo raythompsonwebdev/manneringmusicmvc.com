@@ -17,14 +17,14 @@
                 method: "GET",
                 data: dataString,
                 dataType: 'html',
-                success: function(data, textStatus, xhr) {
+                success: function(data) {
                     
                         $("#results").html(data);
                         
                 },
                 
-                error: function(xhr, textStatus, errorThrown){
-                    alert('An error occurred! ' + ( errorThrown ? errorThrown : xhr.status ));
+                error: function(jqxhr, textStatus, error){
+                    alert('An error occurred! ' + ( error ? error : jqxhr.status ));
                 }
             });
             //end of ajax function
