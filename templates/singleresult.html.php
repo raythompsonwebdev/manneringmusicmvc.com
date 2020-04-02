@@ -1,15 +1,14 @@
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 <script src="assets/js/script.js"></script>
 
-
 <?php
 
     $array = array();
 
-	foreach($singleaudio as $key => $value) {        
-        array_push($array, $value[0]);
-    }    
-    $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);    
+foreach ($singleaudio as $key => $value) {
+    array_push($array, $value[0]);
+}
+    $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 ?>
 
@@ -34,7 +33,7 @@
 
         //drag progress bar 
         $("div.progress div.play_progress").mousedown(function() {
-		    mouseDown = true;
+            mouseDown = true;
         });
 
         $("div.progress div.play_progress").mousemove(function(e) {
@@ -52,7 +51,7 @@
         //drag volume bar 
 
         $("div.audio_volume div.volume").mousedown(function() {
-		    mouseDown = true;
+            mouseDown = true;
         });
 
         $("div.audio_volume div.volume").mousemove(function(e) {
@@ -172,7 +171,7 @@
         //track plays function needs ajax file updatePlays.php 
         //also Plays column in database audio table   
         // if(audioElement.audio.currentTime == 0) {
-        // 	$.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
+        //  $.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
         // }
                 
 
@@ -299,18 +298,16 @@
                         <?php
                                                 
                             $i = 1;
-                            foreach($singleaudio as $songId => $value) :                            
-
-                                echo "<li>
+                        foreach ($singleaudio as $songId => $value) :
+                            echo "<li>
 
                                     <span>Track " . $i . " : </span>
                                     <span >" . $value[1] . "</span>
                                     <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
                                 </li>";
                             
-                                $i = $i + 1;
-                    
-                            endforeach;
+                            $i = $i + 1;
+                        endforeach;
                         
                         ?>
                     </ul>

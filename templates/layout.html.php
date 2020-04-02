@@ -61,11 +61,11 @@
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>            
             
-        <?php if ($loggedIn): ?>
+        <?php if ($loggedIn) : ?>
             <li class="social-item"><a href="/logout">Log out</a>
-            <?php else: ?>
+        <?php else : ?>
             <li class="social-item"><a href="/login">Log in</a></li>
-            <?php endif; ?>
+        <?php endif; ?>
         </ul>
 
         <ul id="mobile_inner_nav">
@@ -75,11 +75,11 @@
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>            
             
-        <?php if ($loggedIn): ?>
+        <?php if ($loggedIn) : ?>
             <li class="social-item"><a href="/logout">Log out</a>
-            <?php else: ?>
+        <?php else : ?>
             <li class="social-item"><a href="/login">Log in</a></li>
-            <?php endif; ?>
+        <?php endif; ?>
         </ul>
 
       </nav>

@@ -29,7 +29,7 @@ samples/
 database.sql
 fonts/
 .sass-cache/*
-spare/
+spare/DatabaseConnection.php
 Dump20200112/
 node_modules
 php.ini

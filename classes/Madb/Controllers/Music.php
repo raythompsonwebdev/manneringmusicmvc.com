@@ -1,6 +1,7 @@
 <?php
 
 namespace Madb\Controllers;
+
 use \Ninja\DatabaseTable;
 
 class Music
@@ -16,7 +17,6 @@ class Music
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
         $this->audioTable = $audioTable;
-        
     }
         
   ////////////////////////////

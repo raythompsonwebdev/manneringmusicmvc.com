@@ -13,7 +13,7 @@
   <h1>Hip Hop Music Videos</h1>
   <?php //var_dump($rapvideos); ?>
 
-  <?php foreach($rapvideos as $rapvideo) : ?>
+  <?php foreach ($rapvideos as $rapvideo) : ?>
   <figure class="video-item">
     <img src="/assets/images/videoimages/Newfolder/<?php echo $rapvideo->video_image; ?>" alt="">
       <figcaption class="overlay">
@@ -28,7 +28,7 @@
   <!--Country Music videos-->
 
   <h1>Country Music Videos</h1>
-  <?php foreach($countryvideos as $countryvideo) : ?>
+  <?php foreach ($countryvideos as $countryvideo) : ?>
   <figure class="video-item">
     <img src="/assets/images/videoimages/Newfolder/<?php echo $countryvideo->video_image; ?>" alt="">
       <figcaption class="overlay">
@@ -44,7 +44,7 @@
   <!--Jazz Music videos-->
 
   <h1>Jazz Music Videos</h1>
-  <?php foreach($jazzvideos as $jazzvideo) : ?>
+  <?php foreach ($jazzvideos as $jazzvideo) : ?>
   <figure class="video-item">
     <img src="/assets/images/videoimages/Newfolder/<?php echo $jazzvideo->video_image; ?>" alt="">
       <figcaption class="overlay">
