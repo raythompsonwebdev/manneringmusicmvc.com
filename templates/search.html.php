@@ -74,7 +74,7 @@
 
     </aside>
 
-    <span class="count">
+    <span class="refresh_link">
         <a href="<?php $_SERVER['PHP_SELF']; ?>">Refresh&nbsp;Search&nbsp;Page</a>
     </span>
 

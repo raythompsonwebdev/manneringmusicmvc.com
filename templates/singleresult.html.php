@@ -210,23 +210,23 @@ foreach ($singleaudio as $key => $value) {
                 <pre></pre>
                     <ul class="product-box-info">
                         <li>
-                            <span>Artist: </span>
+                            <span>Artist </span>
                             <span><?= $singleartist[0][0]; ?></span>
                         </li>
                         <li>
-                            <span>Album:</span>
+                            <span>Album</span>
                             <span><?=$singlealbums->album; ?></span>
                         </li>
                         <li>
-                            <span>Formats:</span>
+                            <span>Formats</span>
                             <span><?=$singlealbums->text; ?></span>
                         </li>
                         <li>
-                            <span>Genre:</span>
+                            <span>Genre</span>
                             <span><?=$singlealbums->genre; ?></span>
                         </li>
                         <li>
-                            <span>Price:</span>
+                            <span>Price</span>
                             <span><?=$singlealbums->price; ?></span>
                         </li>
                          
