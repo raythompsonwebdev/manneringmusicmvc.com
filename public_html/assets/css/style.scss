@@ -1340,6 +1340,7 @@
                 font-size: 0.95em;
                 width: 100%;
                 display:block;
+                
             }
 
             select{ 
@@ -1352,7 +1353,7 @@
                 width: 100%; 
                 font-size: 0.9em; 
                 height: 40px;
-                behavior:url(PIE.htc);
+                
             }
 
             textarea {
@@ -1514,16 +1515,20 @@
             width: 100%;
         } 
 
-        .error{
-            position:relative;
-            top:1em;
-            left:0;
+        .search_error{
+            display:none;
+        }
+
+        .show_error{
+            display:block;          
+                      
             background:#fff;
             color:#000;
             padding:1em;
-            margin-right:1em;
-
-
+            margin:auto 1em;
+            width:auto;
+            width: 65%;
+            text-align: center;
         }
               
                
@@ -2291,7 +2296,7 @@
             width: 100%;
         }
 
-        .error{
+        .search_error{
             font-size:0.9em;
 
         }
@@ -3032,7 +3037,7 @@
             width: 100%;
         }
 
-        .error{
+        .search_error{
             font-size:0.9em;
 
         }
@@ -3720,7 +3725,7 @@
             width: 100%;
         }
 
-        .error{
+        .search_error{
             font-size:0.9em;
 
         }
@@ -4389,7 +4394,7 @@
             
         }
 
-        .error{
+        .search_error{
             font-size:0.9em;
 
         }
@@ -4882,7 +4887,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.85em;
 
         }
@@ -5548,7 +5553,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.85em;
 
         }
@@ -6205,7 +6210,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.85em;
 
         }
@@ -6873,7 +6878,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.85em;
 
         }
@@ -7611,7 +7616,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.8em;
 
         }
@@ -8364,7 +8369,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.8em;
 
         }
@@ -9070,7 +9075,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.8em;
 
         }
@@ -9769,7 +9774,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.75em;
 
         }
@@ -10430,7 +10435,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.75em;
 
         }
@@ -11065,7 +11070,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.75em;
 
         }
@@ -11731,7 +11736,7 @@
             margin-bottom: 20px;
         }
 
-        .error{
+        .search_error{
             font-size:0.75em;
 
         }

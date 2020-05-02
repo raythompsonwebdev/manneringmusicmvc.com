@@ -4,21 +4,37 @@
 
     jQuery(document).ready(function() {
 
-        $("#searchBtn ").on('click', function(){
+        $("#searchBtn ").on('click', function(e){
+
+            
+            e.preventDefault();
        
             var artistname = $("#artist").val();            
             var albumname = $("#album").val();
             var genre = $("#genre").val();
-
-            $(".error").remove();
-
-            if (artistname.length < 1) {
-            $('#searchForm').before('<span class="error">Artist name is required</span>');
-            }
-            if (albumname.length < 1) {
-            $('#searchForm').before('<span class="error">Album name is required</span>');
-            }
             
+                        
+            if ( artistname.length < 1 && albumname.length < 1 && genre === null) {
+
+                $('.search_error').addClass('show_error');
+                                
+            
+            }else if(artistname.length < 1 && albumname.length < 1 && genre === !null ){
+                
+                $('.search_error').removeClass('show_error');
+
+            }else if(artistname.length > 1 && albumname.length < 1 && genre === !null){
+                
+                $('.search_error').removeClass('show_error');
+
+            }else if(artistname.length < 1 && albumname.length > 1 && genre === !null){
+                
+                $('.search_error').removeClass('show_error');
+
+            }else if((artistname.length > 1 || albumname.length < 1 || genre === !null) && e.type == 'click'){
+                $('.search_error').removeClass('show_error');
+            }                
+                        
             var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
 
             $.ajax({
@@ -37,8 +53,12 @@
                     alert('An error occurred! ' + ( error ? error : jqxhr.status ));
                 }
             });
+
+            
             //end of ajax function
             return false;
+            
+
         });
         // search click end
 
@@ -52,6 +72,8 @@
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 
+    <span class="search_error">Either Album Name and Genre or Artist Name and Genre is required</span>
+    
     <!--Search Form--> 
     <form id="searchForm">
         <fieldset>
@@ -59,7 +81,7 @@
 
             <label for="artist" aria-label="artist_name">Artist name</label>
             <input id="artist" name="artist_name" type="text" placeholder="Artist Name" >
-
+            
             <label for="album" aria-label="album">Album name</label>
             <input id="album" name="album" type="text" title="Album Name"  placeholder="Album Name" >
 

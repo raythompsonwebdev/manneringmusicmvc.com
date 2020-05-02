@@ -121,6 +121,6 @@
 <!--google analytics here-->
 
     </div><!-- /.wrapper end -->
-    <script src="/main.js" defer></script>
+    <script src="/assets/js/main.js" ></script>
   </body>
 </html>

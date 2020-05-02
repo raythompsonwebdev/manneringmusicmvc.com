@@ -27,7 +27,7 @@ if (!isset($_GET['submit'])) {
 
             <figure class="product-box-img">
                 
-                <img src="assets/databasepics/<?= $rows['image']; ?>" alt="Album-Cover-Image"  />
+                <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
                 
                 <div class="product-box-cartinfo">
                     <h4>&pound;<?= $row['price']; ?></h4>
@@ -62,7 +62,7 @@ if (!isset($_GET['submit'])) {
         <?php 
         endforeach;
     } else {
-        echo 'Nothing to see';
+        echo '<p>Nothing to see</p>';
     }
 }
 ?>
