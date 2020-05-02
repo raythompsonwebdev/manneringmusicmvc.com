@@ -235,7 +235,6 @@ class DatabaseTable
         return $rows;
     }
 
-
     /**
      * single-result-page-function
      *
@@ -251,13 +250,15 @@ class DatabaseTable
 
         $query = $this->query($query, $parameters);
 
+        //return $query->fetchObject($this->className, $this->constructorArgs);
+
         $array = array();
 
         foreach ($query as $row) {
             array_push($array, [$row['audioid'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
         }
          
-        return $array;
+        return (object) $array;
     }
 
     /**

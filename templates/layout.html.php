@@ -15,7 +15,7 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
     <link rel="icon" href="assets/icons/apple-icon.png">
 
-    <script src="/main.js" defer></script>
+   
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
       <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
@@ -121,6 +121,6 @@
 <!--google analytics here-->
 
     </div><!-- /.wrapper end -->
-    
+    <script src="/main.js" defer></script>
   </body>
 </html>
