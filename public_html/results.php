@@ -5,9 +5,9 @@ include __DIR__ . '/../includes/DatabaseConnection.php';
 if (!isset($_GET['submit'])) {
 
     //Store search form data submitted into variables
-    $artistname = strip_tags($_GET['artist_name']);
-    $albumname = strip_tags($_GET['album']);
-    $genre = strip_tags($_GET['genre']);
+    $artistname = htmlspecialchars($_GET['artist_name']);
+    $albumname = htmlspecialchars($_GET['album']);
+    $genre = htmlspecialchars($_GET['genre']);
 
     //Inner Join
     $sql = 'SELECT * FROM `album` INNER JOIN `artist` ON `artistId` = `artist`.`id` WHERE `album` LIKE :album AND `genre` LIKE :genre AND `artist_name` LIKE :artist_name';
@@ -17,16 +17,17 @@ if (!isset($_GET['submit'])) {
     $stmt->bindValue(':album', '%'.$albumname.'%');
     $stmt->bindValue(':genre', '%'.$genre.'%');
     $stmt->execute();
-    $rows = $stmt->fetchAll();
+    $rows = $stmt->fetchAll();    
 
     if ($rows) {
+
         foreach ($rows as $row) : ?>
-        
+                
         <div class="product-box">
 
             <figure class="product-box-img">
                 
-                <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
+                <img src="assets/databasepics/<?= $rows['image']; ?>" alt="Album-Cover-Image"  />
                 
                 <div class="product-box-cartinfo">
                     <h4>&pound;<?= $row['price']; ?></h4>
@@ -57,10 +58,11 @@ if (!isset($_GET['submit'])) {
             </form>
             
         </div>
-
-        <?php endforeach;
+   
+        <?php 
+        endforeach;
     } else {
-        echo 'Not working';
+        echo 'Nothing to see';
     }
 }
 ?>

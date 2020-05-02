@@ -6,7 +6,7 @@ var currentIndex = 0;
 
 //Format current time and duration
 function formatTime(seconds) {
-	var seconds = Math.round(seconds);
+	seconds = Math.round(seconds);
 	var minutes = Math.floor(seconds / 60);
 	// Remaining seconds
 	seconds = Math.floor(seconds % 60);
@@ -18,19 +18,25 @@ function formatTime(seconds) {
 
 // Updates progress bar as song is playing //
 function updateTimeProgressBar(audio) {
+	
+	document.querySelector('div.current_time').textContent = formatTime(audio.currentTime);
+	
+	document.querySelector("div.duration").textContent = formatTime(audio.duration - audio.currentTime);
 
-	$('div.current_time').text(formatTime(audio.currentTime));
-	$("div.duration").text(formatTime(audio.duration - audio.currentTime));
 	var progress = audio.currentTime / audio.duration * 100;
-	$(".progress .play_progress").css("width", progress + "%");
+
+	document.querySelector(".progress .play_progress").style.width = progress + "%";
+	
 }
 
-// Volume ============================//
+// Volume //
 function updateVolumeProgressBar(audio) {
-	var volume = audio.volume * 100;
-	$("div.audio_volume div.volume").css("width", volume + "%");
-}
 
+	var volume = audio.volume * 100;
+	
+	document.querySelector("div.audio_volume div.volume").style.width = volume + "%";
+
+}
 
 // Audio Class
 function Audio() {
@@ -43,28 +49,30 @@ function Audio() {
 		nextSong();
 	});
 	
-	// Time Duration =============================//
+	// Time Duration //
 	this.audio.addEventListener("canplay", function(){
 
 		var duration = formatTime(this.duration);
-		$('div.current_time').text(duration);
+
+		document.querySelector("div.current_time").textContent = duration;
+		
 		updateVolumeProgressBar(this);
 		
 	});
 	
-	// Time Display =============================//
+	// Time Display //
 	this.audio.addEventListener("timeupdate", function () {
 		if(this.duration) {
 			updateTimeProgressBar(this);
 		}
 	});
 
-	// Volume ============================//
+	// Volume //
 	this.audio.addEventListener("volumechange", function() {
 		updateVolumeProgressBar(this);
 	});
 					
-	// Set Track ============================//
+	// Set Track //
 	this.setTrack = function(track) {
 
 		this.currentlyPlaying = track[0].mp3_File;
@@ -73,19 +81,17 @@ function Audio() {
 
 	}
 
-	// Pause ============================//
+	// Pause //
 	this.pause = function() {
 
 		this.audio.pause();
 
 	}
 
-	// Play ============================//
+	// Play//
 	this.play = function() {
-
 		 		
-		this.audio.play();
-								
+		this.audio.play();								
 				
 	}
 

@@ -6,14 +6,24 @@
 
         $("#searchBtn ").on('click', function(){
        
-            var artistname = $("#artist").val();
+            var artistname = $("#artist").val();            
             var albumname = $("#album").val();
             var genre = $("#genre").val();
+
+            $(".error").remove();
+
+            if (artistname.length < 1) {
+            $('#searchForm').before('<span class="error">Artist name is required</span>');
+            }
+            if (albumname.length < 1) {
+            $('#searchForm').before('<span class="error">Album name is required</span>');
+            }
             
             var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
 
             $.ajax({
                 url:  'results.php',
+                async: true,
                 method: "GET",
                 data: dataString,
                 dataType: 'html',
@@ -42,37 +52,30 @@
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 
-    <!--left bar-->
-    <aside id="left_bar" role="complementary">
+    <!--Search Form--> 
+    <form id="searchForm">
+        <fieldset>
+            <legend>Search Here</legend>
 
-        <h1>Search Here</h1>
+            <label for="artist" aria-label="artist_name">Artist name</label>
+            <input id="artist" name="artist_name" type="text" placeholder="Artist Name" >
 
-        <article id="search_form">
+            <label for="album" aria-label="album">Album name</label>
+            <input id="album" name="album" type="text" title="Album Name"  placeholder="Album Name" >
 
-            <form id="searchForm">
+            <label for="genre" aria-label="genre">Genre</label>
+            <select name="genre" id="genre">
+                <option value="" disabled selected>Choose Genre</option>
+                <option value="Hip Hop">Hip Hop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Country">Country</option>
+            </select>
 
-                <label for="artist">Artist name</label>
-                <input id="artist" name="artist_name" type="text" title="Artist Name"  autofocus placeholder="Artist Name">
+            <input id="searchBtn" class="submit" name="submit" type="submit" value="FIND MUSIC" >
+        </fieldset>
+    </form>
 
-                <label for="album">Album name</label>
-                <input id="album" name="album" type="text" title="Album Name"  placeholder="Album Name" >
-
-
-                <label for="genre">Genre</label>
-
-                <select name="genre" id="genre" >
-                    <option value=""></option>
-                    <option value="Hip Hop">Hip Hop</option>
-                    <option value="Jazz">Jazz</option>
-                    <option value="Country">Country</option>
-                </select>
-
-                <input id="searchBtn" class="submit" name="submit" type="submit" value="FIND MUSIC" >
-            </form>
-
-        </article>
-
-    </aside>
+       
 
     <span class="refresh_link">
         <a href="<?php $_SERVER['PHP_SELF']; ?>">Refresh&nbsp;Search&nbsp;Page</a>
