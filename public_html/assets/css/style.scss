@@ -741,14 +741,12 @@
             flex-flow: row wrap;
             -webkit-align-items: flex-start;
             -ms-flex-align: start;
-            align-items: flex-start;
-            
+            align-items: flex-start;            
 
             .product-box {
                 height: auto;
-                min-height: 240px;
-                border: 2px solid $color8;
-                padding: 10px 1% 1% 1%;
+                min-height: 240px;                
+                padding: 0.25em;
                 border: solid $color5 4px;
                 @include boredrady(5px);
                 background-color: $color6;
@@ -761,130 +759,64 @@
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
 
-                h3 {
-                    display: block;
-                    padding: 3px 0px;
-                    
-                    color: $color2;
-                    text-transform: uppercase;
-                    font-size: 0.8em;
-                    margin: 0;
-                    background-color: $color4;
-                    width: 100%;
-                    line-height: 25px;
-                    font-weight: normal;
-                    @include boredrady("none");
-                    text-align: center;
-                }
-
-                h4 {
-                    display: block;
-                    
-                    color: $advertRed;
-                    font-weight: normal;
-                    font-size: 1.1em;
-                    line-height: 30px;
-                    margin: 0;
-                }
-
-                span {
-                    font-size: 1em;
-                    color: $color2;
-                    
-                    text-align: left;
-                    display: block;
-                    line-height: 15px;
-                    margin: 0;
-                    height: auto;
-                }
-
-                p {
-                    font-size: 0.8em;
-                    color: $color2;
-                    line-height: 30px;
-                    
-                    width: 100%;
-                    margin: 0;
-                    background-color: $color9;
-                    text-indent: 1%;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
 
                     /* Album image*/
                     img {
                         float: left;
-                        width: 21%;
-                        margin: 0 0.5em 0 0;
+                        width: 31%;
+                        margin: 0 0.25em 1em 0;
                         display: block;
                     }
-
-                    /* Album info*/
-                    .product-box-cartinfo {
-                        width: 78%;
-                        float: left;
-                        padding-left: 1%;
-                        display: block;
-                    }
-
+                    
                     /* Album artist and name*/
                     figcaption {
-                        width: 100%;
+                        width: 66%;
                         display: inline-block;
-                        clear: both;
+                        
 
                         ul.product-box-info {
                             width: 100%;
+                            margin:0;
+                            padding:0;
 
                             li {
                                 display: block;
-                                padding: 0;
-                                
+                                padding: 0;                                
                                 color: $color2;
-                                line-height: 30px;
-                                height: 30px;
-                                text-transform: uppercase;
+                                height: auto;
+                                
                                 font-weight: normal;
                                 background-color: $color5;
                                 width: 100%;
-
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                    line-height: 30px;
-                                    margin: 0;
-                                    height: auto;
-                                    padding-left: 0.5em;
-                                }
+                                line-height: 25px;                                
+                                margin-bottom:0.2em;                                
+                                
                             }
                         }
                     }
                 }
 
-                form#addcartbtn {
+                form#to_album_btn {
                     display: block;
                     width: 100%;
-                    margin-top: 0.5em;
+                    clear:both;                    
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     display: block;
                     background-color: $color1;
                     margin: 0;
                     width: 100%;
                     height: 40px;
-                    line-height: 40px;
+                    line-height: unset;
                     color: $color2;
                     border: none;
-                    float: left;
                     font-size: 1em;
                     cursor: pointer;
-                    padding: 0;
-
-                    border: none;
-                    text-align: center;
-                    margin-bottom: 10px;
-
+                    padding: 0;                    
+                    text-align: center;                    
                     &:hover {
                         background-color: $color4;
                         text-decoration: none !important;
@@ -907,8 +839,22 @@
                 display: block;
                 font-weight: normal;
 
-                figure.product-box-img {
+                // .parent {
+                //     display: grid;
+                //     grid-template-columns: repeat(5, 1fr);
+                //     grid-template-rows: repeat(5, 1fr);
+                //     grid-column-gap: 0px;
+                //     grid-row-gap: 0px;
+                //     }
+                    
+                //     .div1 { grid-area: 1 / 1 / 3 / 3; }
+                //     .div2 { grid-area: 1 / 3 / 2 / 6; }
+                //     .div3 { grid-area: 2 / 3 / 3 / 6; }
+                //     .div4 { grid-area: 3 / 1 / 4 / 6; }
+                //     .div5 { grid-area: 4 / 1 / 5 / 6; }
+                //     .div6 { grid-area: 5 / 1 / 6 / 6; }
 
+                figure.product-info {
 
                     img {
                         width: 10%;
@@ -927,8 +873,7 @@
 
                             li {
                                 display: inline-block;
-                                padding: 0;
-                                
+                                padding: 0;                                
                                 color: $color2;
                                 line-height: 35px;
                                 height: 35px;
@@ -960,7 +905,6 @@
                                     border-right: solid 1px #333;
                                 }
                             }
-
                             ul {
                                 margin: 0.5em 0;
                                 
@@ -973,192 +917,188 @@
                             }
                         }
 
-                        div.audio_controls {
-                            
-                            height: auto;
-                            display: -webkit-flex;
-                            display: -ms-flexbox;
-                            display: flex;
-                            -webkit-flex-flow: column;
-                            -ms-flex-flow: column;
-                            flex-flow: column;
-                            -webkit-justify-content: space-between;
-                            -ms-flex-pack: justify;
-                            justify-content: space-between;
-                            h1.trackName{
-                                line-height: 40px;
-                                text-indent: 0;
-                                width: 100%;
-                                margin: 0;
-                                display: block;
-                                height: auto;
-                                padding: 0;
-                                color:$color2;
-                                font-size:1.3m;
-                                
-
-
-
-                            }
-                            div.audiocntrl_containers{
-                                height:auto;
-                                display:flex;
-                                margin-bottom:0.5em;
-                            
-                                .player-button {
-                                    width: 20%;
-                                    flex: 0 1 auto;
-                                    text-align: center;
-                                    height: 50px;
-                                    line-height: 50px;
-                                    
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 2em;
-                                        display: block;
-                                        height: 100%;
-                                        text-align: center;
-                                        width:98%;
-                                        line-height: 50px;
-                                        background-color: $color7;
-                                        color: $color2;
-
-                                        &:hover {
-                                            font-size: 2.1em;
-                                            background-color: $color2;
-                                            color: $color7;
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    height: 50px;
-                                    
-                                    
-                                    div.load_progress {
-                                        width: 100%;
-                                        background-color: $color1;
-                                        height: 100%;
-                                        
-                                    }
-
-                                    div.play_progress {
-                                        width: 100%;
-                                        cursor: pointer;
-                                        background-color: $color1;
-                                        height: 100%;
-                                    }
-                                }
-
-
-                                div.current_time,
-                                div.duration {
-                                    font-family:monospace;
-                                    width: 15%;
-                                    line-height: 50px;
-                                    letter-spacing:0.15em;
-                                    text-align:center;
-                                    background-color:$color7;
-                                    text-shadow:none;
-                                    font-size: 1.1em;
-                                }
-                                                                    
-
-                                div.audio_volume {
-                                    width: 40%;
-                                    height: 50px;
-                                    display: flex;
-
-                                    div.VolumeBg {
-                                        width: 88%;
-                                        height: 100%;
-                                        background-color:$color9;
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        display: block;
-                                        background-color:$color2;
-                                        height: 100%;
-                                        cursor: pointer;
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 12%;
-                                        height: 100%;
-                                        background-color:$color7;
-                                        i.fa-volume-up {
-                                            display: block;
-                                            
-                                            width: 100%;
-                                            text-align: center;
-                                            line-height:50px;
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            background-color: $color9;
-                            color: $color2;
-                            width: 100%;
-                            display: block;
-                            margin: 0;
-                            line-height: 35px;
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            padding:0;
-
-                            li{
-                                display:flex;
-                                line-height:40px;
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:10%;
-
-                                }
-                                span{
-
-                                    width:75%;
-
-                                }
-
-                                span:last-of-type{
-                                    background-color: $color7;
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        text-align: center;
-                                        display: block;
-                                        line-height: 40px;
-                                        font-size:1.2em;
-                                        &:hover{
-                                            background: color $color2;;
-                                            color:$color7;
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {                            
+                    height: auto;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-flow: column;
+                    -ms-flex-flow: column;
+                    flex-flow: column;
+                    -webkit-justify-content: space-between;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    h1.trackName{
+                        line-height: 40px;
+                        text-indent: 0;
+                        width: 100%;
+                        margin: 0;
+                        display: block;
+                        height: auto;
+                        padding: 0;
+                        color:$color2;
+                        font-size:1.3m;
+
+                    }
+                    div.audiocntrl_containers{
+                        height:auto;
+                        display:flex;
+                        margin-bottom:0.5em;
+                    
+                        .player-button {
+                            width: 20%;
+                            flex: 0 1 auto;
+                            text-align: center;
+                            height: 50px;
+                            line-height: 50px;
+                            
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 2em;
+                                display: block;
+                                height: 100%;
+                                text-align: center;
+                                width:98%;
+                                line-height: 50px;
+                                background-color: $color7;
+                                color: $color2;
+
+                                &:hover {
+                                    font-size: 2.1em;
+                                    background-color: $color2;
+                                    color: $color7;
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            height: 50px;
+                            
+                            
+                            div.load_progress {
+                                width: 100%;
+                                background-color: $color1;
+                                height: 100%;
+                                
+                            }
+
+                            div.play_progress {
+                                width: 100%;
+                                cursor: pointer;
+                                background-color: $color1;
+                                height: 100%;
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            font-family:monospace;
+                            width: 15%;
+                            line-height: 50px;
+                            letter-spacing:0.15em;
+                            text-align:center;
+                            background-color:$color7;
+                            text-shadow:none;
+                            font-size: 1.1em;
+                        }                                                                    
+
+                        div.audio_volume {
+                            width: 40%;
+                            height: 50px;
+                            display: flex;
+
+                            div.VolumeBg {
+                                width: 88%;
+                                height: 100%;
+                                background-color:$color9;
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                display: block;
+                                background-color:$color2;
+                                height: 100%;
+                                cursor: pointer;
+                            }
+
+                            div.VolumeImg {
+                                width: 12%;
+                                height: 100%;
+                                background-color:$color7;
+                                i.fa-volume-up {
+                                    display: block;
+                                    
+                                    width: 100%;
+                                    text-align: center;
+                                    line-height:50px;
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    background-color: $color9;
+                    color: $color2;
+                    width: 100%;
+                    display: block;
+                    margin: 0;
+                    line-height: 35px;
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    padding:0;
+
+                    li{
+                        display:flex;
+                        line-height:40px;
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:10%;
+
+                        }
+                        span{
+
+                            width:75%;
+
+                        }
+
+                        span:last-of-type{
+                            background-color: $color7;
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                text-align: center;
+                                display: block;
+                                line-height: 40px;
+                                font-size:1.2em;
+                                &:hover{
+                                    background: color $color2;;
+                                    color:$color7;
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
             }
         }
 
@@ -1925,57 +1865,30 @@
 
             
             .product-box {
-                min-height: 220px;
-                margin: 0.5em;
+                min-height: 220px;                
                 width: 31%;
-
-                h4 {
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.9em;
-                }
-
-                h3 {
-                    font-size: 0.9em;
-                }
-
-                p {
-                    font-size: 0.8em;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
-                        width: 21%;
+                        width: 31%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 78%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
-
+                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
                                 font-size: 0.9em;
-
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
                     line-height: 40px;
 
@@ -1988,7 +1901,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 11%;
                         
@@ -2028,132 +1941,133 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.3em;
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 18%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 2em;
-                                        
-
-                                        &:hover {
-                                            font-size: 2.1em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;                                       
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-                                
-
-                                div.audio_volume {
-                                    width: 45%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 90%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 10%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:10%;
-
-                                }
-                                span{
-
-                                    width:75%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.3em;
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 18%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 2em;
+                                
+
+                                &:hover {
+                                    font-size: 2.1em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;                                       
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+                        
+
+                        div.audio_volume {
+                            width: 45%;
+                            
+
+                            div.VolumeBg {
+                                width: 90%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 10%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:10%;
+
+                        }
+                        span{
+
+                            width:75%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -2650,54 +2564,32 @@
             
 
             .product-box {
-                min-height: 190px;
-                margin: 0.5em;
+                min-height: 180px;
                 width: 31%;
 
-                h3 {
-                    font-size: 0.9em;
-                }
 
-                h4 {
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.85em;
-                }
-
-                p {
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
-                        width: 21%;
+                        width: 31%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 76%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
+                                font-size:0.8em;
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
                     line-height: 40px;
 
@@ -2710,15 +2602,14 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 11%;
                         
                     }
 
                     figcaption {
-                        width: 87%;
-                        
+                        width: 87%;                        
 
                         ul.product-box-info {
                             
@@ -2750,137 +2641,138 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.2em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 18%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 2em;
-                                        
-
-                                        &:hover {
-                                            font-size: 2.1em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                
-                                    
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                    
-                                }
-                                
-
-                                div.audio_volume {
-                                    width: 46%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 86%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 12%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:10%;
-
-                                }
-                                span{
-
-                                    width:75%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.2em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 18%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 2em;
+                                
+
+                                &:hover {
+                                    font-size: 2.1em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        
+                            
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                            
+                        }
+                        
+
+                        div.audio_volume {
+                            width: 46%;
+                            
+
+                            div.VolumeBg {
+                                width: 86%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 12%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:10%;
+
+                        }
+                        span{
+
+                            width:75%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -3360,55 +3252,29 @@
             
 
             .product-box {
-                min-height: 180px;
-                margin: 0.5em;
-                width: 31%;
+                
 
-                h3 {
-                    font-size: 0.9em;
-                }
-
-                h4 {
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.8em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
-
-                    .product-box-cartinfo {
-                        width: 67%;
-                        
-                    }
+                    
 
                     figcaption {
-                        width: 100%;
-                        
+                        width:69%;                        
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
                     line-height: 40px;
 
@@ -3421,7 +3287,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 12%;
                         
@@ -3461,136 +3327,137 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.15em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 16%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 2em;
-                                        
-
-                                        &:hover {
-                                            font-size: 2.1em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                
-                                    
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-                                
-
-                                div.audio_volume {
-                                    width: 52%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 87%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 13%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.85em;
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:13%;
-
-                                }
-                                span{
-
-                                    width:72%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.15em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 16%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 2em;
+                                
+
+                                &:hover {
+                                    font-size: 2.1em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        
+                            
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+                        
+
+                        div.audio_volume {
+                            width: 52%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.85em;
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:13%;
+
+                        }
+                        span{
+
+                            width:72%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -4027,55 +3894,29 @@
             
 
             .product-box {
-                min-height: 180px;
-                margin: 0.5em;
-                width: 31%;
-
-                h3 {
-                    font-size: 0.8em;
-                }
-
-                h4 {
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.75em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+               
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 67%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -4087,7 +3928,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
 
                     img {
                         width: 20%;
@@ -4131,135 +3972,136 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                            margin:0;                               
-                            h1.trackName{
-                                font-size: 1.15em;
-                                line-height: 50px;
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.8em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.9em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                
-                                    
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-                                
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 87%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 13%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.85em;
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:13%;
-
-                                }
-                                span{
-
-                                    width:72%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                    margin:0;                               
+                    h1.trackName{
+                        font-size: 1.15em;
+                        line-height: 50px;
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.8em;
+                                
+
+                                &:hover {
+                                    font-size: 1.9em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        
+                            
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+                        
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.85em;
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:13%;
+
+                        }
+                        span{
+
+                            width:72%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
                 
             }
         }
@@ -4696,64 +4538,215 @@
             margin: 0;
             padding: 0;
 
-            
-
             .product-box {
-                min-height: 180px;
-                margin: 0.5em;
-                width: 31%;
-
-                h3 {
-                    font-size: 0.6em;
-                }
-
-                h4 {
-                    display: block;
-                }
-
-                span {
-                    font-size: 0.55em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                
+                figure.product-info {
                     img {
                         width: 37%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
+                        width: 66%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                font-size:0.85em;
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
                         text-decoration: none !important;
                     }
                 }
+            }
+
+            /*results.show page*/
+            .product-box-large {
+
+                figure.product-info {
+
+                    img {
+                        width: 20%;
+                        margin: 1em auto;
+                        display: block;
+                    }
+
+                    figcaption {
+                        width: 100%;
+                        
+
+                        ul.product-box-info {
+                            
+
+                            li {
+                                
+                                font-size: 0.8em;
+                                
+
+                                span {
+                                    width: 85%;
+                                    
+                                }
+
+                                span:first-of-type {
+                                    
+                                    width: 14%;
+                                    
+                                }
+                            }
+
+                            ul {
+                                margin: 0.5em 0;
+                                
+
+                                li {
+                                    display: inline-block;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.audio_controls {
+                    margin:0;                               
+                    h1.trackName{
+                        font-size: 1.15em;
+                        line-height: 50px;
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.8em;
+                                
+
+                                &:hover {
+                                    font-size: 1.9em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        
+                            
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+                        
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.85em;
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:13%;
+
+                        }
+                        span{
+
+                            width:72%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
+                
             }
         }
 
@@ -5181,56 +5174,29 @@
             
 
             .product-box {
-                min-height: 205px;
-                margin: 0.25em;
+                min-height: 205px;                
                 width: 48%;
 
-                h3 {
-                    font-size: 0.8em;
-                }
-
-                h4 {
-                    display: block;
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.8em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 28%;
                         
                     }
-
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
+                        width: 70%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -5242,7 +5208,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 20%;
                         
@@ -5285,135 +5251,136 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.1em;
-                                
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.7em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.8em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    font-size:0.8em;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 87%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 13%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.80em;
-                                margin-bottom:0.5em;
-                                span:first-of-type{
-
-                                    width:13%;
-
-                                }
-                                span{
-
-                                    width:72%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.1em;
+                        
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.7em;
+                                
+
+                                &:hover {
+                                    font-size: 1.8em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            font-size:0.8em;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.80em;
+                        margin-bottom:0.5em;
+                        span:first-of-type{
+
+                            width:13%;
+
+                        }
+                        span{
+
+                            width:72%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -5855,51 +5822,28 @@
             .product-box {
                 min-height: 205px;
 
-                h3 {
-                    font-size: 0.75em;
-                }
-
-                h4 {
-                    display: block;
-                }
-
-                span {
-                    font-size: 0.75em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
+                        width: 69%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -5911,7 +5855,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 22%;
 
@@ -5952,133 +5896,134 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.05em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.7em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.8em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    font-size:1em;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 87%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 13%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.5em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.70em;
-                                
-                                span:first-of-type{
-
-                                    width:15%;
-
-                                }
-                                span{
-
-                                    width:70%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.05em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.7em;
+                                
+
+                                &:hover {
+                                    font-size: 1.8em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            font-size:1em;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.5em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.70em;
+                        
+                        span:first-of-type{
+
+                            width:15%;
+
+                        }
+                        span{
+
+                            width:70%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -6503,51 +6448,27 @@
             .product-box {
                 width: 48%;
 
-                h3 {
-                    font-size: 0.75em;
-                }
-
-                h4 {
-                    display: block;
-                }
-
-                span {
-                    font-size: 0.65em;
-                }
-
-                p {
-                    font-size: 0.65em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
-                    figcaption {
-                        width: 100%;
+                    
+                    figcaption {                        
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
                     font-size: 0.9em;
 
@@ -6560,7 +6481,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 25%;
 
@@ -6601,132 +6522,132 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.05em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.7em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.8em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 87%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 13%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.70em;
-                                
-                                span:first-of-type{
-
-                                    width:17%;
-
-                                }
-                                span{
-
-                                    width:69%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.05em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.7em;
+                                
+
+                                &:hover {
+                                    font-size: 1.8em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 87%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 13%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.70em;
+                        
+                        span:first-of-type{
+
+                            width:17%;
+
+                        }
+                        span{
+
+                            width:69%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }                   
 
             }
         }
@@ -7226,54 +7147,30 @@
 
             .product-box {
                 min-height: 190px;
-                margin: 0.5em;
+                
                 width: 46%;
 
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    font-size: 1em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -7285,7 +7182,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 25%;
 
@@ -7294,7 +7191,6 @@
 
                     figcaption {
                         width: 100%;
-                        
 
                         ul.product-box-info {
                             
@@ -7326,134 +7222,132 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 85%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 15%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.70em;
-                                
-                                span:first-of-type{
-
-                                    width:17%;
-
-                                }
-                                span{
-
-                                    width:69%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
 
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.1em;
+                        
+                                                            
 
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 85%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 15%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.70em;
+                        
+                        span:first-of-type{
+
+                            width:17%;
+
+                        }
+                        span{
+
+                            width:69%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
             }
         }
 
@@ -8002,56 +7896,31 @@
 
             
             .product-box {
-                min-height: 190px;
-                margin: 0.5em;
+                                
                 width: 46%;
+                
 
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    font-size: 0.9em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 65%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
                                 font-size: 0.8em;
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -8063,7 +7932,8 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
+
                     img {
                         width: 30%;
 
@@ -8104,134 +7974,134 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1.1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 15%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    font-size:0.7em;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 55%;
-                                    
-
-                                    div.VolumeBg {
-                                        width: 85%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 15%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.70em;
-                                
-                                span:first-of-type{
-
-                                    width:17%;
-
-                                }
-                                span{
-
-                                    width:69%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
 
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1.1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 15%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            font-size:0.7em;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 55%;
+                            
+
+                            div.VolumeBg {
+                                width: 85%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 15%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.70em;
+                        
+                        span:first-of-type{
+
+                            width:17%;
+
+                        }
+                        span{
+
+                            width:69%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+                    
             }
         }
 
@@ -8729,55 +8599,29 @@
 
             
             .product-box {
-                min-height: 190px;
-                margin: 0.5em;
+                                
                 width: 70%;
-
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    font-size: 0.8em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 30%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 65%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                               
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                font-size:0.8em;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
                     font-size: 1em;
 
@@ -8790,7 +8634,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 30%;
 
@@ -8799,7 +8643,6 @@
 
                     figcaption {
                         width: 100%;
-                        
 
                         ul.product-box-info {
                             
@@ -8832,133 +8675,132 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                flex-flow: row wrap;                                     
-                            
-                                .player-button {
-                                    width: 33.3%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 100%;
-                                    margin-top:0.5em;
-
-                                    div.VolumeBg {
-                                        width: 80%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 20%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.70em;
-                                
-                                span:first-of-type{
-
-                                    width:17%;
-
-                                }
-                                span{
-
-                                    width:69%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:15%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
 
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                        flex-flow: row wrap;                                     
+                    
+                        .player-button {
+                            width: 33.3%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 100%;
+                            margin-top:0.5em;
+
+                            div.VolumeBg {
+                                width: 80%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 20%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.70em;
+                        
+                        span:first-of-type{
+
+                            width:17%;
+
+                        }
+                        span{
+
+                            width:69%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:15%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
             }
         }
 
@@ -9390,57 +9232,30 @@
 
             
             .product-box {
-                min-height: 190px;
-                margin: 0.5em;
+                                
                 width: 75%;
-
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    display: block;
-                    margin: 0.5em 0;
-                    font-size: 0.8em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 27%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 61%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
+                        width: 66%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -9452,7 +9267,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 35%;
 
@@ -9493,133 +9308,132 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 33.3%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 100%;
-                                    margin-top:0.5em;
-
-                                    div.VolumeBg {
-                                        width: 80%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 20%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.6em;
-                                
-                                span:first-of-type{
-
-                                    width:20%;
-
-                                }
-                                span{
-
-                                    width:60%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:20%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
 
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 33.3%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 100%;
+                            margin-top:0.5em;
+
+                            div.VolumeBg {
+                                width: 80%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 20%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.6em;
+                        
+                        span:first-of-type{
+
+                            width:20%;
+
+                        }
+                        span{
+
+                            width:60%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:20%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
             }
         }
 
@@ -10069,55 +9883,30 @@
 
             
             .product-box {
-                min-height: 190px;
-                margin: 0.5em;
+                                
                 width: 80%;
+                                
 
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    font-size: 0.8em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 27%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 69%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -10129,7 +9918,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 35%;
 
@@ -10170,132 +9959,133 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                    
-                            
-                                .player-button {
-                                    width: 33.3%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 100%;
-                                    margin-top:0.5em;
-
-                                    div.VolumeBg {
-                                        width: 80%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 20%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.4em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.6em;
-                                
-                                span:first-of-type{
-
-                                    width:20%;
-
-                                }
-                                span{
-
-                                    width:60%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:20%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                            
+                    
+                        .player-button {
+                            width: 33.3%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 100%;
+                            margin-top:0.5em;
+
+                            div.VolumeBg {
+                                width: 80%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 20%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.4em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.6em;
+                        
+                        span:first-of-type{
+
+                            width:20%;
+
+                        }
+                        span{
+
+                            width:60%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:20%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -10733,56 +10523,30 @@
             
             .product-box {
                 min-height: 180px;
-                margin: 0.5em;
+                
                 width: 80%;
+                
 
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-                    display: block;
-                   
-                    font-size: 0.8em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 27%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 69%;
-                       
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
-                        
+                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -10794,7 +10558,7 @@
             /*results.show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 40%;
 
@@ -10835,132 +10599,133 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                        
-                            
-                                .player-button {
-                                    width: 33.3%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 100%;
-                                    margin-top:0.5em;
-
-                                    div.VolumeBg {
-                                        width: 80%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 20%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.3em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.55em;
-                                
-                                span:first-of-type{
-
-                                    width:20%;
-
-                                }
-                                span{
-
-                                    width:60%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:20%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                                
+                    
+                        .player-button {
+                            width: 33.3%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 100%;
+                            margin-top:0.5em;
+
+                            div.VolumeBg {
+                                width: 80%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 20%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.3em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.55em;
+                        
+                        span:first-of-type{
+
+                            width:20%;
+
+                        }
+                        span{
+
+                            width:60%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:20%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+                    
 
             }
         }
@@ -11370,56 +11135,31 @@
             }
 
             .product-box {
-                min-height: 180px;
-                margin: 0.5em;
+                                
                 width: 85%;
 
-                h3 {
-                    font-size: 0.7em;
-                }
-
-                h4 {
-
-                    font-size: 0.75em;
-                }
-
-                span {
-                    font-size: 0.7em;
-                }
-
-                p {
-                    font-size: 0.7em;
-                    line-height: 30px;
-                }
-
-                figure.product-box-img {
+                
+                figure.product-info {
                     img {
                         width: 27%;
                         
                     }
 
-                    .product-box-cartinfo {
-                        width: 69%;
-                        
-                    }
-
+                    
                     figcaption {
-                        width: 100%;
+                        
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                span {
-                                    width: 100%;
-                                    height: 100%;
-                                }
+                                width: 100%;
                             }
                         }
                     }
                 }
 
-                input.addcartbtn {
+                input.to_album_btn {
                     height: 40px;
 
                     &:hover {
@@ -11428,10 +11168,10 @@
                 }
             }
 
-            /*results.show page*/
+            /*results show page*/
             .product-box-large {
 
-                figure.product-box-img {
+                figure.product-info {
                     img {
                         width: 45%;
 
@@ -11439,8 +11179,7 @@
                     }
 
                     figcaption {
-                        width: 100%;
-                        
+                        width: 100%;                        
 
                         ul.product-box-info {
                             
@@ -11473,132 +11212,133 @@
                                 }
                             }
                         }
-
-                        div.audio_controls {
-                                                            
-                            h1.trackName{
-                                font-size: 1em;
-                                
-                                                                    
-
-                            }
-                            div.audiocntrl_containers{
-                                                                        
-                            
-                                .player-button {
-                                    width: 33.3%;
-                                                                            
-                                    
-                                    cursor: pointer;
-
-                                    i {
-                                        font-size: 1.6em;
-                                        
-
-                                        &:hover {
-                                            font-size: 1.7em;
-                                            
-                                        }
-                                    }
-                                }
-
-                                div.progress {
-                                    width: 70%;
-                                    
-                                    
-                                    
-                                    .load_progress {
-                                        width: 100%;
-                                        
-                                        
-                                    }
-
-                                    .play_progress {
-                                        width: 100%;
-                                        
-                                    }
-                                }
-
-                                div.current_time,
-                                div.duration {
-                                    width: 15%;
-                                    
-                                }
-
-                                div.audio_volume {
-                                    width: 100%;
-                                    margin-top:0.5em;
-
-                                    div.VolumeBg {
-                                        width: 80%;
-                                        
-                                    }
-
-                                    div.volume {
-                                        width: 100%;
-                                        
-                                    }
-
-                                    div.VolumeImg {
-                                        width: 20%;
-                                        
-
-                                        i.fa-volume-up {
-                                            
-                                            font-size:1.3em;
-
-                                            &:before {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-
-                        span.result_label {
-                            
-                            text-indent: 1em;
-                        }
-
-                        ul.audio-tracklist{
-                            margin:0;
-                            
-
-                            li{
-                                font-size: 0.55em;
-                                
-                                span:first-of-type{
-
-                                    width:20%;
-
-                                }
-                                span{
-
-                                    width:60%;
-
-                                }
-
-                                span:last-of-type{
-                                    
-                                    width:20%;
-                                    cursor:pointer;
-                                    i{
-                                        
-                                        line-height: 40px;
-                                        &:hover{
-                                            background-color:#fff;
-                                            
-                                        }
-                                    }
-
-                                }
-
-                            }
-
-                        }
                     }
                 }
+
+                div.audio_controls {
+                                                    
+                    h1.trackName{
+                        font-size: 1em;
+                        
+                                                            
+
+                    }
+                    div.audiocntrl_containers{
+                                                                
+                    
+                        .player-button {
+                            width: 33.3%;
+                                                                    
+                            
+                            cursor: pointer;
+
+                            i {
+                                font-size: 1.6em;
+                                
+
+                                &:hover {
+                                    font-size: 1.7em;
+                                    
+                                }
+                            }
+                        }
+
+                        div.progress {
+                            width: 70%;
+                            
+                            
+                            
+                            .load_progress {
+                                width: 100%;
+                                
+                                
+                            }
+
+                            .play_progress {
+                                width: 100%;
+                                
+                            }
+                        }
+
+                        div.current_time,
+                        div.duration {
+                            width: 15%;
+                            
+                        }
+
+                        div.audio_volume {
+                            width: 100%;
+                            margin-top:0.5em;
+
+                            div.VolumeBg {
+                                width: 80%;
+                                
+                            }
+
+                            div.volume {
+                                width: 100%;
+                                
+                            }
+
+                            div.VolumeImg {
+                                width: 20%;
+                                
+
+                                i.fa-volume-up {
+                                    
+                                    font-size:1.3em;
+
+                                    &:before {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                span.result_label {
+                    
+                    text-indent: 1em;
+                }
+
+                ul.audio-tracklist{
+                    margin:0;
+                    
+
+                    li{
+                        font-size: 0.55em;
+                        
+                        span:first-of-type{
+
+                            width:20%;
+
+                        }
+                        span{
+
+                            width:60%;
+
+                        }
+
+                        span:last-of-type{
+                            
+                            width:20%;
+                            cursor:pointer;
+                            i{
+                                
+                                line-height: 40px;
+                                &:hover{
+                                    background-color:#fff;
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+                    
 
             }
         }

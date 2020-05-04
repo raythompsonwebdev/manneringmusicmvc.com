@@ -25,36 +25,30 @@ if (!isset($_GET['submit'])) {
                 
         <div class="product-box">
 
-            <figure class="product-box-img">
+            <figure class="product-info">
                 
                 <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
                 
-                <div class="product-box-cartinfo">
-                    <h4>&pound;<?= $row['price']; ?></h4>
-                    <span><?= $row['album']; ?></span>
-                </div>
+                <!-- <div class="product-box-cartinfo">
+                    
+                </div> -->
                 
                 <figcaption >
                     
                     <ul class="product-box-info">
-                    <li>
-                        
-                        <span><?= $row['artist_name']; ?></span>
-                    </li>
-                                       
+                        <li><?= $row['artist_name']; ?></li>
+                        <li><?= $row['album']; ?></li>
+                        <li>&pound;<?= $row['price']; ?></li>
                     </ul>
                 
                 </figcaption>
           
-            </figure>
+            </figure>            
 
-            
-
-            <form method="get" action="/singleresult" id="addcartbtn">
-            <input type="submit" class="addcartbtn" value="See more.." />
+            <form method="get" action="/singleresult" id="to_album_btn">
+            <input type="submit" class="to_album_btn" value="See more.." />
             <input type="hidden" name="albumid" value="<?=$row['albumid'] ?? ''?>">
-            <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>">
-                     
+            <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>">                    
             </form>
             
         </div>
