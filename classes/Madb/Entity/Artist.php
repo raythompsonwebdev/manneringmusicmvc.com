@@ -9,7 +9,7 @@ class Artist
     private $audioTable;
     
 
-    public function __construct(\Ninja\DatabaseTable $audioTable, \Ninja\DatabaseTable $albumsTable)
+    public function __construct(\Mannering\DatabaseTable $audioTable, \Mannering\DatabaseTable $albumsTable)
     {
         $this->albumsTable = $albumsTable;
         $this->audioTable = $audioTable;

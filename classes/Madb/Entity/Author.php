@@ -17,7 +17,7 @@ class Author
     public $password;
     private $reviewsTable;
 
-    public function __construct(\Ninja\DatabaseTable $reviewTable)
+    public function __construct(\Mannering\DatabaseTable $reviewTable)
     {
         $this->reviewsTable = $reviewTable;
     }

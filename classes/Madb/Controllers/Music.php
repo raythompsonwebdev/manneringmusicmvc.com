@@ -2,7 +2,7 @@
 
 namespace Madb\Controllers;
 
-use \Ninja\DatabaseTable;
+use \Mannering\DatabaseTable;
 
 class Music
 {

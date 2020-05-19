@@ -1,8 +1,8 @@
 <?php
 namespace Madb\Controllers;
 
-use \Ninja\DatabaseTable;
-use \Ninja\Authentication;
+use \Mannering\DatabaseTable;
+use \Mannering\Authentication;
 
 class Review
 {

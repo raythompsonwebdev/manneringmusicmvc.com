@@ -1,7 +1,7 @@
 <?php
 namespace Madb;
 
-class MadbRoutes implements \Ninja\Routes
+class MadbRoutes implements \Mannering\Routes
 {
 
     private $albumsTable;
@@ -19,7 +19,7 @@ class MadbRoutes implements \Ninja\Routes
         include __DIR__ . '/../../includes/DatabaseConnection.php';
 
         //Music
-        $this->albumsTable = new \Ninja\DatabaseTable(
+        $this->albumsTable = new \Mannering\DatabaseTable(
             $pdo,
             'album',
             'albumid',
@@ -27,7 +27,7 @@ class MadbRoutes implements \Ninja\Routes
             [&$this->artistsTable, &$this->audioTable]
         );
 
-        $this->artistsTable = new \Ninja\DatabaseTable(
+        $this->artistsTable = new \Mannering\DatabaseTable(
             $pdo,
             'artist',
             'id',
@@ -35,7 +35,7 @@ class MadbRoutes implements \Ninja\Routes
             [&$this->albumsTable, &$this->audioTable]
         );
 
-        $this->audioTable = new \Ninja\DatabaseTable(
+        $this->audioTable = new \Mannering\DatabaseTable(
             $pdo,
             'audio',
             'audioid',
@@ -43,7 +43,7 @@ class MadbRoutes implements \Ninja\Routes
             [&$this->albumsTable, &$this->artistsTable]
         );
 
-        $this->reviewsTable = new \Ninja\DatabaseTable(
+        $this->reviewsTable = new \Mannering\DatabaseTable(
             $pdo,
             'review',
             'id',
@@ -51,7 +51,7 @@ class MadbRoutes implements \Ninja\Routes
             [&$this->authorsTable, &$this->reviewCategoriesTable]
         );
 
-         $this->authorsTable = new \Ninja\DatabaseTable(
+         $this->authorsTable = new \Mannering\DatabaseTable(
              $pdo,
              'author',
              'id',
@@ -59,7 +59,7 @@ class MadbRoutes implements \Ninja\Routes
              [&$this->reviewsTable]
          );
          
-        $this->categoriesTable = new \Ninja\DatabaseTable(
+        $this->categoriesTable = new \Mannering\DatabaseTable(
             $pdo,
             'category',
             'id',
@@ -67,13 +67,13 @@ class MadbRoutes implements \Ninja\Routes
             [&$this->reviewsTable, &$this->reviewCategoriesTable]
         );
          
-        $this->reviewCategoriesTable = new \Ninja\DatabaseTable(
+        $this->reviewCategoriesTable = new \Mannering\DatabaseTable(
             $pdo,
             'review_category',
             'categoryId'
         );
 
-        $this->authentication = new \Ninja\Authentication(
+        $this->authentication = new \Mannering\Authentication(
             $this->authorsTable,
             'email',
             'password'
@@ -276,7 +276,7 @@ class MadbRoutes implements \Ninja\Routes
         return $routes;
     }
 
-    public function getAuthentication(): \Ninja\Authentication
+    public function getAuthentication(): \Mannering\Authentication
     {
         return $this->authentication;
     }

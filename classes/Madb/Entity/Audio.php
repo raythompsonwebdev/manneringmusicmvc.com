@@ -13,7 +13,7 @@ class Audio
     private $albumsTable;
     private $artistsTable;
 
-    public function __construct(\Ninja\DatabaseTable $albumsTable, \Ninja\DatabaseTable $artistsTable)
+    public function __construct(\Mannering\DatabaseTable $albumsTable, \Mannering\DatabaseTable $artistsTable)
     {
         
         $this->albumsTable = $albumsTable;

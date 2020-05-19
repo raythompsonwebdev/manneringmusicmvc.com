@@ -15,7 +15,7 @@ class Album
 
         
     
-    public function __construct(\Ninja\DatabaseTable $artistsTable, \Ninja\DatabaseTable $audioTable)
+    public function __construct(\Mannering\DatabaseTable $artistsTable, \Mannering\DatabaseTable $audioTable)
     {
         
         $this->artistsTable = $artistsTable;

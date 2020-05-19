@@ -11,7 +11,7 @@ class Review
     private $author;
     private $reviewCategoriesTable;
 
-    public function __construct(\Ninja\DatabaseTable $authorsTable, \Ninja\DatabaseTable $reviewCategoriesTable)
+    public function __construct(\Mannering\DatabaseTable $authorsTable, \Mannering\DatabaseTable $reviewCategoriesTable)
     {
         $this->authorsTable = $authorsTable;
         $this->reviewCategoriesTable = $reviewCategoriesTable;
