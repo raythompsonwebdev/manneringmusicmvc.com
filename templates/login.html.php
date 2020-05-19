@@ -13,5 +13,5 @@
     <br>
     <input type="submit" name="login" value="Log in" id="register_btn">
 </form>
-<p class="regformlink">Don't have an account? <a href="/register">Click here to register an account</a></p>
+<p class="regformlink">Don't have an account? <a href="author/register">Click here to register an account</a></p>
 </section>
