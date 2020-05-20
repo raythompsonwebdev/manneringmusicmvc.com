@@ -1,7 +1,7 @@
 <?php
 
 namespace Madb\Controllers;
-
+use \Mannering\DatabaseTable;
 
 class Music
 {
@@ -11,7 +11,7 @@ class Music
     private $audioTable;
     
 
-    public function __construct(\Mannering\DatabaseTable $albumsTable, \Mannering\DatabaseTable $audioTable, \Mannering\DatabaseTable $artistsTable)
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $audioTable, DatabaseTable $artistsTable)
     {
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
@@ -45,7 +45,7 @@ class Music
     public function video()
     {
       
-        $rapvideos = $this->findVideoByGenre('Hip Hop');
+        $rapvideos = $this->albumsTable->findVideoByGenre('Hip Hop');
           
         $countryvideos = $this->albumsTable->findVideoByGenre('Country');
       

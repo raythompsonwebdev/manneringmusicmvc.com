@@ -19,7 +19,7 @@
 
     <label for="password">Password</label>
     <input name="author[password]" id="password" type="password" value="<?=$author['password'] ?? ''?>">
- 
+ <br/>
     <input type="submit" id="register_btn" name="submit" value="Register account">
 </form>
 
