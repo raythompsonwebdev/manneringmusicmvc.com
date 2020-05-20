@@ -22,6 +22,8 @@ if(isset($_POST['songId'])) {
 
 	foreach($resultArray as $key => $value) {
 
+		
+
 		array_push($array, $value);
 	}
 	
