@@ -205,7 +205,7 @@ class DatabaseTable
         return $entity;
     }
 
-      /**
+    /**
      * find by genre-function
      *
      * */
@@ -242,7 +242,7 @@ class DatabaseTable
     public function findSongId($value)
     {
 
-        $query = "SELECT `audioid`, `songtitle`, `mp3_File`, `ogg_File`  FROM `audio` WHERE `albumId` = $value ";
+        $query = "SELECT `id`, `songtitle`, `mp3_File`, `ogg_File`  FROM `audio` WHERE `albumId` = $value ";
 
         $parameters = [
             'value' => $value
@@ -255,7 +255,7 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['audioid'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
+            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
         }
          
         return (object) $array;

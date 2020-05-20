@@ -1,7 +1,7 @@
 <?php
 namespace Madb\Entity;
 
-use Ninja\DatabaseTable;
+use Mannering\DatabaseTable;
 
 class Category
 {

@@ -19,8 +19,7 @@ class Artist
     {
                     
         return $this->id ;
-    }
-      
+    }      
     
     public function getAudioId()
     {

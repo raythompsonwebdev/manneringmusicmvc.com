@@ -47,7 +47,7 @@ if (!isset($_GET['submit'])) {
 
             <form method="get" action="/singleresult" id="to_album_btn">
             <input type="submit" class="to_album_btn" value="See more.." />
-            <input type="hidden" name="albumid" value="<?=$row['albumid'] ?? ''?>">
+            <input type="hidden" name="albumid" value="<?=$row['id'] ?? ''?>">
             <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>">                    
             </form>
             

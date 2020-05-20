@@ -26,12 +26,12 @@ vendor/
 .env-dev
 composer.lock
 samples/
-database.sql
+spare/*.sql
 fonts/
 .sass-cache/*
 spare/DatabaseConnection.php
 Dump20200112/
 node_modules
 php.ini
-.sass-cache/*
+.sass-cache/*.scss
 includes/ajax/

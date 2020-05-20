@@ -8,12 +8,14 @@
 
 <div class="reviews">
 
-<p><?=$totalReviews?> reviews have been submitted to the Internet Review Database.</p>
+<p><?=$totalReviews?> reviews have been submitted to the Mannering Review Database.</p>
 
 
 <?php foreach ($reviews as $review) : ?>
+
+ 
 <blockquote>
-    <?=(new \Ninja\Markdown($review->reviewtext))->toHtml()?>
+    <?=(new \Mannering\Markdown($review->reviewtext))->toHtml()?>
 
     (by <a href="mailto:<?=
     htmlspecialchars(

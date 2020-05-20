@@ -22,7 +22,7 @@ class MadbRoutes implements \Mannering\Routes
         $this->albumsTable = new \Mannering\DatabaseTable(
             $pdo,
             'album',
-            'albumid',
+            'id',
             '\Madb\Entity\Album',
             [&$this->artistsTable, &$this->audioTable]
         );
@@ -38,7 +38,7 @@ class MadbRoutes implements \Mannering\Routes
         $this->audioTable = new \Mannering\DatabaseTable(
             $pdo,
             'audio',
-            'audioid',
+            'id',
             '\Madb\Entity\Audio',
             [&$this->albumsTable, &$this->artistsTable]
         );

@@ -3,7 +3,7 @@ namespace Madb\Entity;
 
 class Audio
 {
-    public $audioid;
+    public $id;
     public $songtitle;
     public $mp3_File;
     public $ogg_File;
@@ -23,7 +23,7 @@ class Audio
     public function getAudioId()
     {
 
-        return $this->audioid;
+        return $this->id;
     }
         
     public function getArtist()

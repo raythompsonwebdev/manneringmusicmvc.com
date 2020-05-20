@@ -21,13 +21,13 @@
                         <img class="images_1_of_5" src="/assets/databasepics/<?=$rapalbum->image?>" alt="HipHopMusicAlbum">
 
                         <figcaption class="cap_1_of_5">
-                            <h3><?=$rapalbum->getArtistName()->artist_name?></h3>
+                            <h3><?=$rapalbum->getArtistId()->artist_name?></h3>
                                 <p><?=$rapalbum->album?></p>
                             <h4>&#163;<?=$rapalbum->price?></h4>
                             <!-- commented out for now.-->
                             <form method="get" action="/singleresult" id="frontform">
                                 <input type="hidden" name="artistid" value="<?=$rapalbum->artistId ?? ''?>">
-                                <input type="hidden" name="albumid" value="<?=$rapalbum->albumid ?? ''?>">
+                                <input type="hidden" name="albumid" value="<?=$rapalbum->id ?? ''?>">
                                 <input type="submit" name="submit" class="frontform" value="See more.."/>
                             </form>
                         </figcaption>
@@ -49,12 +49,12 @@
                     <img class="images_1_of_5" src="/assets/databasepics/<?=$countryalbum->image?>" alt="CountryMusicAlbum">
 
                     <figcaption class="cap_1_of_5">
-                        <h3><?=$countryalbum->getArtistName()->artist_name?></h3>
+                        <h3><?=$countryalbum->getArtistId()->artist_name?></h3>
                         <p><?=$countryalbum->album?></p>
                         <h4> &#163;<?=$countryalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
                             <input type="hidden" name="artistid" value="<?=$countryalbum->artistId ?? ''?>">
-                            <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
+                            <input type="hidden" name="albumid" value="<?=$countryalbum->id ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
                     </figcaption>
@@ -74,12 +74,12 @@
 
                     <img class="images_1_of_5" src="/assets/databasepics/<?=$jazzalbum->image?>" alt="JazzMusicAlbum">
                     <figcaption class="cap_1_of_5">
-                        <h3><?=$jazzalbum->getArtistName()->artist_name?></h3>
+                        <h3><?=$jazzalbum->getArtistId()->artist_name?></h3>
                         <p><?=$jazzalbum->album?></p>
                         <h4>&#163;<?=$jazzalbum->price?></h4>
                         <form method="get" action="/singleresult" id="frontform">
                             <input type="hidden" name="artistid" value="<?=$jazzalbum->artistId ?? ''?>">
-                            <input type="hidden" name="albumid" value="<?=$jazzalbum->albumid ?? ''?>">
+                            <input type="hidden" name="albumid" value="<?=$jazzalbum->id ?? ''?>">
                             <input type="submit" name="submit" class="frontform" value="See more.."/>
                         </form>
                     </figcaption>

@@ -9,7 +9,7 @@ if(isset($_POST['songId'])) {
 	$songId = $_POST['songId'];
 	
 			
-	$sql = 'SELECT * FROM audio WHERE audioid = :songId ';
+	$sql = 'SELECT * FROM audio WHERE id = :songId ';
 	
 	$stmt = $pdo->prepare($sql);
 

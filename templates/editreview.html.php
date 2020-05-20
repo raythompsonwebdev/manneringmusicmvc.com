@@ -1,6 +1,6 @@
 
 <section id="main_text" class="group" role="main">
-<?php if (empty($joke->id) || $user->id == $joke->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)): ?>
+<?php if (empty($review->id) || $user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)): ?>
 <form action="" id="review-edit" method="post">
 	<input type="hidden" name="review[id]" value="<?=$review->id ?? ''?>">
     <label for="reviewtext">Type your review here:</label>

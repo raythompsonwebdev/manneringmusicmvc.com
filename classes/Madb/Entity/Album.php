@@ -1,9 +1,11 @@
 <?php
 namespace Madb\Entity;
 
+use Mannering\DatabaseTable;
+
 class Album
 {
-    public $albumid;
+    public $id;
     public $album;
     public $image;
     public $price;
@@ -15,7 +17,7 @@ class Album
 
         
     
-    public function __construct(\Mannering\DatabaseTable $artistsTable, \Mannering\DatabaseTable $audioTable)
+    public function __construct(DatabaseTable $artistsTable, DatabaseTable $audioTable)
     {
         
         $this->artistsTable = $artistsTable;
@@ -25,7 +27,7 @@ class Album
     public function getAlbumId()
     {
 
-        return $this->albumid;
+        return $this->id;
     }
 
     public function getArtistId()
@@ -33,18 +35,11 @@ class Album
         
         return $this->artistsTable->findById($this->artistId);
     }
-
-    public function getArtistName()
-    {
-
-        return $this->artistsTable->findById($this->artistId);
-    }
-
-    
+      
 
     public function getSongId()
     {
 
-        return $this->audioTable->findSongId($this->albumId);
+        return $this->audioTable->findSongId($this->id);
     }
 }
