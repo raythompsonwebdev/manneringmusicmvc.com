@@ -10,7 +10,7 @@
 
       
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
-  var_dump($jsonArray);
+  
 ?>
 
 <script>
