@@ -35,3 +35,4 @@ node_modules
 php.ini
 .sass-cache/*.scss
 includes/ajax/
+spare/

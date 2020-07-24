@@ -216,7 +216,6 @@
                     color: $color2;
                     display: block;
                     font-size: 0.9em;
-                    letter-spacing: 0.2em;
                     font-weight: normal;
 
                     &:hover {
@@ -949,13 +948,11 @@
                         margin-bottom:0.5em;
                     
                         .player-button {
-                            width: 20%;
+                            width: 15%;
                             flex: 0 1 auto;
                             text-align: center;
                             height: 50px;
                             line-height: 50px;
-                            
-                            
                             cursor: pointer;
 
                             i {
@@ -1085,7 +1082,7 @@
                                 text-align: center;
                                 display: block;
                                 line-height: 40px;
-                                font-size:1.2em;
+                                font-size:190%;
                                 &:hover{
                                     background: color $color2;;
                                     color:$color7;
@@ -1954,7 +1951,7 @@
                                                             
                     
                         .player-button {
-                            width: 18%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -2656,7 +2653,7 @@
                                                             
                     
                         .player-button {
-                            width: 18%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -3342,7 +3339,7 @@
                                                             
                     
                         .player-button {
-                            width: 16%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -3429,7 +3426,7 @@
                         margin-bottom:0.5em;
                         span:first-of-type{
 
-                            width:13%;
+                            width:11%;
 
                         }
                         span{
@@ -4070,15 +4067,15 @@
 
                     li{
                         font-size: 0.85em;
-                        margin-bottom:0.5em;
+
                         span:first-of-type{
 
-                            width:13%;
+                            width:11%;
 
                         }
                         span{
 
-                            width:72%;
+                            width:74%;
 
                         }
 
@@ -4714,15 +4711,15 @@
 
                     li{
                         font-size: 0.85em;
-                        margin-bottom:0.5em;
+
                         span:first-of-type{
 
-                            width:13%;
+                            width:11%;
 
                         }
                         span{
 
-                            width:72%;
+                            width:74%;
 
                         }
 
@@ -5349,15 +5346,15 @@
 
                     li{
                         font-size: 0.80em;
-                        margin-bottom:0.5em;
+
                         span:first-of-type{
 
-                            width:13%;
+                            width:12%;
 
                         }
                         span{
 
-                            width:72%;
+                            width:73%;
 
                         }
 
@@ -5708,7 +5705,7 @@
                 margin: 0 auto;
 
                 h1 {
-                    font-size: 1.2em;
+                    font-size: 1.1em;
 
                 }
 
@@ -5996,12 +5993,12 @@
                         
                         span:first-of-type{
 
-                            width:15%;
+                            width:12%;
 
                         }
                         span{
 
-                            width:70%;
+                            width:73%;
 
                         }
 
@@ -6621,12 +6618,12 @@
                         
                         span:first-of-type{
 
-                            width:17%;
+                            width:12%;
 
                         }
                         span{
 
-                            width:69%;
+                            width:73%;
 
                         }
 
@@ -7207,7 +7204,7 @@
 
                                 span:first-of-type {
                                     
-                                    width: 17%;
+                                    width: 16%;
                                     
                                 }
                             }
@@ -7273,6 +7270,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
+                            font-size:0.9em;
                             
                         }
 
@@ -7321,12 +7319,12 @@
                         
                         span:first-of-type{
 
-                            width:17%;
+                            width:13%;
 
                         }
                         span{
 
-                            width:69%;
+                            width:72%;
 
                         }
 
@@ -7707,6 +7705,7 @@
     }
 
     nav {
+        height:1px;
         
         #mobile_inner_nav {      
             position: fixed;
@@ -7959,7 +7958,7 @@
 
                                 span:first-of-type {
                                     
-                                    width: 17%;
+                                    width: 15%;
                                     
                                 }
                             }
@@ -8025,7 +8024,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
-                            font-size:0.7em;
+                            font-size:0.85em;
                             
                         }
 
@@ -8074,12 +8073,12 @@
                         
                         span:first-of-type{
 
-                            width:17%;
+                            width:13%;
 
                         }
                         span{
 
-                            width:69%;
+                            width:72%;
 
                         }
 
@@ -8500,7 +8499,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 55%;
                         }
 
                         input.frontform {
@@ -8660,7 +8659,7 @@
                                 span:first-of-type {
                                     
                                     width: 17%;
-                                    text-indent: 0.2em;
+                                    text-indent: 0.5em;
                                     
                                 }
                             }
@@ -8690,7 +8689,7 @@
                         flex-flow: row wrap;                                     
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -8774,7 +8773,7 @@
                         
                         span:first-of-type{
 
-                            width:17%;
+                            width:16%;
 
                         }
                         span{
@@ -9113,7 +9112,7 @@
             
             
             h1 {
-                font-size: 1.2em;
+                font-size: 1em;
             }
             section.album_section:last-of-type {
                 margin-bottom: 0%;
@@ -9142,7 +9141,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 60%;
                         }
 
                         input.frontform {
@@ -9323,7 +9322,7 @@
                                                             
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -9359,6 +9358,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
+                            font-size:0.8em;
                             
                         }
 
@@ -9407,12 +9407,12 @@
                         
                         span:first-of-type{
 
-                            width:20%;
+                            width:16%;
 
                         }
                         span{
 
-                            width:60%;
+                            width:69%;
 
                         }
 
@@ -9598,7 +9598,7 @@
              
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -9794,7 +9794,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 65%;
                         }
 
                         input.frontform {
@@ -9974,7 +9974,7 @@
                                                             
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -10058,12 +10058,12 @@
                         
                         span:first-of-type{
 
-                            width:20%;
+                            width:16%;
 
                         }
                         span{
 
-                            width:60%;
+                            width:69%;
 
                         }
 
@@ -10235,7 +10235,7 @@
                
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -10415,7 +10415,7 @@
                 height: auto; 
 
                 h1 {
-                    font-size: 1.3em;
+                    font-size: 1.05em;
                 }
 
                 .flex-wrapper {
@@ -10433,7 +10433,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 65%;
                         }
 
                         input.frontform {
@@ -10614,7 +10614,7 @@
                                                                 
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -10698,12 +10698,12 @@
                         
                         span:first-of-type{
 
-                            width:20%;
+                            width:16%;
 
                         }
                         span{
 
-                            width:60%;
+                            width:69%;
 
                         }
 
@@ -10847,7 +10847,7 @@
 
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -11026,7 +11026,7 @@
                 margin: 0 auto;
 
                 h1 {
-                    font-size: 1.3em;
+                    font-size: 1em;
                 }
 
                 .flex-wrapper {
@@ -11487,7 +11487,7 @@
 
             legend{
                 
-                font-size: 1em;
+                font-size: 0.85em;
                 
 
             }
