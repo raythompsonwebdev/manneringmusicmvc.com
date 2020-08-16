@@ -500,12 +500,25 @@
             }
 
             ul.categories{
+                // display: -webkit-flex;
+                // display: -ms-flexbox;
+                // display: flex;
+                // -webkit-flex-flow: row wrap;
+                // -ms-flex-flow: row wrap;
+                // flex-flow: row wrap;
+                // -webkit-align-content: flex-start;
+                // -ms-flex-content: flex-start;
+                // align-content: flex-start;
+                // -webkit-justify-content: flex-start;
+                // -ms-flex-pack: flex-start;
+                // justify-content: flex-start;
                 display:block;
                 list-style:none;
-                width:50%;
+                width:96%;
                 margin:1em auto;
+
                 li{
-                    
+                    width:20%;
                     height:auto;
                     background-color:$color2;
                     

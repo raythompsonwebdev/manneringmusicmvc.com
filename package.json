@@ -12,7 +12,8 @@
     "css:watch": "grunt watch"
   },
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "whatwg-fetch": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
