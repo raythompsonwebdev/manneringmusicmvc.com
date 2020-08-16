@@ -177,22 +177,48 @@
         //create tracklist index
         currentIndex = currentPlaylist.indexOf(trackId);  
         pauseSong();
-             
-                                                      
-        //Get song IDs from Database
-        $.post("getSongJson.php", { songId: trackId }, function(data) {            
-                                                           
-            var track = JSON.parse(data);
+
+        var url = '/getSongJson.php';
+
+        var formData = new FormData();
+
+        formData.append( "songId", trackId );
+
+        fetch(url, { method: 'POST', body: formData })
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (body) {
+
+            var track = JSON.parse(body);
+
+            console.log(track);
 
             $("div.audio_controls h1.trackName").text(track[0].songtitle)
-                                        
+
             audioElement.setTrack(track);
 
             if(play == true) {
-                playSong();
-            }  
+                 playSong();
+            } 
+
+        });
+             
+                                                      
+        //Get song IDs from Database
+        // $.post("getSongJson.php", { songId: trackId }, function(data) {            
+                                                           
+        //     var track = JSON.parse(data);
+
+        //     $("div.audio_controls h1.trackName").text(track[0].songtitle)
+                                        
+        //     audioElement.setTrack(track);
+
+        //     if(play == true) {
+        //         playSong();
+        //     }  
             
-        });     
+        // });     
         
     }
         
