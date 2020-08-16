@@ -202,7 +202,10 @@
                  playSong();
             } 
 
-        });
+        }).catch(err){
+            console.log(err)
+
+        };
              
                                                       
         //Get song IDs from Database
