@@ -271,6 +271,12 @@ class MadbRoutes implements \Mannering\Routes
                                                 'action' => 'singleresult'
                                 ]
                 ],
+                'artist' => [
+                    'GET' => [
+                                    'controller' => $musicController,
+                                    'action' => 'artist'
+                    ]
+    ]
                     ];
 
         return $routes;

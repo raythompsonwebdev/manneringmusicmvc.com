@@ -30,5 +30,6 @@ class Artist
     public function getAlbumId()
     {
         return $this->albumsTable->findById($this->id);
-    }
+    }      
+    
 }

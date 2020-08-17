@@ -284,4 +284,27 @@ class DatabaseTable
          
         return $array ;
     }
+
+    public function findArtistSongs($value)
+    {
+
+        $query = "SELECT * FROM `audio` WHERE `artistId` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach ($query as $row) {
+            array_push($array, [$row['artistId'],$row['mp3_File'] ]);
+        }
+         
+        return $array ;
+    }
+
+
+    
 }

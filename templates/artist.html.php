@@ -243,7 +243,7 @@
 
 <section id="main_text" class="group">
 
-    <h1>Albums</h1>         
+    <h1>Artist</h1>         
 
     <div id="results">
             
@@ -260,23 +260,7 @@
                             <span>Artist </span>
                             <span><?=$singleartist[0][0];?></span>
                         </li>
-                        <li>
-                            <span>Album</span>
-                            <span><?=$singlealbums->album; ?></span>
-                        </li>
-                        <li>
-                            <span>Formats</span>
-                            <span><?=$singlealbums->text; ?></span>
-                        </li>
-                        <li>
-                            <span>Genre</span>
-                            <span><?=$singlealbums->genre; ?></span>
-                        </li>
-                        <li>
-                            <span>Price</span>
-                            <span><?=$singlealbums->price; ?></span>
-                        </li>                       
-                        
+
                     </ul>
 
                 </figcaption>
@@ -290,52 +274,11 @@
                 <h1 class="trackName"></h1>
 
                 <div class="audiocntrl_containers">
-
-                    <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()" >
-                        <i class="fa fa-random" aria-hidden="true"></i>
-					</div>
-                    
+                  
                     <div role="button" tabindex="0"  class="player-button play" onclick="playSong()" >
                         <i class="fa fa-play" aria-hidden="true"></i>
-                    </div>
-                                                            
-                    <div role="button" tabindex="0"  class="player-button pause" style="display: none;" onclick="pauseSong()">
-                        <i class="fa fa-pause" aria-hidden="true"></i>
-                    </div>
-
-                    <div role="button" tabindex="0"  class="player-button previous" onclick="prevSong()">
-                        <i class="fa fa-step-backward" aria-hidden="true"></i>
-                    </div>
-
-                    <div role="button" tabindex="0"  class="player-button next" onclick="nextSong()" >
-                        <i class="fa fa-step-forward" aria-hidden="true" ></i>
-                    </div>
-
-                    <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-					</div>
-
-                               
-                
-                    <!--add onclick="setMute() to change volume icon. need to add volume icon-->
-                    <div class="audio_volume">
-                        <div class="VolumeBg">
-                            <div class="volume"></div>
-                            <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
-                        </div>
-                        <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
-                            <i class="fa fa-volume-up" aria-hidden="true" ></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="audiocntrl_containers">
-                    <div class="current_time">00:00</div> 
-                    <div class="progress">                        
-                        <div class="play_progress"></div>
-                    </div>
-                    <div class="duration">00:00</div>
-                </div>
+                    </div>  
+                </div>              
 
             </div>
 
@@ -349,6 +292,8 @@
                     
                 foreach ($singleaudio as $songId => $value) :
                         //songId value from value of $singleaudio variable
+
+                        var_dump($value);
                                                 
                         echo "<li>
                             <span>Track " . $i . " : </span>

@@ -34,12 +34,8 @@ class Album
     {
         
         return $this->artistsTable->findById($this->artistId);
-    }
-      
-
-    public function getSongId()
-    {
-
-        return $this->audioTable->findSongId($this->id);
-    }
+    }  
+    
+    
+    
 }

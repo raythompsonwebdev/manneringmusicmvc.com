@@ -84,18 +84,46 @@ class Music
     {
                                                       
         if (isset($_GET['albumid'])) {
-            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);            
         }
 
-        if (isset($_GET['artistid'])) {
+        if (isset($_GET['artistid']) || isset($_GET['albumid'])) {
             $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
+            $singleaudio = $this->audioTable->findSongId($_GET['artistid']);
+           
         }
 
                     
         $title = 'Mannering Album Page';
               
         return ['template' => 'singleresult.html.php', 'title' => $title,'variables' =>[
+          'singlealbums' => $singlealbums,
+          'singleartist' => $singleartist,
+          'singleaudio' => $singleaudio
+          
+        ]
+        ];
+    }
+
+    public function artist()    {
+
+        if (isset($_GET['albumid'])) {
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);            
+        }
+               
+
+        if (isset($_GET['artistid'])) {
+            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);      
+
+            $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
+            
+            
+        }
+
+                    
+        $title = 'Mannering Album Page';
+              
+        return ['template' => 'artist.html.php', 'title' => $title,'variables' =>[
           'singlealbums' => $singlealbums,
           'singleartist' => $singleartist,
           'singleaudio' => $singleaudio
