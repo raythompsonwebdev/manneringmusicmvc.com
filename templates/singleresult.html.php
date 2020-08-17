@@ -12,80 +12,80 @@
 ?>
 
 <script>
-
    
     $(document).ready(function() {
         
         currentPlaylist = <?=$jsonArray?>;        
                         
-            audioElement = new Audio();
-            setTrack(currentPlaylist[0], currentPlaylist, false);                             
-        
-            //update volume add full width
-            updateVolumeProgressBar(audioElement.audio);
+        audioElement = new Audio(); //instance of audio class
 
-            //prevents highlighting
-            $("div.audio_controls").on("mousedown touchstart mousemove touchmove", function(e){
-                e.preventDefault();
-            });
+        setTrack(currentPlaylist[0], currentPlaylist, false); //audio class func                            
+    
+        //update volume add full width
+        updateVolumeProgressBar(audioElement.audio); //audio class func
+
+        //prevents highlighting draggig volume
+        $("div.audio_controls").on("mousedown touchstart mousemove touchmove", function(e){
+            e.preventDefault();
+        });
 
 
-            //drag progress bar 
-            $("div.progress div.play_progress").mousedown(function() {
-                mouseDown = true;
-            });
+        //drag progress bar 
+        $("div.progress div.play_progress").mousedown(function() {
+            mouseDown = true;
+        });
 
-            $("div.progress div.play_progress").mousemove(function(e) {
-                if(mouseDown == true) {
-                    //Set time of song, depending on position of mouse
-                    timeFromOffset(e, this);
-                }
-            });
-
-            $("div.progress div.play_progress").mouseup(function(e) {
+        $("div.progress div.play_progress").mousemove(function(e) {
+            if(mouseDown == true) {
+                //Set time of song, depending on position of mouse using timeFromOffset function below
                 timeFromOffset(e, this);
-            });
+            }
+        });
+
+        $("div.progress div.play_progress").mouseup(function(e) {
+            timeFromOffset(e, this);
+        });
 
 
-            //drag volume bar 
-            $("div.audio_volume div.volume").mousedown(function() {
-                mouseDown = true;
-            });
+        //drag volume bar 
+        $("div.audio_volume div.volume").mousedown(function() {
+            mouseDown = true;
+        });
 
-            $("div.audio_volume div.volume").mousemove(function(e) {
-                if(mouseDown == true) {
+        $("div.audio_volume div.volume").mousemove(function(e) {
+            if(mouseDown == true) {
 
-                    var percentage = e.offsetX / $(this).width();
+                var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
 
-                    if(percentage >= 0 && percentage <= 1) {
-                        audioElement.audio.volume = percentage;
-                    }
-                }
-            });
-
-            $("div.audio_volume div.volume").mouseup(function(e) {
-
-                var percentage = e.offsetX / $(this).width();
-
+                //limits volume range to bewteen 0 and 1
                 if(percentage >= 0 && percentage <= 1) {
                     audioElement.audio.volume = percentage;
                 }
+            }
+        });
 
-            });
+        $("div.audio_volume div.volume").mouseup(function(e) {
 
-            //allows mouse up
-            $(document).mouseup(function() {
-                mouseDown = false;
-            });            
+            var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
+
+            if(percentage >= 0 && percentage <= 1) {
+                audioElement.audio.volume = percentage;
+            }
+
+        });
+
+        //allows mouse drag to work on progress bar by setting mouseDown back to false.
+        $(document).mouseup(function() {
+            mouseDown = false;
+        });            
                         
     });
-
 
     //us mouse to drag progress bar and change audio position
     function timeFromOffset(mouse, progressBar) {
         var percentage = mouse.offsetX / $(progressBar).width() * 100;
         var seconds = audioElement.audio.duration * (percentage / 100);
-        audioElement.setTime(seconds);
+        audioElement.setTime(seconds); //audio class func
     }
 
 
@@ -103,6 +103,12 @@
 
     //skip to next song
     function nextSong() {
+
+        if(repeat == true) {
+            audioElement.setTime(0);
+            playSong();
+            return;
+        }
         
         if(currentIndex == currentPlaylist.length - 1) {
             currentIndex = 0;
@@ -112,52 +118,19 @@
         }
 
         var trackToPlay = currentPlaylist[currentIndex];
-        setTrack(trackToPlay, currentPlaylist, true);
+        setTrack(trackToPlay, currentPlaylist, true); // page func
 
     }
 
     //repeat button need repeat button added
-    // function setRepeat() {
-    //     repeat = !repeat;
-    //     var imageName = repeat ? "repeat-active.png" : "repeat.png";
-    //     $(".controlButton.repeat img").attr("src", "assets/images/icons/" + imageName);
-    // }
+    function setRepeat() {
+        repeat = !repeat;        
+        //using font awesome instead of image
+        imageName = repeat ? "on" : "off";
+        console.log(imageName)        
+    }
 
-    //mute button need mute button added
-    // function setMute() {
-    //     audioElement.audio.muted = !audioElement.audio.muted;
-    //     var imageName = audioElement.audio.muted ? "volume-mute.png" : "volume.png";
-    //     $(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName);
-    // }
-
-    // function setShuffle() {
-    //     shuffle = !shuffle;
-    //     var imageName = shuffle ? "shuffle-active.png" : "shuffle.png";
-    //     $(".controlButton.shuffle img").attr("src", "assets/images/icons/" + imageName);
-
-    //     if(shuffle == true) {
-    //         //Randomize playlist
-    //         shuffleArray(shufflePlaylist);
-    //         currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
-    //     }
-    //     else {
-    //         //shuffle has been deactivated
-    //         //go back to regular playlist
-    //         currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
-    //     }
-
-    // }
-
-    // function shuffleArray(a) {
-    //     var j, x, i;
-    //     for (i = a.length; i; i--) {
-    //         j = Math.floor(Math.random() * i);
-    //         x = a[i - 1];
-    //         a[i - 1] = a[j];
-    //         a[j] = x;
-    //     }
-    // }
-
+    
     //Set Audio tracks to to be played in tracklist
     function setTrack(trackId, newPlaylist, play) {
 
@@ -174,7 +147,8 @@
         // pauseSong();
 
         //create tracklist index
-        currentIndex = currentPlaylist.indexOf(trackId);  
+        currentIndex = currentPlaylist.indexOf(trackId); 
+
         pauseSong();
 
 
@@ -189,17 +163,13 @@
 
         }).then(function (response) {
 
-            //console.log(response);
-
             return response.text();
 
         }).then(function (body) {
 
             var track = JSON.parse(body);
 
-            //console.log(body);
-
-            document.querySelector("div.audio_controls h1.trackName").innerHTML = track[0].songtitle ;
+            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle ;
 
             audioElement.setTrack(track);
 
@@ -209,23 +179,7 @@
 
         }).catch(function(err) {
             console.log('Fetch Error :-S', err);
-        });
-             
-                                                      
-        //Get song IDs from Database
-        // $.post("getSongJson.php", { songId: trackId }, function(data) {            
-                                                           
-        //     var track = JSON.parse(data);
-
-        //     $("div.audio_controls h1.trackName").text(track[0].songtitle)
-                                        
-        //     audioElement.setTrack(track);
-
-        //     if(play == true) {
-        //         playSong();
-        //     }  
-            
-        // });     
+        }); 
         
     }
         
@@ -234,11 +188,10 @@
     function playSong(){
 
         //track plays function needs ajax file updatePlays.php 
-        //also Plays column in database audio table   
+
         // if(audioElement.audio.currentTime == 0) {
         //  $.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
-        // }
-                
+        // }                
 
         $(".player-button.play").hide();
         $(".player-button.pause").show();        
@@ -326,7 +279,7 @@
                     <div class="player-button next" onclick="nextSong()" >
                     <i class="fa fa-step-forward" aria-hidden="true" ></i>
                     </div>
-                    <div class="player-button repeat" title="Repeat button">
+                    <div class="player-button repeat" onclick="setRepeat()">
                     <i class="fa fa-repeat" aria-hidden="true"></i>
 					</div>
 
