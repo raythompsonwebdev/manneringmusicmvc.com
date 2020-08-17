@@ -162,8 +162,7 @@
     function setTrack(trackId, newPlaylist, play) {
 
         if(newPlaylist != currentPlaylist) {
-            currentPlaylist = newPlaylist;
-            
+            currentPlaylist = newPlaylist;            
         }
 
         // if(shuffle == true) {
@@ -178,23 +177,29 @@
         currentIndex = currentPlaylist.indexOf(trackId);  
         pauseSong();
 
-        var url = '/getSongJson.php';
 
-        var formData = new FormData();
-
+        //get tracks from database
+        let url = 'getSongJson.php';
+        let formData = new FormData();
         formData.append( "songId", trackId );
 
-        fetch(url, { method: 'POST', body: formData })
-        .then(function (response) {
+        fetch(url, { 
+            method: 'POST',            
+            body: formData
+
+        }).then(function (response) {
+
+            //console.log(response);
+
             return response.text();
-        })
-        .then(function (body) {
+
+        }).then(function (body) {
 
             var track = JSON.parse(body);
 
-            console.log(track);
+            //console.log(body);
 
-            $("div.audio_controls h1.trackName").text(track[0].songtitle)
+            document.querySelector("div.audio_controls h1.trackName").innerHTML = track[0].songtitle ;
 
             audioElement.setTrack(track);
 
@@ -202,10 +207,9 @@
                  playSong();
             } 
 
-        }).catch(err){
-            console.log(err)
-
-        };
+        }).catch(function(err) {
+            console.log('Fetch Error :-S', err);
+        });
              
                                                       
         //Get song IDs from Database
