@@ -258,7 +258,7 @@
                     <ul class="product-box-info">
                         <li>
                             <span>Artist </span>
-                            <span><?=$singleartist[0][0];?></span>
+                            <span><?=$singleartist->artist_name; ?></span>
                         </li>
                         <li>
                             <span>Album</span>
@@ -369,7 +369,7 @@
                 //songId value from value of $singleaudio variable
                 var tempSongIds = '<?= json_encode($value[0]); ?>';
                 tempPlaylist = JSON.parse(tempSongIds); 
-                //console.log(tempPlaylist);
+                console.log(tempPlaylist);
             </script>
 
         </div>

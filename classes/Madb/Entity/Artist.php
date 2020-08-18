@@ -22,8 +22,7 @@ class Artist
     }      
     
     public function getAudioId()
-    {
-                    
+    {                    
         return $this->audioTable->findById($this->id) ;
     }
 

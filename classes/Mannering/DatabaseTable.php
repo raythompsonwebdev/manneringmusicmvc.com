@@ -279,12 +279,16 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['artist_name']]);
+            array_push($array, [$row['artist_name'],$row['id']]);
         }
          
         return $array ;
     }
 
+    /**
+     * artist-page-function
+     *
+     * */
     public function findArtistSongs($value)
     {
 
@@ -299,7 +303,7 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['artistId'],$row['mp3_File'] ]);
+            array_push($array, [$row['artistId'],$row['mp3_File'],$row['songtitle'], $row['id'] ]);
         }
          
         return $array ;
