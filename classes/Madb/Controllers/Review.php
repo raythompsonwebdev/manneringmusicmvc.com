@@ -1,5 +1,6 @@
 <?php
 namespace Madb\Controllers;
+
 use \Mannering\DatabaseTable;
 use \Mannering\Authentication;
 

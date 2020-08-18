@@ -239,7 +239,7 @@ class DatabaseTable
      * single-result-page-function
      *
      * */
-    public function findSongId($value)
+    public function findAlbumSongs($value)
     {
 
         $query = "SELECT `id`, `songtitle`, `mp3_File`, `ogg_File`  FROM `audio` WHERE `albumId` = $value ";
@@ -279,7 +279,7 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['artist_name'],$row['id']]);
+            array_push($array, [$row['id'], $row['artist_name']]);
         }
          
         return $array ;
@@ -308,7 +308,4 @@ class DatabaseTable
          
         return $array ;
     }
-
-
-    
 }

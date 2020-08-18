@@ -34,8 +34,5 @@ class Album
     {
         
         return $this->artistsTable->findById($this->artistId);
-    }  
-    
-    
-    
+    }
 }

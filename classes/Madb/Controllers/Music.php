@@ -1,6 +1,7 @@
 <?php
 
 namespace Madb\Controllers;
+
 use \Mannering\DatabaseTable;
 
 class Music
@@ -85,14 +86,11 @@ class Music
                                                       
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
-                        
+            $singleaudio = $this->audioTable->findAlbumSongs($_GET['albumid']);
         }
 
-        if (isset($_GET['artistid'])) {            
-            
+        if (isset($_GET['artistid'])) {
             $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
-           
         }
 
                     
@@ -107,17 +105,17 @@ class Music
         ];
     }
 
-    public function artist()    {
+    public function artist()
+    {
 
         if (isset($_GET['albumid'])) {
-            $singlealbums = $this->albumsTable->findById($_GET['albumid']);            
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
         }
                
 
         if (isset($_GET['artistid'])) {
-            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);  
+            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
             $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
-                        
         }
 
                     

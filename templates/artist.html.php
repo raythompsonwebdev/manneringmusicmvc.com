@@ -5,8 +5,9 @@
 <?php
 
     $array = array();
-    foreach ($singleaudio as $key => $value) {        
-        array_push($array, $value[3]);    }      
+foreach ($singleaudio as $key => $value) {
+    array_push($array, $value[3]);
+}
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
   
 ?>
@@ -116,7 +117,7 @@
         }
         //shuffle
         var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
-	    setTrack(trackToPlay, currentPlaylist, true);
+        setTrack(trackToPlay, currentPlaylist, true);
 
     }
 
@@ -259,7 +260,7 @@
                     <ul class="product-box-info">
                         <li>
                             <span>Artist </span>
-                            <span><?=$singleartist[0][0];?></span>
+                            <span><?=$singleartist[0][1];?></span>
                         </li>
 
                     </ul>
@@ -278,7 +279,7 @@
 
                     <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()" >
                         <i class="fa fa-random" aria-hidden="true"></i>
-					</div>
+                    </div>
                     
                     <div role="button" tabindex="0"  class="player-button play" onclick="playSong()" >
                         <i class="fa fa-play" aria-hidden="true"></i>
@@ -298,7 +299,7 @@
 
                     <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
                         <i class="fa fa-repeat" aria-hidden="true"></i>
-					</div>
+                    </div>
 
                                
                 
@@ -344,8 +345,6 @@
                         </li>";
                     
                         $i = $i + 1;
-                                                
-
                 endforeach;
                 
                 ?>

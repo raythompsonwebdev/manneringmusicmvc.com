@@ -43,6 +43,4 @@ class Audio
 
         return $this->songtitle;
     }
-
-    
 }

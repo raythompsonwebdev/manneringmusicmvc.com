@@ -19,16 +19,15 @@ class Artist
     {
                     
         return $this->id ;
-    }      
+    }
     
     public function getAudioId()
-    {                    
+    {
         return $this->audioTable->findById($this->id) ;
     }
 
     public function getAlbumId()
     {
         return $this->albumsTable->findById($this->id);
-    }      
-    
+    }
 }
