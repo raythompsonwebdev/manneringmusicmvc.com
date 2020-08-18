@@ -84,12 +84,14 @@ class Music
     {
                                                       
         if (isset($_GET['albumid'])) {
-            $singlealbums = $this->albumsTable->findById($_GET['albumid']);            
+            $singlealbums = $this->albumsTable->findById($_GET['albumid']);
+            $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
+                        
         }
 
-        if (isset($_GET['artistid'])) {
-            $singleartist = $this->artistsTable->findById($_GET['artistid']);
-            $singleaudio = $this->audioTable->findSongId($_GET['artistid']);
+        if (isset($_GET['artistid'])) {            
+            
+            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
            
         }
 

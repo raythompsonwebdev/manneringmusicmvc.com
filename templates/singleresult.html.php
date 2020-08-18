@@ -253,12 +253,18 @@
 
                 <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
 
+                <form method="get" action="/artist" id="to_album_btn">
+                    <input type="submit" class="to_album_btn" value="Go To Artist.." />
+                    <input type="hidden" name="artistid" value="<?=$singleartist[0][1] ?? ''?>"> 
+                    <input type="hidden" name="albumid" value="<?=$singlealbums->id ?? ''?>">                   
+                </form>
+               
                 <figcaption>
                     
                     <ul class="product-box-info">
                         <li>
                             <span>Artist </span>
-                            <span><?=$singleartist->artist_name; ?></span>
+                            <span><?=$singleartist[0][0]; ?></span>
                         </li>
                         <li>
                             <span>Album</span>
@@ -281,7 +287,7 @@
 
                 </figcaption>
 
-                    
+                                        
             </figure>
 
             <!--Audio Controls-->

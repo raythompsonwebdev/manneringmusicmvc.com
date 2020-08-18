@@ -811,9 +811,10 @@
                 }
 
                 form#to_album_btn {
-                    display: block;
+                    display: inline-block;
                     width: 100%;
-                    clear:both;                    
+                    margin-bottom:0.5em;
+                    padding:0;                  
                 }
 
                 input.to_album_btn {
@@ -857,7 +858,7 @@
                 //     grid-template-rows: repeat(5, 1fr);
                 //     grid-column-gap: 0px;
                 //     grid-row-gap: 0px;
-                //     }
+                // }
                     
                 //     .div1 { grid-area: 1 / 1 / 3 / 3; }
                 //     .div2 { grid-area: 1 / 3 / 2 / 6; }
@@ -866,17 +867,58 @@
                 //     .div5 { grid-area: 4 / 1 / 5 / 6; }
                 //     .div6 { grid-area: 5 / 1 / 6 / 6; }
 
-                figure.product-info {
+                figure.product-info { 
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-flow: row wrap;
+                    -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;  
+                    position: relative;                 
 
                     img {
                         width: 10%;
                         vertical-align: top;
                         margin: 0 0.5em 0 0;
+                        order:1;
                     }
+
+                    form#to_album_btn {
+                        display: inline-block;
+                        width: 11%;
+                        margin-bottom:0.5em;
+                        padding:0; 
+                        order:3;
+                        position:absolute;
+                        bottom:2em;
+                        input.to_album_btn {
+                            display: block;
+                            background-color: $color1;
+                            margin: 0;
+                            width: 100%;
+                            height: 40px;
+                            line-height: unset;
+                            color: $color2;
+                            border: none;
+                            font-size: 1em;
+                            cursor: pointer;
+                            padding: 0;                    
+                            text-align: center;                    
+                            &:hover {
+                                background-color: $color4;
+                                text-decoration: none !important;
+                                @include transitioner(all 0.2s ease);
+                            }
+                        }                 
+                    }  
 
                     figcaption {
                         width: 88%;
                         display: inline-block;
+                        order:2;
 
                         ul.product-box-info {
                             width: 100%;
@@ -3272,7 +3314,7 @@
                     
 
                     figcaption {
-                        width:69%;                        
+                        width:68%;                        
                         ul.product-box-info {
                             width: 100%;
 
@@ -3920,6 +3962,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.7em;
                                 
                             }
                         }

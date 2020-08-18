@@ -5,8 +5,8 @@
 <?php
 
     $array = array();
-    foreach ($singleaudio as $key => $value) {
-        array_push($array, $value[0]);    }      
+    foreach ($singleaudio as $key => $value) {        
+        array_push($array, $value[3]);    }      
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
   
 ?>
@@ -199,7 +199,10 @@
 
             var track = JSON.parse(body);
 
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle ;
+            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+
+            console.log(track)            
+
 
             audioElement.setTrack(track);
 

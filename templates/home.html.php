@@ -28,7 +28,7 @@
                             <form method="get" action="/singleresult" id="frontform">
                                 <input type="hidden" name="artistid" value="<?=$rapalbum->artistId ?? ''?>">
                                 <input type="hidden" name="albumid" value="<?=$rapalbum->id ?? ''?>">
-                                <input type="submit" name="submit" class="frontform" value="See more.."/>
+                                <input type="submit" name="submit" class="frontform" value="Go To Album"/>
                             </form>
                         </figcaption>
                     
@@ -55,7 +55,7 @@
                         <form method="get" action="/singleresult" id="frontform">
                             <input type="hidden" name="artistid" value="<?=$countryalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$countryalbum->id ?? ''?>">
-                            <input type="submit" name="submit" class="frontform" value="See more.."/>
+                            <input type="submit" name="submit" class="frontform" value="Go To Album"/>
                         </form>
                     </figcaption>
                 </figure>
@@ -80,7 +80,7 @@
                         <form method="get" action="/singleresult" id="frontform">
                             <input type="hidden" name="artistid" value="<?=$jazzalbum->artistId ?? ''?>">
                             <input type="hidden" name="albumid" value="<?=$jazzalbum->id ?? ''?>">
-                            <input type="submit" name="submit" class="frontform" value="See more.."/>
+                            <input type="submit" name="submit" class="frontform" value="Go To Album"/>
                         </form>
                     </figcaption>
 
