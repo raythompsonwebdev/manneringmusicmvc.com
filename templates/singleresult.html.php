@@ -125,8 +125,7 @@ foreach ($singleaudio as $key => $value) {
     function setRepeat() {
         repeat = !repeat;        
         //using font awesome instead of image
-        imageName = repeat ? "green" : "red";
-        //document.querySelector(.controlButton.repeat img").attr("src", "assets/images/icons/" + imageName);
+        imageName = repeat ? "green" : "red";        
         document.querySelector("i.fa-repeat").style.color = imageName ;        
     }
 
@@ -210,7 +209,7 @@ foreach ($singleaudio as $key => $value) {
             } 
 
         }).catch(function(err) {
-            console.log('Fetch Error :-S', err);
+            console.error('Fetch Error :-S', err);
         }); 
         
     }
@@ -257,7 +256,7 @@ foreach ($singleaudio as $key => $value) {
 
                 <form method="get" action="/artist" id="to_album_btn">
                     <input type="submit" class="to_album_btn" value="Go To Artist.." />
-                    <input type="hidden" name="artistid" value="<?=$singleartist[0][1] ?? ''?>"> 
+                    <input type="hidden" name="artistid" value="<?=$singleartist[0][0] ?? ''?>"> 
                     <input type="hidden" name="albumid" value="<?=$singlealbums->id ?? ''?>">                   
                 </form>
                
@@ -266,7 +265,7 @@ foreach ($singleaudio as $key => $value) {
                     <ul class="product-box-info">
                         <li>
                             <span>Artist </span>
-                            <span><?=$singleartist[0][0]; ?></span>
+                            <span><?=$singleartist[0][1]; ?></span>
                         </li>
                         <li>
                             <span>Album</span>
@@ -300,27 +299,27 @@ foreach ($singleaudio as $key => $value) {
                 <div class="audiocntrl_containers">
 
                     <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()" >
-                        <i class="fa fa-random" aria-hidden="true"></i>
+                        <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
                     </div>
                     
                     <div role="button" tabindex="0"  class="player-button play" onclick="playSong()" >
-                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="fa fa-play" aria-hidden="true" title="play"></i>
                     </div>
                                                             
                     <div role="button" tabindex="0"  class="player-button pause" style="display: none;" onclick="pauseSong()">
-                        <i class="fa fa-pause" aria-hidden="true"></i>
+                        <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
                     </div>
 
                     <div role="button" tabindex="0"  class="player-button previous" onclick="prevSong()">
-                        <i class="fa fa-step-backward" aria-hidden="true"></i>
+                        <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
                     </div>
 
                     <div role="button" tabindex="0"  class="player-button next" onclick="nextSong()" >
-                        <i class="fa fa-step-forward" aria-hidden="true" ></i>
+                        <i class="fa fa-step-forward" aria-hidden="true" title="next" ></i>
                     </div>
 
                     <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                        <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
                     </div>
 
                                
@@ -332,7 +331,7 @@ foreach ($singleaudio as $key => $value) {
                             <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
                         </div>
                         <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
-                            <i class="fa fa-volume-up" aria-hidden="true" ></i>
+                            <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
                         </div>
                     </div>
                 </div>
@@ -375,8 +374,7 @@ foreach ($singleaudio as $key => $value) {
                 //songId value from value of $singleaudio variable
                 var tempSongIds = '<?= json_encode($value[0]); ?>';
                 tempPlaylist = JSON.parse(tempSongIds); 
-                console.log(tempPlaylist);
-            </script>
+             </script>
 
         </div>
 

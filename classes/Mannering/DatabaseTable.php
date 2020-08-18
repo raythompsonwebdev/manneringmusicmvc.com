@@ -261,6 +261,27 @@ class DatabaseTable
         return (object) $array;
     }
 
+
+    public function findArtistAlbum($value)
+    {
+
+        $query = "SELECT `id`, `album`, `image`, `artistId`, `genre`  FROM `album` WHERE `artistId` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);        
+
+        $array = array();
+
+        foreach ($query as $row) {
+            array_push($array, [$row['id'], $row['album'], $row['image'], $row['artistId'], $row['genre']  ]);
+        }
+         
+        return (object)$array;
+    }
+
     /**
      * single-result-page-function
      *

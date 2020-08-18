@@ -756,14 +756,13 @@
             align-items: flex-start;            
 
             .product-box {
-                height: auto;
-                min-height: 240px;                
+                height: auto;              
                 padding: 0.25em;
                 border: solid $color5 4px;
                 @include boredrady(5px);
                 background-color: $color6;
-                margin: 0.5em;
-                width: 31%;
+                margin: 0.25em;
+                width: 32.2%;
                 display: block;
                 float: left;
                 font-weight: normal;
@@ -852,6 +851,27 @@
                 display: block;
                 font-weight: normal;
 
+                button#artist_btn{
+                    display: block;
+                    background-color: $color1;
+                    margin: 1em auto;
+                    width: 30%;
+                    height: 45px;
+                    line-height: 45px;;
+                    color: $color2;
+                    border: none;
+                    font-size: 1em;
+                    cursor: pointer;
+                    padding: 0;                    
+                    text-align: center;                    
+                    &:hover {
+                        background-color: $color4;
+                        text-decoration: none !important;
+                        @include transitioner(all 0.2s ease);
+                    }
+
+                }
+
                 // .parent {
                 //     display: grid;
                 //     grid-template-columns: repeat(5, 1fr);
@@ -877,8 +897,9 @@
                     -webkit-align-items: flex-start;
                     -ms-flex-align: start;
                     align-items: flex-start;  
-                    position: relative;                 
-
+                    position: relative;
+                    
+                    
                     img {
                         width: 15%;
                         vertical-align: top;
@@ -1920,8 +1941,7 @@
 
             
             .product-box {
-                min-height: 220px;                
-                width: 31%;
+             
                 
                 figure.product-info {
                     img {
@@ -2628,8 +2648,6 @@
             
 
             .product-box {
-                min-height: 180px;
-                width: 31%;
 
 
                 figure.product-info {
@@ -4639,7 +4657,7 @@
                 
                 figure.product-info {
                     img {
-                        width: 37%;
+                        width: 32%;
                         
                     }
 
@@ -4651,7 +4669,7 @@
                             width: 100%;
 
                             li {
-                                font-size:0.85em;
+                                font-size:0.7em;
                                 
                             }
                         }
@@ -5282,7 +5300,7 @@
             
 
             .product-box {
-                min-height: 205px;                
+             
                 width: 48%;
 
                 figure.product-info {
@@ -5940,12 +5958,11 @@
             
 
             .product-box {
-                min-height: 205px;
 
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -6583,7 +6600,7 @@
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -7290,14 +7307,13 @@
             
 
             .product-box {
-                min-height: 190px;
-                
-                width: 46%;
+                  
+                width: 48%;
 
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -7309,6 +7325,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.65em;
                             }
                         }
                     }
@@ -8055,12 +8072,12 @@
             
             .product-box {
                                 
-                width: 46%;
+                width: 48%;
                 
 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -8071,7 +8088,7 @@
                             width: 100%;
 
                             li {
-                                font-size: 0.8em;
+                                font-size: 0.6em;
                                 
                             }
                         }
@@ -8770,22 +8787,24 @@
             
             .product-box {
                                 
-                width: 70%;
+                width: 80%;
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
                     
                     figcaption {
+
+                        width:69%;
                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                font-size:0.8em;
+                                font-size:0.7em;
                             }
                         }
                     }
@@ -9419,19 +9438,20 @@
                 
                 figure.product-info {
                     img {
-                        width: 27%;
+                        width: 28%;
                         
                     }
 
                     
                     figcaption {
-                        width: 66%;
+                        width: 68%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
                                 width: 100%;
+                                font-size:0.7em;
                             }
                         }
                     }
@@ -9439,6 +9459,7 @@
 
                 input.to_album_btn {
                     height: 40px;
+                    font-size:0.8em;
 
                     &:hover {
                         text-decoration: none !important;
@@ -10096,6 +10117,7 @@
 
                             li {
                                 width: 100%;
+                                
                             }
                         }
                     }
@@ -10729,7 +10751,6 @@
 
             
             .product-box {
-                min-height: 180px;
                 
                 width: 80%;
                 
@@ -10748,6 +10769,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.6em;
                             }
                         }
                     }

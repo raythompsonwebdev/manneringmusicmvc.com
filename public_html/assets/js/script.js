@@ -33,6 +33,12 @@ function updateVolumeProgressBar(audio) {
 	document.querySelector("div.audio_volume div.volume").style.width = volume + "%";
 }
 
+//hook up to play button on artist page
+function firstSong() {
+	setTrack(tempPlaylist[0], tempPlaylist, true);
+
+}
+
 // Audio Class
 function Audio() {
 

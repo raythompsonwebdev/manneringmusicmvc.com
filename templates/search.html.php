@@ -35,7 +35,7 @@
             })        
             .catch(function(err) {
 
-                console.log('Fetch Error :-S', err);
+                console.error('Fetch Error :-S', err);
 
             });
 
