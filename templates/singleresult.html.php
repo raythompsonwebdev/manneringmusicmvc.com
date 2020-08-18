@@ -124,22 +124,23 @@
     function setRepeat() {
         repeat = !repeat;        
         //using font awesome instead of image
-        imageName = repeat ? "on" : "off";
-        console.log(imageName)        
+        imageName = repeat ? "green" : "red";
+        //document.querySelector(.controlButton.repeat img").attr("src", "assets/images/icons/" + imageName);
+        document.querySelector("i.fa-repeat").style.color = imageName ;        
     }
 
     //set mute button
     function setMute() {
         audioElement.audio.muted = !audioElement.audio.muted;
-        var imageName = audioElement.audio.muted ? "on" : "off";
-        console.log(imageName);
+        var imageName = audioElement.audio.muted ? "green" : "red";       
+        document.querySelector("i.fa-volume-up").style.color = imageName ;
     }
 
     //set shuffle
     function setShuffle() {
         shuffle = !shuffle;
-        var imageName = shuffle ? "on" : "off";
-        console.log(imageName);
+        var imageName = shuffle ? "green" : "red"; 
+        document.querySelector("i.fa-random").style.color = imageName ;
 
         if(shuffle == true) {
             //Randomize playlist
