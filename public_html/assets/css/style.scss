@@ -880,7 +880,7 @@
                     position: relative;                 
 
                     img {
-                        width: 10%;
+                        width: 15%;
                         vertical-align: top;
                         margin: 0 0.5em 0 0;
                         order:1;
@@ -888,18 +888,18 @@
 
                     form#to_album_btn {
                         display: inline-block;
-                        width: 11%;
+                        width: 15%;
                         margin-bottom:0.5em;
                         padding:0; 
                         order:3;
                         position:absolute;
-                        bottom:2em;
+                        bottom:0em;
                         input.to_album_btn {
                             display: block;
                             background-color: $color1;
                             margin: 0;
                             width: 100%;
-                            height: 40px;
+                            height: 35px;
                             line-height: unset;
                             color: $color2;
                             border: none;
@@ -916,7 +916,7 @@
                     }  
 
                     figcaption {
-                        width: 88%;
+                        width: 83%;
                         display: inline-block;
                         order:2;
 
@@ -986,7 +986,7 @@
                     -ms-flex-pack: justify;
                     justify-content: space-between;
                     h1.trackName{
-                        line-height: 40px;
+                        line-height: 60px;
                         text-indent: 0;
                         width: 100%;
                         margin: 0;
@@ -1955,12 +1955,21 @@
 
                 figure.product-info {
                     img {
-                        width: 11%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 87%;
+                        width: 83%;
                         
 
                         ul.product-box-info {
@@ -2656,12 +2665,21 @@
 
                 figure.product-info {
                     img {
-                        width: 11%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 87%;                        
+                        width: 83%;                        
 
                         ul.product-box-info {
                             
@@ -2756,7 +2774,7 @@
                             
 
                             div.VolumeBg {
-                                width: 86%;
+                                width: 85%;
                                 
                             }
 
@@ -2766,7 +2784,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 12%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -3341,12 +3359,21 @@
 
                 figure.product-info {
                     img {
-                        width: 12%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 86%;
+                        width: 83%;
                         
 
                         ul.product-box-info {
@@ -3441,7 +3468,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -3451,7 +3478,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -3984,15 +4011,28 @@
                 figure.product-info {
 
                     img {
-                        width: 20%;
+                        width: 25%;
                         margin: 1em auto;
                         display: block;
+                        order:1;                       
                         
-                        
+                    }
+
+                    form#to_album_btn {
+                        order:3;
+                        width:20%;
+                        bottom: unset;
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
                     }
 
                     figcaption {
                         width: 100%;
+                        order:3;
                         
 
                         ul.product-box-info {
@@ -4086,7 +4126,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -4096,7 +4136,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -4630,9 +4670,21 @@
                 figure.product-info {
 
                     img {
-                        width: 20%;
+                        width: 25%;
                         margin: 1em auto;
                         display: block;
+                    }
+
+                    form#to_album_btn {
+        
+                        width:20%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -4730,7 +4782,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -4740,7 +4792,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -5263,11 +5315,23 @@
 
                 figure.product-info {
                     img {
-                        width: 20%;
+                        width: 30%;
                         
                         margin: 1em auto;
                         display: block;
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:20%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -5365,7 +5429,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -5375,7 +5439,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -5910,9 +5974,21 @@
 
                 figure.product-info {
                     img {
-                        width: 22%;
+                        width: 30%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -6009,7 +6085,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -6019,7 +6095,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -6536,9 +6612,21 @@
 
                 figure.product-info {
                     img {
-                        width: 25%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -6634,7 +6722,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -6644,7 +6732,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -7237,9 +7325,21 @@
 
                 figure.product-info {
                     img {
-                        width: 25%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -7335,7 +7435,7 @@
                             
 
                             div.VolumeBg {
-                                width: 85%;
+                                width: 80%;
                                 
                             }
 
@@ -7345,7 +7445,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 15%;
+                                width: 20%;
                                 
 
                                 i.fa-volume-up {
@@ -7990,9 +8090,21 @@
                 figure.product-info {
 
                     img {
-                        width: 30%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -8089,7 +8201,7 @@
                             
 
                             div.VolumeBg {
-                                width: 85%;
+                                width: 80%;
                                 
                             }
 
@@ -8099,7 +8211,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 15%;
+                                width: 20%;
                                 
 
                                 i.fa-volume-up {
@@ -8691,9 +8803,21 @@
 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -8789,7 +8913,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 75%;
                                 
                             }
 
@@ -8799,7 +8923,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 25%;
                                 
 
                                 i.fa-volume-up {
@@ -9329,6 +9453,18 @@
                         
                     }
 
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
+                    }
+
                     figcaption {
                         width: 100%;
                         
@@ -9423,7 +9559,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 75%;
                                 
                             }
 
@@ -9433,7 +9569,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 25%;
                                 
 
                                 i.fa-volume-up {
@@ -9981,6 +10117,18 @@
                         
                     }
 
+                    form#to_album_btn {
+        
+                        width:30%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
+                    }
+
                     figcaption {
                         width: 100%;
                         
@@ -10074,7 +10222,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 70%;
                                 
                             }
 
@@ -10084,7 +10232,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 30%;
                                 
 
                                 i.fa-volume-up {
@@ -10621,6 +10769,18 @@
                         
                     }
 
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.7em;                   
+
+                        }                 
+                    }
+
                     figcaption {
                         width: 100%;
                         
@@ -10714,7 +10874,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 70%;
                                 
                             }
 
@@ -10724,7 +10884,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 30%;
                                 
 
                                 i.fa-volume-up {

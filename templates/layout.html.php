@@ -57,7 +57,7 @@
         <ul id="inner_nav">
             <li><a rel='tab' href="/">Home</a></li>
             <li><a href="/review/list">Reviews</a></li>
-            <li><a href="/review/edit">Add Review</a></li>
+            <!-- <li><a href="/review/edit">Add Review</a></li> -->
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>
 
@@ -71,7 +71,7 @@
         <ul id="mobile_inner_nav">
             <li><a rel='tab' href="/">Home</a></li>
             <li><a href="/review/list">Reviews</a></li>
-            <li><a href="/review/edit">Add Review</a></li>
+            <!-- <li><a href="/review/edit">Add Review</a></li> -->
             <li><a rel='tab' href="/search">Search</a></li>
             <li><a rel='tab' href="/video">Video</a></li>
 

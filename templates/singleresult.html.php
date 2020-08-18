@@ -271,17 +271,17 @@
                             <span><?=$singlealbums->album; ?></span>
                         </li>
                         <li>
-                            <span>Formats</span>
-                            <span><?=$singlealbums->text; ?></span>
-                        </li>
-                        <li>
                             <span>Genre</span>
                             <span><?=$singlealbums->genre; ?></span>
                         </li>
                         <li>
                             <span>Price</span>
                             <span><?=$singlealbums->price; ?></span>
-                        </li>                       
+                        </li> 
+                        <li>
+                            <span></span>
+                            <span><a href="/review/edit">Add Review</a></span>
+                        </li>                      
                         
                     </ul>
 
