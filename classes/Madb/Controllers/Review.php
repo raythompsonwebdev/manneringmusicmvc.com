@@ -1,6 +1,7 @@
 <?php
 namespace Madb\Controllers;
 
+//import databasetable and authentication class
 use \Mannering\DatabaseTable;
 use \Mannering\Authentication;
 

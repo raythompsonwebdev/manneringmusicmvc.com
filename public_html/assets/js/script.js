@@ -34,10 +34,10 @@ function updateVolumeProgressBar(audio) {
 }
 
 //hook up to play button on artist page
-function firstSong() {
-	setTrack(tempPlaylist[0], tempPlaylist, true);
+// function firstSong() {
+// 	setTrack(tempPlaylist[0], tempPlaylist, true);
 
-}
+// }
 
 // Audio Class
 function Audio() {

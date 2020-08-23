@@ -256,7 +256,7 @@ foreach ($singleaudio as $key => $value) {
 
         <h1><?=$singleartist[0][1];?></h1>
 
-        <button id="artist_btn" onclick="firstSong()">Play</button>
+        <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
         
         
 

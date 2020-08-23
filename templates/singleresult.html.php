@@ -87,7 +87,6 @@ foreach ($singleaudio as $key => $value) {
         audioElement.setTime(seconds); //audio class func
     }
 
-
     //skip to previous song
     function prevSong() {
         if(audioElement.audio.currentTime >= 3 || currentIndex == 0) {
@@ -212,8 +211,7 @@ foreach ($singleaudio as $key => $value) {
             console.error('Fetch Error :-S', err);
         }); 
         
-    }
-        
+    }        
    
     //Play song
     function playSong(){

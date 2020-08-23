@@ -2,6 +2,7 @@
 
 namespace Madb\Controllers;
 
+//import database table class
 use \Mannering\DatabaseTable;
 
 class Music

@@ -10,7 +10,19 @@
 
             var artistname = document.querySelector("#artist").value;            
             var albumname = document.querySelector("#album").value;
-            var genre = document.querySelector("#genre").value;                     
+            var genre = document.querySelector("#genre").value; 
+            var searchErr = document.querySelector(".search_error");
+
+            if ( artistname == "" && albumname == "" && genre == "")  {         
+
+                searchErr.classList.add('show_error');
+                return false;
+                            
+            }else{
+
+                searchErr.classList.remove('show_error');
+
+            }                             
         
             fetch(`./results.php?artist_name=${artistname}&album=${albumname}&genre=${genre}`, {
                 method: 'get',
@@ -29,7 +41,8 @@
                                 
                     // Examine the text in the response
                     
-            }).then(function(data){
+            })
+            .then(function(data){
                 
                 window.document.getElementById('results').innerHTML = data;
             })        
@@ -52,7 +65,7 @@
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 
-    <span class="search_error">Either Album Name and Genre or Artist Name and Genre is required</span>
+    <span class="search_error">Fields cannot be empty. Enter either artistname, album name or select genre</span>
     
     <!--Search Form--> 
     <form id="searchForm" action="">
