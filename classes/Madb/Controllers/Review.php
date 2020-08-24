@@ -59,12 +59,6 @@ class Review
                 ];
     }
 
-    // public function home() {
-    //     $title = 'Internet Review Database';
-
-    //     return ['template' => 'home.html.php', 'title' => $title];
-    // }
-
     
     public function delete()
     {

@@ -261,7 +261,10 @@ class DatabaseTable
         return (object) $array;
     }
 
-
+    /**
+     * artist-page-function
+     *
+     * */
     public function findArtistAlbum($value)
     {
 
@@ -324,9 +327,35 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['artistId'],$row['mp3_File'],$row['songtitle'], $row['id'] ]);
+
+            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['artistId'], $row['plays'] ]);
         }
          
         return $array ;
     }
+    
+    // public function getNumberOfSongs() {
+    //     $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id'");
+    //     return mysqli_num_rows($query);
+    // }
+
+    // public function getNumberOfSongs($value) {
+
+    //     $query =  "SELECT `id`,`plays` FROM `audio` WHERE `albumId` = $value ";
+
+    //     $parameters = [
+    //         'value' => $value
+    //     ];
+
+    //     $query = $this->query($query, $parameters);
+
+    //     $array = array();
+
+    //     foreach ($query as $row) {
+    //         array_push($array, [$row['id'], $row['plays'] ]);
+    //     }
+         
+    //     return $array ;
+        
+    // }
 }

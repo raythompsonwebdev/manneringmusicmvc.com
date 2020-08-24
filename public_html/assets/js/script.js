@@ -54,7 +54,6 @@ function Audio() {
 	this.audio.addEventListener("canplay", function(){
 		var duration = formatTime(this.duration);
 		document.querySelector("div.current_time").textContent = duration;	
-
 		
 	});	
 	// Time Display Update //
@@ -72,7 +71,7 @@ function Audio() {
 	// Set Track //
 	this.setTrack = function(track) {
 
-		this.currentlyPlaying = track[0].mp3_File;
+		this.currentlyPlaying = track[0];
 
 		this.audio.src = track[0].mp3_File;
 

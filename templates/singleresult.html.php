@@ -1,13 +1,14 @@
+
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 
-<script src='assets/js/script.js'></script>
+<script src='assets/js/script.js'></script> 
 
 <?php
 
     $array = array();
-foreach ($singleaudio as $key => $value) {
-    array_push($array, $value[0]);
-}
+    foreach ($singleaudio as $key => $value) {
+        array_push($array, $value[0]);
+    }
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
   
 ?>
@@ -23,34 +24,33 @@ foreach ($singleaudio as $key => $value) {
         //update volume add full width
         updateVolumeProgressBar(audioElement.audio); //audio class func
 
-        //prevents highlighting draggig volume
-        $("div.audio_controls").on("mousedown touchstart mousemove touchmove", function(e){
-            e.preventDefault();
-        });
+        var prevHighlight = document.querySelector('div.audio_controls');
+        var progressBar = document.querySelector('div.progress div.play_progress');
 
+        prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", function(e){
+        e.preventDefault();
+        });     
 
-        //drag progress bar 
-        $("div.progress div.play_progress").mousedown(function() {
+        progressBar.addEventListener("mousedown", function(e){
             mouseDown = true;
         });
 
-        $("div.progress div.play_progress").mousemove(function(e) {
+        progressBar.addEventListener("mousemove", function(e) {
             if(mouseDown == true) {
                 //Set time of song, depending on position of mouse using timeFromOffset function below
                 timeFromOffset(e, this);
             }
         });
-
-        $("div.progress div.play_progress").mouseup(function(e) {
+        
+        progressBar.addEventListener("mouseup",function(e) {
             timeFromOffset(e, this);
         });
 
 
-        //drag volume bar 
         $("div.audio_volume div.volume").mousedown(function() {
             mouseDown = true;
         });
-
+        
         $("div.audio_volume div.volume").mousemove(function(e) {
             if(mouseDown == true) {
 
@@ -73,10 +73,11 @@ foreach ($singleaudio as $key => $value) {
 
         });
 
-        //allows mouse drag to work on progress bar by setting mouseDown back to false.
         $(document).mouseup(function() {
             mouseDown = false;
-        });            
+        }); 
+
+                    
                         
     });
 
@@ -101,7 +102,7 @@ foreach ($singleaudio as $key => $value) {
 
     //skip to next song
     function nextSong() {
-        //shuffle
+        shuffle
         if(repeat == true) {
             audioElement.setTime(0);
             playSong();
@@ -114,7 +115,7 @@ foreach ($singleaudio as $key => $value) {
         else {
             currentIndex++;
         }
-        //shuffle
+        shuffle
         var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
         setTrack(trackToPlay, currentPlaylist, true);
 
@@ -215,12 +216,27 @@ foreach ($singleaudio as $key => $value) {
    
     //Play song
     function playSong(){
-
+        console.log(audioElement)
         //track plays function needs ajax file updatePlays.php 
+        if(audioElement.audio.currentTime == 0) {
+            //get tracks from database
+            let url = 'updatePlays.php';
+            let formData = new FormData();
+            formData.append( "songId", audioElement.currentlyPlaying.id );                       
 
-        // if(audioElement.audio.currentTime == 0) {
-        //  $.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
-        // }                
+            fetch(url, { 
+                method: 'POST',            
+                body: formData
+
+            }).then(function (response) {
+
+                return response.text();
+
+            }).catch(function(err) {
+                console.error('Fetch Error :-S', err);
+            }); 
+        
+        }                
 
         $(".player-button.play").hide();
         $(".player-button.pause").show();        
@@ -259,6 +275,8 @@ foreach ($singleaudio as $key => $value) {
                 </form>
                
                 <figcaption>
+
+                
                     
                     <ul class="product-box-info">
                         <li>
@@ -291,8 +309,8 @@ foreach ($singleaudio as $key => $value) {
 
             <!--Audio Controls-->
             <div class="audio_controls">
-
-                <h1 class="trackName"></h1>
+            
+                <h1 class="trackName"></h1>                
 
                 <div class="audiocntrl_containers">
 
@@ -332,8 +350,7 @@ foreach ($singleaudio as $key => $value) {
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
                         </div>
                     </div>
-                </div>
-
+                </div>                
                 <div class="audiocntrl_containers">
                     <div class="current_time">00:00</div> 
                     <div class="progress">                        
@@ -343,7 +360,7 @@ foreach ($singleaudio as $key => $value) {
                 </div>
 
             </div>
-
+            <h2><?=$singlealbums->getNumberOfSongs(); ?> Songs</span></h2>
             <br/>
 
             <!--Audio Playlist-->

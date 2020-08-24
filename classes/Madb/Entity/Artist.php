@@ -20,6 +20,11 @@ class Artist
                     
         return $this->id ;
     }
+
+    public function getName()
+    {                    
+        return $this->$albumsTable;
+    }
     
     public function getAudioId()
     {
@@ -29,5 +34,10 @@ class Artist
     public function getAlbumId()
     {
         return $this->albumsTable->findById($this->id);
+    }
+
+    public function getSongId()
+    {
+        return $this->audioTable->findById($this->id);
     }
 }

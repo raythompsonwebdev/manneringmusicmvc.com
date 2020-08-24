@@ -84,10 +84,12 @@ class Music
 
     public function singleresult()
     {
+        
                                                       
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
             $singleaudio = $this->audioTable->findAlbumSongs($_GET['albumid']);
+            
         }
 
         if (isset($_GET['artistid'])) {
@@ -101,7 +103,6 @@ class Music
           'singlealbums' => $singlealbums,
           'singleartist' => $singleartist,
           'singleaudio' => $singleaudio
-          
         ]
         ];
     }
