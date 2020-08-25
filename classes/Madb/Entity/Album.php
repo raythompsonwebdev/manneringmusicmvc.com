@@ -37,8 +37,7 @@ class Album
     }
 
     public function getNumberOfSongs()
-    {
-        
+    {        
         return $this->audioTable->total('albumId', $this->id);
     }
     

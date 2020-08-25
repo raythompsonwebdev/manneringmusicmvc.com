@@ -12,8 +12,7 @@
   
 ?>
 
-<script>
-   
+<script>   
     $(document).ready(function() {
 
         //create seprate playlists for shuffle        
@@ -40,7 +39,7 @@
                 timeFromOffset(e, this);
             }
         });
-        
+
         progressBar.addEventListener("mouseup",function(e) {
             timeFromOffset(e, this);
         });
@@ -49,7 +48,7 @@
         $("div.audio_volume div.volume").mousedown(function() {
             mouseDown = true;
         });
-        
+
         $("div.audio_volume div.volume").mousemove(function(e) {
             if(mouseDown == true) {
 
@@ -74,9 +73,7 @@
 
         $(document).mouseup(function() {
             mouseDown = false;
-        }); 
-
-                    
+        });        
                         
     });
 
@@ -87,8 +84,8 @@
         audioElement.setTime(seconds); //audio class func
     }
 
-     //skip to previous song
-     function prevSong() {
+    //skip to previous song
+    function prevSong() {
         if(audioElement.audio.currentTime >= 3 || currentIndex == 0) {
             audioElement.setTime(0);
         }
@@ -107,18 +104,19 @@
             playSong();
             return;
         }
-        
+
         if(currentIndex == currentPlaylist.length - 1) {
             currentIndex = 0;
         }
         else {
             currentIndex++;
         }
-        
+        //shuffle
+        var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
+        setTrack(trackToPlay, currentPlaylist, true);
 
     }
 
-   
     //repeat button need repeat button added
     function setRepeat() {
         repeat = !repeat;        
@@ -133,16 +131,45 @@
         var imageName = audioElement.audio.muted ? "green" : "red";       
         document.querySelector("i.fa-volume-up").style.color = imageName ;
     }
-      
-    
+
+    //set shuffle
+    function setShuffle() {
+        shuffle = !shuffle;
+        var imageName = shuffle ? "green" : "red"; 
+        document.querySelector("i.fa-random").style.color = imageName ;
+
+        if(shuffle == true) {
+            //Randomize playlist
+            shuffleArray(shufflePlaylist);
+            currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
+        }
+        else {
+            //shuffle has been deactivated
+            //go back to regular playlist
+            currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
+        }
+    }
+
+    //shuffle array function from stackoverflow
+    function shuffleArray(a) {
+        var j, x, i;
+        for (i = a.length; i; i--) {
+            j = Math.floor(Math.random() * i);
+            x = a[i - 1];
+            a[i - 1] = a[j];
+            a[j] = x;
+        }
+    }
+
     //Set Audio tracks to to be played in tracklist
     function setTrack(trackId, newPlaylist, play) {
 
-        // if(newPlaylist != currentPlaylist) {
-        //     currentPlaylist = newPlaylist;
-
-        // }
-
+        if(newPlaylist != currentPlaylist) {
+            currentPlaylist = newPlaylist;
+            //add shuffle
+            // shufflePlaylist = currentPlaylist.slice();
+            // shuffleArray(shufflePlaylist);
+        }
         
         //create tracklist index
         currentIndex = currentPlaylist.indexOf(trackId); 
@@ -167,23 +194,27 @@
 
             var track = JSON.parse(body);
 
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle ;
+            if(track[0] != null){
+                document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+                audioElement.setTrack(track);
 
-            audioElement.setTrack(track);
+            }else{
+                document.querySelector("div.audio_controls h1.trackName").textContent = "No Tracks Available";
+            }            
 
             if(play == true) {
-                 playSong();
+                playSong();
             } 
 
         }).catch(function(err) {
             console.error('Fetch Error :-S', err);
         }); 
-        
+
     }        
-   
+
     //Play song
     function playSong(){
-        console.log(audioElement)
+
         //track plays function needs ajax file updatePlays.php 
         if(audioElement.audio.currentTime == 0) {
             //get tracks from database
@@ -202,7 +233,7 @@
             }).catch(function(err) {
                 console.error('Fetch Error :-S', err);
             }); 
-        
+
         }                
 
         $(".player-button.play").hide();
@@ -213,13 +244,13 @@
 
     //Pause Song
     function pauseSong(){
-        
+
         $(".player-button.play").show();
         $(".player-button.pause").hide();
         audioElement.pause();
-        
+
     }
-    
+
 
 </script> 
 
@@ -232,6 +263,7 @@
             
     <div class="product-box-large">
 
+
         <h1><?=$singleartist[0][1];?></h1>
 
         <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
@@ -241,32 +273,44 @@
             <h1 class="trackName"></h1>                
 
             <div class="audiocntrl_containers">
-                                
-                <div role="button" tabindex="0"  class="player-button play" onclick="playSong()" >
-                    <i class="fa fa-play" aria-hidden="true" title="play"></i>
-                </div>
-                                                        
-                <div role="button" tabindex="0"  class="player-button pause" style="display: none;" onclick="pauseSong()">
-                    <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
-                </div>               
 
-                <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
-                    <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
-                </div>
+                    <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()" >
+                        <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
+                    </div>
+                    
+                    <div role="button" tabindex="0"  class="player-button play" onclick="playSong()" >
+                        <i class="fa fa-play" aria-hidden="true" title="play"></i>
+                    </div>
+                                                            
+                    <div role="button" tabindex="0"  class="player-button pause" style="display: none;" onclick="pauseSong()">
+                        <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
+                    </div>
 
-                           
-            
-                <!--add onclick="setMute() to change volume icon. need to add volume icon-->
-                <div class="audio_volume">
-                    <div class="VolumeBg">
-                        <div class="volume"></div>
-                        <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                    <div role="button" tabindex="0"  class="player-button previous" onclick="prevSong()">
+                        <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
                     </div>
-                    <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
-                        <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+
+                    <div role="button" tabindex="0"  class="player-button next" onclick="nextSong()" >
+                        <i class="fa fa-step-forward" aria-hidden="true" title="next" ></i>
                     </div>
-                </div>
-            </div>                
+
+                    <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
+                        <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
+                    </div>
+
+                               
+                
+                    <!--add onclick="setMute() to change volume icon. need to add volume icon-->
+                    <div class="audio_volume">
+                        <div class="VolumeBg">
+                            <div class="volume"></div>
+                            <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                        </div>
+                        <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
+                            <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+                        </div>
+                    </div>
+                </div>                 
             <div class="audiocntrl_containers">
                 <div class="current_time">00:00</div> 
                 <div class="progress">                        
@@ -276,24 +320,23 @@
             </div>
 
         </div>
-  
+        <h2>Artist Tracks</h2>
         <br/>
         <br/>
-        
+         <!-- <span> Plays: $value[4]</span> PLays -->
         <!--Audio Playlist-->
         <ul class="audio-tracklist">                
             <?php
                                     
                 $i = 1;
                 
-            foreach ($singleaudio as $songId => $value) :
-                   
-                                                                
-                    echo "<li>
-                    
-                        <span>Track " . $i . " : </span>
-                        <span >" . $value[1] . "</span>
-                        <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)''><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+            foreach ($singleaudio as $songId => $value) :                   
+                              
+                    echo "<li>                    
+                        <span class=\"tracknum\">Track " . $i . " : </span>
+                        <span class=\"trackname\">" . $value[1] . "</span>
+                        <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                        <span class=\"trackplays\">$value[4] plays</span>
                     </li>";
                 
                     $i = $i + 1;
@@ -305,21 +348,19 @@
         <!--Temporary Play List-->
         <script>
             //songId value from value of $singleaudio variable
-            var tempSongIds = <?= json_encode($value[0]); ?>;
-            tempPlaylist = JSON.parse(tempSongIds); 
-
-            console.log(tempPlaylist)
+            var tempSongIds = '<?= json_encode($value[0]); ?>';
+            tempPlaylist = JSON.parse(tempSongIds);
+             
         </script>
 
     </div>
 
         <h2> Other Albums</h2> 
     <?php foreach ($singlealbums as $value) :?>
-
         <div class="product-box">
 
             <figure class="product-info">
-                <a href="/singleresult?artistid=<?=$value[3]?>&albumid=<?=$value[0]?>">
+                <a href="/singleresult?artistid=<?=$value[0]?>&albumid=<?=$value[3]?>">
                 <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  /></a>                
                 
                 <figcaption >

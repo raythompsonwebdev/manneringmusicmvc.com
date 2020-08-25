@@ -109,14 +109,11 @@ class Music
 
     public function artist()
     {
-
-        // if (isset($_GET['albumid'])) {
-        //     $singlealbums = $this->albumsTable->findArtistAlbum($_GET['albumid']);
-        // }
-               
+      
 
         if (isset($_GET['artistid'])) {
-            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);
+                        
+            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);            
             $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
             $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
         }
@@ -127,7 +124,8 @@ class Music
         return ['template' => 'artist.html.php', 'title' => $title,'variables' =>[
           'singlealbums' => $singlealbums,
           'singleartist' => $singleartist,
-          'singleaudio' => $singleaudio
+          'singleaudio' => $singleaudio,
+          'songCount' => $songCount
           
         ]
         ];

@@ -71,7 +71,7 @@ function Audio() {
 	// Set Track //
 	this.setTrack = function(track) {
 
-		this.currentlyPlaying = track[0];
+		this.currentlyPlaying = track;
 
 		this.audio.src = track[0].mp3_File;
 

@@ -115,7 +115,7 @@
         else {
             currentIndex++;
         }
-        shuffle
+        //shuffle
         var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
         setTrack(trackToPlay, currentPlaylist, true);
 
@@ -169,14 +169,9 @@
     function setTrack(trackId, newPlaylist, play) {
 
         if(newPlaylist != currentPlaylist) {
-            currentPlaylist = newPlaylist;
-
-            //add shuffle
-            shufflePlaylist = currentPlaylist.slice();
-            shuffleArray(shufflePlaylist);
+            currentPlaylist = newPlaylist;            
         }
 
-        
         //create tracklist index
         currentIndex = currentPlaylist.indexOf(trackId); 
 
@@ -200,9 +195,13 @@
 
             var track = JSON.parse(body);
 
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle ;
+            if(track[0] != null){
+                document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+                audioElement.setTrack(track);
 
-            audioElement.setTrack(track);
+            }else{
+                document.querySelector("div.audio_controls h1.trackName").textContent = "No Tracks Available";
+            }            
 
             if(play == true) {
                  playSong();
@@ -216,7 +215,7 @@
    
     //Play song
     function playSong(){
-        console.log(audioElement)
+        
         //track plays function needs ajax file updatePlays.php 
         if(audioElement.audio.currentTime == 0) {
             //get tracks from database
@@ -362,7 +361,7 @@
             </div>
             <h2><?=$singlealbums->getNumberOfSongs(); ?> Songs</span></h2>
             <br/>
-
+ <!-- <span> Plays: $value[4]</span> PLays -->
             <!--Audio Playlist-->
             <ul class="audio-tracklist">                
                 <?php
@@ -371,11 +370,14 @@
                     
                 foreach ($singleaudio as $songId => $value) :
                         //songId value from value of $singleaudio variable
+
+                        
                                                 
                         echo "<li>
-                            <span>Track " . $i . " : </span>
-                            <span >" . $value[1] . "</span>
-                            <span onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                            <span class=\"tracknum\">Track " . $i . " : </span>
+                            <span class=\"trackname\">" . $value[1] . "</span>
+                            <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                            <span class=\"trackplays\">$value[4] plays </span>
                         </li>";
                     
                         $i = $i + 1;

@@ -1142,18 +1142,18 @@
                         display:flex;
                         line-height:40px;
                         margin-bottom:0.5em;
-                        span:first-of-type{
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
+                        span.trackbtn{
                             background-color: $color7;
                             width:15%;
                             cursor:pointer;
@@ -1163,10 +1163,17 @@
                                 line-height: 40px;
                                 font-size:190%;
                                 &:hover{
-                                    background: color $color2;;
+                                    background-color: $color2;;
                                     color:$color7;
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
+                            text-align:center;
 
                         }
 
@@ -2119,31 +2126,38 @@
                     
 
                     li{
-                        
+
                         margin-bottom:0.5em;
-                        span:first-of-type{
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
+                            background-color: $color7;
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -2831,31 +2845,36 @@
                     
 
                     li{
-                        
-                        margin-bottom:0.5em;
-                        span:first-of-type{
+  
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -3525,31 +3544,36 @@
                     
 
                     li{
-                        font-size: 0.85em;
-                        margin-bottom:0.5em;
-                        span:first-of-type{
+                        font-size:0.85em;
+                        span.tracknum{
 
-                            width:11%;
-
-                        }
-                        span{
-
-                            width:72%;
+                            width:10%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:65%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -4183,31 +4207,37 @@
                     
 
                     li{
-                        font-size: 0.85em;
 
-                        span:first-of-type{
+                        font-size:0.85em;
+                        span.tracknum{
 
                             width:11%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:74%;
+                            width:64%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -4839,31 +4869,37 @@
                     
 
                     li{
-                        font-size: 0.85em;
 
-                        span:first-of-type{
+                        font-size:0.85em;
+                        span.tracknum{
 
                             width:11%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:74%;
+                            width:64%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -5486,31 +5522,37 @@
                     
 
                     li{
-                        font-size: 0.80em;
 
-                        span:first-of-type{
+                        font-size:0.8em;
+                        span.tracknum{
 
                             width:12%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:73%;
+                            width:63%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -6141,33 +6183,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
+
+                        font-size:0.7em;
+                        span.tracknum{
 
                             width:12%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:73%;
+                            width:63%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:10%;
+
+                        }
+
 
                     }
 
@@ -6778,33 +6827,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:12%;
 
-                        }
-                        span{
+                        span.tracknum{
 
-                            width:73%;
+                            width:13%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:60%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:12%;
+
+                        }
+
 
                     }
 
@@ -7487,37 +7543,43 @@
                 }
 
                 ul.audio-tracklist{
-                    margin:0;
-                    
+                    margin:0;                    
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
+
+
+                        span.tracknum{
 
                             width:13%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:72%;
+                            width:60%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:12%;
+
+                        }
+
 
                     }
 
@@ -8257,33 +8319,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
+
+
+                        span.tracknum{
 
                             width:13%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:72%;
+                            width:60%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:13%;
+
+                        }
+
 
                     }
 
@@ -8971,33 +9040,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
+
+
+                        span.tracknum{
 
                             width:16%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:69%;
+                            width:57%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:13%;
+
+                        }
+
 
                     }
 
@@ -9619,33 +9695,40 @@
                     
 
                     li{
-                        font-size: 0.6em;
-                        
-                        span:first-of-type{
+
+                        font-size:0.6em;
+                        span.tracknum{
 
                             width:16%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:69%;
+                            width:57%;
 
                         }
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                        span.trackbtn{
+                            width:13%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:14%;
+
+                        }
+
 
                     }
 
@@ -10279,37 +10362,42 @@
                 }
 
                 ul.audio-tracklist{
-                    margin:0;
-                    
+                    margin:0;                    
 
                     li{
-                        font-size: 0.6em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
                             width:16%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:69%;
+                            width:55%;
 
                         }
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                        span.trackbtn{
+                            width:13%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
@@ -10935,33 +11023,39 @@
                     
 
                     li{
-                        font-size: 0.55em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
-                            width:16%;
-
-                        }
-                        span{
-
-                            width:69%;
+                            width:17%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                            width:53%;
+
+                        }
+
+                        span.trackbtn{
+                            width:14%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
@@ -11548,33 +11642,39 @@
                     
 
                     li{
-                        font-size: 0.55em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
                             width:20%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:60%;
+                            width:50%;
 
                         }
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                        span.trackbtn{
+                            width:14%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
