@@ -239,10 +239,10 @@ class DatabaseTable
      * single-result-page-function
      *
      * */
-    public function findSongId($value)
+    public function findAlbumSongs($value)
     {
 
-        $query = "SELECT `id`, `songtitle`, `mp3_File`, `ogg_File`  FROM `audio` WHERE `albumId` = $value ";
+        $query = "SELECT `id`, `songtitle`, `mp3_File`, `albumId`, `plays` FROM `audio` WHERE `albumId` = $value ";
 
         $parameters = [
             'value' => $value
@@ -255,7 +255,7 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File']  ]);
+            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['albumId'], $row['plays'] ]);
         }
          
         return (object) $array;
@@ -279,9 +279,61 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['artist_name']]);
+            array_push($array, [$row['id'], $row['artist_name']]);
         }
          
         return $array ;
     }
+
+    /**
+     * artist-page-function
+     *
+     * */
+    public function findArtistAlbum($value)
+    {
+
+        $query = "SELECT `id`, `album`, `image`, `artistId`, `genre`  FROM `album` WHERE `artistId` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);        
+
+        $array = array();
+
+        foreach ($query as $row) {
+            array_push($array, [$row['id'], $row['album'], $row['image'], $row['artistId'], $row['genre']  ]);
+        }
+         
+        return (object)$array;
+    }
+
+     /**
+     * artist-page-function
+     *
+     * */
+    public function findArtistSongs($value)
+    {
+
+        $query = "SELECT `id`, `songtitle`, `mp3_File`, `artistId`, `plays` FROM `audio` WHERE `artistId` = $value ";
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $query = $this->query($query, $parameters);
+
+        $array = array();
+
+        foreach ($query as $row) {
+
+            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['artistId'], $row['plays'] ]);
+        }
+         
+        return (object) $array ;
+    }
+   
+   
+        
 }

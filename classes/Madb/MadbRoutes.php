@@ -1,6 +1,6 @@
 <?php
 namespace Madb;
-
+//Interface used to 'type hint' Class to ensure class can't work without a getRoutes function.
 class MadbRoutes implements \Mannering\Routes
 {
 
@@ -271,6 +271,12 @@ class MadbRoutes implements \Mannering\Routes
                                                 'action' => 'singleresult'
                                 ]
                 ],
+                'artist' => [
+                    'GET' => [
+                                    'controller' => $musicController,
+                                    'action' => 'artist'
+                    ]
+    ]
                     ];
 
         return $routes;

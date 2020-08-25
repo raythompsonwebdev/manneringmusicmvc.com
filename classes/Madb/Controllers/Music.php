@@ -1,6 +1,8 @@
 <?php
 
 namespace Madb\Controllers;
+
+//import database table class
 use \Mannering\DatabaseTable;
 
 class Music
@@ -82,10 +84,12 @@ class Music
 
     public function singleresult()
     {
+        
                                                       
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
-            $singleaudio = $this->audioTable->findSongId($_GET['albumid']);
+            $singleaudio = $this->audioTable->findAlbumSongs($_GET['albumid']);
+            
         }
 
         if (isset($_GET['artistid'])) {
@@ -99,6 +103,29 @@ class Music
           'singlealbums' => $singlealbums,
           'singleartist' => $singleartist,
           'singleaudio' => $singleaudio
+        ]
+        ];
+    }
+
+    public function artist()
+    {
+      
+
+        if (isset($_GET['artistid'])) {
+                        
+            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);            
+            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
+            $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
+        }
+
+                    
+        $title = 'Mannering Album Page';
+              
+        return ['template' => 'artist.html.php', 'title' => $title,'variables' =>[
+          'singlealbums' => $singlealbums,
+          'singleartist' => $singleartist,
+          'singleaudio' => $singleaudio,
+          'songCount' => $songCount
           
         ]
         ];

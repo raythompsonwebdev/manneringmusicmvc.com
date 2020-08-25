@@ -1,69 +1,62 @@
 
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
-<script>
+<script> 
+    document.addEventListener("DOMContentLoaded", function(event) {
 
-    jQuery(document).ready(function() {
+        let searchBTN = window.document.querySelector('#searchBtn');
 
-        $("#searchBtn ").on('click', function(e){
+        searchBTN.addEventListener('click', function (e){
 
-            
             e.preventDefault();
-       
-            var artistname = $("#artist").val();            
-            var albumname = $("#album").val();
-            var genre = $("#genre").val();
-            
-                        
-            if ( artistname.length < 1 && albumname.length < 1 && genre === null) {
 
-                $('.search_error').addClass('show_error');
-                                
-            
-            }else if(artistname.length < 1 && albumname.length < 1 && genre === !null ){
-                
-                $('.search_error').removeClass('show_error');
+            var artistname = document.querySelector("#artist").value;            
+            var albumname = document.querySelector("#album").value;
+            var genre = document.querySelector("#genre").value; 
+            var searchErr = document.querySelector(".search_error");
 
-            }else if(artistname.length > 1 && albumname.length < 1 && genre === !null){
-                
-                $('.search_error').removeClass('show_error');
+            if ( artistname == "" && albumname == "" && genre == "")  {         
 
-            }else if(artistname.length < 1 && albumname.length > 1 && genre === !null){
-                
-                $('.search_error').removeClass('show_error');
+                searchErr.classList.add('show_error');
+                return false;
+                            
+            }else{
 
-            }else if((artistname.length > 1 || albumname.length < 1 || genre === !null) && e.type == 'click'){
-                $('.search_error').removeClass('show_error');
-            }                
-                        
-            var dataString = 'artist_name='+ artistname + '&album=' + albumname + '&genre=' + genre;
+                searchErr.classList.remove('show_error');
 
-            $.ajax({
-                url:  'results.php',
-                async: true,
-                method: "GET",
-                data: dataString,
-                dataType: 'html',
-                success: function(data) {
-                    
-                        $("#results").html(data);
-                        
-                },
-                
-                error: function(jqxhr, textStatus, error){
-                    alert('An error occurred! ' + ( error ? error : jqxhr.status ));
+            }                             
+        
+            fetch(`./results.php?artist_name=${artistname}&album=${albumname}&genre=${genre}`, {
+                method: 'get',
+                headers: {
+                "Content-type": "application/x-www-form-urlencoded;charset=UTF-8; charset=UTF-8"
                 }
+            })
+            .then(function(response) {
+
+                    if (response.status !== 200) {
+                        alert('Looks like there was a problem. Status Code: ' +
+                        response.status);                                      
+                    }
+
+                    return response.text()
+                                
+                    // Examine the text in the response
+                    
+            })
+            .then(function(data){
+                
+                window.document.getElementById('results').innerHTML = data;
+            })        
+            .catch(function(err) {
+
+                console.error('Fetch Error :-S', err);
+
             });
 
-            
-            //end of ajax function
+            //end of fetch function
             return false;
-            
 
-        });
-        // search click end
-
-    });//end of jquery
-
+        });  
+    });
 </script>
 
 <section id="main_text">
@@ -72,10 +65,10 @@
 
     <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
 
-    <span class="search_error">Either Album Name and Genre or Artist Name and Genre is required</span>
+    <span class="search_error">Fields cannot be empty. Enter either artistname, album name or select genre</span>
     
     <!--Search Form--> 
-    <form id="searchForm">
+    <form id="searchForm" action="">
         <fieldset>
             <legend>Search Here</legend>
 
@@ -111,3 +104,6 @@
 <br/>
 <br/>
 </section>
+
+
+

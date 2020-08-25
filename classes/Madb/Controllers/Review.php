@@ -1,5 +1,7 @@
 <?php
 namespace Madb\Controllers;
+
+//import databasetable and authentication class
 use \Mannering\DatabaseTable;
 use \Mannering\Authentication;
 
@@ -56,12 +58,6 @@ class Review
                     ]
                 ];
     }
-
-    // public function home() {
-    //     $title = 'Internet Review Database';
-
-    //     return ['template' => 'home.html.php', 'title' => $title];
-    // }
 
     
     public function delete()

@@ -1,7 +1,6 @@
-
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
 
-<script src='assets/js/script.js'></script> 
+<script src='assets/js/script.js'></script>
 
 <?php
 
@@ -13,8 +12,7 @@
   
 ?>
 
-<script>
-   
+<script>   
     $(document).ready(function() {
 
         //create seprate playlists for shuffle        
@@ -41,7 +39,7 @@
                 timeFromOffset(e, this);
             }
         });
-        
+
         progressBar.addEventListener("mouseup",function(e) {
             timeFromOffset(e, this);
         });
@@ -50,7 +48,7 @@
         $("div.audio_volume div.volume").mousedown(function() {
             mouseDown = true;
         });
-        
+
         $("div.audio_volume div.volume").mousemove(function(e) {
             if(mouseDown == true) {
 
@@ -75,9 +73,7 @@
 
         $(document).mouseup(function() {
             mouseDown = false;
-        }); 
-
-                    
+        });        
                         
     });
 
@@ -102,13 +98,13 @@
 
     //skip to next song
     function nextSong() {
-        shuffle
+        //shuffle
         if(repeat == true) {
             audioElement.setTime(0);
             playSong();
             return;
         }
-        
+
         if(currentIndex == currentPlaylist.length - 1) {
             currentIndex = 0;
         }
@@ -164,14 +160,17 @@
             a[j] = x;
         }
     }
-    
+
     //Set Audio tracks to to be played in tracklist
     function setTrack(trackId, newPlaylist, play) {
 
         if(newPlaylist != currentPlaylist) {
-            currentPlaylist = newPlaylist;            
+            currentPlaylist = newPlaylist;
+            //add shuffle
+            // shufflePlaylist = currentPlaylist.slice();
+            // shuffleArray(shufflePlaylist);
         }
-
+        
         //create tracklist index
         currentIndex = currentPlaylist.indexOf(trackId); 
 
@@ -204,18 +203,18 @@
             }            
 
             if(play == true) {
-                 playSong();
+                playSong();
             } 
 
         }).catch(function(err) {
             console.error('Fetch Error :-S', err);
         }); 
-        
+
     }        
-   
+
     //Play song
     function playSong(){
-        
+
         //track plays function needs ajax file updatePlays.php 
         if(audioElement.audio.currentTime == 0) {
             //get tracks from database
@@ -234,7 +233,7 @@
             }).catch(function(err) {
                 console.error('Fetch Error :-S', err);
             }); 
-        
+
         }                
 
         $(".player-button.play").hide();
@@ -245,73 +244,35 @@
 
     //Pause Song
     function pauseSong(){
-        
+
         $(".player-button.play").show();
         $(".player-button.pause").hide();
         audioElement.pause();
-        
+
     }
-    
+
 
 </script> 
 
+
 <section id="main_text" class="group">
 
-    <h1>Albums</h1>         
+    <h1>Artist</h1>         
 
     <div id="results">
             
-        <div class="product-box-large">
+    <div class="product-box-large">
 
-            <figure class="product-info">
 
-                <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
+        <h1><?=$singleartist[0][1];?></h1>
 
-                <form method="get" action="/artist" id="to_album_btn">
-                    <input type="submit" class="to_album_btn" value="Go To Artist.." />
-                    <input type="hidden" name="artistid" value="<?=$singlealbums->artistId ?? ''?>"> 
-                    <input type="hidden" name="albumid" value="<?=$singlealbums->id ?? ''?>">                   
-                </form>
-               
-                <figcaption>
-
-                
-                    
-                    <ul class="product-box-info">
-                        <li>
-                            <span>Artist </span>
-                            <span><?=$singleartist[0][1]; ?></span>
-                        </li>
-                        <li>
-                            <span>Album</span>
-                            <span><?=$singlealbums->album; ?></span>
-                        </li>
-                        <li>
-                            <span>Genre</span>
-                            <span><?=$singlealbums->genre; ?></span>
-                        </li>
-                        <li>
-                            <span>Price</span>
-                            <span><?=$singlealbums->price; ?></span>
-                        </li> 
-                        <li>
-                            <span></span>
-                            <span><a href="/review/edit">Add Review</a></span>
-                        </li>                      
-                        
-                    </ul>
-
-                </figcaption>
-
-                                        
-            </figure>
-
-            <!--Audio Controls-->
-            <div class="audio_controls">
+        <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
+       <!--Audio Controls-->
+       <div class="audio_controls">
             
-                <h1 class="trackName"></h1>                
+            <h1 class="trackName"></h1>                
 
-                <div class="audiocntrl_containers">
+            <div class="audiocntrl_containers">
 
                     <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()" >
                         <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
@@ -349,51 +310,73 @@
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
                         </div>
                     </div>
-                </div>                
-                <div class="audiocntrl_containers">
-                    <div class="current_time">00:00</div> 
-                    <div class="progress">                        
-                        <div class="play_progress"></div>
-                    </div>
-                    <div class="duration">00:00</div>
+                </div>                 
+            <div class="audiocntrl_containers">
+                <div class="current_time">00:00</div> 
+                <div class="progress">                        
+                    <div class="play_progress"></div>
                 </div>
-
+                <div class="duration">00:00</div>
             </div>
-            <h2><?=$singlealbums->getNumberOfSongs(); ?> Songs</span></h2>
-            <br/>
- <!-- <span> Plays: $value[4]</span> PLays -->
-            <!--Audio Playlist-->
-            <ul class="audio-tracklist">                
-                <?php
-                                        
-                    $i = 1;
-                    
-                foreach ($singleaudio as $songId => $value) :
-                        //songId value from value of $singleaudio variable
-
-                        
-                                                
-                        echo "<li>
-                            <span class=\"tracknum\">Track " . $i . " : </span>
-                            <span class=\"trackname\">" . $value[1] . "</span>
-                            <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                            <span class=\"trackplays\">$value[4] plays </span>
-                        </li>";
-                    
-                        $i = $i + 1;
-                endforeach;
-                
-                ?>
-            </ul>
-
-            <!--Temporary Play List-->
-            <script>
-                //songId value from value of $singleaudio variable
-                var tempSongIds = '<?= json_encode($value[0]); ?>';
-                tempPlaylist = JSON.parse(tempSongIds); 
-             </script>
 
         </div>
+        <h2>Artist Tracks</h2>
+        <br/>
+        <br/>
+         <!-- <span> Plays: $value[4]</span> PLays -->
+        <!--Audio Playlist-->
+        <ul class="audio-tracklist">                
+            <?php
+                                    
+                $i = 1;
+                
+            foreach ($singleaudio as $songId => $value) :                   
+                              
+                    echo "<li>                    
+                        <span class=\"tracknum\">Track " . $i . " : </span>
+                        <span class=\"trackname\">" . $value[1] . "</span>
+                        <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                        <span class=\"trackplays\">$value[4] plays</span>
+                    </li>";
+                
+                    $i = $i + 1;
+            endforeach;
+            
+            ?>
+        </ul>            
+
+        <!--Temporary Play List-->
+        <script>
+            //songId value from value of $singleaudio variable
+            var tempSongIds = '<?= json_encode($value[0]); ?>';
+            tempPlaylist = JSON.parse(tempSongIds);
+             
+        </script>
+
+    </div>
+
+        <h2> Other Albums</h2> 
+    <?php foreach ($singlealbums as $value) :?>
+        <div class="product-box">
+
+            <figure class="product-info">
+                <a href="/singleresult?artistid=<?=$value[3]?>&albumid=<?=$value[0]?>">
+                <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  /></a>                
+                
+                <figcaption >
+                    
+                    <ul class="product-box-info">
+                        <li><?=$value[1];?></li>
+                    </ul>
+                    
+                </figcaption>
+        
+            </figure>              
+            
+        </div>
+        
+    <?php endforeach;?>
+         
 
     <div>
 

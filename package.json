@@ -7,17 +7,27 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint public_html/assets/js/**.js",
+    "lint:watch": "esw -w --cache public_html/assets/js/**.js",
+    "css:watch": "grunt watch"
   },
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "whatwg-fetch": "^3.4.0"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "eslint": "^7.5.0",
+    "eslint-plugin-dollar-sign": "^1.0.2",
+    "eslint-watch": "^7.0.0",
+    "grunt": "^1.2.1",
+    "grunt-babel": "^8.0.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "node-sass": "^4.14.1"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,7 @@
 <?php
 namespace Madb\Controllers;
 
+//import databasetable class 
 use \Mannering\DatabaseTable;
 
 class Register

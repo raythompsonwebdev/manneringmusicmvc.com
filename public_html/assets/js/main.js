@@ -1,6 +1,8 @@
 
 var menuToggle = document.querySelector('#mobile-toggle');
 
+
+
 menuToggle.addEventListener('click', function(event){
 
 	event.preventDefault();
@@ -30,5 +32,8 @@ menuToggle.addEventListener('click', function(event){
 
 
 }, false);
+
+
+
 
 

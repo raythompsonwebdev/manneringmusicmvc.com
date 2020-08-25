@@ -19,11 +19,15 @@ class Artist
     {
                     
         return $this->id ;
-    }      
+    }
+
+    public function getName()
+    {                    
+        return $this->$artist_name;
+    }
     
     public function getAudioId()
     {
-                    
         return $this->audioTable->findById($this->id) ;
     }
 
@@ -31,4 +35,16 @@ class Artist
     {
         return $this->albumsTable->findById($this->id);
     }
+
+    public function getSongId()
+    {
+        return $this->audioTable->findById($this->id);
+    }
+
+    public function getNumOfSongs()
+    {        
+        return $this->audioTable->total('artistId', $this->id);
+    }
+
+    
 }

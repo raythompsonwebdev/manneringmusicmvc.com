@@ -216,7 +216,6 @@
                     color: $color2;
                     display: block;
                     font-size: 0.9em;
-                    letter-spacing: 0.2em;
                     font-weight: normal;
 
                     &:hover {
@@ -501,12 +500,25 @@
             }
 
             ul.categories{
+                // display: -webkit-flex;
+                // display: -ms-flexbox;
+                // display: flex;
+                // -webkit-flex-flow: row wrap;
+                // -ms-flex-flow: row wrap;
+                // flex-flow: row wrap;
+                // -webkit-align-content: flex-start;
+                // -ms-flex-content: flex-start;
+                // align-content: flex-start;
+                // -webkit-justify-content: flex-start;
+                // -ms-flex-pack: flex-start;
+                // justify-content: flex-start;
                 display:block;
                 list-style:none;
-                width:50%;
+                width:96%;
                 margin:1em auto;
+
                 li{
-                    
+                    width:20%;
                     height:auto;
                     background-color:$color2;
                     
@@ -744,14 +756,13 @@
             align-items: flex-start;            
 
             .product-box {
-                height: auto;
-                min-height: 240px;                
+                height: auto;              
                 padding: 0.25em;
                 border: solid $color5 4px;
                 @include boredrady(5px);
                 background-color: $color6;
-                margin: 0.5em;
-                width: 31%;
+                margin: 0.25em;
+                width: 32.2%;
                 display: block;
                 float: left;
                 font-weight: normal;
@@ -799,9 +810,10 @@
                 }
 
                 form#to_album_btn {
-                    display: block;
+                    display: inline-block;
                     width: 100%;
-                    clear:both;                    
+                    margin-bottom:0.5em;
+                    padding:0;                  
                 }
 
                 input.to_album_btn {
@@ -839,13 +851,34 @@
                 display: block;
                 font-weight: normal;
 
+                button#artist_btn{
+                    display: block;
+                    background-color: $color1;
+                    margin: 1em auto;
+                    width: 30%;
+                    height: 45px;
+                    line-height: 45px;;
+                    color: $color2;
+                    border: none;
+                    font-size: 1em;
+                    cursor: pointer;
+                    padding: 0;                    
+                    text-align: center;                    
+                    &:hover {
+                        background-color: $color4;
+                        text-decoration: none !important;
+                        @include transitioner(all 0.2s ease);
+                    }
+
+                }
+
                 // .parent {
                 //     display: grid;
                 //     grid-template-columns: repeat(5, 1fr);
                 //     grid-template-rows: repeat(5, 1fr);
                 //     grid-column-gap: 0px;
                 //     grid-row-gap: 0px;
-                //     }
+                // }
                     
                 //     .div1 { grid-area: 1 / 1 / 3 / 3; }
                 //     .div2 { grid-area: 1 / 3 / 2 / 6; }
@@ -854,17 +887,59 @@
                 //     .div5 { grid-area: 4 / 1 / 5 / 6; }
                 //     .div6 { grid-area: 5 / 1 / 6 / 6; }
 
-                figure.product-info {
-
+                figure.product-info { 
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-flow: row wrap;
+                    -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;  
+                    position: relative;
+                    
+                    
                     img {
-                        width: 10%;
+                        width: 15%;
                         vertical-align: top;
                         margin: 0 0.5em 0 0;
+                        order:1;
                     }
 
-                    figcaption {
-                        width: 88%;
+                    form#to_album_btn {
                         display: inline-block;
+                        width: 15%;
+                        margin-bottom:0.5em;
+                        padding:0; 
+                        order:3;
+                        position:absolute;
+                        bottom:0em;
+                        input.to_album_btn {
+                            display: block;
+                            background-color: $color1;
+                            margin: 0;
+                            width: 100%;
+                            height: 35px;
+                            line-height: unset;
+                            color: $color2;
+                            border: none;
+                            font-size: 1em;
+                            cursor: pointer;
+                            padding: 0;                    
+                            text-align: center;                    
+                            &:hover {
+                                background-color: $color4;
+                                text-decoration: none !important;
+                                @include transitioner(all 0.2s ease);
+                            }
+                        }                 
+                    }  
+
+                    figcaption {
+                        width: 83%;
+                        display: inline-block;
+                        order:2;
 
                         ul.product-box-info {
                             width: 100%;
@@ -932,7 +1007,7 @@
                     -ms-flex-pack: justify;
                     justify-content: space-between;
                     h1.trackName{
-                        line-height: 40px;
+                        line-height: 60px;
                         text-indent: 0;
                         width: 100%;
                         margin: 0;
@@ -949,13 +1024,11 @@
                         margin-bottom:0.5em;
                     
                         .player-button {
-                            width: 20%;
+                            width: 15%;
                             flex: 0 1 auto;
                             text-align: center;
                             height: 50px;
                             line-height: 50px;
-                            
-                            
                             cursor: pointer;
 
                             i {
@@ -1043,6 +1116,9 @@
                                         display: block;
                                     }
                                 }
+                                &:hover{
+                                    cursor:pointer;
+                                }
                             }
                         } 
                     }
@@ -1066,18 +1142,18 @@
                         display:flex;
                         line-height:40px;
                         margin-bottom:0.5em;
-                        span:first-of-type{
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
+                        span.trackbtn{
                             background-color: $color7;
                             width:15%;
                             cursor:pointer;
@@ -1085,12 +1161,19 @@
                                 text-align: center;
                                 display: block;
                                 line-height: 40px;
-                                font-size:1.2em;
+                                font-size:190%;
                                 &:hover{
-                                    background: color $color2;;
+                                    background-color: $color2;;
                                     color:$color7;
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
+                            text-align:center;
 
                         }
 
@@ -1865,8 +1948,7 @@
 
             
             .product-box {
-                min-height: 220px;                
-                width: 31%;
+             
                 
                 figure.product-info {
                     img {
@@ -1903,12 +1985,21 @@
 
                 figure.product-info {
                     img {
-                        width: 11%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 87%;
+                        width: 83%;
                         
 
                         ul.product-box-info {
@@ -1954,7 +2045,7 @@
                                                             
                     
                         .player-button {
-                            width: 18%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -2035,31 +2126,38 @@
                     
 
                     li{
-                        
+
                         margin-bottom:0.5em;
-                        span:first-of-type{
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
+                            background-color: $color7;
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -2564,8 +2662,6 @@
             
 
             .product-box {
-                min-height: 180px;
-                width: 31%;
 
 
                 figure.product-info {
@@ -2604,12 +2700,21 @@
 
                 figure.product-info {
                     img {
-                        width: 11%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 87%;                        
+                        width: 83%;                        
 
                         ul.product-box-info {
                             
@@ -2656,7 +2761,7 @@
                                                             
                     
                         .player-button {
-                            width: 18%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -2704,7 +2809,7 @@
                             
 
                             div.VolumeBg {
-                                width: 86%;
+                                width: 85%;
                                 
                             }
 
@@ -2714,7 +2819,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 12%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -2740,31 +2845,36 @@
                     
 
                     li{
-                        
-                        margin-bottom:0.5em;
-                        span:first-of-type{
+  
+                        span.tracknum{
 
                             width:10%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:75%;
+                            width:65%;
 
                         }
 
-                        span:last-of-type{
-                            
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -3262,7 +3372,7 @@
                     
 
                     figcaption {
-                        width:69%;                        
+                        width:68%;                        
                         ul.product-box-info {
                             width: 100%;
 
@@ -3289,12 +3399,21 @@
 
                 figure.product-info {
                     img {
-                        width: 12%;
+                        width: 15%;
                         
                     }
 
+                    form#to_album_btn {
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
+                    }
+
                     figcaption {
-                        width: 86%;
+                        width: 83%;
                         
 
                         ul.product-box-info {
@@ -3342,7 +3461,7 @@
                                                             
                     
                         .player-button {
-                            width: 16%;
+                            width: 15%;
                                                                     
                             
                             cursor: pointer;
@@ -3389,7 +3508,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -3399,7 +3518,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -3425,31 +3544,36 @@
                     
 
                     li{
-                        font-size: 0.85em;
-                        margin-bottom:0.5em;
-                        span:first-of-type{
+                        font-size:0.85em;
+                        span.tracknum{
 
-                            width:13%;
-
-                        }
-                        span{
-
-                            width:72%;
+                            width:10%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:65%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -3910,6 +4034,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.7em;
                                 
                             }
                         }
@@ -3931,15 +4056,28 @@
                 figure.product-info {
 
                     img {
-                        width: 20%;
+                        width: 25%;
                         margin: 1em auto;
                         display: block;
+                        order:1;                       
                         
-                        
+                    }
+
+                    form#to_album_btn {
+                        order:3;
+                        width:20%;
+                        bottom: unset;
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
                     }
 
                     figcaption {
                         width: 100%;
+                        order:3;
                         
 
                         ul.product-box-info {
@@ -4033,7 +4171,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -4043,7 +4181,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -4069,31 +4207,37 @@
                     
 
                     li{
-                        font-size: 0.85em;
-                        margin-bottom:0.5em;
-                        span:first-of-type{
 
-                            width:13%;
+                        font-size:0.85em;
+                        span.tracknum{
 
-                        }
-                        span{
-
-                            width:72%;
+                            width:11%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:64%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -4543,7 +4687,7 @@
                 
                 figure.product-info {
                     img {
-                        width: 37%;
+                        width: 32%;
                         
                     }
 
@@ -4555,7 +4699,7 @@
                             width: 100%;
 
                             li {
-                                font-size:0.85em;
+                                font-size:0.7em;
                                 
                             }
                         }
@@ -4577,9 +4721,21 @@
                 figure.product-info {
 
                     img {
-                        width: 20%;
+                        width: 25%;
                         margin: 1em auto;
                         display: block;
+                    }
+
+                    form#to_album_btn {
+        
+                        width:20%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -4677,7 +4833,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -4687,7 +4843,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -4713,31 +4869,37 @@
                     
 
                     li{
-                        font-size: 0.85em;
-                        margin-bottom:0.5em;
-                        span:first-of-type{
 
-                            width:13%;
+                        font-size:0.85em;
+                        span.tracknum{
 
-                        }
-                        span{
-
-                            width:72%;
+                            width:11%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:64%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -5174,7 +5336,7 @@
             
 
             .product-box {
-                min-height: 205px;                
+             
                 width: 48%;
 
                 figure.product-info {
@@ -5210,11 +5372,23 @@
 
                 figure.product-info {
                     img {
-                        width: 20%;
+                        width: 30%;
                         
                         margin: 1em auto;
                         display: block;
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:20%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -5312,7 +5486,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -5322,7 +5496,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -5348,31 +5522,37 @@
                     
 
                     li{
-                        font-size: 0.80em;
-                        margin-bottom:0.5em;
-                        span:first-of-type{
 
-                            width:13%;
+                        font-size:0.8em;
+                        span.tracknum{
 
-                        }
-                        span{
-
-                            width:72%;
+                            width:12%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:63%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
+
+                        }
+
+                        span.trackplays{
+
+                            width:10%;
 
                         }
 
@@ -5708,7 +5888,7 @@
                 margin: 0 auto;
 
                 h1 {
-                    font-size: 1.2em;
+                    font-size: 1.1em;
 
                 }
 
@@ -5820,12 +6000,11 @@
             
 
             .product-box {
-                min-height: 205px;
 
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -5857,9 +6036,21 @@
 
                 figure.product-info {
                     img {
-                        width: 22%;
+                        width: 30%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -5956,7 +6147,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -5966,7 +6157,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -5992,33 +6183,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:15%;
+                        font-size:0.7em;
+                        span.tracknum{
 
-                        }
-                        span{
-
-                            width:70%;
+                            width:12%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:63%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:10%;
+
+                        }
+
 
                     }
 
@@ -6451,7 +6649,7 @@
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -6483,9 +6681,21 @@
 
                 figure.product-info {
                     img {
-                        width: 25%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.85em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -6581,7 +6791,7 @@
                             
 
                             div.VolumeBg {
-                                width: 87%;
+                                width: 85%;
                                 
                             }
 
@@ -6591,7 +6801,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 13%;
+                                width: 15%;
                                 
 
                                 i.fa-volume-up {
@@ -6617,33 +6827,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:17%;
 
-                        }
-                        span{
+                        span.tracknum{
 
-                            width:69%;
+                            width:13%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:60%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:12%;
+
+                        }
+
 
                     }
 
@@ -7146,14 +7363,13 @@
             
 
             .product-box {
-                min-height: 190px;
-                
-                width: 46%;
+                  
+                width: 48%;
 
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -7165,6 +7381,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.65em;
                             }
                         }
                     }
@@ -7184,9 +7401,21 @@
 
                 figure.product-info {
                     img {
-                        width: 25%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.9em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -7207,7 +7436,7 @@
 
                                 span:first-of-type {
                                     
-                                    width: 17%;
+                                    width: 16%;
                                     
                                 }
                             }
@@ -7273,6 +7502,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
+                            font-size:0.9em;
                             
                         }
 
@@ -7281,7 +7511,7 @@
                             
 
                             div.VolumeBg {
-                                width: 85%;
+                                width: 80%;
                                 
                             }
 
@@ -7291,7 +7521,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 15%;
+                                width: 20%;
                                 
 
                                 i.fa-volume-up {
@@ -7313,37 +7543,43 @@
                 }
 
                 ul.audio-tracklist{
-                    margin:0;
-                    
+                    margin:0;                    
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:17%;
 
-                        }
-                        span{
+                        span.tracknum{
 
-                            width:69%;
+                            width:13%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:60%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:12%;
+
+                        }
+
 
                     }
 
@@ -7707,6 +7943,7 @@
     }
 
     nav {
+        height:1px;
         
         #mobile_inner_nav {      
             position: fixed;
@@ -7897,12 +8134,12 @@
             
             .product-box {
                                 
-                width: 46%;
+                width: 48%;
                 
 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
@@ -7913,7 +8150,7 @@
                             width: 100%;
 
                             li {
-                                font-size: 0.8em;
+                                font-size: 0.6em;
                                 
                             }
                         }
@@ -7935,9 +8172,21 @@
                 figure.product-info {
 
                     img {
-                        width: 30%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -7959,7 +8208,7 @@
 
                                 span:first-of-type {
                                     
-                                    width: 17%;
+                                    width: 15%;
                                     
                                 }
                             }
@@ -8025,7 +8274,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
-                            font-size:0.7em;
+                            font-size:0.85em;
                             
                         }
 
@@ -8034,7 +8283,7 @@
                             
 
                             div.VolumeBg {
-                                width: 85%;
+                                width: 80%;
                                 
                             }
 
@@ -8044,7 +8293,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 15%;
+                                width: 20%;
                                 
 
                                 i.fa-volume-up {
@@ -8070,33 +8319,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:17%;
 
-                        }
-                        span{
+                        span.tracknum{
 
-                            width:69%;
+                            width:13%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:60%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:13%;
+
+                        }
+
 
                     }
 
@@ -8500,7 +8756,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 55%;
                         }
 
                         input.frontform {
@@ -8600,22 +8856,24 @@
             
             .product-box {
                                 
-                width: 70%;
+                width: 80%;
                 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 28%;
                         
                     }
 
                     
                     figcaption {
+
+                        width:69%;
                                                
                         ul.product-box-info {
                             width: 100%;
 
                             li {
-                                font-size:0.8em;
+                                font-size:0.7em;
                             }
                         }
                     }
@@ -8636,9 +8894,21 @@
 
                 figure.product-info {
                     img {
-                        width: 30%;
+                        width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -8660,7 +8930,7 @@
                                 span:first-of-type {
                                     
                                     width: 17%;
-                                    text-indent: 0.2em;
+                                    text-indent: 0.5em;
                                     
                                 }
                             }
@@ -8690,7 +8960,7 @@
                         flex-flow: row wrap;                                     
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -8734,7 +9004,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 75%;
                                 
                             }
 
@@ -8744,7 +9014,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 25%;
                                 
 
                                 i.fa-volume-up {
@@ -8770,33 +9040,40 @@
                     
 
                     li{
-                        font-size: 0.70em;
-                        
-                        span:first-of-type{
 
-                            width:17%;
 
-                        }
-                        span{
+                        span.tracknum{
 
-                            width:69%;
+                            width:16%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
+                            width:57%;
+
+                        }
+
+                        span.trackbtn{
                             width:15%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:13%;
+
+                        }
+
 
                     }
 
@@ -9113,7 +9390,7 @@
             
             
             h1 {
-                font-size: 1.2em;
+                font-size: 1em;
             }
             section.album_section:last-of-type {
                 margin-bottom: 0%;
@@ -9142,7 +9419,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 60%;
                         }
 
                         input.frontform {
@@ -9237,19 +9514,20 @@
                 
                 figure.product-info {
                     img {
-                        width: 27%;
+                        width: 28%;
                         
                     }
 
                     
                     figcaption {
-                        width: 66%;
+                        width: 68%;
                         
                         ul.product-box-info {
                             width: 100%;
 
                             li {
                                 width: 100%;
+                                font-size:0.7em;
                             }
                         }
                     }
@@ -9257,6 +9535,7 @@
 
                 input.to_album_btn {
                     height: 40px;
+                    font-size:0.8em;
 
                     &:hover {
                         text-decoration: none !important;
@@ -9272,6 +9551,18 @@
                         width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -9323,7 +9614,7 @@
                                                             
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -9359,6 +9650,7 @@
                         div.current_time,
                         div.duration {
                             width: 15%;
+                            font-size:0.8em;
                             
                         }
 
@@ -9367,7 +9659,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 75%;
                                 
                             }
 
@@ -9377,7 +9669,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 25%;
                                 
 
                                 i.fa-volume-up {
@@ -9403,33 +9695,40 @@
                     
 
                     li{
-                        font-size: 0.6em;
-                        
-                        span:first-of-type{
 
-                            width:20%;
+                        font-size:0.6em;
+                        span.tracknum{
 
-                        }
-                        span{
-
-                            width:60%;
+                            width:16%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                            width:57%;
+
+                        }
+
+                        span.trackbtn{
+                            width:13%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:14%;
+
+                        }
+
 
                     }
 
@@ -9598,7 +9897,7 @@
              
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -9794,7 +10093,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 65%;
                         }
 
                         input.frontform {
@@ -9901,6 +10200,7 @@
 
                             li {
                                 width: 100%;
+                                
                             }
                         }
                     }
@@ -9923,6 +10223,18 @@
                         width: 35%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:30%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.8em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -9974,7 +10286,7 @@
                                                             
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -10018,7 +10330,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 70%;
                                 
                             }
 
@@ -10028,7 +10340,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 30%;
                                 
 
                                 i.fa-volume-up {
@@ -10050,37 +10362,42 @@
                 }
 
                 ul.audio-tracklist{
-                    margin:0;
-                    
+                    margin:0;                    
 
                     li{
-                        font-size: 0.6em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
-                            width:20%;
-
-                        }
-                        span{
-
-                            width:60%;
+                            width:16%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                            width:55%;
+
+                        }
+
+                        span.trackbtn{
+                            width:13%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
@@ -10235,7 +10552,7 @@
                
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -10415,7 +10732,7 @@
                 height: auto; 
 
                 h1 {
-                    font-size: 1.3em;
+                    font-size: 1.05em;
                 }
 
                 .flex-wrapper {
@@ -10433,7 +10750,7 @@
                         }
 
                         img.images_1_of_5 {
-                            max-width: 50%;
+                            max-width: 65%;
                         }
 
                         input.frontform {
@@ -10522,7 +10839,6 @@
 
             
             .product-box {
-                min-height: 180px;
                 
                 width: 80%;
                 
@@ -10541,6 +10857,7 @@
 
                             li {
                                 width: 100%;
+                                font-size:0.6em;
                             }
                         }
                     }
@@ -10563,6 +10880,18 @@
                         width: 40%;
 
                         
+                    }
+
+                    form#to_album_btn {
+        
+                        width:25%;
+
+      
+                        input.to_album_btn {
+ 
+                            font-size: 0.7em;                   
+
+                        }                 
                     }
 
                     figcaption {
@@ -10614,7 +10943,7 @@
                                                                 
                     
                         .player-button {
-                            width: 33.3%;
+                            width: 20%;
                                                                     
                             
                             cursor: pointer;
@@ -10658,7 +10987,7 @@
                             margin-top:0.5em;
 
                             div.VolumeBg {
-                                width: 80%;
+                                width: 70%;
                                 
                             }
 
@@ -10668,7 +10997,7 @@
                             }
 
                             div.VolumeImg {
-                                width: 20%;
+                                width: 30%;
                                 
 
                                 i.fa-volume-up {
@@ -10694,33 +11023,39 @@
                     
 
                     li{
-                        font-size: 0.55em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
-                            width:20%;
-
-                        }
-                        span{
-
-                            width:60%;
+                            width:17%;
 
                         }
+                        span.trackname{
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                            width:53%;
+
+                        }
+
+                        span.trackbtn{
+                            width:14%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
@@ -10847,7 +11182,7 @@
 
             legend{
                 
-                font-size: 1em;
+                font-size: 0.9em;
                 
 
             }
@@ -11026,7 +11361,7 @@
                 margin: 0 auto;
 
                 h1 {
-                    font-size: 1.3em;
+                    font-size: 1em;
                 }
 
                 .flex-wrapper {
@@ -11307,33 +11642,39 @@
                     
 
                     li{
-                        font-size: 0.55em;
-                        
-                        span:first-of-type{
+ 
+                        span.tracknum{
 
                             width:20%;
 
                         }
-                        span{
+                        span.trackname{
 
-                            width:60%;
+                            width:50%;
 
                         }
 
-                        span:last-of-type{
-                            
-                            width:20%;
+                        span.trackbtn{
+                            width:14%;
                             cursor:pointer;
                             i{
-                                
+
                                 line-height: 40px;
+
                                 &:hover{
-                                    background-color:#fff;
-                                    
+                                    background-color: $color2;;
+
                                 }
                             }
 
                         }
+
+                        span.trackplays{
+
+                            width:16%;
+
+                        }
+
 
                     }
 
@@ -11487,7 +11828,7 @@
 
             legend{
                 
-                font-size: 1em;
+                font-size: 0.85em;
                 
 
             }

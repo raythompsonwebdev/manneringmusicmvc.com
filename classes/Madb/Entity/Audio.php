@@ -10,6 +10,7 @@ class Audio
     public $m4a_File;
     public $artistId;
     public $albumId;
+    public $plays;
     private $albumsTable;
     private $artistsTable;
 
@@ -43,4 +44,11 @@ class Audio
 
         return $this->songtitle;
     }
+
+    public function getPlays()
+    {
+
+        return $this->$plays;
+    }
+    
 }

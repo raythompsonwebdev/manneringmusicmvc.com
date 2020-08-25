@@ -2,6 +2,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
+    babel: {
+      files: {
+          expand: true,
+          src: ['assets/js/*.js'],
+          dest:'assets/js/',
+          ext: '-compiled.js'
+      },
+      options: {
+          sourceMap: true,
+          presets: ['@babel/preset-env']
+      }
+    },
     
     /**
      * sass Task
@@ -46,8 +58,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-babel");
 
-  grunt.registerTask("default", ["sass", "watch"]);
+  grunt.registerTask("default", ["sass", "watch", "babel"]);
 };
 
 /* add bag (!) to wordpress css theme top-title so that it shows on minified file*/

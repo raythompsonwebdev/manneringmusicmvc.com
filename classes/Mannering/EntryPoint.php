@@ -19,7 +19,7 @@ class EntryPoint
     private function checkUrl()
     {
         if ($this->route !== strtolower($this->route)) {
-            http_response_code(301); //send redirect response code 
+            http_response_code(301); //send redirect response code
             header('location: ' . strtolower($this->route)); //re-direct page
         }
     }
