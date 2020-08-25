@@ -360,7 +360,7 @@
         <div class="product-box">
 
             <figure class="product-info">
-                <a href="/singleresult?artistid=<?=$value[0]?>&albumid=<?=$value[3]?>">
+                <a href="/singleresult?artistid=<?=$value[3]?>&albumid=<?=$value[0]?>">
                 <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  /></a>                
                 
                 <figcaption >

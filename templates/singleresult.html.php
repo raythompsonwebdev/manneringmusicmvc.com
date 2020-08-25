@@ -269,7 +269,7 @@
 
                 <form method="get" action="/artist" id="to_album_btn">
                     <input type="submit" class="to_album_btn" value="Go To Artist.." />
-                    <input type="hidden" name="artistid" value="<?=$singleartist[0][0] ?? ''?>"> 
+                    <input type="hidden" name="artistid" value="<?=$singlealbums->artistId ?? ''?>"> 
                     <input type="hidden" name="albumid" value="<?=$singlealbums->id ?? ''?>">                   
                 </form>
                
