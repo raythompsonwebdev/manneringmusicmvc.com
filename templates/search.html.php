@@ -61,9 +61,7 @@
 
 <section id="main_text">
 
-    <h1 >Album Search Page</h1>
-
-    <p>Find your favourite Jazz, Hip Hop and Country music albums from our wide selection using search form below.</p>
+    <h1 >Search Page</h1>
 
     <span class="search_error">Fields cannot be empty. Enter either artistname, album name or select genre</span>
     
@@ -88,9 +86,7 @@
 
             <input id="searchBtn" class="submit" name="submit" type="submit" value="FIND MUSIC" >
         </fieldset>
-    </form>
-
-       
+    </form>       
 
     <span class="refresh_link">
         <a href="<?php $_SERVER['PHP_SELF']; ?>">Refresh&nbsp;Search&nbsp;Page</a>
@@ -98,9 +94,8 @@
 
     <div id="loadingIndicator" style="display: none;">Ajax Loading...</div>
 
-    <div id="results">
- 
-    </div>
+    <div id="results"></div>
+    
 <br/>
 <br/>
 </section>

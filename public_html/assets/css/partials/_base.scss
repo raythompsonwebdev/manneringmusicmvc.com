@@ -48,10 +48,8 @@ body{
 a{  
 	text-decoration: none !important; 
     @include transitioner(all 0.2s ease-in);
-    behavior:url(PIE.htc); 
     font-family: ($FontListText);
-
-
+    width:auto;
     &:link {
         color: $color1;
     }
@@ -59,7 +57,7 @@ a{
         color: $color1;
     }
     &:focus {
-        outline:1px dotted $color1;
+        color: $color1;
     }
     &:hover{
         cursor:pointer;

@@ -323,7 +323,6 @@
         <h2>Artist Tracks</h2>
         <br/>
         <br/>
-         <!-- <span> Plays: $value[4]</span> PLays -->
         <!--Audio Playlist-->
         <ul class="audio-tracklist">                
             <?php
@@ -356,26 +355,24 @@
     </div>
 
         <h2> Other Albums</h2> 
-    <?php foreach ($singlealbums as $value) :?>
+         <?php foreach ($singlealbums as $value) :?>
         <div class="product-box">
-
             <figure class="product-info">
+
                 <a href="/singleresult?artistid=<?=$value[3]?>&albumid=<?=$value[0]?>">
-                <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  /></a>                
+                    <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  />
+                </a>                
                 
-                <figcaption >
-                    
+                <figcaption >                    
                     <ul class="product-box-info">
                         <li><?=$value[1];?></li>
-                    </ul>
-                    
+                    </ul>                    
                 </figcaption>
         
-            </figure>              
-            
+            </figure>
         </div>
         
-    <?php endforeach;?>
+        <?php endforeach;?>
          
 
     <div>

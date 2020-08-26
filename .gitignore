@@ -5,10 +5,11 @@ public_html/assets/databasepics/
 public_html/assets/fancyapps/
 public_html/assets/icons/
 public_html/assets/images/
-public_html/assets/css/style.css
 public_html/assets/js/old-browser-scripts/
 public_html/style-min.css.map
 public_html/style.css.map
+public_html/assets/css/partials/_*.css
+public_html/assets/css/partials/*.min.css
 logs/
 includes/DatabaseConnection.php
 .sass-cache/

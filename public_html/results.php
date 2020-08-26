@@ -26,35 +26,20 @@ if (!isset($_GET['submit'])) {
         <div class="product-box">
 
             <figure class="product-info">
-                
-                <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
-                
-                <!-- <div class="product-box-cartinfo">
-                    
-                </div> -->
-                
+                <a href="/singleresult?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go album page">
+                    <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
+                 </a>                
                 <figcaption >
-                    
+
                     <ul class="product-box-info">
                         <li><?= $row['artist_name']; ?></li>
                         <li><?= $row['album']; ?></li>
-                        <li>&pound;<?= $row['price']; ?></li>
+                        <li> <a href="/artist?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go artist page">Go To Artist</a></li>
                     </ul>
                 
                 </figcaption>
           
-            </figure>            
-
-            <form method="get" action="/singleresult" id="to_album_btn">
-                <input type="submit" class="to_album_btn" value="Go To Album." />
-                <input type="hidden" name="albumid" value="<?=$row[0] ?? ''?>">
-                <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>">                    
-            </form>
-            <form method="get" action="/artist" id="to_album_btn">
-                <input type="submit" class="to_album_btn" value="Go To Artist.." />
-                 <input type="hidden" name="artistid" value="<?=$row['artistId'] ?? ''?>"> 
-                 <input type="hidden" name="albumid" value="<?=$row[0] ?? ''?>">                   
-            </form>
+            </figure>  
             
         </div>
    

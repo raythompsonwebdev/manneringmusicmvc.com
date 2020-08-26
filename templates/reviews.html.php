@@ -1,15 +1,11 @@
 <section id="main_text" class="group" role="main">
-
-<ul class="categories">
-  <?php foreach ($categories as $category) : ?>
-    <li><a href="/review/list?category=<?=$category->id?>"><?=$category->name?></a><li>
-  <?php endforeach; ?>
-</ul>
+  <h1>Reviews</h1>
 
 <div class="reviews">
 
 <p><?=$totalReviews?> reviews have been submitted to the Mannering Review Database.</p>
-
+<br/>
+<br/>
 
 <?php foreach ($reviews as $review) : ?> 
   <blockquote>
@@ -17,7 +13,7 @@
 
       (by <a href="mailto:<?=htmlspecialchars($review->getAuthor()->email, ENT_QUOTES, 'UTF-8');?>">
       <?=htmlspecialchars($review->getAuthor()->name, ENT_QUOTES, 'UTF-8'); ?>
-      </a>on<?php $date = new DateTime($review->reviewdate);
+      </a>on <?php $date = new DateTime($review->reviewdate);
         echo $date->format('jS F Y'); ?>)
 
       <?php if ($user) : ?>
@@ -51,4 +47,10 @@ for ($i = 1; $i <= $numPages; $i++) :
 <?php endfor; ?>
 
 </span>
+    </div>
+    <ul class="categories">
+  <?php foreach ($categories as $category) : ?>
+    <li><a href="/review/list?category=<?=$category->id?>"><?=$category->name?></a><li>
+  <?php endforeach; ?>
+</ul>
 </section>

@@ -1,22 +1,18 @@
 
 <?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
-
 <script src='assets/js/script.js'></script> 
 
 <?php
-
     $array = array();
     foreach ($singleaudio as $key => $value) {
         array_push($array, $value[0]);
     }
-    $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
-  
+    $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);  
 ?>
 
 <script>
    
     $(document).ready(function() {
-
         //create seprate playlists for shuffle        
         var newPlaylist = <?php echo $jsonArray; ?>; 
         audioElement = new Audio(); //instance of audio class
@@ -55,7 +51,6 @@
             if(mouseDown == true) {
 
                 var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
-
                 //limits volume range to bewteen 0 and 1
                 if(percentage >= 0 && percentage <= 1) {
                     audioElement.audio.volume = percentage;
@@ -171,12 +166,10 @@
         if(newPlaylist != currentPlaylist) {
             currentPlaylist = newPlaylist;            
         }
-
         //create tracklist index
         currentIndex = currentPlaylist.indexOf(trackId); 
 
         pauseSong();
-
 
         //get tracks from database
         let url = 'getSongJson.php';
@@ -192,9 +185,7 @@
             return response.text();
 
         }).then(function (body) {
-
             var track = JSON.parse(body);
-
             if(track[0] != null){
                 document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
                 audioElement.setTrack(track);
@@ -221,37 +212,28 @@
             //get tracks from database
             let url = 'updatePlays.php';
             let formData = new FormData();
-            formData.append( "songId", audioElement.currentlyPlaying.id );                       
-
+            formData.append( "songId", audioElement.currentlyPlaying.id );
             fetch(url, { 
                 method: 'POST',            
                 body: formData
-
             }).then(function (response) {
-
                 return response.text();
-
             }).catch(function(err) {
                 console.error('Fetch Error :-S', err);
-            }); 
-        
+            });         
         }                
 
         $(".player-button.play").hide();
         $(".player-button.pause").show();        
         audioElement.play();  
-
     }
 
     //Pause Song
-    function pauseSong(){
-        
+    function pauseSong(){        
         $(".player-button.play").show();
         $(".player-button.pause").hide();
-        audioElement.pause();
-        
-    }
-    
+        audioElement.pause();        
+    }   
 
 </script> 
 
@@ -265,17 +247,12 @@
 
             <figure class="product-info">
 
+            <a href="/artist?albumid=<?=$singlealbums->id ?? ''?>&artistid=<?=$singlealbums->artistId ?? ''?>" title="Go artist page">
                 <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
-
-                <form method="get" action="/artist" id="to_album_btn">
-                    <input type="submit" class="to_album_btn" value="Go To Artist.." />
-                    <input type="hidden" name="artistid" value="<?=$singlealbums->artistId ?? ''?>"> 
-                    <input type="hidden" name="albumid" value="<?=$singlealbums->id ?? ''?>">                   
-                </form>
+            </a>
+            
                
-                <figcaption>
-
-                
+                <figcaption>               
                     
                     <ul class="product-box-info">
                         <li>
@@ -335,9 +312,7 @@
 
                     <div role="button" tabindex="0"  class="player-button repeat" onclick="setRepeat()">
                         <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
-                    </div>
-
-                               
+                    </div>                               
                 
                     <!--add onclick="setMute() to change volume icon. need to add volume icon-->
                     <div class="audio_volume">
@@ -361,17 +336,13 @@
             </div>
             <h2><?=$singlealbums->getNumberOfSongs(); ?> Songs</span></h2>
             <br/>
- <!-- <span> Plays: $value[4]</span> PLays -->
+
             <!--Audio Playlist-->
             <ul class="audio-tracklist">                
-                <?php
-                                        
-                    $i = 1;
-                    
+                <?php                                        
+                    $i = 1;                    
                 foreach ($singleaudio as $songId => $value) :
-                        //songId value from value of $singleaudio variable
-
-                        
+                        //songId value from value of $singleaudio variable                      
                                                 
                         echo "<li>
                             <span class=\"tracknum\">Track " . $i . " : </span>
@@ -392,11 +363,8 @@
                 var tempSongIds = '<?= json_encode($value[0]); ?>';
                 tempPlaylist = JSON.parse(tempSongIds); 
              </script>
-
         </div>
-
     <div>
-
 <div>
 
 <br />
