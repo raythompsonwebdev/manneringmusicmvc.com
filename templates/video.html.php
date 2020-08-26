@@ -9,6 +9,7 @@
 <section id="sidebar_gallery"  >
 
   <!--hip hop videos-->
+
   <?php foreach ($rapvideos as $rapvideo) : ?>
   <figure class="video-item">
     <img src="/assets/images/videoimages/Newfolder/<?php echo $rapvideo->video_image; ?>" alt="">
@@ -49,6 +50,9 @@
   <?php endforeach; ?>
   <br/>
 
+
+
+ 
   <div class="clearfix"> </div>
 
 </section>

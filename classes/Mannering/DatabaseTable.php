@@ -207,6 +207,7 @@ class DatabaseTable
 
     /**
      * find by genre-function
+     * @return object $return returns object with album genres
      *
      * */
     public function findByGenre($genre)
@@ -219,24 +220,11 @@ class DatabaseTable
         $query->execute();
         $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
         return $rows;
-    }
-        
-    /**
-     * video-page-function
-     *
-     * */
-    public function findVideoByGenre($genre)
-    {
-
-        $query = $this->pdo->prepare('SELECT * FROM videos WHERE video_genre =:video_genre LIMIT 20');
-        $query->bindValue(':video_genre', $genre);
-        $query->execute();
-        $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-        return $rows;
-    }
-
+    }        
+    
     /**
      * single-result-page-function
+     * @return array $array returns array of songs related to artist
      *
      * */
     public function findAlbumSongs($value)
@@ -250,8 +238,6 @@ class DatabaseTable
 
         $query = $this->query($query, $parameters);
 
-        //return $query->fetchObject($this->className, $this->constructorArgs);
-
         $array = array();
 
         foreach ($query as $row) {
@@ -262,55 +248,28 @@ class DatabaseTable
     }
 
     /**
-     * single-result-page-function
-     *
-     * */
-    public function findArtistName($value)
-    {
-
-        $query = "SELECT `id`,`artist_name` FROM `artist` WHERE `id` = $value ";
-
-        $parameters = [
-            'value' => $value
-        ];
-
-        $query = $this->query($query, $parameters);
-
-        $array = array();
-
-        foreach ($query as $row) {
-            array_push($array, [$row['id'], $row['artist_name']]);
-        }
-         
-        return $array ;
-    }
-
-    /**
      * artist-page-function
+     * @return object $return returns object with albums related to artist
      *
      * */
     public function findArtistAlbum($value)
     {
-
+        
         $query = "SELECT `id`, `album`, `image`, `artistId`, `genre`  FROM `album` WHERE `artistId` = $value ";
 
         $parameters = [
             'value' => $value
         ];
 
-        $query = $this->query($query, $parameters);        
+        $result = $this->query($query, $parameters); 
 
-        $array = array();
+        return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
 
-        foreach ($query as $row) {
-            array_push($array, [$row['id'], $row['album'], $row['image'], $row['artistId'], $row['genre']  ]);
-        }
-         
-        return (object)$array;
     }
 
      /**
      * artist-page-function
+     * @return array $array returns array of songs related to artist
      *
      * */
     public function findArtistSongs($value)
@@ -331,7 +290,8 @@ class DatabaseTable
             array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['artistId'], $row['plays'] ]);
         }
          
-        return (object) $array ;
+        return (object) $array;
+        
     }
    
    

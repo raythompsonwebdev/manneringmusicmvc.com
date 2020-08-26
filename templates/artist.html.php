@@ -264,7 +264,7 @@
     <div class="product-box-large">
 
 
-        <h1><?=$singleartist[0][1];?></h1>
+        <h1><?=$singleartist->artist_name;?></h1>
 
         <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
        <!--Audio Controls-->
@@ -329,13 +329,13 @@
                                     
                 $i = 1;
                 
-            foreach ($singleaudio as $songId => $value) :                   
+            foreach ($singleaudio as $songId) :                   
                               
                     echo "<li>                    
                         <span class=\"tracknum\">Track " . $i . " : </span>
-                        <span class=\"trackname\">" . $value[1] . "</span>
-                        <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                        <span class=\"trackplays\">$value[4] plays</span>
+                        <span class=\"trackname\">" . $songId[1] . "</span>
+                        <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                        <span class=\"trackplays\">$songId[4] plays</span>
                     </li>";
                 
                     $i = $i + 1;
@@ -347,7 +347,7 @@
         <!--Temporary Play List-->
         <script>
             //songId value from value of $singleaudio variable
-            var tempSongIds = '<?= json_encode($value[0]); ?>';
+            var tempSongIds = '<?= json_encode($songId[0]); ?>';
             tempPlaylist = JSON.parse(tempSongIds);
              
         </script>
@@ -355,17 +355,21 @@
     </div>
 
         <h2> Other Albums</h2> 
+
          <?php foreach ($singlealbums as $value) :?>
+
+           
         <div class="product-box">
             <figure class="product-info">
 
-                <a href="/singleresult?artistid=<?=$value[3]?>&albumid=<?=$value[0]?>">
-                    <img src="assets/databasepics/<?=$value[2];?>" alt="Album-Cover-Image"  />
+                <a href="/singleresult?artistid=<?=$value->artistId?>&albumid=<?=$value->id?>">
+                    <img src="assets/databasepics/<?=$value->image?>" alt="Album-Cover-Image"  />
                 </a>                
                 
                 <figcaption >                    
                     <ul class="product-box-info">
-                        <li><?=$value[1];?></li>
+                        <li><?=$value->album?></li>
+                        <li><?=$value->genre?></li>
                     </ul>                    
                 </figcaption>
         

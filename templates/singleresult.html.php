@@ -253,11 +253,11 @@
             
                
                 <figcaption>               
-                    
+                
                     <ul class="product-box-info">
                         <li>
                             <span>Artist </span>
-                            <span><?=$singleartist[0][1]; ?></span>
+                            <span><?=$singleartist->artist_name; ?></span>
                         </li>
                         <li>
                             <span>Album</span>
@@ -341,14 +341,14 @@
             <ul class="audio-tracklist">                
                 <?php                                        
                     $i = 1;                    
-                foreach ($singleaudio as $songId => $value) :
+                foreach ($singleaudio as $songId) :
                         //songId value from value of $singleaudio variable                      
                                                 
                         echo "<li>
                             <span class=\"tracknum\">Track " . $i . " : </span>
-                            <span class=\"trackname\">" . $value[1] . "</span>
-                            <span class=\"trackbtn\" onclick='setTrack(\"" . $value[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                            <span class=\"trackplays\">$value[4] plays </span>
+                            <span class=\"trackname\">" . $songId[1] . "</span>
+                            <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                            <span class=\"trackplays\">$songId[4] plays </span>
                         </li>";
                     
                         $i = $i + 1;
@@ -360,7 +360,7 @@
             <!--Temporary Play List-->
             <script>
                 //songId value from value of $singleaudio variable
-                var tempSongIds = '<?= json_encode($value[0]); ?>';
+                var tempSongIds = '<?= json_encode($songId[0]); ?>';
                 tempPlaylist = JSON.parse(tempSongIds); 
              </script>
         </div>

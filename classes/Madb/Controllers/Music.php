@@ -11,17 +11,19 @@ class Music
     private $albumsTable;
     private $artistsTable;
     private $audioTable;
+    private $videosTable;
     
 
-    public function __construct(DatabaseTable $albumsTable, DatabaseTable $audioTable, DatabaseTable $artistsTable)
+    public function __construct(DatabaseTable $albumsTable, DatabaseTable $artistsTable, DatabaseTable $audioTable, DatabaseTable $videosTable)
     {
         $this->albumsTable = $albumsTable;
         $this->artistsTable = $artistsTable;
         $this->audioTable = $audioTable;
+        $this->videosTable = $videosTable;
     }
         
-  ////////////////////////////
 
+    
     public function home()
     {
 
@@ -44,14 +46,22 @@ class Music
               ];
     }
   
+    /**
+     * album page
+     * @return object $rapvideos returns object with all hip hop videos fields
+     * @return object $countryvideos returns object with all country videos fields
+     * @return object $jazzvideos returns object with all jazz video fields
+     * @return object $title returns object with page title
+     *
+     * */
     public function video()
     {
-      
-        $rapvideos = $this->albumsTable->findVideoByGenre('Hip Hop');
+            
+        $rapvideos = $this->videosTable->find('video_genre', 'Hip Hop');
           
-        $countryvideos = $this->albumsTable->findVideoByGenre('Country');
+        $countryvideos = $this->videosTable->find('video_genre', 'Country');
       
-        $jazzvideos = $this->albumsTable->findVideoByGenre('Jazz');
+        $jazzvideos = $this->videosTable->find('video_genre', 'Jazz');
 
         
         $title = 'Mannering Video Page';
@@ -81,7 +91,14 @@ class Music
       
         return ['template' => 'search.html.php', 'title' => $title];
     }
-
+    /**
+     * album page
+     * @return object $singlealbums returns object with all album fields
+     * @return object $singleartist returns object with all artist fields
+     * @return object $singleaudio returns object audio fields related to album
+     * @return object $title returns object with page title
+     *
+     * */
     public function singleresult()
     {
         
@@ -93,7 +110,7 @@ class Music
         }
 
         if (isset($_GET['artistid'])) {
-            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
+            $singleartist = $this->artistsTable->findById($_GET['artistid']);
         }
 
                     
@@ -106,15 +123,22 @@ class Music
         ]
         ];
     }
-
+    /**
+     * artist page
+     * @return object $singlealbums returns object with albums relating to artist 
+     * @return object $singleartist returns object with all artist fields
+     * @return object $singleaudio returns object audio fields related to artist
+     * @return object $title returns object with page title
+     *
+     * */
     public function artist()
     {
       
 
         if (isset($_GET['artistid'])) {
                         
-            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);            
-            $singleartist = $this->artistsTable->findArtistName($_GET['artistid']);
+            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']); 
+            $singleartist = $this->artistsTable->findById($_GET['artistid']);
             $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
         }
 

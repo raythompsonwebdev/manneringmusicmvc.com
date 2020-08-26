@@ -7,7 +7,7 @@ class MadbRoutes implements \Mannering\Routes
     private $albumsTable;
     private $artistsTable;
     private $audioTable;
-        
+    private $videosTable;    
     private $authorsTable;
     private $reviewsTable;
     private $categoriesTable;
@@ -41,6 +41,13 @@ class MadbRoutes implements \Mannering\Routes
             'id',
             '\Madb\Entity\Audio',
             [&$this->albumsTable, &$this->artistsTable]
+        );
+
+        $this->videosTable = new \Mannering\DatabaseTable(
+            $pdo,
+            'videos',
+            'videoid',
+            '\Madb\Entity\Video'
         );
 
         $this->reviewsTable = new \Mannering\DatabaseTable(
@@ -87,7 +94,8 @@ class MadbRoutes implements \Mannering\Routes
         $musicController = new \Madb\Controllers\Music(
             $this->albumsTable,
             $this->artistsTable,
-            $this->audioTable
+            $this->audioTable,
+            $this->videosTable
         );
 
         $reviewController = new \Madb\Controllers\Review(
