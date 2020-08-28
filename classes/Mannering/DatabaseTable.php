@@ -203,25 +203,7 @@ class DatabaseTable
         }
 
         return $entity;
-    }
-
-    /**
-     * find by genre-function
-     * @return object $return returns object with album genres
-     *
-     * */
-    public function findByGenre($genre)
-    {
-
-        $query = $this->pdo->prepare(
-            'SELECT * FROM `' . $this->table . '` WHERE `genre` = :genre ORDER BY RAND() LIMIT 5'
-        );
-        $query->bindValue(':genre', $genre);
-        $query->execute();
-        $rows = $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-        return $rows;
-    }        
-    
+    }         
     /**
      * single-result-page-function
      * @return array $array returns array of songs related to artist
@@ -238,6 +220,8 @@ class DatabaseTable
 
         $query = $this->query($query, $parameters);
 
+        //return $query->fetchObject($this->className, $this->constructorArgs);
+
         $array = array();
 
         foreach ($query as $row) {
@@ -246,7 +230,6 @@ class DatabaseTable
          
         return (object) $array;
     }
-
     /**
      * artist-page-function
      * @return object $return returns object with albums related to artist

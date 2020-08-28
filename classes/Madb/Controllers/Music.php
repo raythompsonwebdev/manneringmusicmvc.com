@@ -27,11 +27,11 @@ class Music
     public function home()
     {
 
-        $rapalbums = $this->albumsTable->findByGenre('Hip Hop');
+        $rapalbums = $this->albumsTable->find('genre', 'Hip Hop', 'Rand()', 5, null);
           
-        $countryalbums = $this->albumsTable->findByGenre('Country');
+        $countryalbums = $this->albumsTable->find('genre', 'Country', 'Rand()', 5, null);
       
-        $jazzalbums = $this->albumsTable->findByGenre('Jazz');
+        $jazzalbums = $this->albumsTable->find('genre', 'Jazz', 'Rand()', 5, null);
 
         
         $title = 'Mannering Home Page';
@@ -100,8 +100,7 @@ class Music
      *
      * */
     public function singleresult()
-    {
-        
+    {        
                                                       
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
