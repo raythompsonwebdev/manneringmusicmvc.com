@@ -1,52 +1,53 @@
 
 <?php
 
-include __DIR__ . '/../includes/DatabaseConnection.php';
-if (!isset($_GET['submit'])) {
+    include __DIR__ . '/../includes/DatabaseConnection.php';
 
-    //Store search form data submitted into variables
-    $artistname = htmlspecialchars($_GET['artist_name']);
-    $albumname = htmlspecialchars($_GET['album']);
-    $genre = htmlspecialchars($_GET['genre']);
+    if (!isset($_GET['submit'])) {
 
-    //Inner Join
-    $sql = 'SELECT * FROM `album` INNER JOIN `artist` ON `artistId` = `artist`.`id` WHERE `album` LIKE :album AND `genre` LIKE :genre AND `artist_name` LIKE :artist_name';
-    
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':artist_name', '%'.$artistname.'%');
-    $stmt->bindValue(':album', '%'.$albumname.'%');
-    $stmt->bindValue(':genre', '%'.$genre.'%');
-    $stmt->execute();
-    $rows = $stmt->fetchAll();    
+        //Store search form data submitted into variables
+        $artistname = htmlentities($_GET['artist_name']);
+        $albumname = htmlentities($_GET['album']);
+        $genre = $_GET['genre'];
 
-    if ($rows) {
+        //Inner Join
+        $sql = 'SELECT * FROM `album` INNER JOIN `artist` ON `artistId` = `artist`.`id` WHERE `album` LIKE :album AND `genre` LIKE :genre AND `artist_name` LIKE :artist_name';
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':artist_name', '%'.$artistname.'%');
+        $stmt->bindValue(':album', '%'.$albumname.'%');
+        $stmt->bindValue(':genre', '%'.$genre.'%');
+        $stmt->execute();
+        $rows = $stmt->fetchAll();    
 
-        foreach ($rows as $row) : ?>
-                
-        <div class="product-box">
+        if ($rows) {
 
-            <figure class="product-info">
-                <a href="/singleresult?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go album page">
-                    <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
-                 </a>                
-                <figcaption >
+            foreach ($rows as $row) : ?>
+                    
+            <div class="product-box">
 
-                    <ul class="product-box-info">
-                        <li><?= $row['artist_name']; ?></li>
-                        <li><?= $row['album']; ?></li>
-                        <li> <a href="/artist?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go artist page">Go To Artist</a></li>
-                    </ul>
-                
-                </figcaption>
-          
-            </figure>  
+                <figure class="product-info">
+                    <a href="/singleresult?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go album page">
+                        <img src="assets/databasepics/<?= $row['image']; ?>" alt="Album-Cover-Image"  />
+                    </a>                
+                    <figcaption >
+
+                        <ul class="product-box-info">
+                            <li><?= $row['artist_name']; ?></li>
+                            <li><?= $row['album']; ?></li>
+                            <li> <a href="/artist?albumid=<?=$row[0] ?? ''?>&artistid=<?=$row['artistId'] ?? ''?>" title="Go artist page">Go To Artist</a></li>
+                        </ul>
+                    
+                    </figcaption>
             
-        </div>
-   
-        <?php 
-        endforeach;
-    } else {
-        echo '<p>Nothing to see</p>';
+                </figure>  
+                
+            </div>
+    
+            <?php 
+            endforeach;
+        } else {
+            echo '<p>Nothing to see</p>';
+        }
     }
-}
 ?>

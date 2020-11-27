@@ -1776,19 +1776,20 @@ input[type="submit"]:active {
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+    font-family: "Lato", sans-serif;
   }
   main#content form#searchForm fieldset {
     padding: 1em;
     border: 1px solid #666666;
   }
   main#content form#searchForm legend {
-    width: 30%;
+    width: 50%;
     color: #FFF;
     text-align: center;
     line-height: 30px;
     margin: 0;
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 0.1em;
     font-weight: bold;
     border: 1px solid #666666;
@@ -1805,11 +1806,12 @@ input[type="submit"]:active {
     width: 1px;
   }
   main#content form#searchForm ::placeholder {
-    color: #181818;
+    color: #ccc;
     text-indent: 0.25em;
+    font-family: "Lato", sans-serif;
   }
   main#content form#searchForm input[type="text"] {
-    border: 2px solid #666666;
+    border: 1px solid #666666;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
@@ -1840,9 +1842,9 @@ input[type="submit"]:active {
     line-height: 35px;
   }
   main#content form#searchForm input#searchBtn {
+    font-family: "Lato", sans-serif;
     letter-spacing: 0.1em;
     width: 25%;
-    line-height: 35px;
     color: #FFF;
     font-size: 1em;
     display: inline-block;
@@ -2289,8 +2291,11 @@ input[type="submit"]:active {
   main#content .search_error {
     font-size: 0.9em;
   }
+  main#content form#searchForm {
+    width: 85%;
+  }
   main#content form#searchForm legend {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -2300,10 +2305,10 @@ input[type="submit"]:active {
     text-indent: 0.25em;
   }
   main#content form#searchForm input[type="text"] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm select {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm input#searchBtn {
     font-size: 0.9em;
@@ -2718,10 +2723,10 @@ input[type="submit"]:active {
     font-size: 0.9em;
   }
   main#content form#searchForm {
-    width: 80%;
+    width: 90%;
   }
   main#content form#searchForm legend {
-    font-size: 1.15em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -2730,10 +2735,10 @@ input[type="submit"]:active {
     color: #181818;
   }
   main#content form#searchForm input[type="text"] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm select {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm input#searchBtn {
     font-size: 0.9em;
@@ -3118,21 +3123,21 @@ input[type="submit"]:active {
     font-size: 0.9em;
   }
   main#content form#searchForm {
-    width: 85%;
+    width: 94%;
   }
   main#content form#searchForm legend {
-    width: 35%;
-    font-size: 1.15em;
+    width: 55%;
+    font-size: 1em;
   }
   main#content form#searchForm label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm ::placeholder {
     color: #181818;
     text-indent: 0.25em;
   }
   main#content form#searchForm input[type="text"] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content form#searchForm select {
     font-size: 0.9em;
@@ -3527,7 +3532,7 @@ input[type="submit"]:active {
     width: 98%;
   }
   main#content form#searchForm legend {
-    font-size: 1.15em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -3928,7 +3933,7 @@ input[type="submit"]:active {
     font-size: 0.85em;
   }
   main#content form#searchForm legend {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -4325,7 +4330,7 @@ input[type="submit"]:active {
     font-size: 0.85em;
   }
   main#content form#searchForm legend {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -4711,7 +4716,7 @@ input[type="submit"]:active {
     font-size: 0.85em;
   }
   main#content form#searchForm legend {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -5106,8 +5111,8 @@ input[type="submit"]:active {
     font-size: 0.85em;
   }
   main#content form#searchForm legend {
-    width: 40%;
-    font-size: 1.1em;
+    width: 60%;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -5551,7 +5556,7 @@ input[type="submit"]:active {
     width: 97%;
   }
   main#content form#searchForm legend {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.9em;
@@ -6032,7 +6037,7 @@ input[type="submit"]:active {
     padding: 1%;
   }
   main#content form#searchForm legend {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content form#searchForm label {
     font-size: 0.85em;
@@ -6463,7 +6468,7 @@ input[type="submit"]:active {
     padding: 1%;
   }
   main#content form#searchForm legend {
-    width: 50%;
+    width: 60%;
     font-size: 1em;
   }
   main#content form#searchForm label {

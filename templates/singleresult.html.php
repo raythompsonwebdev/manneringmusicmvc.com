@@ -339,12 +339,12 @@
 
             <!--Audio Playlist-->
             <ul class="audio-tracklist">                
-                <?php     
-                                                   
+                <?php    
+                                            
                     $i = 1;                    
                 foreach ($singleaudio as $songId) :
                         //songId value from value of $singleaudio variable 
-                                   
+                                                      
                                                 
                         echo "<li>
                             <span class=\"tracknum\">Track " . $i . " : </span>

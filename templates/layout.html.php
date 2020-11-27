@@ -61,8 +61,9 @@
             <li><a rel='tab' href="/video">Video</a></li>
 
         <?php if ($loggedIn) : ?>
+            <li><a href="/author/list">Author List</a></li>
             <li class="social-item"><a href="/logout">Log out</a>
-        <?php else : ?>
+        <?php else : ?>            
             <li class="social-item"><a href="/login">Log in</a></li>
         <?php endif; ?>
         </ul>

@@ -1152,21 +1152,18 @@
             }
         }
 
-        .text_box {
-            
+        .text_box {            
             height: 140px;
             width: 98%;
             background-color: $color6;
             margin: auto;
 
             h1 {
-                font-size: 1.1em;
-               
+                font-size: 1.1em;               
                 color: $color2;
                 height: 30px;
                 line-height: 30px;
-                text-align: left;
-                
+                text-align: left;                
                 font-weight: bold;
             }
 
@@ -1529,6 +1526,7 @@
             padding: 1em;
             display: block;
             @include boredrady(5px);
+            font-family: ($FontListText);
 
             fieldset{
                 padding: 1em;
@@ -1538,13 +1536,13 @@
             
             legend{
                 
-                width: 30%;
+                width: 50%;
                 color: $color2;
                 text-align: center;
                 line-height: 30px;
                 margin: 0;
                 display: block;
-                font-size: 1.2em;
+                font-size: 1em;
                 letter-spacing: 0.1em;
                 font-weight: bold;
                 border:1px solid $color8;
@@ -1566,12 +1564,13 @@
             }
 
             ::placeholder {
-                color: $color7;
+                color: #ccc;
                 text-indent:0.25em;
+                font-family: ($FontListText);
             }
 
             input[type="text"] {
-                border: 2px solid $color8;
+                border: 1px solid $color8;
                 @include boredrady(5px);
                 background: $color2;
                 display: inline-block;
@@ -1582,6 +1581,7 @@
                 width: 26%;
                 color: $color7;
                 line-height: 35px;
+
             }
 
             select {
@@ -1598,10 +1598,9 @@
             }
 
             input#searchBtn {
-                
+                font-family: ($FontListText);
                 letter-spacing: 0.1em;
                 width: 25%;
-                line-height: 35px;
                 color: $color2;
                 font-size: 1em;
                 display: inline-block;
@@ -2268,10 +2267,10 @@
 
         form#searchForm {
             
-            
+            width: 85%;
             legend{
                 
-                font-size: 1.2em;
+                font-size: 1em;
                 
 
             }
@@ -2289,13 +2288,13 @@
 
             input[type="text"] {
                 
-                font-size: 0.9em;
+                font-size: 1em;
                 
             }
 
             select {
                 
-                font-size: 0.9em;
+                font-size: 1em;
                 
             }
 
@@ -2974,12 +2973,12 @@
         }
 
         form#searchForm {
-            width: 80%;                        
+            width: 90%;                        
 
             
             legend{
                 
-                font-size: 1.15em;
+                font-size: 1em;
                 
 
             }
@@ -2997,13 +2996,13 @@
 
             input[type="text"] {
                 
-                font-size: 0.9em;
+                font-size: 1em;
                 
             }
 
             select {
                 
-                font-size: 0.9em;
+                font-size: 1em;
                 
             }
 
@@ -3635,18 +3634,18 @@
         }
 
         form#searchForm {
-            width: 85%;                        
+            width: 94%;                        
 
             
             legend{
-                width: 35%;
-                font-size: 1.15em;
+                width: 55%;
+                font-size: 1em;
                 
 
             }
 
             label {
-                font-size: 0.9em;                        
+                font-size: 1em;                        
                 
                 
             }
@@ -3658,7 +3657,7 @@
 
             input[type="text"] {
                 
-                font-size: 0.9em;
+                font-size: 1em;
                 
             }
 
@@ -4294,7 +4293,7 @@
             
             legend{
                 
-                font-size: 1.15em;
+                font-size: 1em;
                 
                 
 
@@ -4944,7 +4943,7 @@
             
             legend{
                 
-                font-size: 1.1em;
+                font-size: 1em;
                 
 
             }
@@ -5591,7 +5590,7 @@
             
             legend{
                 
-                font-size: 1.1em;
+                font-size: 1em;
                 
 
             }
@@ -6227,7 +6226,7 @@
             
             legend{
                 
-                font-size: 1.1em;
+                font-size: 1em;
                 
 
             }
@@ -6881,8 +6880,8 @@
 
             
             legend{
-                width: 40%;
-                font-size: 1.1em;
+                width: 60%;
+                font-size: 1em;
                 
 
             }
@@ -7596,7 +7595,7 @@
 
             legend{
                 
-                font-size: 1.1em;
+                font-size: 1em;
                 
 
             }
@@ -8328,7 +8327,7 @@
             
             legend{
                 
-                font-size: 1.1em;
+                font-size: 1em;
                 
 
             }
@@ -9008,7 +9007,7 @@
             
 
             legend{
-                width: 50%;
+                width: 60%;
                 font-size: 1em;
                 
 
