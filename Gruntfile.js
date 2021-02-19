@@ -7,8 +7,7 @@ module.exports = function (grunt) {
 		babel: {
 			files: {
 				expand: true,
-				src: ['public_html/assets/js/*.js'],
-				dest: 'public_html/assets/js/',
+				src: ['public_html/**/*.js'],
 				ext: '-compiled.js',
 			},
 			options: {
@@ -23,14 +22,14 @@ module.exports = function (grunt) {
 		sass: {
 			options: {
 				implementation: sass,
-				sourceMap: true,
-				sourceMapEmbed: true,
-				sourceMapContents: true,
+				sourceMap: false,
+				sourceMapEmbed: false,
+				sourceMapContents: false,
 			},
 			dev: {
 				options: {
 					style: 'expanded',
-					sourcemap: true,
+					sourcemap: false,
 				},
 
 				files: {
@@ -41,27 +40,12 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					sourcemap: true,
+					sourcemap: false,
 				},
 				files: {
 					'public_html/style-min.css': 'public_html/assets/css/style.scss',
 					/*where file goes-----/where file from*/
 				},
-			},
-		},
-
-		cssmin: {
-			// Begin CSS Minify Plugin
-			target: {
-				files: [
-					{
-						expand: true,
-						cwd: 'scss',
-						src: ['public_html/assets/css/*.scss', '!*.min.scss'],
-						dest: 'public_html/',
-						ext: '.min.css',
-					},
-				],
 			},
 		},
 
@@ -71,7 +55,7 @@ module.exports = function (grunt) {
 		watch: {
 			sass: {
 				files: 'public_html/assets/css/*.scss',
-				tasks: ['sass', 'cssmin'],
+				tasks: ['sass'],
 			},
 		},
 	});
@@ -79,7 +63,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-babel');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['babel', 'sass', 'watch']);

@@ -9,8 +9,7 @@
 	"scripts": {
 		"lint": "./node_modules/.bin/eslint public_html/assets/js/**.js",
 		"lint:watch": "esw -w --cache public_html/assets/js/**.js",
-		"css:watch": "grunt watch",
-		"build-css": "node-sass -w public_html/assets/css/style.scss -o public_html/ "
+		"css:watch": "grunt watch"
 	},
 	"dependencies": {
 		"minimist": "^1.2.5"
@@ -19,6 +18,8 @@
 		"@babel/core": "^7.12.17",
 		"@babel/node": "^7.12.17",
 		"@babel/preset-env": "^7.12.17",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-latest": "^6.24.1",
 		"eslint": "^7.20.0",
 		"eslint-plugin-dollar-sign": "^1.0.2",
 		"eslint-plugin-import": "^2.22.1",
