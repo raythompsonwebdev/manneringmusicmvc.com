@@ -5,9 +5,9 @@
 <?php
 
     $array = array();
-    foreach ($singleaudio as $value) {
-        array_push($array, $value[0]);
-    }
+foreach ($singleaudio as $value) {
+    array_push($array, $value[0]);
+}
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
     echo $jsonArray;
@@ -331,18 +331,16 @@
                                     
                 $i = 1;
           
-             foreach ($singleaudio as $songId) :
-
-                                                   
-                    echo "<li>                    
+            foreach ($singleaudio as $songId) :
+                   echo "<li>                    
                         <span class=\"tracknum\">Track " . $i . " : </span>
                         <span class=\"trackname\">" . $songId[1] . "</span>
                         <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
                         <span class=\"trackplays\">$songId[4] plays</span>
                     </li>";
                 
-                    $i = $i + 1;
-             endforeach;
+                   $i = $i + 1;
+            endforeach;
             
             ?>
         </ul>            
@@ -360,8 +358,6 @@
         <h2> Other Albums</h2> 
 
          <?php foreach ($singlealbums as $value) :?>
-           
-           
         <div class="product-box">
             <figure class="product-info">
 
@@ -379,7 +375,7 @@
             </figure>
         </div>
         
-        <?php endforeach;?>
+         <?php endforeach;?>
          
 
     <div>

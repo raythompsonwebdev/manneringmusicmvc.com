@@ -4,9 +4,9 @@
 
 <?php
     $array = array();
-    foreach ($singleaudio as $key => $value) {
-        array_push($array, $value[0]);
-    }
+foreach ($singleaudio as $key => $value) {
+    array_push($array, $value[0]);
+}
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 ?>
 
