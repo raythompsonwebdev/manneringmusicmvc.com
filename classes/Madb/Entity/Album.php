@@ -13,9 +13,7 @@ class Album
     public $artistId;
     public $genre;
     private $artistsTable;
-    private $audioTable;
-
-        
+    private $audioTable;        
     
     public function __construct(DatabaseTable $artistsTable, DatabaseTable $audioTable)
     {
@@ -29,13 +27,21 @@ class Album
 
         return $this->id;
     }
-
+    
+    //artist class
     public function getArtistId()
     {
         
         return $this->artistsTable->findById($this->artistId);
     }
 
+    //audio class
+    public function getSongId()
+    {
+        return $this->audioTable->findById($this->id);
+    }
+
+    //audio class
     public function getNumberOfSongs()
     {        
         return $this->audioTable->total('albumId', $this->id);

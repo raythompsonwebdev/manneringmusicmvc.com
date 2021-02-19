@@ -58,13 +58,13 @@ class MadbRoutes implements \Mannering\Routes
             [&$this->authorsTable, &$this->reviewCategoriesTable]
         );
 
-         $this->authorsTable = new \Mannering\DatabaseTable(
-             $pdo,
-             'author',
-             'id',
-             '\Madb\Entity\Author',
-             [&$this->reviewsTable]
-         );
+        $this->authorsTable = new \Mannering\DatabaseTable(
+            $pdo,
+            'author',
+            'id',
+            '\Madb\Entity\Author',
+            [&$this->reviewsTable]
+        );
          
         $this->categoriesTable = new \Mannering\DatabaseTable(
             $pdo,
