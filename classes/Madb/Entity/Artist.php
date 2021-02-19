@@ -22,7 +22,7 @@ class Artist
     }
 
     public function getName()
-    {                    
+    {
         return $this->$artist_name;
     }
 
@@ -45,9 +45,7 @@ class Artist
 
     //audio class
     public function getNumOfSongs()
-    {        
+    {
         return $this->audioTable->total('artistId', $this->id);
     }
-
-    
 }

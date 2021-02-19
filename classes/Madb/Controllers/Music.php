@@ -87,7 +87,6 @@ class Music
     public function search()
     {
         if (!isset($_GET['submit'])) {
-
             //Store search form data submitted into variables
             $artistname = htmlspecialchars($_GET['term']);
         
@@ -97,8 +96,7 @@ class Music
             console.log($singlealbums);
             //$singleaudio = $this->audioTable->find('songtitle', $artistname);
            // $singleartist = $this->artistsTable->find('artist_name', $artistname);
-               
-        }        
+        }
   
         $title = 'Mannering Search Page';
       
@@ -119,13 +117,11 @@ class Music
      *
      * */
     public function singleresult()
-    {        
+    {
                                                       
         if (isset($_GET['albumid'])) {
             $singlealbums = $this->albumsTable->findById($_GET['albumid']);
             $singleaudio = $this->audioTable->findAlbumSongs($_GET['albumid']);
-            
-            
         }
 
         if (isset($_GET['artistid'])) {
@@ -144,7 +140,7 @@ class Music
     }
     /**
      * artist page
-     * @return object $singlealbums returns object with albums relating to artist 
+     * @return object $singlealbums returns object with albums relating to artist
      * @return object $singleartist returns object with all artist fields
      * @return object $singleaudio returns object audio fields related to artist
      * @return object $title returns object with page title
@@ -155,11 +151,9 @@ class Music
       
 
         if (isset($_GET['artistid'])) {
-                        
-            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']); 
+            $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);
             $singleartist = $this->artistsTable->findById($_GET['artistid']);
             $singleaudio = $this->audioTable->findArtistSongs($_GET['artistid']);
-            
         }
 
                     
