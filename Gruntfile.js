@@ -7,8 +7,8 @@ module.exports = function (grunt) {
 		babel: {
 			files: {
 				expand: true,
-				src: ['assets/js/*.js'],
-				dest: 'assets/js/',
+				src: ['public_html/assets/js/*.js'],
+				dest: 'public_html/assets/js/',
 				ext: '-compiled.js',
 			},
 			options: {
@@ -24,11 +24,13 @@ module.exports = function (grunt) {
 			options: {
 				implementation: sass,
 				sourceMap: true,
+				sourceMapEmbed: true,
+				sourceMapContents: true,
 			},
 			dev: {
 				options: {
 					style: 'expanded',
-					sourcemap: 'auto',
+					sourcemap: true,
 				},
 
 				files: {
@@ -39,7 +41,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'compressed',
-					sourcemap: 'auto',
+					sourcemap: true,
 				},
 				files: {
 					'public_html/style-min.css': 'public_html/assets/css/style.scss',
@@ -48,23 +50,39 @@ module.exports = function (grunt) {
 			},
 		},
 
+		cssmin: {
+			// Begin CSS Minify Plugin
+			target: {
+				files: [
+					{
+						expand: true,
+						cwd: 'scss',
+						src: ['public_html/assets/css/*.scss', '!*.min.scss'],
+						dest: 'public_html/',
+						ext: '.min.css',
+					},
+				],
+			},
+		},
+
 		/**
 		 * watch
 		 */
 		watch: {
-			css: {
-				files: 'public_html/**/*.scss',
-				tasks: ['sass'],
+			sass: {
+				files: 'public_html/assets/css/*.scss',
+				tasks: ['sass', 'cssmin'],
 			},
 		},
 	});
 
+	grunt.loadNpmTasks('grunt-babel');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-babel');
 
-	grunt.registerTask('default', ['sass', 'watch', 'babel']);
+	grunt.registerTask('default', ['babel', 'sass', 'watch']);
 };
 
 /* add bag (!) to wordpress css theme top-title so that it shows on minified file*/

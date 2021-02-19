@@ -9,7 +9,8 @@
 	"scripts": {
 		"lint": "./node_modules/.bin/eslint public_html/assets/js/**.js",
 		"lint:watch": "esw -w --cache public_html/assets/js/**.js",
-		"css:watch": "grunt watch"
+		"css:watch": "grunt watch",
+		"build-css": "node-sass -w public_html/assets/css/style.scss -o public_html/ "
 	},
 	"dependencies": {
 		"minimist": "^1.2.5"
@@ -27,6 +28,7 @@
 		"grunt-babel": "^8.0.0",
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-cssmin": "^4.0.0",
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
 		"grunt-sass": "^3.1.0",

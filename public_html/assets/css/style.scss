@@ -1,6 +1,5 @@
 @import 'partials/_variables.scss';
 @import 'partials/_mixins.scss';
-//@import "partials/_fonts.scss";
 @import 'partials/_normalize.scss';
 @import 'partials/_base.scss';
 
@@ -48,6 +47,7 @@
 		margin: auto;
 		color: $color2;
 		font-size: 0.6em;
+
 		width: 100%;
 		letter-spacing: 0.1em;
 	}
