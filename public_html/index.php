@@ -9,7 +9,9 @@ try {
     //provides route controller and route methods to requested pages
     $entryPoint = new \Mannering\EntryPoint($route, $_SERVER['REQUEST_METHOD'], new \Madb\MadbRoutes());
 
+
     $entryPoint->run();
+
 } catch (PDOException $e) {
     $title = 'An error has occurred';
 
@@ -18,3 +20,4 @@ try {
 
     include  __DIR__ . '/../templates/layout.html.php';
 }
+

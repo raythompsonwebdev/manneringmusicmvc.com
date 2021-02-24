@@ -59,14 +59,14 @@ class MadbRoutes implements \Mannering\Routes
             [&$this->authorsTable, &$this->reviewCategoriesTable]
         );
 
-        $this->authorsTable = new \Mannering\DatabaseTable(
-            $pdo,
-            'author',
-            'id',
-            '\Madb\Entity\Author',
-            [&$this->reviewsTable]
-        );
-         
+         $this->authorsTable = new \Mannering\DatabaseTable(
+             $pdo,
+             'author',
+             'id',
+             '\Madb\Entity\Author',
+             [&$this->reviewsTable]
+         );
+
         $this->categoriesTable = new \Mannering\DatabaseTable(
             $pdo,
             'category',
@@ -74,7 +74,7 @@ class MadbRoutes implements \Mannering\Routes
             '\Madb\Entity\Category',
             [&$this->reviewsTable, &$this->reviewCategoriesTable]
         );
-         
+
         $this->reviewCategoriesTable = new \Mannering\DatabaseTable(
             $pdo,
             'review_category',
@@ -109,7 +109,7 @@ class MadbRoutes implements \Mannering\Routes
         $authorController = new \Madb\Controllers\Register($this->authorsTable);
 
         $loginController = new \Madb\Controllers\Login($this->authentication);
-        
+
         $categoryController = new \Madb\Controllers\Category($this->categoriesTable);
 
         $routes = [
@@ -175,7 +175,6 @@ class MadbRoutes implements \Mannering\Routes
                 ]
             ],
 
-
             'login/error' => [
                 'GET' => [
                     'controller' => $loginController,
@@ -210,7 +209,7 @@ class MadbRoutes implements \Mannering\Routes
                     'action' => 'processLogin'
                 ]
             ],
-            
+
             'category/edit' => [
                 'POST' => [
                     'controller' => $categoryController,
@@ -239,16 +238,16 @@ class MadbRoutes implements \Mannering\Routes
                 'login' => true,
                 'permissions' => \Madb\Entity\Author::EDIT_CATEGORIES
             ],
-            
+
             //pages
                 '' => [
                     'GET' => [
                                     //'controller' => $reviewController,
                                     'controller' => $musicController,
                                     'action' => 'home',
-                                    
+
                     ]
-                    
+
                 ],
                 'about' => [
                                 'GET' => [

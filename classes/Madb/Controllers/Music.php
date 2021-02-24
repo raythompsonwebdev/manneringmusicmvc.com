@@ -86,27 +86,10 @@ class Music
 
     public function search()
     {
-        if (!isset($_GET['submit'])) {
-            //Store search form data submitted into variables
-            $artistname = htmlspecialchars($_GET['term']);
-        
-            //$val = htmlspecialchars($_GET['term']);
-                    
-            $singlealbums = $this->albumsTable->find('album', $artistname);
-            console.log($singlealbums);
-            //$singleaudio = $this->audioTable->find('songtitle', $artistname);
-           // $singleartist = $this->artistsTable->find('artist_name', $artistname);
-        }
   
         $title = 'Mannering Search Page';
       
-        return ['template' => 'search.html.php', 'title' => $title,'variables' =>[
-            'singlealbums' => $singlealbums
-            //,
-            //'singleartist' => $singleartist,
-            //'singleaudio' => $singleaudio
-          ]
-        ];
+        return ['template' => 'search.html.php', 'title' => $title];
     }
     /**
      * album page
@@ -153,7 +136,7 @@ class Music
         if (isset($_GET['artistid'])) {
             $singlealbums = $this->albumsTable->findArtistAlbum($_GET['artistid']);
             $singleartist = $this->artistsTable->findById($_GET['artistid']);
-            $singleaudio = $this->audioTable->findArtistSongs($_GET['artistid']);
+            $singleaudio = $this->artistsTable->findArtistSongs($_GET['artistid']);
         }
 
                     

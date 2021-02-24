@@ -2,7 +2,7 @@
 
 <!-- Slider-->
 <!-- <section id="slider">
-  <img src="assets/images/sliderimages/silder.gif" alt="hip-hop-albums"/>     
+  <img src="assets/images/sliderimages/silder.gif" alt="hip-hop-albums"/>
 </section> -->
 
 <!--main text-->
@@ -16,15 +16,15 @@
                 <div class="flex-wrapper">
 
                     <figure class="grid_1_of_5 ">
-                        <a href="/singleresult?albumid=<?=$rapalbum->id ?? ''?>&artistid=<?=$rapalbum->artistId ?? ''?>" title="Go album page">
+                        <a href="/singleresult?albumid=<?=$rapalbum->id ?? " "?>&artistid=<?=$rapalbum->artistId ?? ''?>" title="Go album page">
                             <img class="images_1_of_5" src="/assets/databasepics/<?=$rapalbum->image?>" alt="HipHopMusicAlbum">
                         </a>
                         <figcaption class="cap_1_of_5">
                             <h3><?=$rapalbum->getArtistId()->artist_name?></h3>
                                 <p><?=$rapalbum->genre?></p>
-                             
+
                         </figcaption>
-                    
+
                     </figure>
 
                 </div>

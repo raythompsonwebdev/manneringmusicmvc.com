@@ -4,9 +4,11 @@
 
 <?php
     $array = array();
-foreach ($singleaudio as $key => $value) {
-    array_push($array, $value[0]);
-}
+    foreach ($singleaudio as $key => $value) {
+
+					var_dump($value);
+        array_push($array, $value[0]);
+    }
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 ?>
 
@@ -344,7 +346,6 @@ foreach ($singleaudio as $key => $value) {
                     $i = 1;
                 foreach ($singleaudio as $songId) :
                         //songId value from value of $singleaudio variable
-
 
                         echo "<li>
                             <span class=\"tracknum\">Track " . $i . " : </span>

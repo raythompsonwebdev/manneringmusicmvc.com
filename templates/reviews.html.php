@@ -20,7 +20,7 @@
             <?php if ($user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)) : ?>
           <a href="/review/edit?id=<?=$review->id?>">Edit</a>
             <?php endif; ?>
-
+    
             <?php if ($user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::DELETE_REVIEWS)) : ?>
           <form action="/review/delete" method="post">
             <input type="hidden" name="id" value="<?=$review->id?>">
@@ -28,8 +28,6 @@
           </form>
             <?php endif; ?>
       <?php endif; ?>
-
-      
   </blockquote>
 <?php endforeach; ?>
 

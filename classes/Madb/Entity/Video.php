@@ -10,8 +10,9 @@ class Video
     public $video_genre;
     public $video_image;
 
-    public function __construct()
-    {
+    public function __construct( )
+    {        
+        
     }
 
     public function getVideoId()
@@ -37,4 +38,5 @@ class Video
 
         return $this->video_title;
     }
+    
 }

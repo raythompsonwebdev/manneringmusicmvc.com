@@ -39,7 +39,7 @@ class DatabaseTable
             $sql .= ' WHERE `' . $field . '` = :value';
             $parameters = ['value' => $value];
         }
-        
+
         $query = $this->query($sql, $parameters);
         $row = $query->fetch();
         return $row[0];
@@ -203,10 +203,8 @@ class DatabaseTable
         }
 
         return $entity;
-    } 
-    
-    //custom functions
-   
+    }
+
     /**
      * artist-page-function
      * @return object $return returns object with albums related to artist
@@ -214,14 +212,14 @@ class DatabaseTable
      * */
     public function findArtistAlbum($value)
     {
-        
-        $query = "SELECT `id`, `album`, `image`, `artistId`, `genre`  FROM `album` WHERE `artistId` = $value ";
+
+        $query = "SELECT * FROM `album` WHERE `artistId` = $value ";
 
         $parameters = [
             'value' => $value
         ];
 
-        $result = $this->query($query, $parameters); 
+        $result = $this->query($query, $parameters);
 
         return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
 
@@ -235,25 +233,24 @@ class DatabaseTable
     public function findArtistSongs($value)
     {
 
-        $query = "SELECT `id`, `songtitle`, `mp3_File`, `artistId`, `plays` FROM `audio` WHERE `artistId` = $value";
+        $query = "SELECT * FROM `audio` WHERE `artistId` = $value";
 
         $parameters = [
             'value' => $value
         ];
 
-        $query = $this->query($query, $parameters);        
+        $query = $this->query($query, $parameters);
 
         $array = array();
 
         foreach ($query as $row) {
+									array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File'], $row['mp4_File'], $row['artistId'], $row['albumId'], $row['plays'] ]);
+								}
 
-            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['artistId'], $row['plays'] ]);
-        }
-         
         return (object) $array;
 
-        
-        
+								//return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
+
     }
 
      /**
@@ -271,16 +268,18 @@ class DatabaseTable
         ];
 
         $query = $this->query($query, $parameters);
-               
+
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['albumId'], $row['plays'] ]);
+            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File'], $row['mp4_File'], $row['artistId'], $row['albumId'], $row['plays'] ]);
         }
-         
+
         return (object) $array;
+
+								//return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
     }
-   
-   
-        
+
+
+
 }

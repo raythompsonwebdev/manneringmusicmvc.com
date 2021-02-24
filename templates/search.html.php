@@ -1,3 +1,4 @@
+
 <script> 
     document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -9,11 +10,10 @@
 
             var artistname = document.querySelector("#artist").value;            
             var albumname = document.querySelector("#album").value;
-            var genre = document.querySelector("#genre").value;
+            var genre = document.querySelector("#genre").value; 
             var searchErr = document.querySelector(".search_error");
 
-            if ( artistname == "" && albumname == "" && genre == "")  {
-                    
+            if ( artistname == "" && albumname == "" && genre == "")  {         
 
                 searchErr.classList.add('show_error');
                 return false;
@@ -22,8 +22,8 @@
 
                 searchErr.classList.remove('show_error');
 
-            }  
-   
+            }                             
+        
             fetch(`./results.php?artist_name=${artistname}&album=${albumname}&genre=${genre}`, {
                 method: 'get',
                 headers: {
@@ -68,13 +68,13 @@
     <!--Search Form--> 
     <form id="searchForm" action="">
         <fieldset>
-            <legend>Search for an artist, album or song</legend>
+            <legend>Search Here</legend>
 
             <label for="artist" aria-label="artist_name">Artist name</label>
-            <input id="artist" name="artist_name" type="text" placeholder="Type artist name here.." >
+            <input id="artist" name="artist_name" type="text" placeholder="Artist Name" >
             
             <label for="album" aria-label="album">Album name</label>
-            <input id="album" name="album" type="text" title="Album Name" placeholder="Type album name here.." >
+            <input id="album" name="album" type="text" title="Album Name"  placeholder="Album Name" >
 
             <label for="genre" aria-label="genre">Genre</label>
             <select name="genre" id="genre">
@@ -94,8 +94,7 @@
 
     <div id="loadingIndicator" style="display: none;">Ajax Loading...</div>
 
-    <div id="results">
-    </div>
+    <div id="results"></div>
     
 <br/>
 <br/>
