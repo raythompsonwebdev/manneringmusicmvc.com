@@ -734,16 +734,14 @@
 					/* Album image*/
 
 					img {
-						float: left;
-						width: 31%;
-						margin: 0 0.25em 1em 0;
+						width: auto;
+						margin: 1em auto;
 						display: block;
 					}
 
 					/* Album artist and name*/
 					figcaption {
-						width: 66%;
-						display: inline-block;
+						width: 100%;
 
 						ul.product-box-info {
 							width: 100%;
@@ -755,20 +753,20 @@
 								padding: 0;
 								color: $color2;
 								height: auto;
-
 								font-weight: normal;
 								background-color: $color5;
 								width: 100%;
 								line-height: 25px;
 								margin-bottom: 0.2em;
+								text-align: center;
 							}
 						}
 					}
 				}
 
 				figure.product-info:hover img {
-					@include transforming-things(scale(1.05));
-					border: 3px solid $color1;
+					@include transforming-things(scale(1.01));
+					border: 1px solid $color1;
 					cursor: pointer;
 				}
 
@@ -804,7 +802,7 @@
 			.product-box-large {
 				height: auto;
 				min-height: 240px;
-				padding: 0.5em;
+				padding: 0;
 				@include boredrady(5px);
 				margin: 0.5em;
 				width: 100%;
@@ -909,8 +907,6 @@
 				}
 
 				figure.product-info:hover img {
-					@include transforming-things(scale(1.05));
-					border: 3px solid $color1;
 					cursor: pointer;
 				}
 
@@ -1683,7 +1679,7 @@
 				height: 40px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.9em;
 				}
 			}
 		}
@@ -1815,7 +1811,7 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 31%;
+						width: auto;
 					}
 
 					figcaption {
@@ -2237,7 +2233,7 @@
 				height: 40px;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.9em;
 				}
 			}
 		}
@@ -2402,7 +2398,7 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 31%;
+						width: auto;
 					}
 
 					figcaption {
@@ -2967,11 +2963,10 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 30%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 68%;
 						ul.product-box-info {
 							width: 100%;
 
@@ -3378,7 +3373,7 @@
 				height: 40px;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -3513,7 +3508,7 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 30%;
+						width: auto;
 					}
 
 					figcaption {
@@ -3930,7 +3925,7 @@
 				height: 40px;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.85em;
 
 					&:hover {
 						font-weight: bold;
@@ -4063,12 +4058,10 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 32%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 66%;
-
 						ul.product-box-info {
 							width: 100%;
 
@@ -4613,12 +4606,10 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 70%;
-
 						ul.product-box-info {
 							width: 100%;
 
@@ -5167,12 +5158,10 @@
 			.product-box {
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 69%;
-
 						ul.product-box-info {
 							width: 100%;
 
@@ -5569,7 +5558,7 @@
 
 			li {
 				a {
-					font-size: 0.7em;
+					font-size: 0.8em;
 
 					&:hover {
 						font-weight: bold;
@@ -5701,7 +5690,7 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
@@ -6132,7 +6121,7 @@
 
 			li {
 				a {
-					font-size: 0.65em;
+					font-size: 0.75em;
 
 					&:hover {
 						font-weight: bold;
@@ -6302,7 +6291,7 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
@@ -6963,7 +6952,7 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
@@ -7378,7 +7367,7 @@
 
 			li {
 				a {
-					font-size: 0.65em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -7561,12 +7550,10 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 69%;
-
 						ul.product-box-info {
 							width: 100%;
 
@@ -7971,7 +7958,7 @@
 
 			li {
 				a {
-					font-size: 0.65em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -8108,12 +8095,10 @@
 
 				figure.product-info {
 					img {
-						width: 28%;
+						width: auto;
 					}
 
 					figcaption {
-						width: 68%;
-
 						ul.product-box-info {
 							width: 100%;
 
@@ -8554,7 +8539,7 @@
 
 			li {
 				a {
-					font-size: 0.6em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -8680,7 +8665,7 @@
 
 				figure.product-info {
 					img {
-						width: 27%;
+						width: auto;
 					}
 
 					figcaption {
@@ -9099,7 +9084,7 @@
 
 			li {
 				a {
-					font-size: 0.6em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -9229,7 +9214,7 @@
 
 				figure.product-info {
 					img {
-						width: 27%;
+						width: auto;
 					}
 
 					figcaption {
@@ -9623,7 +9608,7 @@
 
 			li {
 				a {
-					font-size: 0.6em;
+					font-size: 0.9em;
 
 					&:hover {
 						font-weight: bold;
@@ -9757,7 +9742,7 @@
 
 				figure.product-info {
 					img {
-						width: 27%;
+						width: auto;
 					}
 
 					figcaption {

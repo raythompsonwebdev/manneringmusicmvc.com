@@ -337,7 +337,7 @@
                         <span class=\"tracknum\">Track " . $i . " : </span>
                         <span class=\"trackname\">" . $songId[1] . "</span>
                         <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                        <span class=\"trackplays\">plays</span>
+                        <span class=\"trackplays\">". $songId[7] . " plays</span>
                     </li>";
 
                     $i = $i + 1;

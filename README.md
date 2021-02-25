@@ -20,21 +20,23 @@ Web Application has a Model View Controller design pattern that allows additiona
 
 - Wide selection of Hip Hop, Country and Jazz Music Albums.
 
-- Register & Login.
+- Register & Login functionality.
 
 - Custom Audio player.
 
 - Album search page to search for favourite albums.
 
-- Listen to individual album tracks.
+- Play album tracks.
 
-- Submit review of individual tracks and albums.
+- Submit review of albums.
 
-- Watch favourite music videos.
+- Watch your favourite music videos ( You Tube ).
 
 - Responsive Design.
 
 - Add custom review categories.
+
+-
 
 ## Frequently Asked Questions
 
