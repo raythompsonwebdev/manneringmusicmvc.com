@@ -50,5 +50,4 @@ class Audio
 
         return $this->$plays;
     }
-    
 }

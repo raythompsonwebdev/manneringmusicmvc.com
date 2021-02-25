@@ -4,12 +4,12 @@
 
 <?php
     $array = array();
-    foreach ($singleaudio as $key => $value) {
+    foreach ($singleaudio as $value) {
 
-					var_dump($value);
         array_push($array, $value[0]);
     }
     $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
+
 ?>
 
 <script>
@@ -17,6 +17,7 @@
     $(document).ready(function() {
         //create seprate playlists for shuffle
         var newPlaylist = <?php echo $jsonArray; ?>;
+
         audioElement = new Audio(); //instance of audio class
         setTrack(newPlaylist[0], newPlaylist, false); //audio class func
         //update volume add full width
@@ -250,7 +251,7 @@
             <figure class="product-info">
 
             <a href="/artist?albumid=<?=$singlealbums->id ?? ''?>&artistid=<?=$singlealbums->artistId ?? ''?>" title="Go artist page">
-                <img src="assets/databasepics/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
+                <img src="assets/databasepics/WEBP/<?=$singlealbums->image; ?>" alt="Album-Cover-Image" />
             </a>
 
 
@@ -343,15 +344,19 @@
             <ul class="audio-tracklist">
                 <?php
 
-                    $i = 1;
-                foreach ($singleaudio as $songId) :
-                        //songId value from value of $singleaudio variable
+															$songIdArray = $singleaudio;
 
+
+
+                    $i = 1;
+
+                foreach ($songIdArray as $songId) :
+                        //songId value from value of $singleaudio variable
                         echo "<li>
                             <span class=\"tracknum\">Track " . $i . " : </span>
                             <span class=\"trackname\">" . $songId[1] . "</span>
                             <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                            <span class=\"trackplays\">$songId[4] plays </span>
+                            <span class=\"trackplays\">$songId[7] plays </span>
                         </li>";
 
                         $i = $i + 1;

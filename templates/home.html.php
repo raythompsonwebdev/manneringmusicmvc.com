@@ -1,9 +1,9 @@
 <?php  ?>
 
 <!-- Slider-->
-<!-- <section id="slider">
-  <img src="assets/images/sliderimages/silder.gif" alt="hip-hop-albums"/>
-</section> -->
+<section id="slider">
+  <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
+</section>
 
 <!--main text-->
 <section id="main_text" role="main" >
@@ -17,7 +17,7 @@
 
                     <figure class="grid_1_of_5 ">
                         <a href="/singleresult?albumid=<?=$rapalbum->id ?? " "?>&artistid=<?=$rapalbum->artistId ?? ''?>" title="Go album page">
-                            <img class="images_1_of_5" src="/assets/databasepics/<?=$rapalbum->image?>" alt="HipHopMusicAlbum">
+                            <img class="images_1_of_5" width=100 height=100 src="/assets/databasepics/WEBP/<?=$rapalbum->image?>" alt="HipHopMusicAlbum">
                         </a>
                         <figcaption class="cap_1_of_5">
                             <h3><?=$rapalbum->getArtistId()->artist_name?></h3>
@@ -39,7 +39,7 @@
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
                 <a href="/singleresult?albumid=<?=$countryalbum->id ?? ''?>&artistid=<?=$countryalbum->artistId ?? ''?>">
-                    <img class="images_1_of_5" src="/assets/databasepics/<?=$countryalbum->image?>" alt="CountryMusicAlbum">
+                    <img class="images_1_of_5" width=100 height=100 src="/assets/databasepics/WEBP/<?=$countryalbum->image?>" alt="CountryMusicAlbum">
                 </a>
                     <figcaption class="cap_1_of_5">
                         <h3><?=$countryalbum->getArtistId()->artist_name?></h3>
@@ -58,7 +58,7 @@
             <div class="flex-wrapper">
                 <figure class="grid_1_of_5">
                 <a href="/singleresult?albumid=<?=$jazzalbum->id ?? ''?>&artistid=<?=$jazzalbum->artistId ?? ''?>">
-                    <img class="images_1_of_5" src="/assets/databasepics/<?=$jazzalbum->image?>" alt="JazzMusicAlbum">
+                    <img class="images_1_of_5" width=100 height=100 src="/assets/databasepics/WEBP/<?=$jazzalbum->image?>" alt="JazzMusicAlbum">
                 </a>
                     <figcaption class="cap_1_of_5">
                         <h3><?=$jazzalbum->getArtistId()->artist_name?></h3>

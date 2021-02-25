@@ -27,6 +27,8 @@ class DatabaseTable
     {
         $query = $this->pdo->prepare($sql);
         $query->execute($parameters);
+
+
         return $query;
     }
 
@@ -205,35 +207,14 @@ class DatabaseTable
         return $entity;
     }
 
-    /**
-     * artist-page-function
-     * @return object $return returns object with albums related to artist
-     *
-     * */
-    public function findArtistAlbum($value)
-    {
-
-        $query = "SELECT * FROM `album` WHERE `artistId` = $value ";
-
-        $parameters = [
-            'value' => $value
-        ];
-
-        $result = $this->query($query, $parameters);
-
-        return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
-
-    }
-
      /**
-     * artist-page-function
+     * single-result-page-function
      * @return array $array returns array of songs related to artist
      *
      * */
-    public function findArtistSongs($value)
+    public function findAlbumSongs($value)
     {
-
-        $query = "SELECT * FROM `audio` WHERE `artistId` = $value";
+								$query = 'SELECT * FROM `' . $this->table . '` WHERE `albumId` = :value';
 
         $parameters = [
             'value' => $value
@@ -245,23 +226,19 @@ class DatabaseTable
 
         foreach ($query as $row) {
 									array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File'], $row['mp4_File'], $row['artistId'], $row['albumId'], $row['plays'] ]);
-								}
-
-        return (object) $array;
-
-								//return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
+        }
+        return $array;
 
     }
 
-     /**
-     * single-result-page-function
+				/**
+     * artist-page-function
      * @return array $array returns array of songs related to artist
      *
      * */
-    public function findAlbumSongs($value)
+    public function findArtistSongs($value)
     {
-
-        $query = "SELECT * FROM `audio` WHERE `albumId` = $value ";
+								$query = 'SELECT * FROM `' . $this->table . '` WHERE `artistId` = :value';
 
         $parameters = [
             'value' => $value
@@ -272,13 +249,43 @@ class DatabaseTable
         $array = array();
 
         foreach ($query as $row) {
-            array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File'], $row['mp4_File'], $row['artistId'], $row['albumId'], $row['plays'] ]);
+									array_push($array, [$row['id'], $row['songtitle'], $row['mp3_File'], $row['ogg_File'], $row['mp4_File'], $row['artistId'], $row['albumId'], $row['plays'] ]);
         }
+        return $array;
 
-        return (object) $array;
-
-								//return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
     }
+
+				/**
+     * artist-page-function
+     * @return object $return returns object with albums related to artist
+     *
+     * */
+    public function findArtistAlbums($value)
+    {
+
+					$query = 'SELECT * FROM `' . $this->table . '` WHERE `artistId` = :value';
+
+        $parameters = [
+            'value' => $value
+        ];
+
+        $result = $this->query($query, $parameters);
+
+								return $result->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
+
+								// $array = array();
+
+        // foreach ($query as $row) {
+								// 	array_push($array, [$row['id'], $row['album'], $row['image'], $row['price'], $row['text'], $row['artistId'], $row['genre']]);
+								// }
+
+        // return $array;
+
+
+    }
+
+
+
 
 
 

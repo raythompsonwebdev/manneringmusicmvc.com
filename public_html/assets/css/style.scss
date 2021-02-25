@@ -322,7 +322,7 @@
 			}
 
 			div.reviews {
-				min-height: 300px;
+				min-height: 250px;
 			}
 
 			#review_pagination {
@@ -387,7 +387,7 @@
 						img.images_1_of_5 {
 							border: 2px solid $color3;
 							@include transitioner(all 0.5s ease);
-							max-width: 60%;
+							width: auto;
 							margin: 3% auto;
 							cursor: pointer;
 						}
@@ -471,8 +471,8 @@
 					}
 
 					.grid_1_of_5:hover img.images_1_of_5 {
-						@include transforming-things(scale(1.05));
-						border: 3px solid $color1;
+						@include transforming-things(scale(1.02));
+						border: 2px solid $color1;
 					}
 
 					.grid_1_of_5:hover form#frontform {
@@ -1719,7 +1719,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 60%;
+							width: auto;
 						}
 
 						form#frontform {
@@ -2272,7 +2272,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 55%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -2877,7 +2877,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 55%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -3423,7 +3423,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -3973,7 +3973,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -4521,7 +4521,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -5078,7 +5078,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -5609,7 +5609,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -6172,7 +6172,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 55%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -6871,7 +6871,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 50%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -7463,7 +7463,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 55%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -8020,7 +8020,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 60%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -8592,7 +8592,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 65%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -9141,7 +9141,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 65%;
+							width: auto;
 						}
 
 						input.frontform {
@@ -9665,7 +9665,7 @@
 						}
 
 						img.images_1_of_5 {
-							max-width: 65%;
+							width: auto;
 						}
 
 						input.frontform {

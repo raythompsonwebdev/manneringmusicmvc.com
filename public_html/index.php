@@ -11,7 +11,6 @@ try {
 
 
     $entryPoint->run();
-
 } catch (PDOException $e) {
     $title = 'An error has occurred';
 
@@ -20,4 +19,3 @@ try {
 
     include  __DIR__ . '/../templates/layout.html.php';
 }
-
