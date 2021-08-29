@@ -27,6 +27,7 @@
 					"wrap-iife": ["error", "any"],
 					"no-undef": 0,
 					"space-before-function-paren": 0,
-					"space-in-parens": ["error", "never"]
+					"space-in-parens": ["error", "never"],
+          "no-unused-vars": 0
     }
 }
