@@ -36,10 +36,7 @@
 		"prettier": "2.3.1",
 		"whatwg-fetch": "^3.6.2"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/raythompsonwebdev/mannering-musicmvc2.git"
-	},
+	"repository": "git+https://github.com/raythompsonwebdev/mannering-musicmvc2.git",
 	"author": "Raymond Thompson",
 	"license": "MIT",
 	"bugs": {

@@ -14,4 +14,7 @@ logs/
 includes/DatabaseConnection.php
 .sass-cache/
 
+access.log
+error.log
+
 
