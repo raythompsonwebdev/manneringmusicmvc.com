@@ -2,20 +2,17 @@
 <script src='assets/js/script.js'></script>
 
 <?php
-$array = array();
-foreach ($singleaudio as $value) {
-
-  array_push($array, $value[0]);
-}
-$jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
-
+  $array = array();
+  foreach ($singleaudio as $value) {
+    array_push($array, $value[0]);
+  }
+  $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 ?>
 
 <script>
   $(document).ready(function() {
     //create seprate playlists for shuffle
     var newPlaylist = <?php echo $jsonArray; ?>;
-
     audioElement = new Audio(); //instance of audio class
     setTrack(newPlaylist[0], newPlaylist, false); //audio class func
     //update volume add full width
@@ -23,6 +20,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
     var prevHighlight = document.querySelector('div.audio_controls');
     var progressBar = document.querySelector('div.progress div.play_progress');
+    var volumeControl = document.querySelector('div.audio_volume div.volume');
 
     prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", function(e) {
       e.preventDefault();
@@ -43,14 +41,12 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
       timeFromOffset(e, this);
     });
 
-
-    $("div.audio_volume div.volume").mousedown(function() {
+    volumeControl.addEventListener('mousedown', function(){
       mouseDown = true;
     });
 
-    $("div.audio_volume div.volume").mousemove(function(e) {
+    volumeControl.addEventListener('mousemove', function(){
       if (mouseDown == true) {
-
         var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
         //limits volume range to bewteen 0 and 1
         if (percentage >= 0 && percentage <= 1) {
@@ -59,21 +55,17 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
       }
     });
 
-    $("div.audio_volume div.volume").mouseup(function(e) {
-
+    volumeControl.addEventListener('mouseup', function(){
       var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
 
       if (percentage >= 0 && percentage <= 1) {
         audioElement.audio.volume = percentage;
       }
-
     });
 
-    $(document).mouseup(function() {
+    document.addEventListener( 'mouseup', function() {
       mouseDown = false;
     });
-
-
 
   });
 
@@ -97,7 +89,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
   //skip to next song
   function nextSong() {
-    shuffle
+    //shuffle
     if (repeat == true) {
       audioElement.setTime(0);
       playSong();
@@ -343,11 +335,11 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
         foreach ($songIdArray as $songId) :
           //songId value from value of $singleaudio variable
           echo "<li>
-                            <span class=\"tracknum\">Track " . $i . " : </span>
-                            <span class=\"trackname\">" . $songId[1] . "</span>
-                            <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
-                            <span class=\"trackplays\">$songId[7] plays </span>
-                        </li>";
+                  <span class=\"tracknum\">Track " . $i . " : </span>
+                  <span class=\"trackname\">" . $songId[1] . "</span>
+                  <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
+                  <span class=\"trackplays\">$songId[7] plays </span>
+              </li>";
 
           $i = $i + 1;
         endforeach;
