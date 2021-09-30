@@ -10,7 +10,8 @@
 ?>
 
 <script>
-  $(document).ready(function() {
+
+  document.addEventListener("DOMContentLoaded", () => {
     //create seprate playlists for shuffle
     var newPlaylist = <?php echo $jsonArray; ?>;
     audioElement = new Audio(); //instance of audio class

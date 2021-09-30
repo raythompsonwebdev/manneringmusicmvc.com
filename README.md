@@ -4,7 +4,7 @@
 
 # Introduction
 
-Web application is based on a website brief, I was given to build a website from, for a city and guilds exam in web design I took in 2012. I used elements from e-book PHP & MySQL: Novice to Ninja, 6th Edition by Tom Butler and Kevin Yank and video tutorial Make a Spotify Clone from Scratch: JavaScript PHP and MySQL by Reece Kenney .
+Web application is based on a website brief, I was given to build a website from, for a city and guilds exam in web design I took in 2012. 
 
 The task was that I worked for Mannerings Music Agency which is a company that advertises music for sale on the lnternet. As a web designer for the company I was have been asked to design a website to advertise the available music for sale.
 
@@ -12,9 +12,7 @@ I was given full artistic license to produce a website that will inspire and eng
 
 - See original breif : [Mannering Music website brief](https://drive.google.com/open?id=14Z8BsNeYcWYpNKrLcfuaaSGXHunisyA3)
 
-Mannering Music Web application was built using coding languages HTML , SASS, Object Oriented PHP, Javascript, Jquery, MySQL and Ajax.
-
-Web Application has a Model View Controller design pattern that allows additional functionality and pages to be added easliy and application can be linked to a wide range of databases through PHP Data Objects (PDO).
+I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 6th Edition by Tom Butler and Kevin Yank and Udemy video tutorial Make a Spotify Clone from Scratch: JavaScript PHP and MySQL by Reece Kenney.
 
 ## Features
 
@@ -36,14 +34,29 @@ Web Application has a Model View Controller design pattern that allows additiona
 
 - Add custom review categories.
 
--
+## Technologies
 
-## Frequently Asked Questions
+- HTML - semantic html
+- CSS -  css transitions
+- SASS - nesting , mixins, variable, partials
+- MariaDB - Database 
+- REST
+- MVC Design
+- MySQL - PDO (PHP Data Objects)
+- PHP Object Oriented Design
+- JavaScript - ES6 & Jquery
+- Amazon S3 - Audio Files , Bucket Policy
 
-## Changelog
 
-- 1.0.0- Apr 19 2015 =
-- Initial release
+## Tools
+
+- [Grunt](https://gruntjs.com/) 
+- [Babel](https://babeljs.io/)
+- [Prettier](https://prettier.io/)
+- [ESLInt](https://eslint.org/)
+- [Whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch)
+
+
 
 ## Credits
 

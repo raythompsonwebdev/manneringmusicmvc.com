@@ -14,14 +14,15 @@
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  /> -->
   <link rel="icon" href="assets/icons/apple-icon.png">
 
-
   <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
       <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
       <script src="assets/js/old-browser-scripts/html5shiv.min.js"></script>
       <script src="assets/js/old-browser-scripts/selectivizr.js"></script>
     <![endif]-->
+
   <title><?= $title ?></title>
+
 </head>
 
 <body>
