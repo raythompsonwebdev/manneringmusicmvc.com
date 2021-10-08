@@ -15,23 +15,23 @@
     box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
 }
 
-@mixin boredrady( $shadow... ) {
-    -webkit-border-radius: $shadow;
-    -moz-border-radius: $shadow;
-    -o-border-radius: $shadow;
-    border-radius: $shadow;
+@mixin mannering-border( $mannering-border... ) {
+    -webkit-border-radius: $mannering-border;
+    -moz-border-radius: $mannering-border;
+    -o-border-radius: $mannering-border;
+    border-radius: $mannering-border;
 }
 
-@mixin transitioner( $transitioner... ) {
--webkit-transition: $transitioner;
--moz-transition: $transitioner;
--o-transition: $transitioner;
-transition: $transitioner;
+@mixin mannering-transition( $mannering-transition... ) {
+-webkit-transition: $mannering-transition;
+-moz-transition: $mannering-transition;
+-o-transition: $mannering-transition;
+transition: $mannering-transition;
 }
 
-@mixin transforming-things( $transforming-things... ) {
-  transform: $transforming-things;
-  -webkit-transform: $transforming-things;
-  -moz-transform: $transforming-things;
-  -o-transform: $transforming-things;
+@mixin mannering-transform( $mannering-transform... ) {
+  transform: $mannering-transform;
+  -webkit-transform: $mannering-transform;
+  -moz-transform: $mannering-transform;
+  -o-transform: $mannering-transform;
 }

@@ -15,9 +15,9 @@
 		"minimist": "^1.2.5"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.15.5",
-		"@babel/node": "^7.15.4",
-		"@babel/preset-env": "^7.15.6",
+		"@babel/core": "^7.15.8",
+		"@babel/node": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-latest": "^6.24.1",
 		"eslint": "^7.32.0",
@@ -33,6 +33,7 @@
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
 		"grunt-sass": "^3.1.0",
+		"node-sass": "^6.0.1",
 		"prettier": "2.4.1",
 		"whatwg-fetch": "^3.6.2"
 	},

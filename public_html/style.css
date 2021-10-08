@@ -118,7 +118,7 @@ pre {
 
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -187,9 +187,9 @@ input {
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type=button],
+input[type=reset],
+input[type=submit] {
   cursor: pointer;
   -webkit-appearance: button;
 }
@@ -199,19 +199,19 @@ input[disabled] {
   cursor: default;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -375,12 +375,12 @@ h1, h2, h3, h4 {
 
 /* Display correctly filled-in fields with a green background */
 /* Submit buttons */
-input[type="text"]:focus {
+input[type=text]:focus {
   background-color: yellow;
 }
 
-input[type="submit"],
-select[type="text"] {
+input[type=submit],
+select[type=text] {
   display: inline;
   margin: 0px;
   border: 2px solid #7c412b;
@@ -396,7 +396,7 @@ select[type="text"] {
   behavior: url(PIE.htc);
 }
 
-input[type="submit"] {
+input[type=submit] {
   margin: 0px;
   padding: 0px;
   border: 2px solid #7c412b;
@@ -415,17 +415,17 @@ input[type="submit"] {
   behavior: url(PIE.htc);
 }
 
-input[type="submit"]:hover,
-select[type="text"]:hover,
-input[type="submit"]:active,
-select[type="text"]:active {
+input[type=submit]:hover,
+select[type=text]:hover,
+input[type=submit]:active,
+select[type=text]:active {
   cursor: pointer;
   background-color: #FFF;
   color: #C90;
 }
 
-input[type="submit"]:active {
-  background-color: #eee;
+input[type=submit]:active {
+  background-color: #FFF;
   -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8) inset;
   -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8) inset;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8) inset;
@@ -449,7 +449,7 @@ input[type="submit"]:active {
     height: 45px;
     width: 45px;
     color: #000;
-    background-color: #fff;
+    background-color: #FFF;
     z-index: 150;
     outline: none;
     border: none;
@@ -459,19 +459,20 @@ input[type="submit"]:active {
     transition: all 0.2s ease-in 0s;
   }
   button#mobile-toggle:hover {
-    background-color: #fff;
+    background-color: #FFF;
     color: #000;
   }
   button#mobile-toggle:active,
-  button#mobile-toggle :focus {
-    color: #fff;
+button#mobile-toggle :focus {
+    color: #FFF;
     background-color: #000;
   }
 
   #wrapper {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0px;
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
@@ -486,22 +487,16 @@ input[type="submit"]:active {
   header {
     height: 75px;
     clear: both;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   header hgroup {
     width: 65%;
     height: 40px;
     padding-left: 1%;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
   header hgroup h1#logo {
@@ -556,10 +551,7 @@ input[type="submit"]:active {
     margin: 0;
     padding: 0;
     height: 100%;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   header .social ul#social li.social-item {
@@ -567,8 +559,6 @@ input[type="submit"]:active {
     height: auto;
     margin-right: 0.2em;
     text-align: center;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
   header .social ul#social li.social-item a {
@@ -603,14 +593,8 @@ input[type="submit"]:active {
     width: 100%;
     height: 100%;
     margin: 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   nav #inner_nav li {
@@ -619,8 +603,6 @@ input[type="submit"]:active {
     margin-left: 0.2em;
     height: 40px;
     text-align: center;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
   nav #inner_nav li a {
@@ -639,7 +621,7 @@ input[type="submit"]:active {
     color: #3A3A3A;
     font-weight: bold;
   }
-  nav #inner_nav li a[href~='\/review\/edit'] {
+  nav #inner_nav li a[href~="/review/edit"] {
     font-size: 65%;
   }
 
@@ -680,12 +662,12 @@ input[type="submit"]:active {
     width: 100%;
     color: #FFF;
   }
-  main#content #main_text form#edit-cat input[type='text'] {
+  main#content #main_text form#edit-cat input[type=text] {
     line-height: 35px;
     display: block;
     width: 100%;
   }
-  main#content #main_text form#edit-cat input[type='submit'] {
+  main#content #main_text form#edit-cat input[type=submit] {
     margin: 1em auto;
     display: block;
     width: 50%;
@@ -700,12 +682,12 @@ input[type="submit"]:active {
     display: block;
     width: 100%;
   }
-  main#content #main_text form#cat-form input[type='text'] {
+  main#content #main_text form#cat-form input[type=text] {
     line-height: 35px;
     display: block;
     width: 100%;
   }
-  main#content #main_text form#cat-form input[type='submit'] {
+  main#content #main_text form#cat-form input[type=submit] {
     margin: 1em auto;
     display: block;
     width: 70%;
@@ -731,11 +713,11 @@ input[type="submit"]:active {
   main#content #main_text blockquote form {
     padding: 1em 0;
   }
-  main#content #main_text blockquote form input[type='submit'] {
+  main#content #main_text blockquote form input[type=submit] {
     width: 30%;
   }
   main#content #main_text div.reviews {
-    min-height: 300px;
+    min-height: 250px;
   }
   main#content #main_text #review_pagination {
     display: block;
@@ -750,21 +732,12 @@ input[type="submit"]:active {
     margin: 0 0 1em 0;
     width: 100%;
     height: auto;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-align-items: center;
     align-items: center;
   }
   main#content #main_text section.album_section h1 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
     align-self: center;
     font-size: 1.4em;
     margin: 0.5em 0;
@@ -781,8 +754,6 @@ input[type="submit"]:active {
     height: auto;
     min-height: auto;
     float: left;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
   main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
@@ -935,7 +906,7 @@ input[type="submit"]:active {
     font-size: 1em;
     margin: 0.5em 0;
   }
-  main#content #main_text #review-edit input[type='checkbox'] {
+  main#content #main_text #review-edit input[type=checkbox] {
     width: 15px;
     display: block;
     height: 35px;
@@ -948,7 +919,7 @@ input[type="submit"]:active {
     width: 80%;
     font-size: 0.9em;
   }
-  main#content #main_text #review-edit input[type='submit'] {
+  main#content #main_text #review-edit input[type=submit] {
     background-color: #ECAC00;
     margin: 0 auto;
     letter-spacing: 0.1em;
@@ -959,7 +930,7 @@ input[type="submit"]:active {
     box-shadow: none;
     display: block;
   }
-  main#content #main_text #review-edit input[type='submit']:hover {
+  main#content #main_text #review-edit input[type=submit]:hover {
     margin: 0 auto;
     color: #3A3A3A;
     font-weight: bold;
@@ -1077,7 +1048,7 @@ input[type="submit"]:active {
     width: 100%;
     margin: 1em 0 0 0;
     display: block;
-    background-color: #fff;
+    background-color: #FFF;
     height: 350px;
   }
   main#content #slider img {
@@ -1089,14 +1060,8 @@ input[type="submit"]:active {
     height: auto;
     display: inline-block;
     width: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
     align-items: flex-start;
     /*results.show page*/
   }
@@ -1121,14 +1086,12 @@ input[type="submit"]:active {
     /* Album artist and name*/
   }
   main#content #results .product-box figure.product-info img {
-    float: left;
-    width: 31%;
-    margin: 0 0.25em 1em 0;
+    width: auto;
+    margin: 1em auto;
     display: block;
   }
   main#content #results .product-box figure.product-info figcaption {
-    width: 66%;
-    display: inline-block;
+    width: 100%;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -1145,13 +1108,14 @@ input[type="submit"]:active {
     width: 100%;
     line-height: 25px;
     margin-bottom: 0.2em;
+    text-align: center;
   }
   main#content #results .product-box figure.product-info:hover img {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    border: 3px solid #ECAC00;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    border: 1px solid #ECAC00;
     cursor: pointer;
   }
   main#content #results .product-box form#to_album_btn {
@@ -1185,7 +1149,7 @@ input[type="submit"]:active {
   main#content #results .product-box-large {
     height: auto;
     min-height: 240px;
-    padding: 0.5em;
+    padding: 0;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
@@ -1196,14 +1160,8 @@ input[type="submit"]:active {
     font-weight: normal;
   }
   main#content #results .product-box-large figure.product-info {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
     align-items: flex-start;
     position: relative;
   }
@@ -1257,9 +1215,9 @@ input[type="submit"]:active {
     float: left;
     line-height: 35px;
     height: 35px;
-    background-color: #fff;
-    color: #2b2b2b;
-    border-right: solid 1px #333;
+    background-color: #FFF;
+    color: #181818;
+    border-right: solid 1px #333333;
   }
   main#content #results .product-box-large figure.product-info figcaption ul.product-box-info ul {
     margin: 0.5em 0;
@@ -1269,23 +1227,12 @@ input[type="submit"]:active {
     height: auto;
   }
   main#content #results .product-box-large figure.product-info:hover img {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    border: 3px solid #ECAC00;
     cursor: pointer;
   }
   main#content #results .product-box-large div.audio_controls {
     height: auto;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
     flex-flow: column;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   main#content #results .product-box-large div.audio_controls h1.trackName {
@@ -1343,7 +1290,7 @@ input[type="submit"]:active {
     height: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     font-family: monospace;
     width: 15%;
     line-height: 50px;
@@ -1485,9 +1432,9 @@ input[type="submit"]:active {
     background-color: #2b2b2b;
     margin: auto;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
@@ -1527,7 +1474,7 @@ input[type="submit"]:active {
   }
   main#content .regformlink a {
     display: inline-block;
-    color: #fff;
+    color: #FFF;
   }
   main#content .regformlink a:hover {
     color: #ECAC00;
@@ -1545,8 +1492,8 @@ input[type="submit"]:active {
     margin-right: 5%;
   }
   main#content #contact-form-a label.error,
-  main#content #contact-form-a label.notice,
-  main#content #contact-form-a label.success {
+main#content #contact-form-a label.notice,
+main#content #contact-form-a label.success {
     padding: 0.8em;
     margin-bottom: 1em;
     border: 2px solid #ddd;
@@ -1562,7 +1509,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #contact-form-a .notice {
-    background: #fff6bf;
+    background: #FFF;
     color: #514721;
     border-color: #ffd324;
     width: 100%;
@@ -1577,8 +1524,8 @@ input[type="submit"]:active {
     display: block;
     line-height: 35px;
   }
-  main#content #contact-form-a input[type='text'],
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=text],
+main#content #contact-form-a input[type=email] {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
@@ -1648,17 +1595,9 @@ input[type="submit"]:active {
     padding: 0;
     margin: 0 auto;
     height: auto;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   main#content section#sidebar_gallery h1 {
@@ -1673,8 +1612,6 @@ input[type="submit"]:active {
     position: relative;
     overflow: hidden;
     border: 3px solid #3B3B3F;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     width: 19.3%;
     margin: 0.25em;
@@ -1757,7 +1694,7 @@ input[type="submit"]:active {
   }
   main#content .show_error {
     display: block;
-    background: #fff;
+    background: #FFF;
     color: #000;
     padding: 1em;
     margin: auto 1em;
@@ -1809,7 +1746,7 @@ input[type="submit"]:active {
     text-indent: 0.25em;
     font-family: "Lato", sans-serif;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     border: 1px solid #666666;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1983,7 +1920,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   main#content {
@@ -2080,7 +2017,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 31%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -2136,7 +2073,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -2209,9 +2146,9 @@ input[type="submit"]:active {
   main#content #registerform {
     width: 45%;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     font-size: 0.9em;
   }
   main#content #registerform label {
@@ -2232,16 +2169,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     text-decoration: none;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.9em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.9em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.9em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.9em;
   }
   main#content #contact-form-a #contact_btn {
@@ -2303,7 +2240,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 1em;
   }
   main#content form#searchForm select {
@@ -2384,7 +2321,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
 
   main#content {
@@ -2450,7 +2387,7 @@ input[type="submit"]:active {
     width: 100%;
     font-size: 0.9em;
   }
-  main#content #main_text #review-edit input[type='checkbox'] {
+  main#content #main_text #review-edit input[type=checkbox] {
     margin-right: 0.5em;
   }
   main#content #main_text #review-edit label {
@@ -2458,11 +2395,11 @@ input[type="submit"]:active {
     height: 35px;
     font-size: 0.9em;
   }
-  main#content #main_text #review-edit input[type='submit'] {
+  main#content #main_text #review-edit input[type=submit] {
     width: 50%;
     font-size: 1em;
   }
-  main#content #main_text #review-edit input[type='submit']:hover {
+  main#content #main_text #review-edit input[type=submit]:hover {
     margin: 0 auto;
   }
   main#content #summary {
@@ -2511,7 +2448,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 31%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -2561,7 +2498,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -2630,9 +2567,9 @@ input[type="submit"]:active {
   main#content #registerform {
     width: 50%;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     font-size: 0.9em;
   }
   main#content #registerform label {
@@ -2662,16 +2599,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     text-decoration: none;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.9em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.9em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.9em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.9em;
   }
   main#content #contact-form-a #contact_btn {
@@ -2733,7 +2670,7 @@ input[type="submit"]:active {
   main#content form#searchForm ::placeholder {
     color: #181818;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 1em;
   }
   main#content form#searchForm select {
@@ -2915,10 +2852,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 30%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 68%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -2974,7 +2908,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -3062,16 +2996,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.8em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.8em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.8em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.9em;
   }
   main#content #contact-form-a #contact_btn {
@@ -3135,7 +3069,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 1em;
   }
   main#content form#searchForm select {
@@ -3212,7 +3146,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -3314,7 +3248,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 30%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -3385,7 +3319,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -3474,16 +3408,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     height: 35px;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     height: 35px;
   }
   main#content #contact-form-a textarea {
     padding: 0.2em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     width: 98%;
   }
   main#content #contact-form-a #contact_btn {
@@ -3540,7 +3474,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.9em;
   }
   main#content form#searchForm select {
@@ -3616,12 +3550,12 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
   }
-  nav #inner_nav li a[href~='\/review\/edit'] {
+  nav #inner_nav li a[href~="/review/edit"] {
     font-size: 55%;
   }
 
@@ -3715,10 +3649,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 32%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 66%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -3783,7 +3714,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -3871,16 +3802,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.85em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.85em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.85em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.85em;
   }
   main#content #contact-form-a #contact_btn {
@@ -3940,7 +3871,7 @@ input[type="submit"]:active {
   main#content form#searchForm ::placeholder {
     color: #181818;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.9em;
   }
   main#content form#searchForm select {
@@ -4114,10 +4045,7 @@ input[type="submit"]:active {
     width: 48%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 70%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -4178,7 +4106,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
     font-size: 0.8em;
   }
@@ -4253,8 +4181,8 @@ input[type="submit"]:active {
     padding: 3%;
   }
   main#content #contact-form-a .error,
-  main#content #contact-form-a .notice,
-  main#content #contact-form-a .success {
+main#content #contact-form-a .notice,
+main#content #contact-form-a .success {
     padding: 0.6em;
   }
   main#content #contact-form-a .error {
@@ -4272,16 +4200,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     text-decoration: none;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.9em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.9em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.9em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.9em;
   }
   main#content #contact-form-a #contact_btn {
@@ -4338,7 +4266,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.9em;
     width: 25%;
   }
@@ -4510,10 +4438,7 @@ input[type="submit"]:active {
     /*results.show page*/
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 69%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -4568,7 +4493,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
     font-size: 1em;
   }
@@ -4657,16 +4582,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.75em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.75em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.75em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.75em;
   }
   main#content #contact-form-a #contact_btn {
@@ -4724,7 +4649,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 1em;
   }
   main#content form#searchForm select {
@@ -4793,7 +4718,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -4892,7 +4817,7 @@ input[type="submit"]:active {
     width: 48%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -4954,7 +4879,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -5022,9 +4947,9 @@ input[type="submit"]:active {
   main#content #registerform {
     width: 60%;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     font-size: 0.8em;
   }
   main#content #registerform label {
@@ -5056,16 +4981,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     text-decoration: none;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 0.9em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.9em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.9em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     height: 40px;
   }
   main#content #contact-form-a #contact_btn {
@@ -5120,7 +5045,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 1em;
   }
   main#content form#searchForm select {
@@ -5194,7 +5119,7 @@ input[type="submit"]:active {
     width: 98%;
   }
   nav #inner_nav li a {
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -5262,17 +5187,17 @@ input[type="submit"]:active {
   main#content #main_text #review-edit textarea {
     font-size: 0.8em;
   }
-  main#content #main_text #review-edit input[type='checkbox'] {
+  main#content #main_text #review-edit input[type=checkbox] {
     margin-right: 0.25em;
   }
   main#content #main_text #review-edit label {
     font-size: 0.75em;
   }
-  main#content #main_text #review-edit input[type='submit'] {
+  main#content #main_text #review-edit input[type=submit] {
     width: 40%;
     font-size: 0.9em;
   }
-  main#content #main_text #review-edit input[type='submit']:hover {
+  main#content #main_text #review-edit input[type=submit]:hover {
     margin: 0 auto;
   }
   main#content #summary {
@@ -5324,7 +5249,7 @@ input[type="submit"]:active {
     width: 48%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -5380,7 +5305,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
     font-size: 0.9em;
   }
@@ -5449,9 +5374,9 @@ input[type="submit"]:active {
   main#content #registerform {
     width: 80%;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     font-size: 0.8em;
   }
   main#content #registerform label {
@@ -5486,16 +5411,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 1em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 1em;
   }
   main#content #contact-form-a textarea {
     font-size: 1em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 1em;
   }
   main#content #contact-form-a #contact_btn {
@@ -5564,7 +5489,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.85em;
     width: 100%;
     margin-bottom: 1em;
@@ -5642,7 +5567,7 @@ input[type="submit"]:active {
   }
 
   button#mobile-toggle,
-  nav.toggled ul {
+nav.toggled ul {
     display: block;
   }
 
@@ -5673,7 +5598,7 @@ input[type="submit"]:active {
   }
 
   button#mobile-toggle:hover,
-  button#mobile-toggle:focus {
+button#mobile-toggle:focus {
     text-decoration: underline;
     cursor: pointer;
   }
@@ -5689,14 +5614,10 @@ input[type="submit"]:active {
     z-index: 98;
     margin: 0;
     height: 380px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   nav #mobile_inner_nav li {
@@ -5726,7 +5647,7 @@ input[type="submit"]:active {
     color: #3A3A3A;
     font-weight: bold;
   }
-  nav #mobile_inner_nav li a[href~='\/review\/edit'] {
+  nav #mobile_inner_nav li a[href~="/review/edit"] {
     width: 100%;
   }
   nav #inner_nav {
@@ -5828,7 +5749,7 @@ input[type="submit"]:active {
     width: 48%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -5883,7 +5804,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
     font-size: 0.85em;
   }
@@ -5972,16 +5893,16 @@ input[type="submit"]:active {
     text-decoration: none;
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 1em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 1em;
   }
   main#content #contact-form-a textarea {
     font-size: 1em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 1em;
   }
   main#content #contact-form-a #contact_btn {
@@ -6045,7 +5966,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.85em;
   }
   main#content form#searchForm select {
@@ -6125,7 +6046,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.65em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -6159,11 +6080,11 @@ input[type="submit"]:active {
   main#content #main_text #review-edit label {
     font-size: 0.8em;
   }
-  main#content #main_text #review-edit input[type='submit'] {
+  main#content #main_text #review-edit input[type=submit] {
     width: 40%;
     font-size: 0.8em;
   }
-  main#content #main_text #review-edit input[type='submit']:hover {
+  main#content #main_text #review-edit input[type=submit]:hover {
     margin: 0 auto;
   }
   main#content #main_text section.album_section:last-of-type {
@@ -6269,10 +6190,7 @@ input[type="submit"]:active {
     width: 80%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 69%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -6332,7 +6250,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -6476,7 +6394,7 @@ input[type="submit"]:active {
   main#content form#searchForm ::placeholder {
     color: #181818;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.85em;
   }
   main#content form#searchForm select {
@@ -6550,7 +6468,7 @@ input[type="submit"]:active {
   }
 
   button#mobile-toggle,
-  nav.toggled ul {
+nav.toggled ul {
     display: block;
   }
 
@@ -6566,12 +6484,12 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.65em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
   }
-  nav #inner_nav li a[href~='/review/edit'] {
+  nav #inner_nav li a[href~="/review/edit"] {
     font-size: 50%;
     line-height: 20px;
   }
@@ -6670,10 +6588,7 @@ input[type="submit"]:active {
     width: 75%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 28%;
-  }
-  main#content #results .product-box figure.product-info figcaption {
-    width: 68%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -6736,7 +6651,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
     font-size: 0.8em;
   }
@@ -6810,9 +6725,9 @@ input[type="submit"]:active {
   main#content #registerform {
     width: 90%;
   }
-  main#content #registerform input[type='text'],
-  main#content #registerform input[type='email'],
-  main#content #registerform input[type='password'] {
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
     font-size: 0.8em;
   }
   main#content #registerform label {
@@ -6840,16 +6755,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 1em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 1em;
   }
   main#content #contact-form-a textarea {
     font-size: 1em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 1em;
   }
   main#content #contact-form-a #contact_btn {
@@ -6912,7 +6827,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.85em;
   }
   main#content form#searchForm select {
@@ -6990,7 +6905,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -7085,7 +7000,7 @@ input[type="submit"]:active {
     width: 80%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 27%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -7140,7 +7055,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -7222,16 +7137,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 1em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 1em;
   }
   main#content #contact-form-a textarea {
     font-size: 1em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 1em;
   }
   main#content #contact-form-a #contact_btn {
@@ -7302,7 +7217,7 @@ input[type="submit"]:active {
     color: #181818;
     text-indent: 0.25em;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.8em;
   }
   main#content form#searchForm select {
@@ -7384,7 +7299,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -7482,7 +7397,7 @@ input[type="submit"]:active {
     width: 80%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 27%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -7544,7 +7459,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -7678,7 +7593,7 @@ input[type="submit"]:active {
   main#content form#searchForm ::placeholder {
     color: #181818;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.8em;
   }
   main#content form#searchForm select {
@@ -7756,7 +7671,7 @@ input[type="submit"]:active {
     height: 40px;
   }
   nav #inner_nav li a {
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
   nav #inner_nav li a:hover {
     font-weight: bold;
@@ -7857,7 +7772,7 @@ input[type="submit"]:active {
     width: 85%;
   }
   main#content #results .product-box figure.product-info img {
-    width: 27%;
+    width: auto;
   }
   main#content #results .product-box figure.product-info figcaption ul.product-box-info {
     width: 100%;
@@ -7919,7 +7834,7 @@ input[type="submit"]:active {
     width: 100%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
-  main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
+main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
@@ -8003,16 +7918,16 @@ input[type="submit"]:active {
   main#content #contact-form-a a:hover {
     line-height: 1.5em;
   }
-  main#content #contact-form-a input[type='text'] {
+  main#content #contact-form-a input[type=text] {
     font-size: 1em;
   }
-  main#content #contact-form-a input[type='email'] {
+  main#content #contact-form-a input[type=email] {
     font-size: 0.8em;
   }
   main#content #contact-form-a textarea {
     font-size: 0.8em;
   }
-  main#content #contact-form-a select [type='text'] {
+  main#content #contact-form-a select [type=text] {
     font-size: 0.8em;
   }
   main#content #contact-form-a #contact_btn {
@@ -8076,7 +7991,7 @@ input[type="submit"]:active {
   main#content form#searchForm ::placeholder {
     color: #181818;
   }
-  main#content form#searchForm input[type='text'] {
+  main#content form#searchForm input[type=text] {
     font-size: 0.8em;
   }
   main#content form#searchForm select {

@@ -12,24 +12,24 @@
 .box-set {  *zoom: 1;}
 .box-set { overflow: auto;}
 
-.group:before, .group:after {  
-	content: "";  
+.group:before, .group:after {
+	content: "";
 	display: table;
 }
-.group:after {  
+.group:after {
 	clear: both;
 }
 .group {  *zoom: 1;}
 
 
-.clearfix { 
+.clearfix {
 	clear: both;
 }
 
 .browsehappy{
     font-size:1em;
-    color:$color7;
-    background-color:$color6;
+    color:$bg-black;
+    background-color:$dark-grey;;
     a{display:inline-block;}
 }
 
@@ -42,60 +42,60 @@ body{
     letter-spacing:0.1em;
     font-weight:100;
     behavior:url(PIE.htc);
-    
+
 }
 
-a{  
-	text-decoration: none !important; 
-    @include transitioner(all 0.2s ease-in);
+a{
+	text-decoration: none !important;
+    @include mannering-transition(all 0.2s ease-in);
     font-family: ($FontListText);
     width:auto;
     &:link {
-        color: $color1;
+        color: $orange-color;
     }
     &:visited {
-        color: $color1;
+        color: $orange-color;
     }
     &:focus {
-        color: $color1;
+        color: $orange-color;
     }
     &:hover{
         cursor:pointer;
     }
     &:active {
-        color: $color1;
+        color: $orange-color;
     }
 }
 
 
 ul{
-	margin:0; 
-	padding:0; 
+	margin:0;
+	padding:0;
     list-style:none;
-    
+
 }
 
-li{ 
-    
+li{
+
     behavior:url(PIE.htc);
     font-family: ($FontListText);
 }
 
 img{
-    width:100%; 
-    max-width:100%; 
-    height:auto; 
+    width:100%;
+    max-width:100%;
+    height:auto;
     border:none;
 }
 
 p{
-    width:100%; 
-    color:$color2; 
+    width:100%;
+    color:$white-color;
     font-weight:normal;
     font-family: ($FontListText);
 }
 
-label{ 
+label{
 
     display:block;
     width:100%;
@@ -103,14 +103,14 @@ label{
 }
 
 hr{
-    width:60%; 
-    clear: both; 
-    display:block; 
-    margin:1% auto; 
-    color:$color3; 
-    outline:none; 
-    height:1px; 
-    border:none; 
+    width:60%;
+    clear: both;
+    display:block;
+    margin:1% auto;
+    color:$stone-grey;
+    outline:none;
+    height:1px;
+    border:none;
 }
 
 h1,h2,h3,h4{
@@ -121,52 +121,52 @@ h1,h2,h3,h4{
 }
 
 /* Place a border around focused fields */
-#search_form *:focus {border: 2px solid #7c412b; outline: none;}
+#search_form *:focus {border: 2px solid $button-border; outline: none;}
 /* Display correctly filled-in fields with a green background */
 
 /* Submit buttons */
-input[type="text"]:focus{  background-color:yellow;}
+input[type="text"]:focus{  background-color:$button-hover;}
 input[type="submit"],
-select[type="text"] { 
-    display: inline;  
-    margin: 0px; 
-    border: 2px solid #7c412b; 
-    @include boredrady(5px);  
-    color: $color2; 
-    background: $color1; 
-    font-weight: bold; 
-    -webkit-appearance: none; 
+select[type="text"] {
+    display: inline;
+    margin: 0px;
+    border: 2px solid $button-border;
+    @include mannering-border(5px);
+    color: $white-color;
+    background: $orange-color;
+    font-weight: bold;
+    -webkit-appearance: none;
     line-height:1.5em;
     behavior:url(PIE.htc);
 }
-input[type="submit"]{  
-    margin: 0px;  
-    padding: 0px;  
-    border: 2px solid #7c412b; 
-    @include boredrady(5px);  
-    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
-    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .8); 
-    color: $color2; 
-    background: $color1; 
-    font-weight: bold;  
-    -webkit-appearance: none; 
-    height:35px; 
+input[type="submit"]{
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid $button-border;
+    @include mannering-border(5px);
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    color: $white-color;
+    background: $orange-color;
+    font-weight: bold;
+    -webkit-appearance: none;
+    height:35px;
     behavior:url(PIE.htc);
 }
-input[type="submit"]:hover, 
-select[type="text"]:hover,  
-input[type="submit"]:active,  
+input[type="submit"]:hover,
+select[type="text"]:hover,
+input[type="submit"]:active,
 select[type="text"]:active {
-    cursor: pointer;  
-    background-color:$color2; 
+    cursor: pointer;
+    background-color:$white-color;
     color: #C90  ;
 }
 
-input[type="submit"]:active { 
-    background-color: #eee; 
-    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset; 
-    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;   
+input[type="submit"]:active {
+    background-color: $white-color;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
     behavior:url(PIE.htc);
 }
