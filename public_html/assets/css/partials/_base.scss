@@ -7,6 +7,10 @@
 
 *, html{  padding:0; outline:none}
 
+html {
+  @include box-sizing($type: border-box);
+}
+
 .box-set:before, .box-set:after {  content: "";  display: table;}
 .box-set:after {  clear: both;}
 .box-set {  *zoom: 1;}
@@ -47,38 +51,38 @@ body{
 
 a{
 	text-decoration: none !important;
-    @include mannering-transition(all 0.2s ease-in);
-    font-family: ($FontListText);
-    width:auto;
-    &:link {
-        color: $orange-color;
-    }
-    &:visited {
-        color: $orange-color;
-    }
-    &:focus {
-        color: $orange-color;
-    }
-    &:hover{
-        cursor:pointer;
-    }
-    &:active {
-        color: $orange-color;
-    }
+  @include mannering-transition(all 0.2s ease-in);
+  font-family: ($FontListText);
+  width:auto;
+  &:link {
+      color: $orange-color;
+  }
+  &:visited {
+      color: $orange-color;
+  }
+  &:focus {
+      color: $orange-color;
+  }
+  &:hover{
+      cursor:pointer;
+  }
+  &:active {
+      color: $orange-color;
+  }
 }
 
 
 ul{
 	margin:0;
 	padding:0;
-    list-style:none;
+  list-style:none;
 
 }
 
 li{
 
-    behavior:url(PIE.htc);
-    font-family: ($FontListText);
+  //behavior:url(PIE.htc);
+  font-family: ($FontListText);
 }
 
 img{
@@ -89,10 +93,10 @@ img{
 }
 
 p{
-    width:100%;
-    color:$white-color;
-    font-weight:normal;
-    font-family: ($FontListText);
+  width:100%;
+  color:$white-color;
+  font-weight:normal;
+  font-family: ($FontListText);
 }
 
 label{

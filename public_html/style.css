@@ -241,6 +241,12 @@ table {
   outline: none;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .box-set:before, .box-set:after {
   content: "";
   display: table;
@@ -325,7 +331,6 @@ ul {
 }
 
 li {
-  behavior: url(PIE.htc);
   font-family: "Lato", sans-serif;
 }
 
@@ -434,12 +439,6 @@ input[type=submit]:active {
 
 /*1920*/
 @media only screen and (max-width: 1920px) {
-  html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
   .fancybox-overlay .fancybox-skin {
     box-shadow: 0 0 50px #3A3A3A;
   }
@@ -493,13 +492,13 @@ button#mobile-toggle :focus {
     flex-flow: row;
     justify-content: flex-start;
   }
-  header hgroup {
+  header span#site-logo {
     width: 65%;
     height: 40px;
     padding-left: 1%;
     flex: 1 0 auto;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     margin: 0;
     font-size: 2.1em;
     width: 100%;
@@ -511,20 +510,20 @@ button#mobile-toggle :focus {
     float: left;
     color: #ECAC00;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
     margin: 0;
     color: #FFF;
     text-align: left;
     display: inline-block;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
     color: #666666;
     display: inline-block;
     margin: 0 0.05em;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     float: none;
     display: block;
     width: 100%;
@@ -724,10 +723,10 @@ button#mobile-toggle :focus {
     clear: both;
     line-height: 45px;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     padding: 0;
     margin: 0 0 1em 0;
     width: 100%;
@@ -737,7 +736,7 @@ button#mobile-toggle :focus {
     justify-content: flex-start;
     align-items: center;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     align-self: center;
     font-size: 1.4em;
     margin: 0.5em 0;
@@ -747,16 +746,8 @@ button#mobile-toggle :focus {
     text-align: center;
     background-color: #181818;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 18%;
-    margin: 0.5em;
-    display: block;
-    height: auto;
-    min-height: auto;
-    float: left;
-    flex: 1 0 auto;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
     margin: 0.25em;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -766,11 +757,13 @@ button#mobile-toggle :focus {
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    width: 100%;
     padding: 0;
     text-align: center;
+    height: auto;
+    min-height: auto;
+    flex: 1 0 auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     border: 2px solid #3A3A3A;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -780,7 +773,7 @@ button#mobile-toggle :focus {
     margin: 3% auto;
     cursor: pointer;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 form#frontform {
+  main#content #main_text div.album_section .grid_1_of_5 form#frontform {
     position: relative;
     z-index: 0;
     display: block;
@@ -792,7 +785,7 @@ button#mobile-toggle :focus {
     width: 100%;
     margin-top: 0.3em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     width: 100%;
     padding: 8px 10px;
     background-color: #333333;
@@ -807,14 +800,14 @@ button#mobile-toggle :focus {
     -o-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     background-color: #EBAB00;
     text-decoration: none !important;
     color: #FFF;
     width: 100%;
     font-weight: bold;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     line-height: 2.4em;
     margin: 0;
     background-color: #2b2b2b;
@@ -825,7 +818,7 @@ button#mobile-toggle :focus {
     font-weight: normal;
     letter-spacing: 0.1em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     background-color: #666666;
     line-height: 1.7em;
     margin: 0;
@@ -835,7 +828,7 @@ button#mobile-toggle :focus {
     position: relative;
     top: 0;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     z-index: 1;
     position: relative;
     line-height: 1.7em;
@@ -849,17 +842,17 @@ button#mobile-toggle :focus {
     position: relative;
     top: 0;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5:hover {
+  main#content #main_text div.album_section .grid_1_of_5:hover {
     cursor: pointer;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5:hover img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5:hover img.images_1_of_5 {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     border: 2px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5:hover form#frontform {
+  main#content #main_text div.album_section .grid_1_of_5:hover form#frontform {
     top: 0;
   }
   main#content #main_text ul.categories {
@@ -1578,7 +1571,7 @@ main#content #contact-form-a input[type=email] {
     background-color: #3A3A3A;
     font-weight: bold;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 1em;
     line-height: 1.5em;
     margin: 2% 0;
@@ -1587,7 +1580,7 @@ main#content #contact-form-a input[type=email] {
     float: left;
     display: block;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 35px;
   }
   main#content section#sidebar_gallery {
@@ -1663,7 +1656,7 @@ main#content #contact-form-a input[type=email] {
     font-size: 0.95em;
     font-weight: normal;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     width: 100%;
     font-size: 1em;
     margin: 0.5em 0;
@@ -1885,19 +1878,19 @@ main#content #contact-form-a input[type=email] {
     width: 90%;
   }
 
-  header hgroup {
+  header span#site-logo {
     width: 65%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -1932,43 +1925,43 @@ main#content #contact-form-a input[type=email] {
   main#content #main_text {
     height: auto;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.3em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 form#frontform {
+  main#content #main_text div.album_section .grid_1_of_5 form#frontform {
     margin-top: 0.3em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.85em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -2184,10 +2177,10 @@ main#content #registerform input[type=password] {
   main#content #contact-form-a #contact_btn {
     font-size: 1em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 35px;
   }
   main#content section#sidebar_gallery h1 {
@@ -2208,7 +2201,7 @@ main#content #registerform input[type=password] {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -2286,19 +2279,19 @@ main#content #registerform input[type=password] {
     box-shadow: 0 0 50px #222;
   }
 
-  header hgroup {
+  header span#site-logo {
     width: 65%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -2332,40 +2325,40 @@ main#content #registerform input[type=password] {
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.2em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.85em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #main_text ul.categories {
@@ -2614,10 +2607,10 @@ main#content #registerform input[type=password] {
   main#content #contact-form-a #contact_btn {
     font-size: 1em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -2639,7 +2632,7 @@ main#content #registerform input[type=password] {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -2712,19 +2705,19 @@ main#content #registerform input[type=password] {
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 65%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -2770,40 +2763,40 @@ main#content #registerform input[type=password] {
   main#content #main_text ul.categories li a {
     line-height: 40px;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.2em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.8em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -3011,10 +3004,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     font-size: 1em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -3036,7 +3029,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -3111,19 +3104,19 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 55%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -3160,46 +3153,44 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.1em;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 31%;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.8em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.6em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.85em;
   }
   main#content #summary {
@@ -3423,10 +3414,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     width: 50%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery {
@@ -3444,7 +3435,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figure.video-item figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figure.video-item figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -3515,19 +3506,19 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 55%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -3567,40 +3558,40 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.1em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.9em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.85em;
   }
   main#content #summary {
@@ -3817,11 +3808,11 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     font-size: 0.9em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
     width: 49%;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -3845,7 +3836,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -3913,19 +3904,19 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 55%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 2em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -3957,43 +3948,40 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.1em;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 30%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.9em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.85em;
   }
   main#content #summary {
@@ -4218,10 +4206,10 @@ main#content #contact-form-a .success {
   main#content #contact-form-a #contact_btn:hover {
     width: 60%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.9em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -4239,7 +4227,7 @@ main#content #contact-form-a .success {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -4313,20 +4301,20 @@ main#content #contact-form-a .success {
     height: 65px;
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 60%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     height: 35px;
     font-size: 1.8em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -4356,40 +4344,40 @@ main#content #contact-form-a .success {
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.1em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.9em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -4597,10 +4585,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     width: 50%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.8em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -4622,7 +4610,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -4692,13 +4680,13 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     height: 65px;
     clear: both;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.7em;
   }
   header .social {
@@ -4732,40 +4720,40 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     line-height: 40px;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.6em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.75em;
   }
   main#content #summary {
@@ -4996,10 +4984,10 @@ main#content #registerform input[type=password] {
   main#content #contact-form-a #contact_btn {
     width: 50%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.8em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -5017,7 +5005,7 @@ main#content #registerform input[type=password] {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -5090,16 +5078,16 @@ main#content #registerform input[type=password] {
   header {
     clear: both;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.75em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.65em;
   }
   header .social {
@@ -5132,40 +5120,40 @@ main#content #registerform input[type=password] {
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     line-height: 40px;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 {
     margin: 0.5%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.85em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.65em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.75em;
   }
   main#content #main_text blockquote {
@@ -5430,14 +5418,14 @@ main#content #registerform input[type=password] {
   main#content #contact-form-a #contact_btn:hover {
     width: 40%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.8em;
     width: 90%;
     margin: 5% auto;
     display: block;
     float: none;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -5458,7 +5446,7 @@ main#content #registerform input[type=password] {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -5541,16 +5529,16 @@ main#content #registerform input[type=password] {
   header {
     clear: both;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.7em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.65em;
   }
   header .social {
@@ -5661,43 +5649,40 @@ button#mobile-toggle:focus {
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     line-height: 40px;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 45%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.85em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.8em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.8em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.9em;
   }
   main#content #summary {
@@ -5912,10 +5897,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn:hover {
     width: 40%;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.8em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -5936,7 +5921,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -6011,19 +5996,19 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 62%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.7em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.65em;
   }
   header .social {
@@ -6087,10 +6072,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text #review-edit input[type=submit]:hover {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -6102,37 +6087,34 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     -ms-flex-pack: center;
     justify-content: center;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     line-height: 40px;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 50%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -6340,10 +6322,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     font-size: 1em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.75em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -6364,7 +6346,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -6439,19 +6421,19 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup {
+  header span#site-logo {
     width: 64%;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.5em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.65em;
   }
   header .social {
@@ -6504,43 +6486,40 @@ nav.toggled ul {
   main#content #main_text h1 {
     font-size: 1em;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     line-height: 40px;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 55%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.8em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -6773,10 +6752,10 @@ main#content #registerform input[type=password] {
   main#content #contact-form-a #contact_btn:hover {
     height: 35px;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.75em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery h1 {
@@ -6797,7 +6776,7 @@ main#content #registerform input[type=password] {
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -6872,16 +6851,16 @@ main#content #registerform input[type=password] {
   header {
     clear: both;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.5em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.65em;
   }
   header .social {
@@ -6919,40 +6898,37 @@ main#content #registerform input[type=password] {
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 60%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -7155,10 +7131,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn:hover {
     height: 35px;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.75em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 45px;
   }
   main#content section#sidebar_gallery {
@@ -7187,7 +7163,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -7262,16 +7238,16 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.5em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.6em;
   }
   header .social {
@@ -7313,43 +7289,40 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     height: auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1.05em;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 60%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -7543,10 +7516,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #contact-form-a #contact_btn {
     font-size: 1em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.75em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 45px;
   }
   main#content section#sidebar_gallery h1 {
@@ -7564,7 +7537,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }
@@ -7638,16 +7611,16 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   header {
     clear: both;
   }
-  header hgroup h1#logo {
+  header span#site-logo p#logo {
     font-size: 1.4em;
   }
-  header hgroup h1#logo span {
+  header span#site-logo p#logo span {
     height: 100%;
   }
-  header hgroup h1#logo span:last-of-type {
+  header span#site-logo p#logo span:last-of-type {
     height: 100%;
   }
-  header hgroup h2 {
+  header span#site-logo p.site-description {
     font-size: 0.55em;
   }
   header .social {
@@ -7685,43 +7658,40 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #main_text {
     margin: 0;
   }
-  main#content #main_text section.album_section:last-of-type {
+  main#content #main_text div.album_section:last-of-type {
     margin-bottom: 0%;
   }
-  main#content #main_text section.album_section {
+  main#content #main_text div.album_section {
     margin: 0 auto;
   }
-  main#content #main_text section.album_section h1 {
+  main#content #main_text div.album_section h1 {
     font-size: 1em;
   }
-  main#content #main_text section.album_section .flex-wrapper {
+  main#content #main_text div.album_section .grid_1_of_5 {
     width: 65%;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img {
+  main#content #main_text div.album_section .grid_1_of_5 img {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img:hover {
+  main#content #main_text div.album_section .grid_1_of_5 img:hover {
     border: 3px solid #ECAC00;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_text div.album_section .grid_1_of_5 img.images_1_of_5 {
     width: auto;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform {
     font-size: 0.75em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 input.frontform:hover {
+  main#content #main_text div.album_section .grid_1_of_5 input.frontform:hover {
     text-decoration: none !important;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.7em;
   }
-  main#content #main_text section.album_section .flex-wrapper .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_text div.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
   main#content #summary {
@@ -7938,10 +7908,10 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 50%;
     font-size: 0.8em;
   }
-  main#content ul#contact-details {
+  main#content address#contact-details {
     font-size: 0.75em;
   }
-  main#content ul#contact-details li {
+  main#content address#contact-details p {
     line-height: 45px;
   }
   main#content section#sidebar_gallery h1 {
@@ -7962,7 +7932,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
     font-size: 0.95em;
   }
-  main#content section#sidebar_gallery figcaption.overlay h1.artist_name {
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
     font-size: 1em;
     line-height: 40px;
   }

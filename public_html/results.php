@@ -45,10 +45,10 @@ if (!isset($_GET['submit'])) {
 
       </div>
 
-<?php
-    endforeach;
-  } else {
-    echo '<p>Nothing to see</p>';
-  }
-}
-?>
+	<?php
+			endforeach;
+		} else {
+			echo '<p>Nothing to see</p>';
+		}
+	}
+	?>

@@ -1,6 +1,6 @@
-<section id="main_text" class="group" role="main">
-<h2>Login Successful</h2>
+<section id="main_text" class="group">
+    <h1>Login Successful</h1>
 
-<p>You are now logged in.</p>
+    <p>You are now logged in.</p>
 
 </section>

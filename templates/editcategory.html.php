@@ -1,4 +1,4 @@
-<section id="main_text" class="group" role="main">
+<section id="main_text" class="group">
   <form action="" method="post">
     <input type="hidden" name="category[id]" value="<?= $category->id ?? '' ?>">
     <label for="categoryname">Enter category name:</label>

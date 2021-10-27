@@ -5,9 +5,6 @@
 
 /*1920*/
 @media only screen and (max-width: 1920px) {
-	html {
-		@include box-sizing($type: border-box);
-	}
 
 	.fancybox-overlay .fancybox-skin {
 		box-shadow: 0 0 50px $stone-grey;
@@ -42,6 +39,7 @@
 		width: 90%;
 		height: auto;
 	}
+
 	#copyr {
 		margin: auto;
 		color: $white-color;
@@ -59,13 +57,14 @@
 		flex-flow: row;
 		justify-content: flex-start;
 
-		hgroup {
+
+		span#site-logo {
 			width: 65%;
 			height: 40px;
 			padding-left: 1%;
 			flex: 1 0 auto;
 
-			h1#logo {
+			p#logo {
 				margin: 0;
 				font-size: 2.1em;
 				width: 100%;
@@ -93,7 +92,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				float: none;
 				display: block;
 				width: 100%;
@@ -308,11 +307,11 @@
 				line-height: 45px;
 			}
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				padding: 0;
 				margin: 0 0 1em 0;
 				width: 100%;
@@ -333,118 +332,114 @@
 					background-color: $bg-black;
 				}
 
-				.flex-wrapper {
-					width: 18%;
-					margin: 0.5em;
-					display: block;
-					height: auto;
-					min-height: auto;
-					float: left;
-					flex: 1 0 auto;
 
-					.grid_1_of_5 {
-						margin: 0.25em;
-						@include mannering-transition(all 0.5s ease);
-						@include mannering-border(5px);
-						width: 100%;
-						padding: 0;
-						text-align: center;
 
-						img.images_1_of_5 {
-							border: 2px solid $stone-grey;
-							@include mannering-transition(all 0.5s ease);
-							width: auto;
-							margin: 3% auto;
-							cursor: pointer;
-						}
+        .grid_1_of_5 {
+          width: 18%;
+          margin: 0.25em;
+          @include mannering-transition(all 0.5s ease);
+          @include mannering-border(5px);
+          padding: 0;
+          text-align: center;
+          height: auto;
+          min-height: auto;
+          flex: 1 0 auto;
 
-						form#frontform {
-							position: relative;
-							z-index: 0;
-							display: block;
-							top: -40px;
-							@include mannering-transition(all 0.5s ease);
-							width: 100%;
-							margin-top: 0.3em;
-						}
+          img.images_1_of_5 {
+            border: 2px solid $stone-grey;
+            @include mannering-transition(all 0.5s ease);
+            width: auto;
+            margin: 3% auto;
+            cursor: pointer;
+          }
 
-						input.frontform {
-							width: 100%;
-							padding: 8px 10px;
-							background-color: $dark-grey;;
-							border: none;
-							color: $white-color;
-							text-align: center;
-							cursor: pointer;
-							text-decoration: none;
-							font-size: 0.9em;
-							@include mannering-border(0px 0px 3px 3px);
+          form#frontform {
+            position: relative;
+            z-index: 0;
+            display: block;
+            top: -40px;
+            @include mannering-transition(all 0.5s ease);
+            width: 100%;
+            margin-top: 0.3em;
+          }
 
-							&:hover {
-								background-color: $orange-color1;
-								text-decoration: none !important;
-								color: $white-color;
-								width: 100%;
-								font-weight: bold;
-							}
-						}
+          input.frontform {
+            width: 100%;
+            padding: 8px 10px;
+            background-color: $dark-grey;;
+            border: none;
+            color: $white-color;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9em;
+            @include mannering-border(0px 0px 3px 3px);
 
-						figcaption.cap_1_of_5 {
-							h3 {
-								line-height: 2.4em;
-								margin: 0;
-								background-color: $darker-stone-grey;
-								padding: 0;
-								font-size: 0.8em;
-								color: $white-color;
-								text-transform: uppercase;
-								font-weight: normal;
-								letter-spacing: 0.1em;
-							}
+            &:hover {
+              background-color: $orange-color1;
+              text-decoration: none !important;
+              color: $white-color;
+              width: 100%;
+              font-weight: bold;
+            }
+          }
 
-							p {
-								background-color: $light-grey;
-								line-height: 1.7em;
-								margin: 0;
-								font-size: 0.7em;
-								color: $white-color;
+          figcaption.cap_1_of_5 {
+            h3 {
+              line-height: 2.4em;
+              margin: 0;
+              background-color: $darker-stone-grey;
+              padding: 0;
+              font-size: 0.8em;
+              color: $white-color;
+              text-transform: uppercase;
+              font-weight: normal;
+              letter-spacing: 0.1em;
+            }
 
-								z-index: 1;
-								position: relative;
-								top: 0;
-							}
+            p {
+              background-color: $light-grey;
+              line-height: 1.7em;
+              margin: 0;
+              font-size: 0.7em;
+              color: $white-color;
 
-							h4 {
-								z-index: 1;
-								position: relative;
-								line-height: 1.7em;
-								margin: 0;
-								font-size: 1em;
-								color: $white-color;
-								background-color: $darker-stone-grey;
+              z-index: 1;
+              position: relative;
+              top: 0;
+            }
 
-								padding: 0px;
-								font-weight: normal;
-								z-index: 1;
-								position: relative;
-								top: 0;
-							}
-						}
-					}
+            h4 {
+              z-index: 1;
+              position: relative;
+              line-height: 1.7em;
+              margin: 0;
+              font-size: 1em;
+              color: $white-color;
+              background-color: $darker-stone-grey;
 
-					.grid_1_of_5:hover {
-						cursor: pointer;
-					}
+              padding: 0px;
+              font-weight: normal;
+              z-index: 1;
+              position: relative;
+              top: 0;
+            }
+          }
+        }
 
-					.grid_1_of_5:hover img.images_1_of_5 {
-						@include mannering-transform(scale(1.02));
-						border: 2px solid $orange-color;
-					}
+        .grid_1_of_5:hover {
+          cursor: pointer;
+        }
 
-					.grid_1_of_5:hover form#frontform {
-						top: 0;
-					}
-				}
+        .grid_1_of_5:hover img.images_1_of_5 {
+          @include mannering-transform(scale(1.02));
+          border: 2px solid $orange-color;
+        }
+
+        .grid_1_of_5:hover form#frontform {
+          top: 0;
+        }
+
 			}
 
 			ul.categories {
@@ -1234,7 +1229,7 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 1em;
 			line-height: 1.5em;
 			margin: 2% 0;
@@ -1243,7 +1238,7 @@
 			float: left;
 			display: block;
 
-			li {
+			p {
 				line-height: 35px;
 			}
 		}
@@ -1321,7 +1316,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					width: 100%;
 					font-size: 1em;
 					margin: 0.5em 0;
@@ -1555,10 +1550,10 @@
 	}
 
 	header {
-		hgroup {
+		span#site-logo {
 			width: 65%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -1570,7 +1565,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -1614,18 +1609,19 @@
 		#main_text {
 			height: auto;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.3em;
 				}
 
-				.flex-wrapper {
+
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -1667,7 +1663,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -1968,10 +1964,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 
-			li {
+			p {
 				line-height: 35px;
 			}
 		}
@@ -2001,7 +1997,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -2109,10 +2105,10 @@
 	}
 
 	header {
-		hgroup {
+		span#site-logo {
 			width: 65%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -2124,7 +2120,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -2168,18 +2164,19 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.2em;
 				}
 
-				.flex-wrapper {
+
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 						img {
@@ -2216,7 +2213,7 @@
 							}
 						}
 					}
-				}
+
 			}
 			ul.categories {
 				font-size: 0.8em;
@@ -2558,10 +2555,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -2592,7 +2589,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -2695,10 +2692,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 65%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -2710,7 +2707,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -2772,18 +2769,18 @@
 				}
 			}
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.2em;
 				}
 
-				.flex-wrapper {
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -2821,7 +2818,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -3110,10 +3107,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -3144,7 +3141,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -3249,10 +3246,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 55%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -3264,7 +3261,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -3312,24 +3309,25 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.1em;
 				}
 
-				.flex-wrapper {
-					width: 31%;
-					-webkit-flex: 0 0 auto;
-					-ms-flex: 0 0 auto;
-					flex: 0 0 auto;
+
+
 
 					.grid_1_of_5 {
+            width: 31%;
+            -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
 						margin: 0.5%;
 
 						img {
@@ -3366,7 +3364,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -3670,10 +3668,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -3698,7 +3696,7 @@
 						}
 					}
 
-					h1.artist_name {
+					h2.artist_name {
 						font-size: 1em;
 
 						line-height: 40px;
@@ -3801,10 +3799,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 55%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -3816,7 +3814,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -3867,18 +3865,18 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.1em;
 				}
 
-				.flex-wrapper {
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -3916,7 +3914,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -4214,11 +4212,11 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 			width: 49%;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -4251,7 +4249,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -4351,10 +4349,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 55%;
 
-			h1#logo {
+			p#logo {
 				font-size: 2em;
 
 				span {
@@ -4366,7 +4364,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -4411,22 +4409,23 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.1em;
 				}
 
-				.flex-wrapper {
-					width: 30%;
+
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+
+            width: 30%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -4462,7 +4461,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -4771,10 +4770,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.9em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -4802,7 +4801,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -4908,10 +4907,10 @@
 
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 60%;
 
-			h1#logo {
+			p#logo {
 				height: 35px;
 				font-size: 1.8em;
 
@@ -4924,7 +4923,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -4968,18 +4967,18 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1.1em;
 				}
 
-				.flex-wrapper {
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -5017,7 +5016,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -5304,10 +5303,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.8em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -5338,7 +5337,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -5440,8 +5439,8 @@
 		height: 65px;
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				span {
 					height: 100%;
 				}
@@ -5451,7 +5450,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.7em;
 			}
 		}
@@ -5497,18 +5496,18 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					line-height: 40px;
 				}
 
-				.flex-wrapper {
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -5546,7 +5545,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -5866,10 +5865,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.8em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -5897,7 +5896,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -6001,8 +6000,8 @@
 	header {
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				font-size: 1.75em;
 
 				span {
@@ -6014,7 +6013,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.65em;
 			}
 		}
@@ -6060,18 +6059,18 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					line-height: 40px;
 				}
 
-				.flex-wrapper {
+
 					.grid_1_of_5 {
 						margin: 0.5%;
 
@@ -6109,7 +6108,7 @@
 							}
 						}
 					}
-				}
+
 			}
 			blockquote {
 				font-size: 0.7em;
@@ -6467,14 +6466,14 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.8em;
 			width: 90%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -6504,7 +6503,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -6617,8 +6616,8 @@
 	header {
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				font-size: 1.7em;
 
 				span {
@@ -6630,7 +6629,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.65em;
 			}
 		}
@@ -6757,22 +6756,22 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					line-height: 40px;
 				}
 
-				.flex-wrapper {
-					width: 45%;
+
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+						width: 45%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -6808,7 +6807,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -7105,10 +7104,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.8em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -7138,7 +7137,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -7243,10 +7242,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 62%;
 
-			h1#logo {
+			p#logo {
 				font-size: 1.7em;
 
 				span {
@@ -7258,7 +7257,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.65em;
 			}
 		}
@@ -7340,11 +7339,11 @@
 				}
 			}
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 				-webkit-flex-flow: column;
 				-ms-flex-flow: column;
@@ -7360,11 +7359,11 @@
 					line-height: 40px;
 				}
 
-				.flex-wrapper {
-					width: 50%;
+
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+						width: 50%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -7400,7 +7399,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -7685,10 +7684,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.75em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -7718,7 +7717,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -7823,10 +7822,10 @@
 	header {
 		clear: both;
 
-		hgroup {
+		span#site-logo {
 			width: 64%;
 
-			h1#logo {
+			p#logo {
 				font-size: 1.5em;
 
 				span {
@@ -7838,7 +7837,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.65em;
 			}
 		}
@@ -7904,22 +7903,21 @@
 			h1 {
 				font-size: 1em;
 			}
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					line-height: 40px;
 				}
 
-				.flex-wrapper {
-					width: 55%;
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+						width: 55%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -7955,7 +7953,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -8277,10 +8275,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.75em;
 
-			li {
+			p {
 				line-height: 40px;
 			}
 		}
@@ -8310,7 +8308,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -8415,8 +8413,8 @@
 	header {
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				font-size: 1.5em;
 
 				span {
@@ -8428,7 +8426,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.65em;
 			}
 		}
@@ -8478,18 +8476,18 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
-				.flex-wrapper {
-					width: 60%;
+
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+						width: 60%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -8525,7 +8523,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -8812,10 +8810,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.75em;
 
-			li {
+			p {
 				line-height: 45px;
 			}
 		}
@@ -8852,7 +8850,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -8957,8 +8955,8 @@
 	header {
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				font-size: 1.5em;
 
 				span {
@@ -8970,7 +8968,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.6em;
 			}
 		}
@@ -9023,22 +9021,22 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				height: auto;
 
 				h1 {
 					font-size: 1.05em;
 				}
 
-				.flex-wrapper {
-					width: 60%;
+
+
 
 					.grid_1_of_5 {
-						margin: 0.5%;
+						width: 60%;
 
 						img {
 							border: 2px solid $stone-grey;
@@ -9074,7 +9072,7 @@
 							}
 						}
 					}
-				}
+
 			}
 		}
 
@@ -9349,10 +9347,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.75em;
 
-			li {
+			p {
 				line-height: 45px;
 			}
 		}
@@ -9380,7 +9378,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;
@@ -9484,8 +9482,8 @@
 	header {
 		clear: both;
 
-		hgroup {
-			h1#logo {
+		span#site-logo {
+			p#logo {
 				font-size: 1.4em;
 
 				span {
@@ -9497,7 +9495,7 @@
 				}
 			}
 
-			h2 {
+			p.site-description {
 				font-size: 0.55em;
 			}
 		}
@@ -9547,58 +9545,57 @@
 		#main_text {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			div.album_section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section {
+			div.album_section{
 				margin: 0 auto;
 
 				h1 {
 					font-size: 1em;
 				}
 
-				.flex-wrapper {
-					width: 65%;
 
-					.grid_1_of_5 {
-						margin: 0.5%;
 
-						img {
-							border: 2px solid $stone-grey;
+        .grid_1_of_5 {
+          width: 65%;
 
-							&:hover {
-								border: 3px solid $orange-color;
-							}
-						}
+          img {
+            border: 2px solid $stone-grey;
 
-						img.images_1_of_5 {
-							width: auto;
-						}
+            &:hover {
+              border: 3px solid $orange-color;
+            }
+          }
 
-						input.frontform {
-							font-size: 0.75em;
+          img.images_1_of_5 {
+            width: auto;
+          }
 
-							&:hover {
-								text-decoration: none !important;
-							}
-						}
+          input.frontform {
+            font-size: 0.75em;
 
-						figcaption.cap_1_of_5 {
-							h3 {
-								font-size: 0.7em;
-							}
+            &:hover {
+              text-decoration: none !important;
+            }
+          }
 
-							p {
-								font-size: 0.7em;
-							}
+          figcaption.cap_1_of_5 {
+            h3 {
+              font-size: 0.7em;
+            }
 
-							h4 {
-								font-size: 0.8em;
-							}
-						}
-					}
-				}
+            p {
+              font-size: 0.7em;
+            }
+
+            h4 {
+              font-size: 0.8em;
+            }
+          }
+        }
+
 			}
 		}
 
@@ -9901,10 +9898,10 @@
 			}
 		}
 
-		ul#contact-details {
+		address#contact-details {
 			font-size: 0.75em;
 
-			li {
+			p {
 				line-height: 45px;
 			}
 		}
@@ -9934,7 +9931,7 @@
 					}
 				}
 
-				h1.artist_name {
+				h2.artist_name {
 					font-size: 1em;
 
 					line-height: 40px;

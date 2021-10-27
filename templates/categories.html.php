@@ -1,6 +1,6 @@
 <section id="main_text" class="group" role="main">
 
-  <h2>Categories</h2>
+  <h1>Categories</h1>
 
   <a href="/category/edit">Add a new category</a>
 

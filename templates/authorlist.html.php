@@ -1,24 +1,24 @@
-<section id="main_text" class="group" role="main">
+<section id="main_text" class="group">
 
-  <h2>User List</h2>
+    <h1>User List</h1>
 
-  <table>
-    <thead>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Edit</th>
-    </thead>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+        </thead>
 
-    <tbody>
-      <?php foreach ($authors as $author) : ?>
-        <tr>
-          <td><?= $author->name; ?></td>
-          <td><?= $author->email; ?></td>
-          <td><a href="/author/permissions?id=<?= $author->id; ?>">Edit Permissions</a></td>
-        </tr>
-      <?php endforeach; ?>
-    </tbody>
-  </table>
+        <tbody>
+            <?php foreach ($authors as $author) : ?>
+            <tr>
+                <td><?= $author->name; ?></td>
+                <td><?= $author->email; ?></td>
+                <td><a href="/author/permissions?id=<?= $author->id; ?>">Edit Permissions</a></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 
 
 </section>
