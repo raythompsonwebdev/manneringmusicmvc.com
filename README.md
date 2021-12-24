@@ -4,7 +4,7 @@
 
 # Introduction
 
-Web application is based on a website brief, I was given to build a website from, for a city and guilds exam in web design I took in 2012. 
+Web application is based on a website brief, I was given to build a website from, for a city and guilds exam in web design I took in 2012.
 
 The task was that I worked for Mannerings Music Agency which is a company that advertises music for sale on the lnternet. As a web designer for the company I was have been asked to design a website to advertise the available music for sale.
 
@@ -39,18 +39,18 @@ I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 
 - HTML - semantic html
 - CSS -  css transitions
 - SASS - nesting , mixins, variable, partials
-- MariaDB - Database 
+- MariaDB - Database
 - REST
 - MVC Design
 - MySQL - PDO (PHP Data Objects)
 - PHP Object Oriented Design
-- JavaScript - ES6 & Jquery
+- JavaScript - ES6
 - Amazon S3 - Audio Files , Bucket Policy
 
 
 ## Tools
 
-- [Grunt](https://gruntjs.com/) 
+- [Grunt](https://gruntjs.com/)
 - [Babel](https://babeljs.io/)
 - [Prettier](https://prettier.io/)
 - [ESLInt](https://eslint.org/)

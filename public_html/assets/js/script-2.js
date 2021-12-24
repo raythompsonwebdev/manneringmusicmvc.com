@@ -52,6 +52,8 @@ class Audio {
     this.audio = document.createElement('audio');
   }
 
+
+
   //audio = document.createElement('audio');
   // //goes to next song when current song finished
   // this.audio.addEventListener('ended', () => {
