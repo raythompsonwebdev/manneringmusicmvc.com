@@ -30,6 +30,7 @@ const updateTimeProgressBar = (audio) => {
   var progress = (audio.currentTime / audio.duration) * 100;
   document.querySelector('.progress .play_progress').style.width =
     progress + '%';
+
 };
 
 // Display bar to display volume level //

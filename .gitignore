@@ -17,5 +17,6 @@ includes/DatabaseConnection.php
 access.log
 error.log
 bucketpolicy.json
+audio/
 
 
