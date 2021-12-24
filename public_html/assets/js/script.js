@@ -1,14 +1,14 @@
-var currentPlaylist = [];
-var shufflePlaylist = [];
-var tempPlaylist = [];
-var audioElement;
-var mouseDown = false;
-var currentIndex = 0;
-var repeat = false;
-var shuffle = false;
+let currentPlaylist = [];
+let shufflePlaylist = [];
+let tempPlaylist = [];
+let audioElement;
+let mouseDown = false;
+let currentIndex = 0;
+let repeat = false;
+let shuffle = false;
 
 //Format current time and duration
-function formatTime(seconds) {
+const formatTime = (seconds) => {
   seconds = Math.round(seconds);
   var minutes = Math.floor(seconds / 60);
   // Remaining seconds
@@ -17,10 +17,10 @@ function formatTime(seconds) {
   minutes = minutes >= 10 ? minutes : '0' + minutes;
   seconds = seconds >= 10 ? seconds : '0' + seconds;
   return minutes + ':' + seconds;
-}
+};
 
 // Updates Progress of song playing
-function updateTimeProgressBar(audio) {
+const updateTimeProgressBar = (audio) => {
   document.querySelector('div.current_time').textContent = formatTime(
     audio.currentTime
   );
@@ -30,20 +30,19 @@ function updateTimeProgressBar(audio) {
   var progress = (audio.currentTime / audio.duration) * 100;
   document.querySelector('.progress .play_progress').style.width =
     progress + '%';
-}
+};
 
 // Display bar to display volume level //
-function updateVolumeProgressBar(audio) {
+const updateVolumeProgressBar = (audio) => {
   var volume = audio.volume * 100;
   document.querySelector('div.audio_volume div.volume').style.width =
     volume + '%';
-}
+};
 
 //hook up to play button on artist page
-// function firstSong() {
-// 	setTrack(tempPlaylist[0], tempPlaylist, true);
-
-// }
+const firstSong = () => {
+  setTrack(tempPlaylist[0], tempPlaylist, true);
+};
 
 // Audio Class
 function Audio() {

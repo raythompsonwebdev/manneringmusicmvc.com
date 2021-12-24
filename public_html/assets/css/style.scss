@@ -3,6 +3,16 @@
 @import 'partials/_normalize.scss';
 @import 'partials/_base.scss';
 
+.show-button{
+	display:block;
+	opacity:1;
+}
+
+.hide-button{
+	display:none;
+	opacity:0;
+}
+
 /*1920*/
 @media only screen and (max-width: 1920px) {
 
@@ -31,6 +41,8 @@
 			background-color: #000;
 		}
 	}
+
+
 
 	#wrapper {
 		margin-left: auto;
@@ -2682,12 +2694,16 @@
 
 /*1024*/
 @media only screen and (max-width: 1024px) {
+
 	#wrapper {
 		width: 96%;
 	}
+
 	#copyr {
 		font-size: 0.55em;
 	}
+
+
 
 	header {
 		clear: both;

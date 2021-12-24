@@ -15,17 +15,18 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 ?>
 
 <script>
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", () => {
 
     //create seprate playlists for shuffle
-    var newPlaylist = <?php echo $jsonArray; ?>;
+    let newPlaylist = <?php echo $jsonArray; ?>;
     audioElement = new Audio(); //instance of audio class
     setTrack(newPlaylist[0], newPlaylist, false); //audio class func
     //update volume add full width
     updateVolumeProgressBar(audioElement.audio); //audio class func
 
-    var prevHighlight = document.querySelector('div.audio_controls');
-    var progressBar = document.querySelector('div.progress div.play_progress');
+		let prevHighlight = document.querySelector('div.audio_controls');
+    let progressBar = document.querySelector('div.progress div.play_progress');
+    let volumeControl = document.querySelector('div.audio_volume div.volume');
 
     prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", function(e) {
         e.preventDefault();
@@ -47,15 +48,13 @@ $(document).ready(function() {
     });
 
 
-    $("div.audio_volume div.volume").mousedown(function() {
+		volumeControl.addEventListener('mousedown', function() {
         mouseDown = true;
     });
 
-    $("div.audio_volume div.volume").mousemove(function(e) {
+    volumeControl.addEventListener('mousemove', function() {
         if (mouseDown == true) {
-
-            var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
-
+					let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
             //limits volume range to bewteen 0 and 1
             if (percentage >= 0 && percentage <= 1) {
                 audioElement.audio.volume = percentage;
@@ -63,25 +62,29 @@ $(document).ready(function() {
         }
     });
 
-    $("div.audio_volume div.volume").mouseup(function(e) {
+    volumeControl.addEventListener('mouseup', function(e) {
 
-        var percentage = e.offsetX / $(this).width(); //this = div.audio_volume div.volume
+
+
+			let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
 
         if (percentage >= 0 && percentage <= 1) {
             audioElement.audio.volume = percentage;
         }
     });
 
-    $(document).mouseup(function() {
+    document.addEventListener('mouseup', function() {
         mouseDown = false;
     });
 
 });
 
+
+
 //us mouse to drag progress bar and change audio position
 function timeFromOffset(mouse, progressBar) {
-    var percentage = mouse.offsetX / $(progressBar).width() * 100;
-    var seconds = audioElement.audio.duration * (percentage / 100);
+    let percentage = mouse.offsetX / $(progressBar).width() * 100;
+    let seconds = audioElement.audio.duration * (percentage / 100);
     audioElement.setTime(seconds); //audio class func
 }
 
@@ -207,6 +210,7 @@ function setTrack(trackId, newPlaylist, play) {
 
 }
 
+
 //Play song
 function playSong() {
 
@@ -223,6 +227,8 @@ function playSong() {
 
         }).then(function(response) {
 
+					console.log(response);
+
             return response.text();
 
         }).catch(function(err) {
@@ -230,15 +236,17 @@ function playSong() {
         });
 
     }
-    $(".player-button.play").hide();
-    $(".player-button.pause").show();
+
+    document.querySelector('#play-button').style.display = "none";;
+    document.querySelector('#pause-button').style.display = "block";
     audioElement.play();
 }
 
 //Pause Song
 function pauseSong() {
-    $(".player-button.play").show();
-    $(".player-button.pause").hide();
+
+	document.querySelector('#play-button').style.display = "block";
+	document.querySelector('#pause-button').style.display = "none";
     audioElement.pause();
 }
 </script>
@@ -260,15 +268,15 @@ function pauseSong() {
 
             <div class="audiocntrl_containers">
 
-                <div role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()">
+                <div id="shuffle-button" role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()">
                     <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
                 </div>
 
-                <div role="button" tabindex="0" class="player-button play" onclick="playSong()">
+                <div id="play-button" role="button" tabindex="0" class="player-button play" onclick="playSong()">
                     <i class="fa fa-play" aria-hidden="true" title="play"></i>
                 </div>
 
-                <div role="button" tabindex="0" class="player-button pause" style="display: none;"
+                <div id="pause-button" role="button" tabindex="0" class="player-button pause" style="display: none;"
                     onclick="pauseSong()">
                     <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
                 </div>
