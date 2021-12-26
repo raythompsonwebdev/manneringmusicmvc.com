@@ -1,5 +1,3 @@
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
-
 <script src='assets/js/script.js'></script>
 
 <?php
@@ -8,7 +6,7 @@ $array = array();
 
 foreach ($singleaudio as $value) {
 
-  array_push($array, $value);
+	array_push($array, $value);
 }
 $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
@@ -24,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //update volume add full width
     updateVolumeProgressBar(audioElement.audio); //audio class func
 
-		let prevHighlight = document.querySelector('div.audio_controls');
+    let prevHighlight = document.querySelector('div.audio_controls');
     let progressBar = document.querySelector('div.progress div.play_progress');
     let volumeControl = document.querySelector('div.audio_volume div.volume');
 
@@ -48,13 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-		volumeControl.addEventListener('mousedown', function() {
+    volumeControl.addEventListener('mousedown', function() {
         mouseDown = true;
     });
 
     volumeControl.addEventListener('mousemove', function() {
         if (mouseDown == true) {
-					let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
+            let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
             //limits volume range to bewteen 0 and 1
             if (percentage >= 0 && percentage <= 1) {
                 audioElement.audio.volume = percentage;
@@ -66,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-			let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
+        let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
 
         if (percentage >= 0 && percentage <= 1) {
             audioElement.audio.volume = percentage;
@@ -78,8 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
-
 
 //us mouse to drag progress bar and change audio position
 function timeFromOffset(mouse, progressBar) {
@@ -227,7 +223,7 @@ function playSong() {
 
         }).then(function(response) {
 
-					console.log(response);
+            console.log(response);
 
             return response.text();
 
@@ -245,121 +241,124 @@ function playSong() {
 //Pause Song
 function pauseSong() {
 
-	document.querySelector('#play-button').style.display = "block";
-	document.querySelector('#pause-button').style.display = "none";
+    document.querySelector('#play-button').style.display = "block";
+    document.querySelector('#pause-button').style.display = "none";
     audioElement.pause();
 }
 </script>
 
 <section id="main_text" class="group">
 
-  <h1>Artist</h1>
+    <h1>Artist</h1>
 
-  <div id="results">
+    <div id="results">
 
-    <div class="product-box-large">
+        <div class="product-box-large">
 
-          <h1><?= $singleartist->artist_name; ?></h1>
-          <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
-          <!--Audio Controls-->
-          <div class="audio_controls">
+            <h1><?= $singleartist->artist_name; ?></h1>
+            <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
+            <!--Audio Controls-->
+            <div class="audio_controls">
 
-            <h1 class="trackName"></h1>
+                <h1 class="trackName"></h1>
 
-            <div class="audiocntrl_containers">
+                <div class="audiocntrl_containers">
 
-                <div id="shuffle-button" role="button" tabindex="0" class="player-button shuffle" onclick="setShuffle()">
-                    <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-                </div>
-
-                <div id="play-button" role="button" tabindex="0" class="player-button play" onclick="playSong()">
-                    <i class="fa fa-play" aria-hidden="true" title="play"></i>
-                </div>
-
-                <div id="pause-button" role="button" tabindex="0" class="player-button pause" style="display: none;"
-                    onclick="pauseSong()">
-                    <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
-                </div>
-
-                <div role="button" tabindex="0" class="player-button previous" onclick="prevSong()">
-                    <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
-                </div>
-
-                <div role="button" tabindex="0" class="player-button next" onclick="nextSong()">
-                    <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
-                </div>
-
-                <div role="button" tabindex="0" class="player-button repeat" onclick="setRepeat()">
-                    <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
-                </div>
-
-
-
-                <!--add onclick="setMute() to change volume icon. need to add volume icon-->
-                <div class="audio_volume">
-                    <div class="VolumeBg">
-                        <div class="volume"></div>
-                        <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                    <div id="shuffle-button" role="button" tabindex="0" class="player-button shuffle"
+                        onclick="setShuffle()">
+                        <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
                     </div>
-                    <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
-                        <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+
+                    <div id="play-button" role="button" tabindex="0" class="player-button play" onclick="playSong()">
+                        <i class="fa fa-play" aria-hidden="true" title="play"></i>
+                    </div>
+
+                    <div id="pause-button" role="button" tabindex="0" class="player-button pause" style="display: none;"
+                        onclick="pauseSong()">
+                        <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
+                    </div>
+
+                    <div role="button" tabindex="0" class="player-button previous" onclick="prevSong()">
+                        <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
+                    </div>
+
+                    <div role="button" tabindex="0" class="player-button next" onclick="nextSong()">
+                        <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
+                    </div>
+
+                    <div role="button" tabindex="0" class="player-button repeat" onclick="setRepeat()">
+                        <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
+                    </div>
+
+
+
+                    <!--add onclick="setMute() to change volume icon. need to add volume icon-->
+                    <div class="audio_volume">
+                        <div class="VolumeBg">
+                            <div class="volume"></div>
+                            <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                        </div>
+                        <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
+                            <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="audiocntrl_containers">
-                <div class="current_time">00:00</div>
-                <div class="progress">
-                    <div class="play_progress"></div>
+                <div class="audiocntrl_containers">
+                    <div class="current_time">00:00</div>
+                    <div class="progress">
+                        <div class="play_progress"></div>
+                    </div>
+                    <div class="duration">00:00</div>
                 </div>
-                <div class="duration">00:00</div>
-            </div>
 
-          </div>
-          <h2>Artist Tracks </h2>
-          <br />
-          <br />
-          <!--Audio Playlist-->
-          <ul class="audio-tracklist">
-            <?php
-              $i = 1;
-              foreach ($singleaudio as $songId) :
-                echo "<li>
+            </div>
+            <h2>Artist Tracks </h2>
+            <br />
+            <br />
+            <!--Audio Playlist-->
+            <ul class="audio-tracklist">
+                <?php
+				$i = 1;
+				foreach ($singleaudio as $songId) :
+					echo "<li>
                         <span class=\"tracknum\">Track " . $i . " : </span>
                         <span class=\"trackname\">" . $songId[1] . "</span>
                         <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>
                         <span class=\"trackplays\">plays</span>
                       </li>";
-                $i = $i + 1;
-              endforeach;
-            ?>
-          </ul>
-          <!--Temporary Play List-->
-          <script>
+					$i = $i + 1;
+				endforeach;
+				?>
+            </ul>
+            <!--Temporary Play List-->
+            <script>
             //songId value from value of $singleaudio variable
             var tempSongIds = '<?= json_encode($songId[0]); ?>';
             tempPlaylist = JSON.parse(tempSongIds);
-          </script>
+            </script>
+
+        </div>
+
+        <h2> Other Albums</h2>
+
+        <?php foreach ($singlealbums as $value) : ?>
+        <div class="product-box">
+            <figure class="product-info">
+                <a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>">
+                    <img src="/assets/databasepics/WEBP/<?= $value->image ?>" alt="Album-Cover-Image" />
+                </a>
+                <figcaption>
+                    <ul class="product-box-info">
+                        <li><?= $value->album ?></li>
+                        <li><?= $value->genre ?></li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </div>
+        <?php endforeach; ?>
 
     </div>
 
-    <h2> Other Albums</h2>
 
-    <?php foreach ($singlealbums as $value) : ?>
-    <div class="product-box">
-      <figure class="product-info">
-        <a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>">
-          <img src="/assets/databasepics/WEBP/<?= $value->image ?>" alt="Album-Cover-Image" />
-        </a>
-        <figcaption>
-          <ul class="product-box-info">
-            <li><?= $value->album ?></li>
-            <li><?= $value->genre ?></li>
-          </ul>
-        </figcaption>
-      </figure>
-    </div>
-    <?php endforeach; ?>
-
-  </div>
-  <br />
+    <br />
 </section>

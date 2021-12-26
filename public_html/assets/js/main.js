@@ -1,14 +1,14 @@
-var menuToggle = document.querySelector('#mobile-toggle');
+const menuToggle = document.querySelector('#mobile-toggle');
 
 menuToggle.addEventListener(
   'click',
-  function (event) {
+  (event) => {
     event.preventDefault();
 
     // create menu variables
-    var slideoutMenu = document.querySelector('#mobile_inner_nav');
+    const slideoutMenu = document.querySelector('#mobile_inner_nav');
 
-    var slideoutMenuHeight = slideoutMenu.offsetHeight;
+    const slideoutMenuHeight = slideoutMenu.offsetHeight;
 
     // toggle open class
     slideoutMenu.classList.toggle('open');
@@ -20,7 +20,7 @@ menuToggle.addEventListener(
       slideoutMenu.style.top = '0px';
     } else {
       slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
-      slideoutMenu.style.top = -slideoutMenuHeight + 'px';
+      slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
     }
   },
   false
