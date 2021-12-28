@@ -39,17 +39,17 @@ class Audio {
 
     // Format current time and duration
     this.formatTime = (seconds) => {
-      // eslint-disable-next-line no-param-reassign
-      seconds = Math.round(seconds);
+      let secondsRound = Math.round(seconds);
       let minutes = Math.floor(seconds / 60);
       // Remaining seconds
-      // eslint-disable-next-line no-param-reassign
-      seconds = Math.floor(seconds % 60);
+
+      secondsRound = Math.floor(seconds % 60);
       // Add leading Zeros
       minutes = minutes >= 10 ? minutes : `0${minutes}`;
-      // eslint-disable-next-line no-param-reassign
-      seconds = seconds >= 10 ? seconds : `0${seconds}`;
-      return `${minutes}:${seconds}`;
+
+      const secondsFinal =
+        secondsRound >= 10 ? secondsRound : `0${secondsRound}`;
+      return `${minutes}:${secondsFinal}`;
     };
 
     // goes to next song when current song finished

@@ -16,6 +16,7 @@
 	"SharedArrayBuffer": "readonly"
 	},
   "rules": {
+		"strict" : ["error","global"],
     "prefer-destructuring":["off",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
     "new-cap": "error",
     "no-invalid-this": "error",
