@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/fancyapps/source/jquery.fancybox.css">
 
-<section id="main_text" class="group">
+<section id="main_section" class="group">
 
     <h1>Videos</h1>
 
@@ -62,7 +62,7 @@
 
 
 
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
+
 
 <!-- Add fancyBox main JS and CSS files -->
 

@@ -6,7 +6,7 @@ menuToggle.addEventListener(
     event.preventDefault();
 
     // create menu variables
-    const slideoutMenu = document.querySelector('#mobile_inner_nav');
+    const slideoutMenu = document.querySelector('#mannering_nav');
 
     const slideoutMenuHeight = slideoutMenu.offsetHeight;
 
@@ -20,7 +20,7 @@ menuToggle.addEventListener(
       slideoutMenu.style.top = '0px';
     } else {
       slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
-      slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
+      slideoutMenu.style.top = `-${slideoutMenuHeight}px`;
     }
   },
   false

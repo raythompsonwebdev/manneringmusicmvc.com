@@ -1,4 +1,4 @@
-<section id="main_text" class="group" role="main">
+<section id="main_section" class="group">
 
     <h1>You are not logged in</h1>
 

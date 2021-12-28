@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
             .then(function(data) {
 
-                window.document.getElementById('results').innerHTML = data;
+                window.document.getElementById('results_container').innerHTML = data;
             })
             .catch(function(err) {
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 </script>
 
-<section id="main_text">
+<section id="main_section" class="group">
 
     <h1>Search Page</h1>
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     <div id="loadingIndicator" style="display: none;">Ajax Loading...</div>
 
-    <div id="results"></div>
+    <div id="results_container"></div>
 
     <br />
     <br />
