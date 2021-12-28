@@ -22,13 +22,6 @@ let repeat = false;
 // eslint-disable-next-line prefer-const
 let shuffle = false;
 
-// hook up to play button on artist page
-// eslint-disable-next-line no-unused-vars
-const firstSong = () => {
-  // eslint-disable-next-line no-undef
-  setTrack(tempPlaylist[0], tempPlaylist, true);
-};
-
 // Audio Class
 // eslint-disable-next-line no-unused-vars
 class Audio {
@@ -81,9 +74,9 @@ class Audio {
     // Display bar to display volume level //
     this.updateVolumeProgressBar = (audio) => {
       const volume = audio.volume * 100;
-      document.querySelector(
-        'div.audio_volume div.volume'
-      ).style.width = `${volume}%`;
+      // eslint-disable-next-line no-console
+      console.log(volume);
+      document.querySelector(' input.volume').value = `${volume}`;
     };
 
     // Time Display Update //
@@ -96,6 +89,11 @@ class Audio {
     this.audio.addEventListener('volumechange', (e) => {
       this.updateVolumeProgressBar(e.target);
     });
+
+    this.firstSong = () => {
+      // eslint-disable-next-line no-undef
+      setTrack(tempPlaylist[0], tempPlaylist, true);
+    };
   }
 
   // Set Track //

@@ -945,12 +945,14 @@
 								background-color: $stone-grey3;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 								display: block;
 								background-color: $white-color;
 								height: 100%;
 								cursor: pointer;
+								position:relative;
+
 							}
 
 							div.VolumeImg {
@@ -1839,7 +1841,7 @@
 								width: 90%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -2419,7 +2421,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -2996,7 +2998,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -3556,7 +3558,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -4101,7 +4103,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -4649,7 +4651,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -5193,7 +5195,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -5733,7 +5735,7 @@
 								width: 85%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -6327,7 +6329,7 @@
 								width: 80%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -6987,7 +6989,7 @@
 								width: 80%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -7589,7 +7591,7 @@
 								width: 75%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -8140,7 +8142,7 @@
 								width: 75%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -8699,7 +8701,7 @@
 								width: 70%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -9257,7 +9259,7 @@
 								width: 70%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 
@@ -9784,7 +9786,7 @@
 								width: 80%;
 							}
 
-							div.volume {
+							input.volume{
 								width: 100%;
 							}
 

@@ -19,9 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let prevHighlight = document.querySelector('div.audio_controls');
     let progressBar = document.querySelector('div.progress div.play_progress');
-    let volumeControl = document.querySelector('div.audio_volume div.volume');
+    let volumeControl = document.querySelector('input#volume');
+
     let playControl = document.querySelector('#play-button');
     let pauseControl = document.querySelector('#pause-button');
+
+
 
     prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", (e) => {
         e.preventDefault();
@@ -42,40 +45,36 @@ document.addEventListener("DOMContentLoaded", () => {
         timeFromOffset(e, this);
     });
 
-    volumeControl.addEventListener('mousedown', function() {
-        mouseDown = true;
-    });
+    // volumeControl.addEventListener('mousedown', function() {
+    //     mouseDown = true;
+    // });
 
-    volumeControl.addEventListener('mousemove', (e) => {
-        if (mouseDown == true) {
-            let percentage = e.offsetX / e.target.clientWidth; //this = div.audio_volume div.volume
-            //limits volume range to bewteen 0 and 1
-            if (percentage >= 0 && percentage <= 1) {
-                audioElement.audio.volume = percentage;
-            }
-        }
-    });
-
-    volumeControl.addEventListener('mouseup', (e) => {
-        let percentage = e.offsetX / e.target.clientWidth; //this = div.audio_volume div.volume
-
-        if (percentage >= 0 && percentage <= 1) {
+    volumeControl.addEventListener('change', (e) => {
+        //if (mouseDown == true) {
+        console.log(e.target.value);
+        let percentage = e.target.value / 100; //this = div.audio_volume input.volume
+        console.log(percentage)
+        //limits volume range to bewteen 0 and 1
+        if (percentage >= e.target.min && percentage <= e.target.max) {
             audioElement.audio.volume = percentage;
         }
+        //}
     });
 
     document.addEventListener('mouseup', function() {
         mouseDown = false;
     });
 
+    //us mouse to drag progress bar and change audio position
+    function timeFromOffset(mouse, progressBar) {
+        let percentage = mouse.offsetX / progressBar.clientWidth * 100;
+        let seconds = audioElement.audio.duration * (percentage / 100);
+        audioElement.setTime(seconds); //audio class func
+    }
+
 });
 
-//us mouse to drag progress bar and change audio position
-function timeFromOffset(mouse, progressBar) {
-    let percentage = mouse.offsetX / progressBar.clientWidth * 100;
-    let seconds = audioElement.audio.duration * (percentage / 100);
-    audioElement.setTime(seconds); //audio class func
-}
+
 
 //skip to previous song
 function prevSong() {
@@ -313,8 +312,9 @@ function pauseSong() {
                     <!--add onclick="setMute() to change volume icon. need to add volume icon-->
                     <div class="audio_volume">
                         <div class="VolumeBg">
-                            <div class="volume"></div>
-                            <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                            <!-- <div class="volume"></div> -->
+                            <input type="range" min="0" max="100" value="100" class="volume" id="volume"
+                                title="volume" />
                         </div>
                         <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
