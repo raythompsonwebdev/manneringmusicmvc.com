@@ -1301,7 +1301,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     text-align: center;
     background-color: #181818;
     text-shadow: none;
-    font-size: 1.1em;
+    font-size: 1.8em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 40%;
@@ -1312,12 +1312,14 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 88%;
     height: 100%;
     background-color: #3b3b3b;
+    display: flex;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
     display: block;
     background-color: #FFF;
-    height: 100%;
+    margin: 0.5em;
+    height: auto;
     cursor: pointer;
     position: relative;
   }
@@ -2087,7 +2089,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 90%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 10%;
@@ -2512,7 +2514,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -2922,7 +2924,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -3331,7 +3333,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -3726,7 +3728,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -4107,7 +4109,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 0.8em;
+    font-size: 1.6em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 55%;
@@ -4116,7 +4118,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -4494,7 +4496,7 @@ main#content #contact-form-a .success {
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 1.5em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 55%;
@@ -4503,7 +4505,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -4888,7 +4890,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 85%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 15%;
@@ -5306,7 +5308,7 @@ main#content #registerform input[type=password] {
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 0.9em;
+    font-size: 1.8em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 55%;
@@ -5315,7 +5317,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 80%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 20%;
@@ -5802,7 +5804,7 @@ button#mobile-toggle:focus {
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 0.85em;
+    font-size: 1.7em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 55%;
@@ -5811,7 +5813,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 80%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 20%;
@@ -6254,7 +6256,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 75%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 25%;
@@ -6643,7 +6645,7 @@ nav.toggled ul {
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 0.8em;
+    font-size: 1.7em;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 100%;
@@ -6653,7 +6655,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 75%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 25%;
@@ -7053,7 +7055,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 70%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 30%;
@@ -7454,7 +7456,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 70%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 30%;
@@ -7826,7 +7828,7 @@ main#content #results .product-box-large div.audio_controls div.audiocntrl_conta
     width: 80%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 100%;
+    width: 96%;
   }
   main#content #results .product-box-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
     width: 20%;

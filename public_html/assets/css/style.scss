@@ -931,7 +931,7 @@
 							text-align: center;
 							background-color: $bg-black;
 							text-shadow: none;
-							font-size: 1.1em;
+							font-size: 1.8em;
 						}
 
 						div.audio_volume {
@@ -943,13 +943,15 @@
 								width: 88%;
 								height: 100%;
 								background-color: $stone-grey3;
+								display: flex;
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 								display: block;
 								background-color: $white-color;
-								height: 100%;
+								margin: 0.5em;
+								height: auto;
 								cursor: pointer;
 								position:relative;
 
@@ -1842,7 +1844,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -2422,7 +2424,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -2999,7 +3001,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -3559,7 +3561,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -4104,7 +4106,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -4641,7 +4643,7 @@
 						div.current_time,
 						div.duration {
 							width: 15%;
-							font-size: 0.8em;
+							font-size: 1.6em;
 						}
 
 						div.audio_volume {
@@ -4652,7 +4654,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -5185,7 +5187,7 @@
 						div.current_time,
 						div.duration {
 							width: 15%;
-							font-size: 1em;
+							font-size: 1.5em;
 						}
 
 						div.audio_volume {
@@ -5196,7 +5198,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -5736,7 +5738,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -6319,7 +6321,7 @@
 						div.current_time,
 						div.duration {
 							width: 15%;
-							font-size: 0.9em;
+							font-size: 1.8em;
 						}
 
 						div.audio_volume {
@@ -6330,7 +6332,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -6979,7 +6981,7 @@
 						div.current_time,
 						div.duration {
 							width: 15%;
-							font-size: 0.85em;
+							font-size: 1.7em;
 						}
 
 						div.audio_volume {
@@ -6990,7 +6992,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -7592,7 +7594,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -8131,7 +8133,7 @@
 						div.current_time,
 						div.duration {
 							width: 15%;
-							font-size: 0.8em;
+							font-size: 1.7em;
 						}
 
 						div.audio_volume {
@@ -8143,7 +8145,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -8702,7 +8704,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -9260,7 +9262,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {
@@ -9787,7 +9789,7 @@
 							}
 
 							input.volume{
-								width: 100%;
+								width: 96%;
 							}
 
 							div.VolumeImg {

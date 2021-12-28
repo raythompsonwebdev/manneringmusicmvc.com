@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
         timeFromOffset(e, this);
     });
 
-    // volumeControl.addEventListener('mousedown', function() {
-    //     mouseDown = true;
-    // });
+    volumeControl.addEventListener('mousedown', function() {
+        mouseDown = true;
+    });
 
     volumeControl.addEventListener('change', (e) => {
         //if (mouseDown == true) {
-        console.log(e.target.value);
+
         let percentage = e.target.value / 100; //this = div.audio_volume input.volume
-        console.log(percentage)
+
         //limits volume range to bewteen 0 and 1
         if (percentage >= e.target.min && percentage <= e.target.max) {
             audioElement.audio.volume = percentage;
@@ -155,6 +155,9 @@ function setTrack(trackId, newPlaylist, play) {
 
     if (newPlaylist != currentPlaylist) {
         currentPlaylist = newPlaylist;
+        //add shuffle
+        shufflePlaylist = currentPlaylist.slice();
+        shuffleArray(shufflePlaylist);
     }
     //create tracklist index
     currentIndex = currentPlaylist.indexOf(trackId);

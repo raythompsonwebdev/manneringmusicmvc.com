@@ -20,11 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     audioElement = new Audio(); //instance of audio class
     setTrack(newPlaylist[0], newPlaylist, false); //audio class func
     //update volume add full width
-    updateVolumeProgressBar(audioElement.audio); //audio class func
+    audioElement.updateVolumeProgressBar(audioElement.audio); //audio class func
 
     let prevHighlight = document.querySelector('div.audio_controls');
     let progressBar = document.querySelector('div.progress div.play_progress');
-    let volumeControl = document.querySelector('div.audio_volume div.volume');
+    let volumeControl = document.querySelector('input#volume');
+
+    let playControl = document.querySelector('#play-button');
+    let pauseControl = document.querySelector('#pause-button');
 
     prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", function(e) {
         e.preventDefault();
@@ -50,25 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
         mouseDown = true;
     });
 
-    volumeControl.addEventListener('mousemove', function() {
-        if (mouseDown == true) {
-            let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
-            //limits volume range to bewteen 0 and 1
-            if (percentage >= 0 && percentage <= 1) {
-                audioElement.audio.volume = percentage;
-            }
-        }
-    });
+    volumeControl.addEventListener('change', (e) => {
+        //if (mouseDown == true) {
 
-    volumeControl.addEventListener('mouseup', function(e) {
+        let percentage = e.target.value / 100; //this = div.audio_volume input.volume
 
-
-
-        let percentage = e.offsetX / this.clientWidth; //this = div.audio_volume div.volume
-
-        if (percentage >= 0 && percentage <= 1) {
+        //limits volume range to bewteen 0 and 1
+        if (percentage >= e.target.min && percentage <= e.target.max) {
             audioElement.audio.volume = percentage;
         }
+        //}
     });
 
     document.addEventListener('mouseup', function() {
@@ -162,8 +156,8 @@ function setTrack(trackId, newPlaylist, play) {
     if (newPlaylist != currentPlaylist) {
         currentPlaylist = newPlaylist;
         //add shuffle
-        // shufflePlaylist = currentPlaylist.slice();
-        // shuffleArray(shufflePlaylist);
+        shufflePlaylist = currentPlaylist.slice();
+        shuffleArray(shufflePlaylist);
     }
 
     //create tracklist index
@@ -220,6 +214,11 @@ function playSong() {
         fetch(url, {
             method: 'POST',
             body: formData
+            //mode: 'cors', // no-cors, *cors, same-origin
+            // headers: {
+
+            //     'Content-Type': 'application/x-www-form-urlencoded',
+            // },
 
         }).then(function(response) {
 
@@ -295,8 +294,9 @@ function pauseSong() {
                     <!--add onclick="setMute() to change volume icon. need to add volume icon-->
                     <div class="audio_volume">
                         <div class="VolumeBg">
-                            <div class="volume"></div>
-                            <!--<input type="range" class="volume" title="volume" min="0" max="1" step="0.1" value="1">-->
+                            <!-- <div class="volume"></div> -->
+                            <input type="range" min="0" max="100" value="100" class="volume" id="volume"
+                                title="volume" />
                         </div>
                         <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
