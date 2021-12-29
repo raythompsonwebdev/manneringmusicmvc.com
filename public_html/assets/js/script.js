@@ -99,6 +99,7 @@ class Audio {
   // Set Track //
   setTrack(track) {
     this.currentlyPlaying = track;
+    // eslint-disable-next-line prefer-destructuring
     this.audio.src = track[0].mp3_File;
   }
 

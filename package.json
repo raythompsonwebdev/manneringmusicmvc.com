@@ -6,6 +6,7 @@
 	"directories": {
 		"test": "test"
 	},
+	"proxy": "http://manneringmusicmvc.com/",
 	"scripts": {
 		"lint-sass": "grunt stylelint",
 		"lint-js": "grunt eslint",

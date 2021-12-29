@@ -10,6 +10,16 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+    // let currentPlaylist = [];
+    // let shufflePlaylist = [];
+    // let tempPlaylist = [];
+    // let audioElement;
+    // let mouseDown = false;
+    // let currentIndex = 0;
+    // let repeat = false;
+    // let shuffle = false;
+
     //create seprate playlists for shuffle
     let newPlaylist = <?php echo $jsonArray; ?>;
     audioElement = new Audio(); //instance of audio class
@@ -165,13 +175,13 @@ function setTrack(trackId, newPlaylist, play) {
     pauseSong();
 
     //get tracks from database
-    let url = 'getSongJson.php';
+    let url = './getSongJson.php';
     let formData = new FormData();
     formData.append("songId", trackId);
 
     fetch(url, {
         method: 'POST',
-        body: formData
+        body: formData,
 
     }).then(function(response) {
 
@@ -203,18 +213,15 @@ function playSong() {
     //track plays function needs ajax file updatePlays.php
     if (audioElement.audio.currentTime == 0) {
         //get tracks from database
-        let url = 'updatePlays.php';
+        let url = './updatePlays.php';
         let formData = new FormData();
-        formData.append("songId", audioElement.currentlyPlaying.id);
+
+        formData.append("songId", audioElement.currentlyPlaying[0].id);
 
         fetch(url, {
             method: 'POST',
             body: formData,
-            //mode: 'cors', // no-cors, *cors, same-origin
-            // headers: {
 
-            //     'Content-Type': 'application/x-www-form-urlencoded',
-            // },
         }).then(function(response) {
             return response.text();
         }).catch(function(err) {

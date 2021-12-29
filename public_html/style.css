@@ -712,7 +712,7 @@ main#content #main_section {
   height: auto;
   width: 100%;
   padding-top: 0.5em;
-  margin: 0;
+  margin: 0 0 1em 0;
 }
 main#content #main_section h1 {
   font-size: 1.3em;
@@ -799,7 +799,7 @@ main#content #main_section #review_pagination {
   font-size: 0.85em;
 }
 main#content #main_section section.album_section:last-of-type {
-  margin-bottom: 0%;
+  margin: 0 0 1em 0;
 }
 main#content #main_section section.album_section {
   padding: 0;
@@ -1553,7 +1553,6 @@ main#content #results_container .results-large ul.audio-tracklist li span.trackb
 main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
   width: 20%;
   text-align: center;
-  font-size: 0.7em;
 }
 main#content .text_box {
   height: 140px;
@@ -1885,7 +1884,7 @@ footer .social-btns ul li {
 }
 footer .social-btns ul li a {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1em;
   text-decoration: none;
   color: #ECAC00;
   display: block;
@@ -1922,7 +1921,7 @@ footer ul#inner_footer li a {
   line-height: 45px;
   color: #FFF;
   display: block;
-  font-size: 0.85em;
+  font-size: 0.8em;
 }
 footer ul#inner_footer li a:hover {
   color: #ECAC00;
@@ -1930,141 +1929,39 @@ footer ul#inner_footer li a:hover {
 
 /*1920*/
 @media only screen and (min-width: 1920px) {
-  .fancybox-overlay .fancybox-skin {
-    box-shadow: 0 0 50px #3A3A3A;
-  }
-
   button#mobile-toggle {
     display: none;
-    height: 45px;
-    width: 45px;
-    color: #000;
-    background-color: #FFF;
-    z-index: 150;
-    outline: none;
-    border: none;
-    -webkit-transition: all 0.2s ease-in 0s;
-    -moz-transition: all 0.2s ease-in 0s;
-    -o-transition: all 0.2s ease-in 0s;
-    transition: all 0.2s ease-in 0s;
-  }
-  button#mobile-toggle:hover {
-    background-color: #FFF;
-    color: #000;
-  }
-  button#mobile-toggle:active,
-button#mobile-toggle :focus {
-    color: #FFF;
-    background-color: #000;
   }
 
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
-    width: 90%;
-    height: auto;
+    width: 86%;
   }
 
   #copyr {
-    margin: auto;
-    color: #FFF;
-    font-size: 0.6em;
-    width: 100%;
-    letter-spacing: 0.1em;
+    font-size: 0.5em;
   }
 
   header {
-    height: 75px;
     clear: both;
-    display: flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    justify-content: flex-start;
-  }
-  header span#site-logo {
-    width: 65%;
-    height: 40px;
-    padding-left: 1%;
-    flex: 1 0 auto;
   }
   header span#site-logo p#logo {
-    margin: 0;
-    font-size: 2.1em;
-    width: 100%;
-    height: auto;
-    font-weight: bold;
-    text-shadow: 1px 1px #181818;
-    line-height: 40px;
-    display: block;
-    float: left;
-    color: #ECAC00;
+    font-size: 1.75em;
   }
   header span#site-logo p#logo span {
     height: 100%;
-    margin: 0;
-    color: #FFF;
-    text-align: left;
-    display: inline-block;
   }
   header span#site-logo p#logo span:last-of-type {
     height: 100%;
-    color: #666666;
-    display: inline-block;
-    margin: 0 0.05em;
   }
   header span#site-logo p.site-description {
-    float: none;
-    display: block;
-    width: 100%;
-    letter-spacing: 0.1em;
-    text-shadow: 1px 1px #181818;
-    line-height: 20px;
-    font-size: 0.7em;
-    font-weight: normal;
-    padding: 0;
-    clear: left;
-    color: #EBAB00;
-    margin: 0;
+    font-size: 0.65em;
   }
   header .social {
-    height: 40px;
-    width: 35%;
-    text-align: center;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-  }
-  header .social ul#social {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  header .social ul#social li.social-item {
-    width: 10%;
-    height: auto;
-    margin-right: 0.2em;
-    text-align: center;
-    flex: 1 0 auto;
+    width: 32%;
+    display: block;
   }
   header .social ul#social li.social-item a {
-    background-color: #3A3A3A;
-    margin: 0;
-    font-size: 0.9em;
-    text-decoration: none;
-    color: #FFF;
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 40px;
-  }
-  header .social ul#social li.social-item a:hover {
-    color: #3A3A3A;
-    background-color: #ECAC00;
+    font-size: 1em;
   }
 
   nav#mannering_nav {
@@ -2075,10 +1972,10 @@ button#mobile-toggle :focus {
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    display: none;
+    position: unset;
   }
   nav#mannering_nav #mannering_mobile_inner_nav {
-    display: block;
+    display: none;
   }
   nav#mannering_nav #mannering_inner_nav {
     width: 100%;
@@ -2118,1438 +2015,200 @@ button#mobile-toggle :focus {
 
   main#content {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    min-height: 600px;
-    /*front-page slider*/
-    /*contact-wide Register Form*/
     /* video player light box */
   }
   main#content #main_section {
-    color: #FFF;
-    height: auto;
-    width: 100%;
-    padding-top: 0.5em;
-    margin: 0;
-  }
-  main#content #main_section h1 {
-    font-size: 1.4em;
-  }
-  main#content #main_section #add-cat-link {
-    width: 100%;
-    display: block;
-    line-height: 35px;
-  }
-  main#content #main_section form#edit-cat {
-    width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3A3A3A;
-  }
-  main#content #main_section form#edit-cat label {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #FFF;
-  }
-  main#content #main_section form#edit-cat input[type=text] {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  main#content #main_section form#edit-cat input[type=submit] {
-    margin: 1em auto;
-    display: block;
-    width: 50%;
-  }
-  main#content #main_section form#cat-form {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
-  main#content #main_section form#cat-form label {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  main#content #main_section form#cat-form input[type=text] {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  main#content #main_section form#cat-form input[type=submit] {
-    margin: 1em auto;
-    display: block;
-    width: 70%;
-  }
-  main#content #main_section blockquote {
-    width: 50%;
-    margin: 0;
-    display: block;
-    float: left;
-    font-size: 1em;
-    background-color: #FFF;
-    color: #181818;
-    padding: 0.5em;
-  }
-  main#content #main_section blockquote p {
-    background-color: #FFF;
-    color: #181818;
-    font-size: 1em;
-    font-style: italic;
-    min-height: 50px;
-    padding: 0;
-  }
-  main#content #main_section blockquote form {
-    padding: 1em 0;
-  }
-  main#content #main_section blockquote form input[type=submit] {
-    width: 30%;
-  }
-  main#content #main_section div.reviews {
-    min-height: 250px;
-  }
-  main#content #main_section #review_pagination {
-    display: block;
-    clear: both;
-    line-height: 45px;
+    margin: 0 0 1em 0;
   }
   main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
+    margin: 0 0 1em 0;
   }
   main#content #main_section section.album_section {
-    padding: 0;
-    margin: 0 0 1em 0;
-    width: 100%;
-    height: auto;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
   main#content #main_section section.album_section h2 {
-    align-self: center;
-    font-size: 1.4em;
+    font-size: 1.35em;
     margin: 0.5em 0;
-    width: 100%;
-    color: #FFF;
     line-height: 40px;
-    text-align: center;
-    background-color: #181818;
   }
   main#content #main_section section.album_section .grid_1_of_5 {
-    width: 18%;
+    width: 19%;
     margin: 0.25em;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    padding: 0;
-    text-align: center;
-    height: auto;
-    min-height: auto;
-    flex: 1 0 auto;
+    flex: 0 0 auto;
   }
   main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
     border: 2px solid #3A3A3A;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    width: auto;
-    margin: 3% auto;
-    cursor: pointer;
   }
   main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    position: relative;
-    z-index: 0;
-    display: block;
     top: -40px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    width: 100%;
-    margin-top: 0.3em;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform {
     width: 100%;
     padding: 8px 10px;
-    background-color: #333333;
-    border: none;
-    color: #FFF;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 0.9em;
-    -webkit-border-radius: 0px 0px 3px 3px;
-    -moz-border-radius: 0px 0px 3px 3px;
-    -o-border-radius: 0px 0px 3px 3px;
-    border-radius: 0px 0px 3px 3px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
     background-color: #EBAB00;
-    text-decoration: none !important;
-    color: #FFF;
-    width: 100%;
-    font-weight: bold;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    line-height: 2.4em;
-    margin: 0;
-    background-color: #2b2b2b;
-    padding: 0;
-    font-size: 0.8em;
-    color: #FFF;
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 0.1em;
+    font-size: 0.85em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    background-color: #666666;
-    line-height: 1.7em;
-    margin: 0;
-    font-size: 0.7em;
-    color: #FFF;
-    z-index: 1;
-    position: relative;
-    top: 0;
+    font-size: 0.8em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    z-index: 1;
-    position: relative;
-    line-height: 1.7em;
-    margin: 0;
+    font-size: 0.8em;
+  }
+  main#content #main_section blockquote {
+    width: 90%;
+  }
+  main#content #main_section blockquote p {
     font-size: 1em;
-    color: #FFF;
-    background-color: #2b2b2b;
-    padding: 0px;
-    font-weight: normal;
-    z-index: 1;
-    position: relative;
-    top: 0;
   }
-  main#content #main_section section.album_section .grid_1_of_5:hover {
-    cursor: pointer;
-  }
-  main#content #main_section section.album_section .grid_1_of_5:hover img.images_1_of_5 {
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    border: 2px solid #ECAC00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5:hover form#frontform {
-    top: 0;
+  main#content #main_section #review_pagination {
+    font-size: 0.9em;
   }
   main#content #main_section ul.categories {
-    display: block;
-    list-style: none;
-    width: 100%;
-    margin: 1em auto;
-  }
-  main#content #main_section ul.categories li {
-    width: 98%;
-    height: auto;
-    margin: 0.25em auto;
+    width: 40%;
   }
   main#content #main_section ul.categories li a {
-    line-height: 45px;
-    display: block;
-    text-align: center;
-    color: #FFF;
-    background-color: #3A3A3A;
-  }
-  main#content #main_section ul.categories li a:hover {
-    background-color: #ECAC00;
-    color: #3A3A3A;
-    cursor: pointer;
+    line-height: 50px;
+    font-size: 1.1em;
   }
   main#content #main_section #review-edit {
-    width: 40%;
-    height: auto;
-    color: #FFF;
-    padding: 2%;
-    display: block;
-    background-color: #2b2b2b;
-    margin: auto;
+    width: 70%;
   }
   main#content #main_section #review-edit textarea {
-    width: 100%;
-    border: 2px solid #666666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    display: block;
-    padding: 0;
     font-size: 1em;
-    margin: 0.5em 0;
   }
   main#content #main_section #review-edit input[type=checkbox] {
-    width: 15px;
-    display: block;
-    height: 35px;
-    float: right;
-    margin-right: 0.5em;
+    margin-right: 0.25em;
   }
   main#content #main_section #review-edit label {
-    line-height: 30px;
-    height: 30px;
-    width: 80%;
     font-size: 0.9em;
   }
   main#content #main_section #review-edit input[type=submit] {
-    background-color: #ECAC00;
-    margin: 0 auto;
-    letter-spacing: 0.1em;
-    width: 50%;
-    height: 40px;
-    color: #FFF;
-    font-size: 1.1em;
-    box-shadow: none;
-    display: block;
+    width: 40%;
+    font-size: 1em;
   }
   main#content #main_section #review-edit input[type=submit]:hover {
     margin: 0 auto;
-    color: #3A3A3A;
-    font-weight: bold;
-  }
-  main#content #main_section table {
-    width: 80%;
-    margin: 1em auto;
-  }
-  main#content #main_section table thead {
-    height: auto;
-    width: 1%;
-    background-color: #3A3A3A;
-  }
-  main#content #main_section table thead th {
-    text-indent: 0.5em;
-    text-align: left;
-    line-height: 50px;
-  }
-  main#content #main_section table tbody tr {
-    height: auto;
-    background-color: #FFF;
-  }
-  main#content #main_section table tbody tr td {
-    text-indent: 0.5em;
-    color: #3A3A3A;
-  }
-  main#content #main_section table tbody tr td a {
-    display: block;
-    line-height: 40px;
   }
   main#content #summary {
-    height: 50px;
-    width: 100%;
-    background-color: #c90;
     display: none;
   }
   main#content h1 {
-    font-size: 1.4em;
-    width: 100%;
-    color: #FFF;
-    height: auto;
-    line-height: 45px;
-    text-align: center;
-    margin: 0;
-    display: block;
-    font-weight: normal;
+    font-size: 1.3em;
   }
   main#content h2 {
-    font-size: 1.3em;
-    margin: 0;
-    width: 100%;
-    color: #FFF;
-    height: auto;
-    line-height: 45px;
-    text-align: left;
-    padding: 0;
-    font-weight: normal;
+    font-size: 1.2em;
   }
   main#content p {
-    font-size: 0.9em;
-    line-height: 1.6em;
-    margin: 0;
-    display: block;
-    color: #FFF;
-    padding: 0.5em;
+    font-size: 0.85em;
   }
   main#content p.headp {
-    font-weight: bold;
-    font-size: 1em;
+    font-size: 0.85em;
   }
   main#content ul {
     font-size: 1em;
-    line-height: 1.5em;
     margin: 2% 0;
-    width: 100%;
-    color: #FFF;
-    display: block;
   }
   main#content ul li {
     line-height: 25px;
   }
   main#content .main_img {
-    margin: 0px 1em 0.2em 0.2em;
     width: 15%;
-    height: auto;
-    float: right;
   }
   main#content .refresh_link {
-    font-size: 0.9em;
-    text-align: left;
-    color: #FFF;
-    margin: 0 auto;
-    width: 100%;
-    line-height: 40px;
-    float: left;
+    font-size: 0.85em;
   }
   main#content .refresh_link a {
-    text-decoration: none;
-    color: #FFF;
-    display: block;
-    margin: 0 auto;
-    width: 98%;
     line-height: 40px;
   }
   main#content .refresh_link a:hover {
     color: #ECAC00;
-    cursor: pointer;
   }
   main#content .aboutpage_img {
     width: 14%;
-    margin: 0 1% 0 0;
-    float: left;
   }
   main#content #slider {
-    width: 100%;
-    margin: 1em 0 0 0;
-    display: block;
-    background-color: #FFF;
-    height: 350px;
-  }
-  main#content #slider img {
-    height: 100%;
+    height: auto;
   }
   main#content #results_container {
     margin: 0;
     padding: 0;
-    height: auto;
-    display: inline-block;
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     /*results.show page*/
   }
   main#content #results_container .results {
-    height: auto;
-    padding: 0.25em;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    margin: 0.25em;
-    width: 32.2%;
-    display: block;
-    float: left;
-    font-weight: normal;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    width: 19%;
   }
-  main#content #results_container .results figure.product-info {
-    /* Album image*/
-    /* Album artist and name*/
-  }
-  main#content #results_container .results figure.product-info img {
+  main#content #results_container .results figure.results-info img {
     width: auto;
-    margin: 1em auto;
-    display: block;
   }
-  main#content #results_container .results figure.product-info figcaption {
+  main#content #results_container .results figure.results-info figcaption.results-text ul {
     width: 100%;
   }
-  main#content #results_container .results figure.product-info figcaption ul {
+  main#content #results_container .results figure.results-info figcaption.results-text ul li {
     width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    display: block;
-    padding: 0;
-    color: #FFF;
-    height: auto;
-    font-weight: normal;
-    background-color: #2b2b2b;
-    width: 100%;
-    line-height: 25px;
-    margin-bottom: 0.2em;
-    text-align: center;
-  }
-  main#content #results_container .results figure.product-info:hover img {
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -o-transform: scale(1.01);
-    border: 1px solid #ECAC00;
-    cursor: pointer;
-  }
-  main#content #results_container .results form#to_album_btn {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 0.5em;
-    padding: 0;
+    font-size: 0.65em;
   }
   main#content #results_container .results input.to_album_btn {
-    display: block;
-    background-color: #ECAC00;
-    margin: 0;
-    width: 100%;
     height: 40px;
-    line-height: unset;
-    color: #FFF;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    padding: 0;
-    text-align: center;
   }
   main#content #results_container .results input.to_album_btn:hover {
-    background-color: #3B3B3F;
     text-decoration: none !important;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
   }
-  main#content #results_container .results-large {
-    height: auto;
-    min-height: 240px;
-    padding: 0;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    margin: 0.5em;
-    width: 100%;
-    display: block;
-    font-weight: normal;
-  }
-  main#content #results_container .results-large figure.product-info {
+  main#content #results_container .results-large figure.results-info {
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    position: relative;
-  }
-  main#content #results_container .results-large figure.product-info a {
-    width: 14%;
-    padding-right: 0.5em;
-    order: 0;
-  }
-  main#content #results_container .results-large figure.product-info a img {
-    vertical-align: top;
-  }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 86%;
-    display: inline-block;
-    order: 1;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    display: inline-block;
-    padding: 0;
-    color: #FFF;
-    line-height: 35px;
-    height: 35px;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 0.8em;
-    background-color: #2b2b2b;
-    width: 100%;
-    margin-bottom: 0.2em;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
-    width: 85%;
-    text-indent: 0.5em;
-    float: left;
-    display: block;
-    line-height: 35px;
-    height: 35px;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span a {
-    padding: 0;
-    margin: 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
-    text-indent: 0.5em;
-    width: 14%;
-    display: block;
-    float: left;
-    line-height: 35px;
-    height: 35px;
-    background-color: #FFF;
-    color: #181818;
-    border-right: solid 1px #333333;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
-    margin: 0.5em 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
-    height: auto;
-  }
-  main#content #results_container .results-large figure.product-info:hover img {
-    cursor: pointer;
-  }
-  main#content #results_container .results-large div.audio_controls {
-    height: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-  }
-  main#content #results_container .results-large div.audio_controls h1.trackName {
-    line-height: 60px;
-    text-indent: 0;
-    width: 100%;
-    margin: 0;
-    display: block;
-    height: auto;
-    padding: 0;
-    color: #FFF;
-    font-size: 1.3m;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers {
-    height: auto;
-    display: flex;
-    margin-bottom: 0.5em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
-    flex: 0 1 auto;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 2em;
-    display: block;
-    height: 100%;
-    text-align: center;
-    width: 98%;
-    line-height: 50px;
-    background-color: #181818;
-    color: #FFF;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 2.1em;
-    background-color: #FFF;
-    color: #181818;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
-    width: 70%;
-    height: 50px;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress div.load_progress {
-    width: 100%;
-    background-color: #ECAC00;
-    height: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress div.play_progress {
-    width: 100%;
-    cursor: pointer;
-    background-color: #ECAC00;
-    height: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
-main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
-    font-family: monospace;
-    width: 15%;
-    line-height: 50px;
-    letter-spacing: 0.15em;
-    text-align: center;
-    background-color: #181818;
-    text-shadow: none;
-    font-size: 1.8em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 40%;
-    height: 50px;
-    display: flex;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 88%;
-    height: 100%;
-    background-color: #3b3b3b;
-    display: flex;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 96%;
-    display: block;
-    background-color: #FFF;
-    margin: 0.5em;
-    height: auto;
-    cursor: pointer;
-    position: relative;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 12%;
-    height: 100%;
-    background-color: #181818;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    display: block;
-    width: 100%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
-    display: block;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg:hover {
-    cursor: pointer;
-  }
-  main#content #results_container .results-large span.result_label {
-    background-color: #3b3b3b;
-    color: #FFF;
-    width: 100%;
-    display: block;
-    margin: 0;
-    line-height: 35px;
-    text-indent: 1em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist {
-    margin: 0;
-    padding: 0;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li {
-    display: flex;
-    line-height: 40px;
-    margin-bottom: 0.5em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 10%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 65%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
-    background-color: #181818;
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
-    text-align: center;
-    display: block;
-    line-height: 40px;
-    font-size: 190%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
-    background-color: #FFF;
-    color: #181818;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
-    text-align: center;
-  }
-  main#content .text_box {
-    height: 140px;
-    width: 98%;
-    background-color: #333333;
-    margin: auto;
-  }
-  main#content .text_box h1 {
-    font-size: 1.1em;
-    color: #FFF;
-    height: 30px;
-    line-height: 30px;
-    text-align: left;
-    font-weight: bold;
-  }
-  main#content .text_box a {
-    color: #ECAC00;
-    font-size: 0.75em;
-    padding: 0px;
-    text-align: center;
-    width: 20%;
-    background-color: #333333;
-    line-height: 25px;
-    display: block;
-  }
-  main#content .text_box a:hover {
-    color: #333333;
-    background-color: #ECAC00;
-    font-weight: bold;
-  }
-  main#content .text_box p {
-    color: #FFF;
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
-  }
-  main#content .text_box .textbox_img {
-    margin: 1em;
-    float: right;
-    display: block;
-  }
-  main#content .container {
-    width: 100%;
-    margin: 5px auto;
-    display: block;
-    height: auto;
-  }
-  main#content #registerform {
-    width: 40%;
-    height: auto;
-    color: #FFF;
-    padding: 5%;
-    display: block;
-    background-color: #2b2b2b;
-    margin: auto;
-  }
-  main#content #registerform input[type=text],
-main#content #registerform input[type=email],
-main#content #registerform input[type=password] {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    width: 100%;
-    line-height: 35px;
-    height: 35px;
-    font-size: 0.95em;
-    display: block;
-  }
-  main#content #registerform label {
-    line-height: 30px;
-    height: 30px;
-  }
-  main#content #registerform #register_btn {
-    background-color: #ECAC00;
-    margin: 0 auto;
-    letter-spacing: 0.1em;
-    width: 50%;
-    height: 40px;
-    color: #FFF;
-    font-size: 1em;
-    box-shadow: none;
-    display: block;
-  }
-  main#content #registerform #register_btn:hover {
-    color: #3A3A3A;
-    font-weight: bold;
-  }
-  main#content .regformlink {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
-    background-color: unset;
-  }
-  main#content .regformlink a {
-    display: inline-block;
-    color: #FFF;
-  }
-  main#content .regformlink a:hover {
-    color: #ECAC00;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  main#content #contact-page-form {
-    width: 40%;
-    height: auto;
-    color: #FFF;
-    padding: 1.5em;
-    float: left;
-    background-color: #2b2b2b;
-    margin-bottom: 5%;
-    margin-right: 5%;
-  }
-  main#content #contact-page-form label.error,
-main#content #contact-page-form label.notice,
-main#content #contact-page-form label.success {
-    padding: 0.8em;
-    margin-bottom: 1em;
-    border: 2px solid #ddd;
-    width: 200px;
-    position: absolute;
-    left: 41%;
-    top: 350px;
-  }
-  main#content #contact-page-form .error {
-    background: #FFF;
-    color: #297f10;
-    border-color: #297f10;
-    width: 100%;
-  }
-  main#content #contact-page-form .notice {
-    background: #FFF;
-    color: #514721;
-    border-color: #ffd324;
-    width: 100%;
-  }
-  main#content #contact-page-form .success {
-    background: #e6efc2;
-    color: #264409;
-    border-color: #c6d880;
-    width: 100%;
-  }
-  main#content #contact-page-form label {
-    display: block;
-    line-height: 35px;
-  }
-  main#content #contact-page-form input[type=text],
-main#content #contact-page-form input[type=email] {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    padding: 0.2em;
-    height: 35px;
-    font-size: 0.95em;
-    width: 100%;
-    display: block;
-  }
-  main#content #contact-page-form select {
-    width: 100%;
-    border: 2px solid #666666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 0.9em;
-    height: 40px;
-  }
-  main#content #contact-page-form textarea {
-    width: 100%;
-    border: 2px solid #666666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    display: block;
-    padding: 0;
-    font-size: 0.95em;
-  }
-  main#content #contact-page-form #contact_btn {
-    background-color: #ECAC00;
-    margin: 0 auto;
-    letter-spacing: 0.1em;
-    width: 50%;
-    height: 35px;
-    color: #3A3A3A;
-    font-size: 1.1em;
-    box-shadow: none;
-    display: block;
-  }
-  main#content #contact-page-form #contact_btn:hover {
-    margin: 0 auto;
-    color: #FFF;
-    background-color: #3A3A3A;
-    font-weight: bold;
-  }
-  main#content address#contact-details {
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 2% 0;
-    width: 50%;
-    color: #FFF;
-    float: left;
-    display: block;
-  }
-  main#content address#contact-details p {
-    line-height: 35px;
-  }
-  main#content section#sidebar_gallery {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    height: auto;
-    display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: flex-start;
     align-items: center;
-  }
-  main#content section#sidebar_gallery h1 {
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
-    line-height: 40px;
-    text-align: center;
-    background-color: #3B3B3F;
-    align-self: center;
-  }
-  main#content section#sidebar_gallery figure.video-item {
     position: relative;
-    overflow: hidden;
-    border: 3px solid #3B3B3F;
-    backface-visibility: hidden;
-    width: 19.3%;
-    margin: 0.25em;
-    height: 150px;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    gap: 1em;
   }
-  main#content section#sidebar_gallery figure.video-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  main#content section#sidebar_gallery figcaption.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(51, 51, 51, 0.75);
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
-    background-color: #ECAC00;
-    width: 70%;
-    color: #FFF;
-    border: none;
-    font-size: 0.85em;
-    cursor: pointer;
-    float: none;
-    margin: 0 auto;
-    text-decoration: none;
-    display: block;
-    line-height: 40px;
-    font-weight: normal;
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
-    background-color: #3b3b3b;
-    color: #FFF;
-    font-size: 0.95em;
-    font-weight: normal;
-  }
-  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
-    width: 100%;
-    font-size: 1em;
-    margin: 0.5em 0;
-    line-height: 40px;
-    background-color: unset;
-  }
-  main#content section#sidebar_gallery figcaption.overlay p.video_text {
-    color: #3B3B3F;
-    font-size: 0.9em;
-    line-height: 1.5em;
-  }
-  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
-    opacity: 1;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    cursor: pointer;
-  }
-  main#content .sidebar_content_box {
-    padding: 0px;
-    margin-bottom: 20px;
-    height: auto;
-    width: 100%;
-  }
-  main#content .search_error {
-    display: none;
-  }
-  main#content .show_error {
-    display: block;
-    background: #FFF;
-    color: #000;
-    padding: 1em;
-    margin: auto 1em;
-    width: auto;
-    width: 65%;
-    text-align: center;
-  }
-  main#content form#searchForm {
-    margin: 5% auto;
-    height: auto;
-    width: 75%;
-    padding: 1em;
-    display: block;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    font-family: "Lato", sans-serif;
-  }
-  main#content form#searchForm fieldset {
-    padding: 1em;
-    border: 1px solid #666666;
-  }
-  main#content form#searchForm legend {
-    width: 50%;
-    color: #FFF;
-    text-align: center;
-    line-height: 30px;
-    margin: 0;
-    display: block;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    border: 1px solid #666666;
-  }
-  main#content form#searchForm label {
-    font-size: 1em;
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  main#content form#searchForm ::placeholder {
-    color: #ccc;
-    text-indent: 0.25em;
-    font-family: "Lato", sans-serif;
-  }
-  main#content form#searchForm input[type=text] {
-    border: 1px solid #666666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    background: #FFF;
-    display: inline-block;
-    padding: 0;
-    height: 35px;
-    font-size: 1em;
-    margin: 0;
-    width: 26%;
-    color: #181818;
-    line-height: 35px;
-  }
-  main#content form#searchForm select {
-    border: 2px solid #666666;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    background: #FFF;
-    display: inline-block;
-    padding: 0;
-    height: 35px;
-    font-size: 1em;
-    margin: 0;
-    width: 20%;
-    line-height: 35px;
-  }
-  main#content form#searchForm input#searchBtn {
-    font-family: "Lato", sans-serif;
-    letter-spacing: 0.1em;
-    width: 25%;
-    color: #FFF;
-    font-size: 1em;
-    display: inline-block;
-    border: 2px solid #2b2b2b;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #ECAC00;
-    -webkit-appearance: none;
-    font-weight: normal;
-  }
-  main#content form#searchForm input#searchBtn:hover {
-    letter-spacing: 0.12em;
-    background-color: #FFF;
-    color: #ECAC00;
-    font-weight: bold;
-    height: 35px;
-  }
-
-  footer {
-    background-color: #3A3A3A;
-    clear: both;
-    height: 290px;
-    width: 100%;
-    margin: 0;
-    padding: 0.5em;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-  }
-  footer .social-btns {
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    float: right;
-    width: 10%;
-    display: block;
-  }
-  footer .social-btns ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  footer .social-btns ul li {
-    width: 100%;
-    float: left;
-    display: block;
-    font-size: 1em;
-    height: 100%;
-  }
-  footer .social-btns ul li a {
-    margin: 0;
-    font-size: 1.3em;
-    text-decoration: none;
-    color: #ECAC00;
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 50px;
-  }
-  footer .social-btns ul li a i {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 50px;
-  }
-  footer .social-btns ul li a:hover {
-    color: #3A3A3A;
-    background-color: #ECAC00;
-  }
-  footer ul#inner_footer {
-    width: 25%;
-    height: 100%;
-    margin: 0;
-  }
-  footer ul#inner_footer li {
-    width: 100%;
-    text-align: left;
-    display: block;
-    line-height: 45px;
-  }
-  footer ul#inner_footer li a {
-    width: 100%;
-    height: auto;
-    text-indent: 0.5em;
-    line-height: 45px;
-    color: #FFF;
-    display: block;
-    font-size: 0.85em;
-  }
-  footer ul#inner_footer li a:hover {
-    color: #ECAC00;
-  }
-}
-/*1440*/
-@media only screen and (min-width: 1440px) and (max-width: 1919px) {
-  #wrapper {
-    width: 90%;
-  }
-
-  header span#site-logo {
-    width: 65%;
-  }
-  header span#site-logo p#logo {
-    font-size: 2em;
-  }
-  header span#site-logo p#logo span {
-    height: 100%;
-  }
-  header span#site-logo p#logo span:last-of-type {
-    height: 100%;
-  }
-  header span#site-logo p.site-description {
-    font-size: 0.7em;
-  }
-  header .social {
-    width: 35%;
-  }
-  header .social ul#social {
-    width: 100%;
-  }
-  header .social ul#social li.social-item a {
-    font-size: 0.85em;
-  }
-  header .social ul#social li.social-item a:hover {
-    background-color: #FFF;
-  }
-
-  nav#mannering_nav #mannering_inner_nav {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li a {
-    font-size: 0.9em;
-  }
-
-  main#content {
-    width: 100%;
-    /*  GRID OF Five   == */
-    /*contact-wide Register Form*/
-    /* video player light box */
-  }
-  main#content #main_section {
-    height: auto;
-  }
-  main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
-  }
-  main#content #main_section section.album_section {
-    margin: 0 auto;
-  }
-  main#content #main_section section.album_section h2 {
-    font-size: 1.3em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    margin-top: 0.3em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.85em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.75em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.7em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.8em;
-  }
-  main#content #summary {
-    display: none;
-  }
-  main#content h1 {
-    font-size: 1.4em;
-  }
-  main#content h2 {
-    font-size: 1.3em;
-  }
-  main#content p {
-    font-size: 0.85em;
-  }
-  main#content p.headp {
-    font-size: 1em;
-  }
-  main#content ul {
-    font-size: 1em;
-    margin: 2% 0;
-  }
-  main#content ul li {
-    line-height: 25px;
-  }
-  main#content .main_img {
+  main#content #results_container .results-large figure.results-info a {
     width: 15%;
+    order: 0;
   }
-  main#content .refresh_link {
-    font-size: 0.9em;
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
   }
-  main#content .refresh_link a {
-    width: 98%;
-  }
-  main#content .refresh_link a:hover {
-    color: #ECAC00;
-  }
-  main#content .aboutpage_img {
-    width: 14%;
-  }
-  main#content #slider {
-    height: 340px;
-  }
-  main#content #results_container {
-    margin: 0;
-    padding: 0;
-    /*results.show page*/
-  }
-  main#content #results_container .results figure.product-info img {
-    width: auto;
-  }
-  main#content #results_container .results figure.product-info figcaption ul {
-    width: 100%;
-  }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    font-size: 0.9em;
-  }
-  main#content #results_container .results input.to_album_btn {
-    height: 40px;
-    line-height: 40px;
-  }
-  main#content #results_container .results input.to_album_btn:hover {
-    text-decoration: none !important;
-  }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 86%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    font-size: 0.8em;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
     width: 85%;
   }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
-    width: 14%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul {
+    width: 100%;
     margin: 0.5em 0;
   }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
+    width: 14%;
+    text-indent: 0.5em;
   }
   main#content #results_container .results-large div.audio_controls h1.trackName {
     font-size: 1.3em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
+    width: 20%;
     cursor: pointer;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
     width: 70%;
@@ -3563,21 +2222,22 @@ main#content #contact-page-form input[type=email] {
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
+    font-size: 1.3em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 45%;
+    width: 100%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 90%;
+    width: 80%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
     width: 96%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 10%;
+    width: 20%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
     display: block;
@@ -3589,16 +2249,15 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     margin: 0;
   }
   main#content #results_container .results-large ul.audio-tracklist li {
-    margin-bottom: 0.5em;
+    font-size: 0.9em;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 10%;
+    width: 13%;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 65%;
+    width: 60%;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
-    background-color: #181818;
     width: 15%;
     cursor: pointer;
   }
@@ -3609,7 +2268,7 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     background-color: #FFF;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
+    width: 12%;
   }
   main#content .text_box {
     height: 140px;
@@ -3620,7 +2279,6 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content .text_box a {
     font-size: 0.7em;
-    width: 20%;
   }
   main#content .text_box p {
     letter-spacing: 0.1em;
@@ -3632,57 +2290,85 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     margin: 5px auto;
   }
   main#content #registerform {
-    width: 45%;
+    width: 55%;
   }
   main#content #registerform input[type=text],
 main#content #registerform input[type=email],
 main#content #registerform input[type=password] {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   main#content #registerform label {
+    font-size: 0.9em;
     height: 30px;
   }
   main#content #registerform #register_btn {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content #registerform #register_btn:hover {
     margin: 0 auto;
   }
   main#content #contact-page-form {
-    width: 45%;
+    width: 100%;
+    padding: 2.5%;
+    float: none;
+  }
+  main#content #contact-page-form .error {
+    width: 80%;
+  }
+  main#content #contact-page-form .notice {
+    width: 80%;
+  }
+  main#content #contact-page-form .success {
+    width: 80%;
   }
   main#content #contact-page-form a {
     text-decoration: none;
+    line-height: 1.5em;
   }
   main#content #contact-page-form a:hover {
     text-decoration: none;
+    line-height: 1.5em;
   }
   main#content #contact-page-form input[type=text] {
-    font-size: 0.9em;
-  }
-  main#content #contact-page-form input[type=email] {
-    font-size: 0.9em;
-  }
-  main#content #contact-page-form textarea {
-    font-size: 0.9em;
-  }
-  main#content #contact-page-form select [type=text] {
-    font-size: 0.9em;
-  }
-  main#content #contact-page-form #contact_btn {
     font-size: 1em;
   }
+  main#content #contact-page-form input[type=email] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form textarea {
+    font-size: 1em;
+  }
+  main#content #contact-page-form select [type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
+  }
   main#content address#contact-details {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
   }
   main#content address#contact-details p {
-    line-height: 35px;
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
   }
   main#content section#sidebar_gallery h1 {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   main#content section#sidebar_gallery figure.video-item {
-    height: 140px;
+    width: 19%;
   }
   main#content section#sidebar_gallery figure.video-item img {
     display: block;
@@ -3709,14 +2395,13 @@ main#content #registerform input[type=password] {
   main#content .sidebar_content_box {
     padding: 0px;
     margin-bottom: 20px;
-    height: auto;
-    width: 100%;
   }
   main#content .search_error {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   main#content form#searchForm {
-    width: 85%;
+    padding: 1%;
+    width: 56%;
   }
   main#content form#searchForm legend {
     font-size: 1em;
@@ -3729,13 +2414,20 @@ main#content #registerform input[type=password] {
     text-indent: 0.25em;
   }
   main#content form#searchForm input[type=text] {
-    font-size: 1em;
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
   }
   main#content form#searchForm select {
-    font-size: 1em;
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
   }
   main#content form#searchForm input#searchBtn {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
   }
   main#content form#searchForm input#searchBtn:hover {
     letter-spacing: 0.12em;
@@ -3748,7 +2440,7 @@ main#content #registerform input[type=password] {
     width: 100%;
   }
   footer .social-btns ul li a {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   footer .social-btns ul li a i {
     line-height: 50px;
@@ -3757,28 +2449,28 @@ main#content #registerform input[type=password] {
     color: #FFF;
   }
   footer ul#inner_footer li a {
-    font-size: 0.85em;
+    font-size: 0.75em;
   }
 }
-/*1280*/
-@media only screen and (min-width: 1280px) and (max-width: 1339px) {
+/*1440*/
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+  button#mobile-toggle {
+    display: none;
+  }
+
   #wrapper {
-    width: 94%;
+    width: 86%;
   }
 
   #copyr {
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 
-  .fancybox-custom .fancybox-skin {
-    box-shadow: 0 0 50px #222;
-  }
-
-  header span#site-logo {
-    width: 65%;
+  header {
+    clear: both;
   }
   header span#site-logo p#logo {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   header span#site-logo p#logo span {
     height: 100%;
@@ -3787,105 +2479,142 @@ main#content #registerform input[type=password] {
     height: 100%;
   }
   header span#site-logo p.site-description {
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
   header .social {
-    width: 35%;
-  }
-  header .social ul#social {
-    width: 100%;
+    width: 32%;
+    display: block;
   }
   header .social ul#social li.social-item a {
-    font-size: 0.8em;
-  }
-  header .social ul#social li.social-item a:hover {
-    color: #3B3B3F;
+    font-size: 1em;
   }
 
-  nav#mannering_nav #mannering_inner_nav {
+  nav#mannering_nav {
+    width: 100%;
     height: 40px;
+    margin-bottom: 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: unset;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    display: none;
+  }
+  nav#mannering_nav #mannering_inner_nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
+    background-color: #333333;
+    width: 14.5%;
+    margin-left: 0.2em;
     height: 40px;
+    text-align: center;
+    flex: 1 0 auto;
   }
   nav#mannering_nav #mannering_inner_nav li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    line-height: 40px;
+    background-color: #3A3A3A;
+    color: #FFF;
+    display: block;
     font-size: 0.9em;
+    font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
   }
 
   main#content {
     width: 100%;
-    /*contact-wide Register Form*/
     /* video player light box */
   }
   main#content #main_section {
-    margin: 0;
+    margin: 0 0 1em 0;
   }
   main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
+    margin: 0 0 1em 0;
   }
   main#content #main_section section.album_section {
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
-  main#content #main_section section.album_section h1 {
-    font-size: 1.2em;
+  main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    line-height: 40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
+    width: 19%;
+    margin: 0.25em;
+    flex: 0 0 auto;
   }
   main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.85em;
+    width: 100%;
+    padding: 8px 10px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
+    background-color: #EBAB00;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
     font-size: 0.8em;
   }
-  main#content #main_section ul.categories {
-    font-size: 0.8em;
-  }
-  main#content #main_section ul.categories li a {
-    line-height: 35px;
-  }
   main#content #main_section blockquote {
-    font-size: 0.8em;
+    width: 90%;
+  }
+  main#content #main_section blockquote p {
+    font-size: 1em;
   }
   main#content #main_section #review_pagination {
-    font-size: 0.8em;
-  }
-  main#content #main_section #review-edit {
-    width: 60%;
-  }
-  main#content #main_section #review-edit textarea {
-    width: 100%;
     font-size: 0.9em;
   }
+  main#content #main_section ul.categories {
+    width: 40%;
+  }
+  main#content #main_section ul.categories li a {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+  main#content #main_section #review-edit {
+    width: 70%;
+  }
+  main#content #main_section #review-edit textarea {
+    font-size: 1em;
+  }
   main#content #main_section #review-edit input[type=checkbox] {
-    margin-right: 0.5em;
+    margin-right: 0.25em;
   }
   main#content #main_section #review-edit label {
-    line-height: 35px;
-    height: 35px;
     font-size: 0.9em;
   }
   main#content #main_section #review-edit input[type=submit] {
-    width: 50%;
-    font-size: 1em;
+    width: 40%;
+    font-size: 0.9em;
   }
   main#content #main_section #review-edit input[type=submit]:hover {
     margin: 0 auto;
@@ -3894,16 +2623,16 @@ main#content #registerform input[type=password] {
     display: none;
   }
   main#content h1 {
-    font-size: 1.35em;
+    font-size: 1.3em;
   }
   main#content h2 {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   main#content p {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   main#content p.headp {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   main#content ul {
     font-size: 1em;
@@ -3916,7 +2645,7 @@ main#content #registerform input[type=password] {
     width: 15%;
   }
   main#content .refresh_link {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   main#content .refresh_link a {
     line-height: 40px;
@@ -3928,53 +2657,88 @@ main#content #registerform input[type=password] {
     width: 14%;
   }
   main#content #slider {
-    height: 340px;
+    height: auto;
   }
   main#content #results_container {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
     /*results.show page*/
   }
-  main#content #results_container .results figure.product-info img {
+  main#content #results_container .results {
+    width: 19%;
+  }
+  main#content #results_container .results figure.results-info img {
     width: auto;
   }
-  main#content #results_container .results figure.product-info figcaption ul {
-    width: 100%;
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
   }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    width: 100%;
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
     font-size: 0.8em;
   }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 86%;
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.75em;
   }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    font-size: 0.8em;
+  main#content #results_container .results input.to_album_btn {
+    height: 40px;
   }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
+  main#content #results_container .results input.to_album_btn:hover {
+    text-decoration: none !important;
+  }
+  main#content #results_container .results-large figure.results-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+  }
+  main#content #results_container .results-large figure.results-info a {
+    width: 15%;
+    order: 0;
+  }
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
     width: 85%;
   }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
     width: 14%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
-    margin: 0.5em 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
+    text-indent: 0.5em;
   }
   main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
+    width: 20%;
     cursor: pointer;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 2.1em;
+    font-size: 1.7em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
     width: 70%;
@@ -3988,21 +2752,22 @@ main#content #registerform input[type=password] {
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
+    font-size: 1.25em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 46%;
+    width: 100%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 85%;
+    width: 80%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
     width: 96%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 15%;
+    width: 20%;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
     display: block;
@@ -4013,11 +2778,14 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   main#content #results_container .results-large ul.audio-tracklist {
     margin: 0;
   }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.9em;
+  }
   main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 10%;
+    width: 13%;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 65%;
+    width: 60%;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
     width: 15%;
@@ -4030,7 +2798,7 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     background-color: #FFF;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
+    width: 12%;
   }
   main#content .text_box {
     height: 140px;
@@ -4040,7 +2808,7 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     font-size: 1em;
   }
   main#content .text_box a {
-    width: 20%;
+    font-size: 0.7em;
   }
   main#content .text_box p {
     letter-spacing: 0.1em;
@@ -4050,17 +2818,17 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content .container {
     margin: 5px auto;
-    /* Navigation - Tabs */
   }
   main#content #registerform {
-    width: 50%;
+    width: 55%;
   }
   main#content #registerform input[type=text],
 main#content #registerform input[type=email],
 main#content #registerform input[type=password] {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   main#content #registerform label {
+    font-size: 0.9em;
     height: 30px;
   }
   main#content #registerform #register_btn {
@@ -4070,7 +2838,9 @@ main#content #registerform input[type=password] {
     margin: 0 auto;
   }
   main#content #contact-page-form {
-    width: 45%;
+    width: 100%;
+    padding: 2.5%;
+    float: none;
   }
   main#content #contact-page-form .error {
     width: 80%;
@@ -4083,1243 +2853,54 @@ main#content #registerform input[type=password] {
   }
   main#content #contact-page-form a {
     text-decoration: none;
+    line-height: 1.5em;
   }
   main#content #contact-page-form a:hover {
     text-decoration: none;
+    line-height: 1.5em;
   }
   main#content #contact-page-form input[type=text] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content #contact-page-form input[type=email] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content #contact-page-form textarea {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content #contact-page-form select [type=text] {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   main#content #contact-page-form #contact_btn {
+    width: 40%;
     font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
   }
   main#content address#contact-details {
-    font-size: 0.9em;
-  }
-  main#content address#contact-details p {
-    line-height: 40px;
-  }
-  main#content section#sidebar_gallery h1 {
-    font-size: 1.2em;
-  }
-  main#content section#sidebar_gallery figure.video-item {
-    width: 24.1%;
-    height: 150px;
-  }
-  main#content section#sidebar_gallery figure.video-item img {
-    display: block;
-  }
-  main#content section#sidebar_gallery figcaption.overlay {
-    width: 100%;
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
-    font-size: 0.85em;
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
-    font-size: 0.95em;
-  }
-  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
-    font-size: 1em;
-    line-height: 40px;
-  }
-  main#content section#sidebar_gallery figcaption.overlay p.video_text {
-    font-size: 0.9em;
-  }
-  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
-    cursor: pointer;
-  }
-  main#content .sidebar_content_box {
-    padding: 0px;
-    margin-bottom: 20px;
-    height: auto;
-    width: 100%;
-  }
-  main#content .search_error {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm {
+    font-size: 0.8em;
     width: 90%;
-  }
-  main#content form#searchForm legend {
-    font-size: 1em;
-  }
-  main#content form#searchForm label {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm ::placeholder {
-    color: #181818;
-  }
-  main#content form#searchForm input[type=text] {
-    font-size: 1em;
-  }
-  main#content form#searchForm select {
-    font-size: 1em;
-  }
-  main#content form#searchForm input#searchBtn {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm input#searchBtn:hover {
-    letter-spacing: 0.12em;
-  }
-
-  footer .social-btns ul li {
-    width: 100%;
-  }
-  footer .social-btns ul li a {
-    font-size: 1.2em;
-  }
-  footer .social-btns ul li a i {
-    line-height: 50px;
-  }
-  footer .social-btns ul li a:hover {
-    color: #FFF;
-  }
-  footer ul#inner_footer li a {
-    font-size: 0.8em;
-  }
-}
-/*1024*/
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  #wrapper {
-    width: 96%;
-  }
-
-  #copyr {
-    font-size: 0.55em;
-  }
-
-  header {
-    clear: both;
-  }
-  header span#site-logo {
-    width: 65%;
-  }
-  header span#site-logo p#logo {
-    font-size: 2em;
-  }
-  header span#site-logo p#logo span {
-    height: 100%;
-  }
-  header span#site-logo p#logo span:last-of-type {
-    height: 100%;
-  }
-  header span#site-logo p.site-description {
-    font-size: 0.7em;
-  }
-  header .social {
-    width: 35%;
-  }
-  header .social ul#social {
-    width: 100%;
-  }
-  header .social ul#social li.social-item a {
-    font-size: 0.8em;
-  }
-  header .social ul#social li.social-item a:hover {
-    color: #3B3B3F;
-  }
-
-  nav#mannering_nav #mannering_inner_nav {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li a:hover {
-    font-weight: bold;
-  }
-
-  main#content {
-    width: 100%;
-    /*contact-wide Register Form*/
-    /* video player light box */
-  }
-  main#content #main_section {
-    margin: 0;
-  }
-  main#content #main_section blockquote {
-    font-size: 0.75em;
-  }
-  main#content #main_section #review_pagination {
-    font-size: 0.75em;
-  }
-  main#content #main_section ul.categories {
-    font-size: 0.75em;
-  }
-  main#content #main_section ul.categories li a {
-    line-height: 40px;
-  }
-  main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
-  }
-  main#content #main_section section.album_section {
-    margin: 0 auto;
-  }
-  main#content #main_section section.album_section h2 {
-    font-size: 1.2em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.8em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.7em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.65em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.8em;
-  }
-  main#content #summary {
-    display: none;
-  }
-  main#content h1 {
-    font-size: 1.3em;
-  }
-  main#content h2 {
-    font-size: 1.2em;
-  }
-  main#content p {
-    font-size: 0.75em;
-  }
-  main#content p.headp {
-    font-size: 0.9em;
-  }
-  main#content ul {
-    font-size: 1em;
-    margin: 2% 0;
-  }
-  main#content ul li {
-    line-height: 25px;
-  }
-  main#content .main_img {
-    width: 15%;
-  }
-  main#content .refresh_link {
-    font-size: 0.85em;
-  }
-  main#content .refresh_link a {
-    line-height: 40px;
-  }
-  main#content .refresh_link a:hover {
-    color: #ECAC00;
-  }
-  main#content .aboutpage_img {
-    width: 14%;
-  }
-  main#content #slider {
-    height: 245px;
-  }
-  main#content #results_container {
-    margin: 0;
-    padding: 0;
-    /*results.show page*/
-  }
-  main#content #results_container .results figure.product-info img {
-    width: auto;
-  }
-  main#content #results_container .results figure.product-info figcaption ul {
-    width: 100%;
-  }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    width: 100%;
-  }
-  main#content #results_container .results input.to_album_btn {
-    height: 40px;
-    line-height: 40px;
-  }
-  main#content #results_container .results input.to_album_btn:hover {
-    text-decoration: none !important;
-  }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 86%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    font-size: 0.8em;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
-    width: 85%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
-    width: 14%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
-    margin: 0.5em 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
-  }
-  main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.15em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 2em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 2.1em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
-    width: 70%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
-main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 52%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 85%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 96%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    font-size: 1.5em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
+    margin: 5% auto;
     display: block;
-  }
-  main#content #results_container .results-large span.result_label {
-    text-indent: 1em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist {
-    margin: 0;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li {
-    font-size: 0.85em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 10%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 65%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
-    line-height: 40px;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
-    background-color: #FFF;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
-  }
-  main#content .text_box {
-    height: 140px;
-    width: 98%;
-  }
-  main#content .text_box h1 {
-    font-size: 1em;
-  }
-  main#content .text_box a {
-    font-size: 0.7em;
-  }
-  main#content .text_box p {
-    letter-spacing: 0.1em;
-  }
-  main#content .text_box .textbox_img {
-    margin: 10px 30px 0px 0px;
-  }
-  main#content .container {
-    margin: 5px auto;
-  }
-  main#content #contact-page-form {
-    width: 45%;
-  }
-  main#content #contact-page-form .error {
-    width: 80%;
-  }
-  main#content #contact-page-form .notice {
-    width: 80%;
-  }
-  main#content #contact-page-form .success {
-    width: 80%;
-  }
-  main#content #contact-page-form a {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form a:hover {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form input[type=text] {
-    font-size: 0.8em;
-  }
-  main#content #contact-page-form input[type=email] {
-    font-size: 0.8em;
-  }
-  main#content #contact-page-form textarea {
-    font-size: 0.8em;
-  }
-  main#content #contact-page-form select [type=text] {
-    font-size: 0.9em;
-  }
-  main#content #contact-page-form #contact_btn {
-    font-size: 1em;
-  }
-  main#content address#contact-details {
-    font-size: 0.9em;
-  }
-  main#content address#contact-details p {
-    line-height: 40px;
-  }
-  main#content section#sidebar_gallery h1 {
-    font-size: 1.1em;
-  }
-  main#content section#sidebar_gallery figure.video-item {
-    width: 24.2%;
-    margin: 0.2em;
-  }
-  main#content section#sidebar_gallery figure.video-item img {
-    display: block;
-  }
-  main#content section#sidebar_gallery figcaption.overlay {
-    width: 100%;
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
-    font-size: 0.85em;
-  }
-  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
-    font-size: 0.95em;
-  }
-  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
-    font-size: 1em;
-    line-height: 40px;
-  }
-  main#content section#sidebar_gallery figcaption.overlay p.video_text {
-    font-size: 0.9em;
-  }
-  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
-    cursor: pointer;
-  }
-  main#content .sidebar_content_box {
-    padding: 0px;
-    margin-bottom: 20px;
-    height: auto;
-    width: 100%;
-  }
-  main#content .search_error {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm {
-    width: 94%;
-  }
-  main#content form#searchForm legend {
-    width: 55%;
-    font-size: 1em;
-  }
-  main#content form#searchForm label {
-    font-size: 1em;
-  }
-  main#content form#searchForm ::placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  main#content form#searchForm input[type=text] {
-    font-size: 1em;
-  }
-  main#content form#searchForm select {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm input#searchBtn {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm input#searchBtn:hover {
-    letter-spacing: 0.12em;
-  }
-
-  footer .social-btns ul li {
-    width: 100%;
-  }
-  footer .social-btns ul li a {
-    font-size: 1.2em;
-  }
-  footer .social-btns ul li a i {
-    line-height: 50px;
-  }
-  footer .social-btns ul li a:hover {
-    color: #FFF;
-  }
-  footer ul#inner_footer li a {
-    font-size: 0.8em;
-  }
-}
-/*980*/
-@media only screen and (min-width: 980px) and (max-width: 1023px) {
-  #wrapper {
-    width: 96%;
-  }
-
-  #copyr {
-    font-size: 0.55em;
-  }
-
-  header {
-    clear: both;
-  }
-  header span#site-logo {
-    width: 55%;
-  }
-  header span#site-logo p#logo {
-    font-size: 2em;
-  }
-  header span#site-logo p#logo span {
-    height: 100%;
-  }
-  header span#site-logo p#logo span:last-of-type {
-    height: 100%;
-  }
-  header span#site-logo p.site-description {
-    font-size: 0.7em;
-  }
-  header .social {
-    width: 32%;
-  }
-  header .social ul#social {
-    width: 100%;
-  }
-  header .social ul#social li.social-item a {
-    font-size: 0.75em;
-  }
-  header .social ul#social li.social-item a:hover {
-    color: #3B3B3F;
-  }
-
-  nav#mannering_nav #mannering_inner_nav {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li a {
-    font-size: 0.9em;
-  }
-  nav#mannering_nav #mannering_inner_nav li a:hover {
-    font-weight: bold;
-  }
-
-  main#content {
-    width: 100%;
-    /*contact-wide Register Form*/
-    /* video player light box */
-  }
-  main#content #main_section {
-    margin: 0;
-  }
-  main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
-  }
-  main#content #main_section section.album_section {
-    margin: 0 auto;
-  }
-  main#content #main_section section.album_section h2 {
-    font-size: 1.1em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 {
-    width: 31%;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.8em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.75em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.6em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.85em;
-  }
-  main#content #summary {
-    display: none;
-  }
-  main#content h1 {
-    font-size: 1.4em;
-  }
-  main#content h2 {
-    font-size: 1.3em;
-  }
-  main#content p {
-    font-size: 0.7em;
-  }
-  main#content p.headp {
-    font-size: 0.9em;
-  }
-  main#content ul {
-    font-size: 1em;
-    margin: 2% 0;
-  }
-  main#content ul li {
-    line-height: 25px;
-  }
-  main#content .main_img {
-    width: 15%;
-  }
-  main#content .refresh_link {
-    font-size: 0.85em;
-  }
-  main#content .refresh_link a {
-    line-height: 40px;
-  }
-  main#content .refresh_link a:hover {
-    color: #ECAC00;
-  }
-  main#content .aboutpage_img {
-    width: 14%;
-  }
-  main#content #slider {
-    height: 245px;
-  }
-  main#content #results_container {
-    margin: 0;
-    padding: 0;
-    /*results.show page*/
-  }
-  main#content #results_container .results figure.product-info img {
-    width: auto;
-  }
-  main#content #results_container .results figure.product-info figcaption ul {
-    width: 100%;
-  }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    width: 100%;
-    font-size: 0.7em;
-  }
-  main#content #results_container .results input.to_album_btn {
-    height: 40px;
-  }
-  main#content #results_container .results input.to_album_btn:hover {
-    text-decoration: none !important;
-  }
-  main#content #results_container .results-large figure.product-info a {
-    width: 20%;
-    margin: 1em auto;
-    display: block;
-    padding-right: 0;
-    order: 0;
-  }
-  main#content #results_container .results-large figure.product-info a img {
-    display: block;
-  }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 100%;
-    order: 1;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    font-size: 0.8em;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
-    width: 85%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
-    width: 14%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
-    margin: 0.5em 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
-  }
-  main#content #results_container .results-large div.audio_controls {
-    margin: 0;
-  }
-  main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.15em;
-    line-height: 50px;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 1.8em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 1.9em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
-    width: 70%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
-main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 55%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 85%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 96%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    font-size: 1.5em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
-    display: block;
-  }
-  main#content #results_container .results-large span.result_label {
-    text-indent: 1em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist {
-    margin: 0;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li {
-    font-size: 0.85em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 11%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 64%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
-    line-height: 40px;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
-    background-color: #FFF;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
-  }
-  main#content .text_box {
-    height: 140px;
-    width: 98%;
-  }
-  main#content .text_box h1 {
-    font-size: 1em;
-  }
-  main#content .text_box a {
-    font-size: 0.7em;
-    width: 20%;
-  }
-  main#content .text_box p {
-    font-size: 0.8em;
-  }
-  main#content .text_box .textbox_img {
-    margin: 10px 30px 0px 0px;
-  }
-  main#content .container {
-    margin: 5px auto;
-  }
-  main#content #contact-page-form {
-    width: 45%;
-  }
-  main#content #contact-page-form .error {
-    width: 80%;
-  }
-  main#content #contact-page-form .notice {
-    width: 80%;
-  }
-  main#content #contact-page-form .success {
-    width: 80%;
-  }
-  main#content #contact-page-form a {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form a:hover {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form input[type=text] {
-    height: 35px;
-  }
-  main#content #contact-page-form input[type=email] {
-    height: 35px;
-  }
-  main#content #contact-page-form textarea {
-    padding: 0.2em;
-  }
-  main#content #contact-page-form select [type=text] {
-    width: 98%;
-  }
-  main#content #contact-page-form #contact_btn {
-    width: 50%;
-  }
-  main#content address#contact-details {
-    font-size: 0.9em;
+    float: none;
   }
   main#content address#contact-details p {
     line-height: 40px;
   }
   main#content section#sidebar_gallery {
-    width: 100%;
-  }
-  main#content section#sidebar_gallery h1 {
-    font-size: 1em;
-  }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay {
-    width: 100%;
-  }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay a.fancybox {
-    font-size: 0.85em;
-  }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay a.fancybox:hover {
-    font-size: 0.95em;
-  }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay h2.artist_name {
-    font-size: 1em;
-    line-height: 40px;
-  }
-  main#content section#sidebar_gallery figure.video-item figcaption.overlay p.video_text {
-    font-size: 0.9em;
-  }
-  main#content section#sidebar_gallery figure.video-item figure.video-item:hover figcaption.overlay {
-    cursor: pointer;
-  }
-  main#content section#sidebar_gallery .sidebar_content_box {
-    padding: 0px;
-    margin-bottom: 20px;
-  }
-  main#content .search_error {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm {
-    width: 98%;
-  }
-  main#content form#searchForm legend {
-    font-size: 1em;
-  }
-  main#content form#searchForm label {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm ::placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  main#content form#searchForm input[type=text] {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm select {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm input#searchBtn {
-    font-size: 0.9em;
-  }
-  main#content form#searchForm input#searchBtn:hover {
-    letter-spacing: 0.12em;
-  }
-  main#content footer .social-btns ul li {
-    width: 100%;
-  }
-  main#content footer .social-btns ul li a {
-    font-size: 1.2em;
-  }
-  main#content footer .social-btns ul li a i {
-    line-height: 50px;
-  }
-  main#content footer .social-btns ul li a:hover {
-    color: #FFF;
-  }
-  main#content footer ul#inner_footer li a {
-    font-size: 0.8em;
-  }
-}
-/*800*/
-@media only screen and (min-width: 800px) and (max-width: 979px) {
-  #wrapper {
-    width: 96%;
-  }
-
-  #copyr {
-    font-size: 0.55em;
-  }
-
-  header {
-    clear: both;
-  }
-  header span#site-logo {
-    width: 55%;
-  }
-  header span#site-logo p#logo {
-    font-size: 2em;
-  }
-  header span#site-logo p#logo span {
-    height: 100%;
-  }
-  header span#site-logo p#logo span:last-of-type {
-    height: 100%;
-  }
-  header span#site-logo p.site-description {
-    font-size: 0.7em;
-  }
-  header .social {
-    width: 32%;
-  }
-  header .social ul#social {
-    width: 100%;
-  }
-  header .social ul#social li.social-item a {
-    font-size: 0.7em;
-  }
-  header .social ul#social li.social-item a:hover {
-    color: #3B3B3F;
-  }
-
-  nav#mannering_nav #mannering_inner_nav {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li {
-    height: 40px;
-  }
-  nav#mannering_nav #mannering_inner_nav li a {
-    font-size: 0.85em;
-  }
-  nav#mannering_nav #mannering_inner_nav li a:hover {
-    font-weight: bold;
-  }
-  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
-    font-size: 55%;
-  }
-
-  main#content {
-    width: 100%;
-    /*contact-wide Register Form*/
-    /* video player light box */
-  }
-  main#content #main_section {
-    margin: 0;
-  }
-  main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
-  }
-  main#content #main_section section.album_section {
-    margin: 0 auto;
-  }
-  main#content #main_section section.album_section h2 {
-    font-size: 1.1em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.9em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.65em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.65em;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.85em;
-  }
-  main#content #summary {
-    display: none;
-  }
-  main#content h1 {
-    font-size: 1.4em;
-  }
-  main#content h2 {
-    font-size: 1.3em;
-  }
-  main#content p {
-    font-size: 0.75em;
-  }
-  main#content p.headp {
-    font-size: 0.8em;
-  }
-  main#content ul {
-    font-size: 1em;
-    margin: 2% 0;
-  }
-  main#content ul li {
-    line-height: 25px;
-  }
-  main#content .main_img {
-    width: 15%;
-  }
-  main#content .refresh_link {
-    font-size: 0.85em;
-  }
-  main#content .refresh_link a {
-    line-height: 40px;
-  }
-  main#content .refresh_link a:hover {
-    color: #ECAC00;
-  }
-  main#content .aboutpage_img {
-    width: 14%;
-  }
-  main#content #slider {
-    height: 240px;
-  }
-  main#content #results_container {
-    margin: 0;
-    padding: 0;
-    /*results.show page*/
-  }
-  main#content #results_container .results figure.product-info img {
-    width: auto;
-  }
-  main#content #results_container .results figure.product-info figcaption ul {
-    width: 100%;
-  }
-  main#content #results_container .results figure.product-info figcaption ul li {
-    font-size: 0.7em;
-  }
-  main#content #results_container .results input.to_album_btn {
-    height: 40px;
-  }
-  main#content #results_container .results input.to_album_btn:hover {
-    text-decoration: none !important;
-  }
-  main#content #results_container .results-large figure.product-info a {
-    width: 20%;
-  }
-  main#content #results_container .results-large figure.product-info a img {
-    display: block;
-  }
-  main#content #results_container .results-large figure.product-info figcaption {
-    width: 100%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li {
-    font-size: 0.8em;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span {
-    width: 85%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul li span:first-of-type {
-    width: 14%;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul {
-    margin: 0.5em 0;
-  }
-  main#content #results_container .results-large figure.product-info figcaption ul ul li {
-    display: inline-block;
-  }
-  main#content #results_container .results-large div.audio_controls {
-    margin: 0;
-  }
-  main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.15em;
-    line-height: 50px;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
-    font-size: 1.8em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
-    font-size: 1.9em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
-    width: 70%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
-    width: 100%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
-main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
-    width: 55%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
-    width: 85%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
-    width: 96%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
-    width: 15%;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
-    font-size: 1.5em;
-  }
-  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
-    display: block;
-  }
-  main#content #results_container .results-large span.result_label {
-    text-indent: 1em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist {
-    margin: 0;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li {
-    font-size: 0.85em;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
-    width: 11%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
-    width: 64%;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
-    line-height: 40px;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
-    background-color: #FFF;
-  }
-  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
-    width: 10%;
-  }
-  main#content .text_box {
-    height: 140px;
-    width: 98%;
-  }
-  main#content .text_box h1 {
-    font-size: 1em;
-  }
-  main#content .text_box a {
-    font-size: 0.7em;
-  }
-  main#content .text_box p {
-    letter-spacing: 0.1em;
-  }
-  main#content .text_box .textbox_img {
-    margin: 10px 30px 0px 0px;
-  }
-  main#content .container {
-    margin: 5px auto;
-  }
-  main#content #contact-page-form {
-    width: 45%;
-  }
-  main#content #contact-page-form .error {
-    width: 80%;
-  }
-  main#content #contact-page-form .notice {
-    width: 80%;
-  }
-  main#content #contact-page-form .success {
-    width: 80%;
-  }
-  main#content #contact-page-form a {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form a:hover {
-    text-decoration: none;
-    line-height: 1.5em;
-  }
-  main#content #contact-page-form input[type=text] {
-    font-size: 0.85em;
-  }
-  main#content #contact-page-form input[type=email] {
-    font-size: 0.85em;
-  }
-  main#content #contact-page-form textarea {
-    font-size: 0.85em;
-  }
-  main#content #contact-page-form select [type=text] {
-    font-size: 0.85em;
-  }
-  main#content #contact-page-form #contact_btn {
-    font-size: 0.9em;
-  }
-  main#content address#contact-details {
-    font-size: 0.9em;
-    width: 49%;
-  }
-  main#content address#contact-details p {
-    line-height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
   }
   main#content section#sidebar_gallery h1 {
     font-size: 1em;
   }
   main#content section#sidebar_gallery figure.video-item {
-    width: 32.2%;
-    height: 160px;
+    width: 24%;
   }
   main#content section#sidebar_gallery figure.video-item img {
-    width: 100%;
-    height: 100%;
     display: block;
   }
   main#content section#sidebar_gallery figcaption.overlay {
@@ -5346,7 +2927,11 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     margin-bottom: 20px;
   }
   main#content .search_error {
-    font-size: 0.85em;
+    font-size: 0.8em;
+  }
+  main#content form#searchForm {
+    padding: 1%;
+    width: 40%;
   }
   main#content form#searchForm legend {
     font-size: 1em;
@@ -5356,25 +2941,36 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content form#searchForm ::placeholder {
     color: #181818;
+    text-indent: 0.25em;
   }
   main#content form#searchForm input[type=text] {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
   }
   main#content form#searchForm select {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
   }
   main#content form#searchForm input#searchBtn {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
   }
   main#content form#searchForm input#searchBtn:hover {
     letter-spacing: 0.12em;
   }
 
+  footer .social-btns {
+    width: 10%;
+  }
   footer .social-btns ul li {
     width: 100%;
   }
   footer .social-btns ul li a {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   footer .social-btns ul li a i {
     line-height: 50px;
@@ -5383,7 +2979,2141 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     color: #FFF;
   }
   footer ul#inner_footer li a {
+    font-size: 0.9em;
+  }
+}
+/*1280*/
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  button#mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    width: 86%;
+  }
+
+  #copyr {
+    font-size: 0.5em;
+  }
+
+  header {
+    clear: both;
+  }
+  header span#site-logo p#logo {
+    font-size: 1.75em;
+  }
+  header span#site-logo p#logo span {
+    height: 100%;
+  }
+  header span#site-logo p#logo span:last-of-type {
+    height: 100%;
+  }
+  header span#site-logo p.site-description {
+    font-size: 0.65em;
+  }
+  header .social {
+    width: 32%;
+    display: block;
+  }
+  header .social ul#social li.social-item a {
+    font-size: 1em;
+  }
+
+  nav#mannering_nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: unset;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    display: none;
+  }
+  nav#mannering_nav #mannering_inner_nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  nav#mannering_nav #mannering_inner_nav li {
+    background-color: #333333;
+    width: 14.5%;
+    margin-left: 0.2em;
+    height: 40px;
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  nav#mannering_nav #mannering_inner_nav li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    line-height: 40px;
+    background-color: #3A3A3A;
+    color: #FFF;
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
+  }
+
+  main#content {
+    width: 100%;
+    /* video player light box */
+  }
+  main#content #main_section {
+    margin: 0 0 1em 0;
+  }
+  main#content #main_section section.album_section:last-of-type {
+    margin: 0 0 1em 0;
+  }
+  main#content #main_section section.album_section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    line-height: 40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 {
+    width: 19%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
+    width: 100%;
+    padding: 8px 10px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
+    background-color: #EBAB00;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+    font-size: 0.85em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
     font-size: 0.8em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+    font-size: 0.8em;
+  }
+  main#content #main_section blockquote p {
+    font-size: 1em;
+  }
+  main#content #main_section #review_pagination {
+    font-size: 0.75em;
+  }
+  main#content #main_section ul.categories {
+    width: 50%;
+  }
+  main#content #main_section ul.categories li a {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+  main#content #main_section #review-edit {
+    width: 70%;
+  }
+  main#content #main_section #review-edit textarea {
+    font-size: 1em;
+  }
+  main#content #main_section #review-edit input[type=checkbox] {
+    margin-right: 0.25em;
+  }
+  main#content #main_section #review-edit label {
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit] {
+    width: 40%;
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit]:hover {
+    margin: 0 auto;
+  }
+  main#content #summary {
+    display: none;
+  }
+  main#content h1 {
+    font-size: 1.3em;
+  }
+  main#content h2 {
+    font-size: 1.2em;
+  }
+  main#content p {
+    font-size: 0.85em;
+  }
+  main#content p.headp {
+    font-size: 0.85em;
+  }
+  main#content ul {
+    font-size: 1em;
+    margin: 2% 0;
+  }
+  main#content ul li {
+    line-height: 25px;
+  }
+  main#content .main_img {
+    width: 15%;
+  }
+  main#content .refresh_link {
+    font-size: 0.85em;
+  }
+  main#content .refresh_link a {
+    line-height: 40px;
+  }
+  main#content .refresh_link a:hover {
+    color: #ECAC00;
+  }
+  main#content .aboutpage_img {
+    width: 14%;
+  }
+  main#content #slider {
+    height: auto;
+  }
+  main#content #results_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /*results.show page*/
+  }
+  main#content #results_container .results {
+    width: 24%;
+  }
+  main#content #results_container .results figure.results-info img {
+    width: auto;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 1em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.8em;
+  }
+  main#content #results_container .results input.to_album_btn {
+    height: 40px;
+  }
+  main#content #results_container .results input.to_album_btn:hover {
+    text-decoration: none !important;
+  }
+  main#content #results_container .results-large figure.results-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+  }
+  main#content #results_container .results-large figure.results-info a {
+    width: 15%;
+    order: 0;
+  }
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
+    width: 85%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul ul {
+    margin: 0.5em 0;
+  }
+  main#content #results_container .results-large div.audio_controls h1.trackName {
+    font-size: 1.25em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
+    width: 20%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
+    font-size: 1.6em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
+    font-size: 1.7em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
+    width: 70%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
+main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
+    width: 80%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
+    width: 96%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
+    width: 20%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
+    font-size: 1.4em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
+    display: block;
+  }
+  main#content #results_container .results-large span.result_label {
+    text-indent: 1em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist {
+    margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
+    width: 13%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
+    width: 60%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
+    width: 15%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
+    line-height: 40px;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
+    background-color: #FFF;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
+    width: 12%;
+  }
+  main#content .text_box {
+    height: 140px;
+    width: 98%;
+  }
+  main#content .text_box h1 {
+    font-size: 1em;
+  }
+  main#content .text_box a {
+    font-size: 0.7em;
+  }
+  main#content .text_box p {
+    letter-spacing: 0.1em;
+  }
+  main#content .text_box .textbox_img {
+    margin: 10px 30px 0px 0px;
+  }
+  main#content .container {
+    margin: 5px auto;
+  }
+  main#content #registerform {
+    width: 55%;
+  }
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
+    font-size: 0.8em;
+  }
+  main#content #registerform label {
+    font-size: 0.9em;
+    height: 30px;
+  }
+  main#content #registerform #register_btn {
+    font-size: 1em;
+  }
+  main#content #registerform #register_btn:hover {
+    margin: 0 auto;
+  }
+  main#content #contact-page-form {
+    width: 100%;
+    padding: 2.5%;
+    float: none;
+  }
+  main#content #contact-page-form .error {
+    width: 80%;
+  }
+  main#content #contact-page-form .notice {
+    width: 80%;
+  }
+  main#content #contact-page-form .success {
+    width: 80%;
+  }
+  main#content #contact-page-form a {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form a:hover {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form input[type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form input[type=email] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form textarea {
+    font-size: 1em;
+  }
+  main#content #contact-page-form select [type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
+  }
+  main#content address#contact-details {
+    font-size: 0.8em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  main#content address#contact-details p {
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main#content section#sidebar_gallery h1 {
+    font-size: 1em;
+  }
+  main#content section#sidebar_gallery figure.video-item {
+    width: 24%;
+  }
+  main#content section#sidebar_gallery figure.video-item img {
+    display: block;
+  }
+  main#content section#sidebar_gallery figcaption.overlay {
+    width: 100%;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
+    font-size: 0.85em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
+    font-size: 0.95em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery figcaption.overlay p.video_text {
+    font-size: 0.9em;
+  }
+  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
+    cursor: pointer;
+  }
+  main#content .sidebar_content_box {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  main#content .search_error {
+    font-size: 0.8em;
+  }
+  main#content form#searchForm {
+    padding: 1%;
+    width: 66%;
+  }
+  main#content form#searchForm legend {
+    font-size: 1em;
+  }
+  main#content form#searchForm label {
+    font-size: 0.9em;
+  }
+  main#content form#searchForm ::placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  main#content form#searchForm input[type=text] {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm select {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm input#searchBtn {
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  main#content form#searchForm input#searchBtn:hover {
+    letter-spacing: 0.12em;
+  }
+
+  footer .social-btns {
+    width: 10%;
+  }
+  footer .social-btns ul li {
+    width: 100%;
+  }
+  footer .social-btns ul li a {
+    font-size: 1em;
+  }
+  footer .social-btns ul li a i {
+    line-height: 50px;
+  }
+  footer .social-btns ul li a:hover {
+    color: #FFF;
+  }
+  footer ul#inner_footer li a {
+    font-size: 0.85em;
+  }
+}
+/*1024*/
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  button#mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    width: 86%;
+  }
+
+  #copyr {
+    font-size: 0.5em;
+  }
+
+  header {
+    clear: both;
+  }
+  header span#site-logo p#logo {
+    font-size: 1.75em;
+  }
+  header span#site-logo p#logo span {
+    height: 100%;
+  }
+  header span#site-logo p#logo span:last-of-type {
+    height: 100%;
+  }
+  header span#site-logo p.site-description {
+    font-size: 0.65em;
+  }
+  header .social {
+    width: 32%;
+    display: block;
+  }
+  header .social ul#social li.social-item a {
+    font-size: 1em;
+  }
+
+  nav#mannering_nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: unset;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    display: none;
+  }
+  nav#mannering_nav #mannering_inner_nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  nav#mannering_nav #mannering_inner_nav li {
+    background-color: #333333;
+    width: 14.5%;
+    margin-left: 0.2em;
+    height: 40px;
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  nav#mannering_nav #mannering_inner_nav li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    line-height: 40px;
+    background-color: #3A3A3A;
+    color: #FFF;
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
+  }
+
+  main#content {
+    width: 100%;
+    /* video player light box */
+  }
+  main#content #main_section {
+    margin: 0;
+  }
+  main#content #main_section section.album_section:last-of-type {
+    margin-bottom: 0%;
+  }
+  main#content #main_section section.album_section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    line-height: 40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 {
+    width: 24%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
+    width: 100%;
+    padding: 8px 10px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
+    background-color: #EBAB00;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+    font-size: 1em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+    font-size: 0.9em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+    font-size: 0.9em;
+  }
+  main#content #main_section blockquote p {
+    font-size: 1em;
+  }
+  main#content #main_section #review_pagination {
+    font-size: 0.9em;
+  }
+  main#content #main_section ul.categories {
+    width: 50%;
+  }
+  main#content #main_section ul.categories li a {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+  main#content #main_section #review-edit {
+    width: 70%;
+  }
+  main#content #main_section #review-edit textarea {
+    font-size: 1em;
+  }
+  main#content #main_section #review-edit input[type=checkbox] {
+    margin-right: 0.25em;
+  }
+  main#content #main_section #review-edit label {
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit] {
+    width: 40%;
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit]:hover {
+    margin: 0 auto;
+  }
+  main#content #summary {
+    display: none;
+  }
+  main#content h1 {
+    font-size: 1.3em;
+  }
+  main#content h2 {
+    font-size: 1.2em;
+  }
+  main#content p {
+    font-size: 0.85em;
+  }
+  main#content p.headp {
+    font-size: 0.85em;
+  }
+  main#content ul {
+    font-size: 1em;
+    margin: 2% 0;
+  }
+  main#content ul li {
+    line-height: 25px;
+  }
+  main#content .main_img {
+    width: 15%;
+  }
+  main#content .refresh_link {
+    font-size: 0.85em;
+  }
+  main#content .refresh_link a {
+    line-height: 40px;
+  }
+  main#content .refresh_link a:hover {
+    color: #ECAC00;
+  }
+  main#content .aboutpage_img {
+    width: 14%;
+  }
+  main#content #slider {
+    height: auto;
+  }
+  main#content #results_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /*results.show page*/
+  }
+  main#content #results_container .results {
+    width: 24%;
+  }
+  main#content #results_container .results figure.results-info img {
+    width: auto;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.8em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.75em;
+  }
+  main#content #results_container .results input.to_album_btn {
+    height: 40px;
+  }
+  main#content #results_container .results input.to_album_btn:hover {
+    text-decoration: none !important;
+  }
+  main#content #results_container .results-large figure.results-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+  }
+  main#content #results_container .results-large figure.results-info a {
+    width: 20%;
+    order: 0;
+  }
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
+    width: 80%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul {
+    width: 100%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.8em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul ul {
+    margin: 0.5em 0;
+  }
+  main#content #results_container .results-large div.audio_controls h1.trackName {
+    font-size: 1.25em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
+    width: 20%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
+    font-size: 1.6em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
+    font-size: 1.7em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
+    width: 70%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
+main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
+    width: 15%;
+    font-size: 1.2em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
+    width: 80%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
+    width: 96%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
+    width: 20%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
+    font-size: 1.4em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
+    display: block;
+  }
+  main#content #results_container .results-large span.result_label {
+    text-indent: 1em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist {
+    margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
+    width: 13%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
+    width: 60%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
+    width: 15%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
+    line-height: 40px;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
+    background-color: #FFF;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
+    width: 12%;
+    font-size: 0.8em;
+  }
+  main#content .text_box {
+    height: 140px;
+    width: 98%;
+  }
+  main#content .text_box h1 {
+    font-size: 1em;
+  }
+  main#content .text_box a {
+    font-size: 0.7em;
+  }
+  main#content .text_box p {
+    letter-spacing: 0.1em;
+  }
+  main#content .text_box .textbox_img {
+    margin: 10px 30px 0px 0px;
+  }
+  main#content .container {
+    margin: 5px auto;
+  }
+  main#content #registerform {
+    width: 55%;
+  }
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
+    font-size: 0.8em;
+  }
+  main#content #registerform label {
+    font-size: 0.9em;
+    height: 30px;
+  }
+  main#content #registerform #register_btn {
+    font-size: 1em;
+  }
+  main#content #registerform #register_btn:hover {
+    margin: 0 auto;
+  }
+  main#content #contact-page-form {
+    width: 100%;
+    padding: 2.5%;
+    float: none;
+  }
+  main#content #contact-page-form .error {
+    width: 80%;
+  }
+  main#content #contact-page-form .notice {
+    width: 80%;
+  }
+  main#content #contact-page-form .success {
+    width: 80%;
+  }
+  main#content #contact-page-form a {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form a:hover {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form input[type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form input[type=email] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form textarea {
+    font-size: 1em;
+  }
+  main#content #contact-page-form select [type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
+  }
+  main#content address#contact-details {
+    font-size: 0.8em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  main#content address#contact-details p {
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main#content section#sidebar_gallery h1 {
+    font-size: 1em;
+  }
+  main#content section#sidebar_gallery figure.video-item {
+    width: 24%;
+  }
+  main#content section#sidebar_gallery figure.video-item img {
+    display: block;
+  }
+  main#content section#sidebar_gallery figcaption.overlay {
+    width: 100%;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
+    font-size: 0.85em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
+    font-size: 0.95em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery figcaption.overlay p.video_text {
+    font-size: 0.9em;
+  }
+  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
+    cursor: pointer;
+  }
+  main#content .sidebar_content_box {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  main#content .search_error {
+    font-size: 0.8em;
+  }
+  main#content form#searchForm {
+    padding: 1%;
+    width: 50%;
+  }
+  main#content form#searchForm legend {
+    font-size: 1em;
+  }
+  main#content form#searchForm label {
+    font-size: 0.9em;
+  }
+  main#content form#searchForm ::placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  main#content form#searchForm input[type=text] {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm select {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm input#searchBtn {
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  main#content form#searchForm input#searchBtn:hover {
+    letter-spacing: 0.12em;
+  }
+
+  footer .social-btns {
+    width: 10%;
+  }
+  footer .social-btns ul li {
+    width: 100%;
+  }
+  footer .social-btns ul li a {
+    font-size: 1em;
+  }
+  footer .social-btns ul li a i {
+    line-height: 50px;
+  }
+  footer .social-btns ul li a:hover {
+    color: #FFF;
+  }
+  footer ul#inner_footer li a {
+    font-size: 0.85em;
+  }
+}
+/*980*/
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+  button#mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    width: 90%;
+  }
+
+  #copyr {
+    font-size: 0.5em;
+  }
+
+  header {
+    clear: both;
+  }
+  header span#site-logo p#logo {
+    font-size: 1.75em;
+  }
+  header span#site-logo p#logo span {
+    height: 100%;
+  }
+  header span#site-logo p#logo span:last-of-type {
+    height: 100%;
+  }
+  header span#site-logo p.site-description {
+    font-size: 0.65em;
+  }
+  header .social {
+    width: 32%;
+    display: block;
+  }
+  header .social ul#social li.social-item a {
+    font-size: 1em;
+  }
+
+  nav#mannering_nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: unset;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    display: none;
+  }
+  nav#mannering_nav #mannering_inner_nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  nav#mannering_nav #mannering_inner_nav li {
+    background-color: #333333;
+    width: 14.5%;
+    margin-left: 0.2em;
+    height: 40px;
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  nav#mannering_nav #mannering_inner_nav li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    line-height: 40px;
+    background-color: #3A3A3A;
+    color: #FFF;
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
+  }
+
+  main#content {
+    width: 100%;
+    /* video player light box */
+  }
+  main#content #main_section {
+    margin: 0;
+  }
+  main#content #main_section section.album_section:last-of-type {
+    margin-bottom: 0%;
+  }
+  main#content #main_section section.album_section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    line-height: 40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 {
+    width: 32%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
+    width: 100%;
+    padding: 8px 10px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
+    background-color: #EBAB00;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+    font-size: 1em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+    font-size: 0.9em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+    font-size: 0.9em;
+  }
+  main#content #main_section blockquote {
+    font-size: 0.7em;
+  }
+  main#content #main_section blockquote p {
+    font-size: 1em;
+  }
+  main#content #main_section #review_pagination {
+    font-size: 0.9em;
+  }
+  main#content #main_section ul.categories {
+    font-size: 0.9em;
+    width: 60%;
+  }
+  main#content #main_section ul.categories li a {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+  main#content #main_section #review-edit {
+    width: 70%;
+  }
+  main#content #main_section #review-edit textarea {
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=checkbox] {
+    margin-right: 0.25em;
+  }
+  main#content #main_section #review-edit label {
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit] {
+    width: 40%;
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit]:hover {
+    margin: 0 auto;
+  }
+  main#content #summary {
+    display: none;
+  }
+  main#content h1 {
+    font-size: 1.3em;
+  }
+  main#content h2 {
+    font-size: 1.2em;
+  }
+  main#content p {
+    font-size: 0.85em;
+  }
+  main#content p.headp {
+    font-size: 0.85em;
+  }
+  main#content ul {
+    font-size: 1em;
+    margin: 2% 0;
+  }
+  main#content ul li {
+    line-height: 25px;
+  }
+  main#content .main_img {
+    width: 15%;
+  }
+  main#content .refresh_link {
+    font-size: 0.85em;
+  }
+  main#content .refresh_link a {
+    line-height: 40px;
+  }
+  main#content .refresh_link a:hover {
+    color: #ECAC00;
+  }
+  main#content .aboutpage_img {
+    width: 14%;
+  }
+  main#content #slider {
+    height: auto;
+  }
+  main#content #results_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /*results.show page*/
+  }
+  main#content #results_container .results {
+    width: 24%;
+  }
+  main#content #results_container .results figure.results-info img {
+    width: auto;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.8em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.75em;
+  }
+  main#content #results_container .results input.to_album_btn {
+    height: 40px;
+  }
+  main#content #results_container .results input.to_album_btn:hover {
+    text-decoration: none !important;
+  }
+  main#content #results_container .results-large figure.results-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+  }
+  main#content #results_container .results-large figure.results-info a {
+    width: 20%;
+    order: 0;
+  }
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
+    width: 80%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul {
+    width: 100%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.75em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul ul {
+    margin: 0.5em 0;
+  }
+  main#content #results_container .results-large div.audio_controls h1.trackName {
+    font-size: 1.2em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
+    width: 20%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
+    font-size: 1.6em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
+    font-size: 1.7em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
+    width: 70%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
+main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
+    width: 15%;
+    font-size: 1.2em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
+    width: 80%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
+    width: 96%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
+    width: 20%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
+    font-size: 1.4em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
+    display: block;
+  }
+  main#content #results_container .results-large span.result_label {
+    text-indent: 1em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist {
+    margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
+    width: 13%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
+    width: 60%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
+    width: 15%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
+    line-height: 40px;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
+    background-color: #FFF;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
+    width: 12%;
+  }
+  main#content .text_box {
+    height: 140px;
+    width: 98%;
+  }
+  main#content .text_box h1 {
+    font-size: 1em;
+  }
+  main#content .text_box a {
+    font-size: 0.7em;
+  }
+  main#content .text_box p {
+    letter-spacing: 0.1em;
+  }
+  main#content .text_box .textbox_img {
+    margin: 10px 30px 0px 0px;
+  }
+  main#content .container {
+    margin: 5px auto;
+  }
+  main#content #registerform {
+    width: 60%;
+  }
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
+    font-size: 0.8em;
+  }
+  main#content #registerform label {
+    font-size: 0.9em;
+    height: 30px;
+  }
+  main#content #registerform #register_btn {
+    font-size: 1em;
+  }
+  main#content #registerform #register_btn:hover {
+    margin: 0 auto;
+  }
+  main#content #contact-page-form {
+    width: 100%;
+    padding: 2.5%;
+    float: none;
+  }
+  main#content #contact-page-form .error {
+    width: 80%;
+  }
+  main#content #contact-page-form .notice {
+    width: 80%;
+  }
+  main#content #contact-page-form .success {
+    width: 80%;
+  }
+  main#content #contact-page-form a {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form a:hover {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form input[type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form input[type=email] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form textarea {
+    font-size: 1em;
+  }
+  main#content #contact-page-form select [type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
+  }
+  main#content address#contact-details {
+    font-size: 0.8em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  main#content address#contact-details p {
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main#content section#sidebar_gallery h1 {
+    font-size: 1em;
+  }
+  main#content section#sidebar_gallery figure.video-item {
+    width: 32%;
+  }
+  main#content section#sidebar_gallery figure.video-item img {
+    display: block;
+  }
+  main#content section#sidebar_gallery figcaption.overlay {
+    width: 100%;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
+    font-size: 0.85em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
+    font-size: 0.95em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery figcaption.overlay p.video_text {
+    font-size: 0.9em;
+  }
+  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
+    cursor: pointer;
+  }
+  main#content .sidebar_content_box {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  main#content .search_error {
+    font-size: 0.8em;
+  }
+  main#content form#searchForm {
+    padding: 1%;
+    width: 76%;
+  }
+  main#content form#searchForm legend {
+    font-size: 1em;
+  }
+  main#content form#searchForm label {
+    font-size: 0.9em;
+  }
+  main#content form#searchForm ::placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  main#content form#searchForm input[type=text] {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm select {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm input#searchBtn {
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  main#content form#searchForm input#searchBtn:hover {
+    letter-spacing: 0.12em;
+  }
+
+  footer .social-btns {
+    width: 10%;
+  }
+  footer .social-btns ul li {
+    width: 100%;
+  }
+  footer .social-btns ul li a {
+    font-size: 1em;
+  }
+  footer .social-btns ul li a i {
+    line-height: 50px;
+  }
+  footer .social-btns ul li a:hover {
+    color: #FFF;
+  }
+  footer ul#inner_footer li a {
+    font-size: 0.85em;
+  }
+}
+/*800*/
+@media only screen and (min-width: 800px) and (max-width: 979px) {
+  button#mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    width: 90%;
+  }
+
+  #copyr {
+    font-size: 0.5em;
+  }
+
+  header {
+    clear: both;
+  }
+  header span#site-logo p#logo {
+    font-size: 1.75em;
+  }
+  header span#site-logo p#logo span {
+    height: 100%;
+  }
+  header span#site-logo p#logo span:last-of-type {
+    height: 100%;
+  }
+  header span#site-logo p.site-description {
+    font-size: 0.65em;
+  }
+  header .social {
+    width: 32%;
+    display: block;
+  }
+  header .social ul#social li.social-item a {
+    font-size: 1em;
+  }
+
+  nav#mannering_nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: unset;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    display: none;
+  }
+  nav#mannering_nav #mannering_inner_nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  nav#mannering_nav #mannering_inner_nav li {
+    background-color: #333333;
+    width: 14.5%;
+    margin-left: 0.2em;
+    height: 40px;
+    text-align: center;
+    flex: 1 0 auto;
+  }
+  nav#mannering_nav #mannering_inner_nav li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    line-height: 40px;
+    background-color: #3A3A3A;
+    color: #FFF;
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
+  }
+
+  main#content {
+    width: 100%;
+    /* video player light box */
+  }
+  main#content #main_section {
+    margin: 0;
+  }
+  main#content #main_section section.album_section:last-of-type {
+    margin-bottom: 0%;
+  }
+  main#content #main_section section.album_section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    line-height: 40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 {
+    width: 32%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
+    width: 100%;
+    padding: 8px 10px;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
+    background-color: #EBAB00;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+    font-size: 0.9em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+    font-size: 0.8em;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+    font-size: 0.8em;
+  }
+  main#content #main_section blockquote {
+    font-size: 0.7em;
+  }
+  main#content #main_section blockquote p {
+    font-size: 1em;
+  }
+  main#content #main_section #review_pagination {
+    font-size: 0.85em;
+  }
+  main#content #main_section ul.categories {
+    font-size: 0.85em;
+    width: 60%;
+  }
+  main#content #main_section ul.categories li a {
+    line-height: 50px;
+    font-size: 1em;
+  }
+  main#content #main_section #review-edit {
+    width: 70%;
+  }
+  main#content #main_section #review-edit textarea {
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=checkbox] {
+    margin-right: 0.25em;
+  }
+  main#content #main_section #review-edit label {
+    font-size: 0.85em;
+  }
+  main#content #main_section #review-edit input[type=submit] {
+    width: 40%;
+    font-size: 0.9em;
+  }
+  main#content #main_section #review-edit input[type=submit]:hover {
+    margin: 0 auto;
+  }
+  main#content #summary {
+    display: none;
+  }
+  main#content h1 {
+    font-size: 1.3em;
+  }
+  main#content h2 {
+    font-size: 1.2em;
+  }
+  main#content p {
+    font-size: 0.85em;
+  }
+  main#content p.headp {
+    font-size: 0.85em;
+  }
+  main#content ul {
+    font-size: 1em;
+    margin: 2% 0;
+  }
+  main#content ul li {
+    line-height: 25px;
+  }
+  main#content .main_img {
+    width: 15%;
+  }
+  main#content .refresh_link {
+    font-size: 0.85em;
+  }
+  main#content .refresh_link a {
+    line-height: 40px;
+  }
+  main#content .refresh_link a:hover {
+    color: #ECAC00;
+  }
+  main#content .aboutpage_img {
+    width: 14%;
+  }
+  main#content #slider {
+    height: auto;
+  }
+  main#content #results_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /*results.show page*/
+  }
+  main#content #results_container .results {
+    width: 32%;
+  }
+  main#content #results_container .results figure.results-info img {
+    width: auto;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 1em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.8em;
+  }
+  main#content #results_container .results input.to_album_btn {
+    height: 40px;
+  }
+  main#content #results_container .results input.to_album_btn:hover {
+    text-decoration: none !important;
+  }
+  main#content #results_container .results-large figure.results-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+  }
+  main#content #results_container .results-large figure.results-info a {
+    width: 20%;
+    order: 0;
+  }
+  main#content #results_container .results-large figure.results-info a img {
+    margin: 0 1em 0 0;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text {
+    width: 80%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul {
+    width: 100%;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li {
+    font-size: 0.75em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span {
+    width: 86%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul li span:first-of-type {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  main#content #results_container .results-large figure.results-info figcaption.results-text ul ul {
+    margin: 0.5em 0;
+  }
+  main#content #results_container .results-large div.audio_controls h1.trackName {
+    font-size: 1.2em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
+    width: 20%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
+    font-size: 1.6em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i:hover {
+    font-size: 1.7em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress {
+    width: 70%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .load_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.progress .play_progress {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
+main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
+    width: 15%;
+    font-size: 1.15em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
+    width: 100%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeBg {
+    width: 80%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume input.volume {
+    width: 96%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg {
+    width: 20%;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up {
+    font-size: 1.4em;
+  }
+  main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume div.VolumeImg i.fa-volume-up:before {
+    display: block;
+  }
+  main#content #results_container .results-large span.result_label {
+    text-indent: 1em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist {
+    margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
+    width: 13%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackname {
+    width: 60%;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn {
+    width: 15%;
+    cursor: pointer;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i {
+    line-height: 40px;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackbtn i:hover {
+    background-color: #FFF;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
+    width: 12%;
+  }
+  main#content .text_box {
+    height: 140px;
+    width: 98%;
+  }
+  main#content .text_box h1 {
+    font-size: 1em;
+  }
+  main#content .text_box a {
+    font-size: 0.7em;
+  }
+  main#content .text_box p {
+    letter-spacing: 0.1em;
+  }
+  main#content .text_box .textbox_img {
+    margin: 10px 30px 0px 0px;
+  }
+  main#content .container {
+    margin: 5px auto;
+  }
+  main#content #registerform {
+    width: 65%;
+  }
+  main#content #registerform input[type=text],
+main#content #registerform input[type=email],
+main#content #registerform input[type=password] {
+    font-size: 0.8em;
+  }
+  main#content #registerform label {
+    font-size: 0.9em;
+    height: 30px;
+  }
+  main#content #registerform #register_btn {
+    font-size: 1em;
+  }
+  main#content #registerform #register_btn:hover {
+    margin: 0 auto;
+  }
+  main#content #contact-page-form {
+    width: 100%;
+    padding: 2.5%;
+    float: none;
+  }
+  main#content #contact-page-form .error {
+    width: 80%;
+  }
+  main#content #contact-page-form .notice {
+    width: 80%;
+  }
+  main#content #contact-page-form .success {
+    width: 80%;
+  }
+  main#content #contact-page-form a {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form a:hover {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  main#content #contact-page-form input[type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form input[type=email] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form textarea {
+    font-size: 1em;
+  }
+  main#content #contact-page-form select [type=text] {
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  main#content #contact-page-form #contact_btn:hover {
+    width: 40%;
+  }
+  main#content address#contact-details {
+    font-size: 0.8em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  main#content address#contact-details p {
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main#content section#sidebar_gallery h1 {
+    font-size: 1em;
+  }
+  main#content section#sidebar_gallery figure.video-item {
+    width: 32%;
+  }
+  main#content section#sidebar_gallery figure.video-item img {
+    display: block;
+  }
+  main#content section#sidebar_gallery figcaption.overlay {
+    width: 100%;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox {
+    font-size: 0.85em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay a.fancybox:hover {
+    font-size: 0.95em;
+  }
+  main#content section#sidebar_gallery figcaption.overlay h2.artist_name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  main#content section#sidebar_gallery figcaption.overlay p.video_text {
+    font-size: 0.9em;
+  }
+  main#content section#sidebar_gallery figure.video-item:hover figcaption.overlay {
+    cursor: pointer;
+  }
+  main#content .sidebar_content_box {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  main#content .search_error {
+    font-size: 0.8em;
+  }
+  main#content form#searchForm {
+    padding: 1%;
+    width: 86%;
+  }
+  main#content form#searchForm legend {
+    font-size: 1em;
+  }
+  main#content form#searchForm label {
+    font-size: 0.9em;
+  }
+  main#content form#searchForm ::placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  main#content form#searchForm input[type=text] {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm select {
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main#content form#searchForm input#searchBtn {
+    font-size: 0.85em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  main#content form#searchForm input#searchBtn:hover {
+    letter-spacing: 0.12em;
+  }
+
+  footer .social-btns {
+    width: 10%;
+  }
+  footer .social-btns ul li {
+    width: 100%;
+  }
+  footer .social-btns ul li a {
+    font-size: 1em;
+  }
+  footer .social-btns ul li a i {
+    line-height: 50px;
+  }
+  footer .social-btns ul li a:hover {
+    color: #FFF;
+  }
+  footer ul#inner_footer li a {
+    font-size: 0.85em;
   }
 }
 /*736*/
@@ -5484,36 +5214,42 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #main_section section.album_section {
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   main#content #main_section section.album_section h2 {
+    font-size: 1.35em;
+    margin: 0.5em 0;
     line-height: 40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
+    width: 32%;
+    margin: 0.25em;
+    flex: 0 0 auto;
   }
   main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.85em;
+    width: 100%;
+    padding: 8px 10px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
+    background-color: #EBAB00;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.65em;
+    font-size: 0.9em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.65em;
+    font-size: 0.8em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   main#content #main_section blockquote {
     font-size: 0.7em;
@@ -5522,27 +5258,27 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     font-size: 1em;
   }
   main#content #main_section #review_pagination {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section ul.categories {
-    font-size: 0.75em;
+    font-size: 0.85em;
     width: 60%;
   }
   main#content #main_section ul.categories li a {
     line-height: 50px;
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main#content #main_section #review-edit {
     width: 70%;
   }
   main#content #main_section #review-edit textarea {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   main#content #main_section #review-edit input[type=checkbox] {
     margin-right: 0.25em;
   }
   main#content #main_section #review-edit label {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section #review-edit input[type=submit] {
     width: 40%;
@@ -5589,25 +5325,36 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     width: 14%;
   }
   main#content #slider {
-    height: 180px;
+    height: auto;
   }
   main#content #results_container {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
     /*results.show page*/
   }
   main#content #results_container .results {
-    width: 48%;
+    width: 32%;
   }
   main#content #results_container .results figure.results-info img {
     width: auto;
   }
-  main#content #results_container .results figure.results-info figcaption.results-text ul {
-    width: 100%;
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
   }
-  main#content #results_container .results figure.results-info figcaption.results-text ul li {
-    width: 100%;
-    font-size: 0.65em;
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 1em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.8em;
   }
   main#content #results_container .results input.to_album_btn {
     height: 40px;
@@ -5633,10 +5380,10 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     margin: 0.5em 0;
   }
   main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
-    width: 15%;
+    width: 20%;
     cursor: pointer;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button i {
@@ -5657,7 +5404,7 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.current_time,
 main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.duration {
     width: 15%;
-    font-size: 1.1em;
+    font-size: 1.15em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers div.audio_volume {
     width: 100%;
@@ -5682,6 +5429,9 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #results_container .results-large ul.audio-tracklist {
     margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.8em;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
     width: 13%;
@@ -5722,7 +5472,7 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
     margin: 5px auto;
   }
   main#content #registerform {
-    width: 80%;
+    width: 70%;
   }
   main#content #registerform input[type=text],
 main#content #registerform input[type=email],
@@ -5790,11 +5540,17 @@ main#content #registerform input[type=password] {
   main#content address#contact-details p {
     line-height: 40px;
   }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
   main#content section#sidebar_gallery h1 {
     font-size: 1em;
   }
   main#content section#sidebar_gallery figure.video-item {
-    width: 48.6%;
+    width: 48%;
   }
   main#content section#sidebar_gallery figure.video-item img {
     display: block;
@@ -5875,7 +5631,7 @@ main#content #registerform input[type=password] {
     color: #FFF;
   }
   footer ul#inner_footer li a {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
 }
 /*600 - 734*/
@@ -5912,14 +5668,29 @@ main#content #registerform input[type=password] {
     display: none;
   }
 
+  nav#mannering_nav {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 140;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav {
+    width: 100%;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav li {
+    height: 40px;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav li a {
+    font-size: 1em;
+  }
+  nav#mannering_nav #mannering_mobile_inner_nav li a[href~="/review/edit"] {
+    font-size: 65%;
+  }
   nav#mannering_nav #mannering_inner_nav {
-    width: 98%;
-  }
-  nav#mannering_nav #mannering_inner_nav li a {
-    font-size: 0.75em;
-  }
-  nav#mannering_nav #mannering_inner_nav li a:hover {
-    font-weight: bold;
+    display: none;
   }
 
   main#content {
@@ -5934,45 +5705,51 @@ main#content #registerform input[type=password] {
   }
   main#content #main_section section.album_section {
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   main#content #main_section section.album_section h2 {
+    font-size: 1.3em;
+    margin: 0.5em 0;
     line-height: 40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 {
-    margin: 0.5%;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img {
-    border: 2px solid #3A3A3A;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 img:hover {
-    border: 3px solid #ECAC00;
+    width: 48%;
+    margin: 0.25em;
+    flex: 0 0 auto;
   }
   main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
-    width: auto;
+    border: 2px solid #3A3A3A;
+  }
+  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
+    top: -40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    font-size: 0.85em;
+    width: 100%;
+    padding: 8px 10px;
   }
   main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    text-decoration: none !important;
+    background-color: #EBAB00;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-    font-size: 0.65em;
+    font-size: 0.9em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
-    font-size: 0.65em;
+    font-size: 0.85em;
   }
   main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section blockquote {
     font-size: 0.7em;
   }
   main#content #main_section #review_pagination {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section ul.categories {
-    font-size: 0.75em;
+    font-size: 0.85em;
     width: 65%;
   }
   main#content #main_section ul.categories li a {
@@ -5983,13 +5760,13 @@ main#content #registerform input[type=password] {
     width: 70%;
   }
   main#content #main_section #review-edit textarea {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   main#content #main_section #review-edit input[type=checkbox] {
     margin-right: 0.25em;
   }
   main#content #main_section #review-edit label {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   main#content #main_section #review-edit input[type=submit] {
     width: 40%;
@@ -6041,6 +5818,9 @@ main#content #registerform input[type=password] {
   main#content #results_container {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
     /*results.show page*/
   }
   main#content #results_container .results {
@@ -6049,12 +5829,20 @@ main#content #registerform input[type=password] {
   main#content #results_container .results figure.results-info img {
     width: auto;
   }
-  main#content #results_container .results figure.results-info figcaption.results-text ul {
-    width: 100%;
+  main#content #results_container .results figure.results-info figcaption.results-text h3, main#content #results_container .results figure.results-info figcaption.results-text h4, main#content #results_container .results figure.results-info figcaption.results-text h5, main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    line-height: 25px;
   }
-  main#content #results_container .results figure.results-info figcaption.results-text ul li {
-    width: 100%;
-    font-size: 0.65em;
+  main#content #results_container .results figure.results-info figcaption.results-text h3 {
+    font-size: 1em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h4 {
+    font-size: 0.9em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h5 {
+    font-size: 0.85em;
+  }
+  main#content #results_container .results figure.results-info figcaption.results-text h6 {
+    font-size: 0.8em;
   }
   main#content #results_container .results input.to_album_btn {
     height: 40px;
@@ -6100,7 +5888,7 @@ main#content #registerform input[type=password] {
     display: inline-block;
   }
   main#content #results_container .results-large div.audio_controls h1.trackName {
-    font-size: 1.1em;
+    font-size: 1.15em;
   }
   main#content #results_container .results-large div.audio_controls div.audiocntrl_containers .player-button {
     width: 20%;
@@ -6149,6 +5937,9 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #results_container .results-large ul.audio-tracklist {
     margin: 0;
+  }
+  main#content #results_container .results-large ul.audio-tracklist li {
+    font-size: 0.75em;
   }
   main#content #results_container .results-large ul.audio-tracklist li span.tracknum {
     width: 13%;
@@ -6257,11 +6048,17 @@ main#content #registerform input[type=password] {
   main#content address#contact-details p {
     line-height: 40px;
   }
+  main#content section#sidebar_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
   main#content section#sidebar_gallery h1 {
     font-size: 1em;
   }
   main#content section#sidebar_gallery figure.video-item {
-    width: 48.6%;
+    width: 48%;
   }
   main#content section#sidebar_gallery figure.video-item img {
     display: block;
@@ -6342,7 +6139,7 @@ main#content #registerform input[type=password] {
     color: #FFF;
   }
   footer ul#inner_footer li a {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
 }
 /*480 -599*/
@@ -6501,20 +6298,23 @@ main#content #registerform input[type=password] {
   main#content #main_section #review_pagination {
     line-height: 45px;
   }
-  main#content #main_section section.album_section:last-of-type {
-    margin-bottom: 0%;
-  }
   main#content #main_section section.album_section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 0 0 1em 0;
   }
   main#content #main_section section.album_section h2 {
-    font-size: 1.25em;
+    font-size: 1.3em;
     margin: 0.5em 0;
     line-height: 40px;
   }
   main#content #main_section section.album_section .grid_1_of_5 {
-    width: 65%;
+    width: 47%;
     margin: 0.25em;
+    flex: 0 0 auto;
   }
   main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
     border: 2px solid #3A3A3A;
@@ -6653,11 +6453,14 @@ main#content label.success {
   }
   main#content #results_container {
     margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
     /*results.show page*/
   }
   main#content #results_container .results {
     padding: 0.25em;
-    width: 75%;
+    width: 48%;
   }
   main#content #results_container .results h2 {
     font-size: 1em;
@@ -6848,7 +6651,6 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
     width: 20%;
-    font-size: 0.7em;
   }
   main#content .text_box {
     height: 140px;
@@ -7023,7 +6825,7 @@ main#content #contact-page-form input[type=email] {
   footer ul#inner_footer li a {
     text-indent: 0.5em;
     line-height: 45px;
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   footer ul#inner_footer li a:hover {
     color: #ECAC00;
@@ -7341,7 +7143,7 @@ main#content label.success {
   }
   main#content #results_container .results {
     padding: 0.25em;
-    width: 75%;
+    width: 70%;
   }
   main#content #results_container .results h2 {
     font-size: 1em;
@@ -7536,7 +7338,6 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
     width: 20%;
-    font-size: 0.7em;
   }
   main#content .text_box {
     height: 140px;
@@ -7711,7 +7512,7 @@ main#content #contact-page-form input[type=email] {
   footer ul#inner_footer li a {
     text-indent: 0.5em;
     line-height: 45px;
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   footer ul#inner_footer li a:hover {
     color: #ECAC00;
@@ -8228,7 +8029,6 @@ main#content #results_container .results-large div.audio_controls div.audiocntrl
   }
   main#content #results_container .results-large ul.audio-tracklist li span.trackplays {
     width: 20%;
-    font-size: 0.7em;
   }
   main#content .text_box {
     height: 140px;
@@ -8403,7 +8203,7 @@ main#content #contact-page-form input[type=email] {
   footer ul#inner_footer li a {
     text-indent: 0.5em;
     line-height: 45px;
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   footer ul#inner_footer li a:hover {
     color: #ECAC00;
