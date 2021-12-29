@@ -1,33 +1,33 @@
-<section id="main_text" class="group">
+<section id="main_section" class="group">
 
-  <?php if (empty($review->id) || $user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)) : ?>
+	<?php if (empty($review->id) || $user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)) : ?>
 
-    <form action="" id="review-edit" method="post">
+		<form action="" id="review-edit" method="post">
 
-      <input type="hidden" name="review[id]" value="<?= $review->id ?? '' ?>">
-      <label for="reviewtext">Type your review here:</label>
-      <textarea id="reviewtext" name="review[reviewtext]" rows="3" cols="40"><?= $review->reviewtext ?? '' ?></textarea>
+			<input type="hidden" name="review[id]" value="<?= $review->id ?? '' ?>">
+			<label for="reviewtext">Type your review here:</label>
+			<textarea id="reviewtext" name="review[reviewtext]" rows="3" cols="40"><?= $review->reviewtext ?? '' ?></textarea>
 
-      <p>Select categories for this review:</p>
-      <?php foreach ($categories as $category) : ?>
+			<p>Select categories for this review:</p>
+			<?php foreach ($categories as $category) : ?>
 
-        <?php if ($review && $review->hasCategory($category->id)) : ?>
-          <input type="checkbox" checked name="category[]" value="<?= $category->id ?>" />
-        <?php else : ?>
-          <input type="checkbox" name="category[]" value="<?= $category->id ?>" />
-        <?php endif; ?>
+				<?php if ($review && $review->hasCategory($category->id)) : ?>
+					<input type="checkbox" checked name="category[]" value="<?= $category->id ?>" />
+				<?php else : ?>
+					<input type="checkbox" name="category[]" value="<?= $category->id ?>" />
+				<?php endif; ?>
 
-        <label><?= $category->name ?></label>
-      <?php endforeach; ?>
+				<label><?= $category->name ?></label>
+			<?php endforeach; ?>
 
-      <input type="submit" name="submit" value="Save">
+			<input type="submit" name="submit" value="Save">
 
-    </form>
+		</form>
 
-  <?php else : ?>
+	<?php else : ?>
 
-    <p>You may only edit reviews that you posted.</p>
+		<p>You may only edit reviews that you posted.</p>
 
-  <?php endif; ?>
+	<?php endif; ?>
 
 </section>

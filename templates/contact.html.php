@@ -1,49 +1,43 @@
 <!--main text-->
 
-<section id="main_text" class="group">
+<section id="main_section" class="group">
 
-    <h1>Contact Us</h1>
+	<h1>Contact Us</h1>
 
-    <br />
+	<br />
 
-    <div id="summary"></div>
+	<div id="summary"></div>
 
-    <form id="contact-form-a" class="group" method="post" action="">
+	<form id="contact-page-form" class="group" method="" action="">
 
-        <br />
-        <label for="name">Full name</label>
+		<label for="name">Full name</label>
 
-        <input type="text" id="name" name="name" title="Please enter your name" required autofocus
-            placeholder="Last, First" value="">
+		<input type="text" id="name" name="name" title="Please enter your name" required autofocus placeholder="Last, First" value="">
 
-        <br />
-        <label for="email">E-mail</label>
+		<br />
+		<label for="email">E-mail</label>
 
-        <input id="email" name="email" type="email" placeholder="enter email address here"
-            title="Please Enter Your Email Address" required autocomplete="off">
-        <br />
-        <label for="message">Message</label>
+		<input id="email" name="email" type="email" placeholder="enter email address here" title="Please Enter Your Email Address" required autocomplete="off">
+		<br />
+		<label for="message">Message</label>
 
-        <textarea name="message" id="message" cols="30" rows="10"
-            placeholder="Write message here (No HTML Allowed)"></textarea>
-        <br /><br />
+		<textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here (No HTML Allowed)"></textarea>
+		<br /><br />
 
-        <input class="submit" name="submit" type="submit" value="Submit" id="contact_btn">
+		<input class="submit" name="submit" type="submit" value="Submit" id="contact_btn">
 
-    </form>
+	</form>
 
-    <address id="contact-details">
-        <p>Mannering Music Agency</p>
-        <p>1 Somewhere</p>
-        <p> London</p>
-        <p> E8 2GF</p>
-        <p>Tel No: 0208 123 4567</p>
-    </address>
+	<address id="contact-details">
+		<p>Mannering Music Agency</p>
+		<p>1 Somewhere</p>
+		<p> London</p>
+		<p> E8 2GF</p>
+		<p>Tel No: 0208 123 4567</p>
+	</address>
 
-    <!--Main text end-->
+	<!--Main text end-->
 
-    <div id="mapcontainer"></div>
+	<div id="mapcontainer"></div>
 
 </section>
-
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>

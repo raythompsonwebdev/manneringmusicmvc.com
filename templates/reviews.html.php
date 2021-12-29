@@ -1,4 +1,4 @@
-<section id="main_text" class="group" role="main">
+<section id="main_section" class="group">
     <h1>Reviews</h1>
 
     <div class="reviews">
@@ -14,7 +14,7 @@
             (by <a href="mailto:<?= htmlspecialchars($review->getAuthor()->email, ENT_QUOTES, 'UTF-8'); ?>">
                 <?= htmlspecialchars($review->getAuthor()->name, ENT_QUOTES, 'UTF-8'); ?>
             </a>on <?php $date = new DateTime($review->reviewdate);
-                echo $date->format('jS F Y'); ?>)
+								echo $date->format('jS F Y'); ?>)
 
             <?php if ($user) : ?>
             <?php if ($user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)) : ?>
@@ -34,10 +34,10 @@
         <span id="review_pagination">
             Select page:
             <?php
-							$numPages = ceil($totalReviews / 10);
-							for ($i = 1; $i <= $numPages; $i++) :
-								if ($i == $currentPage) :
-						?>
+			$numPages = ceil($totalReviews / 10);
+			for ($i = 1; $i <= $numPages; $i++) :
+				if ($i == $currentPage) :
+			?>
             <a class="currentpage"
                 href="/review/list?page=<?= $i ?><?= !empty($categoryId) ? '&category=' . $categoryId : '' ?>"><?= $i ?>
             </a>
@@ -57,4 +57,5 @@
         </li>
         <?php endforeach; ?>
     </ul>
+
 </section>

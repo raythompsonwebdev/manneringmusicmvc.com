@@ -1,22 +1,22 @@
-<section id="main_text" class="group" role="main">
+<section id="main_section" class="group" role="main">
 
-  <h1>Categories</h1>
+	<h1>Categories</h1>
 
-  <a href="/category/edit">Add a new category</a>
+	<a href="/category/edit">Add a new category</a>
 
 
-  <?php foreach ($categories as $category) : ?>
-    <blockquote>
-      <p>
-        <?= htmlspecialchars($category->name, ENT_QUOTES, 'UTF-8') ?>
+	<?php foreach ($categories as $category) : ?>
+		<blockquote>
+			<p>
+				<?= htmlspecialchars($category->name, ENT_QUOTES, 'UTF-8') ?>
 
-        <a href="/category/edit?id=<?= $category->id ?>">Edit</a>
-      <form action="/category/delete" method="post">
-        <input type="hidden" name="id" value="<?= $category->id ?>">
-        <input type="submit" value="Delete">
-      </form>
-      </p>
-    </blockquote>
+				<a href="/category/edit?id=<?= $category->id ?>">Edit</a>
+			<form action="/category/delete" method="post">
+				<input type="hidden" name="id" value="<?= $category->id ?>">
+				<input type="submit" value="Delete">
+			</form>
+			</p>
+		</blockquote>
 
-  <?php endforeach; ?>
+	<?php endforeach; ?>
 </section>

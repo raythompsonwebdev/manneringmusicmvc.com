@@ -180,14 +180,16 @@ function setTrack(trackId, newPlaylist, play) {
 
     }).then(function(body) {
 
-        var track = JSON.parse(body);
+        let track = JSON.parse(body);
 
         if (track[0] != null) {
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+
+            console.log(track[0]);
+            document.querySelector("div.audio_controls h3.trackName").textContent = track[0].songtitle;
             audioElement.setTrack(track);
 
         } else {
-            document.querySelector("div.audio_controls h1.trackName").textContent = "No Tracks Available";
+            document.querySelector("div.audio_controls h3.trackName").textContent = "No Tracks Available";
         }
 
         if (play == true) {
@@ -209,7 +211,8 @@ function playSong() {
         //get tracks from database
         let url = 'updatePlays.php';
         let formData = new FormData();
-        formData.append("songId", audioElement.currentlyPlaying.id);
+        console.log(audioElement.currentlyPlaying);
+        formData.append("songId", audioElement.currentlyPlaying[0].id);
 
         fetch(url, {
             method: 'POST',
@@ -246,20 +249,20 @@ function pauseSong() {
 }
 </script>
 
-<section id="main_text" class="group">
+<section id="main_section" class="group">
 
     <h1>Artist</h1>
 
-    <div id="results">
+    <div id="results_container">
 
-        <div class="product-box-large">
+        <div class="results-large">
 
-            <h1><?= $singleartist->artist_name; ?></h1>
+            <h2><?= $singleartist->artist_name; ?></h2>
             <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
             <!--Audio Controls-->
             <div class="audio_controls">
 
-                <h1 class="trackName"></h1>
+                <h3 class="trackName"></h3>
 
                 <div class="audiocntrl_containers">
 
@@ -312,7 +315,7 @@ function pauseSong() {
                 </div>
 
             </div>
-            <h2>Artist Tracks </h2>
+            <h4>Artist Tracks </h4>
             <br />
             <br />
             <!--Audio Playlist-->
@@ -342,16 +345,16 @@ function pauseSong() {
         <h2> Other Albums</h2>
 
         <?php foreach ($singlealbums as $value) : ?>
-        <div class="product-box">
-            <figure class="product-info">
+        <div class="results">
+            <figure class="results-info">
                 <a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>">
                     <img src="/assets/databasepics/WEBP/<?= $value->image ?>" alt="Album-Cover-Image" />
                 </a>
-                <figcaption>
-                    <ul class="product-box-info">
-                        <li><?= $value->album ?></li>
-                        <li><?= $value->genre ?></li>
-                    </ul>
+                <figcaption class="results-text">
+
+                    <h5><?= $value->album ?></h5>
+                    <h6><?= $value->genre ?></h6>
+
                 </figcaption>
             </figure>
         </div>

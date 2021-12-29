@@ -6,17 +6,17 @@
 </section>
 
 <!--main text-->
-<section id="main_text">
+<section id="main_section">
     <h1>MANNERING MUSIC FEATURED ALBUMS</h1>
     <br />
     <!--Hip Hop Section-->
-    <div class="album_section">
-
+    <section class="album_section">
+        <h2>Hip Hop</h2>
         <?php foreach ($rapalbums as $rapalbum) : ?>
 
         <figure class="grid_1_of_5 ">
             <a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>"
-                title="<?=$rapalbum->getArtistId()->artist_name?>">
+                title="<?= $rapalbum->getArtistId()->artist_name ?>">
                 <img class="images_1_of_5" width=100 height=100 src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>"
                     alt="HipHopMusicAlbum">
             </a>
@@ -30,17 +30,17 @@
 
         <?php endforeach; ?>
 
-    </div>
-    <div class="clearfix"></div>
+    </section>
+
 
     <!--Country Section-->
-    <div class="album_section ">
-
+    <section class="album_section ">
+        <h2>Country</h2>
         <?php foreach ($countryalbums as $countryalbum) : ?>
 
         <figure class="grid_1_of_5">
             <a href="/singleresult?albumid=<?= $countryalbum->id ?? '' ?>&artistid=<?= $countryalbum->artistId ?? '' ?>"
-                title="<?=$countryalbum->getArtistId()->artist_name?>">
+                title="<?= $countryalbum->getArtistId()->artist_name ?>">
                 <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>"
                     alt="CountryMusicAlbum">
             </a>
@@ -52,17 +52,17 @@
 
         <?php endforeach; ?>
 
-    </div>
-    <div class="clearfix"></div>
+    </section>
+
 
     <!--Jazz Section-->
-    <div class="album_section">
-
+    <section class="album_section">
+        <h2>Jazz</h2>
         <?php foreach ($jazzalbums as $jazzalbum) : ?>
 
         <figure class="grid_1_of_5">
             <a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>"
-                title="<?=$jazzalbum->getArtistId()->artist_name?>">
+                title="<?= $jazzalbum->getArtistId()->artist_name ?>">
                 <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>"
                     alt="JazzMusicAlbum">
             </a>
@@ -74,9 +74,9 @@
 
         <?php endforeach; ?>
 
-    </div>
-    <div class="clearfix"></div>
+    </section>
 
-    <br />
+
+
 
 </section>
