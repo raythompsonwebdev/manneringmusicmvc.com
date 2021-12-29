@@ -175,7 +175,7 @@ function setTrack(trackId, newPlaylist, play) {
     pauseSong();
 
     //get tracks from database
-    let url = './getSongJson.php';
+    let url = 'getSongJson.php';
     let formData = new FormData();
     formData.append("songId", trackId);
 

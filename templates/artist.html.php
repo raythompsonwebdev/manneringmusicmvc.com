@@ -180,14 +180,16 @@ function setTrack(trackId, newPlaylist, play) {
 
     }).then(function(body) {
 
-        var track = JSON.parse(body);
+        let track = JSON.parse(body);
 
         if (track[0] != null) {
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+
+            console.log(track[0]);
+            document.querySelector("div.audio_controls h3.trackName").textContent = track[0].songtitle;
             audioElement.setTrack(track);
 
         } else {
-            document.querySelector("div.audio_controls h1.trackName").textContent = "No Tracks Available";
+            document.querySelector("div.audio_controls h3.trackName").textContent = "No Tracks Available";
         }
 
         if (play == true) {
@@ -209,7 +211,8 @@ function playSong() {
         //get tracks from database
         let url = 'updatePlays.php';
         let formData = new FormData();
-        formData.append("songId", audioElement.currentlyPlaying.id);
+        console.log(audioElement.currentlyPlaying);
+        formData.append("songId", audioElement.currentlyPlaying[0].id);
 
         fetch(url, {
             method: 'POST',

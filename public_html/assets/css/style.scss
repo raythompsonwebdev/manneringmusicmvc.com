@@ -347,7 +347,11 @@ main#content {
 			}
 		}
 
-		blockquote {
+		div.reviews {
+			min-height: 250px;
+		}
+
+		div.reviews blockquote {
 			width: 100%;
 			margin: 0;
 			display: block;
@@ -355,7 +359,7 @@ main#content {
 			font-size: 1em;
 			background-color: $white-color;
 			color: $bg-black;
-			padding: 0.25em;
+			padding: 0.5em;
 			p {
 				background-color: $white-color;
 				color: $bg-black;
@@ -371,10 +375,6 @@ main#content {
 					width: 30%;
 				}
 			}
-		}
-
-		div.reviews {
-			min-height: 250px;
 		}
 
 		#review_pagination {
@@ -918,8 +918,13 @@ main#content {
 			font-weight: normal;
 
 			h2{
-				font-size:1em;
-				text-align:center;
+				font-size: 1.5em;
+				text-align: center;
+				line-height: 100px;
+				background-color: #fff;
+				color: #000;
+				width: 90%;
+				margin: 1em auto;
 			}
 
 			h3,h4,h5,h6{
@@ -930,13 +935,13 @@ main#content {
 				font-weight: normal;
 				margin:0;
 				width: 100%;
-				line-height: 25px;
 				margin-bottom: 0.2em;
 				text-align: center;
 			}
 
 			h3{
 				font-size: 1em;
+				line-height:40px;
 
 			}
 
@@ -1391,8 +1396,6 @@ main#content {
 
 	/*Contact page address details*/
 	address#contact-details {
-		font-size: 0.9em;
-		line-height: 1.5em;
 		width: 90%;
 		color: $white-color;
 		display: block;
@@ -1400,6 +1403,7 @@ main#content {
 
 		p {
 			line-height: 25px;
+			font-size: 0.85em;
 		}
 	}
 
@@ -1905,6 +1909,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.9em;
+					line-height:150px;
+					width:80%;
+				}
+
+				h3{
+					font-size: 1.2em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -1912,6 +1943,13 @@ footer {
 					align-items: center;
 					position: relative;
 					gap:1em;
+					h2{
+						font-size: 2em;
+						line-height: 150px;
+						width: 80%;
+						margin: 2em auto;
+
+					}
 					a {
 						width: 15%;
 						order: 0;
@@ -1948,7 +1986,7 @@ footer {
 					}
 					div.audiocntrl_containers {
 						.player-button {
-							width: 20%;
+							width: 14%;
 
 							cursor: pointer;
 
@@ -1980,7 +2018,7 @@ footer {
 						}
 
 						div.audio_volume {
-							width: 100%;
+							width: 30%;
 
 							div.VolumeBg {
 								width: 80%;
@@ -2091,7 +2129,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 50%;
 			padding: 2.5%;
 			float: none;
 
@@ -2144,7 +2182,7 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
+			font-size: 1em;
 			width: 90%;
 			margin: 5% auto;
 			display: block;
@@ -2152,6 +2190,7 @@ footer {
 
 			p {
 				line-height: 40px;
+				font-size: 1em;
 			}
 		}
 
@@ -2588,6 +2627,34 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+
+				h2{
+					font-size: 1.8em;
+					line-height:150px;
+					width:80%;
+				}
+
+				h3{
+					font-size: 1.2em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -2595,6 +2662,13 @@ footer {
 					align-items: center;
 					position: relative;
 					gap:1em;
+					h2{
+						font-size: 2em;
+						line-height: 150px;
+						width: 80%;
+						margin: 2em auto;
+
+					}
 					a {
 						width: 15%;
 						order: 0;
@@ -2634,7 +2708,7 @@ footer {
 					}
 					div.audiocntrl_containers {
 						.player-button {
-							width: 20%;
+							width: 14%;
 
 							cursor: pointer;
 
@@ -2666,7 +2740,7 @@ footer {
 						}
 
 						div.audio_volume {
-							width: 100%;
+							width: 30%;
 
 							div.VolumeBg {
 								width: 80%;
@@ -2777,7 +2851,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 50%;
 			padding: 2.5%;
 			float: none;
 
@@ -2830,14 +2904,13 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 50%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+				font-size: 1em;
 			}
 		}
 
@@ -3277,6 +3350,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.8em;
+					line-height:150px;
+					width:80%;
+				}
+
+				h3{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -3284,6 +3384,13 @@ footer {
 					align-items: center;
 					position: relative;
 					gap:1em;
+					h2{
+						font-size: 2em;
+						line-height: 150px;
+						width: 80%;
+						margin: 2em auto;
+
+					}
 					a {
 						width: 15%;
 						order: 0;
@@ -3325,7 +3432,7 @@ footer {
 					}
 					div.audiocntrl_containers {
 						.player-button {
-							width: 20%;
+							width: 14%;
 
 							cursor: pointer;
 
@@ -3357,7 +3464,7 @@ footer {
 						}
 
 						div.audio_volume {
-							width: 100%;
+							width: 30%;
 
 							div.VolumeBg {
 								width: 80%;
@@ -3468,7 +3575,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 50%;
 			padding: 2.5%;
 			float: none;
 
@@ -3521,14 +3628,13 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 50%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+				font-size: 1em;
 			}
 		}
 
@@ -3968,6 +4074,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.7em;
+					line-height:150px;
+					width:80%;
+				}
+
+				h3{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -3975,6 +4108,13 @@ footer {
 					align-items: center;
 					position: relative;
 					gap:1em;
+					h2{
+						font-size: 2em;
+						line-height: 150px;
+						width: 80%;
+						margin: 2em auto;
+
+					}
 					a {
 						width: 20%;
 						order: 0;
@@ -4017,7 +4157,7 @@ footer {
 					}
 					div.audiocntrl_containers {
 						.player-button {
-							width: 20%;
+							width: 14%;
 
 							cursor: pointer;
 
@@ -4049,7 +4189,7 @@ footer {
 						}
 
 						div.audio_volume {
-							width: 100%;
+							width: 30%;
 
 							div.VolumeBg {
 								width: 80%;
@@ -4160,7 +4300,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 60%;
 			padding: 2.5%;
 			float: none;
 
@@ -4213,14 +4353,14 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 60%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+				line-height: 35px;
+				font-size: 0.9em;
 			}
 		}
 
@@ -4514,7 +4654,8 @@ footer {
 
 			}
 			blockquote {
-				font-size: 0.7em;
+				font-size: 0.9em;
+				padding: 0.5em;
 				p{
 					font-size:1em;
 				}
@@ -4661,6 +4802,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.6em;
+					line-height:125px;
+					width:90%;
+				}
+
+				h3{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -4668,6 +4836,13 @@ footer {
 					align-items: center;
 					position: relative;
 					gap:1em;
+					h2{
+						font-size: 2em;
+						line-height: 150px;
+						width: 80%;
+						margin: 2em auto;
+
+					}
 					a {
 						width: 20%;
 						order: 0;
@@ -4853,7 +5028,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 60%;
 			padding: 2.5%;
 			float: none;
 
@@ -4906,14 +5081,13 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 60%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+				font-size: 0.9em;
 			}
 		}
 
@@ -5207,7 +5381,7 @@ footer {
 
 			}
 			blockquote {
-				font-size: 0.7em;
+				font-size: 0.9em;
 				p{
 					font-size:1em;
 				}
@@ -5354,6 +5528,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.7em;
+					line-height:125px;
+					width:90%;
+				}
+
+				h3{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					display: flex;
 					flex-flow: row;
@@ -5547,7 +5748,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 60%;
 			padding: 2.5%;
 			float: none;
 
@@ -5600,14 +5801,14 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 60%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+
+				font-size: 0.9em;
 			}
 		}
 
@@ -5901,7 +6102,7 @@ footer {
 
 			}
 			blockquote {
-				font-size: 0.7em;
+				font-size: 0.9em;
 				p{
 					font-size:1em;
 				}
@@ -6048,6 +6249,33 @@ footer {
 
 			/*results.show page*/
 			.results-large {
+				h2{
+					font-size: 1.6em;
+					line-height:125px;
+					width:90%;
+				}
+
+				h3{
+					font-size: 1.1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
+
+				}
 				figure.results-info {
 					figcaption.results-text {
 						width: 100%;
@@ -6226,7 +6454,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 70%;
 			padding: 2.5%;
 			float: none;
 
@@ -6279,14 +6507,14 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 70%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+
+				font-size: 0.9em;
 			}
 		}
 
@@ -6703,7 +6931,30 @@ footer {
 			/*results.show page*/
 			.results-large {
 				h2{
-					font-size:1em;
+					font-size: 1.6em;
+					line-height:125px;
+					width:90%;
+				}
+
+				h3{
+					font-size: 1em;
+					line-height:40px;
+
+				}
+
+				h4{
+					font-size: 0.9em;
+					line-height:40px;
+
+				}
+
+				h5{
+					font-size: 0.85em;
+
+				}
+
+				h6{
+					font-size: 0.80em;
 
 				}
 
@@ -6910,7 +7161,7 @@ footer {
 		}
 
 		#contact-page-form {
-			width: 100%;
+			width: 70%;
 			padding: 2.5%;
 			float: none;
 
@@ -6963,14 +7214,14 @@ footer {
 		}
 
 		address#contact-details {
-			font-size: 0.8em;
-			width: 90%;
+			width: 70%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-				line-height: 40px;
+
+				font-size: 0.9em;
 			}
 		}
 
@@ -7272,7 +7523,11 @@ footer {
 				}
 			}
 
-			blockquote {
+			div.reviews {
+				min-height: 250px;
+			}
+
+			div.reviews blockquote {
 				font-size: 1em;
 
 				p {
@@ -7280,7 +7535,6 @@ footer {
 					font-size: 1em;
 
 				}
-
 				form {
 					padding: 1em 0;
 					input[type='submit'] {
@@ -7289,9 +7543,6 @@ footer {
 				}
 			}
 
-			div.reviews {
-				min-height: 250px;
-			}
 
 			#review_pagination {
 				line-height: 45px;
@@ -7574,23 +7825,20 @@ footer {
 				margin: 0.5em;
 
 				h2{
-					font-size:1em;
-
-				}
-
-				h3,h4,h5,h6{
-					line-height: 25px;
-					margin-bottom: 0.2em;
-
+					font-size: 1.5em;
+					line-height:125px;
+					width:90%;
 				}
 
 				h3{
 					font-size: 1em;
+					line-height:40px;
 
 				}
 
 				h4{
 					font-size: 0.9em;
+					line-height:40px;
 
 				}
 
@@ -7850,7 +8098,7 @@ footer {
 
 		/*Contact page form*/
 		#contact-page-form {
-			width: 90%;
+			width: 70%;
 			padding: 1.5em;
 
 
@@ -7888,11 +8136,13 @@ footer {
 
 		/*Contact page address details*/
 		address#contact-details {
+			width:70%;
 			line-height: 1.5em;
 			margin:0.5em auto;
 
 			p {
-				line-height: 25px;
+				line-height: 30px;
+				font-size: 0.85em;
 			}
 		}
 
@@ -8186,12 +8436,16 @@ footer {
 				}
 			}
 
-			blockquote {
-				font-size: 1em;
+			div.reviews {
+				min-height: 250px;
+			}
+
+			div.reviews blockquote {
+				font-size: 0.9em;
 
 				p {
 
-					font-size: 0.9em;
+					font-size: 1em;
 
 				}
 
@@ -8203,9 +8457,6 @@ footer {
 				}
 			}
 
-			div.reviews {
-				min-height: 250px;
-			}
 
 			#review_pagination {
 				line-height: 45px;
@@ -8486,23 +8737,20 @@ footer {
 				margin: 0.5em;
 
 				h2{
-					font-size:1em;
-
-				}
-
-				h3,h4,h5,h6{
-					line-height: 25px;
-					margin-bottom: 0.2em;
-
+					font-size: 1.5em;
+					line-height:125px;
+					width:90%;
 				}
 
 				h3{
 					font-size: 1em;
+					line-height:40px;
 
 				}
 
 				h4{
 					font-size: 0.9em;
+					line-height:40px;
 
 				}
 
@@ -8766,7 +9014,7 @@ footer {
 
 		/*Contact page form*/
 		#contact-page-form {
-			width: 90%;
+			width: 80%;
 			padding: 1.5em;
 
 
@@ -8805,10 +9053,11 @@ footer {
 		/*Contact page address details*/
 		address#contact-details {
 			line-height: 1.5em;
-			margin:0.5em auto;
+			width:80%;
 
 			p {
-				line-height: 25px;
+				line-height: 30px;
+				font-size: 0.85em;
 			}
 		}
 
@@ -9106,12 +9355,17 @@ footer {
 				}
 			}
 
-			blockquote {
-				font-size: 1em;
+			div.reviews {
+				min-height: 250px;
+			}
+
+
+			div.reviews blockquote {
+				font-size: 0.9em;
 
 				p {
 
-					font-size: 0.9em;
+					font-size: 1em;
 
 				}
 
@@ -9121,10 +9375,6 @@ footer {
 						width: 30%;
 					}
 				}
-			}
-
-			div.reviews {
-				min-height: 250px;
 			}
 
 			#review_pagination {
@@ -9145,9 +9395,6 @@ footer {
 					line-height: 40px;
 
 				}
-
-
-
 				.grid_1_of_5 {
 					width: 75%;
 					margin: 0.25em;
@@ -9406,33 +9653,35 @@ footer {
 				margin: 0.5em;
 
 				h2{
-					font-size:1em;
-
-				}
-
-				h3,h4,h5,h6{
-					line-height: 25px;
-					margin-bottom: 0.2em;
-
+					font-size: 1.5em;
+					line-height:125px;
+					width:90%;
 				}
 
 				h3{
-					font-size: 1em;
+					font-size: 0.9em;
+					line-height:40px;
 
 				}
 
 				h4{
-					font-size: 0.9em;
+					font-size: 0.8em;
+					line-height:40px;
 
 				}
 
 				h5{
-					font-size: 0.85em;
+					font-size: 0.75em;
 
 				}
 
 				h6{
-					font-size: 0.80em;
+					font-size: 0.70em;
+
+				}
+
+				h6{
+					font-size: 0.65em;
 
 				}
 
@@ -9724,11 +9973,12 @@ footer {
 
 		/*Contact page address details*/
 		address#contact-details {
-			line-height: 1.5em;
 			margin:0.5em auto;
+			width:90%;
 
 			p {
-				line-height: 25px;
+				line-height: 30px;
+				font-size:0.85em;
 			}
 		}
 

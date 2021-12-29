@@ -1,5 +1,5 @@
 <section id="main_section" class="group">
-    <h1>Access Denied</h1>
+    <h1>Register an Account</h1>
     <?php if (!empty($errors)) : ?>
     <div class="errors">
         <p>Your account could not be created, please check the following:</p>
