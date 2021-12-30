@@ -54,21 +54,6 @@ a{
   @include mannering-transition(all 0.2s ease-in);
   font-family: ($FontListText);
   width:auto;
-  &:link {
-      color: $orange-color;
-  }
-  &:visited {
-      color: $orange-color;
-  }
-  &:focus {
-      color: $orange-color;
-  }
-  &:hover{
-      cursor:pointer;
-  }
-  &:active {
-      color: $orange-color;
-  }
 }
 
 

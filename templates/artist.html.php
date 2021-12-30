@@ -266,44 +266,39 @@ function pauseSong() {
 
                 <div class="audiocntrl_containers">
 
-                    <div id="shuffle-button" role="button" tabindex="0" class="player-button shuffle"
-                        onclick="setShuffle()">
+                    <button id="shuffle-button" class="player-button shuffle" onclick="setShuffle()">
                         <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-                    </div>
+                    </button>
 
-                    <div id="play-button" role="button" tabindex="0" class="player-button play" onclick="playSong()">
+                    <button id="play-button" class="player-button play" onclick="playSong()">
                         <i class="fa fa-play" aria-hidden="true" title="play"></i>
-                    </div>
+                    </button>
 
-                    <div id="pause-button" role="button" tabindex="0" class="player-button pause" style="display: none;"
-                        onclick="pauseSong()">
-                        <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
-                    </div>
+                    <button id="pause-button" class="player-button pause" style="display: none;"
+                        onclick="pauseSong()"><i class="fa fa-pause" aria-hidden="true" title="pause"></i>
+                    </button>
 
-                    <div role="button" tabindex="0" class="player-button previous" onclick="prevSong()">
+                    <button class="player-button previous" onclick="prevSong()">
                         <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
-                    </div>
+                    </button>
 
-                    <div role="button" tabindex="0" class="player-button next" onclick="nextSong()">
+                    <button class="player-button next" onclick="nextSong()">
                         <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
-                    </div>
+                    </button>
 
-                    <div role="button" tabindex="0" class="player-button repeat" onclick="setRepeat()">
+                    <button class="player-button repeat" onclick="setRepeat()">
                         <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
-                    </div>
-
-
+                    </button>
 
                     <!--add onclick="setMute() to change volume icon. need to add volume icon-->
                     <div class="audio_volume">
                         <div class="VolumeBg">
-                            <!-- <div class="volume"></div> -->
                             <input type="range" min="0" max="100" value="100" class="volume" id="volume"
                                 title="volume" />
                         </div>
-                        <div class="VolumeImg" onclick="setMute()" role="button" tabindex="0">
+                        <button id="volume-mute" onclick="setMute()">
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="audiocntrl_containers">
@@ -363,5 +358,13 @@ function pauseSong() {
     </div>
 
 
+
+
+
+
+
+
     <br />
+
+</section>
 </section>

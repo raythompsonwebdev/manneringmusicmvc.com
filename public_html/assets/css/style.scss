@@ -150,11 +150,28 @@ header {
 					width: 100%;
 					height: 100%;
 					line-height: 40px;
-
-					&:hover {
+					&:visited {
+						color: $white-color;
+						background-color: $stone-grey;
+						font-weight:bold;
+					}
+					&:hover{
 						color: $stone-grey;
 						background-color: $orange-color;
+						cursor:pointer;
+						font-weight:bold;
 					}
+					&:focus {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+					&:active {
+						color: $white-color;
+						background-color: $stone-grey;
+						font-weight:bold;
+					}
+
 				}
 			}
 		}
@@ -193,12 +210,26 @@ nav#mannering_nav {
 				display: block;
 				font-size: 0.9em;
 				font-weight: normal;
-
-				&:hover {
+				&:visited {
+					color: $white-color;
+					background-color: $orange-color;
+					font-weight:bold;
+				}
+				&:hover{
 					background-color: $orange-color;
 					color: $stone-grey;
 					font-weight: bold;
 					cursor:pointer;
+				}
+				&:focus {
+					color: $white-color;
+					background-color: $orange-color;
+					font-weight:bold;
+				}
+				&:active {
+					color: $white-color;
+					background-color: $orange-color;
+					font-weight:bold;
 				}
 			}
 
@@ -706,7 +737,7 @@ main#content {
 		}
 
 		::placeholder {
-			color: #ccc;
+			color: $bg-black;
 			text-indent: 0.25em;
 			font-family: ($FontListText);
 		}
@@ -825,8 +856,6 @@ main#content {
 
 			figure.results-info {
 				/* Album image*/
-
-
 				a {
 					width: auto;
 					order: 0;
@@ -840,35 +869,34 @@ main#content {
 				/* Album artist and name*/
 				figcaption.results-text {
 					width: 100%;
-						h3,h4,h5,h6{
-							display: block;
-							padding: 0;
-							color: $white-color;
-							height: auto;
-							font-weight: normal;
-							margin:0;
-							width: 100%;
-							line-height: 25px;
-							margin-bottom: 0.2em;
-							text-align: center;
-						}
-						h3{
-							font-size: 1em;
-							background-color: $darker-stone-grey;
-						}
-						h4{
-							font-size: 0.9em;
-							background-color: $light-grey;
-						}
-						h5{
-							font-size: 0.85em;
-							background-color: $darker-stone-grey;
-						}
-						h6{
-							font-size: 0.80em;
-							background-color: $light-grey;
-						}
-
+					h3,h4,h5,h6{
+						display: block;
+						padding: 0;
+						color: $white-color;
+						height: auto;
+						font-weight: normal;
+						margin:0;
+						width: 100%;
+						line-height: 25px;
+						margin-bottom: 0.2em;
+						text-align: center;
+					}
+					h3{
+						font-size: 1em;
+						background-color: $darker-stone-grey;
+					}
+					h4{
+						font-size: 0.9em;
+						background-color: $light-grey;
+					}
+					h5{
+						font-size: 0.85em;
+						background-color: $darker-stone-grey;
+					}
+					h6{
+						font-size: 0.80em;
+						background-color: $light-grey;
+					}
 				}
 			}
 
@@ -1056,26 +1084,25 @@ main#content {
 					.player-button {
 						width: 20%;
 						flex: 0 1 auto;
-						text-align: center;
-						height: 50px;
+						height: auto;
 						line-height: 50px;
+						outline:none;
+						border: none;
 						cursor: pointer;
-
+						background-color: $bg-black;
+						color: $white-color;
 						i {
 							font-size: 1em;
 							display: block;
-							height: 100%;
+							height: auto;
 							text-align: center;
-							width: 98%;
+							width: 100%;
 							line-height: 50px;
-							background-color: $bg-black;
-							color: $white-color;
-
-							&:hover {
-								font-size: 1.1em;
-								background-color: $white-color;
-								color: $bg-black;
-							}
+						}
+						&:hover {
+							font-size: 1.1em;
+							background-color: $white-color;
+							color: $bg-black;
 						}
 					}
 
@@ -1132,23 +1159,26 @@ main#content {
 
 						}
 
-						div.VolumeImg {
+						button#volume-mute {
 							width: 12%;
 							height: 100%;
 							background-color: $bg-black;
+							color: $white-color;
+							border:none;
+							outline:none;
 							i.fa-volume-up {
 								display: block;
-
 								width: 100%;
 								text-align: center;
 								line-height: 50px;
 								font-size: 1.5em;
-
 								&:before {
 									display: block;
 								}
 							}
 							&:hover {
+								background-color: $white-color;
+								color: $bg-black;
 								cursor: pointer;
 							}
 						}
@@ -1263,10 +1293,10 @@ main#content {
 
 	/*Register Form*/
 	#registerform {
-		width: 96%;
+		width: 90%;
 		height: auto;
 		color: $white-color;
-		padding: 0.5em;
+		padding: 1.5em;
 		display: block;
 		background-color: $darker-stone-grey;
 		margin: 1em auto;
@@ -1518,9 +1548,9 @@ main#content {
 		background: $white-color;
 		color: #000;
 		padding: 1em;
-		margin: auto 1em;
+		margin: 1em auto;
 		width: auto;
-		width: 65%;
+		width: 60%;
 		text-align: center;
 	}
 
@@ -1699,11 +1729,26 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-
-					&:hover {
+					&:visited {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+					&:hover{
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
+						cursor:pointer;
+					}
+					&:focus {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+					&:active {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
 					}
 				}
 
@@ -1988,14 +2033,9 @@ footer {
 						.player-button {
 							width: 14%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
 
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -2028,7 +2068,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -2323,11 +2363,12 @@ footer {
 	}
 }
 
-/*1440*/
+/*1440 - 1919*/
 @media only screen and (min-width: 1440px) and (max-width: 1919px)   {
 	button#mobile-toggle {
 		display:none;
 	}
+
 	#wrapper {
 		width: 86%;
 	}
@@ -2405,11 +2446,27 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-
-					&:hover {
+					&:link {
+						color: $white-color;
+						background-color: $stone-grey;
+						font-weight:bold;
+					}
+					&:visited {
+						color: $white-color;
+						background-color: $stone-grey;
+						font-weight:bold;
+					}
+					&:hover{
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
+						cursor:pointer;
+					}
+
+					&:active {
+						background-color: $white-color;
+						color: $orange-color;
+						font-weight:bold;
 					}
 				}
 
@@ -2710,14 +2767,8 @@ footer {
 						.player-button {
 							width: 14%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -2750,7 +2801,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -3043,7 +3094,7 @@ footer {
 	}
 }
 
-/*1280*/
+/*1280 - 1439*/
 @media only screen and (min-width: 1280px) and (max-width: 1439px)   {
 	button#mobile-toggle {
 		display:none;
@@ -3434,14 +3485,8 @@ footer {
 						.player-button {
 							width: 14%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -3474,7 +3519,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -3767,7 +3812,7 @@ footer {
 	}
 }
 
-/*1024*/
+/*1024 - 1279*/
 @media only screen and (min-width: 1024px) and (max-width: 1279px)   {
 
 	button#mobile-toggle {
@@ -4159,14 +4204,8 @@ footer {
 						.player-button {
 							width: 14%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -4199,7 +4238,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -4493,7 +4532,7 @@ footer {
 	}
 }
 
-/*980*/
+/*980 - 1023*/
 @media only screen and (min-width: 980px) and (max-width: 1023px)   {
 	button#mobile-toggle {
 		display:none;
@@ -4886,15 +4925,9 @@ footer {
 					div.audiocntrl_containers {
 						.player-button {
 							width: 20%;
-
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
 
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -4927,7 +4960,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -5220,7 +5253,7 @@ footer {
 	}
 }
 
-/*800*/
+/*800 - 1023*/
 @media only screen and (min-width: 800px) and (max-width: 979px)  {
 	button#mobile-toggle {
 		display:none;
@@ -5605,15 +5638,8 @@ footer {
 					div.audiocntrl_containers {
 						.player-button {
 							width: 20%;
-
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -5646,7 +5672,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -5941,7 +5967,7 @@ footer {
 	}
 }
 
-/*736*/
+/*667 - 799*/
 @media only screen and (min-width: 667px) and (max-width: 799px) {
 
 	button#mobile-toggle {
@@ -6312,14 +6338,8 @@ footer {
 						.player-button {
 							width: 20%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -6352,7 +6372,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -6647,7 +6667,7 @@ footer {
 	}
 }
 
-/*600 - 734*/
+/*600 - 666*/
 @media only screen and (min-width: 600px) and (max-width: 666px) {
 
 	button#mobile-toggle {
@@ -7019,14 +7039,8 @@ footer {
 						.player-button {
 							width: 20%;
 
-							cursor: pointer;
-
 							i {
 								font-size: 1.6em;
-
-								&:hover {
-									font-size: 1.7em;
-								}
 							}
 						}
 
@@ -7059,7 +7073,7 @@ footer {
 								width: 96%;
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 20%;
 
 								i.fa-volume-up {
@@ -7913,10 +7927,6 @@ footer {
 
 							i {
 								font-size: 1.1em;
-
-								&:hover {
-									font-size: 1.15em;
-								}
 							}
 						}
 
@@ -7953,7 +7963,7 @@ footer {
 
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 12%;
 
 								i.fa-volume-up {
@@ -8822,17 +8832,8 @@ footer {
 
 						.player-button {
 							width: 20%;
-							height: 50px;
-							line-height: 50px;
-
 							i {
 								font-size: 1em;
-								width: 98%;
-								line-height: 50px;
-
-								&:hover {
-									font-size: 1.1em;
-								}
 							}
 						}
 
@@ -8869,7 +8870,7 @@ footer {
 
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 12%;
 
 								i.fa-volume-up {
@@ -9743,17 +9744,8 @@ footer {
 
 						.player-button {
 							width: 20%;
-							height: 50px;
-							line-height: 50px;
-
 							i {
 								font-size: 1em;
-								width: 98%;
-								line-height: 50px;
-
-								&:hover {
-									font-size: 1.1em;
-								}
 							}
 						}
 
@@ -9790,7 +9782,7 @@ footer {
 
 							}
 
-							div.VolumeImg {
+							button#volume-mute {
 								width: 12%;
 
 								i.fa-volume-up {

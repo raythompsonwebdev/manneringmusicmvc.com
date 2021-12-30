@@ -74,8 +74,6 @@ class Audio {
     // Display bar to display volume level //
     this.updateVolumeProgressBar = (audio) => {
       const volume = audio.volume * 100;
-      // eslint-disable-next-line no-console
-      console.log(volume);
       document.querySelector(' input.volume').value = `${volume}`;
     };
 

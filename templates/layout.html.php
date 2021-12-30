@@ -58,11 +58,13 @@
 
             <ul id="mannering_inner_nav">
                 <li><a href="/" title="Home Page">Home</a></li>
-                <li><a href="/review/list" title="twitter" title="Reviews Page">Reviews</a></li>
+                <li><a href="/review/list" title=" twitter" title="Reviews Page">Reviews</a></li>
                 <li><a href="/search" title="Search Page">Search</a></li>
                 <li><a href="/video" title="Videos Page">Video</a></li>
 
                 <?php if ($loggedIn) : ?>
+
+
                 <li class="social-item"><a href="/logout" title="Log Out">Log out</a>
                     <?php else : ?>
                 <li class="social-item"><a href="/login" title="Log In">Log in</a></li>
@@ -71,7 +73,6 @@
 
             <ul id="mannering_mobile_inner_nav">
                 <li><a href="/" title="Home Page">Home</a></li>
-                <li><a href="/review/list" title="twitter" title="Reviews Page">Reviews</a></li>
                 <li><a href="/search" title="Search Page">Search</a></li>
                 <li><a href="/video" title="Videos Page">Video</a></li>
 
