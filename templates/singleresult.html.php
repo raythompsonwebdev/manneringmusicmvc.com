@@ -175,7 +175,7 @@ function setTrack(trackId, newPlaylist, play) {
     pauseSong();
 
     //get tracks from database
-    let url = 'getSongJson.php';
+    let url = 'helpers/getSongJson.php';
     let formData = new FormData();
     formData.append("songId", trackId);
 
@@ -213,18 +213,17 @@ function playSong() {
     //track plays function needs ajax file updatePlays.php
     if (audioElement.audio.currentTime == 0) {
         //get tracks from database
-        let url = 'updatePlays.php';
+        let url = 'helpers/updatePlays.php';
         let formData = new FormData();
         formData.append("songId", audioElement.currentlyPlaying[0].id);
 
         fetch(url, {
             method: 'POST',
             body: formData,
-            mode: 'no-cors', // no-cors, *cors, same-origin
-            // headers: {
+            headers: {
 
-            //     'Content-Type': 'application/json',
-            // },
+                'Content-Type': 'application/x-www-form-urlencoded"',
+            },
         }).then(function(response) {
             return response.text();
         }).catch(function(err) {
@@ -377,6 +376,7 @@ function pauseSong() {
         </div>
         <div>
             <div>
+
 
 
 
