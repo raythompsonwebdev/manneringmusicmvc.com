@@ -35,7 +35,7 @@ class Author
 		return $this->reviewsTable->save($review);
 	}
 
-	public function ownsJokePermission($reviewsId, $permission)
+	public function ownsReviewPermission($reviewsId, $permission)
 	{
 		$review = $this->reviewsTable->findById($reviewsId);
 		if ($review->authorid != $this->id && !$this->hasPermission($permission)) {

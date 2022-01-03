@@ -220,10 +220,10 @@ function playSong() {
         fetch(url, {
             method: 'POST',
             body: formData,
-            headers: {
+            // headers: {
 
-                'Content-Type': 'application/x-www-form-urlencoded"',
-            },
+            //     'Content-Type': 'application/x-www-form-urlencoded"',
+            // },
         }).then(function(response) {
             return response.text();
         }).catch(function(err) {
