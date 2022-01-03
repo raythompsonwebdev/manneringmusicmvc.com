@@ -71,6 +71,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//access to player buttons using keyboard
+window.addEventListener("keydown", function(e) {
+
+    console.log(`KeyboardEvent: key='${event.key}' | code='${event.code}'`);
+    if (event.key === 'Enter') {
+        playSong();
+    }
+
+    if (event.key === 'Shift') {
+        pauseSong();
+    }
+
+    if (event.key === 'ArrowLeft') {
+        nextSong();
+    }
+
+    if (event.key === 'ArrowRight') {
+        prevSong();
+    }
+
+}, true);
+
 //us mouse to drag progress bar and change audio position
 function timeFromOffset(mouse, progressBar) {
     let percentage = mouse.offsetX / $(progressBar).width() * 100;
@@ -166,7 +188,7 @@ function setTrack(trackId, newPlaylist, play) {
     pauseSong();
 
     //get tracks from database
-    let url = 'getSongJson.php';
+    let url = 'helpers/getSongJson.php';
     let formData = new FormData();
     formData.append("songId", trackId);
 

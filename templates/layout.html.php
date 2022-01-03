@@ -39,11 +39,30 @@
 
             <span class="social">
                 <ul id="social">
-                    <li class="social-item"><a href="#" title="twitter"><i class="fa fa-twitter soc"></i></a></li>
-                    <li class="social-item"><a href="#" title="facebook"><i class="fa fa-facebook soc"></i></a></li>
-                    <li class="social-item"><a href="#" title="rss"><i class="fa fa-rss soc"></i></a></li>
-                    <li class="social-item"><a href="#" title="dribble"><i class="fa fa-dribbble soc"></i></a></li>
-                    <li class="social-item"><a href="#" title="instagram"><i class="fa fa-instagram soc"></i></a>
+                    <li class="social-item">
+                        <a href="https://twitter.com/" title="twitter" aria-label="link to twitter">
+                            <i class="fa fa-twitter soc"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://facebook.com/" title="facebook" aria-label="link to facebook">
+                            <i class="fa fa-facebook soc"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://facebook.com/" title="rss" aria-label="link to frss">
+                            <i class="fa fa-rss soc"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://dribbble.com/" title="dribble" aria-label="link to dribble">
+                            <i class="fa fa-dribbble soc"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/" title="instagram" aria-label="link to instagram">
+                            <i class="fa fa-instagram soc"></i>
+                        </a>
                     </li>
                 </ul>
             </span>
@@ -57,10 +76,10 @@
         <nav id="mannering_nav">
 
             <ul id="mannering_inner_nav">
-                <li><a href="/" title="Home Page">Home</a></li>
-                <li><a href="/review/list" title=" twitter" title="Reviews Page">Reviews</a></li>
-                <li><a href="/search" title="Search Page">Search</a></li>
-                <li><a href="/video" title="Videos Page">Video</a></li>
+                <li><a href="/" title="Home Page" aria-label="link to home page">Home</a></li>
+                <li><a href="/review/list" title="Reviews Page" aria-label="link to reviews page">Reviews</a></li>
+                <li><a href="/search" title="Search Page" aria-label="link to album search page">Search</a></li>
+                <li><a href="/video" title="Videos Page" aria-label="link to video search page">Video</a></li>
 
                 <?php if ($loggedIn) : ?>
 
@@ -77,9 +96,9 @@
                 <li><a href="/video" title="Videos Page">Video</a></li>
 
                 <?php if ($loggedIn) : ?>
-                <li class="social-item"><a href="/logout" title="Log Out">Log out</a>
+                <li class="social-item"><a href="/logout" title="Log Out" aria-label="link to logout">Log out</a>
                     <?php else : ?>
-                <li class="social-item"><a href="/login" title="Log In">Log in</a></li>
+                <li class="social-item"><a href="/login" title="Log In" aria-label="link to login">Log in</a></li>
                 <?php endif; ?>
             </ul>
 
@@ -97,10 +116,11 @@
         <footer>
 
             <ul id="inner_footer">
-                <li><a href="#" title="Terms Page">Terms</a></li>
-                <li><a href="#" title="Privacy Page">Privacy</a></li>
-                <li><a href="#" title="About Page">About</a></li>
-                <li><a href="/contact" title="Contact Page">Contact</a></li>
+                <li><a href="#" title="Terms Page" aria-label="link to terms and conditions page">Terms</a></li>
+                <li><a href="#" title="Privacy Page" aria-label="link to privacy policy page">Privacy</a></li>
+                <li><a href="#" title="About Page" aria-label="link to about page">About</a></li>
+
+                <li><a href="/contact" title="Contact Page" aria-label="link to contacts page">Contact</a></li>
 
             </ul>
 

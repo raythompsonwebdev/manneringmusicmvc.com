@@ -11,15 +11,6 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    // let currentPlaylist = [];
-    // let shufflePlaylist = [];
-    // let tempPlaylist = [];
-    // let audioElement;
-    // let mouseDown = false;
-    // let currentIndex = 0;
-    // let repeat = false;
-    // let shuffle = false;
-
     //create seprate playlists for shuffle
     let newPlaylist = <?php echo $jsonArray; ?>;
     audioElement = new Audio(); //instance of audio class
@@ -30,11 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let prevHighlight = document.querySelector('div.audio_controls');
     let progressBar = document.querySelector('div.progress div.play_progress');
     let volumeControl = document.querySelector('input#volume');
-
     let playControl = document.querySelector('#play-button');
     let pauseControl = document.querySelector('#pause-button');
-
-
 
     prevHighlight.addEventListener("mousedown touchstart mousemove touchmove", (e) => {
         e.preventDefault();
@@ -84,6 +72,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//access to player buttons using keyboard
+window.addEventListener("keydown", function(e) {
+
+    console.log(`KeyboardEvent: key='${event.key}' | code='${event.code}'`);
+    if (event.key === 'Enter') {
+        playSong();
+    }
+
+    if (event.key === 'Shift') {
+        pauseSong();
+    }
+
+    if (event.key === 'ArrowLeft') {
+        prevSong();
+    }
+
+    if (event.key === 'ArrowRight') {
+        nextSong();
+    }
+
+}, true);
 
 
 //skip to previous song
