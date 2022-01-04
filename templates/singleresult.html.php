@@ -199,11 +199,11 @@ function setTrack(trackId, newPlaylist, play) {
     }).then(function(body) {
         let track = JSON.parse(body);
         if (track[0] != null) {
-            document.querySelector("div.audio_controls h1.trackName").textContent = track[0].songtitle;
+            document.querySelector("div.audio_controls h3.trackName").textContent = track[0].songtitle;
             audioElement.setTrack(track);
 
         } else {
-            document.querySelector("div.audio_controls h1.trackName").textContent = "No Tracks Available";
+            document.querySelector("div.audio_controls h3.trackName").textContent = "No Tracks Available";
         }
 
         if (play == true) {
@@ -301,7 +301,7 @@ function pauseSong() {
             <!--Audio Controls-->
             <div class="audio_controls">
 
-                <h1 class="trackName"></h1>
+                <h3 class="trackName"></h3>
 
                 <div class="audiocntrl_containers">
 

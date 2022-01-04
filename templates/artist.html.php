@@ -206,7 +206,7 @@ function setTrack(trackId, newPlaylist, play) {
 
         if (track[0] != null) {
 
-            console.log(track[0]);
+            //console.log(track[0]);
             document.querySelector("div.audio_controls h3.trackName").textContent = track[0].songtitle;
             audioElement.setTrack(track);
 
@@ -231,7 +231,7 @@ function playSong() {
     //track plays function needs ajax file updatePlays.php
     if (audioElement.audio.currentTime == 0) {
         //get tracks from database
-        let url = 'updatePlays.php';
+        let url = 'helpers/updatePlays.php';
         let formData = new FormData();
         console.log(audioElement.currentlyPlaying);
         formData.append("songId", audioElement.currentlyPlaying[0].id);
@@ -247,7 +247,7 @@ function playSong() {
 
         }).then(function(response) {
 
-            console.log(response);
+            //console.log(response);
 
             return response.text();
 
@@ -282,47 +282,59 @@ function pauseSong() {
             <h2><?= $singleartist->artist_name; ?></h2>
             <!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
             <!--Audio Controls-->
-            <div class="audiocntrl_containers">
+            <div class="audio_controls">
+                <h3 class="trackName"></h3>
+                <div class="audiocntrl_containers">
 
-                <button class="player-button shuffle" onclick="setShuffle()" aria-label="shuffle track button">
-                    <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-                </button>
-
-                <button id="play-button" class="player-button play" onclick="playSong()" aria-label="play button">
-                    <i class="fa fa-play" aria-hidden="true" title="play"></i>
-                </button>
-
-                <button id="pause-button" class="player-button pause" style="display: none;" onclick="pauseSong()"
-                    aria-label="pause button">
-                    <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
-                </button>
-
-                <button class="player-button previous" onclick="prevSong()" aria-label="previous track button">
-                    <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
-                </button>
-
-                <button class="player-button next" onclick="nextSong()" aria-label="next track button">
-                    <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
-                </button>
-
-                <button class="player-button repeat" onclick="setRepeat()" aria-label="repeat track button">
-                    <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
-                </button>
-
-                <!--add onclick="setMute() to change volume icon. need to add volume icon-->
-                <div class="audio_volume">
-                    <div class="VolumeBg">
-                        <!-- <div class="volume"></div> -->
-                        <input type="range" min="0" max="100" value="100" class="volume" id="volume" title="volume" />
-                    </div>
-                    <button id="volume-mute" onclick="setMute()">
-                        <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+                    <button class="player-button shuffle" onclick="setShuffle()" aria-label="shuffle track button">
+                        <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
                     </button>
+
+                    <button id="play-button" class="player-button play" onclick="playSong()" aria-label="play button">
+                        <i class="fa fa-play" aria-hidden="true" title="play"></i>
+                    </button>
+
+                    <button id="pause-button" class="player-button pause" style="display: none;" onclick="pauseSong()"
+                        aria-label="pause button">
+                        <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
+                    </button>
+
+                    <button class="player-button previous" onclick="prevSong()" aria-label="previous track button">
+                        <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
+                    </button>
+
+                    <button class="player-button next" onclick="nextSong()" aria-label="next track button">
+                        <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
+                    </button>
+
+                    <button class="player-button repeat" onclick="setRepeat()" aria-label="repeat track button">
+                        <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
+                    </button>
+
+                    <!--add onclick="setMute() to change volume icon. need to add volume icon-->
+                    <div class="audio_volume">
+                        <div class="VolumeBg">
+                            <!-- <div class="volume"></div> -->
+                            <input type="range" min="0" max="100" value="100" class="volume" id="volume" title="volume"
+                                aria-label="volume" />
+                        </div>
+                        <button id="volume-mute" onclick="setMute()" aria-label="mute button">
+                            <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="audiocntrl_containers">
+                    <div class="current_time" aria-label="current length of track in minutes and seconds">00:00</div>
+                    <div class="progress">
+                        <div class="play_progress"></div>
+                    </div>
+                    <div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
+                    </div>
                 </div>
             </div>
+            <br />
+            <br />
             <h4>Artist Tracks </h4>
-            <br />
-            <br />
             <!--Audio Playlist-->
             <ul class="audio-tracklist">
                 <?php
