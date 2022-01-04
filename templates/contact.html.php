@@ -12,12 +12,12 @@
 
 		<label for="name">Full name</label>
 
-		<input type="text" id="name" name="name" title="Please enter your name" required autofocus placeholder="Last, First" value="">
+		<input type="text" id="name" name="name" title="Please enter your name" required autofocus placeholder="Enter your name" value="">
 
 		<br />
 		<label for="email">E-mail</label>
 
-		<input id="email" name="email" type="email" placeholder="enter email address here" title="Please Enter Your Email Address" required autocomplete="off">
+		<input id="email" name="email" type="email" placeholder="enter email address here" required autocomplete="off">
 		<br />
 		<label for="message">Message</label>
 

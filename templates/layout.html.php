@@ -7,7 +7,15 @@
     <meta name="description" content="Mannering Music web project.">
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
+    <!-- <meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+<meta property="og:title" content="Mozilla Developer Network">
+<meta name="twitter:title" content="Mozilla Developer Network">
+-->
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
@@ -32,7 +40,7 @@
         <header role="banner">
 
             <!---logo-->
-            <span id="site-logo">
+            <span id="site-logo" tabindex="0">
                 <p id="logo"><span>MANNERING</span><span>MU</span>SIC</p>
                 <p class="site-description">Jazz, Hip Hop & Country Music</p>
             </span>
@@ -76,29 +84,29 @@
         <nav id="mannering_nav">
 
             <ul id="mannering_inner_nav">
-                <li><a href="/" title="Home Page" aria-label="link to home page">Home</a></li>
-                <li><a href="/review/list" title="Reviews Page" aria-label="link to reviews page">Reviews</a></li>
-                <li><a href="/search" title="Search Page" aria-label="link to album search page">Search</a></li>
-                <li><a href="/video" title="Videos Page" aria-label="link to video search page">Video</a></li>
+                <li><a href="/" aria-label="link to home page">Home</a></li>
+                <li><a href="/review/list" aria-label="link to reviews page">Reviews</a></li>
+                <li><a href="/search" aria-label="link to album search page">Search</a></li>
+                <li><a href="/video" aria-label="link to video search page">Video</a></li>
 
                 <?php if ($loggedIn) : ?>
 
 
-                <li class="social-item"><a href="/logout" title="Log Out">Log out</a>
+                <li class="social-item"><a href="/logout" aria-label="link to logout">Log out</a>
                     <?php else : ?>
-                <li class="social-item"><a href="/login" title="Log In">Log in</a></li>
+                <li class="social-item"><a href="/login" aria-label="link to login">Log in</a></li>
                 <?php endif; ?>
             </ul>
 
             <ul id="mannering_mobile_inner_nav">
-                <li><a href="/" title="Home Page">Home</a></li>
-                <li><a href="/search" title="Search Page">Search</a></li>
-                <li><a href="/video" title="Videos Page">Video</a></li>
+                <li><a href="/" aria-label="link to home page">Home</a></li>
+                <li><a href="/search" aria-label="link to album search page">Search</a></li>
+                <li><a href="/video" aria-label="link to album search page">Video</a></li>
 
                 <?php if ($loggedIn) : ?>
-                <li class="social-item"><a href="/logout" title="Log Out" aria-label="link to logout">Log out</a>
+                <li class="social-item"><a href="/logout" aria-label="link to logout">Log out</a>
                     <?php else : ?>
-                <li class="social-item"><a href="/login" title="Log In" aria-label="link to login">Log in</a></li>
+                <li class="social-item"><a href="/login" aria-label="link to login">Log in</a></li>
                 <?php endif; ?>
             </ul>
 
@@ -119,9 +127,7 @@
                 <li><a href="#" title="Terms Page" aria-label="link to terms and conditions page">Terms</a></li>
                 <li><a href="#" title="Privacy Page" aria-label="link to privacy policy page">Privacy</a></li>
                 <li><a href="#" title="About Page" aria-label="link to about page">About</a></li>
-
                 <li><a href="/contact" title="Contact Page" aria-label="link to contacts page">Contact</a></li>
-
             </ul>
 
         </footer>

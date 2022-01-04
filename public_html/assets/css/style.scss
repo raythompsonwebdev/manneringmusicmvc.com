@@ -72,6 +72,9 @@ header {
 		height: 40px;
 		padding-left: 1%;
 		flex: 1 0 auto;
+		&:focus{
+			outline:#c90 dotted 1px;
+		}
 
 		p#logo {
 			margin: 0;
@@ -215,16 +218,16 @@ nav#mannering_nav {
 					background-color: $orange-color;
 					font-weight:bold;
 				}
+				&:focus {
+					color: $white-color;
+					background-color: $orange-color;
+					font-weight:bold;
+				}
 				&:hover{
 					background-color: $orange-color;
 					color: $stone-grey;
 					font-weight: bold;
 					cursor:pointer;
-				}
-				&:focus {
-					color: $white-color;
-					background-color: $orange-color;
-					font-weight:bold;
 				}
 				&:active {
 					color: $white-color;
@@ -1734,16 +1737,16 @@ footer {
 						background-color: $orange-color;
 						font-weight:bold;
 					}
+					&:focus {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
 					&:hover{
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
 						cursor:pointer;
-					}
-					&:focus {
-						color: $white-color;
-						background-color: $orange-color;
-						font-weight:bold;
 					}
 					&:active {
 						color: $white-color;
@@ -2446,28 +2449,7 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-					&:link {
-						color: $white-color;
-						background-color: $stone-grey;
-						font-weight:bold;
-					}
-					&:visited {
-						color: $white-color;
-						background-color: $stone-grey;
-						font-weight:bold;
-					}
-					&:hover{
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-						cursor:pointer;
-					}
 
-					&:active {
-						background-color: $white-color;
-						color: $orange-color;
-						font-weight:bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -3179,12 +3161,6 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-
-					&:hover {
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -3899,11 +3875,6 @@ footer {
 					font-size: 0.9em;
 					font-weight: normal;
 
-					&:hover {
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -4618,11 +4589,6 @@ footer {
 					font-size: 0.9em;
 					font-weight: normal;
 
-					&:hover {
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -5338,12 +5304,6 @@ footer {
 					display: block;
 					font-size: 0.85em;
 					font-weight: normal;
-
-					&:hover {
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -6053,11 +6013,6 @@ footer {
 					display: block;
 					font-size: 0.8em;
 					font-weight: normal;
-					&:hover {
-						background-color: $orange-color;
-						color: $stone-grey;
-						font-weight: bold;
-					}
 				}
 
 				a[href~='\/review\/edit'] {

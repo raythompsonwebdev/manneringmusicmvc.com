@@ -17,10 +17,11 @@
         <figure class="grid_1_of_5 ">
             <a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>"
                 title="<?= $rapalbum->album ?>">
-                <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>"
-                    alt="<?= $rapalbum->album ?> album cover">
+                <img class="images_1_of_5" width="100" height="100"
+                    src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>" alt="<?= $rapalbum->album ?> album cover"
+                    aria-labelledby="<?= $rapalbum->getArtistId()->artist_name ?>">
             </a>
-            <figcaption class="cap_1_of_5">
+            <figcaption id="<?= $rapalbum->getArtistId()->artist_name ?> " class="cap_1_of_5">
                 <h3><?= $rapalbum->getArtistId()->artist_name ?></h3>
                 <p><?= $rapalbum->genre ?></p>
 
@@ -41,10 +42,13 @@
         <figure class="grid_1_of_5">
             <a href="/singleresult?albumid=<?= $countryalbum->id ?? '' ?>&artistid=<?= $countryalbum->artistId ?? '' ?>"
                 title="<?= $countryalbum->album ?>">
-                <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>"
-                    alt="<?= $countryalbum->album ?> album cover">
+                <img class="images_1_of_5" width="100" height="100"
+                    src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>"
+                    alt="<?= $countryalbum->album ?> album cover"
+                    aria-labelledby="<?= $countryalbum->getArtistId()->artist_name ?>">
+
             </a>
-            <figcaption class="cap_1_of_5">
+            <figcaption id="<?= $countryalbum->getArtistId()->artist_name ?>" class="cap_1_of_5">
                 <h3><?= $countryalbum->getArtistId()->artist_name ?></h3>
                 <p><?= $countryalbum->genre ?></p>
             </figcaption>
@@ -63,10 +67,11 @@
         <figure class="grid_1_of_5">
             <a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>"
                 title="<?= $jazzalbum->album ?>">
-                <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>"
-                    alt="<?= $jazzalbum->album ?> album cover">
+                <img class="images_1_of_5" width="100" height="100"
+                    src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>" alt="<?= $jazzalbum->album ?> album cover"
+                    aria-labelledby="<?= $jazzalbum->getArtistId()->artist_name ?>">
             </a>
-            <figcaption class="cap_1_of_5">
+            <figcaption id="<?= $jazzalbum->getArtistId()->artist_name ?>" class="cap_1_of_5">
                 <h3><?= $jazzalbum->getArtistId()->artist_name ?></h3>
                 <p><?= $jazzalbum->genre ?></p>
             </figcaption>
