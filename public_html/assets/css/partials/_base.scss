@@ -50,10 +50,11 @@ body{
 }
 
 a{
-	text-decoration: none !important;
+	//text-decoration: none !important;
   @include mannering-transition(all 0.2s ease-in);
   font-family: ($FontListText);
   width:auto;
+	color:antiquewhite;
 }
 
 

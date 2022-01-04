@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <fieldset>
             <legend>Album Search</legend>
 
-            <label for="artist" aria-label="artist_name">Artist name</label>
+            <label for="artist_name" aria-label="artist_name">Artist name</label>
             <input id="artist" name="artist_name" type="text" placeholder="Enter artist name.">
 
             <label for="album" aria-label="album">Album name</label>
-            <input id="album" name="album" type="text" title="Album Name" placeholder="Enter album name.">
+            <input id="album" name="album" type="text" placeholder="Enter album name.">
 
             <label for="genre" aria-label="genre">Genre</label>
             <select name="genre" id="genre">

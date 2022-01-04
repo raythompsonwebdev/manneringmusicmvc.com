@@ -44,6 +44,16 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -290,13 +300,13 @@ body {
 }
 
 a {
-  text-decoration: none !important;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   font-family: "Lato", sans-serif;
   width: auto;
+  color: antiquewhite;
 }
 
 ul {
@@ -561,8 +571,8 @@ header .social ul#social li.social-item a {
   line-height: 40px;
 }
 header .social ul#social li.social-item a:visited {
-  color: #FFF;
-  background-color: #3A3A3A;
+  color: #3A3A3A;
+  background-color: #ECAC00;
   font-weight: bold;
 }
 header .social ul#social li.social-item a:hover {
@@ -577,8 +587,8 @@ header .social ul#social li.social-item a:focus {
   font-weight: bold;
 }
 header .social ul#social li.social-item a:active {
-  color: #FFF;
-  background-color: #3A3A3A;
+  color: #3A3A3A;
+  background-color: #FFF;
   font-weight: bold;
 }
 
@@ -600,7 +610,6 @@ nav#mannering_nav #mannering_mobile_inner_nav {
   justify-content: flex-start;
 }
 nav#mannering_nav #mannering_mobile_inner_nav li {
-  background-color: #333333;
   width: 100%;
   height: 40px;
   text-align: center;
@@ -618,8 +627,14 @@ nav#mannering_nav #mannering_mobile_inner_nav li a {
   font-weight: normal;
 }
 nav#mannering_nav #mannering_mobile_inner_nav li a:visited {
-  color: #FFF;
+  color: #3A3A3A;
   background-color: #ECAC00;
+  font-weight: bold;
+}
+nav#mannering_nav #mannering_mobile_inner_nav li a:hover {
+  color: #3A3A3A;
+  background-color: #ECAC00;
+  cursor: pointer;
   font-weight: bold;
 }
 nav#mannering_nav #mannering_mobile_inner_nav li a:focus {
@@ -627,15 +642,9 @@ nav#mannering_nav #mannering_mobile_inner_nav li a:focus {
   background-color: #ECAC00;
   font-weight: bold;
 }
-nav#mannering_nav #mannering_mobile_inner_nav li a:hover {
-  background-color: #ECAC00;
-  color: #3A3A3A;
-  font-weight: bold;
-  cursor: pointer;
-}
 nav#mannering_nav #mannering_mobile_inner_nav li a:active {
-  color: #FFF;
-  background-color: #ECAC00;
+  color: #3A3A3A;
+  background-color: #FFF;
   font-weight: bold;
 }
 nav#mannering_nav #mannering_mobile_inner_nav li a[href~="/review/edit"] {
@@ -726,6 +735,13 @@ main#content #main_section {
 }
 main#content #main_section h1 {
   font-size: 1.3em;
+}
+main#content #main_section p.loginerrortext a {
+  color: #FFF;
+}
+main#content #main_section p.loginerrortext a:hover {
+  color: #ECAC00;
+  font-weight: bold;
 }
 main#content #main_section #add-cat-link {
   width: 100%;
@@ -831,7 +847,7 @@ main#content #main_section section.album_section h2 {
   text-align: center;
   background-color: #181818;
 }
-main#content #main_section section.album_section .grid_1_of_5 {
+main#content #main_section section.album_section figure.album_card {
   width: 75%;
   margin: 0.25em;
   -webkit-transition: all 0.5s ease;
@@ -848,7 +864,7 @@ main#content #main_section section.album_section .grid_1_of_5 {
   min-height: auto;
   flex: 1 0 auto;
 }
-main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+main#content #main_section section.album_section figure.album_card img.album_car_image {
   border: 2px solid #3A3A3A;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -858,86 +874,39 @@ main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 
   margin: 3% auto;
   cursor: pointer;
 }
-main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-  position: relative;
-  z-index: 0;
-  display: block;
-  top: -40px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  width: 100%;
-  margin-top: 0.3em;
-}
-main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-  width: 100%;
-  padding: 8px 10px;
-  background-color: #333333;
-  border: none;
-  color: #FFF;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 0.9em;
-  -webkit-border-radius: 0px 0px 3px 3px;
-  -moz-border-radius: 0px 0px 3px 3px;
-  -o-border-radius: 0px 0px 3px 3px;
-  border-radius: 0px 0px 3px 3px;
-}
-main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-  background-color: #EBAB00;
-  text-decoration: none !important;
-  color: #FFF;
-  width: 100%;
-  font-weight: bold;
-}
-main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
-  line-height: 2.4em;
-  margin: 0;
+main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
+  line-height: 35px;
   background-color: #2b2b2b;
-  padding: 0;
   font-size: 0.8em;
   color: #FFF;
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 0.1em;
 }
-main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
   background-color: #666666;
-  line-height: 1.7em;
-  margin: 0;
+  line-height: 35px;
   font-size: 0.7em;
   color: #FFF;
-  z-index: 1;
-  position: relative;
-  top: 0;
 }
-main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
-  z-index: 1;
-  position: relative;
-  line-height: 1.7em;
-  margin: 0;
+main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
+  line-height: 30px;
   font-size: 1em;
   color: #FFF;
   background-color: #2b2b2b;
-  padding: 0px;
   font-weight: normal;
-  z-index: 1;
-  position: relative;
-  top: 0;
 }
-main#content #main_section section.album_section .grid_1_of_5:hover {
+main#content #main_section section.album_section figure.album_card:hover {
   cursor: pointer;
 }
-main#content #main_section section.album_section .grid_1_of_5:hover img.images_1_of_5 {
+main#content #main_section section.album_section figure.album_card:hover img.album_car_image {
   transform: scale(1.02);
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
   -o-transform: scale(1.02);
   border: 2px solid #ECAC00;
 }
-main#content #main_section section.album_section .grid_1_of_5:hover form#frontform {
+main#content #main_section section.album_section figure.album_card:hover form#frontform {
   top: 0;
 }
 main#content #main_section ul.categories {
@@ -1267,9 +1236,24 @@ main#content #results_container .results figure.results-info figcaption.results-
   font-size: 0.85em;
   background-color: #2b2b2b;
 }
+main#content #results_container .results figure.results-info figcaption.results-text h5 a {
+  background-color: #ECAC00;
+  color: #FFF;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main#content #results_container .results figure.results-info figcaption.results-text h5 a:hover {
+  color: #ECAC00;
+  background-color: #FFF;
+  cursor: pointer;
+}
 main#content #results_container .results figure.results-info figcaption.results-text h6 {
   font-size: 0.8em;
   background-color: #666666;
+}
+main#content #results_container .results figure.results-info:focus {
+  border: 1px dotted #ECAC00;
 }
 main#content #results_container .results figure.results-info:hover img {
   transform: scale(1.01);
@@ -2006,7 +1990,6 @@ footer ul#inner_footer li a:hover {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -2025,8 +2008,8 @@ footer ul#inner_footer li a:hover {
     font-weight: normal;
   }
   nav#mannering_nav #mannering_inner_nav li a:visited {
-    color: #FFF;
-    background-color: #ECAC00;
+    color: #3A3A3A;
+    background-color: #FFF;
     font-weight: bold;
   }
   nav#mannering_nav #mannering_inner_nav li a:focus {
@@ -2041,9 +2024,8 @@ footer ul#inner_footer li a:hover {
     cursor: pointer;
   }
   nav#mannering_nav #mannering_inner_nav li a:active {
-    color: #FFF;
-    background-color: #ECAC00;
-    font-weight: bold;
+    color: #ECAC00;
+    background-color: #FFF;
   }
   nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
     font-size: 65%;
@@ -2071,31 +2053,21 @@ footer ul#inner_footer li a:hover {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 19%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.8em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.8em;
   }
   main#content #main_section blockquote {
@@ -2361,9 +2333,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 50%;
     padding: 2.5%;
@@ -2566,7 +2535,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -2610,31 +2578,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 19%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.8em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.8em;
   }
   main#content #main_section blockquote {
@@ -2908,9 +2866,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 50%;
     padding: 2.5%;
@@ -3114,7 +3069,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -3158,31 +3112,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 19%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.8em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.8em;
   }
   main#content #main_section blockquote p {
@@ -3452,9 +3396,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 50%;
     padding: 2.5%;
@@ -3658,7 +3599,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -3675,6 +3615,27 @@ main#content #registerform input[type=password] {
     display: block;
     font-size: 0.9em;
     font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:visited {
+    color: #3A3A3A;
+    background-color: #FFF;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:focus {
+    color: #FFF;
+    background-color: #ECAC00;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:active {
+    color: #FFF;
+    background-color: #ECAC00;
+    font-weight: bold;
   }
   nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
     font-size: 65%;
@@ -3702,31 +3663,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 24%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 1em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.9em;
   }
   main#content #main_section blockquote p {
@@ -3830,11 +3781,8 @@ main#content #registerform input[type=password] {
   main#content #results_container .results figure.results-info figcaption.results-text h6 {
     font-size: 0.75em;
   }
-  main#content #results_container .results input.to_album_btn {
-    height: 40px;
-  }
-  main#content #results_container .results input.to_album_btn:hover {
-    text-decoration: none !important;
+  main#content #results_container .results figure.results-info:focus {
+    border: 1px dotted #ECAC00;
   }
   main#content #results_container .results-large h2 {
     font-size: 1.7em;
@@ -3999,9 +3947,6 @@ main#content #registerform input[type=password] {
   }
   main#content #registerform #register_btn {
     font-size: 1em;
-  }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
   }
   main#content #contact-page-form {
     width: 60%;
@@ -4207,7 +4152,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -4251,31 +4195,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 32%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 1em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.9em;
   }
   main#content #main_section blockquote {
@@ -4553,9 +4487,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 60%;
     padding: 2.5%;
@@ -4759,7 +4690,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -4803,31 +4733,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 32%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.8em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.8em;
   }
   main#content #main_section blockquote {
@@ -5098,9 +5018,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 60%;
     padding: 2.5%;
@@ -5304,7 +5221,6 @@ main#content #registerform input[type=password] {
     justify-content: flex-start;
   }
   nav#mannering_nav #mannering_inner_nav li {
-    background-color: #333333;
     width: 14.5%;
     margin-left: 0.2em;
     height: 40px;
@@ -5321,6 +5237,27 @@ main#content #registerform input[type=password] {
     display: block;
     font-size: 0.8em;
     font-weight: normal;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:visited {
+    color: #FFF;
+    border: 1px dotted #ECAC00;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:focus {
+    color: #FFF;
+    background-color: #ECAC00;
+    font-weight: bold;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:hover {
+    background-color: #ECAC00;
+    color: #3A3A3A;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav#mannering_nav #mannering_inner_nav li a:active {
+    color: #FFF;
+    background-color: #ECAC00;
+    font-weight: bold;
   }
   nav#mannering_nav #mannering_inner_nav li a[href~="/review/edit"] {
     font-size: 65%;
@@ -5348,31 +5285,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 32%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.8em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.8em;
   }
   main#content #main_section blockquote {
@@ -5625,9 +5552,6 @@ main#content #registerform input[type=password] {
   main#content #registerform #register_btn {
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
-  }
   main#content #contact-page-form {
     width: 70%;
     padding: 2.5%;
@@ -5853,31 +5777,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 48%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.85em;
   }
   main#content #main_section blockquote {
@@ -6143,9 +6057,6 @@ main#content #registerform input[type=password] {
   }
   main#content #registerform #register_btn {
     font-size: 1em;
-  }
-  main#content #registerform #register_btn:hover {
-    margin: 0 auto;
   }
   main#content #contact-page-form {
     width: 70%;
@@ -6460,31 +6371,21 @@ main#content #registerform input[type=password] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 47%;
     margin: 0.25em;
     flex: 0 0 auto;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.85em;
   }
   main#content #main_section ul.categories {
@@ -6844,9 +6745,6 @@ main#content #registerform input[type=password] {
     height: 40px;
     font-size: 1em;
   }
-  main#content #registerform #register_btn:hover {
-    color: #3A3A3A;
-  }
   main#content .regformlink {
     margin-top: 1em;
     background-color: unset;
@@ -7146,30 +7044,20 @@ main#content #contact-page-form input[type=email] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 65%;
     margin: 0.25em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.85em;
   }
   main#content #main_section ul.categories {
@@ -7831,30 +7719,20 @@ main#content #contact-page-form input[type=email] {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  main#content #main_section section.album_section .grid_1_of_5 {
+  main#content #main_section section.album_section figure.album_card {
     width: 75%;
     margin: 0.25em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 img.images_1_of_5 {
+  main#content #main_section section.album_section figure.album_card img.album_car_image {
     border: 2px solid #3A3A3A;
   }
-  main#content #main_section section.album_section .grid_1_of_5 form#frontform {
-    top: -40px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform {
-    width: 100%;
-    padding: 8px 10px;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 input.frontform:hover {
-    background-color: #EBAB00;
-  }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h3 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h3 {
     font-size: 0.9em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 p {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h4 {
     font-size: 0.85em;
   }
-  main#content #main_section section.album_section .grid_1_of_5 figcaption.cap_1_of_5 h4 {
+  main#content #main_section section.album_section figure.album_card figcaption.album_car_text h5 {
     font-size: 0.85em;
   }
   main#content #main_section ul.categories {

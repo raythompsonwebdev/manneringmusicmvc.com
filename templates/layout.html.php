@@ -7,15 +7,14 @@
     <meta name="description" content="Mannering Music web project.">
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
-    <!-- <meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
-<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
-information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
-<meta property="og:title" content="Mozilla Developer Network">
-<meta name="twitter:title" content="Mozilla Developer Network">
--->
+    <!--
+			<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+			<meta property="og:description" content="The .">
+			<meta property="og:title" content="Mozilla Developer Network">
+			<meta name="twitter:title" content="Mozilla Developer Network">
+		-->
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
@@ -24,7 +23,6 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
-      <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
       <script src="assets/js/old-browser-scripts/html5shiv.min.js"></script>
       <script src="assets/js/old-browser-scripts/selectivizr.js"></script>
     <![endif]-->
@@ -58,7 +56,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="https://facebook.com/" title="rss" aria-label="link to frss">
+                        <a href="https://facebook.com/" title="rss" aria-label="link to rss">
                             <i class="fa fa-rss soc"></i>
                         </a>
                     </li>
@@ -77,7 +75,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
         </header>
 
-        <button id="mobile-toggle" title="menu">
+        <button id="mobile-toggle" title="mobilemenu" aria-label="mobilemenu">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <!--navigation here-->

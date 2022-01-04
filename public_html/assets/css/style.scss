@@ -75,7 +75,6 @@ header {
 		&:focus{
 			outline:#c90 dotted 1px;
 		}
-
 		p#logo {
 			margin: 0;
 			font-size: 1.4em;
@@ -154,8 +153,8 @@ header {
 					height: 100%;
 					line-height: 40px;
 					&:visited {
-						color: $white-color;
-						background-color: $stone-grey;
+						color: $stone-grey;
+						background-color: $orange-color;
 						font-weight:bold;
 					}
 					&:hover{
@@ -170,8 +169,8 @@ header {
 						font-weight:bold;
 					}
 					&:active {
-						color: $white-color;
-						background-color: $stone-grey;
+						color: $stone-grey;
+						background-color: $white-color;
 						font-weight:bold;
 					}
 
@@ -198,7 +197,6 @@ nav#mannering_nav {
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		li {
-			background-color: $dark-grey;;
 			width: 100%;
 			height: 40px;
 			text-align: center;
@@ -214,8 +212,14 @@ nav#mannering_nav {
 				font-size: 0.9em;
 				font-weight: normal;
 				&:visited {
-					color: $white-color;
+					color: $stone-grey;
 					background-color: $orange-color;
+					font-weight:bold;
+				}
+				&:hover{
+					color: $stone-grey;
+					background-color: $orange-color;
+					cursor:pointer;
 					font-weight:bold;
 				}
 				&:focus {
@@ -223,15 +227,9 @@ nav#mannering_nav {
 					background-color: $orange-color;
 					font-weight:bold;
 				}
-				&:hover{
-					background-color: $orange-color;
-					color: $stone-grey;
-					font-weight: bold;
-					cursor:pointer;
-				}
 				&:active {
-					color: $white-color;
-					background-color: $orange-color;
+					color: $stone-grey;
+					background-color: $white-color;
 					font-weight:bold;
 				}
 			}
@@ -326,6 +324,15 @@ main#content {
 		margin: 0 0 1em 0;
 		h1 {
 			font-size: 1.3em;
+		}
+
+		p.loginerrortext a{
+			color:$white-color;
+			&:hover{
+				color:$orange-color;
+				font-weight:bold;
+			}
+
 		}
 		#add-cat-link {
 			width: 100%;
@@ -443,7 +450,7 @@ main#content {
 				background-color: $bg-black;
 			}
 
-			.grid_1_of_5 {
+			figure.album_card {
 				width: 75%;
 				margin: 0.25em;
 				@include mannering-transition(all 0.5s ease);
@@ -454,7 +461,7 @@ main#content {
 				min-height: auto;
 				flex: 1 0 auto;
 
-				img.images_1_of_5 {
+				img.album_car_image {
 					border: 2px solid $stone-grey;
 					@include mannering-transition(all 0.5s ease);
 					width: auto;
@@ -462,43 +469,11 @@ main#content {
 					cursor: pointer;
 				}
 
-				form#frontform {
-					position: relative;
-					z-index: 0;
-					display: block;
-					top: -40px;
-					@include mannering-transition(all 0.5s ease);
-					width: 100%;
-					margin-top: 0.3em;
-				}
 
-				input.frontform {
-					width: 100%;
-					padding: 8px 10px;
-					background-color: $dark-grey;;
-					border: none;
-					color: $white-color;
-					text-align: center;
-					cursor: pointer;
-					text-decoration: none;
-					font-size: 0.9em;
-					@include mannering-border(0px 0px 3px 3px);
-
-					&:hover {
-						background-color: $orange-color1;
-						text-decoration: none !important;
-						color: $white-color;
-						width: 100%;
-						font-weight: bold;
-					}
-				}
-
-				figcaption.cap_1_of_5 {
+				figcaption.album_car_text {
 					h3 {
-						line-height: 2.4em;
-						margin: 0;
+						line-height: 35px;
 						background-color: $darker-stone-grey;
-						padding: 0;
 						font-size: 0.8em;
 						color: $white-color;
 						text-transform: uppercase;
@@ -506,46 +481,33 @@ main#content {
 						letter-spacing: 0.1em;
 					}
 
-					p {
+					h4 {
 						background-color: $light-grey;
-						line-height: 1.7em;
-						margin: 0;
+						line-height: 35px;
 						font-size: 0.7em;
 						color: $white-color;
-
-						z-index: 1;
-						position: relative;
-						top: 0;
 					}
 
-					h4 {
-						z-index: 1;
-						position: relative;
-						line-height: 1.7em;
-						margin: 0;
+					h5 {
+						line-height: 30px;
 						font-size: 1em;
 						color: $white-color;
 						background-color: $darker-stone-grey;
-
-						padding: 0px;
 						font-weight: normal;
-						z-index: 1;
-						position: relative;
-						top: 0;
 					}
 				}
 			}
 
-			.grid_1_of_5:hover {
+			figure.album_card:hover {
 				cursor: pointer;
 			}
 
-			.grid_1_of_5:hover img.images_1_of_5 {
+			figure.album_card:hover img.album_car_image {
 				@include mannering-transform(scale(1.02));
 				border: 2px solid $orange-color;
 			}
 
-			.grid_1_of_5:hover form#frontform {
+			figure.album_card:hover form#frontform {
 				top: 0;
 			}
 
@@ -868,7 +830,6 @@ main#content {
 						display: block;
 					}
 				}
-
 				/* Album artist and name*/
 				figcaption.results-text {
 					width: 100%;
@@ -895,11 +856,28 @@ main#content {
 					h5{
 						font-size: 0.85em;
 						background-color: $darker-stone-grey;
+						a{
+							background-color: $orange-color;
+							color:$white-color;
+							display:block;
+							width:100%;
+							height:100%;
+							&:hover{
+								color: $orange-color;
+								background-color:$white-color;
+								cursor:pointer;
+
+							}
+						}
 					}
 					h6{
 						font-size: 0.80em;
 						background-color: $light-grey;
 					}
+				}
+
+				&:focus{
+					border:1px dotted $orange-color;
 				}
 			}
 
@@ -1715,7 +1693,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -1733,8 +1710,8 @@ footer {
 					font-size: 0.9em;
 					font-weight: normal;
 					&:visited {
-						color: $white-color;
-						background-color: $orange-color;
+						color: $stone-grey;
+						background-color: $white-color;
 						font-weight:bold;
 					}
 					&:focus {
@@ -1749,9 +1726,9 @@ footer {
 						cursor:pointer;
 					}
 					&:active {
-						color: $white-color;
-						background-color: $orange-color;
-						font-weight:bold;
+						color: $orange-color;
+						background-color: $white-color;
+
 					}
 				}
 
@@ -1785,37 +1762,25 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.85em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.8em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.8em;
 						}
 					}
@@ -2165,9 +2130,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -2432,7 +2394,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -2449,6 +2410,7 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
+
 
 				}
 
@@ -2482,37 +2444,25 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.85em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.8em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.8em;
 						}
 					}
@@ -2877,9 +2827,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -3144,7 +3091,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -3161,6 +3107,7 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
+
 				}
 
 				a[href~='\/review\/edit'] {
@@ -3193,37 +3140,24 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
-
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.85em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.8em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.8em;
 						}
 					}
@@ -3344,7 +3278,6 @@ footer {
 
 					figcaption.results-text {
 						h3,h4,h5,h6{
-
 							line-height: 25px;
 						}
 						h3{
@@ -3589,9 +3522,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -3857,7 +3787,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -3874,6 +3803,31 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
+
+					&:visited {
+						color: $stone-grey;
+						background-color: $white-color;
+						font-weight:bold;
+					}
+					&:focus {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+					&:hover{
+						background-color: $orange-color;
+						color: $stone-grey;
+						font-weight: bold;
+						cursor:pointer;
+					}
+					&:active {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+
+
+
 
 				}
 
@@ -3907,37 +3861,24 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 24%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
-
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 1em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.9em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.9em;
 						}
 					}
@@ -4049,7 +3990,6 @@ footer {
 
 			.results{
 				width: 24%;
-
 				figure.results-info {
 					img {
 						width: auto;
@@ -4077,13 +4017,9 @@ footer {
 
 						}
 					}
-				}
 
-				input.to_album_btn {
-					height: 40px;
-
-					&:hover {
-						text-decoration: none !important;
+					&:focus{
+						border:1px dotted $orange-color;
 					}
 				}
 			}
@@ -4286,6 +4222,16 @@ footer {
 			margin: 5px auto;
 		}
 
+		// input.dirty:not(:focus):valid {
+		// 	background-color: rgb(176, 241, 176);
+		// 	border: solid 3px rgb(78, 243, 78);
+		// }
+
+		// input.dirty:not(:focus):invalid {
+		// 		background-color: rgb(255, 204, 204);
+		// 		border: solid 3px rgb(252, 136, 136);
+		//}
+
 		#registerform {
 			width: 55%;
 
@@ -4303,9 +4249,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -4571,7 +4514,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -4621,37 +4563,25 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 32%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 1em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.9em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.9em;
 						}
 					}
@@ -5020,9 +4950,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -5287,7 +5214,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -5336,37 +5262,25 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 32%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.8em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.8em;
 						}
 					}
@@ -5727,9 +5641,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -5996,7 +5907,6 @@ footer {
 			justify-content: flex-start;
 
 			li {
-				background-color: $dark-grey;;
 				width: 14.5%;
 				margin-left: 0.2em;
 				height: 40px;
@@ -6013,6 +5923,27 @@ footer {
 					display: block;
 					font-size: 0.8em;
 					font-weight: normal;
+					&:visited {
+						color: $white-color;
+						border:1px dotted $orange-color;
+						font-weight:bold;
+					}
+					&:focus {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
+					&:hover{
+						background-color: $orange-color;
+						color: $stone-grey;
+						font-weight: bold;
+						cursor:pointer;
+					}
+					&:active {
+						color: $white-color;
+						background-color: $orange-color;
+						font-weight:bold;
+					}
 				}
 
 				a[href~='\/review\/edit'] {
@@ -6045,37 +5976,25 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 32%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.8em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.8em;
 						}
 					}
@@ -6422,9 +6341,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -6723,37 +6639,24 @@ footer {
 
 
 
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 48%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
-
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.85em;
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.85em;
 						}
 					}
@@ -7123,9 +7026,6 @@ footer {
 			#register_btn {
 				font-size: 1em;
 
-				&:hover {
-					margin: 0 auto;
-				}
 			}
 		}
 
@@ -7532,39 +7432,27 @@ footer {
 					line-height: 40px;
 				}
 
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 47%;
 					margin: 0.25em;
 					flex: 0 0 auto;
 
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.85em;
 
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.85em;
 
 						}
@@ -8035,12 +7923,6 @@ footer {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
-
-
-				&:hover {
-					color: $stone-grey;
-
-				}
 			}
 		}
 
@@ -8444,38 +8326,26 @@ footer {
 
 
 
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 65%;
 					margin: 0.25em;
 
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.85em;
 
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.85em;
 
 						}
@@ -8942,8 +8812,6 @@ footer {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
-
-
 				&:hover {
 					color: $stone-grey;
 
@@ -9351,38 +9219,26 @@ footer {
 					line-height: 40px;
 
 				}
-				.grid_1_of_5 {
+				figure.album_card {
 					width: 75%;
 					margin: 0.25em;
 
-					img.images_1_of_5 {
+					img.album_car_image {
 						border: 2px solid $stone-grey;
 					}
 
-					form#frontform {
-						top: -40px;
-					}
 
-					input.frontform {
-						width: 100%;
-						padding: 8px 10px;
-
-						&:hover {
-							background-color: $orange-color1;
-						}
-					}
-
-					figcaption.cap_1_of_5 {
+					figcaption.album_car_text {
 						h3 {
 							font-size: 0.9em;
 						}
 
-						p {
+						h4 {
 							font-size: 0.85em;
 
 						}
 
-						h4 {
+						h5 {
 							font-size: 0.85em;
 
 						}
@@ -9854,8 +9710,6 @@ footer {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
-
-
 				&:hover {
 					color: $stone-grey;
 

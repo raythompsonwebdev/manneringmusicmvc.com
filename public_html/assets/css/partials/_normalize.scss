@@ -96,22 +96,22 @@ body {
 // 2. Improves readability when focused and also mouse hovered in all browsers
 //    people.opera.com/patrickl/experiments/keyboard/test
 
-// a {
+a {
 
-//     // 1
-//     text-decoration: none;
+    // 1
+    text-decoration: none;
 
-//     &:focus {
-//         outline: thin dotted;
-//     }
+    &:focus {
+        outline: thin dotted;
+    }
 
-//     // 2
+    // 2
 
-//     &:hover,
-//     &:active {
-//         outline: 0;
-//     }
-// }
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+}
 
 // =============================================================================
 // Typography

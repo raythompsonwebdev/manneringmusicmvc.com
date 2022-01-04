@@ -264,12 +264,12 @@ function pauseSong() {
             <figure class="results-info">
 
                 <a href="/artist?albumid=<?= $singlealbums->id ?? '' ?>&artistid=<?= $singlealbums->artistId ?? '' ?>"
-                    title="Go artist page">
-                    <img src="assets/databasepics/WEBP/<?= $singlealbums->image; ?>" alt="Album-Cover-Image" />
+                    title="Link to artist page">
+                    <img src="assets/databasepics/WEBP/<?= $singlealbums->image; ?>" alt="Album-Cover-Image"
+                        aria-labelledby="<?= $singlealbums->id ?>" />
                 </a>
 
-                <figcaption class="results-text">
-
+                <figcaption id="<?= $singlealbums->id ?>" class="results-text">
                     <ul>
                         <li>
                             <span>Artist </span>
@@ -305,27 +305,28 @@ function pauseSong() {
 
                 <div class="audiocntrl_containers">
 
-                    <button class="player-button shuffle" onclick="setShuffle()">
+                    <button class="player-button shuffle" onclick="setShuffle()" aria-label="shuffle track button">
                         <i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
                     </button>
 
-                    <button id="play-button" class="player-button play" onclick="playSong()">
+                    <button id="play-button" class="player-button play" onclick="playSong()" aria-label="play button">
                         <i class="fa fa-play" aria-hidden="true" title="play"></i>
                     </button>
 
-                    <button id="pause-button" class="player-button pause" style="display: none;" onclick="pauseSong()">
+                    <button id="pause-button" class="player-button pause" style="display: none;" onclick="pauseSong()"
+                        aria-label="pause button">
                         <i class="fa fa-pause" aria-hidden="true" title="pause"></i>
                     </button>
 
-                    <button class="player-button previous" onclick="prevSong()">
+                    <button class="player-button previous" onclick="prevSong()" aria-label="previous track button">
                         <i class="fa fa-step-backward" aria-hidden="true" title="previous"></i>
                     </button>
 
-                    <button class="player-button next" onclick="nextSong()">
+                    <button class="player-button next" onclick="nextSong()" aria-label="next track button">
                         <i class="fa fa-step-forward" aria-hidden="true" title="next"></i>
                     </button>
 
-                    <button class="player-button repeat" onclick="setRepeat()">
+                    <button class="player-button repeat" onclick="setRepeat()" aria-label="repeat track button">
                         <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
                     </button>
 
@@ -333,20 +334,21 @@ function pauseSong() {
                     <div class="audio_volume">
                         <div class="VolumeBg">
                             <!-- <div class="volume"></div> -->
-                            <input type="range" min="0" max="100" value="100" class="volume" id="volume"
-                                title="volume" />
+                            <input type="range" min="0" max="100" value="100" class="volume" id="volume" title="volume"
+                                aria-label="volume" />
                         </div>
-                        <button id="volume-mute" onclick="setMute()">
+                        <button id="volume-mute" onclick="setMute()" aria-label="mute button">
                             <i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
                         </button>
                     </div>
                 </div>
                 <div class="audiocntrl_containers">
-                    <div class="current_time">00:00</div>
+                    <div class="current_time" aria-label="current length of track in minutes and seconds">00:00</div>
                     <div class="progress">
                         <div class="play_progress"></div>
                     </div>
-                    <div class="duration">00:00</div>
+                    <div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
+                    </div>
                 </div>
 
             </div>
