@@ -4,9 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mannering Music web project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Mannering music. Website build using PHP and Javascript. listen to audio. register to create review. ">
     <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
     <meta name="author" content="Raymond Thompson">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+    <meta property="og:description" content="The .">
+    <meta property="og:title" content="Mozilla Developer Network">
+    <meta name="twitter:title" content="Mozilla Developer Network">
     <!--
 			<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
