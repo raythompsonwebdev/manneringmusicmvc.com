@@ -8,7 +8,7 @@ menuToggle.addEventListener(
     // create menu variables
     const slideoutMenu = document.querySelector('#mannering_nav');
 
-    const slideoutMenuHeight = slideoutMenu.offsetHeight;
+    const {slideoutMenuHeight} = {...slideoutMenu.offsetHeight};
 
     // toggle open class
     slideoutMenu.classList.toggle('open');

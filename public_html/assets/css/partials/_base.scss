@@ -1,28 +1,33 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables";
+@import "_mixins";
 
-*, *:before, *:after{
-    @include box-sizing($type:border-box);
+*, *::before, *::after{
+	@include box-sizing($type:border-box);
 }
 
 *, html{  padding:0; outline:none}
 
 html {
-  @include box-sizing($type: border-box);
+	@include box-sizing($type: border-box);
 }
 
-.box-set:before, .box-set:after {  content: "";  display: table;}
-.box-set:after {  clear: both;}
+.box-set::before, .box-set::after {  content: "";  display: table;}
+
+.box-set::after {  clear: both;}
+
 .box-set {  *zoom: 1;}
+
 .box-set { overflow: auto;}
 
-.group:before, .group:after {
+.group::before, .group::after {
 	content: "";
 	display: table;
 }
-.group:after {
+
+.group::after {
 	clear: both;
 }
+
 .group {  *zoom: 1;}
 
 
@@ -31,29 +36,28 @@ html {
 }
 
 .browsehappy{
-    font-size:1em;
-    color:$bg-black;
-    background-color:$dark-grey;;
-    a{display:inline-block;}
+	font-size:1em;
+	color:$bg-black;
+	background-color:$dark-grey;;
+	a{display:inline-block;}
 }
 
 
 body{
 
-    background-image:url(/assets/images/526.gif);
-    line-height: 1;
-    font-size:100%;
-    letter-spacing:0.1em;
-    font-weight:100;
-    behavior:url(PIE.htc);
+	background-image:url("/assets/images/526.gif");
+	line-height: 1;
+	font-size:100%;
+	letter-spacing:0.1em;
+	font-weight:100;
 
 }
 
 a{
 	//text-decoration: none !important;
-  @include mannering-transition(all 0.2s ease-in);
-  font-family: ($FontListText);
-  width:auto;
+	@include mannering-transition(all 0.2s ease-in);
+	font-family: ($FontListText);
+	width:auto;
 	color:antiquewhite;
 }
 
@@ -61,101 +65,104 @@ a{
 ul{
 	margin:0;
 	padding:0;
-  list-style:none;
+	list-style:none;
 }
 
 li{
 
-  //behavior:url(PIE.htc);
-  font-family: ($FontListText);
+	font-family: ($FontListText);
 }
 
 img{
-    width:100%;
-    max-width:100%;
-    height:auto;
-    border:none;
+	width:100%;
+	max-width:100%;
+	height:auto;
+	border:none;
 }
 
 p{
-  width:100%;
-  color:$white-color;
-  font-weight:normal;
-  font-family: ($FontListText);
+	width:100%;
+	color:$white-color;
+	font-weight:normal;
+	font-family: $FontListText;
 }
 
 label{
 
-    display:block;
-    width:100%;
-    font-family: ($FontListText);
+	display:block;
+	width:100%;
+	font-family: $FontListText;
 }
 
 hr{
-    width:60%;
-    clear: both;
-    display:block;
-    margin:1% auto;
-    color:$stone-grey;
-    outline:none;
-    height:1px;
-    border:none;
+	width:60%;
+	clear: both;
+	display:block;
+	margin:1% auto;
+	color:$stone-grey;
+	outline:none;
+	height:1px;
+	border:none;
 }
 
 h1,h2,h3,h4{
-    margin:0;
-    padding:0;
-    font-family: ($FontList);
-    width: 100%;
+	margin:0;
+	padding:0;
+	font-family: $FontList;
+	width: 100%;
 }
 
 /* Place a border around focused fields */
 #search_form *:focus {border: 2px solid $button-border; outline: none;}
+
 /* Display correctly filled-in fields with a green background */
 
 /* Submit buttons */
 input[type="text"]:focus{  background-color:$button-hover;}
+
 input[type="submit"],
 select[type="text"] {
-    display: inline;
-    margin: 0px;
-    border: 2px solid $button-border;
-    @include mannering-border(5px);
-    color: $white-color;
-    background: $orange-color;
-    font-weight: bold;
-    -webkit-appearance: none;
-    line-height:1.5em;
-    behavior:url(PIE.htc);
+	display: inline;
+	margin: 0;
+	border: 2px solid $button-border;
+	@include mannering-border(5px);
+	color: $white-color;
+	background: $orange-color;
+	font-weight: bold;
+	appearance: none;
+	line-height:1.5em;
+
 }
+
 input[type="submit"]{
-    margin: 0px;
-    padding: 0px;
-    border: 2px solid $button-border;
-    @include mannering-border(5px);
-    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    color: $white-color;
-    background: $orange-color;
-    font-weight: bold;
-    -webkit-appearance: none;
-    height:35px;
-    behavior:url(PIE.htc);
+	margin: 0;
+	padding: 0;
+	border: 2px solid $button-border;
+	@include mannering-border(5px);
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%);
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%);
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%);
+	color: $white-color;
+	background: $orange-color;
+	font-weight: bold;
+	appearance: none;
+	height:35px;
+
 }
+
 input[type="submit"]:hover,
 select[type="text"]:hover,
 input[type="submit"]:active,
 select[type="text"]:active {
-    cursor: pointer;
-    background-color:$white-color;
-    color: #C90  ;
+	cursor: pointer;
+	background-color:$white-color;
+	color: #CC9900  ;
 }
 
 input[type="submit"]:active {
-    background-color: $white-color;
-    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-    behavior:url(PIE.htc);
+	background-color: $white-color;
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%) inset;
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%) inset;
+	box-shadow: 0 0 .5em rgb(0 0 0 / 80%) inset;
+
 }

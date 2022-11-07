@@ -1,26 +1,19 @@
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let currentPlaylist = [];
+const currentPlaylist = [];
 // eslint-disable-next-line no-unused-vars
+const shufflePlaylist = [];
 // eslint-disable-next-line prefer-const
-let shufflePlaylist = [];
-// eslint-disable-next-line prefer-const
-let tempPlaylist = [];
+const tempPlaylist = [];
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let audioElement;
+const audioElement = null;
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let mouseDown = false;
+const mouseDown = false;
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let currentIndex = 0;
+const currentIndex = 0;
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let repeat = false;
+const repeat = false;
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line prefer-const
-let shuffle = false;
+const shuffle = false;
 
 // Audio Class
 // eslint-disable-next-line no-unused-vars

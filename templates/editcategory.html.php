@@ -1,5 +1,5 @@
-<section id="main_section" class="group">
-	<form action="" method="post">
+<section id="main-section">
+	<form action="" method="post" id="edit-category">
 		<input type="hidden" name="category[id]" value="<?= $category->id ?? '' ?>">
 		<label for="categoryname">Enter category name:</label>
 		<input type="text" id="categoryname" name="category[name]" value="<?= $category->name ?? '' ?>" />

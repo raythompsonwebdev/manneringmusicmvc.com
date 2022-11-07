@@ -1,8 +1,8 @@
-<section id="main_section" class="group" role="main">
+<section id="main-section">
 
 	<h1>Categories</h1>
 
-	<a href="/category/edit">Add a new category</a>
+	<a id="add-cat-link" href="/category/edit">Add a new category</a>
 
 
 	<?php foreach ($categories as $category) : ?>

@@ -1,43 +1,38 @@
-@import 'partials/_variables.scss';
-@import 'partials/_mixins.scss';
-@import 'partials/_normalize.scss';
-@import 'partials/_base.scss';
+@import 'partials/_normalize';
+@import 'partials/_variables';
+@import 'partials/_base';
 
-.show-button{
-	display:block;
-	opacity:1;
+.show-button {
+	display: block;
+	opacity: 1;
 }
 
-.hide-button{
-	display:none;
-	opacity:0;
+.hide-button {
+	display: none;
+	opacity: 0;
 }
 
-.fancybox-overlay .fancybox-skin {
-	box-shadow: 0 0 50px $stone-grey;
-}
-
-button#mobile-toggle {
+#mobile-toggle {
 	height: 55px;
 	width: 55px;
-	color: #000;
+	color: $bg-black;
 	background-color: $white-color;
 	outline: none;
 	border: none;
 	z-index: 200;
-	top:0.5em;
+	top: 0.5em;
 	left: 83vw;
-	@include mannering-transition(all 0.2s ease-in 0s);
+	transition: all 0.2s ease-in 0s;
 	position: absolute;
 	&:hover {
 		background-color: $white-color;
-		color: #000;
+		color: $bg-black;
 	}
 
 	&:active,
 	:focus {
 		color: $white-color;
-		background-color: #000;
+		background-color: $bg-black;
 	}
 }
 
@@ -49,33 +44,22 @@ button#mobile-toggle {
 	height: auto;
 }
 
-#copyr {
-	margin: auto;
-	color: $white-color;
-	font-size: 0.6em;
-	width: 100%;
-	letter-spacing: 0.1em;
-}
-
-header {
+#mannering-header {
 	height: 75px;
 	clear: both;
 	display: flex;
-	-webkit-flex-flow: row;
-	-ms-flex-flow: row;
 	flex-flow: row;
 	justify-content: flex-start;
 
-
-	span#site-logo {
+	#site-logo {
 		width: 63%;
 		height: 40px;
 		padding-left: 1%;
 		flex: 1 0 auto;
-		&:focus{
-			outline:#c90 dotted 1px;
+		&:focus {
+			outline: #cc9900 dotted 1px;
 		}
-		p#logo {
+		#logo {
 			margin: 0;
 			font-size: 1.4em;
 			width: 100%;
@@ -103,7 +87,7 @@ header {
 			}
 		}
 
-		p.site-description {
+		.site-description {
 			float: none;
 			display: block;
 			width: 100%;
@@ -119,30 +103,27 @@ header {
 		}
 	}
 
-	.social {
+	#mannering-social {
 		height: 40px;
 		width: 35%;
 		text-align: center;
-		-webkit-flex: 1 1 auto;
-		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
-		display:none;
+		display: none;
 
-		ul#social {
+		#mannering-social-links {
 			width: 100%;
 			margin: 0;
 			padding: 0;
 			height: 100%;
 			display: flex;
 			justify-content: flex-start;
-			li.social-item {
+			.mannering-social-item {
 				width: 10%;
 				height: auto;
 				margin-right: 0.2em;
 				text-align: center;
 				flex: 1 0 auto;
-
-				a {
+				.mannering-social-link {
 					background-color: $stone-grey;
 					margin: 0;
 					font-size: 0.9em;
@@ -155,55 +136,54 @@ header {
 					&:visited {
 						color: $stone-grey;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-					&:hover{
+					&:hover {
 						color: $stone-grey;
 						background-color: $orange-color;
-						cursor:pointer;
-						font-weight:bold;
+						cursor: pointer;
+						font-weight: bold;
 					}
 					&:focus {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
 					&:active {
 						color: $stone-grey;
 						background-color: $white-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-
 				}
 			}
 		}
 	}
 }
 
-nav#mannering_nav {
+#mannering-nav {
 	width: 100%;
 	height: 200px;
 	margin-bottom: 0.5em;
-	position:absolute;
-	top:-200px;
-	left:0;
+	position: absolute;
+	top: -200px;
+	left: 0;
 	z-index: 140;
 
-	#mannering_mobile_inner_nav {
+	#mannering-mobile-inner-nav {
 		width: 100%;
 		height: 100%;
 		margin: 0;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
-		li {
+		.mannering-mobile-inner-nav-item {
 			width: 100%;
 			height: 40px;
 			text-align: center;
 			flex: 1 0 auto;
-			a {
+			.mannering-mobile-inner-nav-link {
 				text-decoration: none;
-				font-family: ($FontListText);
+				font-family: $FontListText;
 				width: 100%;
 				line-height: 40px;
 				background-color: $stone-grey;
@@ -214,38 +194,38 @@ nav#mannering_nav {
 				&:visited {
 					color: $stone-grey;
 					background-color: $orange-color;
-					font-weight:bold;
+					font-weight: bold;
 				}
-				&:hover{
+				&:hover {
 					color: $stone-grey;
 					background-color: $orange-color;
-					cursor:pointer;
-					font-weight:bold;
+					cursor: pointer;
+					font-weight: bold;
 				}
 				&:focus {
 					color: $white-color;
 					background-color: $orange-color;
-					font-weight:bold;
+					font-weight: bold;
 				}
 				&:active {
 					color: $stone-grey;
 					background-color: $white-color;
-					font-weight:bold;
+					font-weight: bold;
 				}
 			}
 
-			a[href~='\/review\/edit'] {
+			.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
 				font-size: 65%;
 			}
 		}
 	}
 
-	#mannering_inner_nav {
+	#mannering-inner-nav {
 		display: none;
 	}
 }
 
-main#content {
+#mannering-content {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -254,25 +234,11 @@ main#content {
 	#summary {
 		height: 50px;
 		width: 100%;
-		background-color: #c90;
+		background-color: #cc9900;
 		display: none;
 	}
 
-	h1 {
-		font-size: 1.3em;
-		width: 100%;
-		color: $white-color;
-		height: auto;
-		line-height: 35px;
-		text-align: center;
-		margin: 0;
-		display: block;
-		font-weight: normal;
-	}
-
 	h2 {
-		font-size: 1.2em;
-		margin: 0;
 		width: 100%;
 		color: $white-color;
 		height: auto;
@@ -283,7 +249,6 @@ main#content {
 	}
 
 	p {
-		font-size: 0.85em;
 		line-height: 1.6em;
 		margin: 0;
 		display: block;
@@ -291,56 +256,31 @@ main#content {
 		padding: 0.5em;
 	}
 
-	p.headp {
-		font-weight: bold;
-		font-size: 1em;
-	}
-
-	ul {
-		font-size: 1em;
-		line-height: 1.5em;
-		margin: 2% 0;
-		width: 100%;
-		color: $white-color;
-		display: block;
-
-		li {
-			line-height: 25px;
-		}
-	}
-
-	.main_img {
-		margin: 0px 1em 0.2em 0.2em;
-		width: 15%;
-		height: auto;
-		float: right;
-	}
-
-	#main_section {
+	#main-section {
 		color: $white-color;
 		height: auto;
 		width: 100%;
 		padding-top: 0.5em;
-		margin: 0 0 1em 0;
-		h1 {
-			font-size: 1.3em;
-		}
+		margin: 0 0 1em;
 
-		p.loginerrortext a{
-			color:$white-color;
-			&:hover{
-				color:$orange-color;
-				font-weight:bold;
+		/* login error */
+		.login-error {
+			color: $white-color;
+			&:hover {
+				color: $orange-color;
+				font-weight: bold;
 			}
-
 		}
+
+		/* add category Link */
 		#add-cat-link {
 			width: 100%;
 			display: block;
 			line-height: 35px;
 		}
 
-		form#edit-cat {
+		/* edit category form */
+		#edit-category {
 			width: 50%;
 			display: block;
 			margin: 5em auto;
@@ -352,7 +292,7 @@ main#content {
 				width: 100%;
 				color: $white-color;
 			}
-			input[type='text'] {
+			#categoryname {
 				line-height: 35px;
 				display: block;
 				width: 100%;
@@ -365,7 +305,8 @@ main#content {
 			}
 		}
 
-		form#cat-form {
+		/* add category form */
+		#category-form {
 			width: 100%;
 			display: block;
 			margin: auto;
@@ -388,11 +329,12 @@ main#content {
 			}
 		}
 
-		div.reviews {
+		/* reviews page */
+		#reviews {
 			min-height: 250px;
 		}
 
-		div.reviews blockquote {
+		#reviews > blockquote {
 			width: 100%;
 			margin: 0;
 			display: block;
@@ -418,113 +360,26 @@ main#content {
 			}
 		}
 
-		#review_pagination {
+		#review-pagination {
 			display: block;
 			clear: both;
 			line-height: 45px;
-			font-size:0.85em;
+			font-size: 0.85em;
 		}
 
-		section.album_section:last-of-type {
-			margin: 0 0 1em 0;
-		}
-
-		section.album_section{
-			padding: 0;
-			margin: 0 0 1em 0;
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-flow: column;
-			justify-content: flex-start;
-			align-items: center;
-
-			h2 {
-				align-self: center;
-				font-size: 1.2em;
-				margin: 0.5em 0;
-				width: 100%;
-				color: $white-color;
-				line-height: 40px;
-				text-align: center;
-				background-color: $bg-black;
-			}
-
-			figure.album_card {
-				width: 75%;
-				margin: 0.25em;
-				@include mannering-transition(all 0.5s ease);
-				@include mannering-border(5px);
-				padding: 0;
-				text-align: center;
-				height: auto;
-				min-height: auto;
-				flex: 1 0 auto;
-
-				img.album_car_image {
-					border: 2px solid $stone-grey;
-					@include mannering-transition(all 0.5s ease);
-					width: auto;
-					margin: 3% auto;
-					cursor: pointer;
-				}
-
-
-				figcaption.album_car_text {
-					h3 {
-						line-height: 35px;
-						background-color: $darker-stone-grey;
-						font-size: 0.8em;
-						color: $white-color;
-						text-transform: uppercase;
-						font-weight: normal;
-						letter-spacing: 0.1em;
-					}
-
-					h4 {
-						background-color: $light-grey;
-						line-height: 35px;
-						font-size: 0.7em;
-						color: $white-color;
-					}
-
-					h5 {
-						line-height: 30px;
-						font-size: 1em;
-						color: $white-color;
-						background-color: $darker-stone-grey;
-						font-weight: normal;
-					}
-				}
-			}
-
-			figure.album_card:hover {
-				cursor: pointer;
-			}
-
-			figure.album_card:hover img.album_car_image {
-				@include mannering-transform(scale(1.02));
-				border: 2px solid $orange-color;
-			}
-
-			figure.album_card:hover form#frontform {
-				top: 0;
-			}
-
-		}
-
-		ul.categories {
+		/* category list */
+		#categories {
 			display: block;
 			list-style: none;
 			width: 100%;
 			margin: 1em auto;
 
-			li {
+			.categories-item {
 				width: 98%;
 				height: auto;
 				margin: 0.25em auto;
 
-				a {
+				.categories-link {
 					line-height: 45px;
 					display: block;
 					text-align: center;
@@ -539,6 +394,88 @@ main#content {
 			}
 		}
 
+		/* home page albums sections hip hop country jazz */
+		.genre-section:last-of-type {
+			margin: 0 0 1em;
+		}
+
+		.genre-section {
+			padding: 0;
+			margin: 0 0 1em;
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+
+			h3 {
+				align-self: center;
+				font-size: 1.2em;
+				margin: 0.5em 0;
+				width: 100%;
+				color: $white-color;
+				line-height: 40px;
+				text-align: center;
+				background-color: $bg-black;
+			}
+
+			.album-card {
+				width: 75%;
+				margin: 0.25em;
+				transition: all 0.5s ease;
+				border-radius: 5px;
+				padding: 0;
+				text-align: center;
+				height: auto;
+				min-height: auto;
+				flex: 1 0 auto;
+
+				.album-card-image {
+					border: 2px solid $stone-grey;
+					transition: all 0.5s ease;
+					width: auto;
+					margin: 3% auto;
+					cursor: pointer;
+				}
+
+				.album-car-text {
+					h4 {
+						line-height: 35px;
+						background-color: $darker-stone-grey;
+						font-size: 1em;
+						color: $white-color;
+						text-transform: uppercase;
+						font-weight: normal;
+						letter-spacing: 0.1em;
+					}
+
+					h5 {
+						background-color: $light-grey;
+						line-height: 35px;
+						font-size: 0.9em;
+						color: $white-color;
+					}
+				}
+			}
+
+			.album-card:hover {
+				cursor: pointer;
+			}
+
+			.album-card:hover .album-card-image {
+				transition: scale(1.02);
+				border: 2px solid $orange-color;
+			}
+
+			.album-card:hover form#frontform {
+				top: 0;
+			}
+		}
+
+		/* end of home page albums sections */
+
+		/* edit review form */
 		#review-edit {
 			width: 40%;
 			height: auto;
@@ -548,10 +485,10 @@ main#content {
 			background-color: $darker-stone-grey;
 			margin: auto;
 
-			textarea {
+			#reviewtext {
 				width: 100%;
 				border: 2px solid $light-grey;
-				@include mannering-border(5px);
+				border-radius: 5px;
 				display: block;
 				padding: 0;
 				font-size: 1em;
@@ -625,13 +562,13 @@ main#content {
 		}
 	}
 
-	/* errors*/
-	label.error,
-	label.notice,
-	label.success {
+	/* form errors */
+	.error,
+	.notice,
+	.success {
 		padding: 0.8em;
 		margin-bottom: 1em;
-		border: 2px solid #ddd;
+		border: 2px solid $white-color;
 		width: 200px;
 		position: absolute;
 		left: 41%;
@@ -639,42 +576,41 @@ main#content {
 	}
 
 	.error {
-		background: $white-color;
-		color: #297f10;
-		border-color: #297f10;
+		background: $error-bg;
+		color: $error-color;
+		border-color: $error-color;
 		width: 100%;
 	}
 
 	.notice {
-		background: $white-color;
-		color: #514721;
-		border-color: #ffd324;
+		background: $notice-bg;
+		color: $notice-color;
+		border-color: $notice-border;
 		width: 100%;
 	}
 
 	.success {
-		background: #e6efc2;
-		color: #264409;
-		border-color: #c6d880;
+		background: $success-bg;
+		color: $success-color;
+		border-color: $success-border;
 		width: 100%;
 	}
 
 	/* search page form */
-	form#searchForm {
+	#mannering-search {
 		margin: 0 auto;
 		height: auto;
 		width: 96%;
 		padding: 0.5em;
-		@include mannering-border(5px);
-		font-family: ($FontListText);
+		border-radius: 5px;
+		font-family: $FontListText;
 
 		fieldset {
 			padding: 1em;
 			border: 1px solid $light-grey;
-			display:flex;
-			flex-flow:column;
+			display: flex;
+			flex-flow: column;
 			align-items: center;
-
 		}
 
 		legend {
@@ -704,12 +640,14 @@ main#content {
 		::placeholder {
 			color: $bg-black;
 			text-indent: 0.25em;
-			font-family: ($FontListText);
+			font-family: $FontListText;
 		}
 
-		input[type='text'] {
-			border: 1px solid $light-grey;
-			@include mannering-border(5px);
+		#artist,
+		#album,
+		#genre {
+			border: 2px solid $light-grey;
+			border-radius: 5px;
 			background: $white-color;
 			padding: 0;
 			height: 35px;
@@ -720,29 +658,17 @@ main#content {
 			line-height: 35px;
 		}
 
-		select {
-			border: 2px solid $light-grey;
-			@include mannering-border(5px);
-			background: $white-color;
-			padding: 0;
-			height: 35px;
-			font-size: 1em;
-			margin: 0.5em 0;
-			width: 100%;
-			line-height: 35px;
-		}
-
-		input#searchBtn {
-			font-family: ($FontListText);
+		.search-btn {
+			font-family: $FontListText;
 			letter-spacing: 0.1em;
 			width: 75%;
 			color: $white-color;
 			font-size: 1em;
 			display: inline-block;
 			border: 2px solid $darker-stone-grey;
-			@include mannering-border(5px);
+			border-radius: 5px;
 			background-color: $orange-color;
-			-webkit-appearance: none;
+			appearance: none;
 			font-weight: normal;
 
 			&:hover {
@@ -755,7 +681,7 @@ main#content {
 		}
 	}
 
-	.refresh_link {
+	.refresh-page-link {
 		font-size: 0.9em;
 		text-align: left;
 		color: $white-color;
@@ -779,22 +705,22 @@ main#content {
 		}
 	}
 
-	.aboutpage_img {
+	.aboutpage-img {
 		width: 14%;
 		margin: 0 1% 0 0;
 		float: left;
 	}
-	/*front-page slider*/
+
+	/* front-page slider */
 	#slider {
 		width: 100%;
-		margin: 1em 0 0 0;
+		margin: 1em 0 0;
 		display: block;
 		background-color: $white-color;
 		height: auto;
-
 	}
 
-	#results_container {
+	#results-container {
 		margin: 0;
 		padding: 0;
 		height: auto;
@@ -803,198 +729,303 @@ main#content {
 		flex-flow: column;
 		align-items: center;
 
-		.results{
+		/* audio controls */
+		.audio-controls {
+			height: auto;
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+			.audio-track-name {
+				line-height: 60px;
+				width: 100%;
+				margin: 0;
+				display: block;
+				height: auto;
+				padding: 0;
+				color: $white-color;
+				font-size: 1em;
+			}
+			.audiocntrl-container {
+				height: auto;
+				display: flex;
+				margin-bottom: 0.5em;
+				flex-flow: row wrap;
+				align-items: flex-start;
+
+				.audio-player-btn {
+					width: 20%;
+					flex: 0 1 auto;
+					height: auto;
+					line-height: 50px;
+					outline: none;
+					border: none;
+					cursor: pointer;
+					background-color: $bg-black;
+					color: $white-color;
+					i {
+						font-size: 1em;
+						display: block;
+						height: auto;
+						text-align: center;
+						width: 100%;
+						line-height: 50px;
+					}
+					&:hover {
+						font-size: 1.1em;
+						background-color: $white-color;
+						color: $bg-black;
+					}
+				}
+
+				.audio-progress {
+					width: 60%;
+					height: 50px;
+
+					.load-progress {
+						width: 100%;
+						background-color: $orange-color;
+						height: 100%;
+					}
+
+					.play-progress {
+						width: 100%;
+						cursor: pointer;
+						background-color: $orange-color;
+						height: 100%;
+					}
+				}
+
+				.current-time,
+				.duration {
+					font-family: monospace;
+					width: 20%;
+					line-height: 50px;
+					letter-spacing: 0.15em;
+					text-align: center;
+					background-color: $bg-black;
+					text-shadow: none;
+					font-size: 0.9em;
+				}
+
+				.audio-volume {
+					width: 100%;
+					height: 50px;
+					display: flex;
+
+					.volume-bg {
+						width: 88%;
+						height: 100%;
+						background-color: $stone-grey3;
+						display: flex;
+					}
+
+					.volume {
+						width: 96%;
+						display: block;
+						background-color: $white-color;
+						margin: 0.5em;
+						height: auto;
+						cursor: pointer;
+						position: relative;
+					}
+
+					.volume-mute {
+						width: 12%;
+						height: 100%;
+						background-color: $bg-black;
+						color: $white-color;
+						border: none;
+						outline: none;
+						.fa-volume-up {
+							display: block;
+							width: 100%;
+							text-align: center;
+							line-height: 50px;
+							font-size: 1.5em;
+							&::before {
+								display: block;
+							}
+						}
+						&:hover {
+							background-color: $white-color;
+							color: $bg-black;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		/* audio track list */
+		.audio-tracklist {
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: flex;
+				line-height: 40px;
+				margin-bottom: 0.5em;
+				font-size: 0.65em;
+				.tracknum {
+					width: 20%;
+				}
+				.audio-track-name {
+					width: 60%;
+				}
+
+				.trackbtn {
+					background-color: $bg-black;
+					width: 20%;
+					cursor: pointer;
+					i {
+						text-align: center;
+						display: block;
+						line-height: 40px;
+						font-size: 200%;
+						&:hover {
+							background-color: $white-color;
+							color: $bg-black;
+						}
+					}
+				}
+
+				.trackplays {
+					width: 20%;
+					text-align: center;
+				}
+			}
+		}
+
+		/* search results list */
+		.results {
 			height: auto;
 			padding: 0.25em;
-			@include mannering-border(5px);
+			border-radius: 5px;
 			margin: 0.25em;
 			width: 80%;
 			display: block;
 			float: left;
 			font-weight: normal;
-			-webkit-flex: 0 0 auto;
-			-ms-flex: 0 0 auto;
 			flex: 0 0 auto;
-			h2{
-				font-size:1em;
-			}
 
-			figure.results-info {
-				/* Album image*/
-				a {
+			.results-info {
+
+				/* Album image */
+				.result-info-link {
 					width: auto;
 					order: 0;
-					img {
+					.result-info-img {
 						width: auto;
 						margin: 1em auto;
 						display: block;
+						&:focus {
+							border: 1px dotted $orange-color;
+						}
 					}
 				}
-				/* Album artist and name*/
-				figcaption.results-text {
+
+				/* Album artist and name */
+				.results-text {
 					width: 100%;
-					h3,h4,h5,h6{
+					h3,
+					h4,
+					h5,
+					h6 {
 						display: block;
 						padding: 0;
 						color: $white-color;
 						height: auto;
 						font-weight: normal;
-						margin:0;
+						margin: 0;
 						width: 100%;
 						line-height: 25px;
 						margin-bottom: 0.2em;
 						text-align: center;
 					}
-					h3{
+					h3 {
 						font-size: 1em;
 						background-color: $darker-stone-grey;
 					}
-					h4{
+					h4 {
 						font-size: 0.9em;
 						background-color: $light-grey;
 					}
-					h5{
+					h5 {
 						font-size: 0.85em;
 						background-color: $darker-stone-grey;
-						a{
+						a {
 							background-color: $orange-color;
-							color:$white-color;
-							display:block;
-							width:100%;
-							height:100%;
-							&:hover{
+							color: $white-color;
+							display: block;
+							width: 100%;
+							height: 100%;
+							&:hover {
 								color: $orange-color;
-								background-color:$white-color;
-								cursor:pointer;
-
+								background-color: $white-color;
+								cursor: pointer;
 							}
 						}
 					}
-					h6{
-						font-size: 0.80em;
+					h6 {
+						font-size: 0.8em;
 						background-color: $light-grey;
 					}
 				}
-
-				&:focus{
-					border:1px dotted $orange-color;
-				}
 			}
 
-			figure.results-info:hover img {
-				@include mannering-transform(scale(1.01));
+			.results-info:hover img {
+				transition: scale(1.01);
 				border: 1px solid $orange-color;
 				cursor: pointer;
 			}
-
-			form#to_album_btn {
-				display: inline-block;
-				width: 100%;
-				margin-bottom: 0.5em;
-				padding: 0;
-			}
-
-			input.to_album_btn {
-				display: block;
-				background-color: $orange-color;
-				margin: 0;
-				width: 100%;
-				height: 40px;
-				line-height: unset;
-				color: $white-color;
-				border: none;
-				font-size: 1em;
-				cursor: pointer;
-				padding: 0;
-				text-align: center;
-				&:hover {
-					background-color: $stone-grey2;
-					text-decoration: none !important;
-					@include mannering-transition(all 0.2s ease);
-				}
-			}
 		}
 
-		/*results.show page*/
+		/* single artist page */
 		.results-large {
 			height: auto;
 			min-height: 240px;
 			padding: 0;
-			@include mannering-border(5px);
+			border-radius: 5px;
 			margin: 0.5em;
 			width: 100%;
 			display: block;
 			font-weight: normal;
 
-			h2{
+			h2 {
 				font-size: 1.5em;
 				text-align: center;
 				line-height: 100px;
-				background-color: #fff;
-				color: #000;
+				background-color: $white-color;
+				color: $bg-black;
 				width: 90%;
 				margin: 1em auto;
 			}
 
-			h3,h4,h5,h6{
-				display: block;
-				padding: 0;
-				color: $white-color;
-				height: auto;
-				font-weight: normal;
-				margin:0;
-				width: 100%;
-				margin-bottom: 0.2em;
-				text-align: center;
-			}
-
-			h3{
-				font-size: 1em;
-				line-height:40px;
-
-			}
-
-			h4{
-				font-size: 0.9em;
-
-			}
-
-			h5{
-				font-size: 0.85em;
-
-			}
-
-			h6{
-				font-size: 0.80em;
-
-			}
-
-			figure.results-info {
+			.results-large-info {
 				display: flex;
 				flex-flow: column;
 				justify-content: flex-start;
 				align-items: center;
 				position: relative;
 
-				a {
+				.results-large-link {
 					width: auto;
 					order: 0;
-					img {
-
-						margin:1em 0;
+					.results-large-img {
+						margin: 1em 0;
 					}
 				}
 
-				figcaption.results-text{
+				#results-large-text {
 					width: 96%;
 					order: 1;
 
-					ul {
+					.results-large-text-items {
 						width: 100%;
 						margin: 0;
 						padding: 0;
 
-						li {
+						.results-large-text-item {
 							display: inline-block;
 							padding: 0;
 							color: $white-color;
@@ -1007,7 +1038,7 @@ main#content {
 							width: 100%;
 							margin-bottom: 0.2em;
 
-							span {
+							.large-text {
 								width: 79%;
 								text-indent: 0.25em;
 								float: left;
@@ -1020,7 +1051,7 @@ main#content {
 								}
 							}
 
-							span:first-of-type {
+							.large-text-title {
 								text-indent: 0.25em;
 								width: 20%;
 								display: block;
@@ -1036,138 +1067,11 @@ main#content {
 				}
 			}
 
-			figure.results-info:hover img {
+			.results-large-info :hover img {
 				cursor: pointer;
 			}
 
-			div.audio_controls {
-				height: auto;
-				display: flex;
-				flex-flow: column;
-				justify-content: space-between;
-				h1.trackName {
-					line-height: 60px;
-					width: 100%;
-					margin: 0;
-					display: block;
-					height: auto;
-					padding: 0;
-					color: $white-color;
-					font-size: 1em;
-				}
-				div.audiocntrl_containers {
-					height: auto;
-					display: flex;
-					margin-bottom: 0.5em;
-					flex-flow: row wrap;
-					align-items: flex-start;
-
-					.player-button {
-						width: 20%;
-						flex: 0 1 auto;
-						height: auto;
-						line-height: 50px;
-						outline:none;
-						border: none;
-						cursor: pointer;
-						background-color: $bg-black;
-						color: $white-color;
-						i {
-							font-size: 1em;
-							display: block;
-							height: auto;
-							text-align: center;
-							width: 100%;
-							line-height: 50px;
-						}
-						&:hover {
-							font-size: 1.1em;
-							background-color: $white-color;
-							color: $bg-black;
-						}
-					}
-
-					div.progress {
-						width: 60%;
-						height: 50px;
-
-						div.load_progress {
-							width: 100%;
-							background-color: $orange-color;
-							height: 100%;
-						}
-
-						div.play_progress {
-							width: 100%;
-							cursor: pointer;
-							background-color: $orange-color;
-							height: 100%;
-						}
-					}
-
-					div.current_time,
-					div.duration {
-						font-family: monospace;
-						width: 20%;
-						line-height: 50px;
-						letter-spacing: 0.15em;
-						text-align: center;
-						background-color: $bg-black;
-						text-shadow: none;
-						font-size: 0.9em;
-					}
-
-					div.audio_volume {
-						width: 100%;
-						height: 50px;
-						display: flex;
-
-						div.VolumeBg {
-							width: 88%;
-							height: 100%;
-							background-color: $stone-grey3;
-							display: flex;
-						}
-
-						input.volume{
-							width: 96%;
-							display: block;
-							background-color: $white-color;
-							margin: 0.5em;
-							height: auto;
-							cursor: pointer;
-							position:relative;
-
-						}
-
-						button#volume-mute {
-							width: 12%;
-							height: 100%;
-							background-color: $bg-black;
-							color: $white-color;
-							border:none;
-							outline:none;
-							i.fa-volume-up {
-								display: block;
-								width: 100%;
-								text-align: center;
-								line-height: 50px;
-								font-size: 1.5em;
-								&:before {
-									display: block;
-								}
-							}
-							&:hover {
-								background-color: $white-color;
-								color: $bg-black;
-								cursor: pointer;
-							}
-						}
-					}
-				}
-			}
-
-			span.result_label {
+			.result-label {
 				background-color: $stone-grey3;
 				color: $white-color;
 				width: 100%;
@@ -1176,54 +1080,13 @@ main#content {
 				line-height: 35px;
 				text-indent: 1em;
 			}
-
-			ul.audio-tracklist {
-				margin: 0;
-				padding: 0;
-
-				li {
-					display: flex;
-					line-height: 40px;
-					margin-bottom: 0.5em;
-					font-size:0.65em;
-					span.tracknum {
-						width: 20%;
-					}
-					span.trackname {
-						width: 60%;
-
-					}
-
-					span.trackbtn {
-						background-color: $bg-black;
-						width: 20%;
-						cursor: pointer;
-						i {
-							text-align: center;
-							display: block;
-							line-height: 40px;
-							font-size: 200%;
-							&:hover {
-								background-color: $white-color;
-								color: $bg-black;
-							}
-						}
-					}
-
-					span.trackplays {
-						width: 20%;
-						text-align: center;
-
-					}
-				}
-			}
 		}
 	}
 
-	.text_box {
+	.text-box {
 		height: 140px;
 		width: 98%;
-		background-color: $dark-grey;;
+		background-color: $dark-grey;
 		margin: auto;
 
 		h1 {
@@ -1238,14 +1101,14 @@ main#content {
 		a {
 			color: $orange-color;
 			font-size: 0.75em;
-			padding: 0px;
+			padding: 0;
 			text-align: center;
 			width: 20%;
-			background-color: $dark-grey;;
+			background-color: $dark-grey;
 			line-height: 25px;
 			display: block;
 			&:hover {
-				color: $dark-grey;;
+				color: $dark-grey;
 				background-color: $orange-color;
 				font-weight: bold;
 			}
@@ -1257,14 +1120,14 @@ main#content {
 			letter-spacing: 0.1em;
 		}
 
-		.textbox_img {
+		.textbox-img {
 			margin: 1em;
 			float: right;
 			display: block;
 		}
 	}
 
-	/*Register Form*/
+	/* Register Form */
 	.container {
 		width: 100%;
 		margin: 5px auto;
@@ -1272,7 +1135,7 @@ main#content {
 		height: auto;
 	}
 
-	/*Register Form*/
+	/* Register Form */
 	#registerform {
 		width: 90%;
 		height: auto;
@@ -1282,10 +1145,10 @@ main#content {
 		background-color: $darker-stone-grey;
 		margin: 1em auto;
 
-		input[type='text'],
-		input[type='email'],
-		input[type='password'] {
-			@include mannering-border(5px);
+		#name,
+		#email,
+		#password {
+			border-radius: 5px;
 			width: 100%;
 			line-height: 35px;
 			height: 35px;
@@ -1296,10 +1159,10 @@ main#content {
 		label {
 			line-height: 30px;
 			height: 30px;
-			font-size:0.85em;
+			font-size: 0.85em;
 		}
 
-		#register_btn {
+		#register-btn {
 			background-color: $orange-color;
 			margin: 0.25em auto;
 			letter-spacing: 0.1em;
@@ -1317,7 +1180,7 @@ main#content {
 		}
 	}
 
-	/*Link to register Form*/
+	/* Link to register Form */
 	.regformlink {
 		display: block;
 		height: 40px;
@@ -1338,7 +1201,7 @@ main#content {
 		}
 	}
 
-	/*Contact page form*/
+	/* Contact page form */
 	#contact-page-form {
 		width: 90%;
 		height: auto;
@@ -1347,9 +1210,8 @@ main#content {
 		background-color: $darker-stone-grey;
 		margin-bottom: 5%;
 		margin-right: 5%;
-		display:block;
-		margin:0.5em auto;
-
+		display: block;
+		margin: 0.5em auto;
 
 		label {
 			display: block;
@@ -1358,7 +1220,7 @@ main#content {
 
 		input[type='text'],
 		input[type='email'] {
-			@include mannering-border(5px);
+			border-radius: 5px;
 			padding: 0.2em;
 			height: 35px;
 			font-size: 0.95em;
@@ -1367,9 +1229,8 @@ main#content {
 		}
 
 		select {
-			width: 100%;
 			border: 2px solid $light-grey;
-			@include mannering-border(5px);
+			border-radius: 5px;
 			display: block;
 			margin: 0;
 			padding: 0;
@@ -1381,13 +1242,13 @@ main#content {
 		textarea {
 			width: 100%;
 			border: 2px solid $light-grey;
-			@include mannering-border(5px);
+			border-radius: 5px;
 			display: block;
 			padding: 0;
 			font-size: 0.95em;
 		}
 
-		#contact_btn {
+		#contact-btn {
 			background-color: $orange-color;
 			margin: 0 auto;
 			width: 75%;
@@ -1405,12 +1266,12 @@ main#content {
 		}
 	}
 
-	/*Contact page address details*/
-	address#contact-details {
+	/* Contact page address details */
+	#contact-details {
 		width: 90%;
 		color: $white-color;
 		display: block;
-		margin:0.5em auto;
+		margin: 0.5em auto;
 
 		p {
 			line-height: 25px;
@@ -1419,7 +1280,7 @@ main#content {
 	}
 
 	/* video player imag grid */
-	section#sidebar_gallery {
+	#video-gallery {
 		width: 100%;
 		padding: 0;
 		margin: 0 auto;
@@ -1438,7 +1299,7 @@ main#content {
 			align-self: center;
 		}
 
-		figure.video-item {
+		.video-item {
 			position: relative;
 			overflow: hidden;
 			border: 3px solid $stone-grey2;
@@ -1446,8 +1307,6 @@ main#content {
 			width: 80%;
 			margin: 0.25em;
 			height: 150px;
-			-webkit-flex: 0 1 auto;
-			-ms-flex: 0 1 auto;
 			flex: 0 1 auto;
 
 			img {
@@ -1457,19 +1316,19 @@ main#content {
 			}
 		}
 
-		figcaption.overlay {
+		.overlay {
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			top: 0;
 			left: 0;
-			background: rgba(51, 51, 51, 0.75);
+			background: rgb(51 51 51 / 75%);
 			text-align: center;
 			opacity: 0;
-			@include mannering-transition(all 200ms ease-in-out);
-			@include mannering-transform(scale(0));
+			transition: all 200ms ease-in-out;
+			transform: scale(0);
 
-			a.fancybox {
+			.fancybox {
 				background-color: $orange-color;
 				width: 70%;
 				color: $white-color;
@@ -1491,7 +1350,7 @@ main#content {
 				}
 			}
 
-			h2.artist_name {
+			.video-artist-name {
 				width: 100%;
 				font-size: 1em;
 				margin: 0.5em 0;
@@ -1499,43 +1358,41 @@ main#content {
 				background-color: unset;
 			}
 
-			p.video_text {
+			.video-text {
 				color: $stone-grey2;
 				font-size: 0.9em;
 				line-height: 1.5em;
 			}
 		}
 
-		figure.video-item:hover figcaption.overlay {
+		.video-item:hover .overlay {
 			opacity: 1;
-			@include mannering-transform(scale(1));
+			transform: scale(1);
 			cursor: pointer;
 		}
 	}
 
-	.sidebar_content_box {
-		padding: 0px;
+	.sidebar-content-box {
+		padding: 0;
 		margin-bottom: 20px;
 		height: auto;
 		width: 100%;
 	}
 
-	.search_error {
+	.search-error {
 		display: none;
 	}
 
-	.show_error {
+	.show-error {
 		display: block;
 		background: $white-color;
-		color: #000;
+		color: $bg-black;
 		padding: 1em;
 		margin: 1em auto;
 		width: auto;
 		width: 60%;
 		text-align: center;
 	}
-
-
 }
 
 footer {
@@ -1543,12 +1400,11 @@ footer {
 	clear: both;
 	height: 290px;
 	width: 100%;
-
 	margin: 0;
 	padding: 0.5em;
-	@include mannering-border(5px);
+	border-radius: 5px;
 
-	.social-btns {
+	.mannering-social-btns-footer {
 		height: 50px;
 		margin: 0;
 		padding: 0;
@@ -1556,20 +1412,19 @@ footer {
 		width: 10%;
 		display: block;
 
-		ul {
+		.mannering-social-btns-footer-items {
 			width: 100%;
 			margin: 0;
 			padding: 0;
 			height: 100%;
 
-			li {
+			.mannering-social-btns-footer-item {
 				width: 100%;
 				float: left;
 				display: block;
 				font-size: 1em;
 				height: 100%;
-
-				a {
+				.mannering-social-btns-footer-link {
 					margin: 0;
 					font-size: 1em;
 					text-decoration: none;
@@ -1578,15 +1433,6 @@ footer {
 					width: 100%;
 					height: 100%;
 					line-height: 50px;
-
-					i {
-						display: block;
-						width: 100%;
-						height: 100%;
-						text-align: center;
-						line-height: 50px;
-					}
-
 					&:hover {
 						color: $stone-grey;
 						background-color: $orange-color;
@@ -1596,18 +1442,18 @@ footer {
 		}
 	}
 
-	ul#inner_footer {
+	#inner-footer {
 		width: 25%;
 		height: 100%;
 		margin: 0;
 
-		li {
+		.inner-footer-item {
 			width: 100%;
 			text-align: left;
 			display: block;
 			line-height: 45px;
 
-			a {
+			.inner-footer-link {
 				width: 100%;
 				height: auto;
 				text-indent: 0.5em;
@@ -1624,25 +1470,33 @@ footer {
 	}
 }
 
-/*1920*/
-@media only screen and (min-width: 1920px) {
+.copyr {
+	margin: auto;
+	color: $white-color;
+	font-size: 0.6em;
+	width: 100%;
+	letter-spacing: 0.1em;
+}
 
-	button#mobile-toggle {
-		display:none;
+/* 1920 */
+@media screen and (min-width: 120em) {
+	#mobile-toggle {
+		display: none;
 	}
+
 	#wrapper {
 		width: 86%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -1654,37 +1508,35 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
+			display: block;
 
-			ul#social {
-
-
-				li.social-item {
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					.mannering-social-link {
 						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			width: 100%;
 			height: 100%;
 			margin: 0;
@@ -1701,7 +1553,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -1712,23 +1564,22 @@ footer {
 					&:visited {
 						color: $stone-grey;
 						background-color: $white-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
 					&:focus {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-					&:hover{
+					&:hover {
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
-						cursor:pointer;
+						cursor: pointer;
 					}
 					&:active {
 						color: $orange-color;
 						background-color: $white-color;
-
 					}
 				}
 
@@ -1739,76 +1590,79 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
-			margin: 0 0 1em 0;
+		h2 {
+			font-size: 1.2em;
+			font-weight: normal;
+		}
 
-			section.album_section:last-of-type {
-				margin: 0 0 1em 0;
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
+			margin: 0 0 1em;
+
+			.genre-section:last-of-type {
+				margin: 0 0 1em;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.35em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.85em;
-						}
-
+					.album-car-text {
 						h4 {
-							font-size: 0.8em;
+							font-size: 1em;
 						}
 
 						h5 {
-							font-size: 0.8em;
+							font-size: 0.9em;
 						}
 					}
 				}
-
 			}
 			blockquote {
-				width:90%;
-				p{
-					font-size:1em;
+				width: 90%;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.9em;
 			}
-			ul.categories {
-						width: 40%;
-				li {
-					a {
+			#categories {
+				width: 40%;
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1.1em;
+						font-size: 1.1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 				}
 				input[type='checkbox'] {
@@ -1834,22 +1688,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -1860,11 +1698,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -1876,7 +1710,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -1884,93 +1718,176 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 19%;
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.3em;
+				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 14%;
 
-				figure.results-info {
-					img {
-						width: auto;
+						i {
+							font-size: 1.6em;
+						}
 					}
 
-					figcaption.results-text {
-						ul {
-							width: 100%;
+					.audio-progress {
+						width: 70%;
 
-							li {
-								width: 100%;
-								font-size: 0.65em;
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.3em;
+					}
+
+					.audio-volume {
+						width: 30%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
 							}
 						}
 					}
 				}
+			}
 
-				input.to_album_btn {
-					height: 40px;
+			.audio-tracklist {
+				margin: 0;
 
-					&:hover {
-						text-decoration: none !important;
+				li {
+					font-size: 0.9em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
 					}
 				}
 			}
 
-			/*results.show page*/
+			.results {
+				width: 19%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
+				}
+
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						display: block;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+
+						a {
+							background-color: $orange-color;
+							&:hover {
+								color: $orange-color;
+								cursor: pointer;
+							}
+						}
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			/* results.show page */
 			.results-large {
-				h2{
+				h2 {
 					font-size: 1.9em;
-					line-height:150px;
-					width:80%;
+					line-height: 150px;
+					width: 80%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1.2em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 1.1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-				figure.results-info {
+				.results-large-info {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: center;
 					position: relative;
-					gap:1em;
-					h2{
-						font-size: 2em;
-						line-height: 150px;
-						width: 80%;
-						margin: 2em auto;
+					gap: 1em;
 
-					}
-					a {
+					.results-large-link {
 						width: 15%;
 						order: 0;
-						img {
-							margin:0 1em 0 0;
+						.results-large-img {
+							margin: 0 1em 0 0;
 						}
 					}
-					figcaption.results-text {
+					.results-large-info {
 						width: 85%;
 
 						ul {
@@ -1993,102 +1910,13 @@ footer {
 					}
 				}
 
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.3em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 14%;
-
-							i {
-								font-size: 1.6em;
-
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.3em;
-						}
-
-						div.audio_volume {
-							width: 30%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-					li {
-						font-size:0.9em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -2104,8 +1932,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -2116,9 +1944,9 @@ footer {
 		#registerform {
 			width: 55%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -2127,9 +1955,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -2176,7 +2003,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -2186,7 +2013,7 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			font-size: 1em;
 			width: 90%;
 			margin: 5% auto;
@@ -2199,8 +2026,7 @@ footer {
 			}
 		}
 
-		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -2209,7 +2035,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 19%;
 
 				img {
@@ -2217,10 +2043,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -2228,32 +2054,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 56%;
 
@@ -2270,19 +2096,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -2296,19 +2118,15 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
-
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $white-color;
@@ -2318,9 +2136,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.75em;
 				}
 			}
@@ -2328,25 +2148,25 @@ footer {
 	}
 }
 
-/*1440 - 1919*/
-@media only screen and (min-width: 1440px) and (max-width: 1919px)   {
-	button#mobile-toggle {
-		display:none;
+/* 1440 - 1919 */
+@media screen and (min-width: 90em) and (max-width: 119.9375em) {
+	#mobile-toggle {
+		display: none;
 	}
 
 	#wrapper {
 		width: 86%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -2358,37 +2178,35 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
+			display: block;
 
-			ul#social {
-
-
-				li.social-item {
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					.mannering-social-link {
 						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			display: flex;
 			flex-flow: row;
 			justify-content: flex-start;
@@ -2402,7 +2220,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -2410,8 +2228,6 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-
-
 				}
 
 				a[href~='\/review\/edit'] {
@@ -2421,76 +2237,78 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
+		h2 {
+			font-size: 1.2em;
+			font-weight: normal;
+		}
 
-		#main_section {
-			margin: 0 0 1em 0;
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
 
-			section.album_section:last-of-type {
-				margin: 0 0 1em 0;
+		#main-section {
+			margin: 0 0 1em;
+
+			.genre-section:last-of-type {
+				margin: 0 0 1em;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.35em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.85em;
-						}
-
+					.album-car-text {
 						h4 {
-							font-size: 0.8em;
+							font-size: 1em;
 						}
 
 						h5 {
-							font-size: 0.8em;
+							font-size: 1em;
 						}
 					}
 				}
-
 			}
 			blockquote {
-				width:90%;
-				p{
-					font-size:1em;
+				width: 90%;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.9em;
 			}
-			ul.categories {
+			#categories {
 				width: 40%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1.1em;
+						font-size: 1.1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 				}
 				input[type='checkbox'] {
@@ -2516,22 +2334,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -2542,11 +2344,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -2558,7 +2356,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -2566,226 +2364,197 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 19%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 0.9em;
-
-						}
-						h4{
-							font-size: 0.85em;
-
-						}
-						h5{
-							font-size: 0.8em;
-
-						}
-						h6{
-							font-size: 0.75em;
-
-						}
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.3em;
 				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 14%;
 
-				input.to_album_btn {
-					height: 40px;
+						i {
+							font-size: 1.6em;
+						}
+					}
 
-					&:hover {
-						text-decoration: none !important;
+					.audio-progress {
+						width: 70%;
+
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.25em;
+					}
+
+					.audio-volume {
+						width: 30%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+
+				li {
+					font-size: 0.9em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+					}
+				}
+			}
+
+			.results {
+				width: 19%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
+				}
+
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 0.9em;
+					}
+					h4 {
+						font-size: 0.85em;
+					}
+					h5 {
+						font-size: 0.8em;
+					}
+					h6 {
+						font-size: 0.75em;
+					}
+				}
+			}
+
+			/* results.show page */
 			.results-large {
-
-				h2{
+				h2 {
 					font-size: 1.8em;
-					line-height:150px;
-					width:80%;
+					line-height: 150px;
+					width: 80%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1.2em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 1.1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-				figure.results-info {
+				.results-large-info {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: center;
 					position: relative;
-					gap:1em;
-					h2{
-						font-size: 2em;
-						line-height: 150px;
-						width: 80%;
-						margin: 2em auto;
+					gap: 1em;
 
-					}
-					a {
+					.results-large-link {
 						width: 15%;
 						order: 0;
-						img {
-
-							margin:0 1em 0 0;
+						.results-large-img {
+							margin: 0 1em 0 0;
 						}
 					}
-					figcaption.results-text {
+					#results-large-text {
 						width: 85%;
 
-						ul {
+						.results-large-text-items {
 							width: 100%;
 							margin: 0.25em 0;
-							li {
+							.results-large-text-item {
 								font-size: 0.9em;
 
-								span {
+								.large-text {
 									width: 86%;
 									text-indent: 0.5em;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 									text-indent: 0.5em;
 								}
 							}
-
-
 						}
 					}
 				}
 
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.3em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 14%;
-
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.25em;
-						}
-
-						div.audio_volume {
-							width: 30%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-					li {
-						font-size:0.9em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -2801,8 +2570,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -2813,9 +2582,9 @@ footer {
 		#registerform {
 			width: 55%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -2824,9 +2593,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -2873,7 +2641,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -2883,7 +2651,7 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 50%;
 			margin: 5% auto;
 			display: block;
@@ -2895,7 +2663,7 @@ footer {
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -2904,7 +2672,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 24%;
 
 				img {
@@ -2912,10 +2680,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -2923,32 +2691,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 40%;
 
@@ -2965,19 +2733,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -2991,19 +2755,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $white-color;
@@ -3013,9 +2774,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.9em;
 				}
 			}
@@ -3023,24 +2786,24 @@ footer {
 	}
 }
 
-/*1280 - 1439*/
-@media only screen and (min-width: 1280px) and (max-width: 1439px)   {
-	button#mobile-toggle {
-		display:none;
+/* 1280 - 1439 */
+@media screen and (min-width: 80em) and (max-width: 89.9375em) {
+	#mobile-toggle {
+		display: none;
 	}
 	#wrapper {
 		width: 86%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -3052,37 +2815,35 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
+			display: block;
 
-			ul#social {
-
-
-				li.social-item {
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					.mannering-social-link {
 						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			width: 100%;
 			height: 100%;
 			margin: 0;
@@ -3099,7 +2860,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -3107,7 +2868,6 @@ footer {
 					display: block;
 					font-size: 0.9em;
 					font-weight: normal;
-
 				}
 
 				a[href~='\/review\/edit'] {
@@ -3117,75 +2877,78 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
-			margin: 0 0 1em 0;
+		h2 {
+			font-size: 1.2em;
+			font-weight: normal;
+		}
 
-			section.album_section:last-of-type {
-				margin: 0 0 1em 0;
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
+			margin: 0 0 1em;
+
+			.genre-section:last-of-type {
+				margin: 0 0 1em;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
-					font-size: 1.35em;
+				h3 {
+					font-size: 1.3em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 19%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.85em;
-						}
-
+					.album-car-text {
 						h4 {
-							font-size: 0.8em;
+							font-size: 1em;
 						}
 
 						h5 {
-							font-size: 0.8em;
+							font-size: 1em;
 						}
 					}
 				}
-
 			}
 			blockquote {
-
-				p{
-					font-size:1em;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.75em;
 			}
-			ul.categories {
+			#categories {
 				width: 50%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1.1em;
+						font-size: 1.1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 				}
 				input[type='checkbox'] {
@@ -3211,22 +2974,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -3237,11 +2984,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -3253,7 +2996,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -3261,117 +3004,180 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 24%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-							line-height: 25px;
-						}
-						h3{
-							font-size: 1em;
-
-						}
-						h4{
-							font-size: 0.9em;
-
-						}
-						h5{
-							font-size: 0.85em;
-
-						}
-						h6{
-							font-size: 0.80em;
-
-						}
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.25em;
 				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 14%;
 
-				input.to_album_btn {
-					height: 40px;
+						i {
+							font-size: 1.6em;
+						}
+					}
 
-					&:hover {
-						text-decoration: none !important;
+					.audio-progress {
+						width: 70%;
+
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.25em;
+					}
+
+					.audio-volume {
+						width: 30%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+
+				li {
+					font-size: 0.9em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+					}
+				}
+			}
+
+			.results {
+				width: 24%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
+				}
+
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			/* results.show page */
 			.results-large {
-				h2{
+				h2 {
 					font-size: 1.8em;
-					line-height:150px;
-					width:80%;
+					line-height: 150px;
+					width: 80%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1.1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-				figure.results-info {
+				.results-large-info {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: center;
 					position: relative;
-					gap:1em;
-					h2{
-						font-size: 2em;
-						line-height: 150px;
-						width: 80%;
-						margin: 2em auto;
+					gap: 1em;
 
-					}
-					a {
+					.results-large-link {
 						width: 15%;
 						order: 0;
-						img {
-
-							margin:0 1em 0 0;
+						.results-large-img {
+							margin: 0 1em 0 0;
 						}
 					}
-					figcaption.results-text {
+					#results-large-text {
 						width: 85%;
 
-						ul {
-							li {
+						.results-large-text-items {
+							.results-large-text-item {
 								font-size: 0.85em;
 
-								span {
+								.large-text {
 									width: 86%;
 									text-indent: 0.5em;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 									text-indent: 0.5em;
 								}
@@ -3379,108 +3185,18 @@ footer {
 
 							ul {
 								margin: 0.5em 0;
-
-
 							}
 						}
 					}
 				}
 
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.25em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 14%;
-
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.25em;
-						}
-
-						div.audio_volume {
-							width: 30%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-					li {
-						font-size:0.9em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -3496,8 +3212,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -3508,9 +3224,9 @@ footer {
 		#registerform {
 			width: 55%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -3519,9 +3235,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -3568,7 +3283,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -3578,7 +3293,7 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 50%;
 			margin: 5% auto;
 			display: block;
@@ -3590,7 +3305,7 @@ footer {
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -3599,7 +3314,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 24%;
 
 				img {
@@ -3607,10 +3322,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -3618,32 +3333,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 66%;
 
@@ -3660,19 +3375,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -3686,19 +3397,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $white-color;
@@ -3708,9 +3416,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.85em;
 				}
 			}
@@ -3718,25 +3428,24 @@ footer {
 	}
 }
 
-/*1024 - 1279*/
-@media only screen and (min-width: 1024px) and (max-width: 1279px)   {
-
-	button#mobile-toggle {
-		display:none;
+/* 1024 - 1279 */
+@media screen and (min-width: 64em) and (max-width: 79.9375em) {
+	#mobile-toggle {
+		display: none;
 	}
 	#wrapper {
 		width: 86%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -3748,37 +3457,35 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
+			display: block;
 
-			ul#social {
-
-
-				li.social-item {
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					.mannering-social-link {
 						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			width: 100%;
 			height: 100%;
 			margin: 0;
@@ -3795,7 +3502,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -3807,28 +3514,24 @@ footer {
 					&:visited {
 						color: $stone-grey;
 						background-color: $white-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
 					&:focus {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-					&:hover{
+					&:hover {
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
-						cursor:pointer;
+						cursor: pointer;
 					}
 					&:active {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-
-
-
-
 				}
 
 				a[href~='\/review\/edit'] {
@@ -3838,42 +3541,47 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
+		h2 {
+			font-size: 1.1em;
+			font-weight: normal;
+		}
+
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.35em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 24%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-					figcaption.album_car_text {
-						h3 {
-							font-size: 1em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.9em;
 						}
@@ -3883,29 +3591,28 @@ footer {
 						}
 					}
 				}
-
 			}
 			blockquote {
-				p{
-					font-size:1em;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.9em;
 			}
-			ul.categories {
+			#categories {
 				width: 50%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1.1em;
+						font-size: 1.1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 				}
 				input[type='checkbox'] {
@@ -3931,22 +3638,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -3957,11 +3648,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -3973,7 +3660,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -3981,114 +3668,181 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 24%;
-				figure.results-info {
-					img {
-						width: auto;
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.25em;
+				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 14%;
 
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 0.9em;
-
-						}
-						h4{
-							font-size: 0.85em;
-
-						}
-						h5{
-							font-size: 0.8em;
-
-						}
-						h6{
-							font-size: 0.75em;
-
+						i {
+							font-size: 1.6em;
 						}
 					}
 
-					&:focus{
-						border:1px dotted $orange-color;
+					.audio-progress {
+						width: 70%;
+
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.2em;
+					}
+
+					.audio-volume {
+						width: 30%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
-			.results-large {
-				h2{
-					font-size: 1.7em;
-					line-height:150px;
-					width:80%;
-				}
+			.audio-tracklist {
+				margin: 0;
 
-				h3{
-					font-size: 1.1em;
-					line-height:40px;
-
-				}
-
-				h4{
-					font-size: 1em;
-					line-height:40px;
-
-				}
-
-				h5{
+				li {
 					font-size: 0.85em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
 
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.results {
+				width: 24%;
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
 				}
 
-				h6{
-					font-size: 0.80em;
-
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 0.9em;
+					}
+					h4 {
+						font-size: 0.85em;
+					}
+					h5 {
+						font-size: 0.8em;
+					}
+					h6 {
+						font-size: 0.75em;
+					}
 				}
-				figure.results-info {
+			}
+
+			/* results.show page */
+			.results-large {
+				h2 {
+					font-size: 1.7em;
+					line-height: 150px;
+					width: 80%;
+				}
+
+				h3 {
+					font-size: 1.1em;
+					line-height: 40px;
+				}
+
+				h4 {
+					font-size: 1em;
+					line-height: 40px;
+				}
+
+				.results-large-info {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: center;
 					position: relative;
-					gap:1em;
-					h2{
-						font-size: 2em;
-						line-height: 150px;
-						width: 80%;
-						margin: 2em auto;
+					gap: 1em;
 
-					}
-					a {
+					.results-large-link {
 						width: 20%;
 						order: 0;
-						img {
-
-							margin:0 1em 0 0;
+						.results-large-img {
+							margin: 0 1em 0 0;
 						}
 					}
-					figcaption.results-text {
+					#results-large-text {
 						width: 80%;
 
-						ul {
+						.results-large-text-items {
 							width: 100%;
-							li {
+							.results-large-text-item {
 								font-size: 0.8em;
 
-								span {
+								.large-text {
 									width: 86%;
 									text-indent: 0.5em;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 									text-indent: 0.5em;
 								}
@@ -4096,108 +3850,18 @@ footer {
 
 							ul {
 								margin: 0.5em 0;
-
-
 							}
 						}
 					}
 				}
 
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.25em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 14%;
-
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.2em;
-						}
-
-						div.audio_volume {
-							width: 30%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-					li {
-						font-size:0.85em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-							font-size:0.8em;
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -4213,8 +3877,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -4235,9 +3899,9 @@ footer {
 		#registerform {
 			width: 55%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -4246,9 +3910,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -4295,7 +3958,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -4305,7 +3968,7 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 60%;
 			margin: 5% auto;
 			display: block;
@@ -4318,7 +3981,7 @@ footer {
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -4327,7 +3990,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 24%;
 
 				img {
@@ -4335,10 +3998,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -4346,32 +4009,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 50%;
 
@@ -4388,19 +4051,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -4414,19 +4073,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $white-color;
@@ -4436,9 +4092,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.85em;
 				}
 			}
@@ -4446,24 +4104,24 @@ footer {
 	}
 }
 
-/*980 - 1023*/
-@media only screen and (min-width: 980px) and (max-width: 1023px)   {
-	button#mobile-toggle {
-		display:none;
+/* 800 - 979 */
+@media screen and (min-width: 50em) and (max-width: 63.9375em) {
+	#mobile-toggle {
+		display: none;
 	}
 	#wrapper {
 		width: 90%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -4475,737 +4133,35 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
-
-			ul#social {
-
-
-				li.social-item {
-					a {
-						font-size: 1em;
-
-					}
-				}
-			}
-		}
-	}
-	nav#mannering_nav {
-		width: 100%;
-		height: 40px;
-		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
-		}
-		#mannering_inner_nav {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			display: flex;
-			flex-flow: row;
-			justify-content: flex-start;
-
-			li {
-				width: 14.5%;
-				margin-left: 0.2em;
-				height: 40px;
-				text-align: center;
-				flex: 1 0 auto;
-
-				a {
-					text-decoration: none;
-					font-family: ($FontListText);
-					width: 100%;
-					line-height: 40px;
-					background-color: $stone-grey;
-					color: $white-color;
-					display: block;
-					font-size: 0.9em;
-					font-weight: normal;
-
-				}
-
-				a[href~='\/review\/edit'] {
-					font-size: 65%;
-				}
-			}
-		}
-	}
-
-	main#content {
-		width: 100%;
-
-		#main_section {
-			margin: 0;
-
-			section.album_section:last-of-type {
-				margin-bottom: 0%;
-			}
-
-			section.album_section{
-				margin: 0 auto;
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: flex-start;
-				align-items: flex-start;
-
-				h2 {
-					font-size: 1.35em;
-					margin: 0.5em 0;
-					line-height: 40px;
-
-				}
-				figure.album_card {
-					width: 32%;
-					margin: 0.25em;
-					flex: 0 0 auto;
-					img.album_car_image {
-						border: 2px solid $stone-grey;
-					}
-
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 1em;
-						}
-
-						h4 {
-							font-size: 0.9em;
-						}
-
-						h5 {
-							font-size: 0.9em;
-						}
-					}
-				}
-
-			}
-			blockquote {
-				font-size: 0.9em;
-				padding: 0.5em;
-				p{
-					font-size:1em;
-				}
-			}
-			#review_pagination {
-				font-size: 0.9em;
-			}
-			ul.categories {
-				font-size: 0.9em;
-				width: 60%;
-				li {
-					a {
-						line-height: 50px;
-						font-size:1.1em;
-					}
-				}
-			}
-			#review-edit {
-				width: 70%;
-
-				textarea {
-					font-size: 0.9em;
-				}
-				input[type='checkbox'] {
-					margin-right: 0.25em;
-				}
-
-				label {
-					font-size: 0.9em;
-				}
-
-				input[type='submit'] {
-					width: 40%;
-					font-size: 0.9em;
-
-					&:hover {
-						margin: 0 auto;
-					}
-				}
-			}
-		}
-
-		#summary {
-			display: none;
-		}
-
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
-		ul {
-			font-size: 1em;
-
-			margin: 2% 0;
-
-			li {
-				line-height: 25px;
-			}
-		}
-
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
-			font-size: 0.85em;
-
-			a {
-				line-height: 40px;
-
-				&:hover {
-					color: $orange-color;
-				}
-			}
-		}
-
-		.aboutpage_img {
-			width: 14%;
-		}
-
-		#slider {
-			height: auto;
-		}
-
-		#results_container {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-flow: row wrap;
-			align-items: flex-start;
-
-			.results{
-				width: 24%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 0.9em;
-
-						}
-						h4{
-							font-size: 0.85em;
-
-						}
-						h5{
-							font-size: 0.8em;
-
-						}
-						h6{
-							font-size: 0.75em;
-
-						}
-					}
-				}
-
-				input.to_album_btn {
-					height: 40px;
-
-					&:hover {
-						text-decoration: none !important;
-					}
-				}
-			}
-
-			/*results.show page*/
-			.results-large {
-				h2{
-					font-size: 1.6em;
-					line-height:125px;
-					width:90%;
-				}
-
-				h3{
-					font-size: 1.1em;
-					line-height:40px;
-
-				}
-
-				h4{
-					font-size: 1em;
-					line-height:40px;
-
-				}
-
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-				figure.results-info {
-					display: flex;
-					flex-flow: row;
-					justify-content: flex-start;
-					align-items: center;
-					position: relative;
-					gap:1em;
-					h2{
-						font-size: 2em;
-						line-height: 150px;
-						width: 80%;
-						margin: 2em auto;
-
-					}
-					a {
-						width: 20%;
-						order: 0;
-						img {
-
-							margin:0 1em 0 0;
-						}
-					}
-					figcaption.results-text {
-						width: 80%;
-
-						ul {
-							width: 100%;
-							li {
-								font-size: 0.75em;
-
-								span {
-									width: 86%;
-									text-indent: 0.5em;
-								}
-
-								span:first-of-type {
-									width: 14%;
-									text-indent: 0.5em;
-								}
-							}
-
-							ul {
-								margin: 0.5em 0;
-
-
-							}
-						}
-					}
-				}
-
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.2em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 20%;
-							i {
-								font-size: 1.6em;
-
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.2em;
-						}
-
-						div.audio_volume {
-							width: 100%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
-					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-					li {
-						font-size:0.85em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
-				}
-			}
-		}
-
-		.text_box {
-			height: 140px;
-			width: 98%;
-
-			h1 {
-				font-size: 1em;
-			}
-
-			a {
-				font-size: 0.7em;
-			}
-
-			p {
-				letter-spacing: 0.1em;
-			}
-
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
-			}
-		}
-
-		.container {
-			margin: 5px auto;
-		}
-
-		#registerform {
-			width: 60%;
-
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
-				font-size: 0.8em;
-			}
-
-			label {
-				font-size: 0.9em;
-				height: 30px;
-			}
-
-			#register_btn {
-				font-size: 1em;
-
-			}
-		}
-
-		#contact-page-form {
-			width: 60%;
-			padding: 2.5%;
-			float: none;
-
-			.error {
-				width: 80%;
-			}
-
-			.notice {
-				width: 80%;
-			}
-
-			.success {
-				width: 80%;
-			}
-
-			a {
-				text-decoration: none;
-				line-height: 1.5em;
-
-				&:hover {
-					text-decoration: none;
-					line-height: 1.5em;
-				}
-			}
-
-			input[type='text'] {
-				font-size: 1em;
-			}
-
-			input[type='email'] {
-				font-size: 1em;
-			}
-
-			textarea {
-				font-size: 1em;
-			}
-
-			select [type='text'] {
-				font-size: 1em;
-			}
-
-			#contact_btn {
-				width: 40%;
-				font-size: 1em;
-
-				&:hover {
-					width: 40%;
-				}
-			}
-		}
-
-		address#contact-details {
-			width: 60%;
-			margin: 5% auto;
 			display: block;
-			float: none;
 
-			p {
-				font-size: 0.9em;
-			}
-		}
-
-		/* video player light box */
-		section#sidebar_gallery {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: flex-start;
-			align-items: center;
-			h1 {
-				font-size: 1em;
-			}
-
-			figure.video-item {
-				width: 32%;
-
-				img {
-					display: block;
-				}
-			}
-
-			figcaption.overlay {
-				width: 100%;
-
-				a.fancybox {
-					font-size: 0.85em;
-
-					&:hover {
-						font-size: 0.95em;
-					}
-				}
-
-				h2.artist_name {
-					font-size: 1em;
-
-					line-height: 40px;
-				}
-
-				p.video_text {
-					font-size: 0.9em;
-				}
-			}
-
-			figure.video-item:hover figcaption.overlay {
-				cursor: pointer;
-			}
-		}
-
-		.sidebar_content_box {
-			padding: 0px;
-			margin-bottom: 20px;
-		}
-
-		.search_error {
-			font-size: 0.8em;
-		}
-
-		form#searchForm {
-			padding: 1%;
-			width: 76%;
-
-			legend {
-				font-size: 1em;
-			}
-
-			label {
-				font-size: 0.9em;
-			}
-
-			::placeholder {
-				color: $bg-black;
-				text-indent: 0.25em;
-			}
-
-			input[type='text'] {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
-				font-size: 0.85em;
-				display: block;
-				margin: 0 auto;
-				width: 50%;
-
-				&:hover {
-					letter-spacing: 0.12em;
-				}
-			}
-		}
-	}
-
-	footer {
-		.social-btns {
-			width: 10%;
-
-			ul {
-				li {
-					width: 100%;
-
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					.mannering-social-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
-
-						&:hover {
-							color: $white-color;
-						}
-					}
-				}
-			}
-		}
-
-		ul#inner_footer {
-			li {
-				a {
-					font-size: 0.85em;
-				}
-			}
-		}
-	}
-}
-
-/*800 - 1023*/
-@media only screen and (min-width: 800px) and (max-width: 979px)  {
-	button#mobile-toggle {
-		display:none;
-	}
-	#wrapper {
-		width: 90%;
-	}
-
-	#copyr {
-		font-size: 0.5em;
-	}
-
-	header {
-		clear: both;
-
-		span#site-logo {
-			p#logo {
-				font-size: 1.75em;
-
-				span {
-					height: 100%;
-				}
-
-				span:last-of-type {
-					height: 100%;
-				}
-			}
-
-			p.site-description {
-				font-size: 0.65em;
-			}
-		}
-
-		.social {
-			width: 32%;
-			display:block;
-
-			ul#social {
-
-
-				li.social-item {
-					a {
-						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			width: 100%;
 			height: 100%;
 			margin: 0;
@@ -5222,7 +4178,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -5239,43 +4195,47 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
+		h2 {
+			font-size: 1.1em;
+			font-weight: normal;
+		}
+
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.35em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 32%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.9em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.8em;
 						}
@@ -5285,31 +4245,30 @@ footer {
 						}
 					}
 				}
-
 			}
 			blockquote {
 				font-size: 0.9em;
-				p{
-					font-size:1em;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.85em;
 			}
-			ul.categories {
+			#categories {
 				font-size: 0.85em;
 				width: 60%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1em;
+						font-size: 1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 0.9em;
 				}
 				input[type='checkbox'] {
@@ -5335,22 +4294,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -5361,11 +4304,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -5377,7 +4316,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -5385,112 +4324,180 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 32%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 1em;
-
-						}
-						h4{
-							font-size: 0.9em;
-
-						}
-						h5{
-							font-size: 0.85em;
-
-						}
-						h6{
-							font-size: 0.80em;
-
-						}
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.2em;
 				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 20%;
+						i {
+							font-size: 1.6em;
+						}
+					}
 
-				input.to_album_btn {
-					height: 40px;
+					.audio-progress {
+						width: 70%;
 
-					&:hover {
-						text-decoration: none !important;
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.15em;
+					}
+
+					.audio-volume {
+						width: 100%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
-			.results-large {
-				h2{
-					font-size: 1.7em;
-					line-height:125px;
-					width:90%;
-				}
+			.audio-tracklist {
+				margin: 0;
 
-				h3{
-					font-size: 1.1em;
-					line-height:40px;
-
-				}
-
-				h4{
-					font-size: 1em;
-					line-height:40px;
-
-				}
-
-				h5{
+				li {
 					font-size: 0.85em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
 
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+					}
+				}
+			}
+
+			.results {
+				width: 32%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
 				}
 
-				h6{
-					font-size: 0.80em;
-
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
 				}
-				figure.results-info {
+			}
+
+			/* results.show page */
+			.results-large {
+				h2 {
+					font-size: 1.7em;
+					line-height: 125px;
+					width: 90%;
+				}
+
+				h3 {
+					font-size: 1.1em;
+					line-height: 40px;
+				}
+
+				h4 {
+					font-size: 1em;
+					line-height: 40px;
+				}
+
+				.results-large-info {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: center;
 					position: relative;
-					gap:1em;
-					a {
+					gap: 1em;
+
+					.results-large-link {
 						width: 20%;
 						order: 0;
-						img {
-
-							margin:0 1em 0 0;
+						.results-large-img {
+							margin: 0 1em 0 0;
 						}
 					}
-					figcaption.results-text {
+					#results-large-text {
 						width: 80%;
 
-						ul {
-							width:100%;
-							li {
+						.results-large-text-itemsl {
+							width: 100%;
+							.results-large-text-item {
 								font-size: 0.75em;
 
-								span {
+								.large-text {
 									width: 86%;
 									text-indent: 0.5em;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 									text-indent: 0.5em;
 								}
@@ -5498,108 +4505,18 @@ footer {
 
 							ul {
 								margin: 0.5em 0;
-
-
 							}
 						}
 					}
 				}
 
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.2em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 20%;
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.15em;
-						}
-
-						div.audio_volume {
-							width: 100%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-
-					li {
-						font-size:0.85em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -5615,8 +4532,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -5627,9 +4544,9 @@ footer {
 		#registerform {
 			width: 65%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -5638,9 +4555,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -5687,7 +4603,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -5697,20 +4613,19 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 60%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-
 				font-size: 0.9em;
 			}
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -5719,7 +4634,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 32%;
 
 				img {
@@ -5727,10 +4642,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -5738,32 +4653,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 86%;
 
@@ -5780,19 +4695,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -5806,20 +4717,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
-
 						&:hover {
 							color: $white-color;
 						}
@@ -5828,9 +4735,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.85em;
 				}
 			}
@@ -5838,25 +4747,24 @@ footer {
 	}
 }
 
-/*667 - 799*/
-@media only screen and (min-width: 667px) and (max-width: 799px) {
-
-	button#mobile-toggle {
-		display:none;
+/* 736 - 799 */
+@media screen and (min-width: 46em) and (max-width: 49.9375em) {
+	#mobile-toggle {
+		display: none;
 	}
 	#wrapper {
 		width: 94%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -5868,37 +4776,36 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
+		#mannering-social {
 			width: 32%;
-			display:block;
+			display: block;
 
-			ul#social {
-
-
-				li.social-item {
-					a {
+			#mannering-social-links {
+				margin: 0;
+				.mannering-social-item {
+					margin: 0;
+					.mannering-social-link {
 						font-size: 1em;
-
 					}
 				}
 			}
 		}
 	}
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 40px;
 		margin-bottom: 0.5em;
-		@include mannering-border(5px);
-		position:unset;
-		#mannering_mobile_inner_nav {
-			display:none;
+		border-radius: 5px;
+		position: unset;
+		#mannering-mobile-inner-nav {
+			display: none;
 		}
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			width: 100%;
 			height: 100%;
 			margin: 0;
@@ -5915,7 +4822,7 @@ footer {
 
 				a {
 					text-decoration: none;
-					font-family: ($FontListText);
+					font-family: $FontListText;
 					width: 100%;
 					line-height: 40px;
 					background-color: $stone-grey;
@@ -5925,24 +4832,24 @@ footer {
 					font-weight: normal;
 					&:visited {
 						color: $white-color;
-						border:1px dotted $orange-color;
-						font-weight:bold;
+						border: 1px dotted $orange-color;
+						font-weight: bold;
 					}
 					&:focus {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
-					&:hover{
+					&:hover {
 						background-color: $orange-color;
 						color: $stone-grey;
 						font-weight: bold;
-						cursor:pointer;
+						cursor: pointer;
 					}
 					&:active {
 						color: $white-color;
 						background-color: $orange-color;
-						font-weight:bold;
+						font-weight: bold;
 					}
 				}
 
@@ -5953,43 +4860,47 @@ footer {
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
+		h2 {
+			font-size: 1.1em;
+			font-weight: normal;
+		}
+
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.35em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 32%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.9em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.8em;
 						}
@@ -5999,31 +4910,30 @@ footer {
 						}
 					}
 				}
-
 			}
 			blockquote {
 				font-size: 0.9em;
-				p{
-					font-size:1em;
+				p {
+					font-size: 1em;
 				}
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.85em;
 			}
-			ul.categories {
+			#categories {
 				font-size: 0.85em;
 				width: 60%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1em;
+						font-size: 1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 0.9em;
 				}
 				input[type='checkbox'] {
@@ -6049,22 +4959,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.3em;
-		}
-
-		h2 {
-			font-size: 1.2em;
-		}
-
-		p {
-			font-size: 0.85em;
-		}
-
-		p.headp {
-			font-size: 0.85em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -6075,11 +4969,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -6091,7 +4981,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -6099,97 +4989,173 @@ footer {
 			height: auto;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 32%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 1em;
-
-						}
-						h4{
-							font-size: 0.9em;
-
-						}
-						h5{
-							font-size: 0.85em;
-
-						}
-						h6{
-							font-size: 0.80em;
-
-						}
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.2em;
 				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 20%;
 
-				input.to_album_btn {
-					height: 40px;
+						i {
+							font-size: 1.6em;
+						}
+					}
 
-					&:hover {
-						text-decoration: none !important;
+					.audio-progress {
+						width: 70%;
+
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 15%;
+						font-size: 1.15em;
+					}
+
+					.audio-volume {
+						width: 100%;
+
+						.volume-bg {
+							width: 80%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+
+				li {
+					font-size: 0.8em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+					}
+				}
+			}
+
+			.results {
+				width: 32%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
+				}
+
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			/* results.show page */
 			.results-large {
-				h2{
+				h2 {
 					font-size: 1.6em;
-					line-height:125px;
-					width:90%;
+					line-height: 125px;
+					width: 90%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1.1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-				figure.results-info {
-					figcaption.results-text {
+				.results-large-info {
+					.results-large-link {
+						width: auto;
+						order: 0;
+						.results-large-img {
+							margin: 1em 0;
+						}
+					}
+					#results-large-text {
 						width: 100%;
 
-						ul {
-							li {
+						.results-large-text-itemsl {
+							.results-large-text-item {
 								font-size: 0.75em;
 
-								span {
+								.large-text {
 									width: 86%;
 									text-indent: 0.5em;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 									text-indent: 0.5em;
 								}
@@ -6197,109 +5163,17 @@ footer {
 
 							ul {
 								margin: 0.5em 0;
-
-
 							}
 						}
 					}
 				}
-
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.2em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 20%;
-
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 70%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 15%;
-							font-size: 1.15em;
-						}
-
-						div.audio_volume {
-							width: 100%;
-
-							div.VolumeBg {
-								width: 80%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-
-					li {
-						font-size:0.8em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -6315,8 +5189,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -6327,9 +5201,9 @@ footer {
 		#registerform {
 			width: 70%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -6338,9 +5212,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -6387,7 +5260,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -6397,20 +5270,19 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 70%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-
 				font-size: 0.9em;
 			}
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -6419,7 +5291,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 48%;
 
 				img {
@@ -6427,10 +5299,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -6438,32 +5310,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 80%;
 
@@ -6480,19 +5352,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -6506,20 +5374,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-link {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
-
 						&:hover {
 							color: $white-color;
 						}
@@ -6528,9 +5392,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.8em;
 				}
 			}
@@ -6538,11 +5404,10 @@ footer {
 	}
 }
 
-/*600 - 666*/
-@media only screen and (min-width: 600px) and (max-width: 666px) {
-
-	button#mobile-toggle {
-		top:0.5em;
+/* 600 - 666 */
+@media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
+	#mobile-toggle {
+		top: 0.5em;
 		left: 88vw;
 	}
 
@@ -6550,15 +5415,15 @@ footer {
 		width: 94%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.5em;
 	}
 
-	header {
+	#mannering-header {
 		clear: both;
 
-		span#site-logo {
-			p#logo {
+		#site-logo {
+			#logo {
 				font-size: 1.75em;
 
 				span {
@@ -6570,88 +5435,88 @@ footer {
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				font-size: 0.65em;
 			}
 		}
 
-		.social {
-			display:none;
+		#mannering-social {
+			display: none;
 		}
 	}
 
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 200px;
 		margin-bottom: 0.5em;
-		position:absolute;
-		top:-200px;
-		left:0;
+		position: absolute;
+		top: -200px;
+		left: 0;
 		z-index: 140;
 
-		#mannering_mobile_inner_nav {
+		#mannering-mobile-inner-nav {
 			width: 100%;
 
-			li {
-
+			.mannering-mobile-inner-nav-item {
 				height: 40px;
 
-				a {
-
+				.mannering-mobile-inner-nav-link {
 					font-size: 1em;
-
 				}
 
-				a[href~='\/review\/edit'] {
+				.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
 					font-size: 65%;
 				}
 			}
 		}
 
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			display: none;
 		}
 	}
 
-	main#content {
+	#mannering-content {
 		width: 100%;
 
-		#main_section {
+		h2 {
+			font-size: 1em;
+			font-weight: normal;
+		}
+
+		p {
+			line-height: 1.6em;
+			padding: 0.5em;
+		}
+
+		#main-section {
 			margin: 0;
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
 				margin: 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 
-				h2 {
+				h3 {
 					font-size: 1.3em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
 
-
-
-				figure.album_card {
+				.album-card {
 					width: 48%;
 					margin: 0.25em;
 					flex: 0 0 auto;
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.9em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.85em;
 						}
@@ -6661,28 +5526,27 @@ footer {
 						}
 					}
 				}
-
 			}
 			blockquote {
 				font-size: 0.7em;
 			}
-			#review_pagination {
+			#review-pagination {
 				font-size: 0.85em;
 			}
-			ul.categories {
+			#categories {
 				font-size: 0.85em;
 				width: 65%;
-				li {
-					a {
+				.categories-item {
+					.categories-link {
 						line-height: 50px;
-						font-size:1em;
+						font-size: 1em;
 					}
 				}
 			}
 			#review-edit {
 				width: 70%;
 
-				textarea {
+				#reviewtext {
 					font-size: 0.9em;
 				}
 				input[type='checkbox'] {
@@ -6708,22 +5572,6 @@ footer {
 			display: none;
 		}
 
-		h1 {
-			font-size: 1.2em;
-		}
-
-		h2 {
-			font-size: 1.1em;
-		}
-
-		p {
-			font-size: 0.7em;
-		}
-
-		p.headp {
-			font-size: 0.7em;
-		}
-
 		ul {
 			font-size: 1em;
 
@@ -6734,11 +5582,7 @@ footer {
 			}
 		}
 
-		.main_img {
-			width: 15%;
-		}
-
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.85em;
 
 			a {
@@ -6750,7 +5594,7 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 		}
 
@@ -6758,122 +5602,176 @@ footer {
 			height: 180px;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				width: 48%;
-
-				figure.results-info {
-					img {
-						width: auto;
-					}
-
-					figcaption.results-text {
-						h3,h4,h5,h6{
-
-							line-height: 25px;
-						}
-						h3{
-							font-size: 1em;
-
-						}
-						h4{
-							font-size: 0.9em;
-
-						}
-						h5{
-							font-size: 0.85em;
-
-						}
-						h6{
-							font-size: 0.80em;
-
-						}
-					}
+			.audio-controls {
+				.audio-track-name {
+					font-size: 1.15em;
 				}
+				.audiocntrl-container {
+					.audio-player-btn {
+						width: 20%;
 
-				input.to_album_btn {
-					height: 40px;
+						i {
+							font-size: 1.6em;
+						}
+					}
 
-					&:hover {
-						text-decoration: none !important;
+					.audio-progress {
+						width: 60%;
+
+						.load-progress {
+							width: 100%;
+						}
+
+						.play-progress {
+							width: 100%;
+						}
+					}
+
+					.current-time,
+					.duration {
+						width: 20%;
+						font-size: 1.1em;
+					}
+
+					.audio-volume {
+						width: 100%;
+
+						.volume-bg {
+							width: 100%;
+						}
+
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 20%;
+
+							.fa-volume-up {
+								font-size: 1.4em;
+
+								&::before {
+									display: block;
+								}
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+
+				li {
+					font-size: 0.75em;
+					.tracknum {
+						width: 13%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 15%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 12%;
+					}
+				}
+			}
+
+			.results {
+				width: 48%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							width: auto;
+						}
+					}
+				}
+
+				.results-text {
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			/* results.show page */
 			.results-large {
-				h2{
+				h2 {
 					font-size: 1.6em;
-					line-height:125px;
-					width:90%;
+					line-height: 125px;
+					width: 90%;
 				}
 
-				h3{
-					font-size: 1em;
-					line-height:40px;
-
-				}
-
-				h4{
-					font-size: 0.9em;
-					line-height:40px;
-
-				}
-
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-
-				h3,h4,h5,h6{
+				h3,
+				h4 {
 					line-height: 30px;
 					margin-bottom: 0.2em;
-
 				}
 
-				h3{
+				h3 {
 					font-size: 1em;
-
 				}
 
-				h4{
+				h4 {
 					font-size: 0.95em;
-
 				}
 
-				h5{
-					font-size: 0.9em;
-
-				}
-
-				h6{
-					font-size: 0.85em;
-
-				}
-				figure.results-info {
-					figcaption.results-text {
+				.results-large-info {
+					.results-large-link {
+						width: auto;
+						order: 0;
+						.results-large-img {
+							margin: 1em 0;
+						}
+					}
+					#results-large-text {
 						width: 100%;
 
-						ul {
-							li {
+						.results-large-text-itemsl {
+							.results-large-text-item {
 								font-size: 0.75em;
 
-								span {
+								.large-text {
 									width: 86%;
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									width: 14%;
 								}
 							}
@@ -6888,109 +5786,15 @@ footer {
 						}
 					}
 				}
-
-				div.audio_controls {
-					h1.trackName {
-						font-size: 1.15em;
-					}
-					div.audiocntrl_containers {
-						.player-button {
-							width: 20%;
-
-							i {
-								font-size: 1.6em;
-							}
-						}
-
-						div.progress {
-							width: 60%;
-
-							.load_progress {
-								width: 100%;
-							}
-
-							.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 20%;
-							font-size: 1.1em;
-						}
-
-						div.audio_volume {
-							width: 100%;
-
-							div.VolumeBg {
-								width: 100%;
-							}
-
-							input.volume{
-								width: 96%;
-							}
-
-							button#volume-mute {
-								width: 20%;
-
-								i.fa-volume-up {
-									font-size: 1.4em;
-
-									&:before {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-
-
-					li {
-						font-size:0.75em;
-						span.tracknum {
-							width: 13%;
-						}
-						span.trackname {
-							width: 60%;
-						}
-
-						span.trackbtn {
-							width: 15%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 12%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
-
-			h1 {
-				font-size: 1em;
-			}
 
 			a {
 				font-size: 0.7em;
@@ -7000,8 +5804,8 @@ footer {
 				letter-spacing: 0.1em;
 			}
 
-			.textbox_img {
-				margin: 10px 30px 0px 0px;
+			.textbox-img {
+				margin: 10px 30px 0 0;
 			}
 		}
 
@@ -7012,9 +5816,9 @@ footer {
 		#registerform {
 			width: 80%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
+			#name,
+			#email,
+			#password {
 				font-size: 0.8em;
 			}
 
@@ -7023,9 +5827,8 @@ footer {
 				height: 30px;
 			}
 
-			#register_btn {
+			#register-btn {
 				font-size: 1em;
-
 			}
 		}
 
@@ -7072,7 +5875,7 @@ footer {
 				font-size: 1em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 40%;
 				font-size: 1em;
 
@@ -7082,20 +5885,19 @@ footer {
 			}
 		}
 
-		address#contact-details {
+		#contact-details {
 			width: 70%;
 			margin: 5% auto;
 			display: block;
 			float: none;
 
 			p {
-
 				font-size: 0.9em;
 			}
 		}
 
 		/* video player light box */
-		section#sidebar_gallery {
+		#video-gallery {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
@@ -7104,7 +5906,7 @@ footer {
 				font-size: 1em;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 48%;
 
 				img {
@@ -7112,10 +5914,10 @@ footer {
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				width: 100%;
 
-				a.fancybox {
+				.fancybox {
 					font-size: 0.85em;
 
 					&:hover {
@@ -7123,32 +5925,32 @@ footer {
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 
 					line-height: 40px;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-			padding: 0px;
+		.sidebar-content-box {
+			padding: 0;
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			font-size: 0.8em;
 		}
 
-		form#searchForm {
+		#mannering-search {
 			padding: 1%;
 			width: 85%;
 
@@ -7165,19 +5967,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 0.85em;
 				width: 100%;
 				margin-bottom: 1em;
 			}
 
-			select {
-				font-size: 0.85em;
-				width: 100%;
-				margin-bottom: 1em;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				font-size: 0.85em;
 				display: block;
 				margin: 0 auto;
@@ -7191,19 +5989,16 @@ footer {
 	}
 
 	footer {
-		.social-btns {
+		.mannering-social-btns-footer {
 			width: 10%;
 
-			ul {
-				li {
+			.mannering-social-btns-footer-items {
+				width: 100%;
+				.mannering-social-btns-footer-item {
 					width: 100%;
 
-					a {
+					.mannering-social-btns-footer-linka {
 						font-size: 1em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $white-color;
@@ -7213,9 +6008,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
-			li {
-				a {
+		#inner-footer {
+			margin: 0;
+			.inner-footer-item {
+				width: 100%;
+				.inner-footer-link {
 					font-size: 0.8em;
 				}
 			}
@@ -7223,10 +6020,10 @@ footer {
 	}
 }
 
-/*480 -599*/
-@media only screen and (min-width: 480px) and (max-width: 599px) {
-	button#mobile-toggle {
-		top:0.5em;
+/* 480 -599 */
+@media screen and (min-width: 30em) and (max-width: 37.4375em) {
+	#mobile-toggle {
+		top: 0.5em;
 		left: 86vw;
 	}
 
@@ -7234,132 +6031,92 @@ footer {
 		width: 94%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.6em;
 	}
 
-	header {
+	#mannering-header {
 		height: 75px;
 
-
-		span#site-logo {
+		#site-logo {
 			width: 63%;
 
-			p#logo {
-
+			#logo {
 				font-size: 1.6em;
-
 
 				span {
 					height: 100%;
-
 				}
 
 				span:last-of-type {
 					height: 100%;
-
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				line-height: 20px;
 				font-size: 0.8em;
-
 			}
 		}
 
-		.social {
-			display:none;
-
+		#mannering-social {
+			display: none;
 		}
 	}
 
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 200px;
 		margin-bottom: 0.5em;
-		position:absolute;
-		top:-200px;
-		left:0;
+		position: absolute;
+		top: -200px;
+		left: 0;
 		z-index: 140;
 
-		#mannering_mobile_inner_nav {
+		#mannering-mobile-inner-nav {
 			width: 100%;
 
-			li {
-
+			.mannering-mobile-inner-nav-item {
 				height: 40px;
 
-				a {
-
+				.mannering-mobile-inner-nav-link {
 					font-size: 1em;
-
 				}
 
-				a[href~='\/review\/edit'] {
+				.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
 					font-size: 65%;
 				}
 			}
 		}
 
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			display: none;
 		}
 	}
 
-
-
-	main#content {
-
+	#mannering-content {
 		min-height: 600px;
 
 		#summary {
 			height: 50px;
-
-		}
-
-		h1 {
-			font-size: 1.4em;
-
 		}
 
 		h2 {
 			font-size: 1.3em;
-
 		}
 
 		p {
 			font-size: 0.9em;
 		}
 
-		p.headp {
-			font-size: 1em;
-		}
-
-		ul {
-			font-size: 1em;
-			line-height: 1.5em;
-			li {
-				line-height: 25px;
-			}
-		}
-
-		.main_img {
-			margin: 0px 1em 0.2em 0.2em;
-			width: 15%;
-		}
-
-		#main_section {
+		#main-section {
 			padding-top: 0.5em;
 
-			h1 {
-				font-size: 1.4em;
-			}
 			#add-cat-link {
 				line-height: 35px;
 			}
 
-			form#edit-cat {
+			#edit-category {
 				width: 50%;
 				padding: 1em;
 				label {
@@ -7376,7 +6133,7 @@ footer {
 				}
 			}
 
-			form#cat-form {
+			#category-form {
 				width: 100%;
 
 				label {
@@ -7392,17 +6149,15 @@ footer {
 				}
 			}
 
-			div.reviews {
+			#reviews {
 				min-height: 250px;
 			}
 
-			div.reviews blockquote {
+			#reviews blockquote {
 				font-size: 1em;
 
 				p {
-
 					font-size: 1em;
-
 				}
 				form {
 					padding: 1em 0;
@@ -7412,62 +6167,51 @@ footer {
 				}
 			}
 
-
-			#review_pagination {
+			#review-pagination {
 				line-height: 45px;
 			}
 
-
-			section.album_section{
-				margin: 0 auto;
+			.genre-section {
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				margin: 0 0 1em 0;
+				margin: 0 0 1em;
 
-				h2 {
+				h3 {
 					font-size: 1.3em;
 					margin: 0.5em 0;
 					line-height: 40px;
 				}
 
-				figure.album_card {
+				.album-card {
 					width: 47%;
 					margin: 0.25em;
 					flex: 0 0 auto;
 
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.9em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.85em;
-
 						}
 
 						h5 {
 							font-size: 0.85em;
-
 						}
 					}
 				}
-
 			}
 
-			ul.categories {
+			#categories {
 				margin: 1em auto;
 
-				li {
+				.categories-item {
 					margin: 0.25em auto;
 
-					a {
+					.categories-link {
 						line-height: 45px;
 						&:hover {
 							background-color: $orange-color;
@@ -7480,7 +6224,7 @@ footer {
 				width: 40%;
 				padding: 2%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
@@ -7528,21 +6272,20 @@ footer {
 			}
 		}
 
-			/* errors*/
-			label.error,
-			label.notice,
-			label.success {
-				padding: 0.8em;
-			}
+		/* errors */
+		.error,
+		.notice,
+		.success {
+			padding: 0.8em;
+		}
 
 		/* search page form */
-		form#searchForm {
+		#mannering-search {
 			width: 85%;
 			padding: 0.5em;
 
 			fieldset {
 				padding: 1em;
-
 			}
 
 			legend {
@@ -7560,19 +6303,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 1em;
 				margin: 0.5em 0;
 				line-height: 35px;
 			}
 
-			select {
-				font-size: 1em;
-				margin: 0.5em 0;
-				line-height: 35px;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				width: 75%;
 				font-size: 1em;
 
@@ -7582,7 +6321,7 @@ footer {
 			}
 		}
 
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.9em;
 			line-height: 40px;
 
@@ -7597,142 +6336,212 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 			margin: 0 1% 0 0;
 		}
-		/*front-page slider*/
+
+		/* front-page slider */
 		#slider {
 			width: 100%;
-			margin: 1em 0 0 0;
-
+			margin: 1em 0 0;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
 
-			.results{
-				padding: 0.25em;
-				width: 48%;
-				h2{
-					font-size:1em;
+			.audio-controls {
+				height: auto;
+
+				.audio-track-name {
+					line-height: 50px;
+					font-size: 1.15em;
 				}
+				.audiocntrl-container {
+					margin-bottom: 0.5em;
 
-				figure.results-info {
-					/* Album image*/
+					.audio-player-btn {
+						width: 20%;
 
-
-					a {
-						order: 0;
-						img {
-							margin: 1em auto;
+						i {
+							font-size: 1.1em;
 						}
 					}
 
-					/* Album artist and name*/
-					figcaption.results-text {
-						width: 100%;
-							h3,h4,h5,h6{
+					.audio-progress {
+						width: 60%;
+						height: 50px;
 
-								line-height: 25px;
-							}
-							h3{
-								font-size: 1em;
+						.load-progress {
+							width: 100%;
+						}
 
-							}
-							h4{
-								font-size: 0.9em;
-
-							}
-							h5{
-								font-size: 0.85em;
-
-							}
-							h6{
-								font-size: 0.80em;
-
-							}
-
+						.play-progress {
+							width: 100%;
+						}
 					}
-				}
 
-				figure.results-info:hover img {
-					cursor: pointer;
-				}
+					.current-time,
+					.duration {
+						width: 20%;
+						line-height: 50px;
+						letter-spacing: 0.15em;
+						font-size: 1em;
+					}
 
-				form#to_album_btn {
-					display: inline-block;
+					.audio-volume {
+						height: 50px;
 
-				}
+						.volume-bg {
+							width: 88%;
+						}
 
-				input.to_album_btn {
-					font-size: 1em;
-					&:hover {
-						background-color: $stone-grey2;
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 12%;
+
+							.fa-volume-up {
+								line-height: 50px;
+								font-size: 1.5em;
+
+								&::before {
+									display: block;
+								}
+							}
+							&:hover {
+								cursor: pointer;
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin-bottom: 0.5em;
+					font-size: 0.7em;
+					.tracknum {
+						width: 20%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 20%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+							font-size: 200%;
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 20%;
+					}
+				}
+			}
+
+			.results {
+				padding: 0.25em;
+				width: 48%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							margin: 1em auto;
+						}
+					}
+				}
+
+				/* Album artist and name */
+				.results-text {
+					width: 100%;
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+
+				.results-info:hover img {
+					cursor: pointer;
+				}
+
+				#to-album-btn {
+					display: inline-block;
+				}
+			}
+
+			/* results.show page */
 			.results-large {
 				min-height: 240px;
 				margin: 0.5em;
 
-				h2{
+				h2 {
 					font-size: 1.5em;
-					line-height:125px;
-					width:90%;
+					line-height: 125px;
+					width: 90%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 0.9em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-
-				figure.results-info {
+				.results-large-info {
 					display: flex;
 
-					a {
+					.results-large-link {
 						width: auto;
 						order: 0;
-						img {
-
-							margin:1em 0;
+						.results-large-img {
+							margin: 1em 0;
 						}
 					}
 
-					figcaption.results-text{
+					#results-large-text {
 						width: 96%;
 						order: 1;
 
-						ul {
+						.results-large-text-items {
 							width: 100%;
 
-
-							li {
+							.results-large-text-item {
 								font-size: 0.7em;
 
-								span {
+								.large-text {
 									width: 79%;
 									text-indent: 0.25em;
 									a {
@@ -7741,213 +6550,93 @@ footer {
 									}
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									text-indent: 0.25em;
 									width: 20%;
 								}
 							}
-
 						}
 					}
 				}
 
-				figure.results-info:hover img {
+				.results-large-info:hover img {
 					cursor: pointer;
 				}
 
-				div.audio_controls {
-					height: auto;
-
-					h1.trackName {
-						line-height: 50px;
-						font-size: 1.15em;
-					}
-					div.audiocntrl_containers {
-							margin-bottom: 0.5em;
-
-						.player-button {
-							width: 20%;
-
-							i {
-								font-size: 1.1em;
-							}
-						}
-
-						div.progress {
-							width: 60%;
-							height: 50px;
-
-							div.load_progress {
-								width: 100%;
-							}
-
-							div.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 20%;
-							line-height: 50px;
-							letter-spacing: 0.15em;
-							font-size: 1em;
-						}
-
-						div.audio_volume {
-							height: 50px;
-
-							div.VolumeBg {
-								width: 88%;
-							}
-
-							input.volume{
-								width: 96%;
-
-							}
-
-							button#volume-mute {
-								width: 12%;
-
-								i.fa-volume-up {
-									line-height: 50px;
-									font-size: 1.5em;
-
-									&:before {
-										display: block;
-									}
-								}
-								&:hover {
-									cursor: pointer;
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-					padding: 0;
-
-					li {
-						margin-bottom: 0.5em;
-						font-size: 0.7em;
-						span.tracknum {
-							width: 20%;
-						}
-						span.trackname {
-							width: 60%;
-
-						}
-
-						span.trackbtn {
-							width: 20%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-								font-size: 200%;
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 20%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
-			h1 {
-				font-size: 1.1em;
-				height: 30px;
-				line-height: 30px;
-			}
-
 			a {
-
 				font-size: 0.75em;
 				width: 20%;
 				line-height: 25px;
 
 				&:hover {
-					color: $dark-grey;;
-
+					color: $dark-grey;
 				}
 			}
 
 			p {
-
 				font-size: 0.85em;
 			}
 
-			.textbox_img {
+			.textbox-img {
 				margin: 1em;
 			}
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		.container {
 			width: 100%;
-
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		#registerform {
 			width: 90%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
-				@include mannering-border(5px);
+			#name,
+			#email,
+			#password {
+				border-radius: 5px;
 				font-size: 0.95em;
 			}
 
 			label {
-
-				font-size:0.85em;
+				font-size: 0.85em;
 			}
 
-			#register_btn {
+			#register-btn {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
 			}
 		}
 
-		/*Link to register Form*/
+		/* Link to register Form */
 		.regformlink {
-
 			margin-top: 1em;
 			background-color: unset;
 
 			a {
-
 				color: $white-color;
 
 				&:hover {
 					color: $orange-color;
-
 				}
 			}
 		}
 
-		/*Contact page form*/
+		/* Contact page form */
 		#contact-page-form {
 			width: 70%;
 			padding: 1.5em;
-
 
 			label {
 				display: block;
@@ -7958,11 +6647,9 @@ footer {
 			input[type='email'] {
 				padding: 0.2em;
 				font-size: 0.95em;
-
 			}
 
 			select {
-
 				font-size: 0.9em;
 				height: 40px;
 			}
@@ -7971,7 +6658,7 @@ footer {
 				font-size: 0.95em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 75%;
 				font-size: 1.1em;
 
@@ -7981,11 +6668,10 @@ footer {
 			}
 		}
 
-		/*Contact page address details*/
-		address#contact-details {
-			width:70%;
+		#contact-details {
+			width: 70%;
 			line-height: 1.5em;
-			margin:0.5em auto;
+			margin: 0.5em auto;
 
 			p {
 				line-height: 30px;
@@ -7994,97 +6680,83 @@ footer {
 		}
 
 		/* video player imag grid */
-		section#sidebar_gallery {
+		#video-gallery {
 			width: 100%;
 
 			h1 {
-
 				font-size: 1.4em;
 				line-height: 40px;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 70%;
 				margin: 0.5em;
 				height: 160px;
 
 				img {
 					width: 100%;
-
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				position: absolute;
 
-
-				a.fancybox {
+				.fancybox {
 					width: 70%;
 					font-size: 0.85em;
 					line-height: 40px;
 
 					&:hover {
-
 						font-size: 0.95em;
-
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 					line-height: 1.5em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-
+		.sidebar-content-box {
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			display: none;
 		}
 
-		.show_error {
-
+		.show-error {
 			width: 65%;
-
 		}
-
-
 	}
 
 	footer {
 		height: 290px;
 		padding: 0.5em;
 
-		.social-btns {
+		.mannering-social-btns-footer {
 			height: 50px;
 			width: 10%;
 
-			ul {
+			.mannering-social-btns-footer-items {
 				width: 100%;
 
-				li {
+				.mannering-social-btns-footer-item {
 					font-size: 1em;
 
-					a {
+					.mannering-social-btns-footer-link {
 						margin: 0;
 						font-size: 1.3em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $stone-grey;
@@ -8094,13 +6766,12 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
+		#inner-footer {
 			width: 25%;
-
-			li {
+			.inner-footer-item {
 				line-height: 45px;
-
-				a {
+				width: 100%;
+				.inner-footer-link {
 					text-indent: 0.5em;
 					line-height: 45px;
 					font-size: 0.8em;
@@ -8114,10 +6785,10 @@ footer {
 	}
 }
 
-/*375 - 479*/
-@media only screen and (min-width: 375px) and (max-width: 479px) {
-	button#mobile-toggle {
-		top:0.5em;
+/* 375 - 479 */
+@media screen and (min-width: 23.4375em) and (max-width: 479px) {
+	#mobile-toggle {
+		top: 0.5em;
 		left: 85vw;
 	}
 
@@ -8125,132 +6796,92 @@ footer {
 		width: 96%;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.6em;
 	}
 
-	header {
+	#mannering-header {
 		height: 75px;
 
-
-		span#site-logo {
+		#site-logo {
 			width: 63%;
 
-			p#logo {
-
+			#logo {
 				font-size: 1.5em;
-
 
 				span {
 					height: 100%;
-
 				}
 
 				span:last-of-type {
 					height: 100%;
-
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				line-height: 20px;
 				font-size: 0.7em;
-
 			}
 		}
 
-		.social {
-			display:none;
-
+		#mannering-social {
+			display: none;
 		}
 	}
 
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 200px;
 		margin-bottom: 0.5em;
-		position:absolute;
-		top:-200px;
-		left:0;
+		position: absolute;
+		top: -200px;
+		left: 0;
 		z-index: 140;
 
-		#mannering_mobile_inner_nav {
+		#mannering-mobile-inner-nav {
 			width: 100%;
 
-			li {
-
+			.mannering-mobile-inner-nav-item {
 				height: 40px;
 
-				a {
-
+				.mannering-mobile-inner-nav-link {
 					font-size: 0.9em;
-
 				}
 
-				a[href~='\/review\/edit'] {
+				.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
 					font-size: 65%;
 				}
 			}
 		}
 
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			display: none;
 		}
 	}
 
-
-
-	main#content {
-
+	#mannering-content {
 		min-height: 600px;
 
 		#summary {
 			height: 50px;
-
-		}
-
-		h1 {
-			font-size: 1.3em;
-
 		}
 
 		h2 {
 			font-size: 1.2em;
-
 		}
 
 		p {
 			font-size: 0.85em;
 		}
 
-		p.headp {
-			font-size: 1em;
-		}
-
-		ul {
-			font-size: 1em;
-			line-height: 1.5em;
-			li {
-				line-height: 25px;
-			}
-		}
-
-		.main_img {
-			margin: 0px 1em 0.2em 0.2em;
-			width: 15%;
-		}
-
-		#main_section {
+		#main-section {
 			padding-top: 0.5em;
 
-			h1 {
-				font-size: 1.3em;
-			}
 			#add-cat-link {
 				line-height: 35px;
 			}
 
-			form#edit-cat {
+			#edit-category {
 				width: 50%;
 				padding: 1em;
 				label {
@@ -8267,7 +6898,7 @@ footer {
 				}
 			}
 
-			form#cat-form {
+			#category-form {
 				width: 100%;
 
 				label {
@@ -8283,17 +6914,15 @@ footer {
 				}
 			}
 
-			div.reviews {
+			#reviews {
 				min-height: 250px;
 			}
 
-			div.reviews blockquote {
+			#reviews blockquote {
 				font-size: 0.9em;
 
 				p {
-
 					font-size: 1em;
-
 				}
 
 				form {
@@ -8304,63 +6933,50 @@ footer {
 				}
 			}
 
-
-			#review_pagination {
+			#review-pagination {
 				line-height: 45px;
 			}
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
+				margin: 0 0 1em;
 
-				margin: 0 0 1em 0;
-
-				h2 {
+				h3 {
 					font-size: 1.25em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
 
-
-
-				figure.album_card {
+				.album-card {
 					width: 65%;
 					margin: 0.25em;
 
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
+					.album-car-text {
+						h4 {
 							font-size: 0.9em;
 						}
 
-						h4 {
-							font-size: 0.85em;
-
-						}
-
 						h5 {
-							font-size: 0.85em;
-
+							font-size: 0.9em;
 						}
 					}
 				}
-
 			}
 
-			ul.categories {
+			#categories {
 				margin: 1em auto;
 
-				li {
+				.categories-item {
 					margin: 0.25em auto;
 
-					a {
+					.categories-link {
 						line-height: 45px;
 						&:hover {
 							background-color: $orange-color;
@@ -8373,7 +6989,7 @@ footer {
 				width: 40%;
 				padding: 2%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
@@ -8421,21 +7037,20 @@ footer {
 			}
 		}
 
-			/* errors*/
-			label.error,
-			label.notice,
-			label.success {
-				padding: 0.8em;
-			}
+		/* errors */
+		.error,
+		.notice,
+		.success {
+			padding: 0.8em;
+		}
 
 		/* search page form */
-		form#searchForm {
+		#mannering-search {
 			width: 85%;
 			padding: 0.5em;
 
 			fieldset {
 				padding: 1em;
-
 			}
 
 			legend {
@@ -8453,19 +7068,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 1em;
 				margin: 0.5em 0;
 				line-height: 35px;
 			}
 
-			select {
-				font-size: 1em;
-				margin: 0.5em 0;
-				line-height: 35px;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				width: 75%;
 				font-size: 1em;
 
@@ -8475,7 +7086,7 @@ footer {
 			}
 		}
 
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.9em;
 			line-height: 40px;
 
@@ -8490,139 +7101,207 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 			margin: 0 1% 0 0;
 		}
-		/*front-page slider*/
+
+		/* front-page slider */
 		#slider {
 			width: 100%;
-			margin: 1em 0 0 0;
-
+			margin: 1em 0 0;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 
-			.results{
-				padding: 0.25em;
-				width: 70%;
-				h2{
-					font-size:1em;
+			.audio-controls {
+				height: auto;
+
+				.audio-track-name {
+					line-height: 60px;
+					font-size: 1em;
 				}
+				.audiocntrl-container {
+					margin-bottom: 0.5em;
 
-				figure.results-info {
-					/* Album image*/
-
-
-					a {
-						order: 0;
-						img {
-							margin: 1em auto;
+					.audio-player-btn {
+						width: 20%;
+						i {
+							font-size: 1em;
 						}
 					}
 
-					/* Album artist and name*/
-					figcaption.results-text {
-						width: 100%;
-							h3,h4,h5,h6{
+					.audio-progress {
+						width: 60%;
+						height: 50px;
 
-								line-height: 25px;
-							}
-							h3{
-								font-size: 1em;
+						.load-progress {
+							width: 100%;
+						}
 
-							}
-							h4{
-								font-size: 0.9em;
-
-							}
-							h5{
-								font-size: 0.85em;
-
-							}
-							h6{
-								font-size: 0.80em;
-
-							}
-
+						.play-progress {
+							width: 100%;
+						}
 					}
-				}
 
-				figure.results-info:hover img {
-					cursor: pointer;
-				}
+					.current-time,
+					.duration {
+						width: 20%;
+						line-height: 50px;
+						letter-spacing: 0.15em;
+						font-size: 0.9em;
+					}
 
-				form#to_album_btn {
-					display: inline-block;
+					.audio-volume {
+						height: 50px;
 
-				}
+						.volume-bg {
+							width: 88%;
+						}
 
-				input.to_album_btn {
-					font-size: 1em;
-					&:hover {
-						background-color: $stone-grey2;
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 12%;
+
+							.fa-volume-up {
+								line-height: 50px;
+								font-size: 1.5em;
+
+								&::before {
+									display: block;
+								}
+							}
+							&:hover {
+								cursor: pointer;
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
+			.audio-tracklist {
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin-bottom: 0.5em;
+					font-size: 0.65em;
+					.tracknum {
+						width: 20%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
+
+					.trackbtn {
+						width: 20%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+							font-size: 200%;
+							&:hover {
+								background-color: $white-color;
+							}
+						}
+					}
+
+					.trackplays {
+						width: 20%;
+					}
+				}
+			}
+
+			.results {
+				padding: 0.25em;
+				width: 70%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							margin: 1em auto;
+						}
+					}
+				}
+
+				.results-text {
+					width: 100%;
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+
+				.results-info:hover img {
+					cursor: pointer;
+				}
+
+				#to-album-btn {
+					display: inline-block;
+				}
+			}
+
+			/* results.show page */
 			.results-large {
 				min-height: 240px;
 				margin: 0.5em;
 
-				h2{
+				h2 {
 					font-size: 1.5em;
-					line-height:125px;
-					width:90%;
+					line-height: 125px;
+					width: 90%;
 				}
 
-				h3{
+				h3 {
 					font-size: 1em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h4{
+				h4 {
 					font-size: 0.9em;
-					line-height:40px;
-
+					line-height: 40px;
 				}
 
-				h5{
-					font-size: 0.85em;
-
-				}
-
-				h6{
-					font-size: 0.80em;
-
-				}
-
-				figure.results-info {
+				.results-large-info {
 					display: flex;
 
-					a {
+					.results-large-link {
 						width: auto;
 						order: 0;
-						img {
-
-							margin:1em 0;
+						.results-large-img {
+							margin: 1em 0;
 						}
 					}
 
-					figcaption.results-text{
+					#results-large-text {
 						width: 96%;
 						order: 1;
 
-						ul {
+						.results-large-text-items {
 							width: 100%;
 
-
-							li {
+							.results-large-text-item {
 								font-size: 0.7em;
 
-								span {
+								.large-text {
 									width: 79%;
 									text-indent: 0.25em;
 									a {
@@ -8631,130 +7310,26 @@ footer {
 									}
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									text-indent: 0.25em;
 									width: 20%;
 								}
 							}
-
 						}
 					}
 				}
 
-				figure.results-info:hover img {
+				.results-large-info:hover img {
 					cursor: pointer;
 				}
 
-				div.audio_controls {
-					height: auto;
-
-					h1.trackName {
-						line-height: 60px;
-						font-size: 1em;
-					}
-					div.audiocntrl_containers {
-							margin-bottom: 0.5em;
-
-						.player-button {
-							width: 20%;
-							i {
-								font-size: 1em;
-							}
-						}
-
-						div.progress {
-							width: 60%;
-							height: 50px;
-
-							div.load_progress {
-								width: 100%;
-							}
-
-							div.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 20%;
-							line-height: 50px;
-							letter-spacing: 0.15em;
-							font-size: 0.9em;
-						}
-
-						div.audio_volume {
-							height: 50px;
-
-							div.VolumeBg {
-								width: 88%;
-							}
-
-							input.volume{
-								width: 96%;
-
-							}
-
-							button#volume-mute {
-								width: 12%;
-
-								i.fa-volume-up {
-									line-height: 50px;
-									font-size: 1.5em;
-
-									&:before {
-										display: block;
-									}
-								}
-								&:hover {
-									cursor: pointer;
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-					padding: 0;
-
-					li {
-						margin-bottom: 0.5em;
-						font-size:0.65em;
-						span.tracknum {
-							width: 20%;
-						}
-						span.trackname {
-							width: 60%;
-
-						}
-
-						span.trackbtn {
-							width: 20%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-								font-size: 200%;
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 20%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
@@ -8765,82 +7340,72 @@ footer {
 			}
 
 			a {
-
 				font-size: 0.75em;
 				width: 20%;
 				line-height: 25px;
 
 				&:hover {
-					color: $dark-grey;;
-
+					color: $dark-grey;
 				}
 			}
 
 			p {
-
 				font-size: 0.85em;
 			}
 
-			.textbox_img {
+			.textbox-img {
 				margin: 1em;
 			}
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		.container {
 			width: 100%;
-
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		#registerform {
 			width: 96%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
-				@include mannering-border(5px);
+			#name,
+			#email,
+			#password {
+				border-radius: 5px;
 				font-size: 0.95em;
 			}
 
 			label {
-
-				font-size:0.85em;
+				font-size: 0.85em;
 			}
 
-			#register_btn {
+			#register-btn {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
 				&:hover {
 					color: $stone-grey;
-
 				}
 			}
 		}
 
-		/*Link to register Form*/
+		/* Link to register Form */
 		.regformlink {
-
 			margin-top: 1em;
 			background-color: unset;
 
 			a {
-
 				color: $white-color;
 
 				&:hover {
 					color: $orange-color;
-
 				}
 			}
 		}
 
-		/*Contact page form*/
+		/* Contact page form */
 		#contact-page-form {
 			width: 80%;
 			padding: 1.5em;
-
 
 			label {
 				display: block;
@@ -8851,11 +7416,9 @@ footer {
 			input[type='email'] {
 				padding: 0.2em;
 				font-size: 0.95em;
-
 			}
 
 			select {
-
 				font-size: 0.9em;
 				height: 40px;
 			}
@@ -8864,7 +7427,7 @@ footer {
 				font-size: 0.95em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 75%;
 				font-size: 1.1em;
 
@@ -8874,10 +7437,9 @@ footer {
 			}
 		}
 
-		/*Contact page address details*/
-		address#contact-details {
+		#contact-details {
 			line-height: 1.5em;
-			width:80%;
+			width: 80%;
 
 			p {
 				line-height: 30px;
@@ -8885,98 +7447,83 @@ footer {
 			}
 		}
 
-		/* video player imag grid */
-		section#sidebar_gallery {
+		#video-gallery {
 			width: 100%;
 
 			h1 {
-
 				font-size: 1.4em;
 				line-height: 40px;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 75%;
 				margin: 0.25em;
 				height: 155px;
 
 				img {
 					width: 100%;
-
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				position: absolute;
 
-
-				a.fancybox {
+				.fancybox {
 					width: 70%;
 					font-size: 0.85em;
 					line-height: 40px;
 
 					&:hover {
-
 						font-size: 0.95em;
-
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 					line-height: 1.5em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-
+		.sidebar-content-box {
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			display: none;
 		}
 
-		.show_error {
-
+		.show-error {
 			width: 65%;
-
 		}
-
-
 	}
 
 	footer {
 		height: 290px;
 		padding: 0.5em;
 
-		.social-btns {
+		.mannering-social-btns-footer {
 			height: 50px;
 			width: 10%;
 
-			ul {
+			.mannering-social-btns-footer-items {
 				width: 100%;
 
-				li {
+				.mannering-social-btns-footer-item {
 					font-size: 1em;
 
-					a {
+					.mannering-social-btns-footer-link {
 						margin: 0;
 						font-size: 1.3em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $stone-grey;
@@ -8986,13 +7533,11 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
+		#inner-footer {
 			width: 25%;
-
-			li {
+			.inner-footer-item {
 				line-height: 45px;
-
-				a {
+				.inner-footer-link {
 					text-indent: 0.5em;
 					line-height: 45px;
 					font-size: 0.8em;
@@ -9006,10 +7551,10 @@ footer {
 	}
 }
 
-/*360 374*/
-@media only screen and (min-width: 360px) and (max-width: 374px) {
-	button#mobile-toggle {
-		top:0.5em;
+/* 360 374 */
+@media screen and (min-width: 22.5em) and (max-width: 374px) {
+	#mobile-toggle {
+		top: 0.5em;
 		left: 83vw;
 	}
 
@@ -9021,132 +7566,92 @@ footer {
 		height: auto;
 	}
 
-	#copyr {
+	.copyr {
 		font-size: 0.6em;
 	}
 
-	header {
+	#mannering-header {
 		height: 75px;
 
-
-		span#site-logo {
+		#site-logo {
 			width: 63%;
 
-			p#logo {
-
+			#logo {
 				font-size: 1.4em;
-
 
 				span {
 					height: 100%;
-
 				}
 
 				span:last-of-type {
 					height: 100%;
-
 				}
 			}
 
-			p.site-description {
+			.site-description {
 				line-height: 20px;
 				font-size: 0.7em;
-
 			}
 		}
 
-		.social {
-			display:none;
-
+		#mannering-social {
+			display: none;
 		}
 	}
 
-	nav#mannering_nav {
+	#mannering-nav {
 		width: 100%;
 		height: 200px;
 		margin-bottom: 0.5em;
-		position:absolute;
-		top:-200px;
-		left:0;
+		position: absolute;
+		top: -200px;
+		left: 0;
 		z-index: 140;
 
-		#mannering_mobile_inner_nav {
+		#mannering-mobile-inner-nav {
 			width: 100%;
 
-			li {
-
+			.mannering-mobile-inner-nav-item {
 				height: 40px;
 
-				a {
-
+				.mannering-mobile-inner-nav-link {
 					font-size: 0.9em;
-
 				}
 
-				a[href~='\/review\/edit'] {
+				.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
 					font-size: 65%;
 				}
 			}
 		}
 
-		#mannering_inner_nav {
+		#mannering-inner-nav {
 			display: none;
 		}
 	}
 
-
-
-	main#content {
-
+	#mannering-content {
 		min-height: 600px;
 
 		#summary {
 			height: 50px;
-
-		}
-
-		h1 {
-			font-size: 1.3em;
-
 		}
 
 		h2 {
 			font-size: 1.2em;
-
 		}
 
 		p {
 			font-size: 0.85em;
 		}
 
-		p.headp {
-			font-size: 1em;
-		}
-
-		ul {
-			font-size: 1em;
-			line-height: 1.5em;
-			li {
-				line-height: 25px;
-			}
-		}
-
-		.main_img {
-			margin: 0px 1em 0.2em 0.2em;
-			width: 15%;
-		}
-
-		#main_section {
+		#main-section {
 			padding-top: 0.5em;
 
-			h1 {
-				font-size: 1.3em;
-			}
 			#add-cat-link {
 				line-height: 35px;
 			}
 
-			form#edit-cat {
+			#edit-category {
 				width: 50%;
 				padding: 1em;
 				label {
@@ -9163,7 +7668,7 @@ footer {
 				}
 			}
 
-			form#cat-form {
+			#category-form {
 				width: 100%;
 
 				label {
@@ -9179,18 +7684,15 @@ footer {
 				}
 			}
 
-			div.reviews {
+			#reviews {
 				min-height: 250px;
 			}
 
-
-			div.reviews blockquote {
+			#reviews blockquote {
 				font-size: 0.9em;
 
 				p {
-
 					font-size: 1em;
-
 				}
 
 				form {
@@ -9201,59 +7703,48 @@ footer {
 				}
 			}
 
-			#review_pagination {
+			#review-pagination {
 				line-height: 45px;
 			}
 
-			section.album_section:last-of-type {
+			.genre-section:last-of-type {
 				margin-bottom: 0%;
 			}
 
-			section.album_section{
+			.genre-section {
+				margin: 0 0 1em;
 
-				margin: 0 0 1em 0;
-
-				h2 {
+				h3 {
 					font-size: 1.2em;
 					margin: 0.5em 0;
 					line-height: 40px;
-
 				}
-				figure.album_card {
+				.album-card {
 					width: 75%;
 					margin: 0.25em;
 
-					img.album_car_image {
+					.album-card-image {
 						border: 2px solid $stone-grey;
 					}
 
-
-					figcaption.album_car_text {
-						h3 {
-							font-size: 0.9em;
-						}
-
+					.album-car-text {
 						h4 {
 							font-size: 0.85em;
-
 						}
 
 						h5 {
 							font-size: 0.85em;
-
 						}
 					}
 				}
-
 			}
 
-			ul.categories {
+			#categories {
 				margin: 1em auto;
 
-				li {
+				.categories-item {
 					margin: 0.25em auto;
-
-					a {
+					.categories-link {
 						line-height: 45px;
 						&:hover {
 							background-color: $orange-color;
@@ -9266,7 +7757,7 @@ footer {
 				width: 40%;
 				padding: 2%;
 
-				textarea {
+				#reviewtext {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
@@ -9314,21 +7805,20 @@ footer {
 			}
 		}
 
-			/* errors*/
-			label.error,
-			label.notice,
-			label.success {
-				padding: 0.8em;
-			}
+		/* errors */
+		.error,
+		.notice,
+		.success {
+			padding: 0.8em;
+		}
 
 		/* search page form */
-		form#searchForm {
+		#mannering-search {
 			width: 90%;
 			padding: 0.5em;
 
 			fieldset {
 				padding: 1em;
-
 			}
 
 			legend {
@@ -9346,19 +7836,15 @@ footer {
 				text-indent: 0.25em;
 			}
 
-			input[type='text'] {
+			#artist,
+			#album,
+			#genre {
 				font-size: 1em;
 				margin: 0.5em 0;
 				line-height: 35px;
 			}
 
-			select {
-				font-size: 1em;
-				margin: 0.5em 0;
-				line-height: 35px;
-			}
-
-			input#searchBtn {
+			.search-btn {
 				width: 75%;
 				font-size: 1em;
 
@@ -9368,7 +7854,7 @@ footer {
 			}
 		}
 
-		.refresh_link {
+		.refresh-page-link {
 			font-size: 0.9em;
 			line-height: 40px;
 
@@ -9383,144 +7869,211 @@ footer {
 			}
 		}
 
-		.aboutpage_img {
+		.aboutpage-img {
 			width: 14%;
 			margin: 0 1% 0 0;
 		}
-		/*front-page slider*/
+
+		/* front-page slider */
 		#slider {
 			width: 100%;
-			margin: 1em 0 0 0;
-
+			margin: 1em 0 0;
 		}
 
-		#results_container {
+		#results-container {
 			margin: 0;
 
-			.results{
-				padding: 0.25em;
-				width: 80%;
-				h2{
-					font-size:1em;
+			.audio-controls {
+				height: auto;
+
+				.audio-track-name {
+					line-height: 60px;
+					font-size: 1em;
 				}
+				.audiocntrl-container {
+					margin-bottom: 0.5em;
 
-				figure.results-info {
-					/* Album image*/
-
-
-					a {
-						order: 0;
-						img {
-							margin: 1em auto;
+					.audio-player-btn {
+						width: 20%;
+						i {
+							font-size: 1em;
 						}
 					}
 
-					/* Album artist and name*/
-					figcaption.results-text {
-						width: 100%;
-							h3,h4,h5,h6{
+					.audio-progress {
+						width: 60%;
+						height: 50px;
 
-								line-height: 25px;
-							}
-							h3{
-								font-size: 1em;
+						.load-progress {
+							width: 100%;
+						}
 
-							}
-							h4{
-								font-size: 0.9em;
-
-							}
-							h5{
-								font-size: 0.85em;
-
-							}
-							h6{
-								font-size: 0.80em;
-
-							}
-
+						.play-progress {
+							width: 100%;
+						}
 					}
-				}
 
-				figure.results-info:hover img {
-					cursor: pointer;
-				}
+					.current-time,
+					.duration {
+						width: 20%;
+						line-height: 50px;
+						letter-spacing: 0.15em;
+						font-size: 0.9em;
+					}
 
-				form#to_album_btn {
-					display: inline-block;
+					.audio-volume {
+						height: 50px;
 
-				}
+						.volume-bg {
+							width: 88%;
+						}
 
-				input.to_album_btn {
-					font-size: 1em;
-					&:hover {
-						background-color: $stone-grey2;
+						.volume {
+							width: 96%;
+						}
+
+						.volume-mute {
+							width: 12%;
+
+							.fa-volume-up {
+								line-height: 50px;
+								font-size: 1.5em;
+
+								&::before {
+									display: block;
+								}
+							}
+							&:hover {
+								cursor: pointer;
+							}
+						}
 					}
 				}
 			}
 
-			/*results.show page*/
-			.results-large {
-				min-height: 240px;
-				margin: 0.5em;
+			.audio-tracklist {
+				margin: 0;
+				padding: 0;
 
-				h2{
-					font-size: 1.5em;
-					line-height:125px;
-					width:90%;
-				}
-
-				h3{
-					font-size: 0.9em;
-					line-height:40px;
-
-				}
-
-				h4{
-					font-size: 0.8em;
-					line-height:40px;
-
-				}
-
-				h5{
-					font-size: 0.75em;
-
-				}
-
-				h6{
-					font-size: 0.70em;
-
-				}
-
-				h6{
+				li {
+					margin-bottom: 0.5em;
 					font-size: 0.65em;
+					.tracknum {
+						width: 20%;
+					}
+					.audio-track-name {
+						width: 60%;
+					}
 
-				}
-
-				figure.results-info {
-					display: flex;
-
-					a {
-						width: auto;
-						order: 0;
-						img {
-
-							margin:1em 0;
+					.trackbtn {
+						width: 20%;
+						cursor: pointer;
+						i {
+							line-height: 40px;
+							font-size: 200%;
+							&:hover {
+								background-color: $white-color;
+							}
 						}
 					}
 
-					figcaption.results-text{
+					.trackplays {
+						width: 20%;
+					}
+				}
+			}
+
+			.results {
+				padding: 0.25em;
+				width: 80%;
+
+				.results-info {
+					.result-info-link {
+						width: auto;
+						.result-info-img {
+							margin: 1em auto;
+						}
+					}
+				}
+
+				/* Album artist and name */
+				.results-text {
+					width: 100%;
+					h3,
+					h4,
+					h5,
+					h6 {
+						line-height: 25px;
+					}
+					h3 {
+						font-size: 1em;
+					}
+					h4 {
+						font-size: 0.9em;
+					}
+					h5 {
+						font-size: 0.85em;
+					}
+					h6 {
+						font-size: 0.8em;
+					}
+				}
+
+				.results-info:hover img {
+					cursor: pointer;
+				}
+
+				#to-album-btn {
+					display: inline-block;
+				}
+			}
+
+			/* results.show page */
+			.results-large {
+				min-height: 240px;
+				margin: 0.5em;
+				h2 {
+					font-size: 1.5em;
+					text-align: center;
+					line-height: 100px;
+					background-color: $white-color;
+					color: $bg-black;
+					width: 90%;
+					margin: 1em auto;
+				}
+
+				h3 {
+					font-size: 0.9em;
+					line-height: 40px;
+				}
+
+				h4 {
+					font-size: 0.8em;
+					line-height: 40px;
+				}
+
+				.results-large-info {
+					display: flex;
+
+					.results-large-link {
+						width: auto;
+						order: 0;
+						.results-large-img {
+							margin: 1em 0;
+						}
+					}
+
+					#results-large-text {
 						width: 96%;
 						order: 1;
 
-						ul {
+						.results-large-text-items {
 							width: 100%;
 
-
-							li {
+							.results-large-text-item {
 								font-size: 0.7em;
 
-								span {
+								.large-text {
 									width: 79%;
 									text-indent: 0.25em;
 									a {
@@ -9529,216 +8082,96 @@ footer {
 									}
 								}
 
-								span:first-of-type {
+								.large-text-title {
 									text-indent: 0.25em;
 									width: 20%;
 								}
 							}
-
 						}
 					}
 				}
 
-				figure.results-info:hover img {
+				.results-large-info:hover img {
 					cursor: pointer;
 				}
 
-				div.audio_controls {
-					height: auto;
-
-					h1.trackName {
-						line-height: 60px;
-						font-size: 1em;
-					}
-					div.audiocntrl_containers {
-							margin-bottom: 0.5em;
-
-						.player-button {
-							width: 20%;
-							i {
-								font-size: 1em;
-							}
-						}
-
-						div.progress {
-							width: 60%;
-							height: 50px;
-
-							div.load_progress {
-								width: 100%;
-							}
-
-							div.play_progress {
-								width: 100%;
-							}
-						}
-
-						div.current_time,
-						div.duration {
-							width: 20%;
-							line-height: 50px;
-							letter-spacing: 0.15em;
-							font-size: 0.9em;
-						}
-
-						div.audio_volume {
-							height: 50px;
-
-							div.VolumeBg {
-								width: 88%;
-							}
-
-							input.volume{
-								width: 96%;
-
-							}
-
-							button#volume-mute {
-								width: 12%;
-
-								i.fa-volume-up {
-									line-height: 50px;
-									font-size: 1.5em;
-
-									&:before {
-										display: block;
-									}
-								}
-								&:hover {
-									cursor: pointer;
-								}
-							}
-						}
-					}
-				}
-
-				span.result_label {
+				.result-label {
 					text-indent: 1em;
-				}
-
-				ul.audio-tracklist {
-					margin: 0;
-					padding: 0;
-
-					li {
-						margin-bottom: 0.5em;
-						font-size:0.65em;
-						span.tracknum {
-							width: 20%;
-						}
-						span.trackname {
-							width: 60%;
-
-						}
-
-						span.trackbtn {
-							width: 20%;
-							cursor: pointer;
-							i {
-								line-height: 40px;
-								font-size: 200%;
-								&:hover {
-									background-color: $white-color;
-								}
-							}
-						}
-
-						span.trackplays {
-							width: 20%;
-
-						}
-					}
 				}
 			}
 		}
 
-		.text_box {
+		.text-box {
 			height: 140px;
 			width: 98%;
 
-			h1 {
-				font-size: 1.1em;
-				height: 30px;
-				line-height: 30px;
-			}
-
 			a {
-
 				font-size: 0.75em;
 				width: 20%;
 				line-height: 25px;
 
 				&:hover {
-					color: $dark-grey;;
-
+					color: $dark-grey;
 				}
 			}
 
 			p {
-
 				font-size: 0.85em;
 			}
 
-			.textbox_img {
+			.textbox-img {
 				margin: 1em;
 			}
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		.container {
 			width: 100%;
-
 		}
 
-		/*Register Form*/
+		/* Register Form */
 		#registerform {
 			width: 96%;
 
-			input[type='text'],
-			input[type='email'],
-			input[type='password'] {
-				@include mannering-border(5px);
+			#name,
+			#email,
+			#password {
+				border-radius: 5px;
 				font-size: 0.95em;
 			}
 
 			label {
-
-				font-size:0.85em;
+				font-size: 0.85em;
 			}
 
-			#register_btn {
+			#register-btn {
 				width: 75%;
 				height: 40px;
 				font-size: 1em;
 				&:hover {
 					color: $stone-grey;
-
 				}
 			}
 		}
 
-		/*Link to register Form*/
+		/* Link to register Form */
 		.regformlink {
-
 			margin-top: 1em;
 			background-color: unset;
 
 			a {
-
 				color: $white-color;
 
 				&:hover {
 					color: $orange-color;
-
 				}
 			}
 		}
 
-		/*Contact page form*/
+		/* Contact page form */
 		#contact-page-form {
 			width: 90%;
 			padding: 1.5em;
-
 
 			label {
 				display: block;
@@ -9749,11 +8182,9 @@ footer {
 			input[type='email'] {
 				padding: 0.2em;
 				font-size: 0.95em;
-
 			}
 
 			select {
-
 				font-size: 0.9em;
 				height: 40px;
 			}
@@ -9762,7 +8193,7 @@ footer {
 				font-size: 0.95em;
 			}
 
-			#contact_btn {
+			#contact-btn {
 				width: 75%;
 				font-size: 1.1em;
 
@@ -9772,109 +8203,93 @@ footer {
 			}
 		}
 
-		/*Contact page address details*/
-		address#contact-details {
-			margin:0.5em auto;
-			width:90%;
+		#contact-details {
+			margin: 0.5em auto;
+			width: 90%;
 
 			p {
 				line-height: 30px;
-				font-size:0.85em;
+				font-size: 0.85em;
 			}
 		}
 
-		/* video player imag grid */
-		section#sidebar_gallery {
+		#video-gallery {
 			width: 100%;
 
 			h1 {
-
 				font-size: 1.4em;
 				line-height: 40px;
 			}
 
-			figure.video-item {
+			.video-item {
 				width: 80%;
 				margin: 0.25em;
 				height: 150px;
 
 				img {
 					width: 100%;
-
 				}
 			}
 
-			figcaption.overlay {
+			.overlay {
 				position: absolute;
 
-
-				a.fancybox {
+				.fancybox {
 					width: 70%;
 					font-size: 0.85em;
 					line-height: 40px;
 
 					&:hover {
-
 						font-size: 0.95em;
-
 					}
 				}
 
-				h2.artist_name {
+				.video-artist-name {
 					font-size: 1em;
 					margin: 0.5em 0;
 				}
 
-				p.video_text {
+				.video-text {
 					font-size: 0.9em;
 					line-height: 1.5em;
 				}
 			}
 
-			figure.video-item:hover figcaption.overlay {
+			.video-item:hover .overlay {
 				cursor: pointer;
 			}
 		}
 
-		.sidebar_content_box {
-
+		.sidebar-content-box {
 			margin-bottom: 20px;
 		}
 
-		.search_error {
+		.search-error {
 			display: none;
 		}
 
-		.show_error {
-
+		.show-error {
 			width: 65%;
-
 		}
-
-
 	}
 
 	footer {
 		height: 290px;
 		padding: 0.5em;
 
-		.social-btns {
+		.mannering-social-btns-footer {
 			height: 50px;
 			width: 10%;
 
-			ul {
+			.mannering-social-btns-footer-items {
 				width: 100%;
 
-				li {
+				.mannering-social-btns-footer-item {
 					font-size: 1em;
 
-					a {
+					.mannering-social-btns-footer-link {
 						margin: 0;
 						font-size: 1.3em;
-
-						i {
-							line-height: 50px;
-						}
 
 						&:hover {
 							color: $stone-grey;
@@ -9884,13 +8299,13 @@ footer {
 			}
 		}
 
-		ul#inner_footer {
+		#inner-footer {
 			width: 25%;
 
-			li {
+			.inner-footer-item {
 				line-height: 45px;
 
-				a {
+				.inner-footer-link {
 					text-indent: 0.5em;
 					line-height: 45px;
 					font-size: 0.8em;
@@ -9903,5 +8318,3 @@ footer {
 		}
 	}
 }
-
-

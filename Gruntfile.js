@@ -1,4 +1,4 @@
-const sass = require('node-sass');
+const sass = require('sass');
 
 module.exports = (grunt) => {
   grunt.initConfig({
@@ -10,26 +10,6 @@ module.exports = (grunt) => {
           engine: 'im',
           sizes: [
             {
-              name: '220',
-              width: 220,
-            },
-            {
-              name: '240',
-              width: 240,
-            },
-            {
-              name: '260',
-              width: 260,
-            },
-            {
-              name: '280',
-              width: 280,
-            },
-            {
-              name: '300',
-              width: 300,
-            },
-            {
               name: '320',
               width: 320,
             },
@@ -40,6 +20,10 @@ module.exports = (grunt) => {
             {
               name: '360',
               width: 360,
+            },
+            {
+              name: '380',
+              width: 380,
             },
           ],
         },
@@ -78,7 +62,7 @@ module.exports = (grunt) => {
     babel: {
       files: {
         expand: true,
-        src: ['public_html/**/*.js'],
+        src: ['public_html/js/*.js'],
         ext: '-compiled.js',
       },
       options: {
@@ -89,16 +73,16 @@ module.exports = (grunt) => {
 
     stylelint: {
       options: {
-        configFile: '.stylelintrc.js',
+        configFile: '.stylelintrc.json',
         formatter: 'string',
         ignoreDisables: false,
         failOnError: true,
         outputFile: '',
         reportNeedlessDisables: false,
-        fix: false,
-        syntax: 'sass',
+        fix: true,
+        syntax: '',
       },
-      src: ['sass/**/*.scss'],
+      src: ['public_html/assets/css/*.{css,less,scss}'],
     },
 
     eslint: {
@@ -106,7 +90,7 @@ module.exports = (grunt) => {
         overrideConfigFile: '.eslintrc.json',
         fix: true,
       },
-      target: ['public_html/**/*.js', 'Gruntfile.js'],
+      target: ['public_html/assets/js/*.js', 'Gruntfile.js'],
     },
 
     /* Generate the directory if it is missing */

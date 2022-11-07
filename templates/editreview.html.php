@@ -1,4 +1,4 @@
-<section id="main_section" class="group">
+<section id="main-section" class="group">
 
 	<?php if (empty($review->id) || $user->id == $review->authorId || $user->hasPermission(\Madb\Entity\Author::EDIT_REVIEWS)) : ?>
 

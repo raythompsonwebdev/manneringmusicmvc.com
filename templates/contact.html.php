@@ -1,14 +1,13 @@
 <!--main text-->
 
-<section id="main_section" class="group">
+<section id="main-section">
 
 	<h1>Contact Us</h1>
 
-	<br />
 
 	<div id="summary"></div>
 
-	<form id="contact-page-form" class="group" method="" action="">
+	<form id="contact-page-form" method="" action="">
 
 		<label for="name">Full name</label>
 
@@ -24,7 +23,7 @@
 		<textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here (No HTML Allowed)"></textarea>
 		<br /><br />
 
-		<input class="submit" name="submit" type="submit" value="Submit" id="contact_btn">
+		<input class="submit" name="submit" type="submit" value="Submit" id="contact-btn">
 
 	</form>
 

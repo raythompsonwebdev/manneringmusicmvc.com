@@ -1,17 +1,12 @@
-<section id="main_section" class="group">
+<section id="main-section" class="group">
 
-    <h1>Videos</h1>
+	<h1>Videos</h1>
 
-    <br />
+	<br />
 </section>
-<section id="sidebar_gallery">
+<section id="video-gallery">
 
-    <h1>Video search page under maintenance!</h1>
-
-
-
-
-    <div class="clearfix"> </div>
+	<h1>Video search page under maintenance!</h1>
 
 </section>
 
