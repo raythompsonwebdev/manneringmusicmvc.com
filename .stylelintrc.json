@@ -12,15 +12,13 @@
     "scss/at-rule-no-unknown": true,
 		"value-list-comma-newline-after": "never-multi-line",
 		"declaration-colon-newline-after": "always-multi-line",
-		"unit-allowed-list": ["em", "rem", "%", "px", "fr", "vh", "s", "vw"],
+		"unit-allowed-list": ["em", "rem", "%", "px", "fr", "vh", "s", "vw", "ms"],
 		"at-rule-empty-line-before": [
 			"never",
 			{
 				"ignore": [
 					"after-comment",
-					"'first-nested",
 					"inside-block",
-					"'blockless-after-same-name-blockless",
 					"blockless-after-blockless"
 				]
 			}

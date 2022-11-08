@@ -1,6 +1,6 @@
 <section id="main-section">
 
-	<h1>Categories</h1>
+	<h2>Categories</h2>
 
 	<a id="add-cat-link" href="/category/edit">Add a new category</a>
 

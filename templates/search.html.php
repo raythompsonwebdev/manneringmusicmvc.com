@@ -63,13 +63,13 @@
 		<fieldset>
 			<legend>Album Search</legend>
 
-			<label for="artist_name" aria-label="artist_name">Artist name</label>
+			<label for="artist_name" aria-label="artist-name" class="search-label">Artist name</label>
 			<input id="artist" name="artist_name" type="text" placeholder="Enter artist name.">
 
-			<label for="album" aria-label="album">Album name</label>
+			<label for="album" aria-label="album" class="search-label"> Album name</label>
 			<input id="album" name="album" type="text" placeholder="Enter album name.">
 
-			<label for="genre" aria-label="genre">Genre</label>
+			<label for="genre" aria-label="genre" class="search-label">Genre</label>
 			<select name="genre" id="genre">
 				<option value="" disabled selected>Choose Genre</option>
 				<option value="Hip Hop">Hip Hop</option>

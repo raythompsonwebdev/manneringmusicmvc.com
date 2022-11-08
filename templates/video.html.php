@@ -1,6 +1,6 @@
 <section id="main-section" class="group">
 
-	<h1>Videos</h1>
+	<h2>Videos</h2>
 
 	<br />
 </section>

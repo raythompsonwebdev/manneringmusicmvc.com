@@ -85,17 +85,28 @@
 		<nav id="mannering-nav">
 
 			<ul id="mannering-inner-nav">
-				<li><a href="/" aria-label="link to home page">Home</a></li>
-				<li><a href="/review/list" aria-label="link to reviews page">Reviews</a></li>
-				<li><a href="/search" aria-label="link to album search page">Search</a></li>
-				<li><a href="/video" aria-label="link to video search page">Video</a></li>
+				<li class="inner-nav-item">
+					<a href="/" class="inner-nav-link" aria-label="link to home page">Home</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/review/list" class="inner-nav-link" aria-label="link to reviews page">Reviews</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/search" class="inner-nav-link" aria-label="link to album search page">Search</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/video" class="inner-nav-link" aria-label="link to video search page">Video</a>
+				</li>
 
 				<?php if ($loggedIn) : ?>
 
-
-					<li class="social-item"><a href="/logout" aria-label="link to logout">Log out</a>
-					<?php else : ?>
-					<li class="social-item"><a href="/login" aria-label="link to login">Log in</a></li>
+					<li class="inner-nav-item">
+						<a href="/logout" class="inner-nav-link" aria-label="link to logout">Log out</a>
+					</li>
+				<?php else : ?>
+					<li class="inner-nav-item">
+						<a href="/login" class="inner-nav-link" aria-label="link to login">Log in</a>
+					</li>
 				<?php endif; ?>
 			</ul>
 
@@ -116,9 +127,13 @@
 				</li>
 
 				<?php if ($loggedIn) : ?>
-					<li class="social-item"><a href="/logout" aria-label="link to logout">Log out</a>
-					<?php else : ?>
-					<li class="social-item"><a href="/login" aria-label="link to login">Log in</a></li>
+					<li class="mannering-mobile-inner-nav-item">
+						<a href="/logout" class="mannering-mobile-inner-nav-link" aria-label="link to logout">Log out</a>
+					</li>
+				<?php else : ?>
+					<li cclass="mannering-mobile-inner-nav-item">
+						<a href="/login" class="mannering-mobile-inner-nav-link" aria-label="link to login">Log in</a>
+					</li>
 				<?php endif; ?>
 			</ul>
 

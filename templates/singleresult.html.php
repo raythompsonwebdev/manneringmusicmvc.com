@@ -255,7 +255,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 <section id="main-section" class="group">
 
-	<h1>Albums</h1>
+	<h2>Albums</h2>
 
 	<div id="results-container">
 
@@ -361,7 +361,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 				foreach ($songIdArray as $songId) :
 					//songId value from value of $singleaudio variable
-					echo "<li>
+					echo "<li class=\"audio-tracklist-item\">
                   <span class=\"tracknum\">Track " . $i . " : </span>
                   <span class=\"trackname\">" . $songId[1] . "</span>
                   <span class=\"trackbtn\" onclick='setTrack(\"" . $songId[0] . "\", tempPlaylist, true)'><i class=\"fa fa-play\" aria-hidden=\"true\"></i> </span>

@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "music player website",
 	"main": "index.php",
-	"type": "commonjs",
 	"directories": {
 		"test": "test"
 	},
@@ -15,11 +14,21 @@
 		"compile-js": "grunt babel",
 		"compile-sass": "grunt sass",
 		"compile-images": "grunt responsive_images",
-		"watch": "grunt watch"
+		"watch": "grunt watch",
+		"build:css": "postcss public_html/assets/css/style.scss -o public_html/style-min.css",
+		"watch:css": "postcss public_html/assets/css/style.scss -o public_html/style.css -w"
 	},
 	"dependencies": {
+		"@csstools/postcss-sass": "^5.0.1",
+		"@lodder/grunt-postcss": "^3.1.1",
+		"autoprefixer": "^10.4.13",
 		"confusing-browser-globals": "^1.0.11",
+		"cssnano": "^5.1.14",
 		"grunt-cwebp": "^3.0.3",
+		"postcss": "^8.4.18",
+		"postcss-cli": "^10.0.0",
+		"postcss-preset-env": "^7.8.2",
+		"postcss-scss": "^4.0.5",
 		"prettier": "^2.7.1",
 		"sass": "^1.56.0",
 		"stylelint": "^14.14.1",

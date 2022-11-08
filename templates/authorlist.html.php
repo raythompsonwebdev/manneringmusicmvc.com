@@ -1,6 +1,6 @@
 <section id="main-section" class="group">
 
-	<h1>User List</h1>
+	<h2>User List</h2>
 
 	<table>
 		<thead>

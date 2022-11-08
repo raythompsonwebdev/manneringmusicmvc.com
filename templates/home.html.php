@@ -18,9 +18,9 @@
 				<a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>" title="<?= $rapalbum->album ?>">
 					<img class="album-card-image" width="100" height="100" src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>" alt="<?= $rapalbum->album ?> album cover" aria-labelledby="<?= $rapalbum->getArtistId()->artist_name ?>">
 				</a>
-				<figcaption id="<?= $rapalbum->getArtistId()->artist_name ?> " class="album-car-text">
-					<h4><?= $rapalbum->getArtistId()->artist_name ?></h4>
-					<h5><?= $rapalbum->genre ?></h5>
+				<figcaption id="<?= $rapalbum->getArtistId()->artist_name ?> " class="album-card-text">
+					<h4 class="album-card-artist"><?= $rapalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $rapalbum->genre ?></h5>
 
 				</figcaption>
 
@@ -41,9 +41,9 @@
 					<img class="album-card-image" width="100" height="100" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>" alt="<?= $countryalbum->album ?> album cover" aria-labelledby="<?= $countryalbum->getArtistId()->artist_name ?>">
 
 				</a>
-				<figcaption id="<?= $countryalbum->getArtistId()->artist_name ?>" class="album-car-text">
-					<h4><?= $countryalbum->getArtistId()->artist_name ?></h4>
-					<h5><?= $countryalbum->genre ?></h5>
+				<figcaption id="<?= $countryalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $countryalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $countryalbum->genre ?></h5>
 				</figcaption>
 			</figure>
 
@@ -61,9 +61,9 @@
 				<a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>" title="<?= $jazzalbum->album ?>">
 					<img class="album-card-image" width="100" height="100" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>" alt="<?= $jazzalbum->album ?> album cover" aria-labelledby="<?= $jazzalbum->getArtistId()->artist_name ?>">
 				</a>
-				<figcaption id="<?= $jazzalbum->getArtistId()->artist_name ?>" class="album-car-text">
-					<h4><?= $jazzalbum->getArtistId()->artist_name ?></h4>
-					<h5><?= $jazzalbum->genre ?></h5>
+				<figcaption id="<?= $jazzalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $jazzalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $jazzalbum->genre ?></h5>
 				</figcaption>
 			</figure>
 

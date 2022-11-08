@@ -10,14 +10,14 @@
 			</ul>
 		</div>
 	<?php endif; ?>
-	<form id="registerform" action="" method="post">
-		<label for="email">Your email address</label>
+	<form id="register-form" action="" method="post">
+		<label class="register-label" for="email">Your email address</label>
 		<input name="author[email]" id="email" aria-describedby="formerror" type="text" value="<?= $author['email'] ?? '' ?>" required>
 
-		<label for="name">Your name</label>
+		<label class="register-label" for="name">Your name</label>
 		<input name="author[name]" id="name" aria-describedby="formerror" type="text" value="<?= $author['name'] ?? '' ?>" required>
 
-		<label for="password">Password</label>
+		<label class="register-label" for="password">Password</label>
 		<input name="author[password]" id="password" aria-describedby="formerror" type="password" value="<?= $author['password'] ?? '' ?>">
 		<br />
 		<input type="submit" id="register-btn" name="submit" value="Register account">

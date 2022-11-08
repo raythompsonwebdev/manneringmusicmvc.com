@@ -82,7 +82,31 @@ module.exports = (grunt) => {
         fix: true,
         syntax: '',
       },
-      src: ['public_html/assets/css/*.{css,less,scss}'],
+      src: ['public_html/assets/css/**/*.{css,less,scss}'],
+    },
+
+    postcss: {
+      options: {
+        map: true, // inline sourcemaps
+
+        processors: [
+          // eslint-disable-next-line global-require
+          require('@csstools/postcss-sass')(/* node-sass options */),
+          // eslint-disable-next-line global-require
+          require('autoprefixer')(),
+          // eslint-disable-next-line global-require
+          // eslint-disable-next-line global-require
+          require('postcss-preset-env')({
+            stage: 1,
+          }),
+          // eslint-disable-next-line global-require
+          // require('cssnano')(),
+        ],
+      },
+      dist: {
+        src: 'public_html/assets/css/*.scss',
+        dest: 'public_html/style.css',
+      },
     },
 
     eslint: {
@@ -140,12 +164,13 @@ module.exports = (grunt) => {
      */
     watch: {
       sass: {
-        files: [
-          'public_html/assets/css/*.scss',
-          'public_html/**/*.js',
-          'Gruntfile.js',
-        ],
-        tasks: ['sass'],
+        files: ['public_html/assets/css/*.scss'],
+        tasks: ['sass', 'postcss'],
+      },
+
+      js: {
+        files: ['public_html/**/*.js', 'Gruntfile.js'],
+        task: ['babel'],
       },
     },
   });
@@ -160,6 +185,7 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-stylelint');
   grunt.loadNpmTasks('grunt-cwebp');
+  grunt.loadNpmTasks('@lodder/grunt-postcss');
 
   grunt.registerTask('default', [
     'babel',
@@ -170,6 +196,7 @@ module.exports = (grunt) => {
     'clean',
     'mkdir',
     'c-webp',
+    'postcss',
   ]);
 };
 
