@@ -95,7 +95,6 @@ module.exports = (grunt) => {
           // eslint-disable-next-line global-require
           require('autoprefixer')(),
           // eslint-disable-next-line global-require
-          // eslint-disable-next-line global-require
           require('postcss-preset-env')({
             stage: 1,
           }),
@@ -104,7 +103,7 @@ module.exports = (grunt) => {
         ],
       },
       dist: {
-        src: 'public_html/assets/css/*.scss',
+        src: 'public_html/assets/css/style.scss',
         dest: 'public_html/style.css',
       },
     },
@@ -139,7 +138,6 @@ module.exports = (grunt) => {
       dev: {
         options: {
           style: 'expanded',
-          sourcemap: false,
         },
 
         files: {
@@ -169,7 +167,7 @@ module.exports = (grunt) => {
       },
 
       js: {
-        files: ['public_html/**/*.js', 'Gruntfile.js'],
+        files: ['public_html/**/*.js'],
         task: ['babel'],
       },
     },

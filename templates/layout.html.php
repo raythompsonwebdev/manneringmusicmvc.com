@@ -151,16 +151,16 @@
 		<footer>
 
 			<ul id="inner-footer">
-				<li id="inner-footer-item">
+				<li class="inner-footer-item">
 					<a href="#" title="Terms Page" class="inner-footer-link" aria-label="link to terms and conditions page">Terms</a>
 				</li>
-				<li id="inner-footer-item">
+				<li class="inner-footer-item">
 					<a href="#" title="Privacy Page" class="inner-footer-link" aria-label="link to privacy policy page">Privacy</a>
 				</li>
-				<li id="inner-footer-item">
+				<li class="inner-footer-item">
 					<a href="#" title="About Page" class="inner-footer-link" aria-label="link to about page">About</a>
 				</li>
-				<li id="inner-footer-item">
+				<li class="inner-footer-item">
 					<a href="/contact" title="Contact Page" class="inner-footer-link" aria-label="link to contacts page">Contact</a>
 				</li>
 			</ul>

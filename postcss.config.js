@@ -10,8 +10,8 @@ module.exports = {
     }),
 
     // eslint-disable-next-line global-require
-    require('cssnano')({
-      preset: 'default',
-    }),
+    // require('cssnano')({
+    // preset: 'default',
+    // }),
   ],
 };

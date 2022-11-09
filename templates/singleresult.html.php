@@ -267,8 +267,8 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 					<img src="assets/databasepics/WEBP/<?= $singlealbums->image; ?>" class="results-large-img" alt="Album-Cover-Image" aria-labelledby="<?= $singlealbums->id ?>" />
 				</a>
 
-				<figcaption id="<?= $singlealbums->id ?>" id="results-large-text">
-					<ul id="results-large-text-items">
+				<figcaption id="<?= $singlealbums->id ?>" class="results-large-text">
+					<ul class="results-large-text-items">
 						<li class="results-large-text-item">
 							<span class="large-text-title">Artist </span>
 							<span class="large-text"><?= $singleartist->artist_name; ?></span>

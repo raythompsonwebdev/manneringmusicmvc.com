@@ -6,6 +6,15 @@
 	"directories": {
 		"test": "test"
 	},
+	"browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
 	"proxy": "http://manneringmusicmvc.com/",
 	"scripts": {
 		"lint-sass": "grunt stylelint",
@@ -15,7 +24,7 @@
 		"compile-sass": "grunt sass",
 		"compile-images": "grunt responsive_images",
 		"watch": "grunt watch",
-		"build:css": "postcss public_html/assets/css/style.scss -o public_html/style-min.css",
+		"build:css": "postcss public_html/assets/css/style.scss -o public_html/style.css",
 		"watch:css": "postcss public_html/assets/css/style.scss -o public_html/style.css -w"
 	},
 	"dependencies": {
@@ -24,7 +33,6 @@
 		"autoprefixer": "^10.4.13",
 		"confusing-browser-globals": "^1.0.11",
 		"cssnano": "^5.1.14",
-		"grunt-cwebp": "^3.0.3",
 		"postcss": "^8.4.18",
 		"postcss-cli": "^10.0.0",
 		"postcss-preset-env": "^7.8.2",
@@ -60,6 +68,7 @@
 		"grunt-contrib-cssmin": "^4.0.0",
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
+		"grunt-cwebp": "^3.0.3",
 		"grunt-eslint": "^24.0.0",
 		"grunt-mkdir": "^1.1.0",
 		"grunt-responsive-images": "^1.10.1",
