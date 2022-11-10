@@ -412,7 +412,7 @@ input[type=submit]:active {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  width: 96%;
+  width: 98%;
   height: auto;
 }
 
@@ -936,7 +936,7 @@ input[type=submit]:active {
 #mannering-content #mannering-search {
   margin: 0 auto;
   height: auto;
-  width: 96%;
+  width: 100%;
   padding: 0.5em;
   border-radius: 5px;
   font-family: "Lato", "helvitica", "serif", sans-serif;
@@ -951,9 +951,13 @@ input[type=submit]:active {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5em;
 }
 #mannering-content #mannering-search legend {
   width: 75%;
@@ -1011,15 +1015,15 @@ input[type=submit]:active {
   padding: 0;
   height: 35px;
   font-size: 1em;
-  margin: 0.5em 0;
-  width: 100%;
+  width: 25%;
   color: #181818;
   line-height: 35px;
+  display: inline-block;
 }
-#mannering-content #mannering-search .search-btn {
+#mannering-content #mannering-search #search-btn {
   font-family: "Lato", "helvitica", "serif", sans-serif;
   letter-spacing: 0.1em;
-  width: 75%;
+  width: 25%;
   color: #fafaf7;
   font-size: 1em;
   display: inline-block;
@@ -1031,7 +1035,7 @@ input[type=submit]:active {
           appearance: none;
   font-weight: normal;
 }
-#mannering-content #mannering-search .search-btn:hover {
+#mannering-content #mannering-search #search-btn:hover {
   letter-spacing: 0.12em;
   background-color: #fafaf7;
   color: #ecac00;
@@ -1086,193 +1090,14 @@ input[type=submit]:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* audio controls */
-  /* audio track list */
   /* search results list */
   /* single artist page */
-}
-#mannering-content #results-container .audio-controls {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-#mannering-content #results-container .audio-controls .audio-track-name {
-  line-height: 60px;
-  width: 100%;
-  margin: 0;
-  display: block;
-  height: auto;
-  padding: 0;
-  color: #fafaf7;
-  font-size: 1em;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0.5em;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-  width: 20%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  height: auto;
-  line-height: 50px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background-color: #181818;
-  color: #fafaf7;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-  font-size: 1em;
-  display: block;
-  height: auto;
-  text-align: center;
-  width: 100%;
-  line-height: 50px;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn:hover {
-  font-size: 1.1em;
-  background-color: #fafaf7;
-  color: #181818;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-  width: 60%;
-  height: 50px;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-  width: 100%;
-  background-color: #ecac00;
-  height: 100%;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-  width: 100%;
-  cursor: pointer;
-  background-color: #ecac00;
-  height: 100%;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-#mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-  font-family: monospace;
-  width: 20%;
-  line-height: 50px;
-  letter-spacing: 0.15em;
-  text-align: center;
-  background-color: #181818;
-  text-shadow: none;
-  font-size: 0.9em;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-  width: 100%;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-  width: 88%;
-  height: 100%;
-  background-color: #3b3b3b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-  width: 96%;
-  display: block;
-  background-color: #fafaf7;
-  margin: 0.5em;
-  height: auto;
-  cursor: pointer;
-  position: relative;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-  width: 12%;
-  height: 100%;
-  background-color: #181818;
-  color: #fafaf7;
-  border: none;
-  outline: none;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-  display: block;
-  width: 100%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 1.5em;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-  display: block;
-}
-#mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
-  background-color: #fafaf7;
-  color: #181818;
-  cursor: pointer;
-}
-#mannering-content #results-container .audio-tracklist {
-  margin: 0;
-  padding: 0;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 40px;
-  margin-bottom: 0.5em;
-  font-size: 0.65em;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-  width: 20%;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-  width: 60%;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-  background-color: #181818;
-  width: 20%;
-  cursor: pointer;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-  text-align: center;
-  display: block;
-  line-height: 40px;
-  font-size: 200%;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-  background-color: #fafaf7;
-  color: #181818;
-}
-#mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-  width: 20%;
-  text-align: center;
 }
 #mannering-content #results-container .results {
   height: auto;
   padding: 0.25em;
   border-radius: 5px;
-  margin: 0.25em;
+  margin: 0;
   width: 80%;
   display: block;
   float: left;
@@ -1356,8 +1181,10 @@ input[type=submit]:active {
   width: 100%;
   display: block;
   font-weight: normal;
+  /* audio controls */
+  /* audio track list */
 }
-#mannering-content #results-container .results-large h2 {
+#mannering-content #results-container .results-large .audio-track-name {
   font-size: 1.5em;
   text-align: center;
   line-height: 100px;
@@ -1365,6 +1192,10 @@ input[type=submit]:active {
   color: #181818;
   width: 90%;
   margin: 1em auto;
+}
+#mannering-content #results-container .results-large h4 {
+  font-size: 0.9em;
+  line-height: 40px;
 }
 #mannering-content #results-container .results-large .results-large-info {
   display: -webkit-box;
@@ -1450,6 +1281,195 @@ input[type=submit]:active {
   margin: 0;
   line-height: 35px;
   text-indent: 1em;
+}
+#mannering-content #results-container .results-large .audio-controls {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+  width: 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  height: auto;
+  line-height: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #181818;
+  color: #fafaf7;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+  font-size: 1em;
+  display: block;
+  height: auto;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn:hover {
+  font-size: 1.1em;
+  background-color: #fafaf7;
+  color: #181818;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+  width: 60%;
+  height: 50px;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+  width: 100%;
+  background-color: #ecac00;
+  height: 100%;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+  width: 100%;
+  cursor: pointer;
+  background-color: #ecac00;
+  height: 100%;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+  font-family: monospace;
+  width: 20%;
+  line-height: 50px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  background-color: #181818;
+  text-shadow: none;
+  font-size: 0.9em;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+  width: 88%;
+  height: 100%;
+  background-color: #3b3b3b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+  width: 96%;
+  display: block;
+  background-color: #fafaf7;
+  margin: 0.5em;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+  width: 12%;
+  height: 100%;
+  background-color: #181818;
+  color: #fafaf7;
+  border: none;
+  outline: none;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5em;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  display: block;
+}
+#mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
+  background-color: #fafaf7;
+  color: #181818;
+  cursor: pointer;
+}
+#mannering-content #results-container .results-large .audio-tracklist {
+  margin: 0;
+  padding: 0;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 40px;
+  margin-bottom: 0.5em;
+  font-size: 0.65em;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+  width: 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+  background-color: #181818;
+  width: 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  cursor: pointer;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+  text-align: center;
+  display: block;
+  line-height: 40px;
+  font-size: 200%;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+  background-color: #fafaf7;
+  color: #181818;
+}
+#mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+  width: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  text-align: center;
 }
 #mannering-content .text-box {
   height: 140px;
@@ -1808,7 +1828,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 85%;
   }
   .copyr {
     font-size: 0.5em;
@@ -2035,76 +2055,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.3em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.3em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 19%;
   }
@@ -2136,14 +2086,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     color: #ecac00;
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.9em;
     line-height: 150px;
     width: 80%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.2em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1.1em;
@@ -2195,6 +2141,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.3em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -2309,8 +2325,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 56%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -2342,16 +2372,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -2385,7 +2414,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
   .copyr {
     font-size: 0.5em;
@@ -2589,76 +2618,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.3em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.25em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 19%;
   }
@@ -2689,14 +2648,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.8em;
     line-height: 150px;
     width: 80%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.2em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1.1em;
@@ -2748,6 +2703,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -2860,8 +2885,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 40%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -2893,16 +2932,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -2936,7 +2974,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
   .copyr {
     font-size: 0.5em;
@@ -3140,76 +3178,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.25em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.25em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 24%;
   }
@@ -3240,14 +3208,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.8em;
     line-height: 150px;
     width: 80%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -3302,6 +3266,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -3414,8 +3448,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 66%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -3447,16 +3495,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -3490,7 +3537,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
   .copyr {
     font-size: 0.5em;
@@ -3694,77 +3741,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.25em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.2em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.85em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-    font-size: 0.8em;
-  }
   #mannering-content #results-container .results {
     width: 24%;
   }
@@ -3795,14 +3771,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.7em;
     line-height: 150px;
     width: 80%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -3857,6 +3829,77 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.2em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.85em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
+    font-size: 0.8em;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -3970,8 +4013,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 50%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -4003,16 +4060,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -4046,7 +4102,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 90%;
+    width: 94%;
   }
   .copyr {
     font-size: 0.5em;
@@ -4254,76 +4310,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.2em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.15em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.85em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 32%;
   }
@@ -4354,14 +4340,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.7em;
     line-height: 125px;
     width: 90%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -4415,6 +4397,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.15em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.85em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -4527,8 +4579,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 86%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -4560,16 +4626,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -4603,7 +4668,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: none;
   }
   #wrapper {
-    width: 94%;
+    width: 96%;
   }
   .copyr {
     font-size: 0.5em;
@@ -4814,76 +4879,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.2em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.15em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.8em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 32%;
   }
@@ -4914,14 +4909,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.6em;
     line-height: 125px;
     width: 90%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1.1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -4955,6 +4946,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.15em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.8em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -5067,8 +5128,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 80%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -5100,16 +5175,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -5144,7 +5218,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     left: 88vw;
   }
   #wrapper {
-    width: 94%;
+    width: 98%;
   }
   .copyr {
     font-size: 0.5em;
@@ -5317,76 +5391,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    font-size: 1.15em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 20%;
-    font-size: 1.1em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    font-size: 0.75em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 13%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 15%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
-  }
   #mannering-content #results-container .results {
     width: 48%;
   }
@@ -5417,18 +5421,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.6em;
     line-height: 125px;
     width: 90%;
-  }
-  #mannering-content #results-container .results-large h3,
-  #mannering-content #results-container .results-large h4 {
-    line-height: 30px;
-    margin-bottom: 0.2em;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1em;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.95em;
@@ -5462,6 +5458,76 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 60%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 20%;
+    font-size: 1.1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.75em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -5571,8 +5637,22 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 0.8em;
   }
   #mannering-content #mannering-search {
-    padding: 1%;
-    width: 85%;
+    padding: 0.5em;
+  }
+  #mannering-content #mannering-search fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     font-size: 1em;
@@ -5604,16 +5684,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #mannering-search #album,
   #mannering-content #mannering-search #genre {
     font-size: 0.85em;
-    width: 100%;
     margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     font-size: 0.85em;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin: 0;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     letter-spacing: 0.12em;
   }
   footer .mannering-social-btns-footer {
@@ -5648,7 +5727,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     left: 86vw;
   }
   #wrapper {
-    width: 94%;
+    width: 98%;
   }
   .copyr {
     font-size: 0.6em;
@@ -5845,11 +5924,23 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     padding: 0.8em;
   }
   #mannering-content #mannering-search {
-    width: 85%;
     padding: 0.5em;
   }
   #mannering-content #mannering-search fieldset {
     padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     width: 75%;
@@ -5881,12 +5972,13 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 1em;
     margin: 0.5em 0;
     line-height: 35px;
+    height: 35px;
+    width: 100%;
   }
-  #mannering-content #mannering-search .search-btn {
-    width: 75%;
+  #mannering-content #mannering-search #search-btn {
     font-size: 1em;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     height: 35px;
   }
   #mannering-content .refresh-page-link {
@@ -5921,93 +6013,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-  #mannering-content #results-container .audio-controls {
-    height: auto;
-  }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    line-height: 50px;
-    font-size: 1.15em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container {
-    margin-bottom: 0.5em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.1em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 60%;
-    height: 50px;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 20%;
-    line-height: 50px;
-    letter-spacing: 0.15em;
-    font-size: 1em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    height: 50px;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 88%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 12%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    line-height: 50px;
-    font-size: 1.5em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-    padding: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    margin-bottom: 0.5em;
-    font-size: 0.7em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-    font-size: 200%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 20%;
   }
   #mannering-content #results-container .results {
     padding: 0.25em;
@@ -6050,14 +6055,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.5em;
     line-height: 125px;
     width: 90%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.9em;
@@ -6106,6 +6107,89 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    margin-bottom: 0.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 60%;
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 20%;
+    line-height: 50px;
+    letter-spacing: 0.15em;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 88%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 12%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    line-height: 50px;
+    font-size: 1.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+    padding: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    margin-bottom: 0.5em;
+    font-size: 0.7em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+    font-size: 200%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -6270,7 +6354,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     left: 85vw;
   }
   #wrapper {
-    width: 96%;
+    width: 98%;
   }
   .copyr {
     font-size: 0.6em;
@@ -6451,11 +6535,23 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     padding: 0.8em;
   }
   #mannering-content #mannering-search {
-    width: 85%;
     padding: 0.5em;
   }
   #mannering-content #mannering-search fieldset {
     padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     width: 75%;
@@ -6487,12 +6583,12 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 1em;
     margin: 0.5em 0;
     line-height: 35px;
+    width: 100%;
   }
-  #mannering-content #mannering-search .search-btn {
-    width: 75%;
+  #mannering-content #mannering-search #search-btn {
     font-size: 1em;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     height: 35px;
   }
   #mannering-content .refresh-page-link {
@@ -6517,93 +6613,6 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container {
     margin: 0;
-  }
-  #mannering-content #results-container .audio-controls {
-    height: auto;
-  }
-  #mannering-content #results-container .audio-controls .audio-track-name {
-    line-height: 60px;
-    font-size: 1em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container {
-    margin-bottom: 0.5em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress {
-    width: 60%;
-    height: 50px;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .current-time,
-  #mannering-content #results-container .audio-controls .audiocntrl-container .duration {
-    width: 20%;
-    line-height: 50px;
-    letter-spacing: 0.15em;
-    font-size: 0.9em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume {
-    height: 50px;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 88%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 12%;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    line-height: 50px;
-    font-size: 1.5em;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  #mannering-content #results-container .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist {
-    margin: 0;
-    padding: 0;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item {
-    margin-bottom: 0.5em;
-    font-size: 0.65em;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 20%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
-    cursor: pointer;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-    font-size: 200%;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 20%;
   }
   #mannering-content #results-container .results {
     padding: 0.25em;
@@ -6646,14 +6655,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.5em;
     line-height: 125px;
     width: 90%;
-  }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 1em;
-    line-height: 40px;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.9em;
@@ -6702,6 +6707,89 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    margin-bottom: 0.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 60%;
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 20%;
+    line-height: 50px;
+    letter-spacing: 0.15em;
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 88%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 12%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    line-height: 50px;
+    font-size: 1.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+    padding: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    margin-bottom: 0.5em;
+    font-size: 0.65em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+    font-size: 200%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;
@@ -6875,7 +6963,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 96%;
+    width: 98%;
     height: auto;
   }
   .copyr {
@@ -7057,11 +7145,23 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     padding: 0.8em;
   }
   #mannering-content #mannering-search {
-    width: 90%;
     padding: 0.5em;
   }
   #mannering-content #mannering-search fieldset {
     padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #mannering-content #mannering-search legend {
     width: 75%;
@@ -7093,12 +7193,13 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     font-size: 1em;
     margin: 0.5em 0;
     line-height: 35px;
+    width: 100%;
   }
-  #mannering-content #mannering-search .search-btn {
+  #mannering-content #mannering-search #search-btn {
     width: 75%;
     font-size: 1em;
   }
-  #mannering-content #mannering-search .search-btn:hover {
+  #mannering-content #mannering-search #search-btn:hover {
     height: 35px;
   }
   #mannering-content .refresh-page-link {
@@ -7194,8 +7295,8 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .audio-tracklist .audio-tracklist-item .tracknum {
     width: 20%;
   }
-  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .audio-track-name {
-    width: 60%;
+  #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
   }
   #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackbtn {
     width: 20%;
@@ -7209,7 +7310,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     background-color: #fafaf7;
   }
   #mannering-content #results-container .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 20%;
+    width: 10%;
   }
   #mannering-content #results-container .results {
     padding: 0.25em;
@@ -7253,19 +7354,15 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large h2 {
+  #mannering-content #results-container .results-large .audio-track-name {
     font-size: 1.5em;
     text-align: center;
     line-height: 100px;
     width: 90%;
     margin: 1em auto;
   }
-  #mannering-content #results-container .results-large h3 {
-    font-size: 0.9em;
-    line-height: 40px;
-  }
   #mannering-content #results-container .results-large h4 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 40px;
   }
   #mannering-content #results-container .results-large .results-large-info {
@@ -7311,6 +7408,89 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .result-label {
     text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls {
+    height: auto;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    margin-bottom: 0.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 60%;
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .duration {
+    width: 20%;
+    line-height: 50px;
+    letter-spacing: 0.15em;
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume {
+    height: 50px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 88%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 12%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    line-height: 50px;
+    font-size: 1.5em;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist {
+    margin: 0;
+    padding: 0;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
+    margin-bottom: 0.5em;
+    font-size: 0.65em;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+    font-size: 200%;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content .text-box {
     height: 140px;

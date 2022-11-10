@@ -40,7 +40,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  width: 96%;
+  width: 98%;
   height: auto;
 }
 
@@ -563,7 +563,7 @@
   #mannering-search {
     margin: 0 auto;
     height: auto;
-    width: 96%;
+    width: 100%;
     padding: 0.5em;
     border-radius: 5px;
     font-family: $FontListText;
@@ -573,7 +573,9 @@
       border: 1px solid $light-grey;
       display: flex;
       flex-flow: column;
-      align-items: center;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.5em;
     }
 
     legend {
@@ -615,16 +617,16 @@
       padding: 0;
       height: 35px;
       font-size: 1em;
-      margin: 0.5em 0;
-      width: 100%;
+      width: 25%;
       color: $bg-black;
       line-height: 35px;
+      display: inline-block;
     }
 
-    .search-btn {
+    #search-btn {
       font-family: $FontListText;
       letter-spacing: 0.1em;
-      width: 75%;
+      width: 25%;
       color: $white-color;
       font-size: 1em;
       display: inline-block;
@@ -692,182 +694,12 @@
     flex-flow: column;
     align-items: center;
 
-    /* audio controls */
-    .audio-controls {
-      height: auto;
-      display: flex;
-      flex-flow: column;
-      justify-content: space-between;
-      .audio-track-name {
-        line-height: 60px;
-        width: 100%;
-        margin: 0;
-        display: block;
-        height: auto;
-        padding: 0;
-        color: $white-color;
-        font-size: 1em;
-      }
-      .audiocntrl-container {
-        height: auto;
-        display: flex;
-        margin-bottom: 0.5em;
-        flex-flow: row wrap;
-        align-items: flex-start;
-
-        .audio-player-btn {
-          width: 20%;
-          flex: 0 1 auto;
-          height: auto;
-          line-height: 50px;
-          outline: none;
-          border: none;
-          cursor: pointer;
-          background-color: $bg-black;
-          color: $white-color;
-          .fa-play,
-          .fa-pause,
-          .fa-step-backward,
-          .fa-step-forward,
-          .fa-repeat {
-            font-size: 1em;
-            display: block;
-            height: auto;
-            text-align: center;
-            width: 100%;
-            line-height: 50px;
-          }
-          &:hover {
-            font-size: 1.1em;
-            background-color: $white-color;
-            color: $bg-black;
-          }
-        }
-
-        .audio-progress {
-          width: 60%;
-          height: 50px;
-
-          .load-progress {
-            width: 100%;
-            background-color: $orange-color;
-            height: 100%;
-          }
-
-          .play-progress {
-            width: 100%;
-            cursor: pointer;
-            background-color: $orange-color;
-            height: 100%;
-          }
-        }
-
-        .current-time,
-        .duration {
-          font-family: monospace;
-          width: 20%;
-          line-height: 50px;
-          letter-spacing: 0.15em;
-          text-align: center;
-          background-color: $bg-black;
-          text-shadow: none;
-          font-size: 0.9em;
-        }
-
-        .audio-volume {
-          width: 100%;
-          height: 50px;
-          display: flex;
-
-          .volume-bg {
-            width: 88%;
-            height: 100%;
-            background-color: $stone-grey3;
-            display: flex;
-          }
-
-          .volume {
-            width: 96%;
-            display: block;
-            background-color: $white-color;
-            margin: 0.5em;
-            height: auto;
-            cursor: pointer;
-            position: relative;
-          }
-
-          .volume-mute {
-            width: 12%;
-            height: 100%;
-            background-color: $bg-black;
-            color: $white-color;
-            border: none;
-            outline: none;
-            .fa-volume-up {
-              display: block;
-              width: 100%;
-              text-align: center;
-              line-height: 50px;
-              font-size: 1.5em;
-              &::before {
-                display: block;
-              }
-            }
-            &:hover {
-              background-color: $white-color;
-              color: $bg-black;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
-
-    /* audio track list */
-    .audio-tracklist {
-      margin: 0;
-      padding: 0;
-      .audio-tracklist-item {
-        display: flex;
-        line-height: 40px;
-        margin-bottom: 0.5em;
-        font-size: 0.65em;
-        .tracknum {
-          width: 20%;
-        }
-        .audio-track-name {
-          width: 60%;
-        }
-
-        .trackbtn {
-          background-color: $bg-black;
-          width: 20%;
-          cursor: pointer;
-          .fa-play {
-            text-align: center;
-            display: block;
-            line-height: 40px;
-            font-size: 200%;
-            &:hover {
-              background-color: $white-color;
-              color: $bg-black;
-            }
-          }
-        }
-
-        .trackplays {
-          width: 20%;
-          text-align: center;
-        }
-      }
-    }
-
     /* search results list */
     .results {
       height: auto;
       padding: 0.25em;
       border-radius: 5px;
-      margin: 0.25em;
+      margin: 0;
       width: 80%;
       display: block;
       float: left;
@@ -953,7 +785,7 @@
       display: block;
       font-weight: normal;
 
-      h2 {
+      .audio-track-name {
         font-size: 1.5em;
         text-align: center;
         line-height: 100px;
@@ -961,6 +793,11 @@
         color: $bg-black;
         width: 90%;
         margin: 1em auto;
+      }
+
+      h4 {
+        font-size: 0.9em;
+        line-height: 40px;
       }
 
       .results-large-info {
@@ -1042,6 +879,175 @@
         margin: 0;
         line-height: 35px;
         text-indent: 1em;
+      }
+
+      /* audio controls */
+
+      .audio-controls {
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        .audiocntrl-container {
+          height: auto;
+          display: flex;
+          margin-bottom: 0.5em;
+          flex-flow: row wrap;
+          align-items: flex-start;
+
+          .audio-player-btn {
+            width: 20%;
+            flex: 0 1 auto;
+            height: auto;
+            line-height: 50px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background-color: $bg-black;
+            color: $white-color;
+            .fa-play,
+            .fa-pause,
+            .fa-step-backward,
+            .fa-step-forward,
+            .fa-repeat {
+              font-size: 1em;
+              display: block;
+              height: auto;
+              text-align: center;
+              width: 100%;
+              line-height: 50px;
+            }
+            &:hover {
+              font-size: 1.1em;
+              background-color: $white-color;
+              color: $bg-black;
+            }
+          }
+
+          .audio-progress {
+            width: 60%;
+            height: 50px;
+
+            .load-progress {
+              width: 100%;
+              background-color: $orange-color;
+              height: 100%;
+            }
+
+            .play-progress {
+              width: 100%;
+              cursor: pointer;
+              background-color: $orange-color;
+              height: 100%;
+            }
+          }
+
+          .current-time,
+          .duration {
+            font-family: monospace;
+            width: 20%;
+            line-height: 50px;
+            letter-spacing: 0.15em;
+            text-align: center;
+            background-color: $bg-black;
+            text-shadow: none;
+            font-size: 0.9em;
+          }
+
+          .audio-volume {
+            width: 100%;
+            height: 50px;
+            display: flex;
+
+            .volume-bg {
+              width: 88%;
+              height: 100%;
+              background-color: $stone-grey3;
+              display: flex;
+            }
+
+            .volume {
+              width: 96%;
+              display: block;
+              background-color: $white-color;
+              margin: 0.5em;
+              height: auto;
+              cursor: pointer;
+              position: relative;
+            }
+
+            .volume-mute {
+              width: 12%;
+              height: 100%;
+              background-color: $bg-black;
+              color: $white-color;
+              border: none;
+              outline: none;
+              .fa-volume-up {
+                display: block;
+                width: 100%;
+                text-align: center;
+                line-height: 50px;
+                font-size: 1.5em;
+                &::before {
+                  display: block;
+                }
+              }
+              &:hover {
+                background-color: $white-color;
+                color: $bg-black;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      /* audio track list */
+
+      .audio-tracklist {
+        margin: 0;
+        padding: 0;
+        .audio-tracklist-item {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          line-height: 40px;
+          margin-bottom: 0.5em;
+          font-size: 0.65em;
+          .tracknum {
+            width: 20%;
+            flex: 0 1 auto;
+          }
+          .trackname {
+            width: 50%;
+            flex: 0 1 auto;
+          }
+
+          .trackbtn {
+            background-color: $bg-black;
+            width: 20%;
+            flex: 0 1 auto;
+            cursor: pointer;
+            .fa-play {
+              text-align: center;
+              display: block;
+              line-height: 40px;
+              font-size: 200%;
+              &:hover {
+                background-color: $white-color;
+                color: $bg-black;
+              }
+            }
+          }
+
+          .trackplays {
+            width: 10%;
+            flex: 0 1 auto;
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -1435,7 +1441,7 @@ footer {
   }
 
   #wrapper {
-    width: 86%;
+    width: 85%;
   }
 
   .copyr {
@@ -1676,97 +1682,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.3em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 14%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.3em;
-          }
-
-          .audio-volume {
-            width: 30%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.9em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 19%;
 
@@ -1805,15 +1720,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.9em;
           line-height: 150px;
           width: 80%;
-        }
-
-        h3 {
-          font-size: 1.2em;
-          line-height: 40px;
         }
 
         h4 {
@@ -1861,6 +1771,96 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 14%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.3em;
+            }
+
+            .audio-volume {
+              width: 30%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.9em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -1997,8 +1997,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 56%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -2017,15 +2023,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -2072,7 +2077,7 @@ footer {
   }
 
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
 
   .copyr {
@@ -2289,97 +2294,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.3em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 14%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.25em;
-          }
-
-          .audio-volume {
-            width: 30%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.9em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 19%;
 
@@ -2416,15 +2330,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.8em;
           line-height: 150px;
           width: 80%;
-        }
-
-        h3 {
-          font-size: 1.2em;
-          line-height: 40px;
         }
 
         h4 {
@@ -2472,6 +2381,96 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 14%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.25em;
+            }
+
+            .audio-volume {
+              width: 30%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.9em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -2606,8 +2605,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 40%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -2626,15 +2631,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -2681,7 +2685,7 @@ footer {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
 
   .copyr {
@@ -2901,97 +2905,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.25em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 14%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.25em;
-          }
-
-          .audio-volume {
-            width: 30%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.9em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 24%;
 
@@ -3028,15 +2941,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.8em;
           line-height: 150px;
           width: 80%;
-        }
-
-        h3 {
-          font-size: 1.1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -3088,6 +2996,96 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 14%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.25em;
+            }
+
+            .audio-volume {
+              width: 30%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.9em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -3222,8 +3220,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 66%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -3242,15 +3246,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -3297,7 +3300,7 @@ footer {
     display: none;
   }
   #wrapper {
-    width: 86%;
+    width: 90%;
   }
 
   .copyr {
@@ -3517,98 +3520,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.25em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 14%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.2em;
-          }
-
-          .audio-volume {
-            width: 30%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.85em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-            font-size: 0.8em;
-          }
-        }
-      }
-
       .results {
         width: 24%;
         .results-info {
@@ -3644,15 +3555,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.7em;
           line-height: 150px;
           width: 80%;
-        }
-
-        h3 {
-          font-size: 1.1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -3704,6 +3610,96 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 14%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.2em;
+            }
+
+            .audio-volume {
+              width: 30%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.85em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+              font-size: 0.8em;
+            }
+          }
         }
       }
     }
@@ -3839,8 +3835,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 50%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -3859,15 +3861,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -3914,7 +3915,7 @@ footer {
     display: none;
   }
   #wrapper {
-    width: 90%;
+    width: 94%;
   }
 
   .copyr {
@@ -4135,96 +4136,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.2em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 20%;
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.15em;
-          }
-
-          .audio-volume {
-            width: 100%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.85em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 32%;
 
@@ -4261,15 +4172,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.7em;
           line-height: 125px;
           width: 90%;
-        }
-
-        h3 {
-          font-size: 1.1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -4320,6 +4226,95 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 20%;
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.15em;
+            }
+
+            .audio-volume {
+              width: 100%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.85em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -4454,8 +4449,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 86%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -4474,15 +4475,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -4528,7 +4528,7 @@ footer {
     display: none;
   }
   #wrapper {
-    width: 94%;
+    width: 96%;
   }
 
   .copyr {
@@ -4751,97 +4751,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.2em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 20%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 70%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 15%;
-            font-size: 1.15em;
-          }
-
-          .audio-volume {
-            width: 100%;
-
-            .volume-bg {
-              width: 80%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.8em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 32%;
 
@@ -4878,15 +4787,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.6em;
           line-height: 125px;
           width: 90%;
-        }
-
-        h3 {
-          font-size: 1.1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -4928,6 +4832,96 @@ footer {
         }
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 20%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 70%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 15%;
+              font-size: 1.15em;
+            }
+
+            .audio-volume {
+              width: 100%;
+
+              .volume-bg {
+                width: 80%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.8em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -5062,8 +5056,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 80%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -5082,15 +5082,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -5138,7 +5137,7 @@ footer {
   }
 
   #wrapper {
-    width: 94%;
+    width: 98%;
   }
 
   .copyr {
@@ -5334,97 +5333,6 @@ footer {
       flex-flow: row wrap;
       align-items: flex-start;
 
-      .audio-controls {
-        .audio-track-name {
-          font-size: 1.15em;
-        }
-        .audiocntrl-container {
-          .audio-player-btn {
-            width: 20%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.6em;
-            }
-          }
-
-          .audio-progress {
-            width: 60%;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 20%;
-            font-size: 1.1em;
-          }
-
-          .audio-volume {
-            width: 100%;
-
-            .volume-bg {
-              width: 100%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 20%;
-
-              .fa-volume-up {
-                font-size: 1.4em;
-
-                &::before {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-
-        .audio-tracklist-item {
-          font-size: 0.75em;
-          .tracknum {
-            width: 13%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 15%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 12%;
-          }
-        }
-      }
-
       .results {
         width: 48%;
 
@@ -5461,20 +5369,10 @@ footer {
       }
 
       .results-large {
-        h2 {
+        .audio-track-name {
           font-size: 1.6em;
           line-height: 125px;
           width: 90%;
-        }
-
-        h3,
-        h4 {
-          line-height: 30px;
-          margin-bottom: 0.2em;
-        }
-
-        h3 {
-          font-size: 1em;
         }
 
         h4 {
@@ -5517,6 +5415,96 @@ footer {
         }
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            .audio-player-btn {
+              width: 20%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.6em;
+              }
+            }
+
+            .audio-progress {
+              width: 60%;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 20%;
+              font-size: 1.1em;
+            }
+
+            .audio-volume {
+              width: 100%;
+
+              .volume-bg {
+                width: 100%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 20%;
+
+                .fa-volume-up {
+                  font-size: 1.4em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+
+          .audio-tracklist-item {
+            font-size: 0.75em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -5647,8 +5635,14 @@ footer {
     }
 
     #mannering-search {
-      padding: 1%;
-      width: 85%;
+      padding: 0.5em;
+
+      fieldset {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       legend {
         font-size: 1em;
@@ -5667,15 +5661,14 @@ footer {
       #album,
       #genre {
         font-size: 0.85em;
-        width: 100%;
         margin-bottom: 1em;
+        height: 40px;
+        line-height: 40px;
       }
 
-      .search-btn {
+      #search-btn {
         font-size: 0.85em;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
+        margin: 0;
 
         &:hover {
           letter-spacing: 0.12em;
@@ -5724,7 +5717,7 @@ footer {
   }
 
   #wrapper {
-    width: 94%;
+    width: 98%;
   }
 
   .copyr {
@@ -5954,11 +5947,14 @@ footer {
 
     /* search page form */
     #mannering-search {
-      width: 85%;
       padding: 0.5em;
 
       fieldset {
         padding: 1em;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
       }
 
       legend {
@@ -5982,10 +5978,11 @@ footer {
         font-size: 1em;
         margin: 0.5em 0;
         line-height: 35px;
+        height: 35px;
+        width: 100%;
       }
 
-      .search-btn {
-        width: 75%;
+      #search-btn {
         font-size: 1em;
 
         &:hover {
@@ -6025,111 +6022,6 @@ footer {
       display: flex;
       flex-flow: row wrap;
       align-items: flex-start;
-
-      .audio-controls {
-        height: auto;
-
-        .audio-track-name {
-          line-height: 50px;
-          font-size: 1.15em;
-        }
-        .audiocntrl-container {
-          margin-bottom: 0.5em;
-
-          .audio-player-btn {
-            width: 20%;
-
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1.1em;
-            }
-          }
-
-          .audio-progress {
-            width: 60%;
-            height: 50px;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 20%;
-            line-height: 50px;
-            letter-spacing: 0.15em;
-            font-size: 1em;
-          }
-
-          .audio-volume {
-            height: 50px;
-
-            .volume-bg {
-              width: 88%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 12%;
-
-              .fa-volume-up {
-                line-height: 50px;
-                font-size: 1.5em;
-
-                &::before {
-                  display: block;
-                }
-              }
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-        padding: 0;
-
-        .audio-tracklist-item {
-          margin-bottom: 0.5em;
-          font-size: 0.7em;
-          .tracknum {
-            width: 20%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 20%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-              font-size: 200%;
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 20%;
-          }
-        }
-      }
 
       .results {
         padding: 0.25em;
@@ -6180,15 +6072,10 @@ footer {
         min-height: 240px;
         margin: 0.5em;
 
-        h2 {
+        .audio-track-name {
           font-size: 1.5em;
           line-height: 125px;
           width: 90%;
-        }
-
-        h3 {
-          font-size: 1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -6241,6 +6128,107 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            margin-bottom: 0.5em;
+
+            .audio-player-btn {
+              width: 20%;
+
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1.1em;
+              }
+            }
+
+            .audio-progress {
+              width: 60%;
+              height: 50px;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 20%;
+              line-height: 50px;
+              letter-spacing: 0.15em;
+              font-size: 1em;
+            }
+
+            .audio-volume {
+              height: 50px;
+
+              .volume-bg {
+                width: 88%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 12%;
+
+                .fa-volume-up {
+                  line-height: 50px;
+                  font-size: 1.5em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+          padding: 0;
+
+          .audio-tracklist-item {
+            margin-bottom: 0.5em;
+            font-size: 0.7em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+                font-size: 200%;
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -6449,7 +6437,7 @@ footer {
   }
 
   #wrapper {
-    width: 96%;
+    width: 98%;
   }
 
   .copyr {
@@ -6677,11 +6665,14 @@ footer {
 
     /* search page form */
     #mannering-search {
-      width: 85%;
       padding: 0.5em;
 
       fieldset {
         padding: 1em;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
       }
 
       legend {
@@ -6705,10 +6696,10 @@ footer {
         font-size: 1em;
         margin: 0.5em 0;
         line-height: 35px;
+        width: 100%;
       }
 
-      .search-btn {
-        width: 75%;
+      #search-btn {
         font-size: 1em;
 
         &:hover {
@@ -6745,110 +6736,6 @@ footer {
 
     #results-container {
       margin: 0;
-
-      .audio-controls {
-        height: auto;
-
-        .audio-track-name {
-          line-height: 60px;
-          font-size: 1em;
-        }
-        .audiocntrl-container {
-          margin-bottom: 0.5em;
-
-          .audio-player-btn {
-            width: 20%;
-            .fa-play,
-            .fa-pause,
-            .fa-step-backward,
-            .fa-step-forward,
-            .fa-repeat {
-              font-size: 1em;
-            }
-          }
-
-          .audio-progress {
-            width: 60%;
-            height: 50px;
-
-            .load-progress {
-              width: 100%;
-            }
-
-            .play-progress {
-              width: 100%;
-            }
-          }
-
-          .current-time,
-          .duration {
-            width: 20%;
-            line-height: 50px;
-            letter-spacing: 0.15em;
-            font-size: 0.9em;
-          }
-
-          .audio-volume {
-            height: 50px;
-
-            .volume-bg {
-              width: 88%;
-            }
-
-            .volume {
-              width: 96%;
-            }
-
-            .volume-mute {
-              width: 12%;
-
-              .fa-volume-up {
-                line-height: 50px;
-                font-size: 1.5em;
-
-                &::before {
-                  display: block;
-                }
-              }
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }
-
-      .audio-tracklist {
-        margin: 0;
-        padding: 0;
-
-        .audio-tracklist-item {
-          margin-bottom: 0.5em;
-          font-size: 0.65em;
-          .tracknum {
-            width: 20%;
-          }
-          .audio-track-name {
-            width: 60%;
-          }
-
-          .trackbtn {
-            width: 20%;
-            cursor: pointer;
-            .fa-play {
-              line-height: 40px;
-              font-size: 200%;
-              &:hover {
-                background-color: $white-color;
-              }
-            }
-          }
-
-          .trackplays {
-            width: 20%;
-          }
-        }
-      }
 
       .results {
         padding: 0.25em;
@@ -6899,15 +6786,10 @@ footer {
         min-height: 240px;
         margin: 0.5em;
 
-        h2 {
+        .audio-track-name {
           font-size: 1.5em;
           line-height: 125px;
           width: 90%;
-        }
-
-        h3 {
-          font-size: 1em;
-          line-height: 40px;
         }
 
         h4 {
@@ -6960,6 +6842,106 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            margin-bottom: 0.5em;
+
+            .audio-player-btn {
+              width: 20%;
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1em;
+              }
+            }
+
+            .audio-progress {
+              width: 60%;
+              height: 50px;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 20%;
+              line-height: 50px;
+              letter-spacing: 0.15em;
+              font-size: 0.9em;
+            }
+
+            .audio-volume {
+              height: 50px;
+
+              .volume-bg {
+                width: 88%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 12%;
+
+                .fa-volume-up {
+                  line-height: 50px;
+                  font-size: 1.5em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+          padding: 0;
+
+          .audio-tracklist-item {
+            margin-bottom: 0.5em;
+            font-size: 0.65em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+                font-size: 200%;
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }
@@ -7178,7 +7160,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 96%;
+    width: 98%;
     height: auto;
   }
 
@@ -7405,11 +7387,14 @@ footer {
 
     /* search page form */
     #mannering-search {
-      width: 90%;
       padding: 0.5em;
 
       fieldset {
         padding: 1em;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
       }
 
       legend {
@@ -7433,9 +7418,10 @@ footer {
         font-size: 1em;
         margin: 0.5em 0;
         line-height: 35px;
+        width: 100%;
       }
 
-      .search-btn {
+      #search-btn {
         width: 75%;
         font-size: 1em;
 
@@ -7556,8 +7542,8 @@ footer {
           .tracknum {
             width: 20%;
           }
-          .audio-track-name {
-            width: 60%;
+          .trackname {
+            width: 50%;
           }
 
           .trackbtn {
@@ -7573,7 +7559,7 @@ footer {
           }
 
           .trackplays {
-            width: 20%;
+            width: 10%;
           }
         }
       }
@@ -7627,7 +7613,7 @@ footer {
       .results-large {
         min-height: 240px;
         margin: 0.5em;
-        h2 {
+        .audio-track-name {
           font-size: 1.5em;
           text-align: center;
           line-height: 100px;
@@ -7635,13 +7621,8 @@ footer {
           margin: 1em auto;
         }
 
-        h3 {
-          font-size: 0.9em;
-          line-height: 40px;
-        }
-
         h4 {
-          font-size: 0.8em;
+          font-size: 0.9em;
           line-height: 40px;
         }
 
@@ -7690,6 +7671,106 @@ footer {
 
         .result-label {
           text-indent: 1em;
+        }
+
+        .audio-controls {
+          height: auto;
+
+          .audiocntrl-container {
+            margin-bottom: 0.5em;
+
+            .audio-player-btn {
+              width: 20%;
+              .fa-play,
+              .fa-pause,
+              .fa-step-backward,
+              .fa-step-forward,
+              .fa-repeat {
+                font-size: 1em;
+              }
+            }
+
+            .audio-progress {
+              width: 60%;
+              height: 50px;
+
+              .load-progress {
+                width: 100%;
+              }
+
+              .play-progress {
+                width: 100%;
+              }
+            }
+
+            .current-time,
+            .duration {
+              width: 20%;
+              line-height: 50px;
+              letter-spacing: 0.15em;
+              font-size: 0.9em;
+            }
+
+            .audio-volume {
+              height: 50px;
+
+              .volume-bg {
+                width: 88%;
+              }
+
+              .volume {
+                width: 96%;
+              }
+
+              .volume-mute {
+                width: 12%;
+
+                .fa-volume-up {
+                  line-height: 50px;
+                  font-size: 1.5em;
+
+                  &::before {
+                    display: block;
+                  }
+                }
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .audio-tracklist {
+          margin: 0;
+          padding: 0;
+
+          .audio-tracklist-item {
+            margin-bottom: 0.5em;
+            font-size: 0.65em;
+            .tracknum {
+              width: 20%;
+            }
+            .trackname {
+              width: 50%;
+            }
+
+            .trackbtn {
+              width: 20%;
+              cursor: pointer;
+              .fa-play {
+                line-height: 40px;
+                font-size: 200%;
+                &:hover {
+                  background-color: $white-color;
+                }
+              }
+            }
+
+            .trackplays {
+              width: 10%;
+            }
+          }
         }
       }
     }

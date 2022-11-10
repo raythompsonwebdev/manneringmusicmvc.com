@@ -29,7 +29,7 @@ if (!isset($_GET['submit'])) {
 
 				<figure class="results-info">
 					<a href="/singleresult?albumid=<?= $row[0] ?? '' ?>&artistid=<?= $row['artistId'] ?? '' ?>" class="result-info-link" title="Go to <?= $row['album'] ?? ''; ?> page" aria-label="link to <?= $row['album'] ?? ''; ?> page">
-						<img src="assets/databasepics/WEBP/<?= $row['image']; ?>" class="c" alt="<?= $row['album'] ?? ''; ?> Album Cover Image" aria-labelledby="<?= $row['artist_name']; ?>" />
+						<img src="assets/databasepics/WEBP/<?= $row['image']; ?>" class="result-info-img" alt="<?= $row['album'] ?? ''; ?> Album Cover Image" aria-labelledby="<?= $row['artist_name']; ?>" />
 					</a>
 					<figcaption id="<?= $row['artist_name']; ?>" class="results-text">
 						<h3 class="results-text-name"><?= $row['artist_name']; ?></h3>

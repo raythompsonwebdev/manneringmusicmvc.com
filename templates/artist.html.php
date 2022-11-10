@@ -278,12 +278,12 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	<div id="results-container">
 
 		<div class="results-large">
-
-			<h2><?= $singleartist->artist_name; ?></h2>
 			<!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
+			<h3 class="audio-track-name"><?= $singleartist->artist_name; ?></h3>
 			<!--Audio Controls-->
-			<div class="audio_controls">
-				<h3 class="audio-track-name"></h3>
+
+			<div class="audio-controls">
+
 				<div class="audiocntrl-container">
 
 					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">

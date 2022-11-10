@@ -1,7 +1,7 @@
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		let searchBTN = window.document.querySelector('#searchBtn');
+		let searchBTN = window.document.querySelector('#search-btn');
 
 		searchBTN.addEventListener('click', function(e) {
 			e.preventDefault();
@@ -37,7 +37,7 @@
 				})
 				.then(function(data) {
 
-					window.document.getElementById('results_container').innerHTML = data;
+					window.document.getElementById('results-container').innerHTML = data;
 				})
 				.catch(function(err) {
 
@@ -87,7 +87,7 @@
 
 	<div id="loadingIndicator" style="display: none;">Ajax Loading...</div>
 
-	<div id="results_container"></div>
+	<div id="results-container"></div>
 
 	<br />
 	<br />
