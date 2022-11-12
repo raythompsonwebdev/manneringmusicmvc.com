@@ -279,9 +279,17 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 		<div class="results-large">
 			<!-- <button id="artist_btn" onclick="firstSong()">Play</button> -->
-			<h3 class="audio-track-name"><?= $singleartist->artist_name; ?></h3>
-			<!--Audio Controls-->
 
+
+			<figure class="artist-bio">
+				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" alt="artist-bio-image">
+				<figcaption class="artist-bio-text">
+					<h3 class="artist-bio-name"><?= $singleartist->artist_name; ?></h3>
+					<p><?= $singleartist->artist_text; ?></p>
+				</figcaption>
+			</figure>
+
+			<!--Audio Controls-->
 			<div class="audio-controls">
 
 				<div class="audiocntrl-container">
@@ -322,15 +330,14 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 				</div>
 				<div class="audiocntrl-container">
 					<div class="current-time" aria-label="current length of track in minutes and seconds">00:00</div>
-					<div class="progress">
+					<div class="audio-progress">
 						<div class="play-progress"></div>
 					</div>
 					<div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
 					</div>
 				</div>
 			</div>
-			<br />
-			<br />
+
 			<h4>Artist Tracks </h4>
 			<!--Audio Playlist-->
 			<ul class="audio-tracklist">

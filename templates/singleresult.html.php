@@ -299,8 +299,6 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			<!--Audio Controls-->
 			<div class="audio-controls">
 
-				<h3 class="audio-track-name"></h3>
-
 				<div class="audiocntrl-container">
 
 					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
@@ -340,7 +338,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 				</div>
 				<div class="audiocntrl-container">
 					<div class="current-time" aria-label="current length of track in minutes and seconds">00:00</div>
-					<div class="progress">
+					<div class="audio-progress">
 						<div class="play-progress"></div>
 					</div>
 					<div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
@@ -348,8 +346,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 				</div>
 
 			</div>
-			<h2><?= $singlealbums->getNumberOfSongs(); ?> Songs</span></h2>
-			<br />
+			<h3 class="audio-track-name"><?= $singlealbums->getNumberOfSongs(); ?> Songs</span></h3>
+
+			<h4></h4>
 
 			<!--Audio Playlist-->
 			<ul class="audio-tracklist">

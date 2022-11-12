@@ -1179,23 +1179,47 @@ input[type=submit]:active {
   border-radius: 5px;
   margin: 0.5em;
   width: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-weight: normal;
   /* audio controls */
   /* audio track list */
 }
-#mannering-content #results-container .results-large .audio-track-name {
-  font-size: 1.5em;
+#mannering-content #results-container .results-large .artist-bio {
+  width: 100%;
+}
+#mannering-content #results-container .results-large .artist-bio .artist-bio-image {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+#mannering-content #results-container .results-large .artist-bio .artist-bio-text {
+  width: 100%;
+}
+#mannering-content #results-container .results-large .artist-bio .artist-bio-text .artist-bio-name {
+  line-height: 40px;
+  font-size: 1em;
+  background-color: #3b3b3b;
+  color: #fafaf7;
   text-align: center;
-  line-height: 100px;
-  background-color: #fafaf7;
-  color: #181818;
-  width: 90%;
-  margin: 1em auto;
+  width: 100%;
 }
 #mannering-content #results-container .results-large h4 {
   font-size: 0.9em;
   line-height: 40px;
+  width: 100%;
 }
 #mannering-content #results-container .results-large .results-large-info {
   display: -webkit-box;
@@ -1212,6 +1236,7 @@ input[type=submit]:active {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  width: 50%;
 }
 #mannering-content #results-container .results-large .results-large-info .results-large-link {
   width: auto;
@@ -1287,13 +1312,18 @@ input[type=submit]:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1em;
+  width: 50%;
 }
 #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
   height: auto;
@@ -1308,6 +1338,10 @@ input[type=submit]:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
 }
 #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
   width: 20%;
@@ -1415,6 +1449,7 @@ input[type=submit]:active {
 #mannering-content #results-container .results-large .audio-tracklist {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
   display: -webkit-box;
@@ -2086,10 +2121,25 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     color: #ecac00;
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.9em;
-    line-height: 150px;
-    width: 80%;
+  #mannering-content #results-container .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    background-color: #3b3b3b;
+    color: #fafaf7;
+    text-align: center;
+    width: 100%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1.1em;
@@ -2111,9 +2161,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
             align-items: center;
     position: relative;
     gap: 1em;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: 15%;
+    width: 25%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -2122,7 +2173,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0 1em 0 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 85%;
+    width: 75%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-items {
     width: 100%;
@@ -2143,7 +2194,24 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     text-indent: 1em;
   }
   #mannering-content #results-container .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 14%;
@@ -2189,6 +2257,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.9em;
@@ -2648,10 +2717,21 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.8em;
-    line-height: 150px;
-    width: 80%;
+  #mannering-content #results-container .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1.1em;
@@ -2673,9 +2753,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
             align-items: center;
     position: relative;
     gap: 1em;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: 15%;
+    width: 25%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -2684,7 +2765,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0 1em 0 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 85%;
+    width: 75%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-items {
     width: 100%;
@@ -2705,7 +2786,28 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     text-indent: 1em;
   }
   #mannering-content #results-container .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 14%;
@@ -2751,6 +2853,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.9em;
@@ -3208,10 +3311,168 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
+  #mannering-content #results-container .results-large {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
     font-size: 1.8em;
     line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
     width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -3233,9 +3494,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
             align-items: center;
     position: relative;
     gap: 1em;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: 15%;
+    width: 25%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -3244,7 +3506,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0 1em 0 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 85%;
+    width: 75%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-items {
     width: 100%;
@@ -3268,7 +3530,24 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     text-indent: 1em;
   }
   #mannering-content #results-container .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 14%;
@@ -3314,6 +3593,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.9em;
@@ -3771,10 +4051,165 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.7em;
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
     line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
     width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -3796,9 +4231,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
             align-items: center;
     position: relative;
     gap: 1em;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: 20%;
+    width: 30%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -3807,7 +4243,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0 1em 0 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 80%;
+    width: 70%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-items {
     width: 100%;
@@ -3831,7 +4267,24 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     text-indent: 1em;
   }
   #mannering-content #results-container .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 14%;
@@ -3877,6 +4330,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.85em;
@@ -4340,10 +4794,165 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.7em;
-    line-height: 125px;
-    width: 90%;
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
@@ -4365,9 +4974,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
             align-items: center;
     position: relative;
     gap: 1em;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: 20%;
+    width: 30%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -4376,7 +4986,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0 1em 0 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 80%;
+    width: 70%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-itemsl {
     width: 100%;
@@ -4400,6 +5010,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -4445,6 +5059,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.85em;
@@ -4909,17 +5524,175 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
     font-size: 1.6em;
-    line-height: 125px;
-    width: 90%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 1em;
     line-height: 40px;
   }
+  #mannering-content #results-container .results-large .results-large-info {
+    width: 50%;
+  }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: auto;
+    width: 30%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -4928,7 +5701,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 1em 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 100%;
+    width: 70%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-itemsl .results-large-text-item {
     font-size: 0.75em;
@@ -4949,6 +5722,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -4994,6 +5771,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.8em;
@@ -5421,16 +6199,174 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results .results-text .results-text-artist .results-text-artist-link:hover {
     cursor: pointer;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
     font-size: 1.6em;
-    line-height: 125px;
-    width: 90%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.95em;
   }
+  #mannering-content #results-container .results-large .results-large-info {
+    width: 100%;
+  }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
-    width: auto;
+    width: 30%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -5439,7 +6375,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 1em 0;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text {
-    width: 100%;
+    width: 70%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-text .results-large-text-itemsl .results-large-text-item {
     font-size: 0.75em;
@@ -5461,6 +6397,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -5506,6 +6446,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     font-size: 0.75em;
@@ -6055,10 +6996,165 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.5em;
-    line-height: 125px;
-    width: 90%;
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.9em;
@@ -6068,6 +7164,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .results-large-info .results-large-link {
     width: auto;
@@ -6110,9 +7207,11 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 50%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
     margin-bottom: 0.5em;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -6166,6 +7265,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container .results-large .audio-tracklist {
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-tracklist .audio-tracklist-item {
     margin-bottom: 0.5em;
@@ -6655,10 +7755,165 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.5em;
-    line-height: 125px;
-    width: 90%;
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.9em;
@@ -6710,9 +7965,11 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
     margin-bottom: 0.5em;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -7227,6 +8484,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .audio-controls {
     height: auto;
+    width: 100%;
   }
   #mannering-content #results-container .audio-controls .audio-track-name {
     line-height: 60px;
@@ -7234,6 +8492,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .audio-controls .audiocntrl-container {
     margin-bottom: 0.5em;
+    width: 100%;
   }
   #mannering-content #results-container .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
@@ -7354,12 +8613,165 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     min-height: 240px;
     margin: 0.5em;
   }
-  #mannering-content #results-container .results-large .audio-track-name {
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 100px;
-    width: 90%;
-    margin: 1em auto;
+  #mannering-content #results-container .results-large .results-large .artist-bio {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large h4 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link {
+    width: 25%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-link .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text {
+    width: 75%;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .results-large-info .results-large-text .results-large-text-items .results-large-text-item .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  #mannering-content #results-container .results-large .results-large .result-label {
+    text-indent: 1em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audio-track-name {
+    font-size: 1.8em;
+    line-height: 150px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 14%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress {
+    width: 70%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .current-time,
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1.25em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume {
+    width: 30%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 80%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item {
+    font-size: 0.9em;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 20%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackname {
+    width: 50%;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 20%;
+    cursor: pointer;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  #mannering-content #results-container .results-large .results-large .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 10%;
   }
   #mannering-content #results-container .results-large h4 {
     font-size: 0.9em;
@@ -7411,9 +8823,11 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container .results-large .audio-controls {
     height: auto;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container {
     margin-bottom: 0.5em;
+    width: 100%;
   }
   #mannering-content #results-container .results-large .audio-controls .audiocntrl-container .audio-player-btn {
     width: 20%;
