@@ -1078,20 +1078,68 @@ input[type=submit]:active {
 #mannering-content #results-container {
   margin: 0;
   padding: 0;
-  height: auto;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: auto;
+  /* other albums list */
   /* search results list */
   /* single artist page */
+}
+#mannering-content #results-container .other-results {
+  height: auto;
+  padding: 0.25em;
+  border-radius: 5px;
+  margin: 0;
+  width: 20%;
+  display: block;
+  float: left;
+  font-weight: normal;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+#mannering-content #results-container .other-results .other-results-info {
+  /* Album image */
+  /* Album artist and name */
+}
+#mannering-content #results-container .other-results .other-results-info .other-result-link {
+  width: auto;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+#mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+  width: auto;
+  margin: 1em auto;
+  display: block;
+}
+#mannering-content #results-container .other-results .other-results-info .other-results-text {
+  width: 100%;
+}
+#mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+  font-size: 1em;
+  background-color: #2b2b2b;
+  color: #fafaf7;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+#mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+  font-size: 0.9em;
+  background-color: #666666;
+  color: #fafaf7;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+#mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+  -webkit-transition: scale(1.01);
+  transition: scale(1.01);
+  border: 1px solid #ecac00;
+  cursor: pointer;
 }
 #mannering-content #results-container .results {
   height: auto;
@@ -1193,11 +1241,25 @@ input[type=submit]:active {
       -ms-flex-align: start;
           align-items: flex-start;
   font-weight: normal;
+  gap: 0.5em;
   /* audio controls */
   /* audio track list */
 }
 #mannering-content #results-container .results-large .artist-bio {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 #mannering-content #results-container .results-large .artist-bio .artist-bio-image {
   width: auto;
@@ -1213,7 +1275,7 @@ input[type=submit]:active {
   font-size: 1em;
   background-color: #3b3b3b;
   color: #fafaf7;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 #mannering-content #results-container .results-large h4 {
@@ -1966,8 +2028,9 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     width: 100%;
   }
   #mannering-content h2 {
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: normal;
+    line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -2079,16 +2142,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 19%;
@@ -2122,7 +2211,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -2131,14 +2223,13 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
     background-color: #3b3b3b;
     color: #fafaf7;
-    text-align: center;
     width: 100%;
   }
   #mannering-content #results-container .results-large h4 {
@@ -2563,8 +2654,9 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     width: 100%;
   }
   #mannering-content h2 {
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: normal;
+    line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -2676,16 +2768,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 19%;
@@ -2718,7 +2836,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -2727,7 +2848,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -3160,8 +3281,9 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     width: 100%;
   }
   #mannering-content h2 {
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: normal;
+    line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -3270,16 +3392,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 24%;
@@ -3315,7 +3463,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     width: 100%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -3324,7 +3475,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -3900,8 +4051,9 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     width: 100%;
   }
   #mannering-content h2 {
-    font-size: 1.1em;
+    font-size: 1.8em;
     font-weight: normal;
+    line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -4010,16 +4162,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 24%;
@@ -4052,7 +4230,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -4061,7 +4242,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -4753,16 +4934,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 32%;
@@ -4795,7 +5002,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -4804,7 +5014,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -5483,16 +5693,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 32%;
@@ -5525,7 +5761,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -5534,7 +5773,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -6158,16 +6397,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     width: 48%;
@@ -6200,7 +6465,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     cursor: pointer;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -6209,7 +6477,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -6944,16 +7212,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   }
   #mannering-content #results-container {
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
   }
   #mannering-content #results-container .results {
     padding: 0.25em;
@@ -6997,7 +7291,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0.5em;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -7006,7 +7303,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -7714,6 +8011,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
   }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
+  }
   #mannering-content #results-container .results {
     padding: 0.25em;
     width: 70%;
@@ -7756,7 +8089,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0.5em;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -7765,7 +8101,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;
@@ -8482,6 +8818,42 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
   #mannering-content #results-container {
     margin: 0;
   }
+  #mannering-content #results-container .other-results {
+    padding: 0.25em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  #mannering-content #results-container .other-results .other-results-info {
+    /* Album image */
+    /* Album artist and name */
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-result-link .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text {
+    width: 100%;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info .other-results-text .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  #mannering-content #results-container .other-results .other-results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
+  }
   #mannering-content #results-container .audio-controls {
     height: auto;
     width: 100%;
@@ -8614,7 +8986,10 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: 0.5em;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio {
-    width: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-image {
     width: auto;
@@ -8623,7 +8998,7 @@ footer #inner-footer .inner-footer-item .inner-footer-link:hover {
     margin: auto;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text {
-    width: 100%;
+    width: 80%;
   }
   #mannering-content #results-container .results-large .results-large .artist-bio .artist-bio-text .artist-bio-name {
     line-height: 40px;

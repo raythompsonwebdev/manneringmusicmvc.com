@@ -264,7 +264,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			<figure class="results-large-info">
 
 				<a href="/artist?albumid=<?= $singlealbums->id ?? '' ?>&artistid=<?= $singlealbums->artistId ?? '' ?>" title="Link to artist page" class="results-large-link">
-					<img src="assets/databasepics/WEBP/<?= $singlealbums->image; ?>" class="results-large-img" alt="Album-Cover-Image" aria-labelledby="<?= $singlealbums->id ?>" />
+					<img src="assets/databasepics/WEBP/<?= $singlealbums->image; ?>" class="results-large-img" alt="Album-Cover-Image" width="150" height="150" aria-labelledby="<?= $singlealbums->id ?>" />
 				</a>
 
 				<figcaption id="<?= $singlealbums->id ?>" class="results-large-text">

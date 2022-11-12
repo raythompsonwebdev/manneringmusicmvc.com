@@ -688,11 +688,66 @@
   #results-container {
     margin: 0;
     padding: 0;
-    height: auto;
     width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    height: auto;
+
+    /* other albums list */
+    .other-results {
+      height: auto;
+      padding: 0.25em;
+      border-radius: 5px;
+      margin: 0;
+      width: 20%;
+      display: block;
+      float: left;
+      font-weight: normal;
+      flex: 0 0 auto;
+
+      .other-results-info {
+        /* Album image */
+        .other-result-link {
+          width: auto;
+          order: 0;
+          .other-result-img {
+            width: auto;
+            margin: 1em auto;
+            display: block;
+          }
+        }
+
+        /* Album artist and name */
+        .other-results-text {
+          width: 100%;
+
+          .other-results-name {
+            font-size: 1em;
+            background-color: $darker-stone-grey;
+            color: $white-color;
+            height: auto;
+            font-weight: normal;
+            line-height: 25px;
+            text-align: center;
+            margin-bottom: 0.2em;
+          }
+          .other-results-genre {
+            font-size: 0.9em;
+            background-color: $light-grey;
+            color: $white-color;
+            height: auto;
+            font-weight: normal;
+            line-height: 25px;
+            text-align: center;
+            margin-bottom: 0.2em;
+          }
+        }
+      }
+
+      .other-results-info:hover .result-info-img {
+        transition: scale(1.01);
+        border: 1px solid $orange-color;
+        cursor: pointer;
+      }
+    }
 
     /* search results list */
     .results {
@@ -787,10 +842,14 @@
       justify-content: flex-start;
       align-items: flex-start;
       font-weight: normal;
+      gap: 0.5em;
 
       .artist-bio {
         width: 100%;
-
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
         .artist-bio-image {
           width: auto;
           height: auto;
@@ -804,7 +863,7 @@
             font-size: 1em;
             background-color: $stone-grey3;
             color: $white-color;
-            text-align: center;
+            text-align: left;
             width: 100%;
           }
         }
@@ -1572,8 +1631,9 @@ footer {
     width: 100%;
 
     h2 {
-      font-size: 1.2em;
+      font-size: 1.8em;
       font-weight: normal;
+      line-height: 50px;
     }
 
     p {
@@ -1700,9 +1760,42 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
+
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
 
       .results {
         width: 19%;
@@ -1743,7 +1836,8 @@ footer {
 
       .results-large {
         .artist-bio {
-          width: 50%;
+          width: 49%;
+          display: flex;
           .artist-bio-image {
             width: auto;
             height: auto;
@@ -1751,13 +1845,12 @@ footer {
             margin: auto;
           }
           .artist-bio-text {
-            width: 100%;
+            width: 80%;
             .artist-bio-name {
               line-height: 40px;
               font-size: 1em;
               background-color: $stone-grey3;
               color: $white-color;
-              text-align: center;
               width: 100%;
             }
           }
@@ -2205,8 +2298,9 @@ footer {
   #mannering-content {
     width: 100%;
     h2 {
-      font-size: 1.2em;
+      font-size: 1.8em;
       font-weight: normal;
+      line-height: 50px;
     }
 
     p {
@@ -2333,10 +2427,41 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
 
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 19%;
 
@@ -2374,8 +2499,8 @@ footer {
 
       .results-large {
         .artist-bio {
-          width: 50%;
-
+          width: 49%;
+          display: flex;
           .artist-bio-image {
             width: auto;
             height: auto;
@@ -2383,7 +2508,7 @@ footer {
             margin: auto;
           }
           .artist-bio-text {
-            width: 100%;
+            width: 80%;
             .artist-bio-name {
               line-height: 40px;
               font-size: 1em;
@@ -2837,8 +2962,9 @@ footer {
     width: 100%;
 
     h2 {
-      font-size: 1.2em;
+      font-size: 1.8em;
       font-weight: normal;
+      line-height: 50px;
     }
 
     p {
@@ -2964,10 +3090,41 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
 
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 24%;
 
@@ -3007,8 +3164,8 @@ footer {
         width: 100%;
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -3016,7 +3173,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -3617,8 +3774,9 @@ footer {
     width: 100%;
 
     h2 {
-      font-size: 1.1em;
+      font-size: 1.8em;
       font-weight: normal;
+      line-height: 50px;
     }
 
     p {
@@ -3744,10 +3902,41 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
 
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 24%;
         .results-info {
@@ -3785,8 +3974,8 @@ footer {
       .results-large {
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -3794,7 +3983,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -4526,10 +4715,42 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 32%;
 
@@ -4568,8 +4789,8 @@ footer {
       .results-large {
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -4577,7 +4798,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -5301,10 +5522,42 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 32%;
 
@@ -5343,8 +5596,8 @@ footer {
       .results-large {
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -5352,7 +5605,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -6043,10 +6296,42 @@ footer {
     #results-container {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         width: 48%;
 
@@ -6085,8 +6370,8 @@ footer {
       .results-large {
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -6094,7 +6379,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -6893,10 +7178,42 @@ footer {
 
     #results-container {
       margin: 0;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         padding: 0.25em;
         width: 48%;
@@ -6947,8 +7264,8 @@ footer {
         margin: 0.5em;
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 49%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -6956,7 +7273,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -7769,6 +8086,41 @@ footer {
     #results-container {
       margin: 0;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .results {
         padding: 0.25em;
         width: 70%;
@@ -7820,8 +8172,8 @@ footer {
 
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 100%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -7829,7 +8181,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;
@@ -8652,6 +9004,41 @@ footer {
     #results-container {
       margin: 0;
 
+      .other-results {
+        padding: 0.25em;
+        flex: 0 0 auto;
+
+        .other-results-info {
+          /* Album image */
+          .other-result-link {
+            order: 0;
+            .other-result-img {
+              margin: 1em auto;
+              display: block;
+            }
+          }
+
+          /* Album artist and name */
+          .other-results-text {
+            width: 100%;
+
+            .other-results-name {
+              font-size: 1em;
+              margin-bottom: 0.2em;
+            }
+            .other-results-genre {
+              font-size: 0.9em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+
+        .other-results-info:hover .result-info-img {
+          transition: scale(1.01);
+          border: 1px solid $orange-color;
+          cursor: pointer;
+        }
+      }
       .audio-controls {
         height: auto;
         width: 100%;
@@ -8808,8 +9195,8 @@ footer {
 
         .results-large {
           .artist-bio {
-            width: 50%;
-
+            width: 100%;
+            display: flex;
             .artist-bio-image {
               width: auto;
               height: auto;
@@ -8817,7 +9204,7 @@ footer {
               margin: auto;
             }
             .artist-bio-text {
-              width: 100%;
+              width: 80%;
               .artist-bio-name {
                 line-height: 40px;
                 font-size: 1em;

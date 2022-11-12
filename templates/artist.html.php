@@ -282,7 +282,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 
 			<figure class="artist-bio">
-				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" alt="artist-bio-image">
+				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
 				<figcaption class="artist-bio-text">
 					<h3 class="artist-bio-name"><?= $singleartist->artist_name; ?></h3>
 					<p><?= $singleartist->artist_text; ?></p>
@@ -366,15 +366,15 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		<h2> Other Albums</h2>
 
 		<?php foreach ($singlealbums as $value) : ?>
-			<div class="results">
-				<figure class="results-info">
-					<a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>">
-						<img src="/assets/databasepics/WEBP/<?= $value->image ?>" alt="album-cover-image" />
+			<div class="other-results">
+				<figure class="other-results-info">
+					<a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>" class="other-result-link">
+						<img src="/assets/databasepics/WEBP/<?= $value->image ?>" width="150" height="150" class="other-result-img" alt="<?= $value->album ?>" />
 					</a>
-					<figcaption class="results-text">
+					<figcaption class="other-results-text">
 
-						<h5><?= $value->album ?></h5>
-						<h6><?= $value->genre ?></h6>
+						<h3 class="other-results-name"><?= $value->album ?></h5>
+							<h4 class="other-results-genre"><?= $value->genre ?></h6>
 
 					</figcaption>
 				</figure>
