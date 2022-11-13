@@ -19,7 +19,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		audioElement.updateVolumeProgressBar(audioElement.audio); //audio class func
 
 		let prevHighlight = document.querySelector('.audio-controls');
-		let progressBar = document.querySelector('.audio-progress .play-progress');
+		let progressBar = document.querySelector('.play-progress');
 		let volumeControl = document.querySelector('#volume');
 		let playControl = document.querySelector('#play-button');
 		let pauseControl = document.querySelector('#pause-button');
@@ -50,7 +50,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		volumeControl.addEventListener('change', (e) => {
 			//if (mouseDown == true) {
 
-			let percentage = e.target.value / 100; //this = div.audio-volume input.volume
+			let percentage = e.target.value / 100; //this = div.audio_volume input.volume
 
 			//limits volume range to bewteen 0 and 1
 			if (percentage >= e.target.min && percentage <= e.target.max) {
@@ -131,21 +131,21 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		repeat = !repeat;
 		//using font awesome instead of image
 		imageName = repeat ? "green" : "red";
-		document.querySelector("i.fa-repeat").style.color = imageName;
+		document.querySelector(".fa-repeat").style.color = imageName;
 	}
 
 	//set mute button
 	function setMute() {
 		audioElement.audio.muted = !audioElement.audio.muted;
 		let imageName = audioElement.audio.muted ? "green" : "red";
-		document.querySelector("i.fa-volume-up").style.color = imageName;
+		document.querySelector(".fa-volume-up").style.color = imageName;
 	}
 
 	//set shuffle
 	function setShuffle() {
 		shuffle = !shuffle;
 		let imageName = shuffle ? "green" : "red";
-		document.querySelector("i.fa-random").style.color = imageName;
+		document.querySelector(".fa-random").style.color = imageName;
 
 		if (shuffle == true) {
 			//Randomize playlist
@@ -199,11 +199,11 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		}).then(function(body) {
 			let track = JSON.parse(body);
 			if (track[0] != null) {
-				document.querySelector(".audio-controls .trackName").textContent = track[0].songtitle;
+				document.querySelector(".audio-track-name").textContent = track[0].songtitle;
 				audioElement.setTrack(track);
 
 			} else {
-				document.querySelector(".audio-controls .trackName").textContent = "No Tracks Available";
+				document.querySelector(".audio-track-name").textContent = "No Tracks Available";
 			}
 
 			if (play == true) {
@@ -305,7 +305,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 						<i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
 					</button>
 
-					<button id="audio-player-btn" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
+					<button id="play-button" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
 						<i class="fa fa-play" aria-hidden="true" title="play"></i>
 					</button>
 
@@ -344,11 +344,10 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 					<div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
 					</div>
 				</div>
-
+				<h3 class="audio-track-name"></h3>
 			</div>
-			<h3 class="audio-track-name"><?= $singlealbums->getNumberOfSongs(); ?> Songs</span></h3>
 
-			<h4></h4>
+			<h4><?= $singlealbums->getNumberOfSongs(); ?> Songs</h4>
 
 			<!--Audio Playlist-->
 			<ul class="audio-tracklist">

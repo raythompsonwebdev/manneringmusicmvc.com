@@ -22,10 +22,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		//update volume add full width
 		audioElement.updateVolumeProgressBar(audioElement.audio); //audio class func
 
-		let prevHighlight = document.querySelector('div.audio_controls');
-		let progressBar = document.querySelector('div.progress div.play_progress');
-		let volumeControl = document.querySelector('input#volume');
-
+		let prevHighlight = document.querySelector('.audio-controls');
+		let progressBar = document.querySelector('.play-progress');
+		let volumeControl = document.querySelector('#volume');
 		let playControl = document.querySelector('#play-button');
 		let pauseControl = document.querySelector('#pause-button');
 
@@ -134,21 +133,21 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		repeat = !repeat;
 		//using font awesome instead of image
 		imageName = repeat ? "green" : "red";
-		document.querySelector("i.fa-repeat").style.color = imageName;
+		document.querySelector(".fa-repeat").style.color = imageName;
 	}
 
 	//set mute button
 	function setMute() {
 		audioElement.audio.muted = !audioElement.audio.muted;
 		var imageName = audioElement.audio.muted ? "green" : "red";
-		document.querySelector("i.fa-volume-up").style.color = imageName;
+		document.querySelector(".fa-volume-up").style.color = imageName;
 	}
 
 	//set shuffle
 	function setShuffle() {
 		shuffle = !shuffle;
 		var imageName = shuffle ? "green" : "red";
-		document.querySelector("i.fa-random").style.color = imageName;
+		document.querySelector(".fa-random").style.color = imageName;
 
 		if (shuffle == true) {
 			//Randomize playlist
@@ -206,12 +205,13 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 			if (track[0] != null) {
 
-				//console.log(track[0]);
-				document.querySelector("div.audio_controls h3.trackName").textContent = track[0].songtitle;
+				console.log(track[0].songtitle);
+
+				document.querySelector(".artist-track-name").textContent = `Track Name : ${track[0].songtitle}`;
 				audioElement.setTrack(track);
 
 			} else {
-				document.querySelector("div.audio_controls h3.trackName").textContent = "No Tracks Available";
+				document.querySelector(".artist-track-name").textContent = "No Tracks Available";
 			}
 
 			if (play == true) {
@@ -233,23 +233,17 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			//get tracks from database
 			let url = 'helpers/updatePlays.php';
 			let formData = new FormData();
-			console.log(audioElement.currentlyPlaying);
+			// console.log(audioElement.currentlyPlaying);
 			formData.append("songId", audioElement.currentlyPlaying[0].id);
-
 			fetch(url, {
 				method: 'POST',
 				body: formData
-				//mode: 'cors', // no-cors, *cors, same-origin
-				// headers: {
 
-				//     'Content-Type': 'application/x-www-form-urlencoded',
-				// },
 
 			}).then(function(response) {
 
-				//console.log(response);
-
 				return response.text();
+
 
 			}).catch(function(err) {
 				console.error('Fetch Error :-S', err);
@@ -291,7 +285,6 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 			<!--Audio Controls-->
 			<div class="audio-controls">
-
 				<div class="audiocntrl-container">
 
 					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
@@ -336,7 +329,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 					<div class="duration" aria-label="current length of track in minutes and seconds left to play">00:00
 					</div>
 				</div>
+				<h4 class="artist-track-name"></h4>
 			</div>
+
 
 			<h4>Artist Tracks </h4>
 			<!--Audio Playlist-->
@@ -357,7 +352,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			<!--Temporary Play List-->
 			<script>
 				//songId value from value of $singleaudio variable
-				var tempSongIds = '<?= json_encode($songId[0]); ?>';
+				let tempSongIds = '<?= json_encode($songId[0]); ?>';
 				tempPlaylist = JSON.parse(tempSongIds);
 			</script>
 
@@ -392,5 +387,4 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 	<br />
 
-</section>
 </section>

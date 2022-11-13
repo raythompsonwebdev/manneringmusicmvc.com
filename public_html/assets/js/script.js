@@ -1,19 +1,19 @@
-// eslint-disable-next-line no-unused-vars
-const currentPlaylist = [];
-// eslint-disable-next-line no-unused-vars
-const shufflePlaylist = [];
+// eslint-disable-next-line prefer-const, no-unused-vars
+let currentPlaylist = [];
+// eslint-disable-next-line prefer-const, no-unused-vars
+let shufflePlaylist = [];
 // eslint-disable-next-line prefer-const
-const tempPlaylist = [];
-// eslint-disable-next-line no-unused-vars
-const audioElement = null;
-// eslint-disable-next-line no-unused-vars
-const mouseDown = false;
-// eslint-disable-next-line no-unused-vars
-const currentIndex = 0;
-// eslint-disable-next-line no-unused-vars
-const repeat = false;
-// eslint-disable-next-line no-unused-vars
-const shuffle = false;
+let tempPlaylist = [];
+// eslint-disable-next-line prefer-const, no-unused-vars
+let audioElement;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let mouseDown = false;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let currentIndex = 0;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let repeat = false;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let shuffle = false;
 
 // Audio Class
 // eslint-disable-next-line no-unused-vars
@@ -47,27 +47,27 @@ class Audio {
     // Can Play //
     this.audio.addEventListener('canplay', (e) => {
       const durations = this.formatTime(e.target.duration);
-      document.querySelector('div.current_time').textContent = durations;
+      document.querySelector('.current-time').textContent = durations;
     });
 
     // Updates Progress of song playing
     this.updateTimeProgressBar = (audio) => {
-      document.querySelector('div.current_time').textContent = this.formatTime(
+      document.querySelector('.current-time').textContent = this.formatTime(
         audio.currentTime
       );
-      document.querySelector('div.duration').textContent = this.formatTime(
+      document.querySelector('.duration').textContent = this.formatTime(
         audio.duration - audio.currentTime
       );
       const progress = (audio.currentTime / audio.duration) * 100;
       document.querySelector(
-        '.progress .play_progress'
+        '.audio-progress .play-progress'
       ).style.width = `${progress}%`;
     };
 
     // Display bar to display volume level //
     this.updateVolumeProgressBar = (audio) => {
       const volume = audio.volume * 100;
-      document.querySelector(' input.volume').value = `${volume}`;
+      document.querySelector(' #volume').value = `${volume}`;
     };
 
     // Time Display Update //
