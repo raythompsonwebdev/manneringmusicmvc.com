@@ -1,0 +1,9651 @@
+@import 'partials/normalize';
+@import 'partials/variables';
+@import 'partials/base';
+
+.show-button {
+  display: block;
+  opacity: 1;
+}
+
+.hide-button {
+  display: none;
+  opacity: 0;
+}
+
+#mobile-toggle {
+  height: 55px;
+  width: 55px;
+  color: $bg-black;
+  background-color: $white-color;
+  outline: none;
+  border: none;
+  z-index: 200;
+  top: 0.5em;
+  left: 83vw;
+  transition: all 0.2s ease-in 0s;
+  position: absolute;
+
+  &:hover {
+    background-color: $white-color;
+    color: $bg-black;
+  }
+
+  &:active,
+  &:focus {
+    color: $white-color;
+    background-color: $bg-black;
+  }
+}
+
+#wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 98%;
+  height: auto;
+}
+
+#mannering-header {
+  height: 75px;
+  clear: both;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+#site-logo {
+  width: 63%;
+  height: 40px;
+  padding-left: 1%;
+  flex: 1 0 auto;
+  &:focus {
+    outline: #cc9900 dotted 1px;
+  }
+}
+
+#logo {
+  margin: 0;
+  font-size: 1.4em;
+  width: 100%;
+  height: auto;
+  font-weight: bold;
+  text-shadow: 1px 1px $bg-black;
+  line-height: 40px;
+  display: block;
+  float: left;
+  color: $orange-color;
+
+  span {
+    height: 100%;
+    margin: 0;
+    color: $white-color;
+    text-align: left;
+    display: inline-block;
+  }
+
+  span:last-of-type {
+    height: 100%;
+    color: $light-grey;
+    display: inline-block;
+    margin: 0 0.05em;
+  }
+}
+
+.site-description {
+  float: none;
+  display: block;
+  width: 100%;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px $bg-black;
+  line-height: 20px;
+  font-size: 0.7em;
+  font-weight: normal;
+  padding: 0;
+  clear: left;
+  color: $orange-color1;
+  margin: 0;
+}
+
+#mannering-social {
+  height: 40px;
+  width: 35%;
+  text-align: center;
+  flex: 1 1 auto;
+  display: none;
+}
+
+#mannering-social-links {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mannering-social-item {
+  width: 10%;
+  height: auto;
+  margin-right: 0.2em;
+  text-align: center;
+  flex: 1 0 auto;
+}
+
+.mannering-social-link {
+  background-color: $stone-grey;
+  margin: 0;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: $white-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  &:visited {
+    color: $stone-grey;
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+  &:hover {
+    color: $stone-grey;
+    background-color: $orange-color;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  &:focus {
+    color: $white-color;
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+  &:active {
+    color: $stone-grey;
+    background-color: $white-color;
+    font-weight: bold;
+  }
+}
+
+#mannering-nav {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0.5em;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  z-index: 140;
+}
+
+#mannering-mobile-inner-nav {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.mannering-mobile-inner-nav-item {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  flex: 1 0 auto;
+}
+
+.mannering-mobile-inner-nav-link {
+  text-decoration: none;
+  font-family: $FontListText;
+  width: 100%;
+  line-height: 40px;
+  background-color: $stone-grey;
+  color: $white-color;
+  display: block;
+  font-size: 0.9em;
+  font-weight: normal;
+  &:visited {
+    color: $stone-grey;
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+  &:hover {
+    color: $stone-grey;
+    background-color: $orange-color;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  &:focus {
+    color: $white-color;
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+  &:active {
+    color: $stone-grey;
+    background-color: $white-color;
+    font-weight: bold;
+  }
+}
+
+.mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+  font-size: 65%;
+}
+
+#mannering-inner-nav {
+  display: none;
+}
+
+#mannering-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 600px;
+  h2 {
+    width: 100%;
+    color: $white-color;
+    height: auto;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    font-weight: normal;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    line-height: 1.6em;
+    margin: 0;
+    display: block;
+    color: $white-color;
+    padding: 0.5em;
+    width: 97%;
+  }
+}
+
+#summary {
+  height: 50px;
+  width: 100%;
+  background-color: #cc9900;
+  display: none;
+}
+
+#main-section {
+  color: $white-color;
+  height: auto;
+  width: 100%;
+  padding-top: 0.5em;
+  margin: 0 0 1em;
+}
+
+/* login error */
+.login-error {
+  color: $white-color;
+  &:hover {
+    color: $orange-color;
+    font-weight: bold;
+  }
+}
+
+/* add category Link */
+#add-cat-link {
+  width: 100%;
+  display: block;
+  line-height: 35px;
+}
+
+/* edit category form */
+#edit-category {
+  width: 50%;
+  display: block;
+  margin: 5em auto;
+  padding: 1em;
+  background-color: $stone-grey;
+}
+
+.edit-category-label {
+  line-height: 35px;
+  display: block;
+  width: 100%;
+  color: $white-color;
+}
+
+#categoryname {
+  line-height: 35px;
+  display: block;
+  width: 100%;
+}
+
+#edit-category-submit {
+  margin: 1em auto;
+  display: block;
+  width: 50%;
+}
+
+/* add category form */
+#category-form {
+  width: 100%;
+  display: block;
+  margin: auto;
+
+  label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  input[type='text'] {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+
+  input[type='submit'] {
+    margin: 1em auto;
+    display: block;
+    width: 70%;
+  }
+}
+
+/* reviews page */
+#reviews {
+  min-height: 250px;
+}
+
+#reviews > blockquote {
+  width: 100%;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: 1em;
+  background-color: $white-color;
+  color: $bg-black;
+  padding: 0.5em;
+  p {
+    background-color: $white-color;
+    color: $bg-black;
+    font-size: 0.9em;
+    font-style: italic;
+    min-height: 50px;
+    padding: 0;
+  }
+
+  form {
+    padding: 1em 0;
+    input[type='submit'] {
+      width: 30%;
+    }
+  }
+}
+
+#review-pagination {
+  display: block;
+  clear: both;
+  line-height: 45px;
+  font-size: 0.85em;
+}
+
+/* category list */
+#categories {
+  display: block;
+  list-style: none;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.categories-item {
+  width: 98%;
+  height: auto;
+  margin: 0.25em auto;
+}
+
+.categories-link {
+  line-height: 45px;
+  display: block;
+  text-align: center;
+  color: $white-color;
+  background-color: $stone-grey;
+  &:hover {
+    background-color: $orange-color;
+    color: $stone-grey;
+    cursor: pointer;
+  }
+}
+
+/* genre section  */
+.genre-section {
+  padding: 0;
+  margin: 0 0 1em;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h3 {
+    align-self: center;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    width: 100%;
+    color: $white-color;
+    line-height: 40px;
+    text-align: center;
+    background-color: $bg-black;
+  }
+}
+
+/* home page albums sections hip hop country jazz */
+.genre-section:last-of-type {
+  margin: 0 0 1em;
+}
+
+.album-card {
+  width: 75%;
+  margin: 0.25em;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  padding: 0;
+  text-align: center;
+  height: auto;
+  min-height: auto;
+  flex: 1 0 auto;
+}
+
+.album-card-image {
+  border: 2px solid $stone-grey;
+  transition: all 0.5s ease;
+  width: auto;
+  margin: 3% auto;
+  cursor: pointer;
+}
+
+.album-card-text {
+  margin: 0;
+}
+
+.album-card-artist {
+  line-height: 35px;
+  background-color: $darker-stone-grey;
+  font-size: 1em;
+  color: $white-color;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+}
+
+.album-card-genre {
+  background-color: $light-grey;
+  line-height: 35px;
+  font-size: 0.9em;
+  color: $white-color;
+}
+
+.album-card:hover {
+  cursor: pointer;
+}
+
+.album-card:hover .album-card-image {
+  transition: scale(1.02);
+  border: 2px solid $orange-color;
+}
+
+/* edit review form */
+#review-edit {
+  width: 40%;
+  height: auto;
+  color: $white-color;
+  padding: 2%;
+  display: block;
+  background-color: $darker-stone-grey;
+  margin: auto;
+}
+
+#reviewtext {
+  width: 100%;
+  border: 2px solid $light-grey;
+  border-radius: 5px;
+  display: block;
+  padding: 0;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+.reviewtext-check {
+  width: 15px;
+  display: block;
+  height: 35px;
+  float: right;
+  margin-right: 0.5em;
+}
+
+.reviewtext-label {
+  line-height: 30px;
+  height: 30px;
+  width: 80%;
+  font-size: 0.9em;
+}
+
+#reviewtext-submit {
+  background-color: $orange-color;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  width: 50%;
+  height: 40px;
+  color: $white-color;
+  font-size: 1.1em;
+  box-shadow: none;
+  display: block;
+
+  &:hover {
+    margin: 0 auto;
+    color: $stone-grey;
+    font-weight: bold;
+  }
+}
+
+/* form errors */
+.error,
+.notice,
+.success {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid $white-color;
+  width: 200px;
+  position: absolute;
+  left: 41%;
+  top: 350px;
+}
+
+.error {
+  background: $error-bg;
+  color: $error-color;
+  border-color: $error-color;
+  width: 100%;
+}
+
+.notice {
+  background: $notice-bg;
+  color: $notice-color;
+  border-color: $notice-border;
+  width: 100%;
+}
+
+.success {
+  background: $success-bg;
+  color: $success-color;
+  border-color: $success-border;
+  width: 100%;
+}
+
+/* search page form */
+#mannering-search {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-family: $FontListText;
+
+  fieldset {
+    padding: 1em;
+    border: 1px solid $light-grey;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5em;
+  }
+
+  legend {
+    width: 50%;
+    color: $white-color;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    border: 1px solid $light-grey;
+    margin-bottom: 0.5em;
+  }
+}
+
+.search-label {
+  font-size: 1em;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#artist,
+#album,
+#genre {
+  border: 2px solid $light-grey;
+  border-radius: 5px;
+  background: $white-color;
+  padding: 0;
+  font-size: 1em;
+  width: 25%;
+  color: $bg-black;
+  line-height: 35px;
+  display: inline-block;
+}
+
+#genre option {
+  line-height: 35px;
+}
+
+#search-btn {
+  font-family: $FontListText;
+  letter-spacing: 0.1em;
+  width: 25%;
+  color: $white-color;
+  font-size: 1em;
+  display: inline-block;
+  background-color: $orange-color;
+  font-weight: normal;
+  line-height: 35px;
+
+  &:hover {
+    letter-spacing: 0.12em;
+    background-color: $white-color;
+    color: $orange-color;
+    font-weight: bold;
+  }
+}
+
+.refresh-page-link {
+  font-size: 0.9em;
+  text-align: left;
+  color: $white-color;
+  margin: 0 auto;
+  width: 100%;
+  line-height: 40px;
+  float: left;
+
+  a {
+    text-decoration: none;
+    color: $white-color;
+    display: block;
+    margin: 0 auto;
+    width: 98%;
+    line-height: 40px;
+
+    &:hover {
+      color: $orange-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.aboutpage-img {
+  width: 14%;
+  margin: 0 1% 0 0;
+  float: left;
+}
+
+/* front-page slider */
+#slider {
+  width: 100%;
+  margin: 1em 0 0;
+  display: block;
+  background-color: $white-color;
+  height: auto;
+}
+
+#results-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2em;
+}
+
+/* other albums list */
+.other-results {
+  height: auto;
+  padding: 0;
+  border-radius: 5px;
+  margin: 0;
+  width: 19%;
+  font-weight: normal;
+  flex: 0 1 auto;
+}
+
+.other-results-info {
+  margin: 0;
+}
+
+.other-result-link {
+  width: auto;
+  order: 0;
+}
+
+.other-result-img {
+  width: auto;
+  margin: 1em auto;
+  display: block;
+}
+
+/* Album artist and name */
+.other-results-text {
+  width: 100%;
+}
+
+.other-results-name {
+  font-size: 1em;
+  background-color: $darker-stone-grey;
+  color: $white-color;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.other-results-genre {
+  font-size: 0.9em;
+  background-color: $light-grey;
+  color: $white-color;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.other-results-info:hover .result-info-img {
+  transition: scale(1.01);
+  border: 1px solid $orange-color;
+  cursor: pointer;
+}
+
+/* search results list */
+.results {
+  height: auto;
+  padding: 0;
+  border-radius: 5px;
+  margin: 0;
+  width: 80%;
+  font-weight: normal;
+  flex: 0 1 auto;
+}
+
+.results-info {
+  margin: 0;
+}
+
+.result-info-link {
+  width: auto;
+  order: 0;
+}
+
+.result-info-img {
+  width: auto;
+  margin: 1em auto;
+  display: block;
+}
+
+/* Album artist and name */
+.results-text {
+  width: 100%;
+}
+
+.results-text-name {
+  font-size: 1em;
+  background-color: $darker-stone-grey;
+  color: $white-color;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.results-text-album {
+  font-size: 0.9em;
+  background-color: $light-grey;
+  color: $white-color;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.results-text-artist {
+  font-size: 0.85em;
+  background-color: $darker-stone-grey;
+  color: $white-color;
+  height: auto;
+  font-weight: normal;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.results-text-artist-link {
+  background-color: $orange-color;
+  color: $white-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    color: $orange-color;
+    background-color: $white-color;
+    cursor: pointer;
+  }
+}
+
+.results-info:hover .result-info-img {
+  transition: scale(1.01);
+  border: 1px solid $orange-color;
+  cursor: pointer;
+}
+
+/* single artist page */
+.results-large {
+  height: auto;
+  min-height: 240px;
+  padding: 0;
+  border-radius: 5px;
+  margin: 0.5em;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: normal;
+  gap: 0.5em;
+
+  h4 {
+    font-size: 0.9em;
+    line-height: 40px;
+    width: 100%;
+  }
+}
+
+.artist-bio {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.artist-bio-image {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.artist-bio-text {
+  width: 100%;
+}
+
+.artist-bio-name {
+  line-height: 40px;
+  font-size: 1em;
+  text-indent: 0.5em;
+  background-color: $stone-grey3;
+  color: $white-color;
+  text-align: left;
+  width: 100%;
+}
+
+.results-large-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 48%;
+}
+
+.results-large-link {
+  width: auto;
+  order: 0;
+}
+
+.results-large-img {
+  margin: 1em 0;
+}
+
+.results-large-text {
+  width: 96%;
+  order: 1;
+}
+
+.results-large-text-items {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.results-large-text-item {
+  display: inline-block;
+  padding: 0;
+  color: $white-color;
+  line-height: 35px;
+  height: 35px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.7em;
+  background-color: $darker-stone-grey;
+  width: 100%;
+  margin-bottom: 0.2em;
+}
+
+.large-text {
+  width: 79%;
+  text-indent: 0.25em;
+  float: left;
+  display: block;
+  line-height: 35px;
+  height: 35px;
+  color: $white-color;
+}
+
+.large-text-link {
+  padding: 0;
+  margin: 0;
+}
+
+.large-text-title {
+  text-indent: 0.25em;
+  width: 20%;
+  display: block;
+  float: left;
+  line-height: 35px;
+  height: 35px;
+  background-color: $white-color;
+  color: $bg-black;
+  border-right: solid 1px $dark-grey;
+}
+
+.results-large-info :hover .results-large-img {
+  cursor: pointer;
+}
+
+.result-label {
+  background-color: $stone-grey3;
+  color: $white-color;
+  width: 100%;
+  display: block;
+  margin: 0;
+  line-height: 35px;
+  text-indent: 1em;
+}
+
+/* audio controls */
+.audio-controls {
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  width: 50%;
+  .audio-track-name {
+    font-size: 1em;
+    line-height: 50px;
+  }
+  .audiocntrl-container {
+    height: auto;
+    display: flex;
+    margin-bottom: 0.5em;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    .audio-player-btn {
+      width: 20%;
+      flex: 0 1 auto;
+      height: auto;
+      line-height: 50px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: $bg-black;
+      color: $white-color;
+      .fa-play,
+      .fa-pause,
+      .fa-step-backward,
+      .fa-step-forward,
+      .fa-repeat {
+        font-size: 1em;
+        display: block;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        line-height: 50px;
+      }
+      &:hover {
+        font-size: 1.1em;
+        background-color: $white-color;
+        color: $bg-black;
+      }
+    }
+
+    .audio-progress {
+      width: 60%;
+      height: 50px;
+
+      .load-progress {
+        width: 100%;
+        background-color: $orange-color;
+        height: 100%;
+      }
+
+      .play-progress {
+        width: 100%;
+        cursor: pointer;
+        background-color: $orange-color;
+        height: 100%;
+      }
+    }
+
+    .current-time,
+    .duration {
+      font-family: monospace;
+      width: 20%;
+      line-height: 50px;
+      letter-spacing: 0.15em;
+      text-align: center;
+      background-color: $bg-black;
+      text-shadow: none;
+      font-size: 0.9em;
+    }
+
+    .audio-volume {
+      width: 100%;
+      height: 50px;
+      display: flex;
+
+      .volume-bg {
+        width: 88%;
+        height: 100%;
+        background-color: $stone-grey3;
+        display: flex;
+      }
+
+      .volume {
+        width: 96%;
+        display: block;
+        background-color: $white-color;
+        margin: 0.5em;
+        height: auto;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .volume-mute {
+        width: 12%;
+        height: 100%;
+        background-color: $bg-black;
+        color: $white-color;
+        border: none;
+        outline: none;
+        .fa-volume-up {
+          display: block;
+          width: 100%;
+          text-align: center;
+          line-height: 50px;
+          font-size: 1.5em;
+          &::before {
+            display: block;
+          }
+        }
+        &:hover {
+          background-color: $white-color;
+          color: $bg-black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* audio track list */
+.audio-tracklist {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  .audio-tracklist-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 40px;
+    margin-bottom: 0.5em;
+    font-size: 0.65em;
+    gap: 0.25em;
+    .tracknum {
+      background-color: $white-color;
+      color: $stone-grey;
+      width: 20%;
+      text-indent: 0.5em;
+      flex: 0 1 auto;
+    }
+    .trackname {
+      color: $white-color;
+      background-color: $stone-grey;
+      width: 48%;
+      text-indent: 0.5em;
+      flex: 0 1 auto;
+    }
+
+    .trackbtn {
+      background-color: $stone-grey;
+      width: 20%;
+      flex: 0 1 auto;
+      cursor: pointer;
+      .fa-play {
+        text-align: center;
+        display: block;
+        line-height: 40px;
+        font-size: 200%;
+        &:hover {
+          background-color: $white-color;
+          color: $bg-black;
+        }
+      }
+    }
+
+    .trackplays {
+      width: 10%;
+      flex: 0 1 auto;
+      text-align: center;
+    }
+  }
+}
+
+.text-box {
+  height: 140px;
+  width: 98%;
+  background-color: $dark-grey;
+  margin: auto;
+}
+
+.text-box-title {
+  font-size: 1.1em;
+  color: $white-color;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.text-box-link {
+  color: $orange-color;
+  font-size: 0.75em;
+  padding: 0;
+  text-align: center;
+  width: 20%;
+  background-color: $dark-grey;
+  line-height: 25px;
+  display: block;
+  &:hover {
+    color: $dark-grey;
+    background-color: $orange-color;
+    font-weight: bold;
+  }
+}
+
+.text-box-text {
+  color: $white-color;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+}
+
+.textbox-img {
+  margin: 1em;
+  float: right;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin: 5px auto;
+  display: block;
+  height: auto;
+}
+
+/* Register Form */
+#register-form {
+  width: 90%;
+  height: auto;
+  color: $white-color;
+  padding: 1.5em;
+  display: block;
+  background-color: $darker-stone-grey;
+  margin: 1em auto;
+
+  #name,
+  #email,
+  #password {
+    border-radius: 5px;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    font-size: 0.95em;
+    display: block;
+  }
+
+  .register-label {
+    line-height: 30px;
+    height: 30px;
+    font-size: 0.85em;
+  }
+
+  #register-btn {
+    background-color: $orange-color;
+    margin: 0.25em auto;
+    letter-spacing: 0.1em;
+    width: 75%;
+    height: 40px;
+    color: $white-color;
+    font-size: 1em;
+    box-shadow: none;
+    display: block;
+
+    &:hover {
+      color: $stone-grey;
+      font-weight: bold;
+    }
+  }
+}
+
+/* not registered link to register form */
+.not-reg-text {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 1em;
+  text-align: center;
+  background-color: unset;
+}
+
+.not-reg-link {
+  display: inline-block;
+  color: $white-color;
+
+  &:hover {
+    color: $orange-color;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+/* Contact page form */
+#contact-form {
+  width: 90%;
+  height: auto;
+  color: $white-color;
+  padding: 1em;
+  background-color: $darker-stone-grey;
+  display: block;
+  margin: 0.5em;
+
+  .error {
+    width: 80%;
+  }
+
+  .notice {
+    width: 80%;
+  }
+
+  .success {
+    width: 80%;
+  }
+
+  a {
+    text-decoration: none;
+    line-height: 1.5em;
+
+    &:hover {
+      text-decoration: none;
+      line-height: 1.5em;
+    }
+  }
+
+  .contact-form-label {
+    display: block;
+    line-height: 35px;
+  }
+
+  #name,
+  #email {
+    border-radius: 5px;
+    padding: 0;
+    line-height: 35px;
+    font-size: 0.95em;
+    width: 100%;
+    display: block;
+  }
+
+  #message {
+    width: 100%;
+    border: 2px solid $light-grey;
+    border-radius: 5px;
+    display: block;
+    padding: 0;
+    font-size: 0.95em;
+  }
+
+  #contact-btn {
+    background-color: $orange-color;
+    margin: 1em auto;
+    width: 75%;
+    line-height: 35px;
+    color: $stone-grey;
+    font-size: 1.1em;
+    box-shadow: none;
+    display: block;
+
+    &:hover {
+      color: $white-color;
+      background-color: $stone-grey;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Contact page address details */
+#contact-details {
+  width: 90%;
+  color: $white-color;
+  display: block;
+  margin: 0.5em auto;
+}
+
+.contact-details-text {
+  line-height: 25px;
+  font-size: 0.85em;
+}
+
+/* video player image grid */
+#video-gallery {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h1 {
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    line-height: 40px;
+    text-align: center;
+    background-color: $stone-grey2;
+    align-self: center;
+  }
+}
+
+.video-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid $stone-grey2;
+  backface-visibility: hidden;
+  width: 80%;
+  margin: 0.25em;
+  height: 150px;
+  flex: 0 1 auto;
+}
+
+.video-item-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(51 51 51 / 75%);
+  text-align: center;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  transform: scale(0);
+}
+
+.video-artist-name {
+  width: 100%;
+  font-size: 1em;
+  margin: 0.5em 0;
+  line-height: 40px;
+  background-color: unset;
+}
+
+.video-text {
+  color: $stone-grey2;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.video-item:hover .overlay {
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.sidebar-content-box {
+  padding: 0;
+  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.search-error {
+  display: none;
+}
+
+.show-error {
+  display: block;
+  background: $white-color;
+  color: $bg-black;
+  padding: 1em;
+  margin: 1em auto;
+  width: auto;
+  width: 60%;
+  text-align: center;
+}
+
+footer {
+  background-color: $stone-grey;
+  clear: both;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0 0.5em;
+  border-radius: 5px;
+}
+
+.mannering-social-btns-footer {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 10%;
+  display: block;
+}
+
+.mannering-social-btns-footer-items {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.mannering-social-btns-footer-item {
+  width: 100%;
+  float: left;
+  display: block;
+  font-size: 1em;
+  height: 100%;
+}
+
+.mannering-social-btns-footer-link {
+  margin: 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: $orange-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  &:hover {
+    color: $stone-grey;
+    background-color: $orange-color;
+  }
+}
+
+#inner-footer {
+  width: 25%;
+  height: 100%;
+  margin: 0;
+}
+
+.inner-footer-item {
+  width: 100%;
+  text-align: left;
+  display: block;
+  line-height: 45px;
+}
+
+.inner-footer-link {
+  width: 100%;
+  height: auto;
+  text-indent: 0.5em;
+  line-height: 45px;
+  color: $white-color;
+  display: block;
+  font-size: 0.8em;
+
+  &:hover {
+    color: $orange-color;
+  }
+}
+
+.copyr {
+  margin: auto;
+  color: $white-color;
+  font-size: 0.6em;
+  width: 100%;
+  letter-spacing: 0.1em;
+}
+
+/* 1920 */
+@media screen and (min-width: 120em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 85%;
+    height: auto;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.7em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+    z-index: 0;
+    top: 0;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25em;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    height: 40px;
+    background-color: $white-color;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    text-decoration: none;
+    font-family: $FontListText;
+    width: 100%;
+    line-height: 40px;
+    background-color: $stone-grey;
+    color: $white-color;
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
+    &:visited {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+    &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    min-height: 800px;
+    h2 {
+      font-size: 1.8em;
+      font-weight: normal;
+      line-height: 50px;
+      margin-bottom: 1em;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      margin: 0.5em 0;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 1em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+
+  .notice {
+    width: 100%;
+  }
+
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      padding: 0.5em;
+      display: flex;
+      flex-flow: row;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+      line-height: 40px;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+    line-height: 40px;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 48%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 35%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 1em;
+    float: none;
+    margin: auto;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    width: 60%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 1em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 1440 - 1919 */
+@media screen and (min-width: 90em) and (max-width: 119.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    gap: 0.25em;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 1.1em;
+    background-color: $stone-grey;
+    color: $white-color;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
+    &:visited {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+    &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 48%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 35%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 1em;
+    float: none;
+    margin: auto;
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    width: 60%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 1em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 1280 - 1439 */
+@media screen and (min-width: 80em) and (max-width: 89.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    gap: 0.25em;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 1.1em;
+    background-color: $stone-grey;
+    color: $white-color;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
+    &:visited {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+    &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 40%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    width: 60%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 1em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 1024 - 1279 */
+@media screen and (min-width: 64em) and (max-width: 79.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 0.9em;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
+    &:visited {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+    &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $stone-grey;
+      background-color: $orange-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 45%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    width: 60%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 800 - 979 */
+@media screen and (min-width: 50em) and (max-width: 63.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 0.9em;
+    &:visited {
+      font-weight: bold;
+    }
+    &:hover {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $orange-color;
+      background-color: $white-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    width: 60%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 736 - 799 */
+@media screen and (min-width: 46em) and (max-width: 49.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 90%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: unset;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  .inner-nav-item {
+    width: 14.5%;
+    flex: 1 0 auto;
+
+    a[href~='\/review\/edit'] {
+      font-size: 65%;
+    }
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 0.9em;
+    &:visited {
+      font-weight: bold;
+    }
+    &:hover {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $orange-color;
+      background-color: $white-color;
+    }
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+
+  #main-section {
+    margin: 0 0 1em;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.35em;
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 19%;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 1em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 19%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 30%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 1em 0;
+  }
+  .results-large-text {
+    width: 70%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.8em;
+  }
+  .large-text {
+    width: 86%;
+    text-indent: 0.25em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.25em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1em;
+      line-height: 150px;
+    }
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 20%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 60%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 20%;
+        font-size: 1.1em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 100%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.8em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+    height: 140px;
+    width: 98%;
+  }
+  .text-box-title {
+    font-size: 0.9em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 70%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 70%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 48%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    padding: 1em;
+    margin: 1em auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 600 - 666 */
+@media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
+  #mobile-toggle {
+    top: 0.5em;
+    left: 88vw;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    display: none;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 140;
+  }
+  #mannering-mobile-inner-nav {
+    width: 100%;
+  }
+  .mannering-mobile-inner-nav-item {
+    height: 40px;
+  }
+  .mannering-mobile-inner-nav-link {
+    font-size: 1em;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    font-size: 65%;
+  }
+  #mannering-inner-nav {
+    display: none;
+  }
+  .inner-nav-item {
+    display: none;
+
+    a[href~='\/review\/edit'] {
+      display: none;
+    }
+  }
+  .inner-nav-link {
+    display: none;
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    display: none;
+  }
+
+  #main-section {
+    margin: 0;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.3em;
+
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 48%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 0.9em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 0.9em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 0.9em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: 180px;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 48%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 25px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 25px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    background: $white-color;
+    color: $bg-black;
+    padding: 1em;
+    margin: 1em auto;
+    width: auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 480 -599 */
+@media screen and (min-width: 30em) and (max-width: 37.4375em) {
+  #mobile-toggle {
+    top: 0.5em;
+    left: 88vw;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    display: none;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 140;
+  }
+  #mannering-mobile-inner-nav {
+    width: 100%;
+  }
+  .mannering-mobile-inner-nav-item {
+    height: 40px;
+  }
+  .mannering-mobile-inner-nav-link {
+    font-size: 1em;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    font-size: 65%;
+  }
+  #mannering-inner-nav {
+    display: none;
+  }
+  .inner-nav-item {
+    display: none;
+
+    a[href~='\/review\/edit'] {
+      display: none;
+    }
+  }
+  .inner-nav-link {
+    display: none;
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    display: none;
+  }
+
+  #main-section {
+    margin: 0;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.3em;
+
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 48%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 0.9em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 0.9em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 0.9em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: 180px;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 48%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 25px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 25px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    background: $white-color;
+    color: $bg-black;
+    padding: 1em;
+    margin: 1em auto;
+    width: auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 375 - 479 */
+@media screen and (min-width: 23.4375em) and (max-width: 479px) {
+  #mobile-toggle {
+    top: 0.5em;
+    left: 88vw;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    display: none;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 140;
+  }
+  #mannering-mobile-inner-nav {
+    width: 100%;
+  }
+  .mannering-mobile-inner-nav-item {
+    height: 40px;
+  }
+  .mannering-mobile-inner-nav-link {
+    font-size: 1em;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    font-size: 65%;
+  }
+  #mannering-inner-nav {
+    display: none;
+  }
+  .inner-nav-item {
+    display: none;
+
+    a[href~='\/review\/edit'] {
+      display: none;
+    }
+  }
+  .inner-nav-link {
+    display: none;
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    display: none;
+  }
+
+  #main-section {
+    margin: 0;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.3em;
+
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 48%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 0.9em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 0.9em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 0.9em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: 180px;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 48%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 25px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 25px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    background: $white-color;
+    color: $bg-black;
+    padding: 1em;
+    margin: 1em auto;
+    width: auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+
+/* 360 374 */
+@media screen and (min-width: 22.5em) and (max-width: 374px) {
+  #mobile-toggle {
+    top: 0.5em;
+    left: 88vw;
+  }
+
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+  }
+
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+
+    span {
+      margin: 0;
+    }
+
+    span:last-of-type {
+      margin: 0;
+    }
+  }
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  #mannering-social {
+    display: none;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+
+  #mannering-nav {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 140;
+  }
+  #mannering-mobile-inner-nav {
+    width: 100%;
+  }
+  .mannering-mobile-inner-nav-item {
+    height: 40px;
+  }
+  .mannering-mobile-inner-nav-link {
+    font-size: 1em;
+  }
+  .mannering-mobile-inner-nav-link[href~='\/review\/edit'] {
+    font-size: 65%;
+  }
+  #mannering-inner-nav {
+    display: none;
+  }
+  .inner-nav-item {
+    display: none;
+
+    a[href~='\/review\/edit'] {
+      display: none;
+    }
+  }
+  .inner-nav-link {
+    display: none;
+  }
+
+  #mannering-content {
+    width: 100%;
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 50px;
+    }
+
+    p {
+      line-height: 1.6em;
+      padding: 0.5em;
+    }
+  }
+
+  #summary {
+    display: none;
+  }
+
+  #main-section {
+    margin: 0;
+  }
+
+  /* login error */
+  .login-error {
+    color: $white-color;
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  /* add category Link */
+  #add-cat-link {
+    width: 100%;
+    display: block;
+    line-height: 35px;
+  }
+
+  /* edit category form */
+  #edit-category {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: $stone-grey;
+  }
+  .edit-category-label {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+    color: $white-color;
+  }
+  #categoryname {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #edit-category-submit {
+    margin: 1em auto;
+    display: block;
+    width: 50%;
+  }
+
+  /* add category form */
+  #category-form {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    label {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+    input[type='text'] {
+      line-height: 35px;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      margin: 1em auto;
+      display: block;
+      width: 70%;
+    }
+  }
+
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+  }
+  #reviews > blockquote {
+    width: 90%;
+    p {
+      font-size: 1em;
+    }
+    form {
+      padding: 1em 0;
+      input[type='submit'] {
+        width: 30%;
+      }
+    }
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+
+  /* category list */
+  #categories {
+    width: 40%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.3em;
+
+      line-height: 40px;
+    }
+  }
+
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+
+  .album-card {
+    width: 48%;
+    margin: 0.25em;
+    flex: 0 0 auto;
+  }
+  .album-card-image {
+    border: 2px solid $stone-grey;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 0.9em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  .album-card:hover {
+    cursor: pointer;
+  }
+
+  /* edit review form */
+  #review-edit {
+    width: 70%;
+  }
+  #reviewtext {
+    font-size: 0.9em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 0.9em;
+
+    &:hover {
+      margin: 0 auto;
+    }
+  }
+
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+
+  /* search page form */
+  #mannering-search {
+    padding: 0.5em;
+
+    fieldset {
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    legend {
+      font-size: 1em;
+    }
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+
+  ::placeholder {
+    color: $bg-black;
+    text-indent: 0.25em;
+  }
+
+  #artist,
+  #album,
+  #genre {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #search-btn {
+    font-size: 0.85em;
+    margin: 0;
+
+    &:hover {
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .refresh-page-link {
+    font-size: 0.85em;
+
+    a {
+      line-height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aboutpage-img {
+    width: 14%;
+  }
+
+  /* front-page slider */
+  #slider {
+    height: 180px;
+  }
+
+  #results-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other albums list */
+  .other-results {
+    padding: 0.25em;
+    flex: 0 0 auto;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* search results list */
+  .results {
+    width: 48%;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 25px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 25px;
+  }
+  .results-text-artist-link {
+    background-color: $orange-color;
+    &:hover {
+      color: $orange-color;
+    }
+  }
+  .results-info:hover .result-info-img {
+    transition: scale(1.01);
+    border: 1px solid $orange-color;
+    cursor: pointer;
+  }
+
+  /* single artist page */
+  .results-large {
+    height: auto;
+
+    h4 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+  }
+  .artist-bio {
+    width: 49%;
+    display: flex;
+  }
+  .artist-bio-image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-text {
+    width: 80%;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .results-large-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 25%;
+    order: 0;
+  }
+  .results-large-img {
+    margin: 0 1em 0 0;
+  }
+  .results-large-text {
+    width: 75%;
+    order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+    text-indent: 0.5em;
+  }
+  .large-text-link {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+    text-indent: 0.5em;
+  }
+
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+
+  /* audio controls */
+  .audio-controls {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    width: 50%;
+    .audio-track-name {
+      font-size: 1.8em;
+      line-height: 150px;
+    }
+
+    .audiocntrl-container {
+      width: 100%;
+
+      .audio-player-btn {
+        width: 14%;
+        .fa-play,
+        .fa-pause,
+        .fa-step-backward,
+        .fa-step-forward,
+        .fa-repeat {
+          font-size: 1.6em;
+        }
+      }
+
+      .audio-progress {
+        width: 70%;
+
+        .load-progress {
+          width: 100%;
+        }
+
+        .play-progress {
+          width: 100%;
+        }
+      }
+
+      .current-time,
+      .duration {
+        width: 15%;
+        font-size: 1.3em;
+      }
+
+      .audio-volume {
+        width: 30%;
+
+        .volume-bg {
+          width: 80%;
+        }
+
+        .volume {
+          width: 96%;
+        }
+
+        .volume-mute {
+          width: 20%;
+
+          .fa-volume-up {
+            font-size: 1.4em;
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+    .audio-tracklist-item {
+      font-size: 0.9em;
+      .tracknum {
+        width: 20%;
+      }
+      .trackname {
+        width: 50%;
+      }
+
+      .trackbtn {
+        width: 20%;
+        cursor: pointer;
+        .fa-play {
+          line-height: 40px;
+
+          &:hover {
+            background-color: $white-color;
+          }
+        }
+      }
+
+      .trackplays {
+        width: 10%;
+      }
+    }
+  }
+
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+
+  /* Register Form */
+  #register-form {
+    width: 55%;
+
+    #name,
+    #email,
+    #password {
+      font-size: 0.8em;
+    }
+
+    .register-label {
+      font-size: 0.9em;
+      height: 30px;
+    }
+
+    #register-btn {
+      font-size: 1em;
+    }
+  }
+
+  /* not registered link to register form */
+  .not-reg-text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1em;
+    text-align: center;
+    background-color: unset;
+  }
+  .not-reg-link {
+    display: inline-block;
+    color: $white-color;
+
+    &:hover {
+      color: $orange-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    padding: 2.5%;
+    float: none;
+
+    .contact-form-label {
+      display: block;
+      line-height: 35px;
+    }
+
+    #name,
+    #email {
+      font-size: 1em;
+    }
+
+    #message {
+      font-size: 1em;
+    }
+
+    #contact-btn {
+      width: 40%;
+      font-size: 1em;
+
+      &:hover {
+        width: 40%;
+      }
+    }
+  }
+
+  /* Contact page address details */
+  #contact-details {
+    font-size: 1em;
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+    float: none;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+
+  /* video player imag grid */
+  #video-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-error {
+    display: none;
+  }
+
+  .show-error {
+    display: block;
+    background: $white-color;
+    color: $bg-black;
+    padding: 1em;
+    margin: 1em auto;
+    width: auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 0.8em;
+
+    &:hover {
+      color: $orange-color;
+    }
+  }
+
+  .copyr {
+    font-size: 0.6em;
+  }
+}

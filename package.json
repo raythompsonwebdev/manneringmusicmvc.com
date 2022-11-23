@@ -24,8 +24,8 @@
 		"compile-sass": "grunt sass",
 		"compile-images": "grunt responsive_images",
 		"watch": "grunt watch",
-		"build:css": "postcss public_html/assets/css/style.scss -o public_html/style.css",
-		"watch:css": "postcss public_html/assets/css/style.scss -o public_html/style.css -w"
+		"build:css": "postcss public_html/assets/css/style-copy.scss -o public_html/style.css",
+		"watch:css": "postcss public_html/assets/css/style-copy.scss -o public_html/style.css -w"
 	},
 	"dependencies": {
 		"@csstools/postcss-sass": "^5.0.1",
