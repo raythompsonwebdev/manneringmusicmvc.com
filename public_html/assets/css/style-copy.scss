@@ -11,6 +11,12 @@
   display: none;
   opacity: 0;
 }
+.close-menu {
+  top: -200px;
+}
+.open-menu {
+  top: 0;
+}
 
 #mobile-toggle {
   height: 55px;
@@ -237,6 +243,7 @@
   padding: 0;
   min-height: 600px;
   h2 {
+    font-size: 1.3em;
     width: 100%;
     color: $white-color;
     height: auto;
@@ -2344,7 +2351,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3161,7 +3168,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3979,7 +3986,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -4798,7 +4805,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -5617,7 +5624,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -6149,7 +6156,7 @@ footer {
     order: 0;
   }
   .results-large-img {
-    margin: 1em 0;
+    margin: 0 1em 0 0;
   }
   .results-large-text {
     width: 70%;
@@ -6224,7 +6231,7 @@ footer {
       .current-time,
       .duration {
         width: 20%;
-        font-size: 1.1em;
+        font-size: 0.9em;
       }
 
       .audio-volume {
@@ -6439,7 +6446,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -6527,18 +6534,23 @@ footer {
 
   #mannering-nav {
     width: 100%;
-    height: 200px;
+    height: auto;
     margin-bottom: 0.5em;
     position: absolute;
-    top: -200px;
+    top: -220px;
     left: 0.5em;
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
-    width: 100%;
+    position: relative;
+    width: 80%;
+    flex-flow: column;
+    gap: 0.2em;
+    background: $stone-grey;
   }
   .mannering-mobile-inner-nav-item {
     height: 40px;
+    margin: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -6563,7 +6575,7 @@ footer {
   #mannering-content {
     width: 100%;
     h2 {
-      font-size: 1em;
+      font-size: 1.7em;
       font-weight: normal;
       line-height: 50px;
     }
@@ -6911,7 +6923,7 @@ footer {
     }
   }
   .artist-bio {
-    width: 85%;
+    width: 100%;
     display: flex;
   }
   .artist-bio-image {
@@ -6921,7 +6933,7 @@ footer {
     margin: auto;
   }
   .artist-bio-text {
-    width: 80%;
+    width: 100%;
   }
   .artist-bio-name {
     line-height: 40px;
@@ -6986,8 +6998,8 @@ footer {
     gap: 1em;
     width: 90%;
     .audio-track-name {
-      font-size: 1.5em;
-      line-height: 55px;
+      font-size: 1em;
+      line-height: 50px;
       text-align: center;
     }
 
@@ -7020,7 +7032,7 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1em;
+        font-size: 0.85em;
       }
 
       .audio-volume {
@@ -7054,7 +7066,7 @@ footer {
     margin: 0;
     width: 100%;
     .audio-tracklist-item {
-      font-size: 0.9em;
+      font-size: 0.75em;
       .tracknum {
         width: 17%;
       }
@@ -7236,7 +7248,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -7324,15 +7336,19 @@ footer {
 
   #mannering-nav {
     width: 100%;
-    height: 200px;
+    height: 220px;
     margin-bottom: 0.5em;
     position: absolute;
-    top: -200px;
+    top: -220px;
     left: 0;
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
-    width: 100%;
+    width: 80%;
+    position: relative;
+    flex-flow: column;
+    gap: 0.2em;
+    background: $stone-grey;
   }
   .mannering-mobile-inner-nav-item {
     height: 40px;
@@ -7360,7 +7376,7 @@ footer {
   #mannering-content {
     width: 100%;
     h2 {
-      font-size: 1em;
+      font-size: 1.6em;
       font-weight: normal;
       line-height: 50px;
     }
@@ -7702,22 +7718,22 @@ footer {
     height: auto;
 
     h4 {
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 40px;
     }
   }
   .artist-bio {
-    width: 49%;
+    width: 100%;
     display: flex;
   }
   .artist-bio-image {
     width: auto;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 1em auto;
   }
   .artist-bio-text {
-    width: 80%;
+    width: 100%;
   }
   .artist-bio-name {
     line-height: 40px;
@@ -7731,18 +7747,18 @@ footer {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    gap: 1em;
-    width: 48%;
+    gap: 0.5em;
+    width: 100%;
   }
   .results-large-link {
-    width: 25%;
+    width: 30%;
     order: 0;
   }
   .results-large-img {
     margin: 0 1em 0 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 69%;
     order: 1;
   }
   .results-large-text-items {
@@ -7750,19 +7766,19 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .large-text {
-    width: 85%;
-    text-indent: 0.5em;
+    width: 79%;
+    text-indent: 0.25em;
   }
   .large-text-link {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
+    width: 20%;
+    text-indent: 0.25em;
   }
 
   .results-large-info :hover .results-large-img {
@@ -7780,7 +7796,7 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 100%;
     .audio-track-name {
       font-size: 1.5em;
       line-height: 55px;
@@ -7791,7 +7807,7 @@ footer {
       width: 100%;
 
       .audio-player-btn {
-        width: 14%;
+        width: 20%;
         .fa-play,
         .fa-pause,
         .fa-step-backward,
@@ -7816,14 +7832,14 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
-          width: 80%;
+          width: 100%;
         }
 
         .volume {
@@ -7850,9 +7866,9 @@ footer {
     margin: 0;
     width: 100%;
     .audio-tracklist-item {
-      font-size: 0.9em;
+      font-size: 0.8em;
       .tracknum {
-        width: 20%;
+        width: 16%;
       }
       .trackname {
         width: 50%;
@@ -8032,7 +8048,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -8128,7 +8144,7 @@ footer {
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
-    width: 100%;
+    width: 80%;
   }
   .mannering-mobile-inner-nav-item {
     height: 40px;
@@ -8156,7 +8172,7 @@ footer {
   #mannering-content {
     width: 100%;
     h2 {
-      font-size: 1em;
+      font-size: 1.5em;
       font-weight: normal;
       line-height: 50px;
     }
@@ -8523,22 +8539,22 @@ footer {
 
   .results-large-info {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     gap: 1em;
-    width: 48%;
+    width: 100%;
   }
   .results-large-link {
     width: 25%;
     order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 1em 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 100%;
     order: 1;
   }
   .results-large-text-items {
@@ -8546,19 +8562,19 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
   .large-text {
-    width: 85%;
-    text-indent: 0.5em;
+    width: 79%;
+    text-indent: 0.25em;
   }
   .large-text-link {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
+    width: 20%;
+    text-indent: 0.25em;
   }
 
   .results-large-info :hover .results-large-img {
@@ -8576,10 +8592,10 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 100%;
     .audio-track-name {
-      font-size: 1.5em;
-      line-height: 55px;
+      font-size: 0.9em;
+      line-height: 50px;
       text-align: center;
     }
 
@@ -8587,7 +8603,7 @@ footer {
       width: 100%;
 
       .audio-player-btn {
-        width: 14%;
+        width: 20%;
         .fa-play,
         .fa-pause,
         .fa-step-backward,
@@ -8612,11 +8628,11 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
           width: 80%;
@@ -8646,9 +8662,9 @@ footer {
     margin: 0;
     width: 100%;
     .audio-tracklist-item {
-      font-size: 0.9em;
+      font-size: 0.75em;
       .tracknum {
-        width: 20%;
+        width: 15%;
       }
       .trackname {
         width: 50%;
@@ -8828,7 +8844,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    width: 97%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -8952,7 +8968,7 @@ footer {
   #mannering-content {
     width: 100%;
     h2 {
-      font-size: 1em;
+      font-size: 1.4em;
       font-weight: normal;
       line-height: 50px;
     }
@@ -9331,7 +9347,7 @@ footer {
     order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 1em 0;
   }
   .results-large-text {
     width: 75%;
@@ -9408,11 +9424,11 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
           width: 80%;
