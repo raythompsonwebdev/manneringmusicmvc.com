@@ -264,6 +264,21 @@ table {
 body {
   background-image: url("/assets/images/526.gif");
   line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -415,8 +430,6 @@ input[type=submit]:active {
 }
 
 #wrapper {
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
   width: 98%;
   height: auto;
@@ -636,7 +649,7 @@ input[type=submit]:active {
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 600px;
+  min-height: 800px;
 }
 #mannering-content h2 {
   font-size: 1.3em;
@@ -822,6 +835,7 @@ input[type=submit]:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1em;
 }
 .genre-section h3 {
   -ms-flex-item-align: center;
@@ -842,7 +856,7 @@ input[type=submit]:active {
 
 .album-card {
   width: 75%;
-  margin: 0.25em;
+  margin: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border-radius: 5px;
@@ -850,9 +864,9 @@ input[type=submit]:active {
   text-align: center;
   height: auto;
   min-height: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .album-card-image {
@@ -860,7 +874,7 @@ input[type=submit]:active {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: auto;
-  margin: 3% auto;
+  margin: 1em auto;
 }
 
 .album-card-image:hover {
@@ -875,7 +889,7 @@ input[type=submit]:active {
 .album-card-artist {
   line-height: 35px;
   background-color: #2b2b2b;
-  font-size: 1em;
+  font-size: 0.8em;
   color: #fafaf7;
   text-transform: uppercase;
   font-weight: normal;
@@ -885,7 +899,7 @@ input[type=submit]:active {
 .album-card-genre {
   background-color: #666666;
   line-height: 35px;
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #fafaf7;
 }
 
@@ -1109,17 +1123,17 @@ input[type=submit]:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.2em;
+  gap: 1em;
 }
 
 /* other albums list */
@@ -1128,7 +1142,7 @@ input[type=submit]:active {
   padding: 0;
   border-radius: 5px;
   margin: 0;
-  width: 19%;
+  width: 44%;
   font-weight: normal;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1326,7 +1340,7 @@ input[type=submit]:active {
   width: auto;
   height: auto;
   display: block;
-  margin: auto;
+  margin: 1em auto;
 }
 
 .artist-bio-text {
@@ -1358,7 +1372,8 @@ input[type=submit]:active {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  width: 48%;
+  gap: 1em;
+  width: 100%;
 }
 
 .results-large-link {
@@ -1393,7 +1408,7 @@ input[type=submit]:active {
   height: 35px;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 0.7em;
+  font-size: 0.75em;
   background-color: #2b2b2b;
   width: 100%;
   margin-bottom: 0.2em;
@@ -1457,7 +1472,7 @@ input[type=submit]:active {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1em;
-  width: 50%;
+  width: 100%;
 }
 .audio-controls .audio-track-name {
   font-size: 1em;
@@ -1503,7 +1518,7 @@ input[type=submit]:active {
   display: block;
   height: auto;
   text-align: center;
-  width: 100%;
+  width: 20%;
   line-height: 50px;
 }
 .audio-controls .audiocntrl-container .audio-player-btn:hover {
@@ -1535,7 +1550,7 @@ input[type=submit]:active {
   text-align: center;
   background-color: #181818;
   text-shadow: none;
-  font-size: 0.9em;
+  font-size: 0.75em;
 }
 .audio-controls .audiocntrl-container .audio-volume {
   width: 100%;
@@ -1613,7 +1628,7 @@ input[type=submit]:active {
 .audio-tracklist .audio-tracklist-item .tracknum {
   background-color: #fafaf7;
   color: #3a3a3a;
-  width: 20%;
+  width: 15%;
   text-indent: 0.5em;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1647,7 +1662,7 @@ input[type=submit]:active {
   color: #181818;
 }
 .audio-tracklist .audio-tracklist-item .trackplays {
-  width: 10%;
+  width: 12%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
@@ -2045,8 +2060,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 85%;
     height: auto;
@@ -2294,6 +2307,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -2306,10 +2320,9 @@ footer {
   }
   .album-card {
     width: 19%;
-    margin: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -2438,12 +2451,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -2844,7 +2872,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 97%;
+    width: 100%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -2883,8 +2911,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 90%;
   }
@@ -2992,10 +3018,9 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.8em;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -3115,6 +3140,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -3127,8 +3153,8 @@ footer {
   .album-card {
     width: 19%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -3137,10 +3163,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   /* edit review form */
   #review-edit {
@@ -3256,12 +3282,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -3660,7 +3701,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 97%;
+    width: 100%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3699,8 +3740,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 90%;
   }
@@ -3808,10 +3847,9 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.8em;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -3931,6 +3969,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -3943,8 +3982,8 @@ footer {
   .album-card {
     width: 19%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -3953,10 +3992,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   /* edit review form */
   #review-edit {
@@ -4072,13 +4111,28 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
     padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -4515,8 +4569,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 94%;
   }
@@ -4625,10 +4677,9 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.8em;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -4748,6 +4799,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -4760,8 +4812,8 @@ footer {
   .album-card {
     width: 19%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -4770,7 +4822,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -4889,13 +4941,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -5332,8 +5398,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 96%;
   }
@@ -5441,10 +5505,9 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.8em;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -5564,6 +5627,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -5574,10 +5638,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
+    width: 23%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -5586,7 +5650,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -5705,13 +5769,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -6151,8 +6229,6 @@ footer {
     display: none;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
     width: 96%;
   }
@@ -6260,10 +6336,9 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.8em;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -6383,6 +6458,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.35em;
@@ -6393,10 +6469,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
+    width: 23%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -6405,7 +6481,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -6524,13 +6600,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 19%;
   }
   .other-results-info {
     margin: 0;
@@ -6974,8 +7064,6 @@ footer {
     left: 88vw;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     width: 98%;
   }
   #mannering-header {
@@ -7053,11 +7141,10 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.7em;
-    font-weight: normal;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.7em;
+    min-height-font-weight: normal;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7175,6 +7262,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.3em;
@@ -7186,10 +7274,9 @@ footer {
   }
   .album-card {
     width: 48%;
-    margin: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -7198,7 +7285,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -7317,13 +7404,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -7769,8 +7870,6 @@ footer {
     left: 88vw;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     width: 98%;
   }
   #mannering-header {
@@ -7847,11 +7946,10 @@ footer {
   }
   #mannering-content {
     width: 100%;
-  }
-  #mannering-content h2 {
-    font-size: 1.6em;
-    font-weight: normal;
-    line-height: 50px;
+    min-height: 800px h2;
+    min-height-font-size: 1.6em;
+    min-height-font-weight: normal;
+    min-height-line-height: 50px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7968,6 +8066,7 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0.25em;
   }
   .genre-section h3 {
     font-size: 1.3em;
@@ -7979,10 +8078,9 @@ footer {
   }
   .album-card {
     width: 48%;
-    margin: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -7991,10 +8089,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   /* edit review form */
   #review-edit {
@@ -8110,13 +8208,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -8326,7 +8438,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 0.85em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -8559,8 +8671,6 @@ footer {
     left: 88vw;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     width: 98%;
   }
   #mannering-header {
@@ -8630,6 +8740,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
+    min-height: 800px;
   }
   #mannering-content h2 {
     font-size: 1.5em;
@@ -8741,16 +8852,17 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
   }
   .genre-section h3 {
     font-size: 1.3em;
@@ -8761,11 +8873,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 48%;
-    margin: 0.25em;
+    width: 75%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -8774,10 +8885,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   /* edit review form */
   #review-edit {
@@ -8893,13 +9004,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -8992,7 +9117,7 @@ footer {
     width: auto;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 1em auto;
   }
   .artist-bio-text {
     width: 80%;
@@ -9021,7 +9146,7 @@ footer {
     width: 100%;
   }
   .results-large-link {
-    width: 25%;
+    width: auto;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9030,7 +9155,7 @@ footer {
     margin: 1em 0;
   }
   .results-large-text {
-    width: 100%;
+    width: 96%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -9109,7 +9234,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -9342,8 +9467,6 @@ footer {
     left: 88vw;
   }
   #wrapper {
-    margin-left: auto;
-    margin-right: auto;
     width: 98%;
   }
   #mannering-header {
@@ -9413,6 +9536,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
+    min-height: 800px;
   }
   #mannering-content h2 {
     font-size: 1.4em;
@@ -9524,16 +9648,17 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
   }
   .genre-section h3 {
     font-size: 1.3em;
@@ -9544,11 +9669,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 48%;
-    margin: 0.25em;
+    width: 75%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .album-card-image {
     width: auto;
@@ -9557,10 +9681,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   /* edit review form */
   #review-edit {
@@ -9676,13 +9800,27 @@ footer {
   #results-container {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
   }
   /* other albums list */
   .other-results {
-    padding: 0.25em;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 44%;
   }
   .other-results-info {
     margin: 0;
@@ -9775,7 +9913,7 @@ footer {
     width: auto;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 1em auto;
   }
   .artist-bio-text {
     width: 80%;
@@ -9789,10 +9927,10 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -9801,10 +9939,10 @@ footer {
             align-items: center;
     position: relative;
     gap: 1em;
-    width: 48%;
+    width: 100%;
   }
   .results-large-link {
-    width: 25%;
+    width: auto;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9813,7 +9951,7 @@ footer {
     margin: 1em 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 96%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -9823,19 +9961,19 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
   .large-text {
-    width: 85%;
-    text-indent: 0.5em;
+    width: 79%;
+    text-indent: 0.25em;
   }
   .large-text-link {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
+    width: 20%;
+    text-indent: 0.25em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -9860,18 +9998,18 @@ footer {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 100%;
   }
   .audio-controls .audio-track-name {
-    font-size: 1.5em;
-    line-height: 55px;
+    font-size: 1em;
+    line-height: 50px;
     text-align: center;
   }
   .audio-controls .audiocntrl-container {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
+    width: 20%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -9892,7 +10030,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 0.75em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -9918,10 +10056,10 @@ footer {
     width: 100%;
   }
   .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 20%;
+    width: 15%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
     width: 50%;
@@ -9937,7 +10075,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 12%;
   }
   .text-box {
     font-size: 1em;

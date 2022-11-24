@@ -27,6 +27,11 @@
 body {
   background-image: url('/assets/images/526.gif');
   line-height: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 ul {
