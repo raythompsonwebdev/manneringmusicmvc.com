@@ -36,28 +36,31 @@ I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 
 
 ## Technologies
 
-- HTML - semantic html
-- CSS -  css transitions
-- SASS - nesting , mixins, variable, partials
-- MariaDB - Database
+- PDO (PHP Data Objects)
 - REST
-- MVC Design
 - MySQL - PDO (PHP Data Objects)
 - PHP Object Oriented Design
-- JavaScript - ES6
-- Amazon S3 - Audio Files , Bucket Policy
-
+- JavaScript
+- Amazon S3 storage
 
 ## Tools
 
-- [Grunt](https://gruntjs.com/)
-- [Babel](https://babeljs.io/)
-- [Prettier](https://prettier.io/)
-- [ESLInt](https://eslint.org/)
-- [Whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch)
-
-
+- [grunt](https://gruntjs.com/)
+- [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+- [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+- [grunt-babel](https://www.npmjs.com/package/grunt-babel)
+- [grunt-mkdir](https://www.npmjs.com/package/grunt-mkdir)
+- [@lodder/grunt-postcss](https://www.npmjs.com/package/@lodder/grunt-postcss)
+- [grunt-responsive-images](https://www.npmjs.com/package/grunt-responsive-images)
+- [grunt-contrib-copy ](https://www.npmjs.com/package/grunt-contrib-copy)
+- [grunt-stylelint](https://www.npmjs.com/package/grunt-stylelint)
+- [grunt-contrib-clean](https://www.npmjs.com/package/grunt-contrib-clean)
+- [babel](https://babeljs.io/)
+- [prettier](https://prettier.io/)
+- [eslint](https://eslint.org/)
+- [postcss](https://postcss.org/)
+- [stylelint](https://stylelint.io/)-
+- [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch)
+- [composer](https://getcomposer.org/)
 
 ## Credits
-
-- BxSlider v4.1.2 - Fully loaded, responsive content slider http://bxslider.com Copyright 2014, Steven Wanderski - http://stevenwanderski.com - http://bxcreative.com Written while drinking Belgian ales and listening to jazz Released under the MIT license - http://opensource.org/licenses/MIT

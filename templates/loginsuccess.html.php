@@ -1,5 +1,5 @@
-<section id="main_section" class="group">
-	<h1>Login Successful</h1>
+<section id="main-section" class="group">
+	<h2>Login Successful</h2>
 
 	<p>You are now logged in.</p>
 

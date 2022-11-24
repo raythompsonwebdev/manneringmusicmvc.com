@@ -1,20 +1,20 @@
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		let searchBTN = window.document.querySelector('#searchBtn');
+		let searchBTN = window.document.querySelector('#search-btn');
 
 		searchBTN.addEventListener('click', function(e) {
 			e.preventDefault();
 			var artistname = document.querySelector("#artist").value;
 			var albumname = document.querySelector("#album").value;
 			var genre = document.querySelector("#genre").value;
-			var searchErr = document.querySelector(".search_error");
+			var searchErr = document.querySelector(".search-error");
 
 			if (artistname == "" && albumname == "" && genre == "") {
-				searchErr.classList.add('show_error');
+				searchErr.classList.add('show-error');
 				return false;
 			} else {
-				searchErr.classList.remove('show_error');
+				searchErr.classList.remove('show-error');
 			}
 
 			fetch(`./results.php?artist_name=${artistname}&album=${albumname}&genre=${genre}`, {
@@ -37,7 +37,7 @@
 				})
 				.then(function(data) {
 
-					window.document.getElementById('results_container').innerHTML = data;
+					window.document.getElementById('results-container').innerHTML = data;
 				})
 				.catch(function(err) {
 
@@ -52,24 +52,24 @@
 	});
 </script>
 
-<section id="main_section" class="group">
+<section id="main-section">
 
-	<h1>Search Page</h1>
+	<h2>Search Page</h2>
 
-	<span class="search_error">Fields cannot be empty. Enter either artistname, album name or select genre</span>
+	<span class="search-error">Fields cannot be empty. Enter either artistname, album name or select genre</span>
 
 	<!--Search Form-->
-	<form id="searchForm" action="">
+	<form id="mannering-search" action="">
 		<fieldset>
-			<legend>Search Here</legend>
+			<legend>Album Search</legend>
 
-			<label for="artist" aria-label="artist_name">Artist name</label>
-			<input id="artist" name="artist_name" type="text" placeholder="Artist Name">
+			<label for="artist_name" aria-label="artist-name" class="search-label">Artist name</label>
+			<input id="artist" name="artist_name" type="text" placeholder="Enter artist name.">
 
-			<label for="album" aria-label="album">Album name</label>
-			<input id="album" name="album" type="text" title="Album Name" placeholder="Album Name">
+			<label for="album" aria-label="album" class="search-label"> Album name</label>
+			<input id="album" name="album" type="text" placeholder="Enter album name.">
 
-			<label for="genre" aria-label="genre">Genre</label>
+			<label for="genre" aria-label="genre" class="search-label">Genre</label>
 			<select name="genre" id="genre">
 				<option value="" disabled selected>Choose Genre</option>
 				<option value="Hip Hop">Hip Hop</option>
@@ -77,17 +77,17 @@
 				<option value="Country">Country</option>
 			</select>
 
-			<input id="searchBtn" class="submit" name="submit" type="submit" value="FIND MUSIC">
+			<input id="search-btn" class="submit" name="submit" type="submit" value="FIND ALBUM">
 		</fieldset>
 	</form>
 
-	<span class="refresh_link">
+	<span class="refresh-page-link">
 		<a href="<?php $_SERVER['PHP_SELF']; ?>">Refresh&nbsp;Search&nbsp;Page</a>
 	</span>
 
 	<div id="loadingIndicator" style="display: none;">Ajax Loading...</div>
 
-	<div id="results_container"></div>
+	<div id="results-container"></div>
 
 	<br />
 	<br />

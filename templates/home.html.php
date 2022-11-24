@@ -2,79 +2,74 @@
 
 <!-- Slider-->
 <section id="slider">
-    <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums" />
+	<img src="assets/images/sliderimages/manneringhiphop.webp" alt="collage of hop hop albums" />
 </section>
 
 <!--main text-->
-<section id="main_section">
-    <h1>MANNERING MUSIC FEATURED ALBUMS</h1>
-    <br />
-    <!--Hip Hop Section-->
-    <section class="album_section">
-        <h2>Hip Hop</h2>
-        <?php foreach ($rapalbums as $rapalbum) : ?>
+<section id="main-section">
+	<h2>MANNERING MUSIC FEATURED ALBUMS</h2>
+	<br />
+	<!--Hip Hop Section-->
+	<section class="genre-section">
+		<h3>Hip Hop</h3>
+		<?php foreach ($rapalbums as $rapalbum) : ?>
 
-        <figure class="grid_1_of_5 ">
-            <a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>"
-                title="<?= $rapalbum->getArtistId()->artist_name ?>">
-                <img class="images_1_of_5" width=100 height=100 src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>"
-                    alt="HipHopMusicAlbum">
-            </a>
-            <figcaption class="cap_1_of_5">
-                <h3><?= $rapalbum->getArtistId()->artist_name ?></h3>
-                <p><?= $rapalbum->genre ?></p>
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>" title="<?= $rapalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>" alt="<?= $rapalbum->album ?> album cover" aria-labelledby="<?= $rapalbum->getArtistId()->artist_name ?>">
+				</a>
+				<figcaption id="<?= $rapalbum->getArtistId()->artist_name ?> " class="album-card-text">
+					<h4 class="album-card-artist"><?= $rapalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $rapalbum->genre ?></h5>
 
-            </figcaption>
+				</figcaption>
 
-        </figure>
+			</figure>
 
-        <?php endforeach; ?>
+		<?php endforeach; ?>
 
-    </section>
+	</section>
 
 
-    <!--Country Section-->
-    <section class="album_section ">
-        <h2>Country</h2>
-        <?php foreach ($countryalbums as $countryalbum) : ?>
+	<!--Country Section-->
+	<section class="genre-section ">
+		<h3>Country</h3>
+		<?php foreach ($countryalbums as $countryalbum) : ?>
 
-        <figure class="grid_1_of_5">
-            <a href="/singleresult?albumid=<?= $countryalbum->id ?? '' ?>&artistid=<?= $countryalbum->artistId ?? '' ?>"
-                title="<?= $countryalbum->getArtistId()->artist_name ?>">
-                <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>"
-                    alt="CountryMusicAlbum">
-            </a>
-            <figcaption class="cap_1_of_5">
-                <h3><?= $countryalbum->getArtistId()->artist_name ?></h3>
-                <p><?= $countryalbum->genre ?></p>
-            </figcaption>
-        </figure>
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $countryalbum->id ?? '' ?>&artistid=<?= $countryalbum->artistId ?? '' ?>" title="<?= $countryalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>" alt="<?= $countryalbum->album ?> album cover" aria-labelledby="<?= $countryalbum->getArtistId()->artist_name ?>">
 
-        <?php endforeach; ?>
+				</a>
+				<figcaption id="<?= $countryalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $countryalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $countryalbum->genre ?></h5>
+				</figcaption>
+			</figure>
 
-    </section>
+		<?php endforeach; ?>
+
+	</section>
 
 
-    <!--Jazz Section-->
-    <section class="album_section">
-        <h2>Jazz</h2>
-        <?php foreach ($jazzalbums as $jazzalbum) : ?>
+	<!--Jazz Section-->
+	<section class="genre-section">
+		<h3>Jazz</h3>
+		<?php foreach ($jazzalbums as $jazzalbum) : ?>
 
-        <figure class="grid_1_of_5">
-            <a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>"
-                title="<?= $jazzalbum->getArtistId()->artist_name ?>">
-                <img class="images_1_of_5" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>"
-                    alt="JazzMusicAlbum">
-            </a>
-            <figcaption class="cap_1_of_5">
-                <h3><?= $jazzalbum->getArtistId()->artist_name ?></h3>
-                <p><?= $jazzalbum->genre ?></p>
-            </figcaption>
-        </figure>
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>" title="<?= $jazzalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>" alt="<?= $jazzalbum->album ?> album cover" aria-labelledby="<?= $jazzalbum->getArtistId()->artist_name ?>">
+				</a>
+				<figcaption id="<?= $jazzalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $jazzalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $jazzalbum->genre ?></h5>
+				</figcaption>
+			</figure>
 
-        <?php endforeach; ?>
+		<?php endforeach; ?>
 
-    </section>
+	</section>
 
 
 

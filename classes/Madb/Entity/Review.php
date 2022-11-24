@@ -1,51 +1,52 @@
 <?php
+
 namespace Madb\Entity;
 
 class Review
 {
-    public $id;
-    public $authorId;
-    public $reviewdate;
-    public $reviewtext;
-    private $authorsTable;
-    private $author;
-    private $reviewCategoriesTable;
+	public $id;
+	public $authorId;
+	public $reviewdate;
+	public $reviewtext;
+	private $authorsTable;
+	private $author;
+	private $reviewCategoriesTable;
 
-    public function __construct(\Mannering\DatabaseTable $authorsTable, \Mannering\DatabaseTable $reviewCategoriesTable)
-    {
-        $this->authorsTable = $authorsTable;
-        $this->reviewCategoriesTable = $reviewCategoriesTable;
-    }
+	public function __construct(\Mannering\DatabaseTable $authorsTable, \Mannering\DatabaseTable $reviewCategoriesTable)
+	{
+		$this->authorsTable = $authorsTable;
+		$this->reviewCategoriesTable = $reviewCategoriesTable;
+	}
 
-    public function getAuthor()
-    {
-        if (empty($this->author)) {
-            $this->author = $this->authorsTable->findById($this->authorId);
-        }
-        
-        return $this->author;
-    }
+	public function getAuthor()
+	{
+		if (empty($this->author)) {
+			$this->author = $this->authorsTable->findById($this->authorId);
+		}
 
-    public function addCategory($categoryId)
-    {
-        $reviewCat = ['reviewId' => $this->id, 'categoryId' => $categoryId];
+		return $this->author;
+	}
 
-        $this->reviewCategoriesTable->save($reviewCat);
-    }
+	public function addCategory($categoryId)
+	{
+		$reviewCat = ['reviewId' => $this->id, 'categoryId' => $categoryId];
 
-    public function hasCategory($categoryId)
-    {
-        $reviewCategories = $this->reviewCategoriesTable->find('reviewId', $this->id);
+		$this->reviewCategoriesTable->save($reviewCat);
+	}
 
-        foreach ($reviewCategories as $reviewCategory) {
-            if ($reviewCategory->categoryId == $categoryId) {
-                return true;
-            }
-        }
-    }
+	public function hasCategory($categoryId)
+	{
+		$reviewCategories = $this->reviewCategoriesTable->find('reviewId', $this->id);
 
-    public function clearCategories()
-    {
-        $this->reviewCategoriesTable->deleteWhere('reviewId', $this->id);
-    }
+		foreach ($reviewCategories as $reviewCategory) {
+			if ($reviewCategory->categoryId == $categoryId) {
+				return true;
+			}
+		}
+	}
+
+	public function clearCategories()
+	{
+		$this->reviewCategoriesTable->deleteWhere('reviewId', $this->id);
+	}
 }

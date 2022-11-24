@@ -14,10 +14,14 @@ logs/
 includes/DatabaseConnection.php
 .sass-cache/
 
+img/
+test-images/
+
 access.log
 error.log
 bucketpolicy.json
 audio/
 sql-files/
+test-images/
 
 

@@ -1,7 +1,7 @@
-<section id="main_section" class="group">
+<section id="main-section" class="group">
 
-    <h1>Registration Successful</h1>
+	<h2>Registration Successful</h2>
 
-    <p>You are now registered on Mannering Music Reviews</p>
+	<p>You are now registered on Mannering Music Reviews</p>
 
 </section>

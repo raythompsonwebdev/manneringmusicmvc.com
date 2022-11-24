@@ -1,4 +1,4 @@
-const sass = require('node-sass');
+const sass = require('sass');
 
 module.exports = (grunt) => {
   grunt.initConfig({
@@ -10,26 +10,6 @@ module.exports = (grunt) => {
           engine: 'im',
           sizes: [
             {
-              name: '220',
-              width: 220,
-            },
-            {
-              name: '240',
-              width: 240,
-            },
-            {
-              name: '260',
-              width: 260,
-            },
-            {
-              name: '280',
-              width: 280,
-            },
-            {
-              name: '300',
-              width: 300,
-            },
-            {
               name: '320',
               width: 320,
             },
@@ -40,6 +20,10 @@ module.exports = (grunt) => {
             {
               name: '360',
               width: 360,
+            },
+            {
+              name: '380',
+              width: 380,
             },
           ],
         },
@@ -59,26 +43,26 @@ module.exports = (grunt) => {
       },
     },
 
-    cwebp: {
-      dynamic: {
-        options: {
-          q: 60,
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'test-images/',
-            src: ['*.{gif,jpg,png}'],
-            dest: 'img/',
-          },
-        ],
-      },
-    },
+    // cwebp: {
+    //   dynamic: {
+    //     options: {
+    //       q: 60,
+    //     },
+    //     files: [
+    //       {
+    //         expand: true,
+    //         cwd: 'test-images/',
+    //         src: ['*.{gif,jpg,png}'],
+    //         dest: 'img/',
+    //       },
+    //     ],
+    //   },
+    // },
 
     babel: {
       files: {
         expand: true,
-        src: ['public_html/**/*.js'],
+        src: ['public_html/js/*.js'],
         ext: '-compiled.js',
       },
       options: {
@@ -89,16 +73,39 @@ module.exports = (grunt) => {
 
     stylelint: {
       options: {
-        configFile: '.stylelintrc.js',
+        configFile: '.stylelintrc.json',
         formatter: 'string',
         ignoreDisables: false,
         failOnError: true,
         outputFile: '',
         reportNeedlessDisables: false,
-        fix: false,
-        syntax: 'sass',
+        fix: true,
+        syntax: '',
       },
-      src: ['sass/**/*.scss'],
+      src: ['public_html/assets/css/**/*.{css,less,scss}'],
+    },
+
+    postcss: {
+      options: {
+        map: true, // inline sourcemaps
+
+        processors: [
+          // eslint-disable-next-line global-require
+          require('@csstools/postcss-sass')(/* node-sass options */),
+          // eslint-disable-next-line global-require
+          require('autoprefixer')(),
+          // eslint-disable-next-line global-require
+          require('postcss-preset-env')({
+            stage: 1,
+          }),
+          // eslint-disable-next-line global-require
+          // require('cssnano')(),
+        ],
+      },
+      dist: {
+        src: 'public_html/assets/css/style-copy.scss',
+        dest: 'public_html/style.css',
+      },
     },
 
     eslint: {
@@ -106,7 +113,7 @@ module.exports = (grunt) => {
         overrideConfigFile: '.eslintrc.json',
         fix: true,
       },
-      target: ['public_html/**/*.js', 'Gruntfile.js'],
+      target: ['public_html/assets/js/*.js', 'Gruntfile.js'],
     },
 
     /* Generate the directory if it is missing */
@@ -131,11 +138,10 @@ module.exports = (grunt) => {
       dev: {
         options: {
           style: 'expanded',
-          sourcemap: false,
         },
 
         files: {
-          'public_html/style.css': 'public_html/assets/css/style.scss',
+          'public_html/style.css': 'public_html/assets/css/style-copy.scss',
           /* where file goes-----/where file from */
         },
       },
@@ -145,7 +151,7 @@ module.exports = (grunt) => {
           sourcemap: false,
         },
         files: {
-          'public_html/style-min.css': 'public_html/assets/css/style.scss',
+          'public_html/style-min.css': 'public_html/assets/css/style-copy.scss',
           /* where file goes-----/where file from */
         },
       },
@@ -156,12 +162,13 @@ module.exports = (grunt) => {
      */
     watch: {
       sass: {
-        files: [
-          'public_html/assets/css/*.scss',
-          'public_html/**/*.js',
-          'Gruntfile.js',
-        ],
-        tasks: ['sass'],
+        files: ['public_html/assets/css/*.scss'],
+        tasks: ['sass', 'postcss'],
+      },
+
+      js: {
+        files: ['public_html/**/*.js'],
+        task: ['babel'],
       },
     },
   });
@@ -175,7 +182,8 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-stylelint');
-  grunt.loadNpmTasks('grunt-cwebp');
+  // grunt.loadNpmTasks('grunt-cwebp');
+  grunt.loadNpmTasks('@lodder/grunt-postcss');
 
   grunt.registerTask('default', [
     'babel',
@@ -185,7 +193,8 @@ module.exports = (grunt) => {
     'eslint',
     'clean',
     'mkdir',
-    'c-webp',
+    // 'c-webp',
+    'postcss',
   ]);
 };
 

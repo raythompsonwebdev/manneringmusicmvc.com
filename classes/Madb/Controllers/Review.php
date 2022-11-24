@@ -1,4 +1,5 @@
 <?php
+
 namespace Madb\Controllers;
 
 //import databasetable and authentication class
@@ -7,112 +8,112 @@ use \Mannering\Authentication;
 
 class Review
 {
-    private $authorsTable;
-    private $reviewsTable;
-    private $categoriesTable;
-    private $authentication;
+	private $authorsTable;
+	private $reviewsTable;
+	private $categoriesTable;
+	private $authentication;
 
-    public function __construct(
-        DatabaseTable $reviewsTable,
-        DatabaseTable $authorsTable,
-        DatabaseTable $categoriesTable,
-        Authentication $authentication
-    ) {
-        $this->reviewsTable = $reviewsTable;
-        $this->authorsTable = $authorsTable;
-        $this->categoriesTable = $categoriesTable;
-        $this->authentication = $authentication;
-    }
+	public function __construct(
+		DatabaseTable $reviewsTable,
+		DatabaseTable $authorsTable,
+		DatabaseTable $categoriesTable,
+		Authentication $authentication
+	) {
+		$this->reviewsTable = $reviewsTable;
+		$this->authorsTable = $authorsTable;
+		$this->categoriesTable = $categoriesTable;
+		$this->authentication = $authentication;
+	}
 
-    public function list()
-    {
+	public function list()
+	{
 
-        $page = $_GET['page'] ?? 1;
+		$page = $_GET['page'] ?? 1;
 
-        $offset = ($page-1)*10;
+		$offset = ($page - 1) * 10;
 
-        if (isset($_GET['category'])) {
-            $category = $this->categoriesTable->findById($_GET['category']);
-            $reviews = $category->getReviews(10, $offset);
-            $totalReviews = $category->getNumReviews();
-        } else {
-            $reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
-            $totalReviews = $this->reviewsTable->total();
-        }
+		if (isset($_GET['category'])) {
+			$category = $this->categoriesTable->findById($_GET['category']);
+			$reviews = $category->getReviews(10, $offset);
+			$totalReviews = $category->getNumReviews();
+		} else {
+			$reviews = $this->reviewsTable->findAll('reviewdate DESC', 10, $offset);
+			$totalReviews = $this->reviewsTable->total();
+		}
 
-        $title = 'Review list';
+		$title = 'Review list';
 
-        
+		$author = $this->authentication->getUser();
 
-        $author = $this->authentication->getUser();
+		return [
+			'template' => 'reviews.html.php',
+			'title' => $title,
+			'variables' => [
+				'totalReviews' => $totalReviews,
+				'reviews' => $reviews,
+				'user' => $author,
+				'categories' => $this->categoriesTable->findAll(),
+				'currentPage' => $page,
+				'categoryId' => $_GET['category'] ?? null
+			]
+		];
+	}
 
-        return ['template' => 'reviews.html.php',
-                'title' => $title,
-                'variables' => [
-                        'totalReviews' => $totalReviews,
-                        'reviews' => $reviews,
-                        'user' => $author,
-                        'categories' => $this->categoriesTable->findAll(),
-                        'currentPage' => $page,
-                        'categoryId' => $_GET['category'] ?? null
-                    ]
-                ];
-    }
 
-    
-    public function delete()
-    {
+	public function delete()
+	{
 
-        $author = $this->authentication->getUser();
+		$author = $this->authentication->getUser();
 
-        $review = $this->reviewsTable->findById($_POST['id']);
+		$review = $this->reviewsTable->findById($_POST['id']);
 
-        if ($review->authorId != $author->id && !$author->hasPermission(\Madb\Entity\Author::DELETE_REVIEWS)) {
-            return;
-        }
-        
+		if ($review->authorId != $author->id && !$author->hasPermission(\Madb\Entity\Author::DELETE_REVIEWS)) {
+			return;
+		}
 
-        $this->reviewsTable->delete($_POST['id']);
 
-        header('location: /review/list');
-    }
+		$this->reviewsTable->delete($_POST['id']);
 
-    public function saveEdit()
-    {
-        $author = $this->authentication->getUser();
+		header('location: /review/list');
+	}
 
-        $review = $_POST['review'];
-        $review['reviewdate'] = new \DateTime();
+	public function saveEdit()
+	{
+		$author = $this->authentication->getUser();
 
-        $reviewEntity = $author->addReview($review);
+		$review = $_POST['review'];
+		$review['reviewdate'] = new \DateTime();
 
-        $reviewEntity->clearCategories();
+		$reviewEntity = $author->addReview($review);
 
-        foreach ($_POST['category'] as $categoryId) {
-            $reviewEntity->addCategory($categoryId);
-        }
+		$reviewEntity->clearCategories();
 
-        header('location: /review/list');
-    }
+		foreach ($_POST['category'] as $categoryId) {
+			$reviewEntity->addCategory($categoryId);
+		}
 
-    public function edit()
-    {
-        $author = $this->authentication->getUser();
-        $categories = $this->categoriesTable->findAll();
+		header('location: /review/list');
+	}
 
-        if (isset($_GET['id'])) {
-            $review = $this->reviewsTable->findById($_GET['id']);
-        }
+	public function edit()
+	{
+		$author = $this->authentication->getUser();
+		$categories = $this->categoriesTable->findAll();
 
-        $title = 'Edit review';
+		if (isset($_GET['id'])) {
+			$review = $this->reviewsTable->findById($_GET['id']);
+		}
 
-        return ['template' => 'editreview.html.php',
-                'title' => $title,
-                'variables' => [
-                        'review' => $review ?? null,
-                        'user' => $author,
-                        'categories' => $categories
-                    ]
-                ];
-    }
+		$title = 'Edit review';
+
+		return [
+			'template' => 'editreview.html.php',
+			'title' => $title,
+			'variables' => [
+				'review' => $review ?? null,
+				'user' => $author,
+				'categories' => $categories
+			]
+		];
+	}
 }

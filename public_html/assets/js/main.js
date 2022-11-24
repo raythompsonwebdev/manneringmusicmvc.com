@@ -6,13 +6,12 @@ menuToggle.addEventListener(
     event.preventDefault();
 
     // create menu variables
-    const slideoutMenu = document.querySelector('#mannering_nav');
+    const slideoutMenu = document.querySelector('#mannering-nav');
 
-    const slideoutMenuHeight = slideoutMenu.offsetHeight;
+    const {slideoutMenuHeight} = {...slideoutMenu.offsetHeight};
 
     // toggle open class
     slideoutMenu.classList.toggle('open');
-
     slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
 
     // slide menu

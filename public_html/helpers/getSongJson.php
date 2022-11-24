@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '/../includes/DatabaseConnection.php';
+include __DIR__ . '/../../includes/DatabaseConnection.php';
 
 if (isset($_POST['songId'])) {
 

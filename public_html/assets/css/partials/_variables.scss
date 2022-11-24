@@ -1,16 +1,38 @@
-$orange-color:#ECAC00; //orange
-$orange-color1:#EBAB00; //title-orange
-$white-color:#FFF; //white
-$stone-grey:#3A3A3A; //stone-grey
-$stone-grey2:#3B3B3F; //stone-grey 2
-$stone-grey3:#3b3b3b; //stone-grey-3
-$darker-stone-grey:#2b2b2b; //darker-stone-grey
-$dark-grey:#333333; //  dark grey
-$light-grey:#666666; //light-grey
-$bg-black:#181818;  //bg-black
-$button-hover:yellow;
-$button-border:#7c412b;
+$orange-color: #ecac00; // orange
+$orange-color1: #ebab00; // title-orange
+$orange-color2: #cc9900;
+$white-color: #fafaf7; // white
+$stone-grey: #3a3a3a; // stone-grey
+$stone-grey2: #3b3b3f; // stone-grey 2
+$stone-grey3: #3b3b3b; // stone-grey-3
+$darker-stone-grey: #2b2b2b; // darker-stone-grey
+$dark-grey: #333333; // dark grey
+$light-grey: #666666; // light-grey
+$bg-black: #181818; // bg-black
 
+$button-hover: yellow;
+$button-border: #7c412b;
+$notice-border: #ffd324;
+$notice-color: #514721;
+$notice-bg: #e6efc2;
+$success-bg: #e6efc2;
+$success-color: #264409;
+$success-border: #c6d880;
+$error-bg: #e6efc2;
+$error-color: #297f10;
+$error-border: #297f10;
+$FontList: 'Oswald', 'helvitica', 'serif', sans-serif;
+$FontListText: 'Lato', 'helvitica', 'serif', sans-serif;
 
-$FontList: 'Oswald', sans-serif;
-$FontListText: 'Lato', sans-serif;
+// @font-face {
+//    font-family: 'Harabara_Bold';
+//    src: url('../fonts/Harabara_Bold/Harabara.eot'); /* IE9 Compat Modes */
+//    src: url('../fonts/Harabara_Bold/Harabara.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//    url('../fonts/Harabara_Bold/Harabara.woff') format('woff'), /* Modern Browsers */
+//    url('../fonts/Harabara_Bold/Harabara.ttf')  format('truetype'), /* Safari, Android, iOS */
+//    url('../fonts/Harabara_Bold/Harabara.svg#svgFontName') format('svg'); /* Legacy iOS */
+//    font-weight: normal;
+//    font-style: normal;
+//    font-display: auto;
+
+// }
