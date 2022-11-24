@@ -117,6 +117,9 @@
 					</a>
 				</li>
 				<li class="mannering-mobile-inner-nav-item">
+					<a href="/review/list" class="mannering-mobile-inner-nav-link" aria-label="link to reviews page">Reviews</a>
+				</li>
+				<li class="mannering-mobile-inner-nav-item">
 					<a href="/search" aria-label="link to album search page" class="mannering-mobile-inner-nav-link"> Search
 					</a>
 				</li>
@@ -131,7 +134,7 @@
 						<a href="/logout" class="mannering-mobile-inner-nav-link" aria-label="link to logout">Log out</a>
 					</li>
 				<?php else : ?>
-					<li cclass="mannering-mobile-inner-nav-item">
+					<li class="mannering-mobile-inner-nav-item">
 						<a href="/login" class="mannering-mobile-inner-nav-link" aria-label="link to login">Log in</a>
 					</li>
 				<?php endif; ?>

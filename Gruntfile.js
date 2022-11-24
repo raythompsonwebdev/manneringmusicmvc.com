@@ -43,21 +43,21 @@ module.exports = (grunt) => {
       },
     },
 
-    cwebp: {
-      dynamic: {
-        options: {
-          q: 60,
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'test-images/',
-            src: ['*.{gif,jpg,png}'],
-            dest: 'img/',
-          },
-        ],
-      },
-    },
+    // cwebp: {
+    //   dynamic: {
+    //     options: {
+    //       q: 60,
+    //     },
+    //     files: [
+    //       {
+    //         expand: true,
+    //         cwd: 'test-images/',
+    //         src: ['*.{gif,jpg,png}'],
+    //         dest: 'img/',
+    //       },
+    //     ],
+    //   },
+    // },
 
     babel: {
       files: {
@@ -103,7 +103,7 @@ module.exports = (grunt) => {
         ],
       },
       dist: {
-        src: 'public_html/assets/css/style.scss',
+        src: 'public_html/assets/css/style-copy.scss',
         dest: 'public_html/style.css',
       },
     },
@@ -141,7 +141,7 @@ module.exports = (grunt) => {
         },
 
         files: {
-          'public_html/style.css': 'public_html/assets/css/style.scss',
+          'public_html/style.css': 'public_html/assets/css/style-copy.scss',
           /* where file goes-----/where file from */
         },
       },
@@ -151,7 +151,7 @@ module.exports = (grunt) => {
           sourcemap: false,
         },
         files: {
-          'public_html/style-min.css': 'public_html/assets/css/style.scss',
+          'public_html/style-min.css': 'public_html/assets/css/style-copy.scss',
           /* where file goes-----/where file from */
         },
       },
@@ -182,7 +182,7 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-stylelint');
-  grunt.loadNpmTasks('grunt-cwebp');
+  // grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks('@lodder/grunt-postcss');
 
   grunt.registerTask('default', [
@@ -193,7 +193,7 @@ module.exports = (grunt) => {
     'eslint',
     'clean',
     'mkdir',
-    'c-webp',
+    // 'c-webp',
     'postcss',
   ]);
 };

@@ -450,6 +450,10 @@
   transition: all 0.5s ease;
   width: auto;
   margin: 3% auto;
+}
+
+.album-card-image:hover {
+  border: 2px solid $orange-color;
   cursor: pointer;
 }
 
@@ -472,15 +476,6 @@
   line-height: 35px;
   font-size: 0.9em;
   color: $white-color;
-}
-
-.album-card:hover {
-  cursor: pointer;
-}
-
-.album-card:hover .album-card-image {
-  transition: scale(1.02);
-  border: 2px solid $orange-color;
 }
 
 /* edit review form */
@@ -757,7 +752,7 @@
 }
 
 .other-results-info:hover .result-info-img {
-  transition: scale(1.01);
+  transition: scale(0.9);
   border: 1px solid $orange-color;
   cursor: pointer;
 }
@@ -864,6 +859,7 @@
     font-size: 0.9em;
     line-height: 40px;
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -1413,7 +1409,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgb(51 51 51 / 75%);
+  background: $bg-black;
   text-align: center;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -1820,7 +1816,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -1830,9 +1826,6 @@ footer {
   }
   .album-card-genre {
     font-size: 1em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -1973,7 +1966,7 @@ footer {
     margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
-    transition: scale(1.01);
+    transition: scale(0.9);
     border: 1px solid $orange-color;
     cursor: pointer;
   }
@@ -2645,7 +2638,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -2655,9 +2648,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -2895,7 +2885,7 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .large-text {
     width: 85%;
@@ -2927,8 +2917,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
     .audiocntrl-container {
       width: 100%;
@@ -3207,7 +3198,7 @@ footer {
   }
 }
 
-/* 1280 - 1439 */
+/* 1439 - 1280 */
 @media screen and (min-width: 80em) and (max-width: 89.9375em) {
   #mobile-toggle {
     display: none;
@@ -3464,7 +3455,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -3474,9 +3465,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -3715,10 +3703,10 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .large-text {
-    width: 14%;
+    width: 79%;
     text-indent: 0.5em;
   }
   .large-text-link {
@@ -3726,7 +3714,7 @@ footer {
     margin: 0;
   }
   .large-text-title {
-    width: 85%;
+    width: 20%;
     text-indent: 0.5em;
   }
 
@@ -3747,8 +3735,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.3em;
+      line-height: 55px;
+      text-align: center;
     }
     .audiocntrl-container {
       width: 100%;
@@ -3779,7 +3768,7 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1.1em;
       }
 
       .audio-volume {
@@ -3815,7 +3804,7 @@ footer {
     .audio-tracklist-item {
       font-size: 0.9em;
       .tracknum {
-        width: 20%;
+        width: 18%;
       }
       .trackname {
         width: 50%;
@@ -4027,7 +4016,7 @@ footer {
   }
 }
 
-/* 1024 - 1279 */
+/* 1279 - 1024 */
 @media screen and (min-width: 64em) and (max-width: 79.9375em) {
   #mobile-toggle {
     display: none;
@@ -4037,7 +4026,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 90%;
+    width: 94%;
   }
 
   #mannering-header {
@@ -4101,6 +4090,7 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   .inner-nav-item {
     width: 14.5%;
@@ -4108,11 +4098,17 @@ footer {
 
     a[href~='\/review\/edit'] {
       font-size: 65%;
+      display: block;
     }
   }
   .inner-nav-link {
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 1.1em;
+    background-color: $stone-grey;
+    color: $white-color;
+    font-weight: normal;
+    text-align: center;
+    display: block;
     &:link {
       background-color: $stone-grey;
       color: $white-color;
@@ -4278,7 +4274,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -4288,9 +4284,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -4529,10 +4522,10 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .large-text {
-    width: 14%;
+    width: 79%;
     text-indent: 0.5em;
   }
   .large-text-link {
@@ -4540,7 +4533,7 @@ footer {
     margin: 0;
   }
   .large-text-title {
-    width: 85%;
+    width: 20%;
     text-indent: 0.5em;
   }
 
@@ -4561,8 +4554,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.2em;
+      line-height: 50px;
+      text-align: center;
     }
     .audiocntrl-container {
       width: 100%;
@@ -4593,7 +4587,7 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
@@ -4627,9 +4621,9 @@ footer {
     margin: 0;
     width: 100%;
     .audio-tracklist-item {
-      font-size: 0.9em;
+      font-size: 0.85em;
       .tracknum {
-        width: 20%;
+        width: 18%;
       }
       .trackname {
         width: 50%;
@@ -4841,7 +4835,7 @@ footer {
   }
 }
 
-/* 800 - 979 */
+/* 1023 - 800 */
 @media screen and (min-width: 50em) and (max-width: 63.9375em) {
   #mobile-toggle {
     display: none;
@@ -4851,7 +4845,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 90%;
+    width: 96%;
   }
 
   #mannering-header {
@@ -4915,6 +4909,7 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
+    gap: 0.2em;
   }
   .inner-nav-item {
     width: 14.5%;
@@ -4926,17 +4921,29 @@ footer {
   }
   .inner-nav-link {
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 1em;
+    background-color: $stone-grey;
+    color: $white-color;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
     &:visited {
-      font-weight: bold;
+      color: $stone-grey;
+      background-color: $orange-color;
     }
     &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
       font-weight: bold;
       cursor: pointer;
     }
     &:active {
-      color: $orange-color;
-      background-color: $white-color;
+      color: $stone-grey;
+      background-color: $orange-color;
     }
   }
 
@@ -5085,7 +5092,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -5095,9 +5102,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -5286,6 +5290,7 @@ footer {
   /* single artist page */
   .results-large {
     height: auto;
+    justify-content: center;
 
     h4 {
       font-size: 1.1em;
@@ -5293,7 +5298,7 @@ footer {
     }
   }
   .artist-bio {
-    width: 49%;
+    width: 85%;
     display: flex;
   }
   .artist-bio-image {
@@ -5318,7 +5323,7 @@ footer {
     align-items: center;
     position: relative;
     gap: 1em;
-    width: 48%;
+    width: 85%;
   }
   .results-large-link {
     width: 25%;
@@ -5336,26 +5341,26 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .large-text {
-    width: 14%;
-    text-indent: 0.5em;
+    width: 79%;
+    text-indent: 0.25em;
   }
   .large-text-link {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 85%;
-    text-indent: 0.5em;
+    width: 20%;
+    text-indent: 0.25em;
   }
 
   .results-large-info :hover .results-large-img {
     cursor: pointer;
   }
   .result-label {
-    text-indent: 1em;
+    text-indent: 0.9em;
   }
 
   /* audio controls */
@@ -5366,16 +5371,17 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 85%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1em;
+      line-height: 50px;
+      text-align: center;
     }
     .audiocntrl-container {
       width: 100%;
 
       .audio-player-btn {
-        width: 14%;
+        width: 20%;
         .fa-play,
         .fa-pause,
         .fa-step-backward,
@@ -5400,11 +5406,11 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
           width: 80%;
@@ -5434,9 +5440,9 @@ footer {
     margin: 0;
     width: 100%;
     .audio-tracklist-item {
-      font-size: 0.9em;
+      font-size: 0.85em;
       .tracknum {
-        width: 20%;
+        width: 17%;
       }
       .trackname {
         width: 50%;
@@ -5648,7 +5654,7 @@ footer {
   }
 }
 
-/* 736 - 799 */
+/* 799 - 736 */
 @media screen and (min-width: 46em) and (max-width: 49.9375em) {
   #mobile-toggle {
     display: none;
@@ -5658,7 +5664,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 90%;
+    width: 96%;
   }
 
   #mannering-header {
@@ -5722,6 +5728,7 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   .inner-nav-item {
     width: 14.5%;
@@ -5733,17 +5740,29 @@ footer {
   }
   .inner-nav-link {
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 1em;
+    background-color: $stone-grey;
+    color: $white-color;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    &:link {
+      background-color: $stone-grey;
+      color: $white-color;
+    }
     &:visited {
-      font-weight: bold;
+      color: $stone-grey;
+      background-color: $orange-color;
     }
     &:hover {
+      background-color: $orange-color;
+      color: $stone-grey;
       font-weight: bold;
       cursor: pointer;
     }
     &:active {
-      color: $orange-color;
-      background-color: $white-color;
+      color: $stone-grey;
+      background-color: $orange-color;
     }
   }
 
@@ -5892,7 +5911,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -5902,9 +5921,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -6093,6 +6109,7 @@ footer {
   /* single artist page */
   .results-large {
     height: auto;
+    justify-content: center;
 
     h4 {
       font-size: 1.1em;
@@ -6100,7 +6117,7 @@ footer {
     }
   }
   .artist-bio {
-    width: 49%;
+    width: 85%;
     display: flex;
   }
   .artist-bio-image {
@@ -6125,7 +6142,7 @@ footer {
     align-items: center;
     position: relative;
     gap: 1em;
-    width: 48%;
+    width: 85%;
   }
   .results-large-link {
     width: 30%;
@@ -6145,7 +6162,7 @@ footer {
     font-size: 0.8em;
   }
   .large-text {
-    width: 86%;
+    width: 79%;
     text-indent: 0.25em;
   }
   .large-text-link {
@@ -6153,7 +6170,7 @@ footer {
     margin: 0;
   }
   .large-text-title {
-    width: 14%;
+    width: 20%;
     text-indent: 0.25em;
   }
 
@@ -6172,10 +6189,11 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 90%;
     .audio-track-name {
-      font-size: 1em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
     .audiocntrl-container {
       width: 100%;
@@ -6210,7 +6228,7 @@ footer {
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
           width: 100%;
@@ -6242,7 +6260,7 @@ footer {
     .audio-tracklist-item {
       font-size: 0.8em;
       .tracknum {
-        width: 20%;
+        width: 17%;
       }
       .trackname {
         width: 50%;
@@ -6458,8 +6476,8 @@ footer {
   }
 }
 
-/* 600 - 666 */
-@media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
+/* 735 - 600 */
+@media screen and (min-width: 37.5em) and (max-width: 45.9375em) {
   #mobile-toggle {
     top: 0.5em;
     left: 88vw;
@@ -6513,7 +6531,7 @@ footer {
     margin-bottom: 0.5em;
     position: absolute;
     top: -200px;
-    left: 0;
+    left: 0.5em;
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
@@ -6553,6 +6571,7 @@ footer {
     p {
       line-height: 1.6em;
       padding: 0.5em;
+      font-size: 0.9em;
     }
   }
 
@@ -6687,7 +6706,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -6697,9 +6716,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -6888,14 +6904,14 @@ footer {
   /* single artist page */
   .results-large {
     height: auto;
-
+    justify-content: center;
     h4 {
       font-size: 1.1em;
       line-height: 40px;
     }
   }
   .artist-bio {
-    width: 49%;
+    width: 85%;
     display: flex;
   }
   .artist-bio-image {
@@ -6920,17 +6936,17 @@ footer {
     align-items: center;
     position: relative;
     gap: 1em;
-    width: 48%;
+    width: 90%;
   }
   .results-large-link {
-    width: 25%;
+    width: 30%;
     order: 0;
   }
   .results-large-img {
     margin: 0 1em 0 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 70%;
     order: 1;
   }
   .results-large-text-items {
@@ -6938,19 +6954,19 @@ footer {
     margin: 0.5em 0;
   }
   .results-large-text-item {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .large-text {
-    width: 85%;
-    text-indent: 0.5em;
+    width: 79%;
+    text-indent: 0.25em;
   }
   .large-text-link {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
+    width: 20%;
+    text-indent: 0.25em;
   }
 
   .results-large-info :hover .results-large-img {
@@ -6968,17 +6984,18 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50%;
+    width: 90%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
 
     .audiocntrl-container {
       width: 100%;
 
       .audio-player-btn {
-        width: 14%;
+        width: 20%;
         .fa-play,
         .fa-pause,
         .fa-step-backward,
@@ -7003,14 +7020,14 @@ footer {
       .current-time,
       .duration {
         width: 15%;
-        font-size: 1.3em;
+        font-size: 1em;
       }
 
       .audio-volume {
-        width: 30%;
+        width: 100%;
 
         .volume-bg {
-          width: 80%;
+          width: 96%;
         }
 
         .volume {
@@ -7039,7 +7056,7 @@ footer {
     .audio-tracklist-item {
       font-size: 0.9em;
       .tracknum {
-        width: 20%;
+        width: 17%;
       }
       .trackname {
         width: 50%;
@@ -7256,7 +7273,7 @@ footer {
   }
 }
 
-/* 480 -599 */
+/* 599 - 480 */
 @media screen and (min-width: 30em) and (max-width: 37.4375em) {
   #mobile-toggle {
     top: 0.5em;
@@ -7485,7 +7502,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -7495,9 +7512,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -7768,8 +7782,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
 
     .audiocntrl-container {
@@ -8054,7 +8069,7 @@ footer {
   }
 }
 
-/* 375 - 479 */
+/* 479 - 375 */
 @media screen and (min-width: 23.4375em) and (max-width: 479px) {
   #mobile-toggle {
     top: 0.5em;
@@ -8283,7 +8298,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -8293,9 +8308,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -8566,8 +8578,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
 
     .audiocntrl-container {
@@ -8852,7 +8865,7 @@ footer {
   }
 }
 
-/* 360 374 */
+/* 375 - 360 */
 @media screen and (min-width: 22.5em) and (max-width: 374px) {
   #mobile-toggle {
     top: 0.5em;
@@ -9081,7 +9094,7 @@ footer {
     flex: 0 0 auto;
   }
   .album-card-image {
-    border: 2px solid $stone-grey;
+    width: auto;
   }
   .album-card-text {
     margin: 0;
@@ -9091,9 +9104,6 @@ footer {
   }
   .album-card-genre {
     font-size: 0.9em;
-  }
-  .album-card:hover {
-    cursor: pointer;
   }
 
   /* edit review form */
@@ -9364,8 +9374,9 @@ footer {
     gap: 1em;
     width: 50%;
     .audio-track-name {
-      font-size: 1.8em;
-      line-height: 150px;
+      font-size: 1.5em;
+      line-height: 55px;
+      text-align: center;
     }
 
     .audiocntrl-container {
