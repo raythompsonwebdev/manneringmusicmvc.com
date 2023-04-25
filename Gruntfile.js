@@ -10,20 +10,16 @@ module.exports = (grunt) => {
           engine: 'im',
           sizes: [
             {
-              name: '320',
-              width: 320,
+              name: '125',
+              width: 125,
             },
             {
-              name: '340',
-              width: 340,
+              name: '145',
+              width: 145,
             },
             {
-              name: '360',
-              width: 360,
-            },
-            {
-              name: '380',
-              width: 380,
+              name: '175',
+              width: 175,
             },
           ],
         },
@@ -43,21 +39,21 @@ module.exports = (grunt) => {
       },
     },
 
-    // cwebp: {
-    //   dynamic: {
-    //     options: {
-    //       q: 60,
-    //     },
-    //     files: [
-    //       {
-    //         expand: true,
-    //         cwd: 'test-images/',
-    //         src: ['*.{gif,jpg,png}'],
-    //         dest: 'img/',
-    //       },
-    //     ],
-    //   },
-    // },
+    cwebp: {
+      dynamic: {
+        options: {
+          q: 60,
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'test-images/',
+            src: ['*.{gif,jpg,png}'],
+            dest: 'img/',
+          },
+        ],
+      },
+    },
 
     babel: {
       files: {
@@ -162,7 +158,10 @@ module.exports = (grunt) => {
      */
     watch: {
       sass: {
-        files: ['public_html/assets/css/*.scss'],
+        files: [
+          'public_html/assets/css/style-copy.scss',
+          'public_html/assets/css/partials/*.scss',
+        ],
         tasks: ['sass', 'postcss'],
       },
 

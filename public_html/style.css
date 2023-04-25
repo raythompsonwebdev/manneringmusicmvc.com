@@ -262,7 +262,6 @@ table {
 }
 
 body {
-  background-image: url("/assets/images/526.gif");
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,7 +287,7 @@ ul {
 }
 
 li {
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 img {
@@ -301,13 +300,13 @@ img {
 p {
   width: 100%;
   font-weight: normal;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 label {
   display: block;
   width: 100%;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 hr {
@@ -326,9 +325,9 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Trebuchet MS", arial, helvetica, sans-serif;
 }
 
 /* Place a border around focused fields */
@@ -453,7 +452,6 @@ input[type=submit]:active {
 #site-logo {
   width: 63%;
   height: 40px;
-  padding-left: 1%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -477,7 +475,7 @@ input[type=submit]:active {
 #logo span {
   height: 100%;
   margin: 0;
-  color: #fafaf7;
+  color: #ebab00;
   text-align: left;
   display: inline-block;
 }
@@ -606,7 +604,7 @@ input[type=submit]:active {
 
 .mannering-mobile-inner-nav-link {
   text-decoration: none;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
   width: 100%;
   line-height: 40px;
   background-color: #3a3a3a;
@@ -651,22 +649,11 @@ input[type=submit]:active {
   padding: 0;
   min-height: 800px;
 }
-#mannering-content h2 {
-  font-size: 1.3em;
-  width: 100%;
-  color: #fafaf7;
-  height: auto;
-  line-height: 35px;
-  text-align: center;
-  padding: 0;
-  font-weight: normal;
-  margin-bottom: 0.25em;
-}
 #mannering-content p {
   line-height: 1.6em;
   margin: 0;
   display: block;
-  color: #fafaf7;
+  color: #333333;
   padding: 0.5em;
   width: 97%;
 }
@@ -679,16 +666,26 @@ input[type=submit]:active {
 }
 
 #main-section {
-  color: #fafaf7;
   height: auto;
   width: 100%;
   padding-top: 0.5em;
   margin: 0 0 1em;
 }
+#main-section h2 {
+  font-size: 1.3em;
+  width: 100%;
+  color: #333333;
+  height: auto;
+  line-height: 35px;
+  text-align: center;
+  padding: 0;
+  font-weight: normal;
+  margin-bottom: 0.25em;
+}
 
 /* login error */
 .login-error {
-  color: #fafaf7;
+  color: #333333;
 }
 .login-error:hover {
   color: #ecac00;
@@ -894,6 +891,7 @@ input[type=submit]:active {
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .album-card-genre {
@@ -901,6 +899,7 @@ input[type=submit]:active {
   line-height: 35px;
   font-size: 0.85em;
   color: #fafaf7;
+  margin: 0;
 }
 
 /* edit review form */
@@ -998,7 +997,7 @@ input[type=submit]:active {
   width: 100%;
   padding: 0.5em;
   border-radius: 5px;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 #mannering-search fieldset {
   padding: 1em;
@@ -1020,7 +1019,7 @@ input[type=submit]:active {
 }
 #mannering-search legend {
   width: 50%;
-  color: #fafaf7;
+  color: #333333;
   text-align: center;
   line-height: 35px;
   font-size: 1em;
@@ -1049,11 +1048,13 @@ input[type=submit]:active {
   border-radius: 5px;
   background: #fafaf7;
   padding: 0;
-  font-size: 1em;
+  font-size: 0.9em;
   width: 25%;
   color: #181818;
   line-height: 35px;
+  height: 35px;
   display: inline-block;
+  margin-bottom: 0.5em;
 }
 
 #genre option {
@@ -1061,15 +1062,16 @@ input[type=submit]:active {
 }
 
 #search-btn {
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
   letter-spacing: 0.1em;
   width: 25%;
   color: #fafaf7;
-  font-size: 1em;
+  font-size: 0.9em;
   display: inline-block;
   background-color: #ecac00;
   font-weight: normal;
   line-height: 35px;
+  margin: 0;
 }
 #search-btn:hover {
   letter-spacing: 0.12em;
@@ -1081,7 +1083,7 @@ input[type=submit]:active {
 .refresh-page-link {
   font-size: 0.9em;
   text-align: left;
-  color: #fafaf7;
+  color: #333333;
   margin: 0 auto;
   width: 100%;
   line-height: 40px;
@@ -1089,7 +1091,7 @@ input[type=submit]:active {
 }
 .refresh-page-link a {
   text-decoration: none;
-  color: #fafaf7;
+  color: #333333;
   display: block;
   margin: 0 auto;
   width: 98%;
@@ -1148,6 +1150,11 @@ input[type=submit]:active {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
+.other-results #other-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
 
 .other-results-info {
   margin: 0;
@@ -1179,7 +1186,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .other-results-genre {
@@ -1190,7 +1197,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .other-results-info:hover .result-info-img {
@@ -1244,6 +1251,7 @@ input[type=submit]:active {
   line-height: 25px;
   text-align: center;
   margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-album {
@@ -1254,7 +1262,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-artist {
@@ -1265,7 +1273,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-artist-link {
@@ -1310,13 +1318,14 @@ input[type=submit]:active {
       -ms-flex-align: start;
           align-items: flex-start;
   font-weight: normal;
-  gap: 0.5em;
+  gap: 0.25em;
 }
 .results-large h4 {
   font-size: 0.9em;
   line-height: 40px;
   width: 100%;
   text-align: center;
+  margin: 0;
 }
 
 .artist-bio {
@@ -1355,6 +1364,7 @@ input[type=submit]:active {
   color: #fafaf7;
   text-align: left;
   width: 100%;
+  margin: 0;
 }
 
 .results-large-info {
@@ -1471,12 +1481,13 @@ input[type=submit]:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 1em;
+  gap: 0.25em;
   width: 100%;
 }
 .audio-controls .audio-track-name {
   font-size: 1em;
   line-height: 50px;
+  margin: 0;
 }
 .audio-controls .audiocntrl-container {
   height: auto;
@@ -1549,12 +1560,13 @@ input[type=submit]:active {
   letter-spacing: 0.15em;
   text-align: center;
   background-color: #181818;
+  color: #297f10;
   text-shadow: none;
   font-size: 0.75em;
 }
 .audio-controls .audiocntrl-container .audio-volume {
   width: 100%;
-  height: 50px;
+  height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2139,19 +2151,19 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     height: 40px;
     background-color: #fafaf7;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    font-family: "Trebuchet MS", arial, helvetica, sans-serif;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
   }
   .inner-nav-link {
     text-decoration: none;
-    font-family: "Lato", "helvitica", "serif", sans-serif;
     width: 100%;
     line-height: 40px;
     background-color: #3a3a3a;
@@ -2183,12 +2195,6 @@ footer {
     width: 100%;
     min-height: 800px;
   }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    font-weight: normal;
-    line-height: 50px;
-    margin-bottom: 1em;
-  }
   #mannering-content p {
     line-height: 1.6em;
     padding: 0.5em;
@@ -2202,21 +2208,18 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    font-weight: normal;
+    line-height: 50px;
+    margin-bottom: 1em;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
     display: block;
@@ -2240,16 +2243,11 @@ footer {
     display: block;
     width: 50%;
   }
-  /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -2392,6 +2390,7 @@ footer {
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
     line-height: 40px;
   }
@@ -2421,19 +2420,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
     line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -2492,11 +2492,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     -webkit-transition: scale(0.9);
@@ -2574,7 +2572,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -2611,7 +2608,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.9em;
@@ -2636,10 +2632,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -2650,7 +2642,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 50%;
   }
   .audio-controls .audio-track-name {
@@ -2981,10 +2972,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 12.5%;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
@@ -3018,9 +3006,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -3035,54 +3021,34 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -3223,6 +3189,7 @@ footer {
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
   }
   .search-label {
@@ -3251,20 +3218,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -3323,11 +3290,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     border: 1px solid #ecac00;
@@ -3403,7 +3368,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -3440,7 +3404,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.85em;
@@ -3465,10 +3428,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -3479,7 +3438,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 50%;
   }
   .audio-controls .audio-track-name {
@@ -3810,10 +3768,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 12.5%;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
@@ -3847,9 +3802,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -3864,54 +3817,34 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -4052,6 +3985,7 @@ footer {
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
   }
   .search-label {
@@ -4080,20 +4014,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -4153,11 +4087,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     border: 1px solid #ecac00;
@@ -4233,7 +4165,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -4270,7 +4201,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.85em;
@@ -4295,10 +4225,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -4309,7 +4235,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 50%;
   }
   .audio-controls .audio-track-name {
@@ -4639,10 +4564,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 12.5%;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
@@ -4677,9 +4599,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -4694,54 +4614,34 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -4910,20 +4810,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -4982,11 +4882,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     border: 1px solid #ecac00;
@@ -5062,7 +4960,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -5099,7 +4996,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.85em;
@@ -5124,10 +5020,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -5138,7 +5030,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 50%;
   }
   .audio-controls .audio-track-name {
@@ -5468,7 +5359,7 @@ footer {
     gap: 0.2em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -5505,9 +5396,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -5522,54 +5411,34 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -5738,20 +5607,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -5893,7 +5762,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -5930,7 +5798,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.8em;
@@ -5955,10 +5822,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -5969,7 +5832,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 85%;
   }
   .audio-controls .audio-track-name {
@@ -6299,7 +6161,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -6336,9 +6198,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -6353,54 +6213,34 @@ footer {
   #main-section {
     margin: 0 0 1em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -6569,20 +6409,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
     line-height: 40px;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -6724,7 +6564,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -6785,10 +6624,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -6799,7 +6634,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 90%;
   }
   .audio-controls .audio-track-name {
@@ -7141,10 +6975,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.7em;
-    min-height-font-weight: normal;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7157,54 +6988,35 @@ footer {
   #main-section {
     margin: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -7373,20 +7185,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
+    font-size: 0.9em;
     line-height: 40px;
+    height: 40px;
+    margin-bottom: 0.5em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -7528,7 +7340,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -7565,7 +7376,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.8em;
@@ -7590,10 +7400,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -7604,7 +7410,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 90%;
   }
   .audio-controls .audio-track-name {
@@ -7946,10 +7751,7 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.6em;
-    min-height-font-weight: normal;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7961,54 +7763,35 @@ footer {
   #main-section {
     margin: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.6em;
+    font-weight: normal;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -8177,20 +7960,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
+    font-size: 0.9em;
     line-height: 40px;
+    height: 40px;
+    margin-bottom: 0.5em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -8329,7 +8112,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -8366,7 +8148,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.8em;
@@ -8391,10 +8172,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -8405,7 +8182,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 100%;
   }
   .audio-controls .audio-track-name {
@@ -8742,11 +8518,6 @@ footer {
     width: 100%;
     min-height: 800px;
   }
-  #mannering-content h2 {
-    font-size: 1.5em;
-    font-weight: normal;
-    line-height: 50px;
-  }
   #mannering-content p {
     line-height: 1.6em;
     padding: 0.5em;
@@ -8757,54 +8528,35 @@ footer {
   #main-section {
     margin: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -8973,20 +8725,20 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
+    font-size: 0.9em;
     line-height: 40px;
+    height: 40px;
+    margin-bottom: 0.5em;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -9125,7 +8877,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9162,7 +8913,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.75em;
@@ -9187,10 +8937,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -9201,7 +8947,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 100%;
   }
   .audio-controls .audio-track-name {
@@ -9538,11 +9283,6 @@ footer {
     width: 100%;
     min-height: 800px;
   }
-  #mannering-content h2 {
-    font-size: 1.4em;
-    font-weight: normal;
-    line-height: 50px;
-  }
   #mannering-content p {
     line-height: 1.6em;
     padding: 0.5em;
@@ -9553,54 +9293,34 @@ footer {
   #main-section {
     margin: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.4em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -9769,20 +9489,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
+    font-size: 0.9em;
     line-height: 40px;
+    height: 40px;
+    margin-bottom: 0.5em;
+    height: 40px;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -9921,7 +9642,6 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9958,7 +9678,6 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.75em;
@@ -9983,10 +9702,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -9997,7 +9712,6 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 100%;
   }
   .audio-controls .audio-track-name {

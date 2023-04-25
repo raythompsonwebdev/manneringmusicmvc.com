@@ -205,7 +205,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 			if (track[0] != null) {
 
-				console.log(track[0].songtitle);
+				// console.log(track[0].songtitle);
 
 				document.querySelector(".artist-track-name").textContent = `Track Name : ${track[0].songtitle}`;
 				audioElement.setTrack(track);
@@ -358,10 +358,11 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 		</div>
 
-		<h2> Other Albums</h2>
+
 
 		<?php foreach ($singlealbums as $value) : ?>
 			<div class="other-results">
+				<h2 id="other-header"> Other Albums</h2>
 				<figure class="other-results-info">
 					<a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>" class="other-result-link">
 						<img src="/assets/databasepics/WEBP/<?= $value->image ?>" width="150" height="150" class="other-result-img" alt="<?= $value->album ?>" />
