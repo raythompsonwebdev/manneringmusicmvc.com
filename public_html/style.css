@@ -1321,7 +1321,7 @@ input[type=submit]:active {
 }
 .results-large h4 {
   font-size: 0.9em;
-  line-height: 40px;
+  line-height: 50px;
   width: 100%;
   text-align: center;
   margin: 0;
@@ -1389,12 +1389,12 @@ input[type=submit]:active {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  gap: 1em;
+  gap: 0.5em;
   width: 100%;
 }
 
 .results-large-link {
-  width: auto;
+  width: 150px;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
@@ -1439,16 +1439,24 @@ input[type=submit]:active {
   line-height: 35px;
   height: 35px;
   color: #fafaf7;
+  font-size: 1em;
 }
 
-.large-text-link {
+.large-text a[href~="/review/edit"] {
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  color: #fafaf7;
+}
+.large-text a[href~="/review/edit"]:hover {
+  color: #ecac00;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .large-text-title {
   text-indent: 0.25em;
-  width: 20%;
+  width: 18%;
   display: block;
   float: left;
   line-height: 35px;
@@ -1456,6 +1464,7 @@ input[type=submit]:active {
   background-color: #fafaf7;
   color: #181818;
   border-right: solid 1px #333333;
+  font-size: 1em;
 }
 
 .results-large-info :hover .results-large-img {
@@ -2564,8 +2573,9 @@ footer {
     height: auto;
   }
   .results-large h4 {
+    line-height: 80px;
+    text-align: left;
     font-size: 1.1em;
-    line-height: 40px;
   }
   .artist-bio {
     width: 49%;
@@ -2597,9 +2607,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -2607,21 +2614,19 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 48%;
   }
   .results-large-link {
-    width: 25%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
     width: 75%;
@@ -2637,15 +2642,13 @@ footer {
   }
   .large-text {
     width: 85%;
-    text-indent: 0.5em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
     width: 14%;
-    text-indent: 0.5em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -3369,7 +3372,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 49%;
@@ -3401,9 +3405,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -3411,24 +3412,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 48%;
   }
   .results-large-link {
-    width: 25%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 79%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3441,15 +3440,13 @@ footer {
   }
   .large-text {
     width: 85%;
-    text-indent: 0.5em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
     width: 14%;
-    text-indent: 0.5em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -3528,7 +3525,7 @@ footer {
     width: 100%;
   }
   .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
     width: 7%;
@@ -4172,7 +4169,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 49%;
@@ -4204,9 +4202,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -4214,21 +4209,19 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 48%;
   }
   .results-large-link {
-    width: 25%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
     width: 75%;
@@ -4244,15 +4237,15 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.5em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
-    text-indent: 0.5em;
+    width: 15%;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -4977,7 +4970,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 49%;
@@ -5009,9 +5003,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -5019,21 +5010,19 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 48%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 49%;
   }
   .results-large-link {
-    width: 25%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
     width: 75%;
@@ -5049,15 +5038,15 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.5em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
-    text-indent: 0.5em;
+    width: 15%;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -5786,10 +5775,12 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 100%;
@@ -5821,9 +5812,6 @@ footer {
     font-size: 1.2em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -5831,24 +5819,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 85%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
   .results-large-link {
-    width: 25%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 75%;
+    width: 84%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -5861,15 +5847,16 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 1em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 11%;
     text-indent: 0.25em;
+    font-size: 1em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -6598,10 +6585,12 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 60px;
+    text-align: left;
   }
   .artist-bio {
     width: 100%;
@@ -6633,9 +6622,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -6643,24 +6629,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 85%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
   .results-large-link {
-    width: 30%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 70%;
+    width: 79%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -6672,16 +6656,17 @@ footer {
     font-size: 0.8em;
   }
   .large-text {
-    width: 79%;
-    text-indent: 0.25em;
+    width: 86%;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 13%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -7388,7 +7373,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 60px;
+    text-align: left;
   }
   .artist-bio {
     width: 100%;
@@ -7420,9 +7406,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -7430,24 +7413,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 90%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
   .results-large-link {
-    width: 30%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 70%;
+    width: 78%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -7460,15 +7441,16 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 12%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -8171,7 +8153,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
     width: 100%;
@@ -8203,9 +8186,6 @@ footer {
     font-size: 1.1em;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -8213,24 +8193,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 0.5em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
   }
   .results-large-link {
-    width: 30%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 69%;
+    width: 72%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -8243,15 +8221,16 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 15%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -8949,7 +8928,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
     width: 100%;
@@ -8994,12 +8974,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
-    gap: 1em;
     width: 100%;
   }
   .results-large-link {
-    width: auto;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9021,15 +8999,16 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 16%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -9724,7 +9703,8 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
     width: 49%;
@@ -9769,12 +9749,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
-    gap: 1em;
     width: 100%;
   }
   .results-large-link {
-    width: auto;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9796,15 +9774,16 @@ footer {
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 1em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 17%;
     text-indent: 0.25em;
+    font-size: 1em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;

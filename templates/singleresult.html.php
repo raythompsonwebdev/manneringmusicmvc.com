@@ -331,7 +331,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 							<!-- <div class="volume"></div> -->
 							<input type="range" min="0" max="100" value="100" class="volume" id="volume" title="volume" aria-label="volume" />
 						</div>
-						<button class="volume-mute" onclick="setMute()" aria-label="mute button">
+						<button id="volume-mute" onclick="setMute()" aria-label="mute button">
 							<i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
 						</button>
 					</div>
