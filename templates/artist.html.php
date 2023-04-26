@@ -277,9 +277,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 			<figure class="artist-bio">
 				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
-				<figcaption class="artist-bio-text">
+				<figcaption class="artist-bio-caption">
 					<h3 class="artist-bio-name"><?= $singleartist->artist_name; ?></h3>
-					<p><?= $singleartist->artist_text; ?></p>
+					<p class="artist-bio-text"><?= $singleartist->artist_text; ?></p>
 				</figcaption>
 			</figure>
 
@@ -358,11 +358,10 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 		</div>
 
-
+		<h2 id="other-header"> Other Albums</h2>
 
 		<?php foreach ($singlealbums as $value) : ?>
 			<div class="other-results">
-				<h2 id="other-header"> Other Albums</h2>
 				<figure class="other-results-info">
 					<a href="/singleresult?artistid=<?= $value->artistId ?>&albumid=<?= $value->id ?>" class="other-result-link">
 						<img src="/assets/databasepics/WEBP/<?= $value->image ?>" width="150" height="150" class="other-result-img" alt="<?= $value->album ?>" />
