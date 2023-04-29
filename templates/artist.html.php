@@ -276,7 +276,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 
 			<figure class="artist-bio">
-				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
+				<img src="/assets/databasepics/WEBP/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
 				<figcaption class="artist-bio-caption">
 					<h3 class="artist-bio-name"><?= $singleartist->artist_name; ?></h3>
 					<p class="artist-bio-text"><?= $singleartist->artist_text; ?></p>

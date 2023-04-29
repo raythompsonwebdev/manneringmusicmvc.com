@@ -287,7 +287,7 @@ ul {
 }
 
 li {
-  font-family: arial, helvetica, sans-serif;
+  margin: 0;
 }
 
 img {
@@ -362,8 +362,6 @@ input[type=submit] {
   padding: 0;
   border: 2px solid #7c412b;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 0.5em #181818;
-          box-shadow: 0 0 0.5em #181818;
   color: #fafaf7;
   background: #ecac00;
   font-weight: bold;
@@ -383,8 +381,6 @@ select[type=text]:active {
 
 input[type=submit]:active {
   background-color: #fafaf7;
-  -webkit-box-shadow: 0 0 0.5em #181818 inset;
-          box-shadow: 0 0 0.5em #181818 inset;
 }
 
 .show-button {
@@ -408,13 +404,13 @@ input[type=submit]:active {
 #mobile-toggle {
   height: 55px;
   width: 55px;
-  color: #181818;
-  background-color: #fafaf7;
+  color: #fafaf7;
+  background-color: #181818;
   outline: none;
   border: none;
   z-index: 200;
-  top: 0.5em;
-  left: 83vw;
+  top: 0.25em;
+  left: calc(88% - 15px);
   -webkit-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
   position: absolute;
@@ -430,7 +426,7 @@ input[type=submit]:active {
 
 #wrapper {
   padding: 0;
-  width: 98%;
+  width: 100%;
   height: auto;
 }
 
@@ -462,7 +458,7 @@ input[type=submit]:active {
 
 #logo {
   margin: 0;
-  font-size: 1.4em;
+  font-size: 1.5em;
   width: 100%;
   height: auto;
   font-weight: bold;
@@ -492,8 +488,8 @@ input[type=submit]:active {
   width: 100%;
   letter-spacing: 0.1em;
   text-shadow: 1px 1px #181818;
-  line-height: 20px;
-  font-size: 0.7em;
+  line-height: 15px;
+  font-size: 0.65em;
   font-weight: normal;
   padding: 0;
   clear: left;
@@ -647,7 +643,9 @@ input[type=submit]:active {
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 800px;
+  min-height: 0;
+  min-height: initial;
+  height: auto;
 }
 #mannering-content p {
   line-height: 1.6em;
@@ -668,8 +666,8 @@ input[type=submit]:active {
 #main-section {
   height: auto;
   width: 100%;
-  padding-top: 0.5em;
-  margin: 0 0 1em;
+  padding: 0;
+  margin: 0;
 }
 #main-section h2 {
   font-size: 1.3em;
@@ -752,14 +750,17 @@ input[type=submit]:active {
 /* reviews page */
 #reviews {
   min-height: 250px;
+  width: 50%;
+  float: left;
+  display: block;
 }
 
 #reviews > blockquote {
-  width: 100%;
+  width: 97%;
   margin: 0;
   display: block;
   float: left;
-  font-size: 1em;
+  font-size: 0.9em;
   background-color: #fafaf7;
   color: #181818;
   padding: 0.5em;
@@ -777,6 +778,7 @@ input[type=submit]:active {
 }
 #reviews > blockquote form input[type=submit] {
   width: 30%;
+  float: right;
 }
 
 #review-pagination {
@@ -787,11 +789,16 @@ input[type=submit]:active {
 }
 
 /* category list */
-#categories {
-  display: block;
+.categories {
   list-style: none;
-  width: 100%;
+  display: block;
   margin: 1em auto;
+}
+
+.categories li:first-child {
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5em;
 }
 
 .categories-item {
@@ -907,10 +914,26 @@ input[type=submit]:active {
   width: 40%;
   height: auto;
   color: #fafaf7;
-  padding: 2%;
-  display: block;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.5em;
   background-color: #2b2b2b;
   margin: auto;
+}
+#review-edit p {
+  color: #fafaf7;
 }
 
 #reviewtext {
@@ -924,17 +947,17 @@ input[type=submit]:active {
 }
 
 .reviewtext-check {
-  width: 15px;
-  display: block;
+  width: 35px;
+  display: inline-block;
   height: 35px;
-  float: right;
   margin-right: 0.5em;
 }
 
 .reviewtext-label {
-  line-height: 30px;
-  height: 30px;
-  width: 80%;
+  line-height: 40px;
+  display: inline-block;
+  height: auto;
+  width: 90%;
   font-size: 0.9em;
 }
 
@@ -995,12 +1018,12 @@ input[type=submit]:active {
   margin: 0 auto;
   height: auto;
   width: 100%;
-  padding: 0.5em;
+  padding: 0;
   border-radius: 5px;
   font-family: arial, helvetica, sans-serif;
 }
 #mannering-search fieldset {
-  padding: 1em;
+  padding: 0.25em;
   border: 1px solid #666666;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1009,12 +1032,12 @@ input[type=submit]:active {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 0.5em;
 }
 #mannering-search legend {
@@ -1049,10 +1072,10 @@ input[type=submit]:active {
   background: #fafaf7;
   padding: 0;
   font-size: 0.9em;
-  width: 25%;
+  width: 96%;
   color: #181818;
-  line-height: 35px;
-  height: 35px;
+  line-height: 40px;
+  height: 40px;
   display: inline-block;
   margin-bottom: 0.5em;
 }
@@ -1064,14 +1087,15 @@ input[type=submit]:active {
 #search-btn {
   font-family: arial, helvetica, sans-serif;
   letter-spacing: 0.1em;
-  width: 25%;
+  width: 96%;
   color: #fafaf7;
   font-size: 0.9em;
   display: inline-block;
   background-color: #ecac00;
   font-weight: normal;
   line-height: 35px;
-  margin: 0;
+  width: 96%;
+  margin: 0.5em auto;
 }
 #search-btn:hover {
   letter-spacing: 0.12em;
@@ -1763,7 +1787,7 @@ input[type=submit]:active {
   width: 90%;
   height: auto;
   color: #fafaf7;
-  padding: 1.5em;
+  padding: 0.5em;
   display: block;
   background-color: #2b2b2b;
   margin: 1em auto;
@@ -1772,7 +1796,7 @@ input[type=submit]:active {
 #register-form #email,
 #register-form #password {
   border-radius: 5px;
-  width: 100%;
+  width: 98%;
   line-height: 35px;
   height: 35px;
   font-size: 0.95em;
@@ -1809,11 +1833,12 @@ input[type=submit]:active {
   text-align: center;
   background-color: transparent;
   background-color: initial;
+  font-size: 0.8em;
 }
 
 .not-reg-link {
   display: inline-block;
-  color: #fafaf7;
+  color: #333333;
 }
 .not-reg-link:hover {
   color: #ecac00;
@@ -2012,7 +2037,7 @@ footer {
   background-color: #3a3a3a;
   clear: both;
   height: 200px;
-  width: 100%;
+  width: 95%;
   margin: 0;
   padding: 0 0.5em;
   border-radius: 5px;
@@ -2109,7 +2134,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
   #logo span {
     margin: 0;
@@ -2231,6 +2256,7 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
     font-size: 1.8em;
@@ -2286,9 +2312,13 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 96%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -2303,8 +2333,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -2336,15 +2367,14 @@ footer {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  /* home page albums sections hip hop country jazz */
   .genre-section:last-of-type {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -2360,7 +2390,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 60%;
   }
   #reviewtext {
     font-size: 1em;
@@ -2369,7 +2399,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -2395,20 +2425,17 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
     padding: 0.5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2444,14 +2471,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
     font-size: 1em;
     margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
     font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -2526,7 +2554,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -2785,17 +2816,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -2940,7 +2966,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.8em;
   }
   #logo span {
     margin: 0;
@@ -3046,9 +3072,10 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     line-height: 50px;
   }
   .login-error {
@@ -3089,9 +3116,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -3106,8 +3136,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -3143,10 +3174,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -3162,7 +3193,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -3171,7 +3202,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -3197,12 +3228,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -3244,14 +3273,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
     font-size: 1em;
     margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
     font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -3325,6 +3355,9 @@ footer {
   /* search results list */
   .results {
     width: 19%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -3583,17 +3616,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -3688,7 +3716,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 100%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3844,9 +3872,10 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 50px;
   }
   .login-error {
@@ -3887,9 +3916,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -3904,8 +3936,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -3941,10 +3974,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -3960,7 +3993,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -3969,7 +4002,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -3995,12 +4028,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -4042,14 +4073,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
     font-size: 1em;
     margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
     font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -4122,6 +4154,9 @@ footer {
   /* search results list */
   .results {
     width: 19%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -4382,17 +4417,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -4486,7 +4516,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -4643,9 +4673,10 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     line-height: 50px;
   }
   .login-error {
@@ -4686,9 +4717,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -4703,8 +4737,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -4740,10 +4775,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -4752,14 +4787,14 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   .album-card-genre {
     font-size: 0.9em;
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -4794,12 +4829,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -4840,14 +4873,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
     font-size: 1em;
     margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
     font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -4922,7 +4956,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 24%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -5183,17 +5220,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -5287,7 +5319,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -5446,9 +5478,10 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 50px;
   }
   .login-error {
@@ -5489,9 +5522,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -5506,8 +5542,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -5543,10 +5580,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 23%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -5562,7 +5599,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -5597,12 +5634,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -5643,14 +5678,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
     font-size: 1em;
     margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
     font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -5727,7 +5763,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -5993,17 +6032,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -6097,7 +6131,7 @@ footer {
     width: 60%;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -6156,7 +6190,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin: 0;
   }
   #mannering-social {
@@ -6256,9 +6290,10 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 50px;
   }
   .login-error {
@@ -6299,12 +6334,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -6316,8 +6355,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -6353,10 +6394,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 23%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -6372,7 +6413,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 60%;
   }
   #reviewtext {
     font-size: 1em;
@@ -6407,12 +6448,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -6453,14 +6492,15 @@ footer {
   #artist,
   #album,
   #genre {
-    line-height: 40px;
-    height: 40px;
-    font-size: 1em;
-    margin-bottom: 1em;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 25%;
   }
   #search-btn {
     font-size: 0.9em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -6537,7 +6577,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -6805,17 +6848,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -6911,7 +6949,7 @@ footer {
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -6947,8 +6985,8 @@ footer {
 /* 735 - 600 */
 @media screen and (min-width: 37.5em) and (max-width: 45.9375em) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(92% - 15px);
   }
   #wrapper {
     width: 98%;
@@ -6970,7 +7008,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin: 0;
   }
   #mannering-social {
@@ -7028,7 +7066,8 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px;
+    min-height: 0;
+    min-height: initial;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7039,9 +7078,10 @@ footer {
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
   #main-section h2 {
-    font-size: 1.7em;
+    font-size: 1.55em;
     font-weight: normal;
     line-height: 50px;
   }
@@ -7083,12 +7123,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -7100,8 +7144,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -7137,10 +7183,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 48%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -7149,7 +7195,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -7191,12 +7237,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -7238,13 +7282,14 @@ footer {
   #album,
   #genre {
     font-size: 0.9em;
-    line-height: 40px;
-    height: 40px;
     margin-bottom: 0.5em;
+    width: 25%;
   }
   #search-btn {
     font-size: 0.9em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -7321,7 +7366,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 48%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -7571,7 +7619,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 80%;
   }
   #register-form #name,
   #register-form #email,
@@ -7587,17 +7635,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -7696,7 +7740,7 @@ footer {
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 96%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -7732,11 +7776,11 @@ footer {
 /* 599 - 480 */
 @media screen and (min-width: 30em) and (max-width: 37.4375em) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(93% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -7755,7 +7799,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 0;
   }
   #mannering-social {
@@ -7812,7 +7856,8 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px;
+    min-height: 0;
+    min-height: initial;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -7822,9 +7867,10 @@ footer {
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
   #main-section h2 {
-    font-size: 1.6em;
+    font-size: 1.45em;
     font-weight: normal;
     line-height: 50px;
   }
@@ -7866,12 +7912,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -7883,8 +7933,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -7921,9 +7973,9 @@ footer {
   }
   .album-card {
     width: 48%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -7932,10 +7984,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .album-card-genre {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   /* edit review form */
   #review-edit {
@@ -7974,22 +8026,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -8021,13 +8071,14 @@ footer {
   #album,
   #genre {
     font-size: 0.9em;
-    line-height: 40px;
-    height: 40px;
     margin-bottom: 0.5em;
+    width: 96%;
   }
   #search-btn {
     font-size: 0.9em;
     line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -8105,6 +8156,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -8353,7 +8407,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -8369,17 +8423,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -8478,7 +8528,7 @@ footer {
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 96%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -8514,11 +8564,11 @@ footer {
 /* 479 - 375 */
 @media screen and (min-width: 23.4375em) and (max-width: 479px) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(89% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -8528,7 +8578,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.7em;
   }
   #logo span {
     margin: 0;
@@ -8537,7 +8587,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 0;
   }
   #mannering-social {
@@ -8587,7 +8637,8 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px;
+    min-height: 0;
+    min-height: initial;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -8597,9 +8648,10 @@ footer {
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
   #main-section h2 {
-    font-size: 1.5em;
+    font-size: 1.35em;
     font-weight: normal;
     line-height: 50px;
   }
@@ -8641,12 +8693,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 94%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -8658,8 +8714,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -8695,7 +8753,7 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 75%;
+    width: 60%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -8749,22 +8807,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -8796,13 +8852,14 @@ footer {
   #album,
   #genre {
     font-size: 0.9em;
-    line-height: 40px;
-    height: 40px;
     margin-bottom: 0.5em;
+    width: 96%;
   }
   #search-btn {
     font-size: 0.9em;
     line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -8880,6 +8937,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -9129,7 +9189,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -9145,17 +9205,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -9254,7 +9310,7 @@ footer {
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 96%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -9290,11 +9346,11 @@ footer {
 /* 375 - 360 */
 @media screen and (min-width: 22.5em) and (max-width: 374px) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(89% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -9304,7 +9360,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.6em;
   }
   #logo span {
     margin: 0;
@@ -9313,7 +9369,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.65em;
     margin: 0;
   }
   #mannering-social {
@@ -9363,7 +9419,8 @@ footer {
   }
   #mannering-content {
     width: 100%;
-    min-height: 800px;
+    min-height: 0;
+    min-height: initial;
   }
   #mannering-content p {
     line-height: 1.6em;
@@ -9373,9 +9430,10 @@ footer {
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
   #main-section h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 50px;
   }
   .login-error {
@@ -9416,12 +9474,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 96%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -9433,8 +9495,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -9524,22 +9588,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -9571,14 +9633,14 @@ footer {
   #album,
   #genre {
     font-size: 0.9em;
-    line-height: 40px;
-    height: 40px;
     margin-bottom: 0.5em;
-    height: 40px;
+    width: 96%;
   }
   #search-btn {
     font-size: 0.9em;
     line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
@@ -9656,6 +9718,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -9904,7 +9969,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -9920,17 +9985,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -10029,7 +10090,7 @@ footer {
     text-align: center;
   }
   footer {
-    width: 100%;
+    width: 96%;
   }
   .mannering-social-btns-footer {
     width: 100%;

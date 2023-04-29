@@ -41,7 +41,7 @@ ul {
 }
 
 li {
-  font-family: $FontListText;
+  margin: 0;
 }
 
 img {
@@ -115,7 +115,6 @@ input[type='submit'] {
   padding: 0;
   border: 2px solid $button-border;
   border-radius: 5px;
-  box-shadow: 0 0 0.5em $bg-black;
   color: $white-color;
   background: $orange-color;
   font-weight: bold;
@@ -133,5 +132,4 @@ select[type='text']:active {
 
 input[type='submit']:active {
   background-color: $white-color;
-  box-shadow: 0 0 0.5em $bg-black inset;
 }
