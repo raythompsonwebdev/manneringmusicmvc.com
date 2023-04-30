@@ -141,7 +141,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		document.querySelector(".fa-volume-up").style.color = imageName;
 	}
 
-	// //set shuffle
+	//set shuffle
 	// function setShuffle() {
 	// 	shuffle = !shuffle;
 	// 	let imageName = shuffle ? "green" : "red";
@@ -159,27 +159,27 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	// }
 
 	// //shuffle array function from stackoverflow
-	function shuffleArray(a) {
-		let j, x, i;
-		for (i = a.length; i; i--) {
-			j = Math.floor(Math.random() * i);
-			x = a[i - 1];
-			a[i - 1] = a[j];
-			a[j] = x;
-		}
-	}
+	// function shuffleArray(a) {
+	// 	let j, x, i;
+	// 	for (i = a.length; i; i--) {
+	// 		j = Math.floor(Math.random() * i);
+	// 		x = a[i - 1];
+	// 		a[i - 1] = a[j];
+	// 		a[j] = x;
+	// 	}
+	// }
 
 	//Set Audio tracks to to be played in tracklist
 	function setTrack(trackId, newPlaylist, play) {
 
-		console.log(newPlaylist);
-
 		// if (newPlaylist != currentPlaylist) {
 		// 	currentPlaylist = newPlaylist;
-		// 	//add shuffle
-		// 	shufflePlaylist = currentPlaylist.slice();
+		// 	//add shuffle - slice func not needed - shufflePlaylist already an array
+		// 	// shufflePlaylist = currentPlaylist.slice();
+		// 	shufflePlaylist = currentPlaylist;
 		// 	shuffleArray(shufflePlaylist);
 		// }
+
 		// //create tracklist index
 		// currentIndex = currentPlaylist.indexOf(trackId);
 
@@ -308,9 +308,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 				<div class="audiocntrl-container">
 
-					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
+					<!-- <button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
 						<i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-					</button>
+					</button> -->
 
 					<button id="play-button" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
 						<i class="fa fa-play" aria-hidden="true" title="play"></i>

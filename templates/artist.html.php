@@ -287,9 +287,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			<div class="audio-controls">
 				<div class="audiocntrl-container">
 
-					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
+					<!-- <button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
 						<i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-					</button>
+					</button> -->
 
 					<button id="play-button" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
 						<i class="fa fa-play" aria-hidden="true" title="play"></i>
