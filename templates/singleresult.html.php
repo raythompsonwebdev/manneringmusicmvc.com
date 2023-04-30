@@ -141,24 +141,24 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 		document.querySelector(".fa-volume-up").style.color = imageName;
 	}
 
-	//set shuffle
-	function setShuffle() {
-		shuffle = !shuffle;
-		let imageName = shuffle ? "green" : "red";
-		document.querySelector(".fa-random").style.color = imageName;
+	// //set shuffle
+	// function setShuffle() {
+	// 	shuffle = !shuffle;
+	// 	let imageName = shuffle ? "green" : "red";
+	// 	document.querySelector(".fa-random").style.color = imageName;
 
-		if (shuffle == true) {
-			//Randomize playlist
-			shuffleArray(shufflePlaylist);
-			currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
-		} else {
-			//shuffle has been deactivated
-			//go back to regular playlist
-			currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
-		}
-	}
+	// 	if (shuffle == true) {
+	// 		//Randomize playlist
+	// 		shuffleArray(shufflePlaylist);
+	// 		currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	} else {
+	// 		//shuffle has been deactivated
+	// 		//go back to regular playlist
+	// 		currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	}
+	// }
 
-	//shuffle array function from stackoverflow
+	// //shuffle array function from stackoverflow
 	function shuffleArray(a) {
 		let j, x, i;
 		for (i = a.length; i; i--) {
@@ -172,14 +172,16 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	//Set Audio tracks to to be played in tracklist
 	function setTrack(trackId, newPlaylist, play) {
 
-		if (newPlaylist != currentPlaylist) {
-			currentPlaylist = newPlaylist;
-			//add shuffle
-			shufflePlaylist = currentPlaylist.slice();
-			shuffleArray(shufflePlaylist);
-		}
-		//create tracklist index
-		currentIndex = currentPlaylist.indexOf(trackId);
+		console.log(newPlaylist);
+
+		// if (newPlaylist != currentPlaylist) {
+		// 	currentPlaylist = newPlaylist;
+		// 	//add shuffle
+		// 	shufflePlaylist = currentPlaylist.slice();
+		// 	shuffleArray(shufflePlaylist);
+		// }
+		// //create tracklist index
+		// currentIndex = currentPlaylist.indexOf(trackId);
 
 		pauseSong();
 
@@ -226,18 +228,23 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			let formData = new FormData();
 			formData.append("songId", audioElement.currentlyPlaying[0].id);
 
-			fetch(url, {
-				method: 'POST',
-				body: formData,
-				// headers: {
+			try {
 
-				//     'Content-Type': 'application/x-www-form-urlencoded"',
-				// },
-			}).then(function(response) {
-				return response.text();
-			}).catch(function(err) {
+				fetch(url, {
+					method: 'POST',
+					body: formData,
+
+				}).then(function(response) {
+					return response.text();
+				});
+
+			} catch {
+
 				console.error('Fetch Error :-S', err);
-			});
+
+			}
+
+
 		}
 
 		document.querySelector('#play-button').style.display = "none";;

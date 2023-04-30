@@ -144,45 +144,45 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	}
 
 	//set shuffle
-	function setShuffle() {
-		shuffle = !shuffle;
-		var imageName = shuffle ? "green" : "red";
-		document.querySelector(".fa-random").style.color = imageName;
+	// function setShuffle() {
+	// 	shuffle = !shuffle;
+	// 	var imageName = shuffle ? "green" : "red";
+	// 	document.querySelector(".fa-random").style.color = imageName;
 
-		if (shuffle == true) {
-			//Randomize playlist
-			shuffleArray(shufflePlaylist);
-			currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
-		} else {
-			//shuffle has been deactivated
-			//go back to regular playlist
-			currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
-		}
-	}
+	// 	if (shuffle == true) {
+	// 		//Randomize playlist
+	// 		shuffleArray(shufflePlaylist);
+	// 		currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	} else {
+	// 		//shuffle has been deactivated
+	// 		//go back to regular playlist
+	// 		currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	}
+	// }
 
 	//shuffle array function from stackoverflow
-	function shuffleArray(a) {
-		var j, x, i;
-		for (i = a.length; i; i--) {
-			j = Math.floor(Math.random() * i);
-			x = a[i - 1];
-			a[i - 1] = a[j];
-			a[j] = x;
-		}
-	}
+	// function shuffleArray(a) {
+	// 	var j, x, i;
+	// 	for (i = a.length; i; i--) {
+	// 		j = Math.floor(Math.random() * i);
+	// 		x = a[i - 1];
+	// 		a[i - 1] = a[j];
+	// 		a[j] = x;
+	// 	}
+	// }
 
 	//Set Audio tracks to to be played in tracklist
 	function setTrack(trackId, newPlaylist, play) {
 
-		if (newPlaylist != currentPlaylist) {
-			currentPlaylist = newPlaylist;
-			//add shuffle
-			shufflePlaylist = currentPlaylist.slice();
-			shuffleArray(shufflePlaylist);
-		}
+		// if (newPlaylist != currentPlaylist) {
+		// 	currentPlaylist = newPlaylist;
+		// 	//add shuffle
+		// 	shufflePlaylist = currentPlaylist.slice();
+		// 	shuffleArray(shufflePlaylist);
+		// }
 
 		//create tracklist index
-		currentIndex = currentPlaylist.indexOf(trackId);
+		//  v currentIndex = currentPlaylist.indexOf(trackId);
 
 		pauseSong();
 
