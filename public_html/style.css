@@ -577,21 +577,27 @@ input[type=submit]:active {
   width: 100%;
   height: 100%;
   margin: 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #3a3a3a;
 }
 
 .mannering-mobile-inner-nav-item {
   width: 100%;
-  height: 40px;
+  line-height: 40px;
+  height: auto;
   text-align: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -648,7 +654,6 @@ input[type=submit]:active {
   height: auto;
 }
 #mannering-content p {
-  line-height: 1.6em;
   margin: 0;
   display: block;
   color: #333333;
@@ -670,7 +675,7 @@ input[type=submit]:active {
   margin: 0;
 }
 #main-section h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   width: 100%;
   color: #333333;
   height: auto;
@@ -678,7 +683,7 @@ input[type=submit]:active {
   text-align: center;
   padding: 0;
   font-weight: normal;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
 }
 
 /* login error */
@@ -1202,7 +1207,7 @@ input[type=submit]:active {
 }
 
 .other-results-name {
-  font-size: 1em;
+  font-size: 0.85em;
   background-color: #2b2b2b;
   color: #fafaf7;
   height: auto;
@@ -1393,7 +1398,7 @@ input[type=submit]:active {
   text-indent: 0.25em;
   background-color: #3b3b3b;
   color: #fafaf7;
-  text-align: left;
+  text-align: center;
   width: 100%;
   margin: 0;
 }
@@ -1528,6 +1533,7 @@ input[type=submit]:active {
 .audio-controls .artist-track-name {
   font-size: 1em;
   line-height: 50px;
+  text-align: center;
   margin: 0;
   color: #fafaf7;
   background-color: #666666;
@@ -1582,7 +1588,7 @@ input[type=submit]:active {
   color: #181818;
 }
 .audio-controls .audiocntrl-container .audio-progress {
-  width: 60%;
+  width: 57%;
   height: 50px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -1609,7 +1615,7 @@ input[type=submit]:active {
   background-color: #181818;
   color: #297f10;
   text-shadow: none;
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 .audio-controls .audiocntrl-container .audio-volume {
   width: 100%;
@@ -1696,7 +1702,7 @@ input[type=submit]:active {
 .audio-tracklist .audio-tracklist-item .trackname {
   color: #fafaf7;
   background-color: #3a3a3a;
-  width: 50%;
+  width: 47%;
   text-indent: 0.5em;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1854,7 +1860,8 @@ input[type=submit]:active {
   padding: 1em;
   background-color: #2b2b2b;
   display: block;
-  margin: 0.5em;
+  float: none;
+  margin: 1em auto;
 }
 #contact-form .error {
   width: 80%;
@@ -1915,8 +1922,10 @@ input[type=submit]:active {
 #contact-details {
   width: 90%;
   color: #fafaf7;
+  float: none;
   display: block;
-  margin: 0.5em auto;
+  margin: 1em auto;
+  padding: 0 1.5em;
 }
 
 .contact-details-text {
@@ -2028,8 +2037,7 @@ input[type=submit]:active {
   color: #181818;
   padding: 1em;
   margin: 1em auto;
-  width: auto;
-  width: 60%;
+  width: 90%;
   text-align: center;
 }
 
@@ -2037,9 +2045,9 @@ footer {
   background-color: #3a3a3a;
   clear: both;
   height: 200px;
-  width: 95%;
+  width: 98%;
   margin: 0;
-  padding: 0 0.5em;
+  padding: 0 1%;
   border-radius: 5px;
 }
 
@@ -2242,11 +2250,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -2260,9 +2267,7 @@ footer {
   }
   #main-section h2 {
     font-size: 1.8em;
-    font-weight: normal;
     line-height: 50px;
-    margin-bottom: 1em;
   }
   .login-error {
     color: #333333;
@@ -2636,6 +2641,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -2705,7 +2711,6 @@ footer {
   .audio-controls .artist-track-name {
     font-size: 1.5em;
     line-height: 55px;
-    text-align: center;
   }
   .audio-controls .audiocntrl-container {
     width: 100%;
@@ -2831,9 +2836,8 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 1em;
-    float: none;
-    margin: auto;
+    float: left;
+    margin: 1em 0;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -2855,11 +2859,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -2911,12 +2913,10 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
     width: 60%;
   }
   footer {
-    width: 100%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3058,11 +3058,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -3436,6 +3435,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -3631,9 +3631,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 1em;
-    float: none;
-    margin: auto;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -3655,11 +3653,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -3711,8 +3707,6 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
     width: 60%;
   }
   footer {
@@ -3858,11 +3852,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -4142,7 +4135,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .other-results-genre {
     font-size: 0.9em;
@@ -4235,6 +4228,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -4432,8 +4426,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 2.5%;
-    float: none;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -4455,11 +4448,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -4511,9 +4502,7 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
+    width: 70%;
   }
   footer {
     width: 98%;
@@ -4659,11 +4648,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -4676,7 +4664,7 @@ footer {
     padding-top: 0.5em;
   }
   #main-section h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     line-height: 50px;
   }
   .login-error {
@@ -4945,7 +4933,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .other-results-genre {
     font-size: 0.9em;
@@ -5038,6 +5026,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -5235,8 +5224,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 2.5%;
-    float: none;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -5258,11 +5246,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -5314,9 +5300,7 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
+    width: 70%;
   }
   footer {
     width: 98%;
@@ -5464,11 +5448,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -5750,7 +5733,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -5849,6 +5832,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.2em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -6047,8 +6031,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 2.5%;
-    float: none;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -6070,11 +6053,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 38%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -6126,9 +6107,7 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
+    width: 70%;
   }
   footer {
     width: 98%;
@@ -6276,11 +6255,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -6564,7 +6542,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -6663,6 +6641,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -6863,8 +6842,8 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 70%;
-    padding: 2.5%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -6886,11 +6865,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
     width: 70%;
-    margin: 5% auto;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -6942,10 +6920,7 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    margin: 1em auto;
-    width: 60%;
+    width: 80%;
     text-align: center;
   }
   footer {
@@ -7033,18 +7008,11 @@ footer {
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
-    position: relative;
     width: 80%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    gap: 0.2em;
-    background: #3a3a3a;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
-    margin: auto;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -7065,12 +7033,11 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
     min-height: 0;
     min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
     font-size: 0.9em;
   }
   #summary {
@@ -7081,8 +7048,7 @@ footer {
     padding: 0;
   }
   #main-section h2 {
-    font-size: 1.55em;
-    font-weight: normal;
+    font-size: 1.5em;
     line-height: 50px;
   }
   .login-error {
@@ -7308,7 +7274,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -7333,7 +7299,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 33%;
+    width: 32%;
   }
   .other-results-info {
     margin: 0;
@@ -7353,7 +7319,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -7452,6 +7418,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: center;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -7650,9 +7617,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 70%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -7674,11 +7641,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -7730,17 +7696,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 85%;
     text-align: center;
   }
   footer {
-    width: 96%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -7825,16 +7785,10 @@ footer {
   }
   #mannering-mobile-inner-nav {
     width: 80%;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    gap: 0.2em;
-    background: #3a3a3a;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -7855,12 +7809,12 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
     min-height: 0;
     min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
@@ -7870,8 +7824,7 @@ footer {
     padding: 0;
   }
   #main-section h2 {
-    font-size: 1.45em;
-    font-weight: normal;
+    font-size: 1.4em;
     line-height: 50px;
   }
   .login-error {
@@ -8097,7 +8050,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -8122,7 +8075,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 33%;
+    width: 32%;
   }
   .other-results-info {
     margin: 0;
@@ -8142,7 +8095,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -8238,6 +8191,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1.1em;
+    text-align: center;
   }
   .results-large-info {
     -webkit-box-orient: horizontal;
@@ -8438,9 +8392,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 75%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -8462,11 +8416,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -8518,17 +8471,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 85%;
     text-align: center;
   }
   footer {
-    width: 96%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -8615,7 +8562,8 @@ footer {
     width: 80%;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -8636,12 +8584,12 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
     min-height: 0;
     min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
@@ -8651,8 +8599,7 @@ footer {
     padding: 0;
   }
   #main-section h2 {
-    font-size: 1.35em;
-    font-weight: normal;
+    font-size: 1.3em;
     line-height: 50px;
   }
   .login-error {
@@ -8878,7 +8825,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -8923,7 +8870,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -9019,6 +8966,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
+    text-align: center;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9220,9 +9168,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 80%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -9244,11 +9192,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -9300,17 +9247,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
   footer {
-    width: 96%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -9397,7 +9338,8 @@ footer {
     width: 100%;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 38px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -9418,12 +9360,12 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
     min-height: 0;
     min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
@@ -9433,7 +9375,7 @@ footer {
     padding: 0;
   }
   #main-section h2 {
-    font-size: 1.3em;
+    font-size: 1.25em;
     line-height: 50px;
   }
   .login-error {
@@ -9659,7 +9601,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -9704,7 +9646,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -9799,6 +9741,7 @@ footer {
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
+    text-align: center;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9890,7 +9833,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 67%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -9901,7 +9844,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -9933,7 +9876,7 @@ footer {
     width: 15%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 55%;
+    width: 51%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
     width: 15%;
@@ -10000,9 +9943,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 85%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -10026,7 +9969,7 @@ footer {
   #contact-details {
     font-size: 1em;
     width: 90%;
-    margin: 5% auto;
+    margin: 1em auto;
     display: block;
     float: none;
   }
@@ -10080,17 +10023,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
   footer {
-    width: 96%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;

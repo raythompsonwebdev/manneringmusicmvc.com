@@ -26,12 +26,10 @@
 	</form>
 
 	<address id="contact-details">
-		<p class="contact-details-text">
-			Mannering Music Agency<wbr>
-			1 Somewhere<wbr>
-			London E8 2GF<wbr>
-			Tel No: 0208 123 4567<wbr>
-		</p>
+		<p class="contact-details-text">Mannering Music Agency</p>
+		<p class="contact-details-text">1 Somewhere</p>
+		<p class="contact-details-text">London E8 2GF</p>
+		<p class="contact-details-text">Tel No: 0208 123 4567</p>
 	</address>
 
 	<!--Main text end-->
