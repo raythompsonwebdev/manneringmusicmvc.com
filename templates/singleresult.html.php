@@ -142,44 +142,46 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	}
 
 	//set shuffle
-	function setShuffle() {
-		shuffle = !shuffle;
-		let imageName = shuffle ? "green" : "red";
-		document.querySelector(".fa-random").style.color = imageName;
+	// function setShuffle() {
+	// 	shuffle = !shuffle;
+	// 	let imageName = shuffle ? "green" : "red";
+	// 	document.querySelector(".fa-random").style.color = imageName;
 
-		if (shuffle == true) {
-			//Randomize playlist
-			shuffleArray(shufflePlaylist);
-			currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
-		} else {
-			//shuffle has been deactivated
-			//go back to regular playlist
-			currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
-		}
-	}
+	// 	if (shuffle == true) {
+	// 		//Randomize playlist
+	// 		shuffleArray(shufflePlaylist);
+	// 		currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	} else {
+	// 		//shuffle has been deactivated
+	// 		//go back to regular playlist
+	// 		currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	}
+	// }
 
-	//shuffle array function from stackoverflow
-	function shuffleArray(a) {
-		let j, x, i;
-		for (i = a.length; i; i--) {
-			j = Math.floor(Math.random() * i);
-			x = a[i - 1];
-			a[i - 1] = a[j];
-			a[j] = x;
-		}
-	}
+	// //shuffle array function from stackoverflow
+	// function shuffleArray(a) {
+	// 	let j, x, i;
+	// 	for (i = a.length; i; i--) {
+	// 		j = Math.floor(Math.random() * i);
+	// 		x = a[i - 1];
+	// 		a[i - 1] = a[j];
+	// 		a[j] = x;
+	// 	}
+	// }
 
 	//Set Audio tracks to to be played in tracklist
 	function setTrack(trackId, newPlaylist, play) {
 
-		if (newPlaylist != currentPlaylist) {
-			currentPlaylist = newPlaylist;
-			//add shuffle
-			shufflePlaylist = currentPlaylist.slice();
-			shuffleArray(shufflePlaylist);
-		}
-		//create tracklist index
-		currentIndex = currentPlaylist.indexOf(trackId);
+		// if (newPlaylist != currentPlaylist) {
+		// 	currentPlaylist = newPlaylist;
+		// 	//add shuffle - slice func not needed - shufflePlaylist already an array
+		// 	// shufflePlaylist = currentPlaylist.slice();
+		// 	shufflePlaylist = currentPlaylist;
+		// 	shuffleArray(shufflePlaylist);
+		// }
+
+		// //create tracklist index
+		// currentIndex = currentPlaylist.indexOf(trackId);
 
 		pauseSong();
 
@@ -226,18 +228,23 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			let formData = new FormData();
 			formData.append("songId", audioElement.currentlyPlaying[0].id);
 
-			fetch(url, {
-				method: 'POST',
-				body: formData,
-				// headers: {
+			try {
 
-				//     'Content-Type': 'application/x-www-form-urlencoded"',
-				// },
-			}).then(function(response) {
-				return response.text();
-			}).catch(function(err) {
+				fetch(url, {
+					method: 'POST',
+					body: formData,
+
+				}).then(function(response) {
+					return response.text();
+				});
+
+			} catch {
+
 				console.error('Fetch Error :-S', err);
-			});
+
+			}
+
+
 		}
 
 		document.querySelector('#play-button').style.display = "none";;
@@ -301,9 +308,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 				<div class="audiocntrl-container">
 
-					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
+					<!-- <button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
 						<i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-					</button>
+					</button> -->
 
 					<button id="play-button" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
 						<i class="fa fa-play" aria-hidden="true" title="play"></i>
@@ -331,7 +338,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 							<!-- <div class="volume"></div> -->
 							<input type="range" min="0" max="100" value="100" class="volume" id="volume" title="volume" aria-label="volume" />
 						</div>
-						<button class="volume-mute" onclick="setMute()" aria-label="mute button">
+						<button id="volume-mute" onclick="setMute()" aria-label="mute button">
 							<i class="fa fa-volume-up" aria-hidden="true" title="mute"></i>
 						</button>
 					</div>

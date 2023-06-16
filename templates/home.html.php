@@ -8,7 +8,6 @@
 <!--main text-->
 <section id="main-section">
 	<h2>MANNERING MUSIC FEATURED ALBUMS</h2>
-	<br />
 	<!--Hip Hop Section-->
 	<section class="genre-section">
 		<h3>Hip Hop</h3>

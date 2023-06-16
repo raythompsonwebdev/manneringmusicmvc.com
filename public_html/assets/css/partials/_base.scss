@@ -25,7 +25,7 @@
 }
 
 body {
-  background-image: url('/assets/images/526.gif');
+  // background-image: url('/assets/images/526.gif');
   line-height: 1;
   display: flex;
   flex-flow: column;
@@ -41,7 +41,7 @@ ul {
 }
 
 li {
-  font-family: $FontListText;
+  margin: 0;
 }
 
 img {
@@ -79,9 +79,9 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0;
   padding: 0;
   width: 100%;
+  font-family: $FontList;
 }
 
 /* Place a border around focused fields */
@@ -115,7 +115,6 @@ input[type='submit'] {
   padding: 0;
   border: 2px solid $button-border;
   border-radius: 5px;
-  box-shadow: 0 0 0.5em $bg-black;
   color: $white-color;
   background: $orange-color;
   font-weight: bold;
@@ -133,5 +132,4 @@ select[type='text']:active {
 
 input[type='submit']:active {
   background-color: $white-color;
-  box-shadow: 0 0 0.5em $bg-black inset;
 }

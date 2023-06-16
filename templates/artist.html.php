@@ -144,45 +144,45 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 	}
 
 	//set shuffle
-	function setShuffle() {
-		shuffle = !shuffle;
-		var imageName = shuffle ? "green" : "red";
-		document.querySelector(".fa-random").style.color = imageName;
+	// function setShuffle() {
+	// 	shuffle = !shuffle;
+	// 	var imageName = shuffle ? "green" : "red";
+	// 	document.querySelector(".fa-random").style.color = imageName;
 
-		if (shuffle == true) {
-			//Randomize playlist
-			shuffleArray(shufflePlaylist);
-			currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
-		} else {
-			//shuffle has been deactivated
-			//go back to regular playlist
-			currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
-		}
-	}
+	// 	if (shuffle == true) {
+	// 		//Randomize playlist
+	// 		shuffleArray(shufflePlaylist);
+	// 		currentIndex = shufflePlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	} else {
+	// 		//shuffle has been deactivated
+	// 		//go back to regular playlist
+	// 		currentIndex = currentPlaylist.indexOf(audioElement.currentlyPlaying.id);
+	// 	}
+	// }
 
 	//shuffle array function from stackoverflow
-	function shuffleArray(a) {
-		var j, x, i;
-		for (i = a.length; i; i--) {
-			j = Math.floor(Math.random() * i);
-			x = a[i - 1];
-			a[i - 1] = a[j];
-			a[j] = x;
-		}
-	}
+	// function shuffleArray(a) {
+	// 	var j, x, i;
+	// 	for (i = a.length; i; i--) {
+	// 		j = Math.floor(Math.random() * i);
+	// 		x = a[i - 1];
+	// 		a[i - 1] = a[j];
+	// 		a[j] = x;
+	// 	}
+	// }
 
 	//Set Audio tracks to to be played in tracklist
 	function setTrack(trackId, newPlaylist, play) {
 
-		if (newPlaylist != currentPlaylist) {
-			currentPlaylist = newPlaylist;
-			//add shuffle
-			shufflePlaylist = currentPlaylist.slice();
-			shuffleArray(shufflePlaylist);
-		}
+		// if (newPlaylist != currentPlaylist) {
+		// 	currentPlaylist = newPlaylist;
+		// 	//add shuffle
+		// 	shufflePlaylist = currentPlaylist.slice();
+		// 	shuffleArray(shufflePlaylist);
+		// }
 
 		//create tracklist index
-		currentIndex = currentPlaylist.indexOf(trackId);
+		//  v currentIndex = currentPlaylist.indexOf(trackId);
 
 		pauseSong();
 
@@ -205,7 +205,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 			if (track[0] != null) {
 
-				console.log(track[0].songtitle);
+				// console.log(track[0].songtitle);
 
 				document.querySelector(".artist-track-name").textContent = `Track Name : ${track[0].songtitle}`;
 				audioElement.setTrack(track);
@@ -276,10 +276,10 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 
 			<figure class="artist-bio">
-				<img src="/assets/databasepics/jpg/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
-				<figcaption class="artist-bio-text">
+				<img src="/assets/databasepics/WEBP/<?= $singleartist->artist_image ?>" class="artist-bio-image" width="150" height="150" alt="artist-bio-image">
+				<figcaption class="artist-bio-caption">
 					<h3 class="artist-bio-name"><?= $singleartist->artist_name; ?></h3>
-					<p><?= $singleartist->artist_text; ?></p>
+					<p class="artist-bio-text"><?= $singleartist->artist_text; ?></p>
 				</figcaption>
 			</figure>
 
@@ -287,9 +287,9 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 			<div class="audio-controls">
 				<div class="audiocntrl-container">
 
-					<button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
+					<!-- <button class="audio-player-btn shuffle" onclick="setShuffle()" aria-label="shuffle track button">
 						<i class="fa fa-random" aria-hidden="true" title="shuffle"></i>
-					</button>
+					</button> -->
 
 					<button id="play-button" class="audio-player-btn play" onclick="playSong()" aria-label="play button">
 						<i class="fa fa-play" aria-hidden="true" title="play"></i>
@@ -358,7 +358,7 @@ $jsonArray = json_encode($array, JSON_UNESCAPED_SLASHES);
 
 		</div>
 
-		<h2> Other Albums</h2>
+		<h2 id="other-header"> Other Albums</h2>
 
 		<?php foreach ($singlealbums as $value) : ?>
 			<div class="other-results">

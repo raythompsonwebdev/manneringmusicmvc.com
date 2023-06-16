@@ -262,7 +262,6 @@ table {
 }
 
 body {
-  background-image: url("/assets/images/526.gif");
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,7 +287,7 @@ ul {
 }
 
 li {
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  margin: 0;
 }
 
 img {
@@ -301,13 +300,13 @@ img {
 p {
   width: 100%;
   font-weight: normal;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 label {
   display: block;
   width: 100%;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 
 hr {
@@ -326,9 +325,9 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Trebuchet MS", arial, helvetica, sans-serif;
 }
 
 /* Place a border around focused fields */
@@ -363,8 +362,6 @@ input[type=submit] {
   padding: 0;
   border: 2px solid #7c412b;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 0.5em #181818;
-          box-shadow: 0 0 0.5em #181818;
   color: #fafaf7;
   background: #ecac00;
   font-weight: bold;
@@ -384,8 +381,6 @@ select[type=text]:active {
 
 input[type=submit]:active {
   background-color: #fafaf7;
-  -webkit-box-shadow: 0 0 0.5em #181818 inset;
-          box-shadow: 0 0 0.5em #181818 inset;
 }
 
 .show-button {
@@ -409,13 +404,13 @@ input[type=submit]:active {
 #mobile-toggle {
   height: 55px;
   width: 55px;
-  color: #181818;
-  background-color: #fafaf7;
+  color: #fafaf7;
+  background-color: #181818;
   outline: none;
   border: none;
   z-index: 200;
-  top: 0.5em;
-  left: 83vw;
+  top: 0.25em;
+  left: calc(88% - 15px);
   -webkit-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
   position: absolute;
@@ -431,7 +426,7 @@ input[type=submit]:active {
 
 #wrapper {
   padding: 0;
-  width: 98%;
+  width: 100%;
   height: auto;
 }
 
@@ -453,7 +448,6 @@ input[type=submit]:active {
 #site-logo {
   width: 63%;
   height: 40px;
-  padding-left: 1%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -464,7 +458,7 @@ input[type=submit]:active {
 
 #logo {
   margin: 0;
-  font-size: 1.4em;
+  font-size: 1.5em;
   width: 100%;
   height: auto;
   font-weight: bold;
@@ -477,7 +471,7 @@ input[type=submit]:active {
 #logo span {
   height: 100%;
   margin: 0;
-  color: #fafaf7;
+  color: #ebab00;
   text-align: left;
   display: inline-block;
 }
@@ -494,8 +488,8 @@ input[type=submit]:active {
   width: 100%;
   letter-spacing: 0.1em;
   text-shadow: 1px 1px #181818;
-  line-height: 20px;
-  font-size: 0.7em;
+  line-height: 15px;
+  font-size: 0.65em;
   font-weight: normal;
   padding: 0;
   clear: left;
@@ -583,21 +577,27 @@ input[type=submit]:active {
   width: 100%;
   height: 100%;
   margin: 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #3a3a3a;
 }
 
 .mannering-mobile-inner-nav-item {
   width: 100%;
-  height: 40px;
+  line-height: 40px;
+  height: auto;
   text-align: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -606,7 +606,7 @@ input[type=submit]:active {
 
 .mannering-mobile-inner-nav-link {
   text-decoration: none;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
   width: 100%;
   line-height: 40px;
   background-color: #3a3a3a;
@@ -649,26 +649,16 @@ input[type=submit]:active {
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 800px;
-}
-#mannering-content h2 {
-  font-size: 1.3em;
-  width: 100%;
-  color: #fafaf7;
+  min-height: 0;
+  min-height: initial;
   height: auto;
-  line-height: 35px;
-  text-align: center;
-  padding: 0;
-  font-weight: normal;
-  margin-bottom: 0.25em;
 }
 #mannering-content p {
-  line-height: 1.6em;
   margin: 0;
   display: block;
-  color: #fafaf7;
-  padding: 0.5em;
-  width: 97%;
+  color: #333333;
+  padding: 0;
+  width: 100%;
 }
 
 #summary {
@@ -679,16 +669,26 @@ input[type=submit]:active {
 }
 
 #main-section {
-  color: #fafaf7;
   height: auto;
   width: 100%;
-  padding-top: 0.5em;
-  margin: 0 0 1em;
+  padding: 0;
+  margin: 0;
+}
+#main-section h2 {
+  font-size: 1.2em;
+  width: 100%;
+  color: #333333;
+  height: auto;
+  line-height: 35px;
+  text-align: center;
+  padding: 0;
+  font-weight: normal;
+  margin-bottom: 0.5em;
 }
 
 /* login error */
 .login-error {
-  color: #fafaf7;
+  color: #333333;
 }
 .login-error:hover {
   color: #ecac00;
@@ -755,14 +755,17 @@ input[type=submit]:active {
 /* reviews page */
 #reviews {
   min-height: 250px;
+  width: 50%;
+  float: left;
+  display: block;
 }
 
 #reviews > blockquote {
-  width: 100%;
+  width: 97%;
   margin: 0;
   display: block;
   float: left;
-  font-size: 1em;
+  font-size: 0.9em;
   background-color: #fafaf7;
   color: #181818;
   padding: 0.5em;
@@ -780,6 +783,7 @@ input[type=submit]:active {
 }
 #reviews > blockquote form input[type=submit] {
   width: 30%;
+  float: right;
 }
 
 #review-pagination {
@@ -790,11 +794,16 @@ input[type=submit]:active {
 }
 
 /* category list */
-#categories {
-  display: block;
+.categories {
   list-style: none;
-  width: 100%;
+  display: block;
   margin: 1em auto;
+}
+
+.categories li:first-child {
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5em;
 }
 
 .categories-item {
@@ -894,6 +903,7 @@ input[type=submit]:active {
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .album-card-genre {
@@ -901,6 +911,7 @@ input[type=submit]:active {
   line-height: 35px;
   font-size: 0.85em;
   color: #fafaf7;
+  margin: 0;
 }
 
 /* edit review form */
@@ -908,10 +919,26 @@ input[type=submit]:active {
   width: 40%;
   height: auto;
   color: #fafaf7;
-  padding: 2%;
-  display: block;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.5em;
   background-color: #2b2b2b;
   margin: auto;
+}
+#review-edit p {
+  color: #fafaf7;
 }
 
 #reviewtext {
@@ -925,17 +952,17 @@ input[type=submit]:active {
 }
 
 .reviewtext-check {
-  width: 15px;
-  display: block;
+  width: 35px;
+  display: inline-block;
   height: 35px;
-  float: right;
   margin-right: 0.5em;
 }
 
 .reviewtext-label {
-  line-height: 30px;
-  height: 30px;
-  width: 80%;
+  line-height: 40px;
+  display: inline-block;
+  height: auto;
+  width: 90%;
   font-size: 0.9em;
 }
 
@@ -996,12 +1023,12 @@ input[type=submit]:active {
   margin: 0 auto;
   height: auto;
   width: 100%;
-  padding: 0.5em;
+  padding: 0;
   border-radius: 5px;
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
 }
 #mannering-search fieldset {
-  padding: 1em;
+  padding: 0.25em;
   border: 1px solid #666666;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1010,17 +1037,17 @@ input[type=submit]:active {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 0.5em;
 }
 #mannering-search legend {
   width: 50%;
-  color: #fafaf7;
+  color: #333333;
   text-align: center;
   line-height: 35px;
   font-size: 1em;
@@ -1049,11 +1076,13 @@ input[type=submit]:active {
   border-radius: 5px;
   background: #fafaf7;
   padding: 0;
-  font-size: 1em;
-  width: 25%;
+  font-size: 0.9em;
+  width: 96%;
   color: #181818;
-  line-height: 35px;
+  line-height: 40px;
+  height: 40px;
   display: inline-block;
+  margin-bottom: 0.5em;
 }
 
 #genre option {
@@ -1061,15 +1090,17 @@ input[type=submit]:active {
 }
 
 #search-btn {
-  font-family: "Lato", "helvitica", "serif", sans-serif;
+  font-family: arial, helvetica, sans-serif;
   letter-spacing: 0.1em;
-  width: 25%;
+  width: 96%;
   color: #fafaf7;
-  font-size: 1em;
+  font-size: 0.9em;
   display: inline-block;
   background-color: #ecac00;
   font-weight: normal;
   line-height: 35px;
+  width: 96%;
+  margin: 0.5em auto;
 }
 #search-btn:hover {
   letter-spacing: 0.12em;
@@ -1081,7 +1112,7 @@ input[type=submit]:active {
 .refresh-page-link {
   font-size: 0.9em;
   text-align: left;
-  color: #fafaf7;
+  color: #333333;
   margin: 0 auto;
   width: 100%;
   line-height: 40px;
@@ -1089,7 +1120,7 @@ input[type=submit]:active {
 }
 .refresh-page-link a {
   text-decoration: none;
-  color: #fafaf7;
+  color: #333333;
   display: block;
   margin: 0 auto;
   width: 98%;
@@ -1135,6 +1166,10 @@ input[type=submit]:active {
           align-items: center;
   gap: 1em;
 }
+#results-container #other-header {
+  background-color: #333333;
+  color: #fafaf7;
+}
 
 /* other albums list */
 .other-results {
@@ -1142,7 +1177,7 @@ input[type=submit]:active {
   padding: 0;
   border-radius: 5px;
   margin: 0;
-  width: 44%;
+  width: 49%;
   font-weight: normal;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1172,14 +1207,14 @@ input[type=submit]:active {
 }
 
 .other-results-name {
-  font-size: 1em;
+  font-size: 0.85em;
   background-color: #2b2b2b;
   color: #fafaf7;
   height: auto;
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .other-results-genre {
@@ -1190,7 +1225,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .other-results-info:hover .result-info-img {
@@ -1244,6 +1279,7 @@ input[type=submit]:active {
   line-height: 25px;
   text-align: center;
   margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-album {
@@ -1254,7 +1290,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-artist {
@@ -1265,7 +1301,7 @@ input[type=submit]:active {
   font-weight: normal;
   line-height: 25px;
   text-align: center;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
 .results-text-artist-link {
@@ -1310,13 +1346,14 @@ input[type=submit]:active {
       -ms-flex-align: start;
           align-items: flex-start;
   font-weight: normal;
-  gap: 0.5em;
+  gap: 0.25em;
 }
 .results-large h4 {
   font-size: 0.9em;
-  line-height: 40px;
+  line-height: 50px;
   width: 100%;
   text-align: center;
+  margin: 0;
 }
 
 .artist-bio {
@@ -1334,27 +1371,36 @@ input[type=submit]:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 0.5em;
 }
 
 .artist-bio-image {
-  width: auto;
+  width: 140px;
   height: auto;
   display: block;
   margin: 1em auto;
 }
 
-.artist-bio-text {
+.artist-bio-caption {
   width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.artist-bio-text {
+  font-size: 0.85em;
 }
 
 .artist-bio-name {
   line-height: 40px;
   font-size: 1em;
-  text-indent: 0.5em;
+  text-indent: 0.25em;
   background-color: #3b3b3b;
   color: #fafaf7;
-  text-align: left;
+  text-align: center;
   width: 100%;
+  margin: 0;
 }
 
 .results-large-info {
@@ -1372,12 +1418,12 @@ input[type=submit]:active {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  gap: 1em;
+  gap: 0.5em;
   width: 100%;
 }
 
 .results-large-link {
-  width: auto;
+  width: 150px;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
@@ -1422,16 +1468,24 @@ input[type=submit]:active {
   line-height: 35px;
   height: 35px;
   color: #fafaf7;
+  font-size: 1em;
 }
 
-.large-text-link {
+.large-text a[href~="/review/edit"] {
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  color: #fafaf7;
+}
+.large-text a[href~="/review/edit"]:hover {
+  color: #ecac00;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .large-text-title {
   text-indent: 0.25em;
-  width: 20%;
+  width: 18%;
   display: block;
   float: left;
   line-height: 35px;
@@ -1439,6 +1493,7 @@ input[type=submit]:active {
   background-color: #fafaf7;
   color: #181818;
   border-right: solid 1px #333333;
+  font-size: 1em;
 }
 
 .results-large-info :hover .results-large-img {
@@ -1471,12 +1526,17 @@ input[type=submit]:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 1em;
+  gap: 0.25em;
   width: 100%;
 }
-.audio-controls .audio-track-name {
+.audio-controls .audio-track-name,
+.audio-controls .artist-track-name {
   font-size: 1em;
   line-height: 50px;
+  text-align: center;
+  margin: 0;
+  color: #fafaf7;
+  background-color: #666666;
 }
 .audio-controls .audiocntrl-container {
   height: auto;
@@ -1495,12 +1555,13 @@ input[type=submit]:active {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+  gap: 0.15em;
 }
 .audio-controls .audiocntrl-container .audio-player-btn {
-  width: 20%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  width: 18.5%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   height: auto;
   line-height: 50px;
   outline: none;
@@ -1518,7 +1579,7 @@ input[type=submit]:active {
   display: block;
   height: auto;
   text-align: center;
-  width: 20%;
+  width: 100%;
   line-height: 50px;
 }
 .audio-controls .audiocntrl-container .audio-player-btn:hover {
@@ -1527,8 +1588,11 @@ input[type=submit]:active {
   color: #181818;
 }
 .audio-controls .audiocntrl-container .audio-progress {
-  width: 60%;
+  width: 57%;
   height: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .audio-controls .audiocntrl-container .audio-progress .load-progress {
   width: 100%;
@@ -1549,18 +1613,19 @@ input[type=submit]:active {
   letter-spacing: 0.15em;
   text-align: center;
   background-color: #181818;
+  color: #297f10;
   text-shadow: none;
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 .audio-controls .audiocntrl-container .audio-volume {
   width: 100%;
-  height: 50px;
+  height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-  width: 88%;
+  width: 90%;
   height: 100%;
   background-color: #3b3b3b;
   display: -webkit-box;
@@ -1576,25 +1641,25 @@ input[type=submit]:active {
   cursor: pointer;
   position: relative;
 }
-.audio-controls .audiocntrl-container .audio-volume .volume-mute {
-  width: 12%;
+.audio-controls .audiocntrl-container .audio-volume #volume-mute {
+  width: 10%;
   height: 100%;
   background-color: #181818;
   color: #fafaf7;
   border: none;
   outline: none;
 }
-.audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+.audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
   display: block;
   width: 100%;
   text-align: center;
   line-height: 50px;
   font-size: 1.5em;
 }
-.audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+.audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
   display: block;
 }
-.audio-controls .audiocntrl-container .audio-volume .volume-mute:hover {
+.audio-controls .audiocntrl-container .audio-volume #volume-mute:hover {
   background-color: #fafaf7;
   color: #181818;
   cursor: pointer;
@@ -1629,7 +1694,7 @@ input[type=submit]:active {
   background-color: #fafaf7;
   color: #3a3a3a;
   width: 15%;
-  text-indent: 0.5em;
+  text-indent: 0.25em;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
@@ -1637,7 +1702,7 @@ input[type=submit]:active {
 .audio-tracklist .audio-tracklist-item .trackname {
   color: #fafaf7;
   background-color: #3a3a3a;
-  width: 48%;
+  width: 47%;
   text-indent: 0.5em;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1662,11 +1727,13 @@ input[type=submit]:active {
   color: #181818;
 }
 .audio-tracklist .audio-tracklist-item .trackplays {
-  width: 12%;
+  width: 15%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   text-align: center;
+  color: #fafaf7;
+  background-color: #181818;
 }
 
 .text-box {
@@ -1726,7 +1793,7 @@ input[type=submit]:active {
   width: 90%;
   height: auto;
   color: #fafaf7;
-  padding: 1.5em;
+  padding: 0.5em;
   display: block;
   background-color: #2b2b2b;
   margin: 1em auto;
@@ -1735,7 +1802,7 @@ input[type=submit]:active {
 #register-form #email,
 #register-form #password {
   border-radius: 5px;
-  width: 100%;
+  width: 98%;
   line-height: 35px;
   height: 35px;
   font-size: 0.95em;
@@ -1772,11 +1839,12 @@ input[type=submit]:active {
   text-align: center;
   background-color: transparent;
   background-color: initial;
+  font-size: 0.8em;
 }
 
 .not-reg-link {
   display: inline-block;
-  color: #fafaf7;
+  color: #333333;
 }
 .not-reg-link:hover {
   color: #ecac00;
@@ -1792,7 +1860,8 @@ input[type=submit]:active {
   padding: 1em;
   background-color: #2b2b2b;
   display: block;
-  margin: 0.5em;
+  float: none;
+  margin: 1em auto;
 }
 #contact-form .error {
   width: 80%;
@@ -1853,8 +1922,10 @@ input[type=submit]:active {
 #contact-details {
   width: 90%;
   color: #fafaf7;
+  float: none;
   display: block;
-  margin: 0.5em auto;
+  margin: 1em auto;
+  padding: 0 1.5em;
 }
 
 .contact-details-text {
@@ -1966,8 +2037,7 @@ input[type=submit]:active {
   color: #181818;
   padding: 1em;
   margin: 1em auto;
-  width: auto;
-  width: 60%;
+  width: 90%;
   text-align: center;
 }
 
@@ -1975,9 +2045,9 @@ footer {
   background-color: #3a3a3a;
   clear: both;
   height: 200px;
-  width: 100%;
+  width: 98%;
   margin: 0;
-  padding: 0 0.5em;
+  padding: 0 1%;
   border-radius: 5px;
 }
 
@@ -2072,7 +2142,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
   #logo span {
     margin: 0;
@@ -2139,19 +2209,19 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     height: 40px;
     background-color: #fafaf7;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    font-family: "Trebuchet MS", arial, helvetica, sans-serif;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
   }
   .inner-nav-link {
     text-decoration: none;
-    font-family: "Lato", "helvitica", "serif", sans-serif;
     width: 100%;
     line-height: 40px;
     background-color: #3a3a3a;
@@ -2180,18 +2250,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
     min-height: 800px;
   }
-  #mannering-content h2 {
-    font-size: 1.8em;
-    font-weight: normal;
-    line-height: 50px;
-    margin-bottom: 1em;
-  }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -2201,22 +2263,18 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.8em;
+    line-height: 50px;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
     display: block;
@@ -2240,16 +2298,11 @@ footer {
     display: block;
     width: 50%;
   }
-  /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -2264,9 +2317,13 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 96%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -2281,8 +2338,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -2314,15 +2372,14 @@ footer {
     margin: 0.5em 0;
     line-height: 40px;
   }
-  /* home page albums sections hip hop country jazz */
   .genre-section:last-of-type {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -2338,7 +2395,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 60%;
   }
   #reviewtext {
     font-size: 1em;
@@ -2347,7 +2404,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -2373,25 +2430,23 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
     padding: 0.5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
     line-height: 40px;
   }
@@ -2421,19 +2476,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    line-height: 40px;
+    font-size: 1em;
+    margin-bottom: 1em;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 1em;
     line-height: 40px;
+    margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -2468,10 +2525,8 @@ footer {
   }
   /* other albums list */
   .other-results {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
     width: 19%;
+    padding: 0.25em;
   }
   .other-results-info {
     margin: 0;
@@ -2492,11 +2547,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     -webkit-transition: scale(0.9);
@@ -2506,7 +2559,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -2553,93 +2609,12 @@ footer {
     height: auto;
   }
   .results-large h4 {
+    line-height: 80px;
+    text-align: left;
     font-size: 1.1em;
-    line-height: 40px;
   }
   .artist-bio {
     width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 80%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 48%;
-  }
-  .results-large-link {
-    width: 25%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 75%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.9em;
-  }
-  .large-text {
-    width: 85%;
-    text-indent: 0.5em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -2650,19 +2625,98 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
+  }
+  .artist-bio-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 76%;
+  }
+  .artist-bio-text {
+    font-size: 1em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 75%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.9em;
+  }
+  .large-text {
+    width: 85%;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
   }
-  .audio-controls .audio-track-name {
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
     font-size: 1.5em;
     line-height: 55px;
-    text-align: center;
   }
   .audio-controls .audiocntrl-container {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -2686,21 +2740,21 @@ footer {
     font-size: 1.3em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
+    width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
+    width: 87%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 13%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -2712,13 +2766,13 @@ footer {
     font-size: 0.9em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 20%;
+    width: 7%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 48%;
+    width: 62%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -2728,7 +2782,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -2767,17 +2821,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -2787,9 +2836,8 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 1em;
-    float: none;
-    margin: auto;
+    float: left;
+    margin: 1em 0;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -2811,11 +2859,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -2867,12 +2913,10 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
     width: 60%;
   }
   footer {
-    width: 100%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -2922,7 +2966,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.8em;
   }
   #logo span {
     margin: 0;
@@ -2981,10 +3025,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 12.5%;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
@@ -3017,14 +3058,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -3034,55 +3071,36 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.7em;
+    line-height: 50px;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -3097,9 +3115,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -3114,8 +3135,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -3151,10 +3173,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -3170,7 +3192,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -3179,7 +3201,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -3205,12 +3227,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -3223,6 +3243,7 @@ footer {
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
   }
   .search-label {
@@ -3251,20 +3272,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
+    font-size: 1em;
     margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
+    font-size: 1em;
+    line-height: 40px;
     margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -3299,10 +3321,8 @@ footer {
   }
   /* other albums list */
   .other-results {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
     width: 19%;
+    padding: 0.25em;
   }
   .other-results-info {
     margin: 0;
@@ -3323,11 +3343,9 @@ footer {
   }
   .other-results-name {
     font-size: 1em;
-    margin-bottom: 0.2em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     border: 1px solid #ecac00;
@@ -3336,6 +3354,9 @@ footer {
   /* search results list */
   .results {
     width: 19%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -3383,92 +3404,11 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 80%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 48%;
-  }
-  .results-large-link {
-    width: 25%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 75%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.85em;
-  }
-  .large-text {
-    width: 85%;
-    text-indent: 0.5em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 14%;
-    text-indent: 0.5em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -3479,10 +3419,90 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
+  }
+  .artist-bio-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 75%;
+  }
+  .artist-bio-text {
+    font-size: 1em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 79%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.85em;
+  }
+  .large-text {
+    width: 85%;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 14%;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
   }
-  .audio-controls .audio-track-name {
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
     font-size: 1.5em;
     line-height: 55px;
     text-align: center;
@@ -3491,7 +3511,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -3501,7 +3521,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 69%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -3515,21 +3535,21 @@ footer {
     font-size: 1.3em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
+    width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
+    width: 87%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 13%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -3538,16 +3558,16 @@ footer {
     width: 100%;
   }
   .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 20%;
+    width: 7%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 48%;
+    width: 62%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -3557,7 +3577,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -3596,17 +3616,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -3616,9 +3631,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 1em;
-    float: none;
-    margin: auto;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -3640,11 +3653,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -3696,12 +3707,10 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
     width: 60%;
   }
   footer {
-    width: 100%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -3736,835 +3745,6 @@ footer {
 }
 /* 1439 - 1280 */
 @media screen and (min-width: 80em) and (max-width: 89.9375em) {
-  #mobile-toggle {
-    display: none;
-  }
-  #wrapper {
-    padding: 0;
-    width: 90%;
-  }
-  #mannering-header {
-    height: 75px;
-  }
-  #site-logo {
-    width: 63%;
-    height: 40px;
-  }
-  #logo {
-    font-size: 1.75em;
-  }
-  #logo span {
-    margin: 0;
-  }
-  #logo span:last-of-type {
-    margin: 0;
-  }
-  .site-description {
-    font-size: 0.8em;
-    margin: 0;
-  }
-  #mannering-social {
-    width: 32%;
-    display: block;
-  }
-  #mannering-social-links {
-    margin: 0;
-  }
-  .mannering-social-item {
-    height: auto;
-  }
-  .mannering-social-link {
-    font-size: 1em;
-  }
-  #mannering-nav {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 0.5em;
-    border-radius: 5px;
-    position: static;
-    position: initial;
-  }
-  #mannering-mobile-inner-nav {
-    display: none;
-  }
-  .mannering-mobile-inner-nav-item {
-    display: none;
-  }
-  .mannering-mobile-inner-nav-link {
-    display: none;
-  }
-  .mannering-mobile-inner-nav-link[href~="/review/edit"] {
-    display: none;
-  }
-  #mannering-inner-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    gap: 0.25em;
-  }
-  .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-  }
-  .inner-nav-item a[href~="/review/edit"] {
-    font-size: 65%;
-  }
-  .inner-nav-link {
-    line-height: 40px;
-    font-size: 1.1em;
-    background-color: #3a3a3a;
-    color: #fafaf7;
-    font-weight: normal;
-    text-align: center;
-    display: block;
-  }
-  .inner-nav-link:link {
-    background-color: #3a3a3a;
-    color: #fafaf7;
-  }
-  .inner-nav-link:visited {
-    color: #3a3a3a;
-    background-color: #ecac00;
-  }
-  .inner-nav-link:hover {
-    background-color: #ecac00;
-    color: #3a3a3a;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .inner-nav-link:active {
-    color: #3a3a3a;
-    background-color: #ecac00;
-  }
-  #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
-  }
-  #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
-  }
-  #summary {
-    height: 50px;
-    width: 100%;
-    background-color: #cc9900;
-    display: none;
-  }
-  #main-section {
-    margin: 0 0 1em;
-  }
-  /* login error */
-  .login-error {
-    color: #fafaf7;
-  }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
-  #add-cat-link {
-    width: 100%;
-    display: block;
-    line-height: 35px;
-  }
-  /* edit category form */
-  #edit-category {
-    width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
-  }
-  .edit-category-label {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
-  }
-  #categoryname {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  #edit-category-submit {
-    margin: 1em auto;
-    display: block;
-    width: 50%;
-  }
-  /* add category form */
-  #category-form {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
-  #category-form label {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  #category-form input[type=text] {
-    line-height: 35px;
-    display: block;
-    width: 100%;
-  }
-  #category-form input[type=submit] {
-    margin: 1em auto;
-    display: block;
-    width: 70%;
-  }
-  /* reviews page */
-  #reviews {
-    min-height: 250px;
-  }
-  #reviews > blockquote {
-    width: 90%;
-  }
-  #reviews > blockquote p {
-    font-size: 1em;
-  }
-  #reviews > blockquote form {
-    padding: 1em 0;
-  }
-  #reviews > blockquote form input[type=submit] {
-    width: 30%;
-  }
-  #review-pagination {
-    font-size: 0.9em;
-  }
-  /* category list */
-  #categories {
-    width: 40%;
-  }
-  .categories-item {
-    height: auto;
-  }
-  .categories-link {
-    line-height: 50px;
-    font-size: 1.1em;
-  }
-  /* genre section  */
-  .genre-section {
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 0.25em;
-  }
-  .genre-section h3 {
-    font-size: 1.35em;
-    line-height: 40px;
-  }
-  /* home page albums sections hip hop country jazz */
-  .genre-section:last-of-type {
-    margin: 0 0 1em;
-  }
-  .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-  }
-  .album-card-image {
-    width: auto;
-  }
-  .album-card-text {
-    margin: 0;
-  }
-  .album-card-artist {
-    font-size: 0.9em;
-  }
-  .album-card-genre {
-    font-size: 1em;
-  }
-  /* edit review form */
-  #review-edit {
-    width: 70%;
-  }
-  #reviewtext {
-    font-size: 1em;
-  }
-  .reviewtext-check {
-    margin-right: 0.25em;
-  }
-  .reviewtext-label {
-    font-size: 0.9em;
-  }
-  #reviewtext-submit {
-    width: 40%;
-    font-size: 1em;
-  }
-  #reviewtext-submit:hover {
-    margin: 0 auto;
-  }
-  /* form errors */
-  .error,
-  .notice,
-  .success {
-    margin-bottom: 1em;
-  }
-  .error {
-    width: 100%;
-  }
-  .notice {
-    width: 100%;
-  }
-  .success {
-    width: 100%;
-  }
-  /* search page form */
-  #mannering-search {
-    padding: 0.5em;
-  }
-  #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #mannering-search legend {
-    font-size: 1em;
-  }
-  .search-label {
-    font-size: 0.9em;
-  }
-  ::-webkit-input-placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  ::-moz-placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  :-ms-input-placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  ::-ms-input-placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  ::placeholder {
-    color: #181818;
-    text-indent: 0.25em;
-  }
-  #artist,
-  #album,
-  #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
-  }
-  #search-btn {
-    font-size: 0.85em;
-    margin: 0;
-  }
-  #search-btn:hover {
-    letter-spacing: 0.12em;
-  }
-  .refresh-page-link {
-    font-size: 0.85em;
-  }
-  .refresh-page-link a {
-    line-height: 40px;
-  }
-  .refresh-page-link a:hover {
-    cursor: pointer;
-  }
-  .aboutpage-img {
-    width: 14%;
-  }
-  /* front-page slider */
-  #slider {
-    height: auto;
-  }
-  #results-container {
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 0.2em;
-  }
-  /* other albums list */
-  .other-results {
-    padding: 0.25em;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    width: 19%;
-  }
-  .other-results-info {
-    margin: 0;
-  }
-  .other-result-link {
-    width: auto;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .other-result-img {
-    margin: 1em auto;
-    display: block;
-  }
-  /* Album artist and name */
-  .other-results-text {
-    width: 100%;
-  }
-  .other-results-name {
-    font-size: 1em;
-    margin-bottom: 0.2em;
-  }
-  .other-results-genre {
-    font-size: 0.9em;
-    margin-bottom: 0.2em;
-  }
-  .other-results-info:hover .result-info-img {
-    border: 1px solid #ecac00;
-    cursor: pointer;
-  }
-  /* search results list */
-  .results {
-    width: 19%;
-  }
-  .results-info {
-    margin: 0;
-  }
-  .result-info-link {
-    width: auto;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .result-info-img {
-    width: auto;
-  }
-  /* Album artist and name */
-  .results-text {
-    width: 100%;
-  }
-  .results-text-name {
-    font-size: 1em;
-    line-height: 35px;
-  }
-  .results-text-album {
-    font-size: 0.9em;
-    line-height: 35px;
-  }
-  .results-text-artist {
-    font-size: 0.85em;
-    line-height: 35px;
-  }
-  .results-text-artist-link {
-    background-color: #ecac00;
-  }
-  .results-text-artist-link:hover {
-    color: #ecac00;
-  }
-  .results-info:hover .result-info-img {
-    -webkit-transition: scale(1.01);
-    transition: scale(1.01);
-    border: 1px solid #ecac00;
-    cursor: pointer;
-  }
-  /* single artist page */
-  .results-large {
-    height: auto;
-  }
-  .results-large h4 {
-    font-size: 1.1em;
-    line-height: 40px;
-  }
-  .artist-bio {
-    width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 80%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 48%;
-  }
-  .results-large-link {
-    width: 25%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 75%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.85em;
-  }
-  .large-text {
-    width: 79%;
-    text-indent: 0.5em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 20%;
-    text-indent: 0.5em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 1em;
-    width: 50%;
-  }
-  .audio-controls .audio-track-name {
-    font-size: 1.3em;
-    line-height: 55px;
-    text-align: center;
-  }
-  .audio-controls .audiocntrl-container {
-    width: 100%;
-  }
-  .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
-  }
-  .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
-  .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
-  .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
-  .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
-  .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
-    font-size: 1.6em;
-  }
-  .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
-  }
-  .audio-controls .audiocntrl-container .audio-progress .load-progress {
-    width: 100%;
-  }
-  .audio-controls .audiocntrl-container .audio-progress .play-progress {
-    width: 100%;
-  }
-  .audio-controls .audiocntrl-container .current-time,
-  .audio-controls .audiocntrl-container .duration {
-    width: 15%;
-    font-size: 1.1em;
-  }
-  .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
-  }
-  .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
-  }
-  .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
-  }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
-  }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
-    font-size: 1.4em;
-  }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
-    display: block;
-  }
-  /* audio track list */
-  .audio-tracklist {
-    margin: 0;
-    width: 100%;
-  }
-  .audio-tracklist .audio-tracklist-item {
-    font-size: 0.9em;
-  }
-  .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 18%;
-  }
-  .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
-  }
-  .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
-    cursor: pointer;
-  }
-  .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
-    line-height: 40px;
-  }
-  .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
-    background-color: #fafaf7;
-  }
-  .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
-  }
-  .text-box {
-    font-size: 1em;
-  }
-  .text-box-title {
-    font-size: 1em;
-  }
-  .text-box-link {
-    font-size: 0.7em;
-  }
-  .text-box-text {
-    letter-spacing: 0.1em;
-  }
-  .textbox-img {
-    margin: 10px 30px 0 0;
-  }
-  /* Container */
-  .container {
-    margin: 5px auto;
-  }
-  /* Register Form */
-  #register-form {
-    width: 40%;
-  }
-  #register-form #name,
-  #register-form #email,
-  #register-form #password {
-    font-size: 0.8em;
-  }
-  #register-form .register-label {
-    font-size: 0.9em;
-    height: 30px;
-  }
-  #register-form #register-btn {
-    font-size: 1em;
-  }
-  /* not registered link to register form */
-  .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
-    background-color: transparent;
-    background-color: initial;
-  }
-  .not-reg-link {
-    display: inline-block;
-    color: #fafaf7;
-  }
-  .not-reg-link:hover {
-    color: #ecac00;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  /* Contact page form */
-  #contact-form {
-    width: 50%;
-    padding: 2.5%;
-    float: none;
-  }
-  #contact-form .contact-form-label {
-    display: block;
-    line-height: 35px;
-  }
-  #contact-form #name,
-  #contact-form #email {
-    font-size: 1em;
-  }
-  #contact-form #message {
-    font-size: 1em;
-  }
-  #contact-form #contact-btn {
-    width: 40%;
-    font-size: 1em;
-  }
-  #contact-form #contact-btn:hover {
-    width: 40%;
-  }
-  /* Contact page address details */
-  #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
-  }
-  .contact-details-text {
-    line-height: 40px;
-    font-size: 1em;
-  }
-  /* video player imag grid */
-  #video-gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #video-gallery h1 {
-    font-size: 1em;
-  }
-  .video-item {
-    width: 19%;
-  }
-  .video-item-img {
-    display: block;
-  }
-  .overlay {
-    width: 100%;
-  }
-  .video-artist-name {
-    font-size: 1em;
-    line-height: 40px;
-  }
-  .video-text {
-    font-size: 0.9em;
-  }
-  .video-item:hover .overlay {
-    cursor: pointer;
-  }
-  .sidebar-content-box {
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  .search-error {
-    display: none;
-  }
-  .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
-  }
-  footer {
-    width: 97%;
-  }
-  .mannering-social-btns-footer {
-    width: 10%;
-  }
-  .mannering-social-btns-footer-items {
-    width: 100%;
-  }
-  .mannering-social-btns-footer-item {
-    width: 100%;
-  }
-  .mannering-social-btns-footer-link {
-    font-size: 1em;
-  }
-  .mannering-social-btns-footer-link:hover {
-    background-color: #ecac00;
-  }
-  #inner-footer {
-    margin: 0;
-  }
-  .inner-footer-item {
-    width: 100%;
-  }
-  .inner-footer-link {
-    font-size: 1em;
-  }
-  .inner-footer-link:hover {
-    color: #ecac00;
-  }
-  .copyr {
-    font-size: 0.6em;
-  }
-}
-/* 1279 - 1024 */
-@media screen and (min-width: 64em) and (max-width: 79.9375em) {
   #mobile-toggle {
     display: none;
   }
@@ -4639,14 +3819,10 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 12.5%;
   }
   .inner-nav-item a[href~="/review/edit"] {
     font-size: 65%;
-    display: block;
   }
   .inner-nav-link {
     line-height: 40px;
@@ -4676,14 +3852,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -4693,55 +3865,36 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
   .login-error {
-    color: #fafaf7;
+    color: #333333;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -4756,9 +3909,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -4773,8 +3929,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -4810,10 +3967,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 19%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -4822,14 +3979,14 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .album-card-genre {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -4838,7 +3995,7 @@ footer {
     margin-right: 0.25em;
   }
   .reviewtext-label {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #reviewtext-submit {
     width: 40%;
@@ -4864,12 +4021,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -4882,6 +4037,7 @@ footer {
             justify-content: center;
   }
   #mannering-search legend {
+    width: 25%;
     font-size: 1em;
   }
   .search-label {
@@ -4910,20 +4066,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
+    font-size: 1em;
     margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
+    font-size: 1em;
+    line-height: 40px;
     margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -4958,10 +4115,7 @@ footer {
   }
   /* other albums list */
   .other-results {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    width: 19%;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -4981,12 +4135,10 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
-    margin-bottom: 0.2em;
+    font-size: 0.9em;
   }
   .other-results-genre {
     font-size: 0.9em;
-    margin-bottom: 0.2em;
   }
   .other-results-info:hover .result-info-img {
     border: 1px solid #ecac00;
@@ -4995,6 +4147,9 @@ footer {
   /* search results list */
   .results {
     width: 19%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -5042,92 +4197,11 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
     width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 80%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 48%;
-  }
-  .results-large-link {
-    width: 25%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 75%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.85em;
-  }
-  .large-text {
-    width: 79%;
-    text-indent: 0.5em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 20%;
-    text-indent: 0.5em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -5138,19 +4212,101 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
+  }
+  .artist-bio-image {
+    width: 125px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 76%;
+  }
+  .artist-bio-text {
+    font-size: 0.9em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 48%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 75%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.85em;
+  }
+  .large-text {
+    width: 79%;
+    font-size: 0.9em;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 15%;
+    font-size: 0.9em;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
   }
-  .audio-controls .audio-track-name {
-    font-size: 1.2em;
-    line-height: 50px;
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
+    font-size: 1.3em;
+    line-height: 55px;
     text-align: center;
   }
   .audio-controls .audiocntrl-container {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 14%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -5160,7 +4316,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 69%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -5171,24 +4327,24 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
-    width: 30%;
+    width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
+    width: 85%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 15%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -5197,16 +4353,16 @@ footer {
     width: 100%;
   }
   .audio-tracklist .audio-tracklist-item {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 18%;
+    width: 7%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 62%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -5216,7 +4372,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -5239,7 +4395,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 45%;
+    width: 40%;
   }
   #register-form #name,
   #register-form #email,
@@ -5255,17 +4411,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -5275,8 +4426,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 2.5%;
-    float: none;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -5298,11 +4448,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -5354,12 +4502,808 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
+    width: 70%;
   }
   footer {
+    width: 98%;
+  }
+  .mannering-social-btns-footer {
+    width: 10%;
+  }
+  .mannering-social-btns-footer-items {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-item {
+    width: 100%;
+  }
+  .mannering-social-btns-footer-link {
+    font-size: 1em;
+  }
+  .mannering-social-btns-footer-link:hover {
+    background-color: #ecac00;
+  }
+  #inner-footer {
+    margin: 0;
+  }
+  .inner-footer-item {
+    width: 100%;
+  }
+  .inner-footer-link {
+    font-size: 1em;
+  }
+  .inner-footer-link:hover {
+    color: #ecac00;
+  }
+  .copyr {
+    font-size: 0.6em;
+  }
+}
+/* 1279 - 1024 */
+@media screen and (min-width: 64em) and (max-width: 79.9375em) {
+  #mobile-toggle {
+    display: none;
+  }
+  #wrapper {
+    padding: 0;
+    width: 98%;
+  }
+  #mannering-header {
+    height: 75px;
+  }
+  #site-logo {
+    width: 63%;
+    height: 40px;
+  }
+  #logo {
+    font-size: 1.75em;
+  }
+  #logo span {
+    margin: 0;
+  }
+  #logo span:last-of-type {
+    margin: 0;
+  }
+  .site-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+  #mannering-social {
+    width: 32%;
+    display: block;
+  }
+  #mannering-social-links {
+    margin: 0;
+  }
+  .mannering-social-item {
+    height: auto;
+  }
+  .mannering-social-link {
+    font-size: 1em;
+  }
+  #mannering-nav {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    position: static;
+    position: initial;
+  }
+  #mannering-mobile-inner-nav {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-item {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link {
+    display: none;
+  }
+  .mannering-mobile-inner-nav-link[href~="/review/edit"] {
+    display: none;
+  }
+  #mannering-inner-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 0.25em;
+  }
+  .inner-nav-item {
+    width: 12.5%;
+  }
+  .inner-nav-item a[href~="/review/edit"] {
+    font-size: 65%;
+    display: block;
+  }
+  .inner-nav-link {
+    line-height: 40px;
+    font-size: 1.1em;
+    background-color: #3a3a3a;
+    color: #fafaf7;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+  }
+  .inner-nav-link:link {
+    background-color: #3a3a3a;
+    color: #fafaf7;
+  }
+  .inner-nav-link:visited {
+    color: #3a3a3a;
+    background-color: #ecac00;
+  }
+  .inner-nav-link:hover {
+    background-color: #ecac00;
+    color: #3a3a3a;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .inner-nav-link:active {
+    color: #3a3a3a;
+    background-color: #ecac00;
+  }
+  #mannering-content {
+    min-height: 800px;
+  }
+  #mannering-content p {
+    color: #333333;
+  }
+  #summary {
+    height: 50px;
+    width: 100%;
+    background-color: #cc9900;
+    display: none;
+  }
+  #main-section {
+    margin: 0 0 1em;
+    padding-top: 0.5em;
+  }
+  #main-section h2 {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
+  .login-error {
+    color: #fafaf7;
+  }
+  #add-cat-link {
+    line-height: 35px;
+  }
+  #edit-category {
+    width: 50%;
+  }
+  .edit-category-label {
+    line-height: 35px;
+  }
+  #categoryname {
+    line-height: 35px;
+  }
+  #edit-category-submit {
+    width: 50%;
+  }
+  /* add category form */
+  #category-form {
+    width: 100%;
+  }
+  #category-form label {
+    line-height: 35px;
+  }
+  #category-form input[type=text] {
+    line-height: 35px;
+    display: block;
+    width: 100%;
+  }
+  #category-form input[type=submit] {
+    margin: 1em auto;
+    display: block;
+    width: 70%;
+  }
+  /* reviews page */
+  #reviews {
+    min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
+  }
+  #reviews > blockquote {
     width: 97%;
+  }
+  #reviews > blockquote p {
+    font-size: 1em;
+  }
+  #reviews > blockquote form {
+    padding: 1em 0;
+  }
+  #reviews > blockquote form input[type=submit] {
+    width: 30%;
+  }
+  #review-pagination {
+    font-size: 0.9em;
+  }
+  /* category list */
+  .categories {
+    display: inline-block;
+    width: 50%;
+  }
+  .categories-item {
+    height: auto;
+  }
+  .categories-link {
+    line-height: 50px;
+    font-size: 1.1em;
+  }
+  /* genre section  */
+  .genre-section {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.25em;
+  }
+  .genre-section h3 {
+    font-size: 1.35em;
+    line-height: 40px;
+  }
+  /* home page albums sections hip hop country jazz */
+  .genre-section:last-of-type {
+    margin: 0 0 1em;
+  }
+  .album-card {
+    width: 16%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .album-card-image {
+    width: auto;
+  }
+  .album-card-text {
+    margin: 0;
+  }
+  .album-card-artist {
+    font-size: 0.8em;
+  }
+  .album-card-genre {
+    font-size: 0.9em;
+  }
+  /* edit review form */
+  #review-edit {
+    width: 50%;
+  }
+  #reviewtext {
+    font-size: 1em;
+  }
+  .reviewtext-check {
+    margin-right: 0.25em;
+  }
+  .reviewtext-label {
+    font-size: 0.9em;
+  }
+  #reviewtext-submit {
+    width: 40%;
+    font-size: 1em;
+  }
+  #reviewtext-submit:hover {
+    margin: 0 auto;
+  }
+  /* form errors */
+  .error,
+  .notice,
+  .success {
+    margin-bottom: 1em;
+  }
+  .error {
+    width: 100%;
+  }
+  .notice {
+    width: 100%;
+  }
+  .success {
+    width: 100%;
+  }
+  /* search page form */
+  #mannering-search {
+    width: 100%;
+  }
+  #mannering-search fieldset {
+    padding: 0.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #mannering-search legend {
+    font-size: 1em;
+  }
+  .search-label {
+    font-size: 0.9em;
+  }
+  ::-webkit-input-placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  ::-moz-placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  :-ms-input-placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  ::-ms-input-placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  ::placeholder {
+    color: #181818;
+    text-indent: 0.25em;
+  }
+  #artist,
+  #album,
+  #genre {
+    font-size: 1em;
+    margin-bottom: 1em;
+    width: 25%;
+  }
+  #search-btn {
+    font-size: 1em;
+    line-height: 40px;
+    margin: 0;
+    width: 25%;
+  }
+  #search-btn:hover {
+    letter-spacing: 0.12em;
+  }
+  .refresh-page-link {
+    font-size: 1em;
+  }
+  .refresh-page-link a {
+    line-height: 40px;
+  }
+  .refresh-page-link a:hover {
+    cursor: pointer;
+  }
+  .aboutpage-img {
+    width: 14%;
+  }
+  /* front-page slider */
+  #slider {
+    height: auto;
+  }
+  #results-container {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.2em;
+  }
+  /* other albums list */
+  .other-results {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 24%;
+  }
+  .other-results-info {
+    margin: 0;
+  }
+  .other-result-link {
+    width: auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .other-result-img {
+    margin: 1em auto;
+    display: block;
+  }
+  /* Album artist and name */
+  .other-results-text {
+    width: 100%;
+  }
+  .other-results-name {
+    font-size: 0.9em;
+  }
+  .other-results-genre {
+    font-size: 0.9em;
+  }
+  .other-results-info:hover .result-info-img {
+    border: 1px solid #ecac00;
+    cursor: pointer;
+  }
+  /* search results list */
+  .results {
+    width: 24%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .results-info {
+    margin: 0;
+  }
+  .result-info-link {
+    width: auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .result-info-img {
+    width: auto;
+  }
+  /* Album artist and name */
+  .results-text {
+    width: 100%;
+  }
+  .results-text-name {
+    font-size: 1em;
+    line-height: 35px;
+  }
+  .results-text-album {
+    font-size: 0.9em;
+    line-height: 35px;
+  }
+  .results-text-artist {
+    font-size: 0.85em;
+    line-height: 35px;
+  }
+  .results-text-artist-link {
+    background-color: #ecac00;
+  }
+  .results-text-artist-link:hover {
+    color: #ecac00;
+  }
+  .results-info:hover .result-info-img {
+    -webkit-transition: scale(1.01);
+    transition: scale(1.01);
+    border: 1px solid #ecac00;
+    cursor: pointer;
+  }
+  /* single artist page */
+  .results-large {
+    height: auto;
+  }
+  .results-large h4 {
+    font-size: 1.1em;
+    line-height: 80px;
+    text-align: left;
+  }
+  .artist-bio {
+    width: 49%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .artist-bio-image {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 73%;
+  }
+  .artist-bio-text {
+    font-size: 0.9em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 49%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 75%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.85em;
+  }
+  .large-text {
+    width: 79%;
+    font-size: 0.9em;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 15%;
+    font-size: 0.9em;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
+  }
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
+    font-size: 1.2em;
+    line-height: 50px;
+    text-align: center;
+  }
+  .audio-controls .audiocntrl-container {
+    width: 100%;
+  }
+  .audio-controls .audiocntrl-container .audio-player-btn {
+    width: 19.5%;
+  }
+  .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
+  .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
+  .audio-controls .audiocntrl-container .audio-player-btn .fa-step-backward,
+  .audio-controls .audiocntrl-container .audio-player-btn .fa-step-forward,
+  .audio-controls .audiocntrl-container .audio-player-btn .fa-repeat {
+    font-size: 1.6em;
+  }
+  .audio-controls .audiocntrl-container .audio-progress {
+    width: 69%;
+  }
+  .audio-controls .audiocntrl-container .audio-progress .load-progress {
+    width: 100%;
+  }
+  .audio-controls .audiocntrl-container .audio-progress .play-progress {
+    width: 100%;
+  }
+  .audio-controls .audiocntrl-container .current-time,
+  .audio-controls .audiocntrl-container .duration {
+    width: 15%;
+    font-size: 1em;
+  }
+  .audio-controls .audiocntrl-container .audio-volume {
+    width: 100%;
+  }
+  .audio-controls .audiocntrl-container .audio-volume .volume-bg {
+    width: 85%;
+  }
+  .audio-controls .audiocntrl-container .audio-volume .volume {
+    width: 96%;
+  }
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 15%;
+  }
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
+    font-size: 1.4em;
+  }
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
+    display: block;
+  }
+  /* audio track list */
+  .audio-tracklist {
+    margin: 0;
+    width: 100%;
+  }
+  .audio-tracklist .audio-tracklist-item {
+    font-size: 0.85em;
+  }
+  .audio-tracklist .audio-tracklist-item .tracknum {
+    width: 7%;
+  }
+  .audio-tracklist .audio-tracklist-item .trackname {
+    width: 61%;
+  }
+  .audio-tracklist .audio-tracklist-item .trackbtn {
+    width: 15%;
+    cursor: pointer;
+  }
+  .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
+    line-height: 40px;
+  }
+  .audio-tracklist .audio-tracklist-item .trackbtn .fa-play:hover {
+    background-color: #fafaf7;
+  }
+  .audio-tracklist .audio-tracklist-item .trackplays {
+    width: 15%;
+  }
+  .text-box {
+    font-size: 1em;
+  }
+  .text-box-title {
+    font-size: 1em;
+  }
+  .text-box-link {
+    font-size: 0.7em;
+  }
+  .text-box-text {
+    letter-spacing: 0.1em;
+  }
+  .textbox-img {
+    margin: 10px 30px 0 0;
+  }
+  /* Container */
+  .container {
+    margin: 5px auto;
+  }
+  /* Register Form */
+  #register-form {
+    width: 45%;
+  }
+  #register-form #name,
+  #register-form #email,
+  #register-form #password {
+    font-size: 0.8em;
+  }
+  #register-form .register-label {
+    font-size: 0.9em;
+    height: 30px;
+  }
+  #register-form #register-btn {
+    font-size: 1em;
+  }
+  /* not registered link to register form */
+  .not-reg-text {
+    margin-top: 1em;
+    background-color: transparent;
+    background-color: initial;
+  }
+  .not-reg-link {
+    display: inline-block;
+  }
+  .not-reg-link:hover {
+    color: #ecac00;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /* Contact page form */
+  #contact-form {
+    width: 50%;
+    float: left;
+  }
+  #contact-form .contact-form-label {
+    display: block;
+    line-height: 35px;
+  }
+  #contact-form #name,
+  #contact-form #email {
+    font-size: 1em;
+  }
+  #contact-form #message {
+    font-size: 1em;
+  }
+  #contact-form #contact-btn {
+    width: 40%;
+    font-size: 1em;
+  }
+  #contact-form #contact-btn:hover {
+    width: 40%;
+  }
+  /* Contact page address details */
+  #contact-details {
+    width: 40%;
+    display: inline-block;
+    margin: 1em 0;
+  }
+  .contact-details-text {
+    line-height: 40px;
+    font-size: 1em;
+  }
+  /* video player imag grid */
+  #video-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #video-gallery h1 {
+    font-size: 1em;
+  }
+  .video-item {
+    width: 19%;
+  }
+  .video-item-img {
+    display: block;
+  }
+  .overlay {
+    width: 100%;
+  }
+  .video-artist-name {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  .video-text {
+    font-size: 0.9em;
+  }
+  .video-item:hover .overlay {
+    cursor: pointer;
+  }
+  .sidebar-content-box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .search-error {
+    display: none;
+  }
+  .show-error {
+    width: 70%;
+  }
+  footer {
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -5468,7 +5412,7 @@ footer {
     gap: 0.2em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -5504,14 +5448,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -5521,55 +5461,36 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -5584,9 +5505,12 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 50%;
+    float: left;
+    display: block;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
     font-size: 1em;
@@ -5601,8 +5525,9 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    display: inline-block;
+    width: 50%;
   }
   .categories-item {
     height: auto;
@@ -5638,10 +5563,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 23%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -5657,7 +5582,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 50%;
   }
   #reviewtext {
     font-size: 1em;
@@ -5692,12 +5617,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -5738,20 +5661,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
+    font-size: 1em;
     margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
+    font-size: 1em;
+    line-height: 40px;
     margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -5789,7 +5713,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 19%;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -5809,7 +5733,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -5822,7 +5746,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -5870,95 +5797,15 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 80px;
+    text-align: left;
   }
   .artist-bio {
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 80%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
     width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 85%;
-  }
-  .results-large-link {
-    width: 25%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 75%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.8em;
-  }
-  .large-text {
-    width: 79%;
-    text-indent: 0.25em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 20%;
-    text-indent: 0.25em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 0.9em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -5969,10 +5816,93 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
-    width: 85%;
   }
-  .audio-controls .audio-track-name {
+  .artist-bio-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 100%;
+  }
+  .artist-bio-text {
+    font-size: 1em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.2em;
+    text-align: left;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 84%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.8em;
+  }
+  .large-text {
+    width: 79%;
+    font-size: 1em;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 11%;
+    text-indent: 0.25em;
+    font-size: 1em;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 0.9em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
     font-size: 1em;
     line-height: 50px;
     text-align: center;
@@ -5981,7 +5911,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -5991,7 +5921,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 69%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -6002,24 +5932,24 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 80%;
+    width: 90%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
+    width: 98%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 10%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -6031,13 +5961,13 @@ footer {
     font-size: 0.85em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 17%;
+    width: 8%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 60%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -6047,7 +5977,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -6086,17 +6016,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -6106,8 +6031,7 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 50%;
-    padding: 2.5%;
-    float: none;
+    float: left;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -6129,11 +6053,9 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
-    display: block;
-    float: none;
+    width: 38%;
+    display: inline-block;
+    margin: 1em 0;
   }
   .contact-details-text {
     line-height: 40px;
@@ -6185,12 +6107,10 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    width: 60%;
+    width: 70%;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -6249,7 +6169,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin: 0;
   }
   #mannering-social {
@@ -6299,7 +6219,7 @@ footer {
     gap: 0.25em;
   }
   .inner-nav-item {
-    width: 14.5%;
+    width: 12.5%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -6335,14 +6255,10 @@ footer {
     background-color: #ecac00;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.8em;
-    min-height-line-height: 50px;
+    min-height: 800px;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    color: #333333;
   }
   #summary {
     height: 50px;
@@ -6352,55 +6268,36 @@ footer {
   }
   #main-section {
     margin: 0 0 1em;
+    padding-top: 0.5em;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -6415,12 +6312,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -6432,8 +6333,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -6469,10 +6372,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 23%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -6488,7 +6391,7 @@ footer {
   }
   /* edit review form */
   #review-edit {
-    width: 70%;
+    width: 60%;
   }
   #reviewtext {
     font-size: 1em;
@@ -6523,12 +6426,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -6569,20 +6470,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
+    font-size: 0.9em;
+    line-height: 40px;
     margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -6620,7 +6522,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 19%;
+    width: 24%;
   }
   .other-results-info {
     margin: 0;
@@ -6640,7 +6542,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -6653,7 +6555,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 19%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -6701,35 +6606,44 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 60px;
+    text-align: left;
   }
   .artist-bio {
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .artist-bio-image {
-    width: auto;
+    width: 150px;
     height: auto;
     display: block;
     margin: auto;
   }
+  .artist-bio-caption {
+    width: 100%;
+  }
   .artist-bio-text {
-    width: 80%;
+    font-size: 0.9em;
   }
   .artist-bio-name {
     line-height: 40px;
-    font-size: 1em;
-    width: 100%;
+    font-size: 1.1em;
+    text-align: left;
   }
   .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -6737,24 +6651,22 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 85%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
   .results-large-link {
-    width: 30%;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
   }
   .results-large-img {
-    margin: 0 1em 0 0;
+    margin: 0;
   }
   .results-large-text {
-    width: 70%;
+    width: 79%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -6766,16 +6678,17 @@ footer {
     font-size: 0.8em;
   }
   .large-text {
-    width: 79%;
-    text-indent: 0.25em;
+    width: 86%;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 13%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -6785,10 +6698,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -6799,10 +6708,10 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
-    width: 90%;
+    width: 100%;
   }
-  .audio-controls .audio-track-name {
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
     font-size: 1.5em;
     line-height: 55px;
     text-align: center;
@@ -6811,7 +6720,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -6821,7 +6730,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 60%;
+    width: 59%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -6832,7 +6741,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 20%;
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -6843,13 +6752,13 @@ footer {
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
     width: 20%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -6861,13 +6770,13 @@ footer {
     font-size: 0.8em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 17%;
+    width: 10%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 58%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -6877,7 +6786,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -6918,17 +6827,12 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
     margin-top: 1em;
-    text-align: center;
     background-color: transparent;
     background-color: initial;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -6938,8 +6842,8 @@ footer {
   /* Contact page form */
   #contact-form {
     width: 70%;
-    padding: 2.5%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -6961,11 +6865,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
     width: 70%;
-    margin: 5% auto;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -7017,14 +6920,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    padding: 1em;
-    margin: 1em auto;
-    width: 60%;
+    width: 80%;
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 10%;
@@ -7060,8 +6960,8 @@ footer {
 /* 735 - 600 */
 @media screen and (min-width: 37.5em) and (max-width: 45.9375em) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(92% - 15px);
   }
   #wrapper {
     width: 98%;
@@ -7083,7 +6983,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin: 0;
   }
   #mannering-social {
@@ -7108,18 +7008,11 @@ footer {
     z-index: 140;
   }
   #mannering-mobile-inner-nav {
-    position: relative;
     width: 80%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    gap: 0.2em;
-    background: #3a3a3a;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
-    margin: auto;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -7140,15 +7033,11 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.7em;
-    min-height-font-weight: normal;
-    min-height-line-height: 50px;
+    min-height: 0;
+    min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
     font-size: 0.9em;
   }
   #summary {
@@ -7156,55 +7045,36 @@ footer {
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.5em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -7219,12 +7089,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -7236,8 +7110,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -7273,10 +7149,10 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 48%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -7285,7 +7161,7 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   .album-card-genre {
     font-size: 0.9em;
@@ -7327,12 +7203,10 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 100%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 0.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -7373,20 +7247,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 25%;
   }
   #search-btn {
-    font-size: 0.85em;
+    font-size: 0.9em;
+    line-height: 40px;
     margin: 0;
+    width: 25%;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -7399,7 +7274,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -7424,7 +7299,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 24%;
+    width: 32%;
   }
   .other-results-info {
     margin: 0;
@@ -7444,7 +7319,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -7457,7 +7332,10 @@ footer {
   }
   /* search results list */
   .results {
-    width: 48%;
+    width: 32%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -7505,95 +7383,15 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 60px;
+    text-align: left;
   }
   .artist-bio {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .artist-bio-text {
-    width: 100%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 1em;
-    width: 90%;
-  }
-  .results-large-link {
-    width: 30%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 70%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.8em;
-  }
-  .large-text {
-    width: 79%;
-    text-indent: 0.25em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 20%;
-    text-indent: 0.25em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -7604,11 +7402,94 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
-    width: 90%;
   }
-  .audio-controls .audio-track-name {
-    font-size: 1em;
+  .artist-bio-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .artist-bio-caption {
+    width: 100%;
+  }
+  .artist-bio-text {
+    font-size: 0.9em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 78%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.8em;
+  }
+  .large-text {
+    width: 79%;
+    font-size: 0.9em;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 12%;
+    text-indent: 0.25em;
+    font-size: 0.9em;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
+    font-size: 1.2em;
     line-height: 50px;
     text-align: center;
   }
@@ -7616,7 +7497,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -7626,7 +7507,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 69%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -7637,7 +7518,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 0.85em;
+    font-size: 1.1em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -7648,13 +7529,13 @@ footer {
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
     width: 20%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -7666,13 +7547,13 @@ footer {
     font-size: 0.75em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 17%;
+    width: 10%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 58%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -7682,7 +7563,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -7705,7 +7586,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 80%;
   }
   #register-form #name,
   #register-form #email,
@@ -7721,17 +7602,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -7740,9 +7617,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 70%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -7764,11 +7641,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -7820,17 +7696,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 85%;
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -7866,11 +7736,11 @@ footer {
 /* 599 - 480 */
 @media screen and (min-width: 30em) and (max-width: 37.4375em) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(93% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -7889,7 +7759,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 0;
   }
   #mannering-social {
@@ -7915,16 +7785,10 @@ footer {
   }
   #mannering-mobile-inner-nav {
     width: 80%;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    gap: 0.2em;
-    background: #3a3a3a;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -7945,70 +7809,48 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px h2;
-    min-height-font-size: 1.6em;
-    min-height-font-weight: normal;
-    min-height-line-height: 50px;
+    min-height: 0;
+    min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.4em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -8023,12 +7865,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 90%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -8040,8 +7886,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -8078,9 +7926,9 @@ footer {
   }
   .album-card {
     width: 48%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .album-card-image {
     width: auto;
@@ -8089,10 +7937,10 @@ footer {
     margin: 0;
   }
   .album-card-artist {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .album-card-genre {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   /* edit review form */
   #review-edit {
@@ -8131,22 +7979,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -8177,20 +8023,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 96%;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -8203,7 +8050,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -8228,7 +8075,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 24%;
+    width: 32%;
   }
   .other-results-info {
     margin: 0;
@@ -8248,7 +8095,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -8262,6 +8109,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -8306,95 +8156,15 @@ footer {
   /* single artist page */
   .results-large {
     height: auto;
+    margin: 0;
   }
   .results-large h4 {
     font-size: 1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .artist-bio-image {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 1em auto;
-  }
-  .artist-bio-text {
-    width: 100%;
-  }
-  .artist-bio-name {
-    line-height: 40px;
-    font-size: 1em;
-    width: 100%;
-  }
-  .results-large-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    gap: 0.5em;
-    width: 100%;
-  }
-  .results-large-link {
-    width: 30%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .results-large-img {
-    margin: 0 1em 0 0;
-  }
-  .results-large-text {
-    width: 69%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .results-large-text-items {
-    width: 100%;
-    margin: 0.5em 0;
-  }
-  .results-large-text-item {
-    font-size: 0.8em;
-  }
-  .large-text {
-    width: 79%;
-    text-indent: 0.25em;
-  }
-  .large-text-link {
-    padding: 0;
-    margin: 0;
-  }
-  .large-text-title {
-    width: 20%;
-    text-indent: 0.25em;
-  }
-  .results-large-info :hover .results-large-img {
-    cursor: pointer;
-  }
-  .result-label {
-    text-indent: 1em;
-  }
-  /* audio controls */
-  .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -8405,11 +8175,94 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
+  }
+  .artist-bio-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+  }
+  .artist-bio-caption {
     width: 100%;
   }
-  .audio-controls .audio-track-name {
-    font-size: 1.5em;
+  .artist-bio-text {
+    font-size: 0.9em;
+  }
+  .artist-bio-name {
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .results-large-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .results-large-link {
+    width: 150px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .results-large-img {
+    margin: 0;
+  }
+  .results-large-text {
+    width: 72%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .results-large-text-items {
+    width: 100%;
+  }
+  .results-large-text-item {
+    font-size: 0.8em;
+  }
+  .large-text {
+    width: 79%;
+    font-size: 0.9em;
+  }
+  .large-text a[href~="/review/edit"] {
+    padding: 0;
+    margin: 0;
+  }
+  .large-text-title {
+    width: 15%;
+    text-indent: 0.25em;
+    font-size: 0.9em;
+  }
+  .results-large-info :hover .results-large-img {
+    cursor: pointer;
+  }
+  .result-label {
+    text-indent: 1em;
+  }
+  /* audio controls */
+  .audio-controls {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
+    font-size: 1.2em;
     line-height: 55px;
     text-align: center;
   }
@@ -8417,7 +8270,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -8427,7 +8280,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 68%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -8438,24 +8291,24 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume-bg {
-    width: 100%;
+    width: 85%;
   }
   .audio-controls .audiocntrl-container .audio-volume .volume {
-    width: 96%;
+    width: 98%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
-    width: 20%;
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
+    width: 15%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -8464,16 +8317,18 @@ footer {
     width: 100%;
   }
   .audio-tracklist .audio-tracklist-item {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   .audio-tracklist .audio-tracklist-item .tracknum {
-    width: 16%;
+    width: 11%;
+    text-indent: 0.25em;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 56%;
+    text-indent: 0.25em;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -8483,7 +8338,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -8506,7 +8361,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -8522,17 +8377,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -8541,9 +8392,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 75%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -8565,11 +8416,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -8621,17 +8471,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 85%;
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -8667,11 +8511,11 @@ footer {
 /* 479 - 375 */
 @media screen and (min-width: 23.4375em) and (max-width: 479px) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(89% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -8681,7 +8525,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.7em;
   }
   #logo span {
     margin: 0;
@@ -8690,7 +8534,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 0;
   }
   #mannering-social {
@@ -8718,7 +8562,8 @@ footer {
     width: 80%;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 40px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -8739,72 +8584,48 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px;
-  }
-  #mannering-content h2 {
-    font-size: 1.5em;
-    font-weight: normal;
-    line-height: 50px;
+    min-height: 0;
+    min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.3em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -8819,12 +8640,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 94%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -8836,8 +8661,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -8873,7 +8700,7 @@ footer {
     margin: 0 0 1em;
   }
   .album-card {
-    width: 75%;
+    width: 60%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -8927,22 +8754,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -8973,20 +8798,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 96%;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -8999,7 +8825,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -9024,7 +8850,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 24%;
+    width: 49%;
   }
   .other-results-info {
     margin: 0;
@@ -9044,7 +8870,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -9058,6 +8884,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -9102,30 +8931,42 @@ footer {
   /* single artist page */
   .results-large {
     height: auto;
+    margin: 0;
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
-    width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .artist-bio-image {
-    width: auto;
+    width: 150px;
     height: auto;
     display: block;
     margin: 1em auto;
   }
+  .artist-bio-caption {
+    width: 100%;
+  }
   .artist-bio-text {
-    width: 80%;
+    font-size: 0.85em;
   }
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
+    text-align: center;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9141,12 +8982,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
-    gap: 1em;
     width: 100%;
   }
   .results-large-link {
-    width: auto;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9162,22 +9001,22 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.75em;
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 0.9em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 16%;
     text-indent: 0.25em;
+    font-size: 0.9em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -9187,10 +9026,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -9201,11 +9036,11 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 100%;
   }
-  .audio-controls .audio-track-name {
-    font-size: 0.9em;
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
+    font-size: 1em;
     line-height: 50px;
     text-align: center;
   }
@@ -9213,7 +9048,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 18.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -9223,7 +9058,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 67%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -9234,7 +9069,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -9245,13 +9080,13 @@ footer {
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
     width: 20%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -9266,10 +9101,10 @@ footer {
     width: 15%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 52%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -9279,7 +9114,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 10%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -9302,7 +9137,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -9318,17 +9153,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -9337,9 +9168,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 80%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -9361,11 +9192,10 @@ footer {
   }
   /* Contact page address details */
   #contact-details {
-    font-size: 1em;
-    width: 90%;
-    margin: 5% auto;
+    width: 70%;
     display: block;
     float: none;
+    margin: 1em auto;
   }
   .contact-details-text {
     line-height: 40px;
@@ -9417,17 +9247,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
   footer {
-    width: 97%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;
@@ -9463,11 +9287,11 @@ footer {
 /* 375 - 360 */
 @media screen and (min-width: 22.5em) and (max-width: 374px) {
   #mobile-toggle {
-    top: 0.5em;
-    left: 88vw;
+    top: 0.25em;
+    left: calc(89% - 15px);
   }
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #mannering-header {
     height: 75px;
@@ -9477,7 +9301,7 @@ footer {
     height: 40px;
   }
   #logo {
-    font-size: 1.75em;
+    font-size: 1.6em;
   }
   #logo span {
     margin: 0;
@@ -9486,7 +9310,7 @@ footer {
     margin: 0;
   }
   .site-description {
-    font-size: 0.8em;
+    font-size: 0.65em;
     margin: 0;
   }
   #mannering-social {
@@ -9514,7 +9338,8 @@ footer {
     width: 100%;
   }
   .mannering-mobile-inner-nav-item {
-    height: 40px;
+    line-height: 38px;
+    height: auto;
   }
   .mannering-mobile-inner-nav-link {
     font-size: 1em;
@@ -9535,72 +9360,48 @@ footer {
     display: none;
   }
   #mannering-content {
-    width: 100%;
-    min-height: 800px;
-  }
-  #mannering-content h2 {
-    font-size: 1.4em;
-    font-weight: normal;
-    line-height: 50px;
+    min-height: 0;
+    min-height: initial;
+    height: auto;
   }
   #mannering-content p {
-    line-height: 1.6em;
-    padding: 0.5em;
+    font-size: 0.9em;
   }
   #summary {
     display: none;
   }
   #main-section {
     margin: 0;
+    padding: 0;
   }
-  /* login error */
+  #main-section h2 {
+    font-size: 1.25em;
+    line-height: 50px;
+  }
   .login-error {
     color: #fafaf7;
   }
-  .login-error:hover {
-    color: #ecac00;
-    font-weight: bold;
-  }
-  /* add category Link */
   #add-cat-link {
-    width: 100%;
-    display: block;
     line-height: 35px;
   }
-  /* edit category form */
   #edit-category {
     width: 50%;
-    display: block;
-    margin: 5em auto;
-    padding: 1em;
-    background-color: #3a3a3a;
   }
   .edit-category-label {
     line-height: 35px;
-    display: block;
-    width: 100%;
-    color: #fafaf7;
   }
   #categoryname {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #edit-category-submit {
-    margin: 1em auto;
-    display: block;
     width: 50%;
   }
   /* add category form */
   #category-form {
     width: 100%;
-    display: block;
-    margin: auto;
   }
   #category-form label {
     line-height: 35px;
-    display: block;
-    width: 100%;
   }
   #category-form input[type=text] {
     line-height: 35px;
@@ -9615,12 +9416,16 @@ footer {
   /* reviews page */
   #reviews {
     min-height: 250px;
+    width: 96%;
+    display: block;
+    float: none;
+    margin: auto;
   }
   #reviews > blockquote {
-    width: 90%;
+    width: 97%;
   }
   #reviews > blockquote p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #reviews > blockquote form {
     padding: 1em 0;
@@ -9632,8 +9437,10 @@ footer {
     font-size: 0.9em;
   }
   /* category list */
-  #categories {
-    width: 40%;
+  .categories {
+    width: 90%;
+    display: block;
+    margin: 1em auto;
   }
   .categories-item {
     height: auto;
@@ -9723,22 +9530,20 @@ footer {
   }
   /* search page form */
   #mannering-search {
-    padding: 0.5em;
+    width: 96%;
   }
   #mannering-search fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+    padding: 0.25em;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #mannering-search legend {
     font-size: 1em;
@@ -9769,20 +9574,21 @@ footer {
   #artist,
   #album,
   #genre {
-    font-size: 0.85em;
-    margin-bottom: 1em;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    width: 96%;
   }
   #search-btn {
-    font-size: 0.85em;
-    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
+    width: 96%;
+    margin: 0.5em auto;
   }
   #search-btn:hover {
     letter-spacing: 0.12em;
   }
   .refresh-page-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   .refresh-page-link a {
     line-height: 40px;
@@ -9795,7 +9601,7 @@ footer {
   }
   /* front-page slider */
   #slider {
-    height: 180px;
+    height: auto;
   }
   #results-container {
     margin: 0;
@@ -9820,7 +9626,7 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-    width: 44%;
+    width: 49%;
   }
   .other-results-info {
     margin: 0;
@@ -9840,7 +9646,7 @@ footer {
     width: 100%;
   }
   .other-results-name {
-    font-size: 1em;
+    font-size: 0.85em;
     margin-bottom: 0.2em;
   }
   .other-results-genre {
@@ -9854,6 +9660,9 @@ footer {
   /* search results list */
   .results {
     width: 48%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   .results-info {
     margin: 0;
@@ -9901,13 +9710,21 @@ footer {
   }
   .results-large h4 {
     font-size: 1.1em;
-    line-height: 40px;
+    line-height: 50px;
+    text-align: center;
   }
   .artist-bio {
     width: 49%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .artist-bio-image {
     width: auto;
@@ -9915,13 +9732,16 @@ footer {
     display: block;
     margin: 1em auto;
   }
+  .artist-bio-caption {
+    width: 76%;
+  }
   .artist-bio-text {
-    width: 80%;
+    font-size: 0.85em;
   }
   .artist-bio-name {
     line-height: 40px;
     font-size: 1em;
-    width: 100%;
+    text-align: center;
   }
   .results-large-info {
     display: -webkit-box;
@@ -9937,12 +9757,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
-    gap: 1em;
     width: 100%;
   }
   .results-large-link {
-    width: auto;
+    width: 150px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -9958,22 +9776,22 @@ footer {
   }
   .results-large-text-items {
     width: 100%;
-    margin: 0.5em 0;
   }
   .results-large-text-item {
     font-size: 0.75em;
   }
   .large-text {
     width: 79%;
-    text-indent: 0.25em;
+    font-size: 1em;
   }
-  .large-text-link {
+  .large-text a[href~="/review/edit"] {
     padding: 0;
     margin: 0;
   }
   .large-text-title {
-    width: 20%;
+    width: 17%;
     text-indent: 0.25em;
+    font-size: 1em;
   }
   .results-large-info :hover .results-large-img {
     cursor: pointer;
@@ -9983,10 +9801,6 @@ footer {
   }
   /* audio controls */
   .audio-controls {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -9997,10 +9811,10 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 1em;
     width: 100%;
   }
-  .audio-controls .audio-track-name {
+  .audio-controls .audio-track-name,
+  .audio-controls .artist-track-name {
     font-size: 1em;
     line-height: 50px;
     text-align: center;
@@ -10009,7 +9823,7 @@ footer {
     width: 100%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn {
-    width: 20%;
+    width: 19.5%;
   }
   .audio-controls .audiocntrl-container .audio-player-btn .fa-play,
   .audio-controls .audiocntrl-container .audio-player-btn .fa-pause,
@@ -10019,7 +9833,7 @@ footer {
     font-size: 1.6em;
   }
   .audio-controls .audiocntrl-container .audio-progress {
-    width: 70%;
+    width: 67%;
   }
   .audio-controls .audiocntrl-container .audio-progress .load-progress {
     width: 100%;
@@ -10030,7 +9844,7 @@ footer {
   .audio-controls .audiocntrl-container .current-time,
   .audio-controls .audiocntrl-container .duration {
     width: 15%;
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
   .audio-controls .audiocntrl-container .audio-volume {
     width: 100%;
@@ -10041,13 +9855,13 @@ footer {
   .audio-controls .audiocntrl-container .audio-volume .volume {
     width: 96%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute {
     width: 20%;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up {
     font-size: 1.4em;
   }
-  .audio-controls .audiocntrl-container .audio-volume .volume-mute .fa-volume-up::before {
+  .audio-controls .audiocntrl-container .audio-volume #volume-mute .fa-volume-up::before {
     display: block;
   }
   /* audio track list */
@@ -10062,10 +9876,10 @@ footer {
     width: 15%;
   }
   .audio-tracklist .audio-tracklist-item .trackname {
-    width: 50%;
+    width: 51%;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn {
-    width: 20%;
+    width: 15%;
     cursor: pointer;
   }
   .audio-tracklist .audio-tracklist-item .trackbtn .fa-play {
@@ -10075,7 +9889,7 @@ footer {
     background-color: #fafaf7;
   }
   .audio-tracklist .audio-tracklist-item .trackplays {
-    width: 12%;
+    width: 15%;
   }
   .text-box {
     font-size: 1em;
@@ -10098,7 +9912,7 @@ footer {
   }
   /* Register Form */
   #register-form {
-    width: 55%;
+    width: 85%;
   }
   #register-form #name,
   #register-form #email,
@@ -10114,17 +9928,13 @@ footer {
   }
   /* not registered link to register form */
   .not-reg-text {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 0;
     background-color: transparent;
     background-color: initial;
+    font-size: 0.8em;
   }
   .not-reg-link {
     display: inline-block;
-    color: #fafaf7;
   }
   .not-reg-link:hover {
     color: #ecac00;
@@ -10133,9 +9943,9 @@ footer {
   }
   /* Contact page form */
   #contact-form {
-    width: 50%;
-    padding: 2.5%;
+    width: 85%;
     float: none;
+    margin: 1em auto;
   }
   #contact-form .contact-form-label {
     display: block;
@@ -10159,7 +9969,7 @@ footer {
   #contact-details {
     font-size: 1em;
     width: 90%;
-    margin: 5% auto;
+    margin: 1em auto;
     display: block;
     float: none;
   }
@@ -10213,17 +10023,11 @@ footer {
     display: none;
   }
   .show-error {
-    display: block;
-    background: #fafaf7;
-    color: #181818;
-    padding: 1em;
-    margin: 1em auto;
-    width: auto;
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
   footer {
-    width: 100%;
+    width: 98%;
   }
   .mannering-social-btns-footer {
     width: 100%;

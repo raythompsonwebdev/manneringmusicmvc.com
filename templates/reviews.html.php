@@ -49,6 +49,7 @@
 		</span>
 	</div>
 	<ul class="categories">
+		<li> Review Categories</li>
 		<?php foreach ($categories as $category) : ?>
 			<li class="categories-item">
 				<a href="/review/list?category=<?= $category->id ?>" class="categories-link"><?= $category->name ?>
