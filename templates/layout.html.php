@@ -1,115 +1,182 @@
-
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mannering Music web project.">
-   
-    <meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
-    <meta name="author" content="Raymond Thompson">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mannering Music</title>
-     <link rel="stylesheet" href="assets/css/style.css" >
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css" >
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
-    <link rel="icon" href="assets/icons/apple-icon.png">
-    <!--[if lte IE 9]>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mannering music. Website build using PHP and Javascript. listen to audio. register to create review. ">
+	<meta name="keywords" content="HTML5,CSS,PHP,JavaScript">
+	<meta name="author" content="Raymond Thompson">
+	<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+	<meta property="og:description" content="The .">
+	<meta property="og:title" content="Mozilla Developer Network">
+	<meta name="twitter:title" content="Mozilla Developer Network">
+	<!--
+			<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+			<meta property="og:description" content="The .">
+			<meta property="og:title" content="Mozilla Developer Network">
+			<meta name="twitter:title" content="Mozilla Developer Network">
+		-->
+	<link rel="stylesheet" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Oswald:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
+	<link rel="icon" href="assets/icons/apple-icon.png">
+
+	<!--[if lte IE 9]>
       <link rel="stylesheet" href="assets/css/ie.css">
-      <script src="assets/js/old-browser-scripts/Respond-master/dest/respond.src.js"></script>
       <script src="assets/js/old-browser-scripts/html5shiv.min.js"></script>
       <script src="assets/js/old-browser-scripts/selectivizr.js"></script>
     <![endif]-->
-    <title><?=$title?></title>
-  </head>
-  
-  <body>
 
-    <div id="wrapper">
+	<title><?= $title ?></title>
 
-    <header role="banner">
+</head>
 
-    <!---logo-->
-    <hgroup>
-        <h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
-        <h2 class="site-description">Jazz, Hip Hop & Country</h2>
-      </hgroup>
+<body>
 
-      <span class="social">
-        <ul id="social">
-   
-          <?php if ($loggedIn): ?>
-          <li class="social-item"><a href="/logout">Log out</a>
-          </li>
-          
-          <?php else: ?>
-          <li class="social-item"><a href="/login">Log in</a></li>
-          <li class="social-item"><a href="/register">Register</a></li>
+	<div id="wrapper">
 
-          <?php endif; ?>
-          
-        </ul>
-      </span>
-      
-    </header>
+		<header id="mannering-header">
 
-      <!--navigation here-->
-      <nav role="navigation" >
-                  
-        <ul id="inner_nav">
-        <?php if (!$loggedIn): ?>
-          <li><a rel='tab' href="/">Home</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-            <li><a rel='tab' href="/video">Video</a></li>
-            
-            <li><a rel='tab' href="/contact">Contact</a></li>
-            <?php else: ?> 
-            <li><a rel='tab' href="/">Home</a></li>
-            <li><a rel='tab' href="/search">Search</a></li>
-         <li><a href="/reviews">Reviews</a></li>
-		<!--	<li><a href="/editreviews">Add Review</a></li>-->
-      <?php endif; ?>
-        </ul>
+			<div id="site-logo" tabindex="0">
+				<h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
+				<p class="site-description">Jazz, Hip Hop & Country Music</p>
+			</div>
 
-      </nav>
+			<aside id="mannering-social">
+				<ul id="mannering-social-links">
+					<li class="mannering-social-item">
+						<a href="https://twitter.com/" title="twitter" aria-label="link to twitter" class="mannering-social-link">
+							<i class="fa fa-twitter soc"></i>
+						</a>
+					</li>
+					<li class="mannering-social-item">
+						<a href="https://facebook.com/" title="facebook" aria-label="link to facebook" class="mannering-social-link">
+							<i class="fa fa-facebook soc"></i>
+						</a>
+					</li>
+					<li class="mannering-social-item">
+						<a href="https://facebook.com/" title="rss" aria-label="link to rss" class="mannering-social-link">
+							<i class="fa fa-rss soc"></i>
+						</a>
+					</li>
+					<li class="mannering-social-item">
+						<a href="https://dribbble.com/" title="dribble" aria-label="link to dribble" class="mannering-social-link">
+							<i class="fa fa-dribbble soc"></i>
+						</a>
+					</li>
+					<li class="mannering-social-item">
+						<a href="https://www.instagram.com/" title="instagram" aria-label="link to instagram" class="mannering-social-link">
+							<i class="fa fa-instagram soc"></i>
+						</a>
+					</li>
+				</ul>
+			</aside>
 
-      <!-- /.container -->
-      <main id="content">
+		</header>
 
-              
-       
-              <?php echo $output; ?>
+		<button id="mobile-toggle" title="mobilemenu" aria-label="mobilemenu">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</button>
+		<!--navigation here-->
+		<nav id="mannering-nav">
 
-       
+			<ul id="mannering-inner-nav">
+				<li class="inner-nav-item">
+					<a href="/" class="inner-nav-link" aria-label="link to home page">Home</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/review/list" class="inner-nav-link" aria-label="link to reviews page">Reviews</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/search" class="inner-nav-link" aria-label="link to album search page">Search</a>
+				</li>
+				<li class="inner-nav-item">
+					<a href="/video" class="inner-nav-link" aria-label="link to video search page">Video</a>
+				</li>
 
-      </main>
+				<?php if ($loggedIn) : ?>
 
-      
-<!--footer here-->
-<footer role="navigation">
+					<li class="inner-nav-item">
+						<a href="/logout" class="inner-nav-link" aria-label="link to logout">Log out</a>
+					</li>
+				<?php else : ?>
+					<li class="inner-nav-item">
+						<a href="/login" class="inner-nav-link" aria-label="link to login">Log in</a>
+					</li>
+				<?php endif; ?>
+			</ul>
 
-   <div class="social-btns">
-  <ul>
-    <li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
-      <li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss soc"></i></a></li>
-      <li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
-    <li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
-  </ul>
-</div>
-  <ul id="inner_footer">
-    <li><a href="#">Terms</a></li>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">About</a></li>
-      
-  </ul>
+			<ul id="mannering-mobile-inner-nav">
+				<li class="mannering-mobile-inner-nav-item">
+					<a href="/" aria-label="link to home page" class="mannering-mobile-inner-nav-link">
+						Home
+					</a>
+				</li>
+				<li class="mannering-mobile-inner-nav-item">
+					<a href="/review/list" class="mannering-mobile-inner-nav-link" aria-label="link to reviews page">Reviews</a>
+				</li>
+				<li class="mannering-mobile-inner-nav-item">
+					<a href="/search" aria-label="link to album search page" class="mannering-mobile-inner-nav-link"> Search
+					</a>
+				</li>
+				<li class="mannering-mobile-inner-nav-item">
+					<a href="/video" aria-label="link to album search page" class="mannering-mobile-inner-nav-link">
+						Video
+					</a>
+				</li>
 
-</footer><!--Footer end-->
+				<?php if ($loggedIn) : ?>
+					<li class="mannering-mobile-inner-nav-item">
+						<a href="/logout" class="mannering-mobile-inner-nav-link" aria-label="link to logout">Log out</a>
+					</li>
+				<?php else : ?>
+					<li class="mannering-mobile-inner-nav-item">
+						<a href="/login" class="mannering-mobile-inner-nav-link" aria-label="link to login">Log in</a>
+					</li>
+				<?php endif; ?>
+			</ul>
 
-<!--google analytics here-->
+		</nav>
 
-    </div><!-- /.wrapper end -->
-    
-  </body>
+		<!-- /.container -->
+		<main id="mannering-content">
+
+			<?php echo $output; ?>
+
+		</main>
+
+
+		<!--footer here-->
+		<footer>
+
+			<ul id="inner-footer">
+				<li class="inner-footer-item">
+					<a href="#" title="Terms Page" class="inner-footer-link" aria-label="link to terms and conditions page">Terms</a>
+				</li>
+				<li class="inner-footer-item">
+					<a href="#" title="Privacy Page" class="inner-footer-link" aria-label="link to privacy policy page">Privacy</a>
+				</li>
+				<li class="inner-footer-item">
+					<a href="#" title="About Page" class="inner-footer-link" aria-label="link to about page">About</a>
+				</li>
+				<li class="inner-footer-item">
+					<a href="/contact" title="Contact Page" class="inner-footer-link" aria-label="link to contacts page">Contact</a>
+				</li>
+			</ul>
+
+		</footer>
+		<!--Footer end-->
+
+		<!--google analytics here-->
+
+	</div><!-- /.wrapper end -->
+
+	<script src="/assets/js/main.js" defer></script>
+
+</body>
+
 </html>

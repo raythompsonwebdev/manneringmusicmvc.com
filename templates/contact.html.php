@@ -1,48 +1,41 @@
-
 <!--main text-->
 
-<section id="main_text" class="group" role="main">
+<section id="main-section">
 
-<h1>Contact Us</h1>
+	<h2>Contact Us</h2>
 
-<br/>
 
-<div id="summary"></div>
+	<div id="summary"></div>
 
-<form id="contact-form-a" class="group" method="post" action=""  role="form">
+	<form id="contact-form" method="" action="">
 
-  <br/>
-  <label for="name">Full name</label>
+		<label for="name" class="contact-form-label">Full name</label>
 
-  <input type="text" id="name" name="name" title="Please enter your name" required autofocus placeholder="Last, First" value="" >
+		<input type="text" id="name" name="name" title="Please enter your name" required autofocus placeholder="Enter your name" value="">
 
-  <br/>
-  <label for="email">E-mail</label>
+		<label for="email" class="contact-form-label">E-mail</label>
 
-  <input id="email" name="email" type="email" placeholder="enter email address here" title="Please Enter Your Email Address" required autocomplete="off">
-  <br/>
-  <label for="message">Message</label>
+		<input id="email" name="email" type="email" placeholder="enter email address here" required autocomplete="off">
 
-  <textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here (No HTML Allowed)" ></textarea>
-  <br/><br/>
+		<label for="message" class="contact-form-label">Message</label>
 
-  <input class="submit" name="submit" type="submit" value="Submit" id="contact_btn">
-  
-</form>
+		<textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here (No HTML Allowed)"></textarea>
 
-<ul id="contact-details">
-  <li>Mannering Music Agency</li>
-    <li>1 Somewhere</li>
-      <li> London</li>
-    <li> E8 2GF</li>
-  <li>Tel No: 0208 123 4567</li>
-</ul>
+		<input class="submit" name="submit" type="submit" value="Submit" id="contact-btn">
 
-<!--Main text end-->
+	</form>
 
-<article id="mapcontainer"></article>
+	<address id="contact-details">
+		<p class="contact-details-text">
+			Mannering Music Agency<wbr>
+			1 Somewhere<wbr>
+			London E8 2GF<wbr>
+			Tel No: 0208 123 4567<wbr>
+		</p>
+	</address>
+
+	<!--Main text end-->
+
+	<div id="mapcontainer"></div>
 
 </section>
-
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
-

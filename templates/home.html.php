@@ -1,119 +1,77 @@
 <?php  ?>
 
-<!--Slider-->
+<!-- Slider-->
 <section id="slider">
-  <img src="assets/images/sliderimages/manneringhiphop.webp" alt="hip-hop-albums"/>
-     
+	<img src="assets/images/sliderimages/manneringhiphop.webp" alt="collage of hop hop albums" />
 </section>
 
 <!--main text-->
-<section id="main_text" role="main" >
+<section id="main-section">
+	<h2>MANNERING MUSIC FEATURED ALBUMS</h2>
+	<br />
+	<!--Hip Hop Section-->
+	<section class="genre-section">
+		<h3>Hip Hop</h3>
+		<?php foreach ($rapalbums as $rapalbum) : ?>
 
-    
-    <!--Hip Hop Section-->
-    <article class="section">
-        <h1>Featured Hip Hop Albums</h1>
-        <?php foreach ($rapalbums as $rapalbum) : ?>
-                <div class="flex-wrapper">
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $rapalbum->id ?? " " ?>&artistid=<?= $rapalbum->artistId ?? '' ?>" title="<?= $rapalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $rapalbum->image ?>" alt="<?= $rapalbum->album ?> album cover" aria-labelledby="<?= $rapalbum->getArtistId()->artist_name ?>">
+				</a>
+				<figcaption id="<?= $rapalbum->getArtistId()->artist_name ?> " class="album-card-text">
+					<h4 class="album-card-artist"><?= $rapalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $rapalbum->genre ?></h5>
 
-                    <figure class="grid_1_of_5 ">
+				</figcaption>
 
-                        <img class="images_1_of_5" src="/assets/databasepics/<?=$rapalbum->image?>" alt="HipHopMusicAlbum">
+			</figure>
 
-                        <figcaption class="cap_1_of_5">
-                            <h3><?=$rapalbum->getArtistName()->artist_name?></h3>
-                                <p><?=$rapalbum->album?></p>
-                            <h4>&#163;<?=$rapalbum->price?></h4>
-                            <!-- commented out for now.-->
-                            <form method="get" action="/singleresult" id="frontform">
-                                <input type="hidden" name="artistid" value="<?=$rapalbum->artistid ?? ''?>">
-                                <input type="hidden" name="albumid" value="<?=$rapalbum->albumid ?? ''?>">
-                                <input type="submit" name="submit" class="frontform" value="See more.."/>
-                            </form>
-                        </figcaption>
-                    
-                    </figure>
+		<?php endforeach; ?>
 
-                </div>
-        <?php endforeach; ?>
-    </article>
-    <div class="clearfix"></div>
-
-    <!--Country Section-->
-    <article class="section ">
-        <h1>Featured Country Albums</h1>
-        <?php foreach ($countryalbums as $countryalbum) : ?>
-            <div class="flex-wrapper">
-                <figure class="grid_1_of_5">
-
-                    <img class="images_1_of_5" src="/assets/databasepics/<?=$countryalbum->image?>" alt="CountryMusicAlbum">
-
-                    <figcaption class="cap_1_of_5">
-                        <h3><?=$countryalbum->getArtistName()->artist_name?></h3>
-                        <p><?=$countryalbum->album?></p>
-                        <h4> &#163;<?=$countryalbum->price?></h4>
-                        <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$countryalbum->artistid ?? ''?>">
-                            <input type="hidden" name="albumid" value="<?=$countryalbum->albumid ?? ''?>">
-                            <input type="submit" name="submit" class="frontform" value="See more.."/>
-                        </form>
-                    </figcaption>
-                </figure>
-
-            </div>
-        <?php endforeach; ?>
-    </article>
-    <div class="clearfix"></div>
-
-    <!--Jazz Section-->
-    <article class="section">
-        <h1>Featured Jazz Albums</h1>
-        <?php foreach ($jazzalbums as $jazzalbum) : ?>
-            <div class="flex-wrapper">
-                <figure class="grid_1_of_5">
-
-                    <img class="images_1_of_5" src="/assets/databasepics/<?=$jazzalbum->image?>" alt="JazzMusicAlbum">
-                    <figcaption class="cap_1_of_5">
-                        <h3><?=$jazzalbum->getArtistName()->artist_name?></h3>
-                        <p><?=$jazzalbum->album?></p>
-                        <h4>&#163;<?=$jazzalbum->price?></h4>
-                        <form method="get" action="/singleresult" id="frontform">
-                            <input type="hidden" name="artistid" value="<?=$jazzalbum->artistid ?? ''?>">
-                            <input type="hidden" name="albumid" value="<?=$jazzalbum->albumid ?? ''?>">
-                            <input type="submit" name="submit" class="frontform" value="See more.."/>
-                        </form>
-                    </figcaption>
-
-                </figure>
-            </div>
-        <?php endforeach; ?>
-    </article>
-    <div class="clearfix"></div>
+	</section>
 
 
-    <br/>
+	<!--Country Section-->
+	<section class="genre-section ">
+		<h3>Country</h3>
+		<?php foreach ($countryalbums as $countryalbum) : ?>
+
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $countryalbum->id ?? '' ?>&artistid=<?= $countryalbum->artistId ?? '' ?>" title="<?= $countryalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $countryalbum->image ?>" alt="<?= $countryalbum->album ?> album cover" aria-labelledby="<?= $countryalbum->getArtistId()->artist_name ?>">
+
+				</a>
+				<figcaption id="<?= $countryalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $countryalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $countryalbum->genre ?></h5>
+				</figcaption>
+			</figure>
+
+		<?php endforeach; ?>
+
+	</section>
+
+
+	<!--Jazz Section-->
+	<section class="genre-section">
+		<h3>Jazz</h3>
+		<?php foreach ($jazzalbums as $jazzalbum) : ?>
+
+			<figure class="album-card">
+				<a href="/singleresult?albumid=<?= $jazzalbum->id ?? '' ?>&artistid=<?= $jazzalbum->artistId ?? '' ?>" title="<?= $jazzalbum->album ?>">
+					<img class="album-card-image" width="150" height="150" src="/assets/databasepics/WEBP/<?= $jazzalbum->image ?>" alt="<?= $jazzalbum->album ?> album cover" aria-labelledby="<?= $jazzalbum->getArtistId()->artist_name ?>">
+				</a>
+				<figcaption id="<?= $jazzalbum->getArtistId()->artist_name ?>" class="album-card-text">
+					<h4 class="album-card-artist"><?= $jazzalbum->getArtistId()->artist_name ?></h4>
+					<h5 class="album-card-genre"><?= $jazzalbum->genre ?></h5>
+				</figcaption>
+			</figure>
+
+		<?php endforeach; ?>
+
+	</section>
+
+
+
 
 </section>
-<!--main_text End-->
-
-<?php require __DIR__ . '/../includes/jquery.inc.php'; ?>
-
-<script>
-    
-    $(document).ready(function(){
-
-        $(".grid_1_of_5").on('mouseenter', function () {
-                        
-            $(this).find('figcaption.cap_1_of_5 form#frontform').css('opacity' , '1').slideDown('100', 'swing');
-    
-        });
-        
-        $(".grid_1_of_5").on('mouseleave', function () {
-            
-            $(this).find('figcaption.cap_1_of_5 form#frontform').css('opacity' , '1').slideUp('100', 'swing');
-            
-        });
-
-    });
-</script>
-

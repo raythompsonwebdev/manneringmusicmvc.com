@@ -1,105 +1,111 @@
-var currentPlaylist = [];
-var tempPlaylist = [];
-var audioElement;
-var mouseDown = false;
-var currentIndex = 0;
-
-//Format current time and duration
-function formatTime(seconds) {
-	var seconds = Math.round(seconds);
-	var minutes = Math.floor(seconds / 60);
-	// Remaining seconds
-	seconds = Math.floor(seconds % 60);
-	// Add leading Zeros
-	minutes = (minutes >= 10) ? minutes : "0" + minutes;
-	seconds = (seconds >= 10) ? seconds : "0" + seconds;
-	return minutes + ":" + seconds;
-}
-
-// Display current time and duration =============================//
-function updateTimeProgressBar(audio) {
-
-	$('div.current_time').text(formatTime(audio.currentTime));
-
-	$("div.duration").text(formatTime(audio.duration - audio.currentTime));
-
-	var progress = audio.currentTime / audio.duration * 100;
-
-	$(".progress .play_progress").css("width", progress + "%");
-}
-
-// Volume ============================//
-function updateVolumeProgressBar(audio) {
-	var volume = audio.volume * 100;
-	$("div.audio_volume div.volume").css("width", volume + "%");
-}
-
+// eslint-disable-next-line prefer-const, no-unused-vars
+let currentPlaylist = [];
+// eslint-disable-next-line prefer-const, no-unused-vars
+let shufflePlaylist = [];
+// eslint-disable-next-line prefer-const
+let tempPlaylist = [];
+// eslint-disable-next-line prefer-const, no-unused-vars
+let audioElement;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let mouseDown = false;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let currentIndex = 0;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let repeat = false;
+// eslint-disable-next-line prefer-const, no-unused-vars
+let shuffle = false;
 
 // Audio Class
-function Audio() {
+// eslint-disable-next-line no-unused-vars
+class Audio {
+  constructor() {
+    // eslint-disable-next-line no-unused-expressions
+    this.currentlyPlaying;
+    this.audio = document.createElement('audio');
 
-	this.currentlyPlaying;
-	
-	this.audio = document.createElement('audio');
+    // Format current time and duration
+    this.formatTime = (seconds) => {
+      let secondsRound = Math.round(seconds);
+      let minutes = Math.floor(seconds / 60);
+      // Remaining seconds
 
+      secondsRound = Math.floor(seconds % 60);
+      // Add leading Zeros
+      minutes = minutes >= 10 ? minutes : `0${minutes}`;
 
-	this.audio.addEventListener("ended", function() {
-		nextSong();
-	});
-	
-	// Time Duration =============================//
-	this.audio.addEventListener("canplay", function(){
+      const secondsFinal =
+        secondsRound >= 10 ? secondsRound : `0${secondsRound}`;
+      return `${minutes}:${secondsFinal}`;
+    };
 
-		var duration = formatTime(this.duration);
+    // goes to next song when current song finished
+    this.audio.addEventListener('ended', () => {
+      // eslint-disable-next-line no-undef
+      nextSong();
+    });
 
-		$('div.current_time').text(duration);
+    // Can Play //
+    this.audio.addEventListener('canplay', (e) => {
+      const durations = this.formatTime(e.target.duration);
+      document.querySelector('.current-time').textContent = durations;
+    });
 
-		
-		
-	});
-	
-	// Time Display =============================//
-	this.audio.addEventListener("timeupdate", function () {
-		if(this.duration) {
-			updateTimeProgressBar(this);
-		}
-	});
+    // Updates Progress of song playing
+    this.updateTimeProgressBar = (audio) => {
+      document.querySelector('.current-time').textContent = this.formatTime(
+        audio.currentTime
+      );
+      document.querySelector('.duration').textContent = this.formatTime(
+        audio.duration - audio.currentTime
+      );
+      const progress = (audio.currentTime / audio.duration) * 100;
+      document.querySelector(
+        '.audio-progress .play-progress'
+      ).style.width = `${progress}%`;
+    };
 
-	// Volume ============================//
-	this.audio.addEventListener("volumechange", function() {
-		updateVolumeProgressBar(this);
-	});
-					
-	// Set Track ============================//
-	this.setTrack = function(track) {
+    // Display bar to display volume level //
+    this.updateVolumeProgressBar = (audio) => {
+      const volume = audio.volume * 100;
+      document.querySelector(' #volume').value = `${volume}`;
+    };
 
-		this.currentlyPlaying = track[0].mp3_File;
+    // Time Display Update //
+    this.audio.addEventListener('timeupdate', (e) => {
+      if (e.target.duration) {
+        this.updateTimeProgressBar(e.target);
+      }
+    });
+    // Volume Change //
+    this.audio.addEventListener('volumechange', (e) => {
+      this.updateVolumeProgressBar(e.target);
+    });
 
-		this.audio.src = track[0].mp3_File;
+    this.firstSong = () => {
+      // eslint-disable-next-line no-undef
+      setTrack(tempPlaylist[0], tempPlaylist, true);
+    };
+  }
 
-	}
+  // Set Track //
+  setTrack(track) {
+    this.currentlyPlaying = track;
+    // eslint-disable-next-line prefer-destructuring
+    this.audio.src = track[0].mp3_File;
+  }
 
-	// Pause ============================//
-	this.pause = function() {
+  // Pause //
+  pause() {
+    this.audio.pause();
+  }
 
-		this.audio.pause();
+  // Play//
+  play() {
+    this.audio.play();
+  }
 
-	}
-
-	// Play ============================//
-	this.play = function() {
-
-		 		
-		this.audio.play();
-								
-				
-	}
-
-	// Progress Bar and Volume Bar Drag ============================//
-	this.setTime = function(seconds) {
-		this.audio.currentTime = seconds;
-	}
-
+  // Progress Bar and Volume Bar Drag
+  setTime(seconds) {
+    this.audio.currentTime = seconds;
+  }
 }
-
-

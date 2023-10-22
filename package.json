@@ -1,22 +1,80 @@
 {
-  "name": "manneringmusic-mvc2.com",
-  "version": "1.0.0",
-  "description": "music player website",
-  "main": "index.php",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raythompsonwebdev/mannering-musicmvc2.git"
-  },
-  "author": "Raymond Thompson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/raythompsonwebdev/mannering-musicmvc2/issues"
-  },
-  "homepage": "https://github.com/raythompsonwebdev/mannering-musicmvc2#readme"
+	"name": "manneringmusic-mvc2.com",
+	"version": "1.0.0",
+	"description": "music player website",
+	"main": "index.php",
+	"directories": {
+		"test": "test"
+	},
+	"browserslist": [
+		"> 0.5%",
+		"last 2 versions",
+		"not ie <= 10"
+	],
+	"engines": {
+		"node": ">= 6.0.0",
+		"npm": ">= 3.0.0"
+	},
+	"proxy": "http://manneringmusicmvc.com/",
+	"scripts": {
+		"lint-sass": "grunt stylelint",
+		"stylelint-check": "stylelint-config-prettier-check",
+		"lint-js": "grunt eslint",
+		"compile-js": "grunt babel",
+		"compile-sass": "grunt sass",
+		"compile-images": "grunt responsive_images",
+		"watch": "grunt watch",
+		"build:css": "postcss public_html/assets/css/style-copy.scss -o public_html/style.css",
+		"watch:css": "postcss public_html/assets/css/style-copy.scss -o public_html/style.css -w"
+	},
+	"dependencies": {
+		"@csstools/postcss-sass": "^5.0.1",
+		"@lodder/grunt-postcss": "^3.1.1",
+		"autoprefixer": "^10.4.13",
+		"confusing-browser-globals": "^1.0.11",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"grunt-cli": "^1.4.3",
+		"postcss": "^8.4.31",
+		"postcss-preset-env": "^7.8.3",
+		"prettier": "^2.8.0",
+		"sass": "^1.56.1",
+		"stylelint": "^14.15.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.19.3",
+		"@babel/core": "^7.20.2",
+		"@babel/node": "^7.20.2",
+		"@babel/preset-env": "^7.20.2",
+		"@babel/register": "^7.18.9",
+		"babel-preset-latest": "^6.24.1",
+		"eslint": "^8.28.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-utils": "^3.0.0",
+		"eslint-watch": "^8.0.0",
+		"grunt": "^1.5.3",
+		"grunt-babel": "^8.0.0",
+		"grunt-cli": "^1.4.3",
+		"grunt-contrib-clean": "^2.0.1",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-cssmin": "^4.0.0",
+		"grunt-contrib-sass": "^2.0.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-eslint": "^24.0.0",
+		"grunt-mkdir": "^1.1.0",
+		"grunt-responsive-images": "^1.10.1",
+		"grunt-sass": "^3.1.0",
+		"grunt-stylelint": "^0.18.0",
+		"whatwg-fetch": "^3.6.2"
+	},
+	"repository": "git+https://github.com/raythompsonwebdev/mannering-musicmvc2.git",
+	"author": "Raymond Thompson",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/raythompsonwebdev/mannering-musicmvc2/issues"
+	},
+	"homepage": "https://github.com/raythompsonwebdev/mannering-musicmvc2#readme"
 }
