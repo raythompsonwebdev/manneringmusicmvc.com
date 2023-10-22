@@ -41,7 +41,6 @@ I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 
 - MySQL - PDO (PHP Data Objects)
 - PHP Object Oriented Design
 - JavaScript
-- Amazon S3 storage
 
 ## Tools
 
