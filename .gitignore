@@ -33,3 +33,4 @@ libwebp-0.6.1-linux-x86-32.tar.gz
 .env-dev
 vendor/
 node_modules
+.sass-cache/
