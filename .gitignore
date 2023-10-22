@@ -23,5 +23,6 @@ bucketpolicy.json
 audio/
 sql-files/
 test-images/
+.env-dev
 
 
