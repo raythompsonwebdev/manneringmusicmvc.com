@@ -12,6 +12,14 @@ public_html/assets/css/partials/_*.css
 public_html/assets/css/partials/*.min.css
 logs/
 includes/DatabaseConnection.php
+<<<<<<< HEAD
+libwebp-0.6.1-linux-x86-32/
+libwebp-0.6.1-linux-x86-32.tar.gz
+.env-dev
+vendor/
+node_modules
+.sass-cache/
+=======
 .sass-cache/
 
 img/
@@ -25,3 +33,4 @@ sql-files/
 test-images/
 
 
+>>>>>>> 282d0a0120608c9d57a2231db027ada0229c787a
