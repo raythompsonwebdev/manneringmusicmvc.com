@@ -34,15 +34,6 @@ I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 
 
 - Add custom review categories.
 
-## Technologies
-
-- PDO (PHP Data Objects)
-- REST
-- MySQL - PDO (PHP Data Objects)
-- PHP Object Oriented Design
-- JavaScript
-- Amazon S3 storage
-
 ## Tools
 
 - [grunt](https://gruntjs.com/)
@@ -62,5 +53,3 @@ I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 
 - [stylelint](https://stylelint.io/)-
 - [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch)
 - [composer](https://getcomposer.org/)
-
-## Credits
