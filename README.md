@@ -12,7 +12,7 @@ I was given full artistic license to produce a website that will inspire and eng
 
 - See original breif : [Mannering Music website brief](https://drive.google.com/open?id=14Z8BsNeYcWYpNKrLcfuaaSGXHunisyA3)
 
-I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 6th Edition by Tom Butler and Kevin Yank and Udemy video tutorial Make a Spotify Clone from Scratch: JavaScript PHP and MySQL by Reece Kenney to create a web application that allowa users to listen to audio tracks, search for audio tracks, leave reviews and login and register.
+I used elements learned from a publication called PHP & MySQL: Novice to Ninja, 6th Edition by Tom Butler and Kevin Yank and Udemy video tutorial Make a Spotify Clone from Scratch: JavaScript PHP and MySQL by Reece Kenney to create a web application using the Model View Controller design pattern that allows users to listen to audio tracks, search for favourite audio tracks, leave reviews of audio tracks and albums and login into and register user accounts.
 
 ## Features
 
